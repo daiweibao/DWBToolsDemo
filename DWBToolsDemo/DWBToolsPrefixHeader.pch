@@ -13,5 +13,9 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 
+//工具类头文件+宏定义
+
+#import "DWBHelpHeader.h"
+
 
 #endif /* DWBToolsPrefixHeader_pch */
