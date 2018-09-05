@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3009708B8FBB5CE10309819E /* libPods-DWBToolsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C09C75787C5C6594A6B0EA4 /* libPods-DWBToolsDemo.a */; };
 		368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F6213F67C800C10B3E /* AppDelegate.m */; };
 		368C39FA213F67C800C10B3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F9213F67C800C10B3E /* ViewController.m */; };
 		368C39FD213F67C800C10B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368C39FB213F67C800C10B3E /* Main.storyboard */; };
@@ -51,6 +52,10 @@
 		368C3A15213F67C900C10B3E /* DWBToolsDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DWBToolsDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		368C3A19213F67C900C10B3E /* DWBToolsDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBToolsDemoUITests.m; sourceTree = "<group>"; };
 		368C3A1B213F67C900C10B3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		368C3AD8213F6ADB00C10B3E /* DWBToolsPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBToolsPrefixHeader.pch; sourceTree = "<group>"; };
+		5B2AD26055BB273DD4351B06 /* Pods-DWBToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		6C09C75787C5C6594A6B0EA4 /* libPods-DWBToolsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DWBToolsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A53F89B2E10274ABDD3C0872 /* Pods-DWBToolsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3009708B8FBB5CE10309819E /* libPods-DWBToolsDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29D6738566231BA99388E74C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C09C75787C5C6594A6B0EA4 /* libPods-DWBToolsDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		368C39E9213F67C800C10B3E = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +99,8 @@
 				368C3A0D213F67C900C10B3E /* DWBToolsDemoTests */,
 				368C3A18213F67C900C10B3E /* DWBToolsDemoUITests */,
 				368C39F3213F67C800C10B3E /* Products */,
+				76CA9418AA36DA75CEAC0D77 /* Pods */,
+				29D6738566231BA99388E74C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +119,7 @@
 			children = (
 				368C39F5213F67C800C10B3E /* AppDelegate.h */,
 				368C39F6213F67C800C10B3E /* AppDelegate.m */,
+				368C3AD8213F6ADB00C10B3E /* DWBToolsPrefixHeader.pch */,
 				368C39F8213F67C800C10B3E /* ViewController.h */,
 				368C39F9213F67C800C10B3E /* ViewController.m */,
 				368C39FB213F67C800C10B3E /* Main.storyboard */,
@@ -132,6 +149,15 @@
 			path = DWBToolsDemoUITests;
 			sourceTree = "<group>";
 		};
+		76CA9418AA36DA75CEAC0D77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B2AD26055BB273DD4351B06 /* Pods-DWBToolsDemo.debug.xcconfig */,
+				A53F89B2E10274ABDD3C0872 /* Pods-DWBToolsDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 368C3A1E213F67C900C10B3E /* Build configuration list for PBXNativeTarget "DWBToolsDemo" */;
 			buildPhases = (
+				23F44DB63DDFF5BD1478B55A /* [CP] Check Pods Manifest.lock */,
 				368C39EE213F67C800C10B3E /* Sources */,
 				368C39EF213F67C800C10B3E /* Frameworks */,
 				368C39F0213F67C800C10B3E /* Resources */,
+				2F80E6042ADB0C4D8D4097E7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +284,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23F44DB63DDFF5BD1478B55A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DWBToolsDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F80E6042ADB0C4D8D4097E7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		368C39EE213F67C800C10B3E /* Sources */ = {
@@ -431,10 +498,12 @@
 		};
 		368C3A1F213F67C900C10B3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B2AD26055BB273DD4351B06 /* Pods-DWBToolsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WD7W3QK2S3;
+				GCC_PREFIX_HEADER = "$(SCROOT)DWBToolsDemo/DWBToolsPrefixHeader.pch";
 				INFOPLIST_FILE = DWBToolsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,10 +517,12 @@
 		};
 		368C3A20213F67C900C10B3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A53F89B2E10274ABDD3C0872 /* Pods-DWBToolsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WD7W3QK2S3;
+				GCC_PREFIX_HEADER = "$(SCROOT)DWBToolsDemo/DWBToolsPrefixHeader.pch";
 				INFOPLIST_FILE = DWBToolsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
