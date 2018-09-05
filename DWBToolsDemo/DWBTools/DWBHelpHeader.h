@@ -26,6 +26,18 @@
 #import "DWBToast.h"
 //字符串category
 #import "NSString+DWBHelp.h"
+//计算图片高度
+#import "NSString+GetImageHeight.h"
+//可以复制的label
+#import "CopyLabel.h"
+//悬浮拖拽的button
+#import "DragEnableButton.h"
+//得到UUID，卸载也不会变
+#import "getUUID.h"
+//字典类别（Category）
+#import "NSDictionary+CXHelp.h"
+
+
 
 #pragma mark ============ 工具类相互依赖的头文件 E=====================
 
