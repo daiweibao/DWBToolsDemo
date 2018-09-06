@@ -754,6 +754,14 @@
             //    @"weixin://"
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"weixin://"]];
             
+//            UIApplication对象中openUrl被废弃
+//            在iOS 10.0以前的年代，我们要想使用应用程序去打开一个网页或者进行跳转，直接使用[[UIApplication sharedApplication] openURL 方法就可以了，但是在iOS 10 已经被废弃了，因为使用这种方式，处理的结果我们不能拦截到也不能获取到，对于开发是非常不利的，在iOS 10全新的退出了
+            
+//            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"weixin://"] options:@{} completionHandler:^(BOOL success) {
+//
+//            }];
+            
+            
         }else{
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:@"对不起，您还没安装微信" preferredStyle:UIAlertControllerStyleAlert];
             

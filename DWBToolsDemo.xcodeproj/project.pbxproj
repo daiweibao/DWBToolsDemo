@@ -19,6 +19,19 @@
 		368C3C04213FB44800C10B3E /* DWBToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C3BFE213FB44800C10B3E /* DWBToast.m */; };
 		368C3C05213FB44900C10B3E /* NSString+CXMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C3C02213FB44800C10B3E /* NSString+CXMD5.m */; };
 		368C3C06213FB44900C10B3E /* NSString+DWBHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C3C03213FB44800C10B3E /* NSString+DWBHelp.m */; };
+		368E69C02140B538000EC79C /* UIButton+SSEdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69BF2140B538000EC79C /* UIButton+SSEdgeInsets.m */; };
+		368E69C62140B64D000EC79C /* UIColor+DWBHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69C52140B64D000EC79C /* UIColor+DWBHelp.m */; };
+		368E69C92140C1A5000EC79C /* UIView+ActionTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69C82140C1A5000EC79C /* UIView+ActionTap.m */; };
+		368E69CC2140C231000EC79C /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69CB2140C231000EC79C /* UIView+Animation.m */; };
+		368E69D12140C27D000EC79C /* UIView+Help.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69CF2140C27D000EC79C /* UIView+Help.m */; };
+		368E69D22140C27D000EC79C /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69D02140C27D000EC79C /* UIView+Extension.m */; };
+		368E69D82140C49B000EC79C /* UIFont+FontNameBoldSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69D62140C49B000EC79C /* UIFont+FontNameBoldSize.m */; };
+		368E69D92140C49B000EC79C /* UIFont+FontNameSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69D72140C49B000EC79C /* UIFont+FontNameSize.m */; };
+		368E69DD2140C58B000EC79C /* UITextField+WJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69DC2140C58B000EC79C /* UITextField+WJ.m */; };
+		368E69E42140C5BF000EC79C /* CXSystemStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69DF2140C5BF000EC79C /* CXSystemStatus.m */; };
+		368E69E52140C5BF000EC79C /* CXAudioTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69E02140C5BF000EC79C /* CXAudioTools.m */; };
+		368E69E62140C5BF000EC79C /* TouchIDHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69E22140C5BF000EC79C /* TouchIDHelp.m */; };
+		368E69E92140C70D000EC79C /* KeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69E82140C70D000EC79C /* KeyChainManager.m */; };
 		36D3784A213FE01500E768AF /* NSString+GetImageHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37849213FE01500E768AF /* NSString+GetImageHeight.m */; };
 		36D37850213FEF7C00E768AF /* DragEnableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3784E213FEF7C00E768AF /* DragEnableButton.m */; };
 		36D37851213FEF7C00E768AF /* CopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3784F213FEF7C00E768AF /* CopyLabel.m */; };
@@ -69,6 +82,32 @@
 		368C3C01213FB44800C10B3E /* NSString+DWBHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DWBHelp.h"; sourceTree = "<group>"; };
 		368C3C02213FB44800C10B3E /* NSString+CXMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CXMD5.m"; sourceTree = "<group>"; };
 		368C3C03213FB44800C10B3E /* NSString+DWBHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DWBHelp.m"; sourceTree = "<group>"; };
+		368E69BE2140B538000EC79C /* UIButton+SSEdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SSEdgeInsets.h"; sourceTree = "<group>"; };
+		368E69BF2140B538000EC79C /* UIButton+SSEdgeInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SSEdgeInsets.m"; sourceTree = "<group>"; };
+		368E69C42140B64D000EC79C /* UIColor+DWBHelp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+DWBHelp.h"; sourceTree = "<group>"; };
+		368E69C52140B64D000EC79C /* UIColor+DWBHelp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DWBHelp.m"; sourceTree = "<group>"; };
+		368E69C72140C1A5000EC79C /* UIView+ActionTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ActionTap.h"; sourceTree = "<group>"; };
+		368E69C82140C1A5000EC79C /* UIView+ActionTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ActionTap.m"; sourceTree = "<group>"; };
+		368E69CA2140C231000EC79C /* UIView+Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
+		368E69CB2140C231000EC79C /* UIView+Animation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
+		368E69CD2140C27C000EC79C /* UIView+Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Help.h"; sourceTree = "<group>"; };
+		368E69CE2140C27C000EC79C /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		368E69CF2140C27D000EC79C /* UIView+Help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Help.m"; sourceTree = "<group>"; };
+		368E69D02140C27D000EC79C /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		368E69D42140C49B000EC79C /* UIFont+FontNameSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FontNameSize.h"; sourceTree = "<group>"; };
+		368E69D52140C49B000EC79C /* UIFont+FontNameBoldSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FontNameBoldSize.h"; sourceTree = "<group>"; };
+		368E69D62140C49B000EC79C /* UIFont+FontNameBoldSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FontNameBoldSize.m"; sourceTree = "<group>"; };
+		368E69D72140C49B000EC79C /* UIFont+FontNameSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FontNameSize.m"; sourceTree = "<group>"; };
+		368E69DB2140C58B000EC79C /* UITextField+WJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+WJ.h"; sourceTree = "<group>"; };
+		368E69DC2140C58B000EC79C /* UITextField+WJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+WJ.m"; sourceTree = "<group>"; };
+		368E69DE2140C5BF000EC79C /* CXAudioTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAudioTools.h; sourceTree = "<group>"; };
+		368E69DF2140C5BF000EC79C /* CXSystemStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSystemStatus.m; sourceTree = "<group>"; };
+		368E69E02140C5BF000EC79C /* CXAudioTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAudioTools.m; sourceTree = "<group>"; };
+		368E69E12140C5BF000EC79C /* TouchIDHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchIDHelp.h; sourceTree = "<group>"; };
+		368E69E22140C5BF000EC79C /* TouchIDHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchIDHelp.m; sourceTree = "<group>"; };
+		368E69E32140C5BF000EC79C /* CXSystemStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSystemStatus.h; sourceTree = "<group>"; };
+		368E69E72140C70D000EC79C /* KeyChainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainManager.h; sourceTree = "<group>"; };
+		368E69E82140C70D000EC79C /* KeyChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainManager.m; sourceTree = "<group>"; };
 		36D37848213FE01500E768AF /* NSString+GetImageHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GetImageHeight.h"; sourceTree = "<group>"; };
 		36D37849213FE01500E768AF /* NSString+GetImageHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GetImageHeight.m"; sourceTree = "<group>"; };
 		36D3784C213FEF7C00E768AF /* CopyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyLabel.h; sourceTree = "<group>"; };
@@ -182,6 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				368C3BE9213FA7A500C10B3E /* DWBHelpHeader.h */,
+				368E69DA2140C576000EC79C /* UITextField */,
+				368E69D32140C479000EC79C /* UIFont */,
 				368C3BFC213FB44800C10B3E /* HUD */,
 				36D3784B213FEF3900E768AF /* UIView */,
 				368C3BFF213FB44800C10B3E /* NSString */,
@@ -213,13 +254,43 @@
 			path = NSString;
 			sourceTree = "<group>";
 		};
+		368E69D32140C479000EC79C /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				368E69D52140C49B000EC79C /* UIFont+FontNameBoldSize.h */,
+				368E69D62140C49B000EC79C /* UIFont+FontNameBoldSize.m */,
+				368E69D42140C49B000EC79C /* UIFont+FontNameSize.h */,
+				368E69D72140C49B000EC79C /* UIFont+FontNameSize.m */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
+		368E69DA2140C576000EC79C /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				368E69DB2140C58B000EC79C /* UITextField+WJ.h */,
+				368E69DC2140C58B000EC79C /* UITextField+WJ.m */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
 		36D3784B213FEF3900E768AF /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				368E69C72140C1A5000EC79C /* UIView+ActionTap.h */,
+				368E69C82140C1A5000EC79C /* UIView+ActionTap.m */,
 				36D3784C213FEF7C00E768AF /* CopyLabel.h */,
 				36D3784F213FEF7C00E768AF /* CopyLabel.m */,
 				36D3784D213FEF7C00E768AF /* DragEnableButton.h */,
 				36D3784E213FEF7C00E768AF /* DragEnableButton.m */,
+				368E69BE2140B538000EC79C /* UIButton+SSEdgeInsets.h */,
+				368E69BF2140B538000EC79C /* UIButton+SSEdgeInsets.m */,
+				368E69CA2140C231000EC79C /* UIView+Animation.h */,
+				368E69CB2140C231000EC79C /* UIView+Animation.m */,
+				368E69CE2140C27C000EC79C /* UIView+Extension.h */,
+				368E69D02140C27D000EC79C /* UIView+Extension.m */,
+				368E69CD2140C27C000EC79C /* UIView+Help.h */,
+				368E69CF2140C27D000EC79C /* UIView+Help.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -227,10 +298,20 @@
 		36D37852213FF00600E768AF /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				368E69DE2140C5BF000EC79C /* CXAudioTools.h */,
+				368E69E02140C5BF000EC79C /* CXAudioTools.m */,
+				368E69E32140C5BF000EC79C /* CXSystemStatus.h */,
+				368E69DF2140C5BF000EC79C /* CXSystemStatus.m */,
+				368E69E12140C5BF000EC79C /* TouchIDHelp.h */,
+				368E69E22140C5BF000EC79C /* TouchIDHelp.m */,
+				368E69C42140B64D000EC79C /* UIColor+DWBHelp.h */,
+				368E69C52140B64D000EC79C /* UIColor+DWBHelp.m */,
 				36D37857213FF05D00E768AF /* getUUID.h */,
 				36D37856213FF05D00E768AF /* getUUID.m */,
 				36D37853213FF02300E768AF /* GetChatTime.h */,
 				36D37854213FF02300E768AF /* GetChatTime.m */,
+				368E69E72140C70D000EC79C /* KeyChainManager.h */,
+				368E69E82140C70D000EC79C /* KeyChainManager.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -405,16 +486,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				368E69D22140C27D000EC79C /* UIView+Extension.m in Sources */,
 				368C39FA213F67C800C10B3E /* ViewController.m in Sources */,
+				368E69CC2140C231000EC79C /* UIView+Animation.m in Sources */,
 				36D37855213FF02300E768AF /* GetChatTime.m in Sources */,
 				368C3C05213FB44900C10B3E /* NSString+CXMD5.m in Sources */,
+				368E69C92140C1A5000EC79C /* UIView+ActionTap.m in Sources */,
+				368E69DD2140C58B000EC79C /* UITextField+WJ.m in Sources */,
 				368C3C04213FB44800C10B3E /* DWBToast.m in Sources */,
+				368E69D92140C49B000EC79C /* UIFont+FontNameSize.m in Sources */,
+				368E69E62140C5BF000EC79C /* TouchIDHelp.m in Sources */,
+				368E69D82140C49B000EC79C /* UIFont+FontNameBoldSize.m in Sources */,
+				368E69D12140C27D000EC79C /* UIView+Help.m in Sources */,
 				368C3A05213F67C900C10B3E /* main.m in Sources */,
 				368C3C06213FB44900C10B3E /* NSString+DWBHelp.m in Sources */,
 				368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */,
 				36D37850213FEF7C00E768AF /* DragEnableButton.m in Sources */,
 				36D37851213FEF7C00E768AF /* CopyLabel.m in Sources */,
 				36D37858213FF05D00E768AF /* getUUID.m in Sources */,
+				368E69E42140C5BF000EC79C /* CXSystemStatus.m in Sources */,
+				368E69E92140C70D000EC79C /* KeyChainManager.m in Sources */,
+				368E69C62140B64D000EC79C /* UIColor+DWBHelp.m in Sources */,
+				368E69E52140C5BF000EC79C /* CXAudioTools.m in Sources */,
+				368E69C02140B538000EC79C /* UIButton+SSEdgeInsets.m in Sources */,
 				36D3785C213FF0C400E768AF /* NSDictionary+CXHelp.m in Sources */,
 				36D3784A213FE01500E768AF /* NSString+GetImageHeight.m in Sources */,
 			);

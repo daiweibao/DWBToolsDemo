@@ -36,6 +36,19 @@
 #import "getUUID.h"
 //字典类别（Category）
 #import "NSDictionary+CXHelp.h"
+//button图文展示
+#import "UIButton+SSEdgeInsets.h"
+//十六进制颜色
+#import "UIColor+DWBHelp.h"
+//点击手势
+#import "UIView+ActionTap.h"
+//UIView
+#import "UIView+Help.h"
+//动画
+#import "UIView+Animation.h"
+//UIView布局
+#import "UIView+Extension.h"
+
 
 
 
@@ -165,6 +178,9 @@ _Pragma("clang diagnostic pop") \
 #define MAIN_COLOR [UIColor colorWithHexString:@"#44617B"]//主题色(蓝紫色)--王府管家
 
 #define MAIN_COLOR_AlertBJ [UIColor colorWithRed:129/255.0 green:129/255.0 blue:129/255.0 alpha:0.7]//蒙版半透明黑色背景
+
+//十六进制颜色--带#号传入(依赖类：UIColor+DWBHelp)
+#define UIColorHex(_hex_)   [UIColor colorWithHexString:((__bridge NSString *)CFSTR(_hex_))]
 
 
 //获取app logo图片可以显示图片名字
