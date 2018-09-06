@@ -3,8 +3,8 @@ platform :ios, '8.0'
 
 target 'DWBToolsDemo' do
     
-##AFN
-#pod 'AFNetworking'
+#AFN
+pod 'AFNetworking'
 #
 ##图片解析（不支持gif）
 ##    从4.0版本开始，我们依赖FLAnimatedImage来处理我们的动画图像。

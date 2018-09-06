@@ -21,6 +21,14 @@
 #pragma mark ============ 系统头文件 E=====================
 
 
+//// 如果定义了macro_name宏就编译代码段1
+//#ifdef macro_name
+//代码段1
+//#else
+//代码段2
+//#endif
+
+
 #pragma mark ============ 工具类相互依赖的头文件 S=====================
 //纯文字提示框
 #import "DWBToast.h"

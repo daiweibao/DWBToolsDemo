@@ -32,6 +32,7 @@
 		368E69E52140C5BF000EC79C /* CXAudioTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69E02140C5BF000EC79C /* CXAudioTools.m */; };
 		368E69E62140C5BF000EC79C /* TouchIDHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69E22140C5BF000EC79C /* TouchIDHelp.m */; };
 		368E69E92140C70D000EC79C /* KeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69E82140C70D000EC79C /* KeyChainManager.m */; };
+		368E69ED2140D307000EC79C /* DWBAFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69EC2140D307000EC79C /* DWBAFNetworking.m */; };
 		36D3784A213FE01500E768AF /* NSString+GetImageHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37849213FE01500E768AF /* NSString+GetImageHeight.m */; };
 		36D37850213FEF7C00E768AF /* DragEnableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3784E213FEF7C00E768AF /* DragEnableButton.m */; };
 		36D37851213FEF7C00E768AF /* CopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3784F213FEF7C00E768AF /* CopyLabel.m */; };
@@ -108,6 +109,8 @@
 		368E69E32140C5BF000EC79C /* CXSystemStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSystemStatus.h; sourceTree = "<group>"; };
 		368E69E72140C70D000EC79C /* KeyChainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainManager.h; sourceTree = "<group>"; };
 		368E69E82140C70D000EC79C /* KeyChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainManager.m; sourceTree = "<group>"; };
+		368E69EB2140D307000EC79C /* DWBAFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBAFNetworking.h; sourceTree = "<group>"; };
+		368E69EC2140D307000EC79C /* DWBAFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBAFNetworking.m; sourceTree = "<group>"; };
 		36D37848213FE01500E768AF /* NSString+GetImageHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GetImageHeight.h"; sourceTree = "<group>"; };
 		36D37849213FE01500E768AF /* NSString+GetImageHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GetImageHeight.m"; sourceTree = "<group>"; };
 		36D3784C213FEF7C00E768AF /* CopyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyLabel.h; sourceTree = "<group>"; };
@@ -225,6 +228,7 @@
 				368E69D32140C479000EC79C /* UIFont */,
 				368C3BFC213FB44800C10B3E /* HUD */,
 				36D3784B213FEF3900E768AF /* UIView */,
+				368E69EA2140D260000EC79C /* NetWork */,
 				368C3BFF213FB44800C10B3E /* NSString */,
 				36D37859213FF0A800E768AF /* NSDictionary */,
 				36D37852213FF00600E768AF /* Other */,
@@ -272,6 +276,15 @@
 				368E69DC2140C58B000EC79C /* UITextField+WJ.m */,
 			);
 			path = UITextField;
+			sourceTree = "<group>";
+		};
+		368E69EA2140D260000EC79C /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				368E69EB2140D307000EC79C /* DWBAFNetworking.h */,
+				368E69EC2140D307000EC79C /* DWBAFNetworking.m */,
+			);
+			path = NetWork;
 			sourceTree = "<group>";
 		};
 		36D3784B213FEF3900E768AF /* UIView */ = {
@@ -506,6 +519,7 @@
 				36D37858213FF05D00E768AF /* getUUID.m in Sources */,
 				368E69E42140C5BF000EC79C /* CXSystemStatus.m in Sources */,
 				368E69E92140C70D000EC79C /* KeyChainManager.m in Sources */,
+				368E69ED2140D307000EC79C /* DWBAFNetworking.m in Sources */,
 				368E69C62140B64D000EC79C /* UIColor+DWBHelp.m in Sources */,
 				368E69E52140C5BF000EC79C /* CXAudioTools.m in Sources */,
 				368E69C02140B538000EC79C /* UIButton+SSEdgeInsets.m in Sources */,
