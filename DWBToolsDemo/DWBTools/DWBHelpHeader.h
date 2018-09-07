@@ -9,6 +9,7 @@
 //这里是类别的头文件和和所有+宏定义
 
 //警告：因为APP在启动的时候会加载所有的分类，全部添加可能会影响启动速度。
+//三方依赖：pod 'AFNetworking'  pod 'FLAnimatedImage'  pod 'Masonry'
 
 #ifndef DWBHelpHeader_h
 #define DWBHelpHeader_h

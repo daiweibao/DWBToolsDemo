@@ -14,11 +14,11 @@ pod 'AFNetworking'
 ##    重要:FLAnimatedImage只适用于iOS平台。对于macOS，使用NSImageView与animates设置为YES以显示整个动画图像，而不只是显示第1帧。对于所有其他平台(tvOS, watchOS)，我们将退回到上面描述的向后兼容性特性。
 #pod 'SDWebImage', '~> 4.3.3'
 #
-##本地动画播放
-#pod 'FLAnimatedImage'
+#本地动画播放
+pod 'FLAnimatedImage'
 #
-##布局
-#pod 'Masonry'
+#布局
+pod 'Masonry'
 #
 ##提示框
 #pod 'MBProgressHUD'

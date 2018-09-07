@@ -18,6 +18,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(50, 200, 300, 50);
+    [button setTitle:@"工具类，请看代码" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [self.view addSubview:button];
+    
  
 }
 

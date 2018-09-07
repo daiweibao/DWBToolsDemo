@@ -39,6 +39,26 @@
 		36D37855213FF02300E768AF /* GetChatTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37854213FF02300E768AF /* GetChatTime.m */; };
 		36D37858213FF05D00E768AF /* getUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37856213FF05D00E768AF /* getUUID.m */; };
 		36D3785C213FF0C400E768AF /* NSDictionary+CXHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3785B213FF0C400E768AF /* NSDictionary+CXHelp.m */; };
+		36EEDC9221420585000CBEEB /* UIImage+PlayGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDC8A21420585000CBEEB /* UIImage+PlayGif.m */; };
+		36EEDC9321420585000CBEEB /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDC8B21420585000CBEEB /* UIImage+Rotate.m */; };
+		36EEDC9421420585000CBEEB /* UIImageView+CXHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDC8C21420585000CBEEB /* UIImageView+CXHelp.m */; };
+		36EEDC9521420585000CBEEB /* UIImage+MyImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDC8E21420585000CBEEB /* UIImage+MyImage.m */; };
+		36EEDCA721420794000CBEEB /* NSString+QRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDC9A21420794000CBEEB /* NSString+QRCode.m */; };
+		36EEDCA821420794000CBEEB /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDC9B21420794000CBEEB /* UIImage+Extend.m */; };
+		36EEDCA921420794000CBEEB /* scan_circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36EEDC9D21420794000CBEEB /* scan_circle@2x.png */; };
+		36EEDCAA21420794000CBEEB /* 扫码线@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36EEDC9E21420794000CBEEB /* 扫码线@3x.png */; };
+		36EEDCAB21420794000CBEEB /* scan_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36EEDC9F21420794000CBEEB /* scan_line@2x.png */; };
+		36EEDCAC21420794000CBEEB /* 扫码线@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36EEDCA021420794000CBEEB /* 扫码线@2x.png */; };
+		36EEDCAD21420794000CBEEB /* scanSuccess.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36EEDCA121420794000CBEEB /* scanSuccess.wav */; };
+		36EEDCAE21420794000CBEEB /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCA421420794000CBEEB /* ScanViewController.m */; };
+		36EEDCAF21420794000CBEEB /* ScanResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCA621420794000CBEEB /* ScanResultsController.m */; };
+		36EEDCB3214208C3000CBEEB /* XHNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCB2214208C3000CBEEB /* XHNetworkCache.m */; };
+		36EEDCBD214209FE000CBEEB /* 版本检测弹窗关闭@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36EEDCB5214209FE000CBEEB /* 版本检测弹窗关闭@3x.png */; };
+		36EEDCBE214209FE000CBEEB /* 版本更新背景@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36EEDCB7214209FE000CBEEB /* 版本更新背景@3x.png */; };
+		36EEDCBF214209FE000CBEEB /* 版本更新背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36EEDCB8214209FE000CBEEB /* 版本更新背景@2x.png */; };
+		36EEDCC0214209FE000CBEEB /* 版本检测弹窗关闭@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36EEDCB9214209FE000CBEEB /* 版本检测弹窗关闭@2x.png */; };
+		36EEDCC1214209FE000CBEEB /* CXVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCBA214209FE000CBEEB /* CXVersionUpdate.m */; };
+		36EEDCC2214209FE000CBEEB /* DownUpdateAppAleat.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCBB214209FE000CBEEB /* DownUpdateAppAleat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +143,37 @@
 		36D37857213FF05D00E768AF /* getUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getUUID.h; sourceTree = "<group>"; };
 		36D3785A213FF0C300E768AF /* NSDictionary+CXHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CXHelp.h"; sourceTree = "<group>"; };
 		36D3785B213FF0C400E768AF /* NSDictionary+CXHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CXHelp.m"; sourceTree = "<group>"; };
+		36EEDC8A21420585000CBEEB /* UIImage+PlayGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PlayGif.m"; sourceTree = "<group>"; };
+		36EEDC8B21420585000CBEEB /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
+		36EEDC8C21420585000CBEEB /* UIImageView+CXHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CXHelp.m"; sourceTree = "<group>"; };
+		36EEDC8D21420585000CBEEB /* UIImage+MyImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MyImage.h"; sourceTree = "<group>"; };
+		36EEDC8E21420585000CBEEB /* UIImage+MyImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MyImage.m"; sourceTree = "<group>"; };
+		36EEDC8F21420585000CBEEB /* UIImage+PlayGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PlayGif.h"; sourceTree = "<group>"; };
+		36EEDC9021420585000CBEEB /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
+		36EEDC9121420585000CBEEB /* UIImageView+CXHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CXHelp.h"; sourceTree = "<group>"; };
+		36EEDC9821420794000CBEEB /* NSString+QRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QRCode.h"; sourceTree = "<group>"; };
+		36EEDC9921420794000CBEEB /* UIImage+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
+		36EEDC9A21420794000CBEEB /* NSString+QRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QRCode.m"; sourceTree = "<group>"; };
+		36EEDC9B21420794000CBEEB /* UIImage+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extend.m"; sourceTree = "<group>"; };
+		36EEDC9D21420794000CBEEB /* scan_circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan_circle@2x.png"; sourceTree = "<group>"; };
+		36EEDC9E21420794000CBEEB /* 扫码线@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "扫码线@3x.png"; sourceTree = "<group>"; };
+		36EEDC9F21420794000CBEEB /* scan_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan_line@2x.png"; sourceTree = "<group>"; };
+		36EEDCA021420794000CBEEB /* 扫码线@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "扫码线@2x.png"; sourceTree = "<group>"; };
+		36EEDCA121420794000CBEEB /* scanSuccess.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = scanSuccess.wav; sourceTree = "<group>"; };
+		36EEDCA321420794000CBEEB /* ScanResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanResultsController.h; sourceTree = "<group>"; };
+		36EEDCA421420794000CBEEB /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
+		36EEDCA521420794000CBEEB /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		36EEDCA621420794000CBEEB /* ScanResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanResultsController.m; sourceTree = "<group>"; };
+		36EEDCB1214208C3000CBEEB /* XHNetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNetworkCache.h; sourceTree = "<group>"; };
+		36EEDCB2214208C3000CBEEB /* XHNetworkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNetworkCache.m; sourceTree = "<group>"; };
+		36EEDCB5214209FE000CBEEB /* 版本检测弹窗关闭@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "版本检测弹窗关闭@3x.png"; sourceTree = "<group>"; };
+		36EEDCB6214209FE000CBEEB /* DownUpdateAppAleat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownUpdateAppAleat.h; sourceTree = "<group>"; };
+		36EEDCB7214209FE000CBEEB /* 版本更新背景@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "版本更新背景@3x.png"; sourceTree = "<group>"; };
+		36EEDCB8214209FE000CBEEB /* 版本更新背景@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "版本更新背景@2x.png"; sourceTree = "<group>"; };
+		36EEDCB9214209FE000CBEEB /* 版本检测弹窗关闭@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "版本检测弹窗关闭@2x.png"; sourceTree = "<group>"; };
+		36EEDCBA214209FE000CBEEB /* CXVersionUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXVersionUpdate.m; sourceTree = "<group>"; };
+		36EEDCBB214209FE000CBEEB /* DownUpdateAppAleat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownUpdateAppAleat.m; sourceTree = "<group>"; };
+		36EEDCBC214209FE000CBEEB /* CXVersionUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXVersionUpdate.h; sourceTree = "<group>"; };
 		5B2AD26055BB273DD4351B06 /* Pods-DWBToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		6C09C75787C5C6594A6B0EA4 /* libPods-DWBToolsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DWBToolsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53F89B2E10274ABDD3C0872 /* Pods-DWBToolsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -229,8 +280,12 @@
 				368C3BFC213FB44800C10B3E /* HUD */,
 				36D3784B213FEF3900E768AF /* UIView */,
 				368E69EA2140D260000EC79C /* NetWork */,
+				36EEDCB0214208C3000CBEEB /* NetworkCache（数据缓存） */,
 				368C3BFF213FB44800C10B3E /* NSString */,
 				36D37859213FF0A800E768AF /* NSDictionary */,
+				36EEDCB4214209FE000CBEEB /* VersionUpdate(版本更新) */,
+				36EEDC8921420440000CBEEB /* UIImage */,
+				36EEDC9621420794000CBEEB /* QrCode(二维码扫码) */,
 				36D37852213FF00600E768AF /* Other */,
 			);
 			path = DWBTools;
@@ -336,6 +391,89 @@
 				36D3785B213FF0C400E768AF /* NSDictionary+CXHelp.m */,
 			);
 			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		36EEDC8921420440000CBEEB /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				36EEDC8D21420585000CBEEB /* UIImage+MyImage.h */,
+				36EEDC8E21420585000CBEEB /* UIImage+MyImage.m */,
+				36EEDC8F21420585000CBEEB /* UIImage+PlayGif.h */,
+				36EEDC8A21420585000CBEEB /* UIImage+PlayGif.m */,
+				36EEDC9021420585000CBEEB /* UIImage+Rotate.h */,
+				36EEDC8B21420585000CBEEB /* UIImage+Rotate.m */,
+				36EEDC9121420585000CBEEB /* UIImageView+CXHelp.h */,
+				36EEDC8C21420585000CBEEB /* UIImageView+CXHelp.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		36EEDC9621420794000CBEEB /* QrCode(二维码扫码) */ = {
+			isa = PBXGroup;
+			children = (
+				36EEDC9C21420794000CBEEB /* Image */,
+				36EEDC9721420794000CBEEB /* QrCodeTools */,
+				36EEDCA221420794000CBEEB /* Controller(扫一扫) */,
+			);
+			path = "QrCode(二维码扫码)";
+			sourceTree = "<group>";
+		};
+		36EEDC9721420794000CBEEB /* QrCodeTools */ = {
+			isa = PBXGroup;
+			children = (
+				36EEDC9821420794000CBEEB /* NSString+QRCode.h */,
+				36EEDC9A21420794000CBEEB /* NSString+QRCode.m */,
+				36EEDC9921420794000CBEEB /* UIImage+Extend.h */,
+				36EEDC9B21420794000CBEEB /* UIImage+Extend.m */,
+			);
+			path = QrCodeTools;
+			sourceTree = "<group>";
+		};
+		36EEDC9C21420794000CBEEB /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				36EEDC9D21420794000CBEEB /* scan_circle@2x.png */,
+				36EEDC9E21420794000CBEEB /* 扫码线@3x.png */,
+				36EEDC9F21420794000CBEEB /* scan_line@2x.png */,
+				36EEDCA021420794000CBEEB /* 扫码线@2x.png */,
+				36EEDCA121420794000CBEEB /* scanSuccess.wav */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		36EEDCA221420794000CBEEB /* Controller(扫一扫) */ = {
+			isa = PBXGroup;
+			children = (
+				36EEDCA421420794000CBEEB /* ScanViewController.m */,
+				36EEDCA521420794000CBEEB /* ScanViewController.h */,
+				36EEDCA321420794000CBEEB /* ScanResultsController.h */,
+				36EEDCA621420794000CBEEB /* ScanResultsController.m */,
+			);
+			path = "Controller(扫一扫)";
+			sourceTree = "<group>";
+		};
+		36EEDCB0214208C3000CBEEB /* NetworkCache（数据缓存） */ = {
+			isa = PBXGroup;
+			children = (
+				36EEDCB1214208C3000CBEEB /* XHNetworkCache.h */,
+				36EEDCB2214208C3000CBEEB /* XHNetworkCache.m */,
+			);
+			path = "NetworkCache（数据缓存）";
+			sourceTree = "<group>";
+		};
+		36EEDCB4214209FE000CBEEB /* VersionUpdate(版本更新) */ = {
+			isa = PBXGroup;
+			children = (
+				36EEDCB5214209FE000CBEEB /* 版本检测弹窗关闭@3x.png */,
+				36EEDCB7214209FE000CBEEB /* 版本更新背景@3x.png */,
+				36EEDCB8214209FE000CBEEB /* 版本更新背景@2x.png */,
+				36EEDCB9214209FE000CBEEB /* 版本检测弹窗关闭@2x.png */,
+				36EEDCB6214209FE000CBEEB /* DownUpdateAppAleat.h */,
+				36EEDCBB214209FE000CBEEB /* DownUpdateAppAleat.m */,
+				36EEDCBC214209FE000CBEEB /* CXVersionUpdate.h */,
+				36EEDCBA214209FE000CBEEB /* CXVersionUpdate.m */,
+			);
+			path = "VersionUpdate(版本更新)";
 			sourceTree = "<group>";
 		};
 		76CA9418AA36DA75CEAC0D77 /* Pods */ = {
@@ -452,8 +590,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				368C3A02213F67C900C10B3E /* LaunchScreen.storyboard in Resources */,
+				36EEDCAD21420794000CBEEB /* scanSuccess.wav in Resources */,
+				36EEDCA921420794000CBEEB /* scan_circle@2x.png in Resources */,
 				368C39FF213F67C900C10B3E /* Assets.xcassets in Resources */,
+				36EEDCBF214209FE000CBEEB /* 版本更新背景@2x.png in Resources */,
+				36EEDCAC21420794000CBEEB /* 扫码线@2x.png in Resources */,
+				36EEDCAA21420794000CBEEB /* 扫码线@3x.png in Resources */,
+				36EEDCC0214209FE000CBEEB /* 版本检测弹窗关闭@2x.png in Resources */,
+				36EEDCBE214209FE000CBEEB /* 版本更新背景@3x.png in Resources */,
 				368C39FD213F67C800C10B3E /* Main.storyboard in Resources */,
+				36EEDCBD214209FE000CBEEB /* 版本检测弹窗关闭@3x.png in Resources */,
+				36EEDCAB21420794000CBEEB /* scan_line@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,32 +646,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36EEDC9421420585000CBEEB /* UIImageView+CXHelp.m in Sources */,
 				368E69D22140C27D000EC79C /* UIView+Extension.m in Sources */,
 				368C39FA213F67C800C10B3E /* ViewController.m in Sources */,
 				368E69CC2140C231000EC79C /* UIView+Animation.m in Sources */,
+				36EEDCA721420794000CBEEB /* NSString+QRCode.m in Sources */,
 				36D37855213FF02300E768AF /* GetChatTime.m in Sources */,
 				368C3C05213FB44900C10B3E /* NSString+CXMD5.m in Sources */,
+				36EEDCB3214208C3000CBEEB /* XHNetworkCache.m in Sources */,
+				36EEDCC2214209FE000CBEEB /* DownUpdateAppAleat.m in Sources */,
+				36EEDCC1214209FE000CBEEB /* CXVersionUpdate.m in Sources */,
 				368E69C92140C1A5000EC79C /* UIView+ActionTap.m in Sources */,
 				368E69DD2140C58B000EC79C /* UITextField+WJ.m in Sources */,
 				368C3C04213FB44800C10B3E /* DWBToast.m in Sources */,
 				368E69D92140C49B000EC79C /* UIFont+FontNameSize.m in Sources */,
 				368E69E62140C5BF000EC79C /* TouchIDHelp.m in Sources */,
 				368E69D82140C49B000EC79C /* UIFont+FontNameBoldSize.m in Sources */,
+				36EEDCAF21420794000CBEEB /* ScanResultsController.m in Sources */,
+				36EEDC9221420585000CBEEB /* UIImage+PlayGif.m in Sources */,
 				368E69D12140C27D000EC79C /* UIView+Help.m in Sources */,
 				368C3A05213F67C900C10B3E /* main.m in Sources */,
+				36EEDCAE21420794000CBEEB /* ScanViewController.m in Sources */,
 				368C3C06213FB44900C10B3E /* NSString+DWBHelp.m in Sources */,
 				368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */,
 				36D37850213FEF7C00E768AF /* DragEnableButton.m in Sources */,
 				36D37851213FEF7C00E768AF /* CopyLabel.m in Sources */,
 				36D37858213FF05D00E768AF /* getUUID.m in Sources */,
 				368E69E42140C5BF000EC79C /* CXSystemStatus.m in Sources */,
+				36EEDC9521420585000CBEEB /* UIImage+MyImage.m in Sources */,
 				368E69E92140C70D000EC79C /* KeyChainManager.m in Sources */,
 				368E69ED2140D307000EC79C /* DWBAFNetworking.m in Sources */,
 				368E69C62140B64D000EC79C /* UIColor+DWBHelp.m in Sources */,
 				368E69E52140C5BF000EC79C /* CXAudioTools.m in Sources */,
 				368E69C02140B538000EC79C /* UIButton+SSEdgeInsets.m in Sources */,
 				36D3785C213FF0C400E768AF /* NSDictionary+CXHelp.m in Sources */,
+				36EEDC9321420585000CBEEB /* UIImage+Rotate.m in Sources */,
 				36D3784A213FE01500E768AF /* NSString+GetImageHeight.m in Sources */,
+				36EEDCA821420794000CBEEB /* UIImage+Extend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
