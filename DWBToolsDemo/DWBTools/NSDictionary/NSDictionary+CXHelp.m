@@ -63,6 +63,32 @@
     
 }
 
+//NSArray、NSDictionary转换为json：
++(NSString *)objectToJson:(id)obj{
+    if (obj == nil) {
+        return nil;
+    }
+    NSError *error = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:obj
+                                                       options:0
+                                                         error:&error];
+    
+    if ([jsonData length] && error == nil){
+        return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }else{
+        return nil;
+    }
+}
+
+//json转NSArray、NSDictionary：
++(id)jsonToObject:(NSString *)json{
+    //string转data
+    NSData * jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
+    //json解析
+    id obj = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+    return obj;
+}
+
 
 
 /**
@@ -113,15 +139,15 @@
             
         } else if ([obj isKindOfClass:[NSNumber class]]) {
             //NSNumber也用字符串接收, 不用NSInteger
-            code = [NSString stringWithFormat:@"@property (nonatomic, copy) NSString *%@;",key];
+            code = [NSString stringWithFormat:@"@property (nonatomic, strong) NSString *%@;",key];
             
         } else if ([obj isKindOfClass:[NSArray class]]) {
             //NSArray
-            code = [NSString stringWithFormat:@"@property (nonatomic, copy) NSArray *%@;",key];
+            code = [NSString stringWithFormat:@"@property (nonatomic, strong) NSArray *%@;",key];
             
         } else if ([obj isKindOfClass:[NSDictionary class]]) {
             //NSDictionary
-            code = [NSString stringWithFormat:@"@property (nonatomic, copy) NSDictionary *%@;",key];
+            code = [NSString stringWithFormat:@"@property (nonatomic, strong) NSDictionary *%@;",key];
         }else{
             //否则都用字符串来接收NSString
             code = [NSString stringWithFormat:@"@property (nonatomic, copy) NSString *%@;",key];
@@ -144,3 +170,4 @@
 
 
 @end
+
