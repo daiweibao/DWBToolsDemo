@@ -31,8 +31,10 @@
 
 
 #pragma mark ============ 工具类相互依赖的头文件 S=====================
-//纯文字提示框
+//纯文字提示框--HUD
 #import "DWBToast.h"
+//HUD
+#import "MBProgressHUD+MJ.h"
 //字符串category
 #import "NSString+DWBHelp.h"
 //计算图片高度
@@ -57,8 +59,18 @@
 #import "UIView+Animation.h"
 //UIView布局
 #import "UIView+Extension.h"
-
-
+//自己封装的弹窗
+#import "DWBAlertView.h"
+//图片
+#import "UIImage+MyImage.h"
+#import "UIImage+PlayGif.h"
+#import "UIImage+Rotate.h"
+//布局
+#import <Masonry.h>
+//svp
+#import "SVProgressHUD+KZ.h"
+//MBP
+#import "MBProgressHUD+MJ.h"
 
 
 #pragma mark ============ 工具类相互依赖的头文件 E=====================

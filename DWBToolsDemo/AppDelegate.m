@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+//tabbar
+#import "CXTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +19,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //创建app窗口
+    [self createWindow];
+    
     return YES;
+}
+
+//创建appc窗口
+-(void)createWindow{
+    
+    self.window = [[UIWindow alloc]initWithFrame:UIScreen.mainScreen.bounds];
+    //设置窗口颜色
+    self.window.backgroundColor = [UIColor whiteColor];
+
+    //添加窗口
+    [self.window makeKeyAndVisible ];
+    
+    //创建tabbar界面
+    self.window.rootViewController = [[CXTabBarController alloc]init];
 }
 
 

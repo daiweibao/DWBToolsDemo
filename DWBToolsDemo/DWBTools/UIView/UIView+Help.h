@@ -42,10 +42,12 @@
  */
 + (BOOL)isViewAddWindowUp:(UIView*)myView;
 
+
 /**
  tableviewIOS11、iPhoneX适配，明杰刷新跳动和组头组脚有空白
- 
- @param tableView
+
+ @param tableView tablevew
+ @param ishaveTabbar 当前界面是否有tabbar
  */
 +(void)tablevieiOS11:(UITableView*)tableView isHaveTabbar:(BOOL)ishaveTabbar;
 /**

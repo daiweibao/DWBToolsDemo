@@ -163,8 +163,9 @@
     }];
 
     //背景图坐标
+    WeakSelf(self);
     [bubbleBackgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(_contentView);
+        make.edges.mas_equalTo(weakself.contentView);
     }];
     //展示动画
     [self showAlertAnimation];

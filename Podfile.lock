@@ -16,23 +16,36 @@ PODS:
     - AFNetworking/NSURLSession
   - FLAnimatedImage (1.0.12)
   - Masonry (1.1.0)
+  - MJRefresh (3.1.15.6)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - SDWebImage/GIF (4.4.2):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
 
 DEPENDENCIES:
   - AFNetworking
-  - FLAnimatedImage
   - Masonry
+  - MJRefresh
+  - SDWebImage
+  - SDWebImage/GIF
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - FLAnimatedImage
     - Masonry
+    - MJRefresh
+    - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 0efa19656679d70a0f47cbe76e56c2271fe53a97
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 3fa7f8a2ce0292f93d3f4dff337da2fb29416be7
+PODFILE CHECKSUM: 66c2c377183ab0897c059637dedc5f506fc23c93
 
 COCOAPODS: 1.5.3
