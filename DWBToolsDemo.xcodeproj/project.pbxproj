@@ -77,6 +77,7 @@
 		36213FCC2143A6A500B00E2B /* tabbar-资讯@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36213FB02143A6A500B00E2B /* tabbar-资讯@3x.png */; };
 		36213FCD2143A6A500B00E2B /* CXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FB42143A6A500B00E2B /* CXNavigationController.m */; };
 		36213FD02143A99D00B00E2B /* HopmeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FCF2143A99D00B00E2B /* HopmeViewController.m */; };
+		36213FD32143ABB000B00E2B /* ToolsEntController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FD22143ABB000B00E2B /* ToolsEntController.m */; };
 		368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F6213F67C800C10B3E /* AppDelegate.m */; };
 		368C39FA213F67C800C10B3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F9213F67C800C10B3E /* ViewController.m */; };
 		368C39FD213F67C800C10B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368C39FB213F67C800C10B3E /* Main.storyboard */; };
@@ -262,6 +263,8 @@
 		36213FB42143A6A500B00E2B /* CXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNavigationController.m; sourceTree = "<group>"; };
 		36213FCE2143A99D00B00E2B /* HopmeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HopmeViewController.h; sourceTree = "<group>"; };
 		36213FCF2143A99D00B00E2B /* HopmeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HopmeViewController.m; sourceTree = "<group>"; };
+		36213FD12143ABB000B00E2B /* ToolsEntController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolsEntController.h; sourceTree = "<group>"; };
+		36213FD22143ABB000B00E2B /* ToolsEntController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolsEntController.m; sourceTree = "<group>"; };
 		368C39F2213F67C800C10B3E /* DWBToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWBToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368C39F5213F67C800C10B3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		368C39F6213F67C800C10B3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -660,6 +663,8 @@
 				368C39F6213F67C800C10B3E /* AppDelegate.m */,
 				36213FCE2143A99D00B00E2B /* HopmeViewController.h */,
 				36213FCF2143A99D00B00E2B /* HopmeViewController.m */,
+				36213FD12143ABB000B00E2B /* ToolsEntController.h */,
+				36213FD22143ABB000B00E2B /* ToolsEntController.m */,
 				368C39F8213F67C800C10B3E /* ViewController.h */,
 				368C39F9213F67C800C10B3E /* ViewController.m */,
 				368C39FB213F67C800C10B3E /* Main.storyboard */,
@@ -1153,6 +1158,7 @@
 				36EEDCAF21420794000CBEEB /* ScanResultsController.m in Sources */,
 				36213F4D21439C1400B00E2B /* SVProgressHUD.m in Sources */,
 				36213F8A2143A4BF00B00E2B /* CXHTMLWebController.m in Sources */,
+				36213FD32143ABB000B00E2B /* ToolsEntController.m in Sources */,
 				36EEDC9221420585000CBEEB /* UIImage+PlayGif.m in Sources */,
 				368E69D12140C27D000EC79C /* UIView+Help.m in Sources */,
 				368C3A05213F67C900C10B3E /* main.m in Sources */,
