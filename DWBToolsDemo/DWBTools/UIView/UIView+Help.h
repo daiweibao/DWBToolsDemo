@@ -74,6 +74,31 @@
  */
 +(void)setupShadowView:(UIView*)myView;
 
+/**
+ 用UIView创建一条虚线
 
+ @param lineView 需要绘制成虚线的view
+ @param lineLength 虚线的宽度
+ @param lineSpacing 虚线的间距
+ @param lineColor  虚线的颜色
+ */
++ (void)drawDashLine:(UIView *)lineView lineLength:(int)lineLength lineSpacing:(int)lineSpacing lineColor:(UIColor *)lineColor;
+
+
+/**
+ 高性能绘制圆角【UIBezierPath】
+ 
+ @param radius 圆角大小
+ */
+-(void)drawCornerRadius:(CGFloat)radius;
+
+/**
+ 高性能绘制圆角，包含边框【UIBezierPath】
+ 
+ @param radius 圆角大小
+ @param borderColor 边框颜色
+ @param borderWidth 边框宽度
+ */
+-(void)drawCornerRadius:(CGFloat)radius borderColor:(UIColor *)borderColor AndBorderWidth:(CGFloat)borderWidth;
 
 @end

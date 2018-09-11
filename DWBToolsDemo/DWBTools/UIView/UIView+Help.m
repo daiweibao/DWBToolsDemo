@@ -255,4 +255,84 @@
 }
 
 
+/**
+ 用UIView创建一条虚线
+ 
+ @param lineView 需要绘制成虚线的view
+ @param lineLength 虚线的宽度
+ @param lineSpacing 虚线的间距
+ @param lineColor  虚线的颜色
+ */
++ (void)drawDashLine:(UIView *)lineView lineLength:(int)lineLength lineSpacing:(int)lineSpacing lineColor:(UIColor *)lineColor{
+    //使用案列
+    // [self drawDashLine:imageView lineLength:5 lineSpacing:5 lineColor:[UIColor redColor]];
+    
+    [lineView layoutIfNeeded];//必须处理，不然用Masonry布局的无效
+    
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    [shapeLayer setBounds:lineView.bounds];
+    [shapeLayer setPosition:CGPointMake(CGRectGetWidth(lineView.frame) / 2, CGRectGetHeight(lineView.frame))];
+    [shapeLayer setFillColor:[UIColor clearColor].CGColor];
+    
+    //  设置虚线颜色为
+    [shapeLayer setStrokeColor:lineColor.CGColor];
+    
+    //  设置虚线宽度
+    [shapeLayer setLineWidth:CGRectGetHeight(lineView.frame)];
+    [shapeLayer setLineJoin:kCALineJoinRound];
+    
+    //  设置线宽，线间距
+    [shapeLayer setLineDashPattern:[NSArray arrayWithObjects:[NSNumber numberWithInt:lineLength], [NSNumber numberWithInt:lineSpacing], nil]];
+    
+    //  设置路径
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathMoveToPoint(path, NULL, 0, 0);
+    CGPathAddLineToPoint(path, NULL, CGRectGetWidth(lineView.frame), 0);
+    
+    [shapeLayer setPath:path];
+    CGPathRelease(path);
+    
+    //  把绘制好的虚线添加上来
+    [lineView.layer addSublayer:shapeLayer];
+}
+
+
+/**
+ 高性能绘制圆角【UIBezierPath】
+ 
+ @param radius 圆角大小
+ */
+-(void)drawCornerRadius:(CGFloat)radius{
+    [self drawCornerRadius:radius borderColor:nil AndBorderWidth:0];
+}
+/**
+ 高性能绘制圆角，包含边框【UIBezierPath】
+ 
+ @param radius 圆角大小
+ @param borderColor 边框颜色
+ @param borderWidth 边框宽度
+ */
+-(void)drawCornerRadius:(CGFloat)radius borderColor:(UIColor *)borderColor AndBorderWidth:(CGFloat)borderWidth{
+    [self layoutIfNeeded];//必须处理，不然用Masonry布局的无效
+    CGSize viewSize = self.frame.size;
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    maskLayer.frame = CGRectMake(0, 0, viewSize.width, viewSize.height);
+    
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.frame = CGRectMake(0, 0, viewSize.width, viewSize.height);
+    shapeLayer.fillColor = [UIColor clearColor].CGColor;
+    shapeLayer.strokeColor = borderColor.CGColor;
+    shapeLayer.lineWidth = borderWidth;
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, viewSize.width, viewSize.height) cornerRadius:radius];
+    shapeLayer.path = path.CGPath;
+    maskLayer.path = path.CGPath;
+    
+    [self.layer insertSublayer:shapeLayer atIndex:0];
+    [self.layer setMask:maskLayer];
+}
+
+
+
+
 @end

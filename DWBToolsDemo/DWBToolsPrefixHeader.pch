@@ -17,5 +17,8 @@
 
 #import "DWBHelpHeader.h"
 
+//定义属性
+#import "MacroHeaderHeader.h"
+
 
 #endif /* DWBToolsPrefixHeader_pch */
