@@ -83,6 +83,13 @@
 #pragma mark ============ 三方库封装头文件 E=====================
 
 
+//=================判断如果是模拟器===========
+#if TARGET_IPHONE_SIMULATOR
+//走这里是模拟器
+#else
+//否则是真机
+#endif
+
 //Appstore地址==1404123635(王府管家)  //只需要修改后面的App-Id即可
 #define AppstoreId  @"1404123635"
 #define AppstoreUrl  [NSString stringWithFormat:@"https://itunes.apple.com/cn/app/id%@",AppstoreId]
