@@ -42,4 +42,17 @@
 }
 
 
+//控件左右抖动下，类似摇一摇抖动下
++(void)animationLeftAndRigVibrationhtWithView:(UIView*)view{
+    CAKeyframeAnimation * keyAnimaion = [CAKeyframeAnimation animation];
+    keyAnimaion.keyPath = @"transform.rotation";
+    keyAnimaion.values = @[@(-30 / 180.0 * M_PI),@(30 /180.0 * M_PI),@(-30/ 180.0 * M_PI)];//度数转弧度
+    keyAnimaion.removedOnCompletion = NO;
+    keyAnimaion.fillMode = kCAFillModeRemoved;
+    keyAnimaion.duration = 0.3;
+    keyAnimaion.repeatCount = 2;
+    [view.layer addAnimation:keyAnimaion forKey:nil];
+}
+
+
 @end
