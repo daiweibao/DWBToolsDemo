@@ -24,7 +24,7 @@
     self.interactivePopGestureRecognizer.delegate = (id)self;
     
 }
-//系统侧滑返回拦截，必须拦截不然会造成问题
+//系统侧滑返回拦截，必须拦截不然会造成问题，导致跟控制器tabbar有时候会消失
 -(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
     //跟控制器不做侧滑返回
     if (self.childViewControllers.count==1) {
