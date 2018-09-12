@@ -103,10 +103,10 @@
     //设置角标数量
     //    homeVC.tabBarItem.badgeValue = @"1111";
     
-    [self setChildVC:homeVC title:@"资讯" image:@"tabbar-资讯" selectedImage:@"tabbar-资讯S"];
+    [self setChildVC:homeVC title:@"首页" image:@"tabbar-资讯" selectedImage:@"tabbar-资讯S"];
     
     UIViewController *SecondVC = [[UIViewController alloc] init];
-    [self setChildVC:SecondVC title:@"缴费" image:@"tabbar-缴费"  selectedImage:@"tabbar-缴费S"];
+    [self setChildVC:SecondVC title:@"测试" image:@"tabbar-缴费"  selectedImage:@"tabbar-缴费S"];
     
     //语音
     UIViewController *voiceVC = [[UIViewController alloc] init];
@@ -115,11 +115,11 @@
 
     //开门
     UIViewController *messageVC = [[UIViewController alloc] init];
-    [self setChildVC:messageVC title:@"门禁" image:@"tabbar-门禁"  selectedImage:@"tabbar-门禁S"];
+    [self setChildVC:messageVC title:@"测试" image:@"tabbar-门禁"  selectedImage:@"tabbar-门禁S"];
     
     //我的
     UIViewController *myVC = [[UIViewController alloc] init];
-    [self setChildVC:myVC title:@"我的" image:@"tabbar-我的" selectedImage:@"tabbar-我的S"];
+    [self setChildVC:myVC title:@"测试" image:@"tabbar-我的" selectedImage:@"tabbar-我的S"];
 }
 
 //设置子控制器
