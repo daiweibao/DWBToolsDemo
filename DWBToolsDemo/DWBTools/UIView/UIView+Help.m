@@ -258,27 +258,26 @@
 /**
  用UIView创建一条虚线
  
- @param lineView 需要绘制成虚线的view
  @param lineLength 虚线的宽度
  @param lineSpacing 虚线的间距
  @param lineColor  虚线的颜色
  */
-+ (void)drawDashLine:(UIView *)lineView lineLength:(int)lineLength lineSpacing:(int)lineSpacing lineColor:(UIColor *)lineColor{
+-(void)drawXuXianWithlineLength:(int)lineLength lineSpacing:(int)lineSpacing lineColor:(UIColor *)lineColor{
     //使用案列
     // [self drawDashLine:imageView lineLength:5 lineSpacing:5 lineColor:[UIColor redColor]];
     
-    [lineView layoutIfNeeded];//必须处理，不然用Masonry布局的无效
+    [self layoutIfNeeded];//必须处理，不然用Masonry布局的无效
     
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-    [shapeLayer setBounds:lineView.bounds];
-    [shapeLayer setPosition:CGPointMake(CGRectGetWidth(lineView.frame) / 2, CGRectGetHeight(lineView.frame))];
+    [shapeLayer setBounds:self.bounds];
+    [shapeLayer setPosition:CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame))];
     [shapeLayer setFillColor:[UIColor clearColor].CGColor];
     
     //  设置虚线颜色为
     [shapeLayer setStrokeColor:lineColor.CGColor];
     
     //  设置虚线宽度
-    [shapeLayer setLineWidth:CGRectGetHeight(lineView.frame)];
+    [shapeLayer setLineWidth:CGRectGetHeight(self.frame)];
     [shapeLayer setLineJoin:kCALineJoinRound];
     
     //  设置线宽，线间距
@@ -287,13 +286,13 @@
     //  设置路径
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathMoveToPoint(path, NULL, 0, 0);
-    CGPathAddLineToPoint(path, NULL, CGRectGetWidth(lineView.frame), 0);
+    CGPathAddLineToPoint(path, NULL, CGRectGetWidth(self.frame), 0);
     
     [shapeLayer setPath:path];
     CGPathRelease(path);
     
     //  把绘制好的虚线添加上来
-    [lineView.layer addSublayer:shapeLayer];
+    [self.layer addSublayer:shapeLayer];
 }
 
 

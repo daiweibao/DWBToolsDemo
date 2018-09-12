@@ -76,13 +76,12 @@
 
 /**
  用UIView创建一条虚线
-
- @param lineView 需要绘制成虚线的view
+ 
  @param lineLength 虚线的宽度
  @param lineSpacing 虚线的间距
  @param lineColor  虚线的颜色
  */
-+ (void)drawDashLine:(UIView *)lineView lineLength:(int)lineLength lineSpacing:(int)lineSpacing lineColor:(UIColor *)lineColor;
+-(void)drawXuXianWithlineLength:(int)lineLength lineSpacing:(int)lineSpacing lineColor:(UIColor *)lineColor;
 
 
 /**
