@@ -7,7 +7,7 @@
 //
 
 #import "ToolsEntController.h"
-
+#import "LabelActionController.h"
 @interface ToolsEntController ()<UITableViewDelegate,UITableViewDataSource>
 //创建tableview
 @property (nonatomic,strong) UITableView * tableView;
@@ -126,6 +126,8 @@
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     if (indexPath.row==0) {
         cell.textLabel.text = @"功能1";
+    } if (indexPath.row==1) {
+        cell.textLabel.text = @"一行代码实现label点击指定文字";
     }
     
     return cell;
@@ -133,7 +135,13 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (indexPath.row==0) {
+        
+    }else if (indexPath.row==1){
+        LabelActionController * VC = [[LabelActionController alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {

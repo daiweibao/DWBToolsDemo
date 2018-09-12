@@ -24,13 +24,12 @@
     self.titleNavLabel.text = @"我的工具类Demo";
     
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(50, 200, 300, 100);
+    button.frame = CGRectMake(50, 100, 300, 100);
     [button setTitle:@"工具类，请看代码文件夹：DWBTools 和 DWBThreeLib(三方封装)" forState:UIControlStateNormal];
     button.titleLabel.numberOfLines = 0;
     [button.titleLabel sizeToFit];
     [button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     [self.view addSubview:button];
-    
     
     //创建功能入口控制器UI
     [self createToolsControllerUI];
@@ -67,11 +66,11 @@
     [[UIApplication sharedApplication].keyWindow addSubview:buttonTools];
 }
 
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
-    NSLog(@"点击屏幕");
-}
+//
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//
+//    NSLog(@"点击屏幕");
+//}
 
 
 -(void)viewWillAppear:(BOOL)animated{

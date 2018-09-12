@@ -95,6 +95,8 @@
 		362F7BC72148AF2400A8ECB1 /* ZXPUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BC62148AF2300A8ECB1 /* ZXPUnicode.m */; };
 		362F7BC92148B09300A8ECB1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BC82148B09300A8ECB1 /* README.md */; };
 		362F7BCC2148BE7B00A8ECB1 /* UIScrollView+Help.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BCB2148BE7B00A8ECB1 /* UIScrollView+Help.m */; };
+		362F7BE12148EB4400A8ECB1 /* UILabel+Click.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BE02148EB4400A8ECB1 /* UILabel+Click.m */; };
+		362F7BE42148EE7E00A8ECB1 /* LabelActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BE32148EE7E00A8ECB1 /* LabelActionController.m */; };
 		368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F6213F67C800C10B3E /* AppDelegate.m */; };
 		368C39FA213F67C800C10B3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F9213F67C800C10B3E /* ViewController.m */; };
 		368C39FD213F67C800C10B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368C39FB213F67C800C10B3E /* Main.storyboard */; };
@@ -306,6 +308,10 @@
 		362F7BC82148B09300A8ECB1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		362F7BCA2148BE7B00A8ECB1 /* UIScrollView+Help.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Help.h"; sourceTree = "<group>"; };
 		362F7BCB2148BE7B00A8ECB1 /* UIScrollView+Help.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Help.m"; sourceTree = "<group>"; };
+		362F7BDF2148EB4400A8ECB1 /* UILabel+Click.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Click.h"; sourceTree = "<group>"; };
+		362F7BE02148EB4400A8ECB1 /* UILabel+Click.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Click.m"; sourceTree = "<group>"; };
+		362F7BE22148EE7E00A8ECB1 /* LabelActionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabelActionController.h; sourceTree = "<group>"; };
+		362F7BE32148EE7E00A8ECB1 /* LabelActionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabelActionController.m; sourceTree = "<group>"; };
 		368C39F2213F67C800C10B3E /* DWBToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWBToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368C39F5213F67C800C10B3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		368C39F6213F67C800C10B3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -751,6 +757,8 @@
 				36213FCF2143A99D00B00E2B /* HopmeViewController.m */,
 				36213FD12143ABB000B00E2B /* ToolsEntController.h */,
 				36213FD22143ABB000B00E2B /* ToolsEntController.m */,
+				362F7BE22148EE7E00A8ECB1 /* LabelActionController.h */,
+				362F7BE32148EE7E00A8ECB1 /* LabelActionController.m */,
 				368C39F8213F67C800C10B3E /* ViewController.h */,
 				368C39F9213F67C800C10B3E /* ViewController.m */,
 				368C39FB213F67C800C10B3E /* Main.storyboard */,
@@ -880,6 +888,8 @@
 				362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */,
 				362F7BCA2148BE7B00A8ECB1 /* UIScrollView+Help.h */,
 				362F7BCB2148BE7B00A8ECB1 /* UIScrollView+Help.m */,
+				362F7BDF2148EB4400A8ECB1 /* UILabel+Click.h */,
+				362F7BE02148EB4400A8ECB1 /* UILabel+Click.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -1285,6 +1295,7 @@
 				36213F7B21439FB300B00E2B /* HtmlWKWebView.m in Sources */,
 				36213FD02143A99D00B00E2B /* HopmeViewController.m in Sources */,
 				36D37851213FEF7C00E768AF /* CopyLabel.m in Sources */,
+				362F7BE12148EB4400A8ECB1 /* UILabel+Click.m in Sources */,
 				36213F922143A5B900B00E2B /* LoadingView.m in Sources */,
 				36213F4E21439C1400B00E2B /* SVIndefiniteAnimatedView.m in Sources */,
 				36213FB62143A6A500B00E2B /* CXTabbar.m in Sources */,
@@ -1303,6 +1314,7 @@
 				36213F6621439DB700B00E2B /* MJDIYLoadingHeader.m in Sources */,
 				368E69C02140B538000EC79C /* UIButton+SSEdgeInsets.m in Sources */,
 				36213F12214364BD00B00E2B /* AlertCXShowInfo.m in Sources */,
+				362F7BE42148EE7E00A8ECB1 /* LabelActionController.m in Sources */,
 				36D3785C213FF0C400E768AF /* NSDictionary+CXHelp.m in Sources */,
 				36EEDC9321420585000CBEEB /* UIImage+Rotate.m in Sources */,
 				36D3784A213FE01500E768AF /* NSString+GetImageHeight.m in Sources */,

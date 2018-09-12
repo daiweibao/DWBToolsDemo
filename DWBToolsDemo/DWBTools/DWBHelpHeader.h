@@ -71,6 +71,8 @@
 #import "SVProgressHUD+KZ.h"
 //MBP
 #import "MBProgressHUD+MJ.h"
+//label点击指定汉子
+#import "UILabel+Click.h"
 
 
 #pragma mark ============ 工具类相互依赖的头文件 E=====================
@@ -267,7 +269,17 @@ _Pragma("clang diagnostic pop") \
 #define iPhone6P ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
 
 
+/**
+ 简单Alert提示
 
+ @param title 标题
+ @return 结果
+ */
+#define DWBAlertShow(msg) \
+UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:msg preferredStyle:UIAlertControllerStyleAlert]; \
+UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]; \
+[alertController addAction:okAction]; \
+[[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
 
 
 
