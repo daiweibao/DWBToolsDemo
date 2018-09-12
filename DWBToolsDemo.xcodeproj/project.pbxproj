@@ -94,6 +94,7 @@
 		362F7BC32148ACF000A8ECB1 /* Chatkeyboard_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BB22148ACF000A8ECB1 /* Chatkeyboard_icon@3x.png */; };
 		362F7BC72148AF2400A8ECB1 /* ZXPUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BC62148AF2300A8ECB1 /* ZXPUnicode.m */; };
 		362F7BC92148B09300A8ECB1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BC82148B09300A8ECB1 /* README.md */; };
+		362F7BCC2148BE7B00A8ECB1 /* UIScrollView+Help.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BCB2148BE7B00A8ECB1 /* UIScrollView+Help.m */; };
 		368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F6213F67C800C10B3E /* AppDelegate.m */; };
 		368C39FA213F67C800C10B3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F9213F67C800C10B3E /* ViewController.m */; };
 		368C39FD213F67C800C10B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368C39FB213F67C800C10B3E /* Main.storyboard */; };
@@ -303,6 +304,8 @@
 		362F7BC52148AF2300A8ECB1 /* ZXPUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXPUnicode.h; sourceTree = "<group>"; };
 		362F7BC62148AF2300A8ECB1 /* ZXPUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXPUnicode.m; sourceTree = "<group>"; };
 		362F7BC82148B09300A8ECB1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		362F7BCA2148BE7B00A8ECB1 /* UIScrollView+Help.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Help.h"; sourceTree = "<group>"; };
+		362F7BCB2148BE7B00A8ECB1 /* UIScrollView+Help.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Help.m"; sourceTree = "<group>"; };
 		368C39F2213F67C800C10B3E /* DWBToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWBToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368C39F5213F67C800C10B3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		368C39F6213F67C800C10B3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -875,6 +878,8 @@
 				368E69CF2140C27D000EC79C /* UIView+Help.m */,
 				362F7BA121489ECF00A8ECB1 /* UIButton+BigAction.h */,
 				362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */,
+				362F7BCA2148BE7B00A8ECB1 /* UIScrollView+Help.h */,
+				362F7BCB2148BE7B00A8ECB1 /* UIScrollView+Help.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -1283,6 +1288,7 @@
 				36213F922143A5B900B00E2B /* LoadingView.m in Sources */,
 				36213F4E21439C1400B00E2B /* SVIndefiniteAnimatedView.m in Sources */,
 				36213FB62143A6A500B00E2B /* CXTabbar.m in Sources */,
+				362F7BCC2148BE7B00A8ECB1 /* UIScrollView+Help.m in Sources */,
 				36213F842143A0F100B00E2B /* PhotoView.m in Sources */,
 				36213F6A21439DB700B00E2B /* MJDIYHeader.m in Sources */,
 				36D37858213FF05D00E768AF /* getUUID.m in Sources */,

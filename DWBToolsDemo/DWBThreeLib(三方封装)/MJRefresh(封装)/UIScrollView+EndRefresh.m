@@ -11,9 +11,12 @@
 @implementation UIScrollView (EndRefresh)
 //结束刷新和加载
 -(void)endRefresh_DWB{
-    [self.mj_header endRefreshing];
-    [self.mj_footer endRefreshing];
-  
+    if (self.mj_header.isRefreshing) {
+        [self.mj_header endRefreshing];
+    }
+    if (self.mj_footer.isRefreshing) {
+        [self.mj_footer endRefreshing];
+    }
     
 //先放在这里，用到再打开
 //    if (self.mj_header.state==3||self.mj_footer.state==3) {

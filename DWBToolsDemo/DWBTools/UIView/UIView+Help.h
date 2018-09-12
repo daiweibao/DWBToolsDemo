@@ -28,14 +28,6 @@
 + (UIViewController*)getTopWindowController;
 
 /**
- tableview滑到最底部
-
- @return
- */
-
-#pragma mark ===========滑到最底部===
-+ (void)scrollTableToFoot:(UITableView*)table Animated:(BOOL)animated;
-/**
  判断一块view是否在屏幕中
  
  @param myView yes:在屏幕中 no：不在屏幕中

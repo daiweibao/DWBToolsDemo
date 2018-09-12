@@ -102,23 +102,6 @@
     return vc;
 }
 
-
-
-
-#pragma mark  - tableview滑到最底部
-+ (void)scrollTableToFoot:(UITableView*)table Animated:(BOOL)animated
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSInteger s = [table numberOfSections];  //有多少组
-        if (s<1) return;  //无数据时不执行 要不会crash
-        NSInteger r = [table numberOfRowsInSection:s-1]; //最后一组有多少行
-        if (r<1) return;
-        NSIndexPath *ip = [NSIndexPath indexPathForRow:r-1 inSection:s-1];  //取最后一行数据
-        [table scrollToRowAtIndexPath:ip atScrollPosition:UITableViewScrollPositionBottom animated:animated]; //滚动到最后一行
-    });
-}
-
-
 /**
  判断一块view是否在屏幕中
  
