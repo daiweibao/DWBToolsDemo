@@ -79,6 +79,19 @@
 		36213FD02143A99D00B00E2B /* HopmeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FCF2143A99D00B00E2B /* HopmeViewController.m */; };
 		36213FD32143ABB000B00E2B /* ToolsEntController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FD22143ABB000B00E2B /* ToolsEntController.m */; };
 		362F7BA321489ECF00A8ECB1 /* UIButton+BigAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */; };
+		362F7BB72148ACF000A8ECB1 /* STEmojiCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BA52148ACF000A8ECB1 /* STEmojiCollectionView.m */; };
+		362F7BB82148ACF000A8ECB1 /* emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BA62148ACF000A8ECB1 /* emoji.json */; };
+		362F7BB92148ACF000A8ECB1 /* STInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BA72148ACF000A8ECB1 /* STInputBar.m */; };
+		362F7BBA2148ACF000A8ECB1 /* STEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BA82148ACF000A8ECB1 /* STEmoji.m */; };
+		362F7BBB2148ACF000A8ECB1 /* STEmojiKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BA92148ACF000A8ECB1 /* STEmojiKeyboard.m */; };
+		362F7BBC2148ACF000A8ECB1 /* ChatFace_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BAB2148ACF000A8ECB1 /* ChatFace_icon@3x.png */; };
+		362F7BBD2148ACF000A8ECB1 /* ChatFace_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BAC2148ACF000A8ECB1 /* ChatFace_icon@2x.png */; };
+		362F7BBE2148ACF000A8ECB1 /* Chatkeyboard_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BAD2148ACF000A8ECB1 /* Chatkeyboard_icon@2x.png */; };
+		362F7BBF2148ACF000A8ECB1 /* keyboard_btn_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BAE2148ACF000A8ECB1 /* keyboard_btn_delete@2x.png */; };
+		362F7BC02148ACF000A8ECB1 /* keyboard_preview_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BAF2148ACF000A8ECB1 /* keyboard_preview_bg@2x.png */; };
+		362F7BC12148ACF000A8ECB1 /* keyboard_preview_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BB02148ACF000A8ECB1 /* keyboard_preview_bg@3x.png */; };
+		362F7BC22148ACF000A8ECB1 /* keyboard_btn_delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BB12148ACF000A8ECB1 /* keyboard_btn_delete@3x.png */; };
+		362F7BC32148ACF000A8ECB1 /* Chatkeyboard_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BB22148ACF000A8ECB1 /* Chatkeyboard_icon@3x.png */; };
 		368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F6213F67C800C10B3E /* AppDelegate.m */; };
 		368C39FA213F67C800C10B3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F9213F67C800C10B3E /* ViewController.m */; };
 		368C39FD213F67C800C10B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368C39FB213F67C800C10B3E /* Main.storyboard */; };
@@ -268,6 +281,23 @@
 		36213FD22143ABB000B00E2B /* ToolsEntController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolsEntController.m; sourceTree = "<group>"; };
 		362F7BA121489ECF00A8ECB1 /* UIButton+BigAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+BigAction.h"; sourceTree = "<group>"; };
 		362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BigAction.m"; sourceTree = "<group>"; };
+		362F7BA52148ACF000A8ECB1 /* STEmojiCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEmojiCollectionView.m; sourceTree = "<group>"; };
+		362F7BA62148ACF000A8ECB1 /* emoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji.json; sourceTree = "<group>"; };
+		362F7BA72148ACF000A8ECB1 /* STInputBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STInputBar.m; sourceTree = "<group>"; };
+		362F7BA82148ACF000A8ECB1 /* STEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEmoji.m; sourceTree = "<group>"; };
+		362F7BA92148ACF000A8ECB1 /* STEmojiKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEmojiKeyboard.m; sourceTree = "<group>"; };
+		362F7BAB2148ACF000A8ECB1 /* ChatFace_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ChatFace_icon@3x.png"; sourceTree = "<group>"; };
+		362F7BAC2148ACF000A8ECB1 /* ChatFace_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ChatFace_icon@2x.png"; sourceTree = "<group>"; };
+		362F7BAD2148ACF000A8ECB1 /* Chatkeyboard_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chatkeyboard_icon@2x.png"; sourceTree = "<group>"; };
+		362F7BAE2148ACF000A8ECB1 /* keyboard_btn_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_btn_delete@2x.png"; sourceTree = "<group>"; };
+		362F7BAF2148ACF000A8ECB1 /* keyboard_preview_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_preview_bg@2x.png"; sourceTree = "<group>"; };
+		362F7BB02148ACF000A8ECB1 /* keyboard_preview_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_preview_bg@3x.png"; sourceTree = "<group>"; };
+		362F7BB12148ACF000A8ECB1 /* keyboard_btn_delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_btn_delete@3x.png"; sourceTree = "<group>"; };
+		362F7BB22148ACF000A8ECB1 /* Chatkeyboard_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chatkeyboard_icon@3x.png"; sourceTree = "<group>"; };
+		362F7BB32148ACF000A8ECB1 /* STEmojiCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STEmojiCollectionView.h; sourceTree = "<group>"; };
+		362F7BB42148ACF000A8ECB1 /* STInputBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STInputBar.h; sourceTree = "<group>"; };
+		362F7BB52148ACF000A8ECB1 /* STEmojiKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STEmojiKeyboard.h; sourceTree = "<group>"; };
+		362F7BB62148ACF000A8ECB1 /* STEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STEmoji.h; sourceTree = "<group>"; };
 		368C39F2213F67C800C10B3E /* DWBToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWBToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368C39F5213F67C800C10B3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		368C39F6213F67C800C10B3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -484,6 +514,7 @@
 		36213F5221439DB700B00E2B /* DWBThreeLib(三方封装) */ = {
 			isa = PBXGroup;
 			children = (
+				362F7BA42148ACF000A8ECB1 /* ChatInputBoxEmoji */,
 				36213F7D2143A0F100B00E2B /* ImageBrows(图片浏览器) */,
 				36213F852143A4BF00B00E2B /* WebView(全屏网页) */,
 				36213F8C2143A5B900B00E2B /* LoadingAndBlabk */,
@@ -632,6 +663,38 @@
 				36213FB02143A6A500B00E2B /* tabbar-资讯@3x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		362F7BA42148ACF000A8ECB1 /* ChatInputBoxEmoji */ = {
+			isa = PBXGroup;
+			children = (
+				362F7BAA2148ACF000A8ECB1 /* Image */,
+				362F7BA62148ACF000A8ECB1 /* emoji.json */,
+				362F7BB42148ACF000A8ECB1 /* STInputBar.h */,
+				362F7BA72148ACF000A8ECB1 /* STInputBar.m */,
+				362F7BB62148ACF000A8ECB1 /* STEmoji.h */,
+				362F7BA82148ACF000A8ECB1 /* STEmoji.m */,
+				362F7BB52148ACF000A8ECB1 /* STEmojiKeyboard.h */,
+				362F7BA92148ACF000A8ECB1 /* STEmojiKeyboard.m */,
+				362F7BB32148ACF000A8ECB1 /* STEmojiCollectionView.h */,
+				362F7BA52148ACF000A8ECB1 /* STEmojiCollectionView.m */,
+			);
+			path = ChatInputBoxEmoji;
+			sourceTree = "<group>";
+		};
+		362F7BAA2148ACF000A8ECB1 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				362F7BAB2148ACF000A8ECB1 /* ChatFace_icon@3x.png */,
+				362F7BAC2148ACF000A8ECB1 /* ChatFace_icon@2x.png */,
+				362F7BAD2148ACF000A8ECB1 /* Chatkeyboard_icon@2x.png */,
+				362F7BAE2148ACF000A8ECB1 /* keyboard_btn_delete@2x.png */,
+				362F7BAF2148ACF000A8ECB1 /* keyboard_preview_bg@2x.png */,
+				362F7BB02148ACF000A8ECB1 /* keyboard_preview_bg@3x.png */,
+				362F7BB12148ACF000A8ECB1 /* keyboard_btn_delete@3x.png */,
+				362F7BB22148ACF000A8ECB1 /* Chatkeyboard_icon@3x.png */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		368C39E9213F67C800C10B3E = {
@@ -1028,15 +1091,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				36213F4921439C1400B00E2B /* MBProgressHUD.bundle in Resources */,
+				362F7BBC2148ACF000A8ECB1 /* ChatFace_icon@3x.png in Resources */,
+				362F7BB82148ACF000A8ECB1 /* emoji.json in Resources */,
 				368C3A02213F67C900C10B3E /* LaunchScreen.storyboard in Resources */,
 				36213FC92143A6A500B00E2B /* tabbar-我的S@3x.png in Resources */,
 				36213FBC2143A6A500B00E2B /* tabbar-语音@2x.png in Resources */,
+				362F7BBD2148ACF000A8ECB1 /* ChatFace_icon@2x.png in Resources */,
 				36213FC62143A6A500B00E2B /* tabbar-门禁S@2x.png in Resources */,
 				36EEDCAD21420794000CBEEB /* scanSuccess.wav in Resources */,
 				36213FC52143A6A500B00E2B /* 黑色返回@2x.png in Resources */,
 				36213FC42143A6A500B00E2B /* 黑色返回@3x.png in Resources */,
 				36213FC12143A6A500B00E2B /* tabbar-我的@2x.png in Resources */,
+				362F7BC12148ACF000A8ECB1 /* keyboard_preview_bg@3x.png in Resources */,
 				36213FBE2143A6A500B00E2B /* tabbar-我的@3x.png in Resources */,
+				362F7BBF2148ACF000A8ECB1 /* keyboard_btn_delete@2x.png in Resources */,
 				36213FBD2143A6A500B00E2B /* tabbar-门禁@2x.png in Resources */,
 				36213FCB2143A6A500B00E2B /* tabbar-资讯S@3x.png in Resources */,
 				36EEDCA921420794000CBEEB /* scan_circle@2x.png in Resources */,
@@ -1048,18 +1116,22 @@
 				36213FC72143A6A500B00E2B /* tabbar-资讯@2x.png in Resources */,
 				36213FC22143A6A500B00E2B /* tabbar-门禁@3x.png in Resources */,
 				36213FBB2143A6A500B00E2B /* tabbar-缴费@2x.png in Resources */,
+				362F7BC02148ACF000A8ECB1 /* keyboard_preview_bg@2x.png in Resources */,
 				36213FBA2143A6A500B00E2B /* tabbar-缴费@3x.png in Resources */,
 				36213F7321439EC100B00E2B /* 上拉加载中@3x.png in Resources */,
 				36EEDCAC21420794000CBEEB /* 扫码线@2x.png in Resources */,
 				36213FCC2143A6A500B00E2B /* tabbar-资讯@3x.png in Resources */,
 				36213FCA2143A6A500B00E2B /* tabbar-我的S@2x.png in Resources */,
+				362F7BC32148ACF000A8ECB1 /* Chatkeyboard_icon@3x.png in Resources */,
 				36213FBF2143A6A500B00E2B /* tabbar-缴费S@2x.png in Resources */,
+				362F7BBE2148ACF000A8ECB1 /* Chatkeyboard_icon@2x.png in Resources */,
 				36213F4F21439C1400B00E2B /* SVProgressHUD.bundle in Resources */,
 				36213F7521439EC100B00E2B /* 加载中icon@2x.png in Resources */,
 				36EEDCAA21420794000CBEEB /* 扫码线@3x.png in Resources */,
 				36213F7421439EC100B00E2B /* 加载中icon@3x.png in Resources */,
 				36EEDCC0214209FE000CBEEB /* 版本检测弹窗关闭@2x.png in Resources */,
 				36EEDCBE214209FE000CBEEB /* 版本更新背景@3x.png in Resources */,
+				362F7BC22148ACF000A8ECB1 /* keyboard_btn_delete@3x.png in Resources */,
 				368C39FD213F67C800C10B3E /* Main.storyboard in Resources */,
 				36EEDCBD214209FE000CBEEB /* 版本检测弹窗关闭@3x.png in Resources */,
 				36213FC82143A6A500B00E2B /* tabbar-资讯S@2x.png in Resources */,
@@ -1142,6 +1214,7 @@
 				36213F832143A0F100B00E2B /* JZAlbumViewController.m in Sources */,
 				36EEDCA721420794000CBEEB /* NSString+QRCode.m in Sources */,
 				36D37855213FF02300E768AF /* GetChatTime.m in Sources */,
+				362F7BBB2148ACF000A8ECB1 /* STEmojiKeyboard.m in Sources */,
 				368C3C05213FB44900C10B3E /* NSString+CXMD5.m in Sources */,
 				36EEDCB3214208C3000CBEEB /* XHNetworkCache.m in Sources */,
 				36213F2B21439B3700B00E2B /* JDStatusBarNotification+KZ.m in Sources */,
@@ -1151,12 +1224,14 @@
 				36EEDCC1214209FE000CBEEB /* CXVersionUpdate.m in Sources */,
 				36213F2D21439B3700B00E2B /* SDDrowNoticeView.m in Sources */,
 				368E69C92140C1A5000EC79C /* UIView+ActionTap.m in Sources */,
+				362F7BB92148ACF000A8ECB1 /* STInputBar.m in Sources */,
 				368E69DD2140C58B000EC79C /* UITextField+WJ.m in Sources */,
 				36213F7C21439FB300B00E2B /* HTMLWebView.m in Sources */,
 				36213F6B21439DB700B00E2B /* MJChiBaoZiHeader.m in Sources */,
 				36213FB72143A6A500B00E2B /* TBTabBar.m in Sources */,
 				36213FB82143A6A500B00E2B /* CXRootViewController.m in Sources */,
 				368C3C04213FB44800C10B3E /* DWBToast.m in Sources */,
+				362F7BBA2148ACF000A8ECB1 /* STEmoji.m in Sources */,
 				36213F6821439DB700B00E2B /* DWB_refreshHeader.m in Sources */,
 				368E69D92140C49B000EC79C /* UIFont+FontNameSize.m in Sources */,
 				368E69E62140C5BF000EC79C /* TouchIDHelp.m in Sources */,
@@ -1195,6 +1270,7 @@
 				36D37858213FF05D00E768AF /* getUUID.m in Sources */,
 				368E69E42140C5BF000EC79C /* CXSystemStatus.m in Sources */,
 				36213F2A21439B3700B00E2B /* JDStatusBarNotification.m in Sources */,
+				362F7BB72148ACF000A8ECB1 /* STEmojiCollectionView.m in Sources */,
 				36EEDC9521420585000CBEEB /* UIImage+MyImage.m in Sources */,
 				368E69E92140C70D000EC79C /* KeyChainManager.m in Sources */,
 				368E69ED2140D307000EC79C /* DWBAFNetworking.m in Sources */,
