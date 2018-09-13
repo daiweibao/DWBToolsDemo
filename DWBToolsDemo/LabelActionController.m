@@ -23,25 +23,41 @@
     
     
     UILabel * label = [[UILabel alloc]init];
-    label.frame = CGRectMake(50, 300, 300, 100);
+    label.frame = CGRectMake(10, 100, 340, 100);
     [self.view addSubview:label];
     
     
-    NSString * string1 = @"第一段";
-    NSString * string2 = @"改变的内容";
-    NSString * string3 = @"第3段";
+    NSString * string1 = @"李四1";
+    NSString * string2 = @"李四2";
+    NSString * string3 = @"李四3";
     
-    label.attributedText = [NSString getLabelChangeColor:[UIColor blueColor] andFont:[UIFont systemFontOfSize:40] andString1:string1 andChangeString:string2 andGetstring3:string3 andISetupSpacing:NO andIShowBottonLine:YES];
-    
-    //点击指定汉子
-    [label dwb_addAttributeTapActionWithStrings:@[string2] tapClicked:^(NSString *string, NSRange range, NSInteger index) {
+    label.attributedText = [NSString getLabelChangeColor:[UIColor blueColor] andFont:[UIFont systemFontOfSize:30] andString1:string1 andChangeString:string2 andGetstring3:string3 andISetupSpacing:NO andIShowBottonLine:YES];
+//    label.text = [NSString stringWithFormat:@"%@%@%@",string1,string2,string3];
+//    点击指定汉子
+    [label dwb_addAttributeTapActionWithStrings:@[string1,string3,string2] tapClicked:^(NSString *string, NSRange range, NSInteger index) {
         
 //        NSLog(@"点击了变大的内容");
         
         DWBAlertShow(@"点击了中间变大文字");
+        NSLog(@"%@==%ld",string,(long)index);
     }];
     
+    
+    
+    UIImageView * imageView = [[UIImageView alloc]init];
+    [self.view addSubview:imageView];
+    imageView.frame = CGRectMake(10, 300, 100, 100);
+//    imageView.backgroundColor = [UIColor redColor];
+    imageView.image =  [UIImage imageNamed:@"小黄车"];
+    
+    [imageView drawCornerRadius:50];
+    
+    
+    
+    
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

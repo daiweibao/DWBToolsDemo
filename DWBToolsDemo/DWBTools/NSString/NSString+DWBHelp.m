@@ -566,6 +566,8 @@
     //设置中间变红的字体大小颜色
     NSRange orangeRange = NSMakeRange([[inteMutStr string] rangeOfString:string2].location, [[inteMutStr string] rangeOfString:string2].length);
     
+//    NSRange orangeRange = NSMakeRange(string1.length, string2.length);
+    
      //判断是否展示下划线
     if (iShowBottonLine == YES) {
         //下划线类型

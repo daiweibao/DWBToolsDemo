@@ -97,6 +97,9 @@
 		362F7BCC2148BE7B00A8ECB1 /* UIScrollView+Help.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BCB2148BE7B00A8ECB1 /* UIScrollView+Help.m */; };
 		362F7BE12148EB4400A8ECB1 /* UILabel+Click.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BE02148EB4400A8ECB1 /* UILabel+Click.m */; };
 		362F7BE42148EE7E00A8ECB1 /* LabelActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BE32148EE7E00A8ECB1 /* LabelActionController.m */; };
+		362F7BE721490F4B00A8ECB1 /* WVstore_1024pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BE621490F4B00A8ECB1 /* WVstore_1024pt.png */; };
+		362F7BE92149114B00A8ECB1 /* 微信@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BE82149114B00A8ECB1 /* 微信@2x.png */; };
+		362F7BEB2149158600A8ECB1 /* 小黄车.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BEA2149158600A8ECB1 /* 小黄车.png */; };
 		368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F6213F67C800C10B3E /* AppDelegate.m */; };
 		368C39FA213F67C800C10B3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F9213F67C800C10B3E /* ViewController.m */; };
 		368C39FD213F67C800C10B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368C39FB213F67C800C10B3E /* Main.storyboard */; };
@@ -312,6 +315,9 @@
 		362F7BE02148EB4400A8ECB1 /* UILabel+Click.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Click.m"; sourceTree = "<group>"; };
 		362F7BE22148EE7E00A8ECB1 /* LabelActionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabelActionController.h; sourceTree = "<group>"; };
 		362F7BE32148EE7E00A8ECB1 /* LabelActionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabelActionController.m; sourceTree = "<group>"; };
+		362F7BE621490F4B00A8ECB1 /* WVstore_1024pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WVstore_1024pt.png; sourceTree = "<group>"; };
+		362F7BE82149114B00A8ECB1 /* 微信@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微信@2x.png"; sourceTree = "<group>"; };
+		362F7BEA2149158600A8ECB1 /* 小黄车.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小黄车.png"; sourceTree = "<group>"; };
 		368C39F2213F67C800C10B3E /* DWBToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWBToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368C39F5213F67C800C10B3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		368C39F6213F67C800C10B3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -720,6 +726,16 @@
 			path = "ZXPUnicode(json中文打印)";
 			sourceTree = "<group>";
 		};
+		362F7BE521490F3A00A8ECB1 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				362F7BEA2149158600A8ECB1 /* 小黄车.png */,
+				362F7BE82149114B00A8ECB1 /* 微信@2x.png */,
+				362F7BE621490F4B00A8ECB1 /* WVstore_1024pt.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		368C39E9213F67C800C10B3E = {
 			isa = PBXGroup;
 			children = (
@@ -761,6 +777,7 @@
 				362F7BE32148EE7E00A8ECB1 /* LabelActionController.m */,
 				368C39F8213F67C800C10B3E /* ViewController.h */,
 				368C39F9213F67C800C10B3E /* ViewController.m */,
+				362F7BE521490F3A00A8ECB1 /* Image */,
 				368C39FB213F67C800C10B3E /* Main.storyboard */,
 				368C39FE213F67C900C10B3E /* Assets.xcassets */,
 				368C3A00213F67C900C10B3E /* LaunchScreen.storyboard */,
@@ -1130,6 +1147,7 @@
 				362F7BC92148B09300A8ECB1 /* README.md in Resources */,
 				362F7BBD2148ACF000A8ECB1 /* ChatFace_icon@2x.png in Resources */,
 				36213FC62143A6A500B00E2B /* tabbar-门禁S@2x.png in Resources */,
+				362F7BE92149114B00A8ECB1 /* 微信@2x.png in Resources */,
 				36EEDCAD21420794000CBEEB /* scanSuccess.wav in Resources */,
 				36213FC52143A6A500B00E2B /* 黑色返回@2x.png in Resources */,
 				36213FC42143A6A500B00E2B /* 黑色返回@3x.png in Resources */,
@@ -1144,6 +1162,7 @@
 				36213FC32143A6A500B00E2B /* tabbar-门禁S@3x.png in Resources */,
 				36213FB92143A6A500B00E2B /* tabbar-语音@3x.png in Resources */,
 				36EEDCBF214209FE000CBEEB /* 版本更新背景@2x.png in Resources */,
+				362F7BE721490F4B00A8ECB1 /* WVstore_1024pt.png in Resources */,
 				36213F7221439EC100B00E2B /* 上拉加载中@2x.png in Resources */,
 				36213FC72143A6A500B00E2B /* tabbar-资讯@2x.png in Resources */,
 				36213FC22143A6A500B00E2B /* tabbar-门禁@3x.png in Resources */,
@@ -1155,6 +1174,7 @@
 				36213FCC2143A6A500B00E2B /* tabbar-资讯@3x.png in Resources */,
 				36213FCA2143A6A500B00E2B /* tabbar-我的S@2x.png in Resources */,
 				362F7BC32148ACF000A8ECB1 /* Chatkeyboard_icon@3x.png in Resources */,
+				362F7BEB2149158600A8ECB1 /* 小黄车.png in Resources */,
 				36213FBF2143A6A500B00E2B /* tabbar-缴费S@2x.png in Resources */,
 				362F7BBE2148ACF000A8ECB1 /* Chatkeyboard_icon@2x.png in Resources */,
 				36213F4F21439C1400B00E2B /* SVProgressHUD.bundle in Resources */,

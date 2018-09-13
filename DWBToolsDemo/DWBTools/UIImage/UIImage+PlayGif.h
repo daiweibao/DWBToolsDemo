@@ -29,7 +29,7 @@
 
 
 /**
- FLAnimatedImageView控件播放本地动画
+ FLAnimatedImageView控件播放本地动画，如果网络的只需确保使用FLAnimatedImageView而不是UIImageView就可以播放。
  
  @param gifName 图片名字，不能包含.gif
  @return FLAnimatedImage结果

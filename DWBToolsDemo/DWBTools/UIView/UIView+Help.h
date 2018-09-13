@@ -77,14 +77,14 @@
 
 
 /**
- 高性能绘制圆角【UIBezierPath】
+ 高性能绘制圆角,省去clipsToBounds【UIBezierPath】
  
  @param radius 圆角大小
  */
 -(void)drawCornerRadius:(CGFloat)radius;
 
 /**
- 高性能绘制圆角，包含边框【UIBezierPath】
+ 高性能绘制圆角，包含边框，省去clipsToBounds【UIBezierPath】
  
  @param radius 圆角大小
  @param borderColor 边框颜色
