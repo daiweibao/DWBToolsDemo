@@ -27,14 +27,14 @@
     [self.view addSubview:label];
     
     
-    NSString * string1 = @"李四1";
-    NSString * string2 = @"李四2";
-    NSString * string3 = @"李四3";
+    NSString * string1 = @"潮汐";
+    NSString * string2 = @"@";
+    NSString * string3 = @"潮汐";
     
-    label.attributedText = [NSString getLabelChangeColor:[UIColor blueColor] andFont:[UIFont systemFontOfSize:30] andString1:string1 andChangeString:string2 andGetstring3:string3 andISetupSpacing:NO andIShowBottonLine:YES];
+    label.attributedText = [NSString getLabelChangeColor:[UIColor blueColor] andFont:[UIFont systemFontOfSize:30] andString1:string1 andChangeString:string2 andGetstring3:string3 andISetupSpacing:NO andIShowBottonLine:NO];
 //    label.text = [NSString stringWithFormat:@"%@%@%@",string1,string2,string3];
 //    点击指定汉子
-    [label dwb_addAttributeTapActionWithStrings:@[string1,string3,string2] tapClicked:^(NSString *string, NSRange range, NSInteger index) {
+    [label dwb_addAttributeTapActionWithStrings:@[string1,string3] tapClicked:^(NSString *string, NSRange range, NSInteger index) {
         
 //        NSLog(@"点击了变大的内容");
         
