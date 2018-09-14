@@ -16,6 +16,10 @@
 #define kSTTextviewDefaultHeight 36
 #define kSTTextviewMaxHeight 80
 
+//读取图片
+#define GETImageNasme(imageName) [[[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"ChatInputBox" ofType:@"bundle"]] resourcePath] stringByAppendingPathComponent:imageName]
+
+
 @interface STInputBar () <UITextViewDelegate>
 
 @property (strong, nonatomic) UIButton *keyboardTypeButton;
@@ -48,6 +52,7 @@
     if (self = [super initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, kSTIBDefaultHeight)]){
         _isRegistedKeyboardNotif = NO;
         _isDefaultKeyboard = YES;
+//        GETImageNasme(@"ChatFace_icon");
         _switchKeyboardImages = @[@"ChatFace_icon",@"Chatkeyboard_icon"];
         
     }
