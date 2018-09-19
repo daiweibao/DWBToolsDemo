@@ -167,33 +167,6 @@
  */
 +(BOOL)isNULL:(id)stringOrNumber;
 
-
-#pragma mark 同一个label中间几个字 变颜色、大小都能改变
-/**
- 同一个label中间几个字 变颜色、大小都能改变、还能添加下划线，整个label还能设置是否有行间距
- 
- @param color 中间变化的文字--颜色
- @param fout 中间变化的文字--大小
- @param string1 第一段内容
- @param string2 第一段内容
- @param string3 第二段内容
- @param isSetupSpacing 是否设置行间距
- @param iShowBottonLine 中间变化的文字--是否设置下划线
- @return 结果
- */
-+(NSMutableAttributedString*)getLabelChangeColor:(UIColor*)color andFont:(UIFont*)fout andString1:(NSString*)string1 andChangeString:(NSString*)string2 andGetstring3:(NSString*)string3 andISetupSpacing:(BOOL )isSetupSpacing andIShowBottonLine:(BOOL )iShowBottonLine;
-
-
-/**
- 设置Label的行间距+默认12.0*px
- 
- @param string 字符串
- @return 属性字符串
- @LineSpacing 行间距
- */
-+(NSMutableAttributedString*)getLabelLineSpace:(NSString*)string LineSpacing:(CGFloat )lineSpacing;
-
-
 /**
  *  汉字转码，转化成百分比 + 拼接在接口里发起网络请求用
  *

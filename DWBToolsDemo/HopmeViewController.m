@@ -45,7 +45,7 @@
     self.buttonTools = buttonTools;
     buttonTools.frame = CGRectMake(SCREEN_WIDTH-55, SCREEN_HEIGHT-MC_TabbarHeight-210, 50, 50);
     [buttonTools setTitle:@"入口" forState:UIControlStateNormal];
-    buttonTools.backgroundColor = MAIN_COLOR;
+    buttonTools.backgroundColor = [UIColor redColor];
     buttonTools.layer.cornerRadius = 25;
     buttonTools.titleLabel.font = [UIFont systemFontOfSize:15];
     WeakSelf(self);
@@ -79,14 +79,14 @@
     //打开tabbar
     self.tabBarController.tabBar.hidden = NO;
     
-    _buttonTools.hidden = NO;//测试控制器
+    _buttonTools.hidden = NO;//功能入口控制器
     
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     
-    _buttonTools.hidden = YES;//测试控制器
+    _buttonTools.hidden = YES;//功能入口控制器
     //跟控制器将要消失也要打开tabbar
     self.tabBarController.tabBar.hidden = NO;
     

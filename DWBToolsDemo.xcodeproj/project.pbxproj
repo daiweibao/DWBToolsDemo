@@ -126,6 +126,7 @@
 		368E69E62140C5BF000EC79C /* TouchIDHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69E22140C5BF000EC79C /* TouchIDHelp.m */; };
 		368E69E92140C70D000EC79C /* KeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69E82140C70D000EC79C /* KeyChainManager.m */; };
 		368E69ED2140D307000EC79C /* DWBAFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69EC2140D307000EC79C /* DWBAFNetworking.m */; };
+		36991147215216F9004B3C0D /* NSString+DWBAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 36991146215216F9004B3C0D /* NSString+DWBAttribute.m */; };
 		36D3784A213FE01500E768AF /* NSString+GetImageHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37849213FE01500E768AF /* NSString+GetImageHeight.m */; };
 		36D37850213FEF7C00E768AF /* DragEnableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3784E213FEF7C00E768AF /* DragEnableButton.m */; };
 		36D37851213FEF7C00E768AF /* CopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3784F213FEF7C00E768AF /* CopyLabel.m */; };
@@ -372,6 +373,8 @@
 		368E69E82140C70D000EC79C /* KeyChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainManager.m; sourceTree = "<group>"; };
 		368E69EB2140D307000EC79C /* DWBAFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBAFNetworking.h; sourceTree = "<group>"; };
 		368E69EC2140D307000EC79C /* DWBAFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBAFNetworking.m; sourceTree = "<group>"; };
+		36991145215216F9004B3C0D /* NSString+DWBAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DWBAttribute.h"; sourceTree = "<group>"; };
+		36991146215216F9004B3C0D /* NSString+DWBAttribute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+DWBAttribute.m"; sourceTree = "<group>"; };
 		36D37848213FE01500E768AF /* NSString+GetImageHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GetImageHeight.h"; sourceTree = "<group>"; };
 		36D37849213FE01500E768AF /* NSString+GetImageHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GetImageHeight.m"; sourceTree = "<group>"; };
 		36D3784C213FEF7C00E768AF /* CopyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyLabel.h; sourceTree = "<group>"; };
@@ -850,6 +853,8 @@
 				368C3C02213FB44800C10B3E /* NSString+CXMD5.m */,
 				368C3C01213FB44800C10B3E /* NSString+DWBHelp.h */,
 				368C3C03213FB44800C10B3E /* NSString+DWBHelp.m */,
+				36991145215216F9004B3C0D /* NSString+DWBAttribute.h */,
+				36991146215216F9004B3C0D /* NSString+DWBAttribute.m */,
 				36D37848213FE01500E768AF /* NSString+GetImageHeight.h */,
 				36D37849213FE01500E768AF /* NSString+GetImageHeight.m */,
 			);
@@ -1101,7 +1106,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "北京嗅美科技有限公司";
+				ORGANIZATIONNAME = "潮汐科技有限公司";
 				TargetAttributes = {
 					368C39F1213F67C800C10B3E = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -1310,6 +1315,7 @@
 				368C3C06213FB44900C10B3E /* NSString+DWBHelp.m in Sources */,
 				368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */,
 				36D37850213FEF7C00E768AF /* DragEnableButton.m in Sources */,
+				36991147215216F9004B3C0D /* NSString+DWBAttribute.m in Sources */,
 				36213F6921439DB700B00E2B /* MJDIYAutoFooter.m in Sources */,
 				36213F5021439C1400B00E2B /* SVProgressHUD+KZ.m in Sources */,
 				36213F1A21439A3100B00E2B /* ZBHTextView.m in Sources */,

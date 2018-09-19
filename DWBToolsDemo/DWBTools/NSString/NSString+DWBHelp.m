@@ -509,108 +509,6 @@
     return NO;
 }
 
-
-#pragma mark 同一个label中间几个字 变颜色、大小都能改变
-/**
- 同一个label中间几个字 变颜色、大小都能改变、还能添加下划线，整个label还能设置是否有行间距
-
- @param color 中间变化的文字--颜色
- @param fout 中间变化的文字--大小
- @param string1 第一段内容
- @param string2 第一段内容
- @param string3 第二段内容
- @param isSetupSpacing 是否设置行间距
- @param iShowBottonLine 中间变化的文字--是否设置下划线
- @return 结果
- */
-+(NSMutableAttributedString*)getLabelChangeColor:(UIColor*)color andFont:(UIFont*)fout andString1:(NSString*)string1 andChangeString:(NSString*)string2 andGetstring3:(NSString*)string3 andISetupSpacing:(BOOL )isSetupSpacing andIShowBottonLine:(BOOL )iShowBottonLine{
-    
-//     label.attributedText = [NSString getLabelChangeColor:[UIColor redColor] andFont:[UIFont systemFontOfSize:25] andString1:@"测试" andChangeString:@"中间变大" andGetstring3:@"最后一段" andISetupSpacing:NO andIShowBottonLine:NO];
-    
-//    //点击指定汉子【dwb_addAttributeTapActionWithStrings】--配合这个类可以点击
-//    [label dwb_addAttributeTapActionWithStrings:@[string2] tapClicked:^(NSString *string, NSRange range, NSInteger index) {
-//
-//        NSLog(@"点击了变大的内容");
-//    }];
-    
-    //string2 是变色的部分 注意放在所有属性==>>最后面<<<===设置，否则无效
-    //判空
-    if ([NSString isNULL:string1]==YES) {
-        string1 = @"";
-    }
-    if ([NSString isNULL:string2]==YES) {
-        string2 = @"";
-    }
-    if ([NSString isNULL:string3]==YES) {
-        string3 = @"";
-    }
-    if (color==nil) {
-        color = [UIColor blackColor];
-    }
-    if (fout==nil) {
-        fout = [UIFont systemFontOfSize:14];
-    }
-    
-    NSString *inteStr = [NSString stringWithFormat:@"%@%@%@",string1,string2,string3];
-    NSMutableAttributedString *inteMutStr = [[NSMutableAttributedString alloc] initWithString:inteStr];
-    
-    //判断是否有行间距
-    if (isSetupSpacing == YES) {
-        // 行间距
-        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
-        [paragraphStyle setLineSpacing:6];
-        [inteMutStr addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0,inteStr.length)];
-    }
-    
-    
-    //设置中间变红的字体大小颜色
-    NSRange orangeRange = NSMakeRange([[inteMutStr string] rangeOfString:string2].location, [[inteMutStr string] rangeOfString:string2].length);
-    
-//    NSRange orangeRange = NSMakeRange(string1.length, string2.length);
-    
-     //判断是否展示下划线
-    if (iShowBottonLine == YES) {
-        //下划线类型
-        [inteMutStr addAttribute:NSUnderlineStyleAttributeName value:@(NSUnderlineStyleSingle) range:orangeRange];
-        //下划线颜色
-        [inteMutStr addAttribute:NSUnderlineColorAttributeName value:color range:orangeRange];
-    }
-    
-    //设置字体颜色
-    [inteMutStr addAttributes:@{NSFontAttributeName:fout,NSForegroundColorAttributeName:color} range:orangeRange];
-    return inteMutStr;
-    
-}
-
-
-
-/**
- 设置Label的行间距+默认12.0*px
- 
- @param string 字符串
- @return 属性字符串
- @LineSpacing 行间距
- */
-+(NSMutableAttributedString*)getLabelLineSpace:(NSString*)string LineSpacing:(CGFloat )lineSpacing{
-    // 注意放在所有属性最后面设置，否则无效
-    //判空
-    if ([NSString isNULL:string]==YES) {
-        string = @"";
-    }
-    NSMutableAttributedString *inteMutStr = [[NSMutableAttributedString alloc] initWithString:string];
-    // 行间距
-    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
-    if (lineSpacing <= 0) {
-        [paragraphStyle setLineSpacing:6];
-    }else{
-        [paragraphStyle setLineSpacing:lineSpacing];
-    }
-    
-    [inteMutStr addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0,string.length)];
-    return inteMutStr;
-}
-
-
 //汉字转为百分比
 -(NSString*)codeString{
     //汉字转为百分比
@@ -957,12 +855,24 @@
 
 //判断是否有摄像头(判断是否是模拟器)范湖YES是模拟器，NO是真机
 +(BOOL)isSimulator{
-    if([UIImagePickerController isSourceTypeAvailable:YES]){
-        //有摄像头，是真机
-        return NO;
-    }else{
-        //无摄像头，是模拟器
+//    if([UIImagePickerController isSourceTypeAvailable:YES]){
+//        //有摄像头，是真机
+//        return NO;
+//    }else{
+//        //无摄像头，是模拟器
+//        return YES;
+//    }
+    
+    //百度的方法
+    if (TARGET_IPHONE_SIMULATOR == 1 && TARGET_OS_IPHONE == 1) {
+        
+        //模拟器
         return YES;
+        
+    }else{
+        
+        //真机
+        return NO;
     }
 }
 

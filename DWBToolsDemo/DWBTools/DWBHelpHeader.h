@@ -73,6 +73,8 @@
 #import "MBProgressHUD+MJ.h"
 //label点击指定汉子
 #import "UILabel+Click.h"
+//富文本
+#import "NSString+DWBAttribute.h"
 
 #pragma mark ============ 工具类相互依赖的头文件 E=====================
 
@@ -142,6 +144,12 @@ static inline NSString * myMane(){
 
 //屏幕宽度的封面9/16
 #define ImageHeight  SCREEN_WIDTH*9/16   //图片比例宽度
+
+//iPhone6的界面布局是：屏幕是4.7英寸的，设计稿的大小为750x1334px。1被图为：375 * 667
+//以iphone为设计稿：375 * 667 是UI设计稿的宽高，可自行根据UI修改【一般用在弹窗适配，比如签到弹窗必须在一个界面显示全，此方法不适合ipad】
+#define dwb_pt(l) l * [UIScreen mainScreen].bounds.size.width / 375.0 //做适配的界面的宽、高、字号都用它。
+
+
 
 // iPhone X 宏定义
 #define  iPhoneX ([UIScreen mainScreen].bounds.size.width == 375.f && [UIScreen mainScreen].bounds.size.height == 812.f ? YES : NO)
@@ -227,14 +235,14 @@ _Pragma("clang diagnostic pop") \
 //获取版本号纯数字(字符串格式，3.4.0版本修改，2017年9月17日)
 #define GET_VERSION_Number  [GET_VERSION stringByReplacingOccurrencesOfString:@"." withString:@""]
 //app build版本
-#define GET_appBuild = [infoDictionary objectForKey:@"CFBundleVersion"]
+#define GET_appBuild  [infoDictionary objectForKey:@"CFBundleVersion"]
 
 //获取appBundleID
 #define GET_BundleId [[NSBundle mainBundle] bundleIdentifier]
 //获取APP名字
 #define GET_APPName [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
 //手机别名：用户定义的名称（如爱恨的潮汐）
-#define GET_userPhoneName = [[UIDevice currentDevice] name]
+#define GET_userPhoneName [[UIDevice currentDevice] name]
 
 
 //哦~我忘记说了[[UIDevice currentDevice] systemVersion].floatValue这个方法也是不靠谱的，好像在8.3版本输出的值是8.2，记不清楚了反正是不靠谱的，所以建议大家用[[UIDevice currentDevice] systemVersion]这个方法！
