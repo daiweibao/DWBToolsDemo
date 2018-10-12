@@ -156,5 +156,19 @@
     return attri;
 }
 
+#pragma mark ====(4）加载富文本=========
+
+/**
+ 加载带标签的富文本
+ 
+ @param htmlString 带标签的富文本
+ @return 结果
+ */
++(NSAttributedString *)getLabelAttributedHtmlString:(NSString *)htmlString{
+    //        NSString * stringHtml = [NSString stringWithFormat:@"<font color='#ffffff'>%@</font>",self.model.shareExplain[k]];
+    //     NSHTMLTextDocumentType设置为HTML类型（必须）
+    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
+    return attrStr;
+}
 
 @end

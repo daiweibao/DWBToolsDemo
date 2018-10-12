@@ -60,6 +60,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(NSMutableAttributedString *)getLabelTextAndImageWithImageName:(NSString *)imageName andString1:(NSString*)string1 andString2:(NSString*)string2 AndBounds:(CGRect )imageBounds;
 
+/**
+ 加载带标签的富文本
+ 
+ @param htmlString 带标签的富文本
+ @return 结果
+ */
++(NSAttributedString *)getLabelAttributedHtmlString:(NSString *)htmlString;
+
 @end
 
 NS_ASSUME_NONNULL_END

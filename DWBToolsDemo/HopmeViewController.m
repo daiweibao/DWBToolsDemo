@@ -8,10 +8,13 @@
 
 #import "HopmeViewController.h"
 #import "ToolsEntController.h"
+#import "TestModel.h"
 @interface HopmeViewController ()
 
 //功能入口
 @property(nonatomic,weak) DragEnableButton * buttonTools;
+
+@property(nonatomic,strong)TestModel * model;
 
 @end
 

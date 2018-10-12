@@ -127,6 +127,7 @@
 		368E69E92140C70D000EC79C /* KeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69E82140C70D000EC79C /* KeyChainManager.m */; };
 		368E69ED2140D307000EC79C /* DWBAFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69EC2140D307000EC79C /* DWBAFNetworking.m */; };
 		36991147215216F9004B3C0D /* NSString+DWBAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 36991146215216F9004B3C0D /* NSString+DWBAttribute.m */; };
+		3699115021523AD4004B3C0D /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3699114F21523AD4004B3C0D /* TestModel.m */; };
 		36D3784A213FE01500E768AF /* NSString+GetImageHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37849213FE01500E768AF /* NSString+GetImageHeight.m */; };
 		36D37850213FEF7C00E768AF /* DragEnableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3784E213FEF7C00E768AF /* DragEnableButton.m */; };
 		36D37851213FEF7C00E768AF /* CopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3784F213FEF7C00E768AF /* CopyLabel.m */; };
@@ -375,6 +376,8 @@
 		368E69EC2140D307000EC79C /* DWBAFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBAFNetworking.m; sourceTree = "<group>"; };
 		36991145215216F9004B3C0D /* NSString+DWBAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DWBAttribute.h"; sourceTree = "<group>"; };
 		36991146215216F9004B3C0D /* NSString+DWBAttribute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+DWBAttribute.m"; sourceTree = "<group>"; };
+		3699114E21523AD4004B3C0D /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		3699114F21523AD4004B3C0D /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
 		36D37848213FE01500E768AF /* NSString+GetImageHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GetImageHeight.h"; sourceTree = "<group>"; };
 		36D37849213FE01500E768AF /* NSString+GetImageHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GetImageHeight.m"; sourceTree = "<group>"; };
 		36D3784C213FEF7C00E768AF /* CopyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyLabel.h; sourceTree = "<group>"; };
@@ -781,6 +784,8 @@
 				36213FD22143ABB000B00E2B /* ToolsEntController.m */,
 				362F7BE22148EE7E00A8ECB1 /* LabelActionController.h */,
 				362F7BE32148EE7E00A8ECB1 /* LabelActionController.m */,
+				3699114E21523AD4004B3C0D /* TestModel.h */,
+				3699114F21523AD4004B3C0D /* TestModel.m */,
 				368C39F8213F67C800C10B3E /* ViewController.h */,
 				368C39F9213F67C800C10B3E /* ViewController.m */,
 				362F7BE521490F3A00A8ECB1 /* Image */,
@@ -1264,6 +1269,7 @@
 				36213F0F214364BD00B00E2B /* AlretCXSheetView.m in Sources */,
 				36213F10214364BD00B00E2B /* AlertCXCenterView.m in Sources */,
 				36EEDC9421420585000CBEEB /* UIImageView+CXHelp.m in Sources */,
+				3699115021523AD4004B3C0D /* TestModel.m in Sources */,
 				36213F912143A5B900B00E2B /* BlankPagesView.m in Sources */,
 				36213F11214364BD00B00E2B /* JXActionSheet.m in Sources */,
 				36213F6C21439DB700B00E2B /* MJChiBaoZiFooter.m in Sources */,

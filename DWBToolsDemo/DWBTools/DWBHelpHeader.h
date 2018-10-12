@@ -75,6 +75,8 @@
 #import "UILabel+Click.h"
 //富文本
 #import "NSString+DWBAttribute.h"
+//钥匙串存储数据
+#import "KeyChainManager.h"
 
 #pragma mark ============ 工具类相互依赖的头文件 E=====================
 
