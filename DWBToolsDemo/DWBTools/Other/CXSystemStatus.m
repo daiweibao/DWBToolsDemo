@@ -349,38 +349,50 @@
 }
 
 
+
 /**
- 单纯的检测用户是否开启了用户权限（获取状态）
+ 检测用户是否开启了位置权限:YES开启了，NO没有
+
+ @return 结果
  */
-- (void)requestLocation {
++(BOOL)isOpen_Location{
     
     // 判断是否打开了系统的位置服务
     BOOL isLocation = [CLLocationManager locationServicesEnabled];
     if (!isLocation) {
-        NSLog(@"定位服务不可用，例如定位没有打开...");//没有打开位置。
+//        NSLog(@"定位服务不可用，例如定位没有打开...");//没有打开位置。
+        return NO;
     }
     CLAuthorizationStatus CLstatus = [CLLocationManager authorizationStatus];
     switch (CLstatus) {
         case kCLAuthorizationStatusAuthorizedAlways://已经获取到权限，开启定位(总是)
-            NSLog(@"Always Authorized");
+//            NSLog(@"Always Authorized");
+            return YES;
             break;
         case kCLAuthorizationStatusAuthorizedWhenInUse://已经获取到权限，开启定位（使用的时候）
-            NSLog(@"AuthorizedWhenInUse");
+//            NSLog(@"AuthorizedWhenInUse");
+             return YES;
             break;
         case kCLAuthorizationStatusDenied://用户已经拒绝权限，去设置中开启权限
-            NSLog(@"Denied");
+//            NSLog(@"Denied");
+             return NO;
             break;
         case kCLAuthorizationStatusNotDetermined://用户还未选择位置权限
-            NSLog(@"not Determined");
+//            NSLog(@"not Determined");
+            return NO;
             break;
         case kCLAuthorizationStatusRestricted://无法控制，无法获知状态
             NSLog(@"Restricted");
+             return NO;
             break;
         default:
             break;
     }
     
 }
+
+
+
 #pragma mark ============= 位置权限 E===============
 
 

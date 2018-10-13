@@ -851,31 +851,6 @@
         return [NSString stringWithFormat:@"%02ld:%02ld",(long)m_countNum/60,m_countNum%60];
     }
 }
-
-
-//判断是否有摄像头(判断是否是模拟器)范湖YES是模拟器，NO是真机
-+(BOOL)isSimulator{
-//    if([UIImagePickerController isSourceTypeAvailable:YES]){
-//        //有摄像头，是真机
-//        return NO;
-//    }else{
-//        //无摄像头，是模拟器
-//        return YES;
-//    }
-    
-    //百度的方法
-    if (TARGET_IPHONE_SIMULATOR == 1 && TARGET_OS_IPHONE == 1) {
-        
-        //模拟器
-        return YES;
-        
-    }else{
-        
-        //真机
-        return NO;
-    }
-}
-
 ///根据用户输入的时间(dateString)确定当天是星期几,输入的时间格式 yyyy-MM-dd ,如 2015-12-18
 +(NSString *)getTheDayOfTheWeekByDateString:(NSString *)dateString{
     

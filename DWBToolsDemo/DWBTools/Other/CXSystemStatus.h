@@ -61,5 +61,12 @@
  */
 
 
+/**
+ 检测用户是否开启了位置权限:YES开启了，NO没有
+ 
+ @return 结果
+ */
++(BOOL)isOpen_Location;
+
 @end
 

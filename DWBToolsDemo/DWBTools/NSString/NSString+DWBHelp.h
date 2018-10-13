@@ -304,13 +304,6 @@
  */
 + (NSString*)getTimeMyStringTwo:(NSInteger)m_countNum;
 
-
-/**
- 判断是否有摄像头(判断是否是模拟器)范湖YES是模拟器，NO是真机
- 
- @return 结果
- */
-+(BOOL)isSimulator;
 /**
  毫秒转时代，如90后00后等
  
