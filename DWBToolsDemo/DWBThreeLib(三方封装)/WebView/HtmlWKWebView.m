@@ -300,7 +300,14 @@
     _remoDeallocKvo = remoDeallocKvo;
     NSLog(@"移除了KVO");
     // 最后一步：移除监听的KVO
-    [self.wkWebview removeObserver:self forKeyPath:@"estimatedProgress" context:nil];
+    //防止KVO多次移除崩溃，这种方法只能针对多次删除KVO的处理，原理就是try catch可以捕获异常，不让程序catch。这样就实现了防止多次删除KVO。
+    @try {
+        //移除观察者
+        [self.scrollView removeObserver:self forKeyPath:@"contentSize" context:nil];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"KVO多次删除了");
+    }
     
 }
 

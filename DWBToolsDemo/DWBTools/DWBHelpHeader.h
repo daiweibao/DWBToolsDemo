@@ -152,11 +152,8 @@ static inline NSString * myMane(){
 //iPhone6的界面布局是：屏幕是4.7英寸的，设计稿的大小为750x1334px。1被图为：375 * 667
 //以iphone为设计稿：375 * 667 是UI设计稿的宽高，可自行根据UI修改【一般用在弹窗适配，比如签到弹窗必须在一个界面显示全，此方法不适合ipad】
 #define dwb_pt(l) l * [UIScreen mainScreen].bounds.size.width / 375.0 //做适配的界面的宽、高、字号都用它。
-
-
-
-// iPhone X 宏定义
-#define  iPhoneX ([UIScreen mainScreen].bounds.size.width == 375.f && [UIScreen mainScreen].bounds.size.height == 812.f ? YES : NO)
+//iPhone X 宏定义
+#define  iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 // 适配iPhone X 状态栏高度
 #define  MC_StatusBarHeight      (iPhoneX ? 44.f : 20.f)
 // 适配iPhone X Tabbar高度
@@ -191,6 +188,9 @@ _Pragma("clang diagnostic pop") \
 
 //声明一个弱引用,##是连接的作用, 即当使用上面的宏会把weak与输入的type值连接起来如下图:
 #define WeakSelf(type)  __weak typeof(type) weak##type = type;
+//强引用
+#define StrongSelf(type)  __strong typeof(type) Strong##type = type;
+
 
 //生成手机唯一标识UUID--UDID，卸载后也不会变
 #define UUIDPhone  [getUUID getUUID]
