@@ -1,0 +1,1 @@
+../../../../UMCCommonLog/UMCommonLog/UMCommonLog.framework/Headers/UMCommonLogManager.h
