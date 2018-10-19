@@ -165,10 +165,17 @@
  @return 结果
  */
 +(NSAttributedString *)getLabelAttributedHtmlString:(NSString *)htmlString{
+    
+    //设置默认背景色为白色
     //        NSString * stringHtml = [NSString stringWithFormat:@"<font color='#ffffff'>%@</font>",self.model.shareExplain[k]];
+    
+    //设置标签
+//      NSString * redTextHtml = [NSString stringWithFormat:@"<font color='#fffa7e'>%@</font>",redText];
+    
     //     NSHTMLTextDocumentType设置为HTML类型（必须）
     NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
     return attrStr;
 }
+
 
 @end

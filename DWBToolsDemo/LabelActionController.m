@@ -54,7 +54,43 @@
     
     
     
+    //html处理文字颜色
+    UILabel * labelHtml = [[UILabel alloc]init];
+    labelHtml.frame = CGRectMake(10, 500, 340, 100);
+    labelHtml.attributedText = [self getLabelAttributedHtmlString:@"我是中国人" AndChooseColor:@[@"我",@"人"]];
+    labelHtml.font = [UIFont systemFontOfSize:20];
+    labelHtml.numberOfLines = 0;
+    [labelHtml sizeToFit];
+    [self.view addSubview:labelHtml];
     
+    
+    
+    
+}
+
+-(NSAttributedString *)getLabelAttributedHtmlString:(NSString *)htmlString AndChooseColor:(NSArray *)arrayRed{
+    
+  
+    NSString * titleMoneyMunStr = htmlString.copy;
+    
+    NSString * getEndStr;
+    for (int i = 0; i < arrayRed.count; i++) {
+        NSString * redText = [arrayRed[i] copy];
+        if ([htmlString containsString:redText]) {
+            
+            NSString * redTextHtml = [NSString stringWithFormat:@"<font color='#e53836'>%@</font>",redText];
+            //替换
+            getEndStr = [titleMoneyMunStr stringByReplacingOccurrencesOfString:redText withString:redTextHtml];
+            titleMoneyMunStr = getEndStr;
+        }
+    }
+    //设置默认背景色为白色
+    NSString * stringHtml = [NSString stringWithFormat:@"<font color='#212121'>%@</font>",getEndStr];
+    
+
+    //     NSHTMLTextDocumentType设置为HTML类型（必须）
+    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[stringHtml dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
+    return attrStr;
 }
 
 

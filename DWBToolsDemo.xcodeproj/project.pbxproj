@@ -160,6 +160,7 @@
 		36EEDCC0214209FE000CBEEB /* 版本检测弹窗关闭@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36EEDCB9214209FE000CBEEB /* 版本检测弹窗关闭@2x.png */; };
 		36EEDCC1214209FE000CBEEB /* CXVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCBA214209FE000CBEEB /* CXVersionUpdate.m */; };
 		36EEDCC2214209FE000CBEEB /* DownUpdateAppAleat.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCBB214209FE000CBEEB /* DownUpdateAppAleat.m */; };
+		36FF0858217A1A3800791E59 /* DWBShareTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FF0856217A1A3800791E59 /* DWBShareTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -440,6 +441,8 @@
 		36EEDCBA214209FE000CBEEB /* CXVersionUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXVersionUpdate.m; sourceTree = "<group>"; };
 		36EEDCBB214209FE000CBEEB /* DownUpdateAppAleat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownUpdateAppAleat.m; sourceTree = "<group>"; };
 		36EEDCBC214209FE000CBEEB /* CXVersionUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXVersionUpdate.h; sourceTree = "<group>"; };
+		36FF0856217A1A3800791E59 /* DWBShareTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBShareTools.m; sourceTree = "<group>"; };
+		36FF0857217A1A3800791E59 /* DWBShareTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBShareTools.h; sourceTree = "<group>"; };
 		5B2AD26055BB273DD4351B06 /* Pods-DWBToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		6C09C75787C5C6594A6B0EA4 /* libPods-DWBToolsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DWBToolsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53F89B2E10274ABDD3C0872 /* Pods-DWBToolsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -560,6 +563,7 @@
 		36213F5221439DB700B00E2B /* DWBThreeLib(三方封装) */ = {
 			isa = PBXGroup;
 			children = (
+				36FF0855217A1A3800791E59 /* ShareToopls(分享) */,
 				362F7BA42148ACF000A8ECB1 /* ChatInputBoxEmoji */,
 				36213F7D2143A0F100B00E2B /* ImageBrows(图片浏览器) */,
 				36213F852143A4BF00B00E2B /* WebView(全屏网页) */,
@@ -1083,6 +1087,15 @@
 			path = "VersionUpdate(版本更新)";
 			sourceTree = "<group>";
 		};
+		36FF0855217A1A3800791E59 /* ShareToopls(分享) */ = {
+			isa = PBXGroup;
+			children = (
+				36FF0857217A1A3800791E59 /* DWBShareTools.h */,
+				36FF0856217A1A3800791E59 /* DWBShareTools.m */,
+			);
+			path = "ShareToopls(分享)";
+			sourceTree = "<group>";
+		};
 		76CA9418AA36DA75CEAC0D77 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1296,10 +1309,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/UMCCommonLog/UMCommonLog/UMCommonLog.bundle",
+				"${PODS_ROOT}/UMCShare/UMShare/SocialLibraries/Sina/SinaSDK/WeiboSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMCommonLog.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1362,6 +1379,7 @@
 				368E69D12140C27D000EC79C /* UIView+Help.m in Sources */,
 				368C3A05213F67C900C10B3E /* main.m in Sources */,
 				36213F13214364BD00B00E2B /* AlertViewTool.m in Sources */,
+				36FF0858217A1A3800791E59 /* DWBShareTools.m in Sources */,
 				36213FB52143A6A500B00E2B /* CXTabBarController.m in Sources */,
 				36EEDCAE21420794000CBEEB /* ScanViewController.m in Sources */,
 				36213F4C21439C1400B00E2B /* SVProgressAnimatedView.m in Sources */,

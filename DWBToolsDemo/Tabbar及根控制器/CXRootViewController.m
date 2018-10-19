@@ -34,7 +34,6 @@
         make.top.left.right.bottom.mas_equalTo(0);
     }];
     
-    
     //主导航栏--不能添加到contentCXView上
     UIView *navigationCXView = [[UIView alloc]init];
     self.navigationCXView = navigationCXView;

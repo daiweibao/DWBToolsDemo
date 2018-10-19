@@ -36,10 +36,7 @@
     NSString * getStr = [KeyChainManager keyChainReadData:@"chaoxidwb"];
     
     NSLog(@"读取数据：%@",getStr);
-    
-    
-    
-    
+
     
 }
 
@@ -88,9 +85,8 @@
         //        _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
         //去掉分割线
         //        _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
-        
         [self.view addSubview:_tableView];
-        
+        NSLog(@"%f",MC_NavHeight);
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.view);
             make.top.mas_equalTo(self.view).offset(MC_NavHeight);
@@ -153,6 +149,36 @@
         [self.navigationController pushViewController:VC animated:YES];
         
     }
+}
+
+//将要出现
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    
+    
+}
+//将要消失
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    
+    
+}
+
+
+//控制器pop的时候走这里
+- (void)didMoveToParentViewController:(UIViewController*)parent{
+    [super didMoveToParentViewController:parent];
+    //    NSLog(@"%s,%@",__FUNCTION__,parent);
+    if(!parent){
+        //        NSLog(@"页面pop成功了");
+        
+    }
+}
+
+-(void)dealloc{
+    
 }
 
 - (void)didReceiveMemoryWarning {

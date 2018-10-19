@@ -24,4 +24,19 @@ pod 'SDWebImage/GIF'
 #    pod 'SDWebImage', '~>3.8'
 
 
+#友盟--2018年10月19日
+#基础库
+pod 'UMCCommon'
+pod 'UMCSecurityPlugins'
+#日志库（调试）
+pod 'UMCCommonLog'
+#分享 SDK
+# 集成微信(完整版14.4M)
+pod 'UMCShare/Social/WeChat'
+# 集成QQ/QZone/TIM(完整版7.6M)
+pod 'UMCShare/Social/QQ'
+# 集成新浪微博(完整版25.3M)
+pod 'UMCShare/Social/Sina'
+
+
 end
