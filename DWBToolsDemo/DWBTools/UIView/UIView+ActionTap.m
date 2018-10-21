@@ -15,6 +15,7 @@ static char touchKey;
     if (block) block();
 }
 -(void)addTapActionTouch:(TouchBlock)block{
+    self.userInteractionEnabled = YES;//打开交互
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap)];
     [self addGestureRecognizer:tap];
     objc_setAssociatedObject(self, &touchKey, block, OBJC_ASSOCIATION_COPY_NONATOMIC);

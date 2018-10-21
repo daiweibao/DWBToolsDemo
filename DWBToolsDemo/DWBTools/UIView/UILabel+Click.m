@@ -93,6 +93,7 @@
 #pragma mark - mainFunction
 - (void)dwb_addAttributeTapActionWithStrings:(NSArray <NSString *> *)strings tapClicked:(void (^) (NSString *string , NSRange range , NSInteger index))tapClick
 {
+    self.userInteractionEnabled = YES;//开启交互
     [self yb_getRangesWithStrings:strings];
     
     if (self.tapBlock != tapClick) {

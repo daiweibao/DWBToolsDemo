@@ -61,12 +61,28 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSMutableAttributedString *)getLabelTextAndImageWithImageName:(NSString *)imageName andString1:(NSString*)string1 andString2:(NSString*)string2 AndBounds:(CGRect )imageBounds;
 
 /**
- 加载带标签的富文本
+ 加载带标签的富文本HTML
  
  @param htmlString 带标签的富文本
+ @param normal_ColorHex 默认背景色
  @return 结果
  */
-+(NSAttributedString *)getLabelAttributedHtmlString:(NSString *)htmlString;
++(NSAttributedString *)getLabelAttributedHTMLlString:(NSString *)htmlString AndNormal_ColorHex:(NSString *)normal_ColorHex;
+
+/**
+ 同一字符串，指定部分文字颜色大小变化f【HTML】
+ 
+ @param text 完整字符串
+ @param arrayChange 变色的字符数组
+ @param normal_ColerHex 默认颜色：Hex值
+ @param normal_FontSize 默认字号
+ @param normal_isBold 默认字是否加粗
+ @param change_ColerHex 改变的字符颜色
+ @param change_FontSize 改变的字符字号
+ @param change_isBold 改变的字符是否加粗
+ @return 返回属性字符串：NSAttributedString
+ */
++(NSAttributedString *)getLabelAttributedStringHTMLChangeWithText:(NSString *)text AndChangeTextArr:(NSArray *)arrayChange AndNormalText_ColeerHex:(NSString *)normal_ColerHex AndNormalText_FontSize:(CGFloat )normal_FontSize AndNormalText_isBold:(BOOL )normal_isBold AndChangeText_ColeerHex:(NSString *)change_ColerHex AndChangeText_FontSize:(CGFloat )change_FontSize AndChangeText_isBold:(BOOL )change_isBold;
 
 @end
 
