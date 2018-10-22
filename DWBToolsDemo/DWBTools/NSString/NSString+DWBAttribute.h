@@ -70,7 +70,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSAttributedString *)getLabelAttributedHTMLlString:(NSString *)htmlString AndNormal_ColorHex:(NSString *)normal_ColorHex;
 
 /**
- 同一字符串，指定部分文字颜色大小变化f【HTML】
+ 同一字符串，指定部分文字颜色大小变化f【HTML】--【暂时不用，珍藏起来，用这个方法：getLabelChangColoerWithText】
  
  @param text 完整字符串
  @param arrayChange 变色的字符数组
@@ -83,6 +83,30 @@ NS_ASSUME_NONNULL_BEGIN
  @return 返回属性字符串：NSAttributedString
  */
 +(NSAttributedString *)getLabelAttributedStringHTMLChangeWithText:(NSString *)text AndChangeTextArr:(NSArray *)arrayChange AndNormalText_ColeerHex:(NSString *)normal_ColerHex AndNormalText_FontSize:(CGFloat )normal_FontSize AndNormalText_isBold:(BOOL )normal_isBold AndChangeText_ColeerHex:(NSString *)change_ColerHex AndChangeText_FontSize:(CGFloat )change_FontSize AndChangeText_isBold:(BOOL )change_isBold;
+
+
+/**
+ 字符串中指定字符变色，传入变色的字符数组【无行间距】
+ 
+ @param text 完整字符串
+ @param arrayChange 需要变色的字符数组
+ @param changeFout 变色部分字号
+ @param changeColor 变色部分颜色
+ @return 返回属性字符串
+ */
++(NSMutableAttributedString*)getLabelChangColoerArrayWithText:(NSString *)text AndChangeArray:(NSArray *)arrayChange andChangeFont:(UIFont*)changeFout AndChangeColor:(UIColor*)changeColor;
+
+/**
+ 字符串中指定字符变色，传入变色的字符数组【有行间距】
+ 
+ @param text 完整字符串
+ @param arrayChange 需要变色的字符数组
+ @param changeFout 变色部分字号
+ @param changeColor 变色部分颜色
+ @param lineSpacing 行间距，传入-1代表无行间距
+ @return 返回属性字符串
+ */
++(NSMutableAttributedString*)getLabelChangColoerArrayWithText:(NSString *)text AndChangeArray:(NSArray *)arrayChange andChangeFont:(UIFont*)changeFout AndChangeColor:(UIColor*)changeColor AndLineSpacing:(CGFloat )lineSpacing;
 
 @end
 

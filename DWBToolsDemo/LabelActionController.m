@@ -57,35 +57,23 @@
     //html处理文字颜色
     UILabel * labelHtml = [[UILabel alloc]init];
     labelHtml.frame = CGRectMake(10, 500, 340, 100);
-    labelHtml.font = [UIFont systemFontOfSize:30];
-    labelHtml.attributedText = [NSString getLabelAttributedStringHTMLChangeWithText:@"我是中国人，我骄傲999jjj" AndChangeTextArr:@[@"是",@"骄",@"8",@"，"] AndNormalText_ColeerHex:@"#999999" AndNormalText_FontSize:20 AndNormalText_isBold:YES AndChangeText_ColeerHex:@"#eb4c97" AndChangeText_FontSize:30 AndChangeText_isBold:NO];
-    
-//    labelHtml.attributedText = [self getLabelChangColoerWith:@"我要变色，哈哈哈哈，你呢"];
-    
+    labelHtml.font = [UIFont systemFontOfSize:20];
+    labelHtml.textColor = [UIColor yellowColor];
+    labelHtml.attributedText = [NSString getLabelChangColoerArrayWithText:@"我是a，你是B,我是谁，我是谁999？" AndChangeArray:@[@"ww",@"是",@"B",@"99",@"99"] andChangeFont:[UIFont systemFontOfSize:30] AndChangeColor:[UIColor redColor] AndLineSpacing:10];
     labelHtml.numberOfLines = 0;
     [labelHtml sizeToFit];
+    labelHtml.backgroundColor = [UIColor blueColor];
     [self.view addSubview:labelHtml];
-    [labelHtml addTapActionTouch:^{
-        
-    }];
-    
     [labelHtml dwb_addAttributeTapActionWithStrings:@[@"是"] tapClicked:^(NSString *string, NSRange range, NSInteger index) {
         DWBAlertShow(@"点击了文字");
     }];
     
-    
-    
+
     
 }
 
 
 
-
-//富文本
--(NSMutableAttributedString*)getLabelChangColoerWith:(NSString *)string{
-     NSMutableAttributedString *inteMutStr = [[NSMutableAttributedString alloc] initWithString:string];
-    return inteMutStr;
-}
 
 
 - (void)didReceiveMemoryWarning {

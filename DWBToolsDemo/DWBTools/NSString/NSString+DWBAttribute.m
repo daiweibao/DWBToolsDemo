@@ -179,7 +179,7 @@
 
 
 /**
- 同一字符串，指定部分文字颜色大小变化f【HTML】
+ 同一字符串，指定部分文字颜色大小变化f【HTML】--【暂时不用，珍藏起来，用这个方法：getLabelChangColoerWithText】
  
  @param text 完整字符串
  @param arrayChange 变色的字符数组
@@ -192,6 +192,11 @@
  @return 返回属性字符串：NSAttributedString
  */
 +(NSAttributedString *)getLabelAttributedStringHTMLChangeWithText:(NSString *)text AndChangeTextArr:(NSArray *)arrayChange AndNormalText_ColeerHex:(NSString *)normal_ColerHex AndNormalText_FontSize:(CGFloat )normal_FontSize AndNormalText_isBold:(BOOL )normal_isBold AndChangeText_ColeerHex:(NSString *)change_ColerHex AndChangeText_FontSize:(CGFloat )change_FontSize AndChangeText_isBold:(BOOL )change_isBold{
+    
+    
+    //（0）数组去重（NSSet去重后顺序会被打乱，不过在这里无所谓）,否则暗号会显示出来【重要】
+    NSSet *set = [NSSet setWithArray:arrayChange.copy];
+    arrayChange = [set allObjects];
     
     //(1)【这一步处理非常重要，加入暗号：daiweibao】给需要改变的字符串加上特殊标识，防止替换的时候把颜色里的字符串替换了
     NSString * tageStr = @"$-dai-%@-weibao-$";//特殊标识，里面包含%@字符串占位符
@@ -233,5 +238,144 @@
     return attrStr;
 }
 
+
+
+
+#pragma mark =======传值要变色的字符数组，返回属性字符串 S=========
+
+/**
+ 字符串中指定字符变色，传入变色的字符数组【无行间距】
+ 
+ @param text 完整字符串
+ @param arrayChange 需要变色的字符数组
+ @param changeFout 变色部分字号
+ @param changeColor 变色部分颜色
+ @return 返回属性字符串
+ */
++(NSMutableAttributedString*)getLabelChangColoerArrayWithText:(NSString *)text AndChangeArray:(NSArray *)arrayChange andChangeFont:(UIFont*)changeFout AndChangeColor:(UIColor*)changeColor{
+    
+    //调用公共方法
+   return [NSString getLabelChangColoerArrayWithText:text AndChangeArray:arrayChange andChangeFont:changeFout AndChangeColor:changeColor AndLineSpacing:-1];
+}
+
+
+/**
+ 字符串中指定字符变色，传入变色的字符数组【有行间距】
+ 
+ @param text 完整字符串
+ @param arrayChange 需要变色的字符数组
+ @param changeFout 变色部分字号
+ @param changeColor 变色部分颜色
+ @param lineSpacing 行间距，传入-1代表无行间距
+ @return 返回属性字符串
+ */
++(NSMutableAttributedString*)getLabelChangColoerArrayWithText:(NSString *)text AndChangeArray:(NSArray *)arrayChange andChangeFont:(UIFont*)changeFout AndChangeColor:(UIColor*)changeColor AndLineSpacing:(CGFloat )lineSpacing{
+    //默认部分颜色等属性，必须在调用此方法前面设置。
+    if ([NSString isNULL:text]==YES) {
+        text = @"";//判空
+    }
+    //创建富文本对象
+    NSMutableAttributedString *inteMutStr = [[NSMutableAttributedString alloc] initWithString:text];
+    //遍历找出需要改变颜色的位置
+    for (int i = 0; i < arrayChange.count; i++) {
+        NSString * strChange = arrayChange[i];
+        NSArray * arrayIndex = [NSString getRangeStr:text findText:strChange];//获取Range所在位置
+        for (int j = 0; j < arrayIndex.count; j++) {
+            //要变色的字符位置
+            NSRange orangeRange = NSMakeRange([arrayIndex[j] integerValue], strChange.length);
+            //设置要变色的字符属性
+            [inteMutStr addAttributes:@{NSFontAttributeName:changeFout,NSForegroundColorAttributeName:changeColor} range:orangeRange];
+        }
+    }
+    
+    //行间距
+    if (lineSpacing <= 0) {
+        //不设置行间距
+    }else{
+        //设置行间距
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
+        [paragraphStyle setLineSpacing:lineSpacing];
+        [inteMutStr addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0,text.length)];
+    }
+    
+    return inteMutStr;
+}
+
+
+
+#pragma mark - 获取字符串中多个相同字符的位置index（如：所有xxx在该字符串中的所在的index）
++ (NSMutableArray *)getRangeStr:(NSString *)text findText:(NSString *)findText
+{
+    
+    NSMutableArray *arrayRanges = [NSMutableArray arrayWithCapacity:3];
+    
+    if (findText == nil && [findText isEqualToString:@""])
+    {
+        
+        return nil;
+        
+    }
+    
+    NSRange rang = [text rangeOfString:findText]; //获取第一次出现的range
+    
+    if (rang.location != NSNotFound && rang.length != 0)
+    {
+        
+        [arrayRanges addObject:[NSNumber numberWithInteger:rang.location]];//将第一次的加入到数组中
+        
+        NSRange rang1 = {0,0};
+        
+        NSInteger location = 0;
+        
+        NSInteger length = 0;
+        
+        for (int i = 0;; i++)
+        {
+            
+            if (0 == i)
+            {//去掉这个xxx
+                
+                location = rang.location + rang.length;
+                
+                length = text.length - rang.location - rang.length;
+                
+                rang1 = NSMakeRange(location, length);
+                
+            }
+            else
+            {
+                
+                location = rang1.location + rang1.length;
+                
+                length = text.length - rang1.location - rang1.length;
+                
+                rang1 = NSMakeRange(location, length);
+                
+            }
+            
+            //在一个range范围内查找另一个字符串的range
+            
+            rang1 = [text rangeOfString:findText options:NSCaseInsensitiveSearch range:rang1];
+            
+            if (rang1.location == NSNotFound && rang1.length == 0)
+            {
+                
+                break;
+                
+            }
+            else//添加符合条件的location进数组
+                
+                [arrayRanges addObject:[NSNumber numberWithInteger:rang1.location]];
+            
+        }
+        
+        return arrayRanges;
+        
+    }
+    
+    return nil;
+}
+
+#pragma mark =======传值要变色的字符数组，返回属性字符串 E=========
 
 @end
