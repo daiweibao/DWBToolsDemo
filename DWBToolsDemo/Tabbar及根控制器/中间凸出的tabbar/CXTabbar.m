@@ -57,7 +57,7 @@
 //适配ipad，让TabBar在ipad上不会出现图片文字左右排列的问题。
 - (UITraitCollection *)traitCollection {
     //如果是ipad就处理下
-    if ([NSString getIsIpad]==YES) {
+    if ([DWBDeviceHelp isiPadDevice]==YES) {
         return [UITraitCollection traitCollectionWithVerticalSizeClass:UIUserInterfaceSizeClassCompact];
     }
     

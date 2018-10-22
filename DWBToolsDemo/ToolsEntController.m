@@ -8,6 +8,9 @@
 
 #import "ToolsEntController.h"
 #import "LabelActionController.h"
+
+#import "DWBAPPManager.h"
+
 @interface ToolsEntController ()<UITableViewDelegate,UITableViewDataSource>
 //创建tableview
 @property (nonatomic,strong) UITableView * tableView;
@@ -36,6 +39,10 @@
     NSString * getStr = [KeyChainManager keyChainReadData:@"chaoxidwb"];
     
     NSLog(@"读取数据：%@",getStr);
+    
+  /*  NSString * textName = */[[DWBAPPManager sharedManager] getMyName];
+    
+//    NSLog(@"得到配置数据：%@",textName);
 
     
 }

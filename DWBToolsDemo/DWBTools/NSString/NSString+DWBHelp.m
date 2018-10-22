@@ -1089,32 +1089,6 @@
 }
 
 
-//判断设备是否是ipad其他方法判断不准，YES代表是ipad
-+ (BOOL)getIsIpad
-{
-    NSString *deviceType = [UIDevice currentDevice].model;
-    
-    if([deviceType isEqualToString:@"iPhone"]) {
-        //iPhone
-        return NO;
-    }
-    else if([deviceType isEqualToString:@"iPod touch"]) {
-        //iPod Touch
-        return NO;
-    }
-    else if([deviceType isEqualToString:@"iPad"]) {
-        //iPad
-        return YES;
-    }
-    return NO;
-    
-    //这两个防范判断不准，不要用
-    //#define is_iPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-    //
-    //#define is_iPad (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad)
-}
-
-
 /**
  格式化金额，每隔三位一个逗号显示，保留两位小数，必须传入double类型，不能传入字符串类型
  

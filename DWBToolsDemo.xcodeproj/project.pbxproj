@@ -101,6 +101,7 @@
 		362F7BE721490F4B00A8ECB1 /* WVstore_1024pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BE621490F4B00A8ECB1 /* WVstore_1024pt.png */; };
 		362F7BE92149114B00A8ECB1 /* 微信@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BE82149114B00A8ECB1 /* 微信@2x.png */; };
 		362F7BEB2149158600A8ECB1 /* 小黄车.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BEA2149158600A8ECB1 /* 小黄车.png */; };
+		3634E5AB217D5E89002B43DD /* DWBAPPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3634E5AA217D5E89002B43DD /* DWBAPPManager.m */; };
 		368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F6213F67C800C10B3E /* AppDelegate.m */; };
 		368C39FA213F67C800C10B3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F9213F67C800C10B3E /* ViewController.m */; };
 		368C39FD213F67C800C10B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368C39FB213F67C800C10B3E /* Main.storyboard */; };
@@ -329,6 +330,8 @@
 		362F7BE621490F4B00A8ECB1 /* WVstore_1024pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WVstore_1024pt.png; sourceTree = "<group>"; };
 		362F7BE82149114B00A8ECB1 /* 微信@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微信@2x.png"; sourceTree = "<group>"; };
 		362F7BEA2149158600A8ECB1 /* 小黄车.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小黄车.png"; sourceTree = "<group>"; };
+		3634E5A9217D5E89002B43DD /* DWBAPPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBAPPManager.h; sourceTree = "<group>"; };
+		3634E5AA217D5E89002B43DD /* DWBAPPManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBAPPManager.m; sourceTree = "<group>"; };
 		368C39F2213F67C800C10B3E /* DWBToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWBToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368C39F5213F67C800C10B3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		368C39F6213F67C800C10B3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -770,6 +773,23 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		3634E5A7217D5BB4002B43DD /* ProjectAbout(项目相关) */ = {
+			isa = PBXGroup;
+			children = (
+				3634E5A8217D5E42002B43DD /* AppConfig */,
+			);
+			path = "ProjectAbout(项目相关)";
+			sourceTree = "<group>";
+		};
+		3634E5A8217D5E42002B43DD /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				3634E5A9217D5E89002B43DD /* DWBAPPManager.h */,
+				3634E5AA217D5E89002B43DD /* DWBAPPManager.m */,
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
 		368C39E9213F67C800C10B3E = {
 			isa = PBXGroup;
 			children = (
@@ -795,6 +815,7 @@
 		368C39F4213F67C800C10B3E /* DWBToolsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3634E5A7217D5BB4002B43DD /* ProjectAbout(项目相关) */,
 				368C3BE8213FA78100C10B3E /* DWBTools */,
 				36213F5221439DB700B00E2B /* DWBThreeLib(三方封装) */,
 				36213F932143A6A500B00E2B /* Tabbar及根控制器 */,
@@ -1338,6 +1359,7 @@
 				36213F11214364BD00B00E2B /* JXActionSheet.m in Sources */,
 				36213F6C21439DB700B00E2B /* MJChiBaoZiFooter.m in Sources */,
 				368E69D22140C27D000EC79C /* UIView+Extension.m in Sources */,
+				3634E5AB217D5E89002B43DD /* DWBAPPManager.m in Sources */,
 				368C39FA213F67C800C10B3E /* ViewController.m in Sources */,
 				362F7BC72148AF2400A8ECB1 /* ZXPUnicode.m in Sources */,
 				36213F4721439C1400B00E2B /* LoadingCircleHUD.m in Sources */,

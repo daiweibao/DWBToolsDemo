@@ -371,12 +371,6 @@
 +(void)copyCXString:(NSString *)string;
 
 /**
- 判断设备是否是ipad其他方法判断不准，YES代表是ipad
- 
- @return YES代表是ipad
- */
-+ (BOOL)getIsIpad;
-/**
  格式化金额，每隔三位一个逗号显示，保留两位小数，必须传入double类型，不能传入字符串类型
  
  @param doubleMoney 传入的金额,double类型

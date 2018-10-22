@@ -73,4 +73,32 @@
  */
 
 
+
+//判断设备是否是iPad其他方法判断不准，YES代表是ipad
++ (BOOL)isiPadDevice
+{
+    NSString *deviceType = [UIDevice currentDevice].model;
+    
+    if([deviceType isEqualToString:@"iPhone"]) {
+        //iPhone
+        return NO;
+    }
+    else if([deviceType isEqualToString:@"iPod touch"]) {
+        //iPod Touch
+        return NO;
+    }
+    else if([deviceType isEqualToString:@"iPad"]) {
+        //iPad
+        return YES;
+    }
+    return NO;
+    
+    //这两个防范判断不准，不要用
+    //#define is_iPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    //
+    //#define is_iPad (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad)
+}
+
+
+
 @end

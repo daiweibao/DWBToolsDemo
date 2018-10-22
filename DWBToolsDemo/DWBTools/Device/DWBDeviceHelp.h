@@ -34,6 +34,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)getPhoneAllMemory_DiskSize;
 
+/**
+ 判断设备是否是iPad其他方法判断不准，YES代表是ipad
+ 
+ @return YES代表是iPad
+ */
++ (BOOL)isiPadDevice;
+
 @end
 
 NS_ASSUME_NONNULL_END

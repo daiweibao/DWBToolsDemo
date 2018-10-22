@@ -212,7 +212,7 @@
     
     
     
-    //(2.1)转化成H5 <p>标签嵌套 <span>标签
+    //(2.1)转化成H5 <span> 标签嵌套 <span>标签,不能用p标签，不然尾部会多出空白
     NSString * markHTMLStrALL = markStrALL.copy;
     for (int j = 0; j < arrayChange.count; j++) {
         NSString * redText = [NSString stringWithFormat:tageStr,arrayChange[j]];
@@ -226,7 +226,7 @@
     
     //(2.2)设置默认属性
     NSString * normal_boldOrNormal = normal_isBold==YES? @"bold":@"normal";//判断加粗
-    NSString * stringHtml = [NSString stringWithFormat:@"<p style='font-size:%fpx; color:%@;font-weight:%@'>%@</p>",normal_FontSize,normal_ColerHex,normal_boldOrNormal,markHTMLStrALL];
+    NSString * stringHtml = [NSString stringWithFormat:@"<span style='font-size:%fpx; color:%@;font-weight:%@'>%@</span>",normal_FontSize,normal_ColerHex,normal_boldOrNormal,markHTMLStrALL];
     
     //NSHTMLTextDocumentType设置为HTML类型（必须）
     NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[stringHtml dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
