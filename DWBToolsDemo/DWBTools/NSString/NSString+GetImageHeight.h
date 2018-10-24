@@ -20,4 +20,6 @@
  */
 +(CGFloat)getHieghtWithMyWidth:(CGFloat)myWidth AndUIWidth:(CGFloat)width AndUIHeight:(CGFloat)height;
 
+
+
 @end

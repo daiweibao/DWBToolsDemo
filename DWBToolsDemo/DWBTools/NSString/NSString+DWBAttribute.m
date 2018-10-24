@@ -10,66 +10,110 @@
 
 @implementation NSString (DWBAttribute)
 
-#pragma mark ====(1）同一个label中间几个字 变颜色、大小都能改变、可设置下划线、行间距=========
+#pragma mark =======AttributedString属性字符串，中间几个字颜色大小变化，还能设置行间距，下划线 S========
 
 /**
- 同一个label中间几个字 变颜色、大小都能改变。
+ 【1】同一属性字符串，可以设置1段变色，另外2段不变色【默认无行间距，无下划线】
  
- @param color 中间变化的文字--颜色
- @param fout 中间变化的文字--大小
- @param string1 第一段内容
- @param string2 第一段内容
- @param string3 第二段内容
- @return 结果
+ @param changeColor 改变的颜色
+ @param changeFout 改变的字号
+ @param string1 第1段字符串--默认
+ @param changeString2 第2段字符串--变色
+ @param string3 第3段字符串--默认
+ @return NSMutableAttributedString属性字符串
  */
-+(NSMutableAttributedString*)getLabelChangeColor:(UIColor*)color andFont:(UIFont*)fout andString1:(NSString*)string1 andChangeString:(NSString*)string2 andGetstring3:(NSString*)string3{
++(NSMutableAttributedString*)getLabelAttributedStrChange_One_WithChangeColor:(UIColor*_Nullable)changeColor AndChangeFont:(UIFont*_Nullable)changeFout AndString1:(NSString*_Nullable)string1 AndChangeString2:(NSString*_Nullable)changeString2 AndGetstring3:(NSString*_Nullable)string3{
+    
+    return [NSString getLabelAttributedStrChange_One_WithChangeColor:changeColor AndChangeFont:changeFout AndString1:string1 AndChangeString2:changeString2 AndGetstring3:string3 AndISetupSpacing:NO AndIShowBottonLine:NO];
+}
+
+/**
+ 【2】同一属性字符串，可以设置1段变色，另外2段不变色【可选择设置行间距，下划线】
+ 
+ @param changeColor 改变的颜色
+ @param changeFout 改变的字号
+ @param string1 第1段字符串--默认
+ @param changeString2 第2段字符串--变色
+ @param string3 第3段字符串--默认
+ @param isSetupSpacing 是否设置行间距，默认6
+ @param iShowBottonLine 是否设置下划线
+ @return NSMutableAttributedString属性字符串
+ */
++(NSMutableAttributedString*)getLabelAttributedStrChange_One_WithChangeColor:(UIColor*_Nullable)changeColor AndChangeFont:(UIFont*_Nullable)changeFout AndString1:(NSString*_Nullable)string1 AndChangeString2:(NSString*_Nullable)changeString2 AndGetstring3:(NSString*_Nullable)string3 AndISetupSpacing:(BOOL )isSetupSpacing AndIShowBottonLine:(BOOL )iShowBottonLine{
     //调用公共类
-   return [NSString getLabelChangeColor:color andFont:fout andString1:string1 andChangeString:string2 andGetstring3:string3 andISetupSpacing:NO andIShowBottonLine:NO];
+    return [NSString getLabelAttributedStrChange_Two_WithChangeColor1:changeColor AndChangeFont1:changeFout AndChangeColor2:nil AndChangeFont2:nil AndString1:string1 AndChangeString2:changeString2 AndGetstring3:string3 AndChangeString4:nil AndGetstring5:nil AndISetupSpacing:isSetupSpacing AndIShowBottonLine:iShowBottonLine];
 }
 
 
+/**
+ 【3】同一属性字符串，可以设置1段变色，另外2段不变色【默认无行间距，无下划线】
+ 
+ @param changeColor1 第1段变色的颜色
+ @param changeFout1 第1段变色的字号
+ @param changeColor2 第2段变色的颜色
+ @param changeFout2 第2段变色的字号
+ @param string1 字符串第1段--默认
+ @param changeString2 字符串第2段--变色
+ @param string3 字符串第3段--默认
+ @param changeString4 字符串第4段--变色
+ @param string5 字符串第5段--默认
+ @return NSMutableAttributedString属性字符串
+ */
++(NSMutableAttributedString*)getLabelAttributedStrChange_Two_WithChangeColor1:(UIColor*_Nullable)changeColor1 AndChangeFont1:(UIFont*_Nullable)changeFout1 AndChangeColor2:(UIColor*_Nullable)changeColor2 AndChangeFont2:(UIFont*_Nullable)changeFout2 AndString1:(NSString*_Nullable)string1 AndChangeString2:(NSString*_Nullable)changeString2 AndGetstring3:(NSString*_Nullable)string3 AndChangeString4:(NSString*_Nullable)changeString4 AndGetstring5:(NSString*_Nullable)string5{
+    //调用公共类
+    return [NSString getLabelAttributedStrChange_Two_WithChangeColor1:changeColor1 AndChangeFont1:changeFout1 AndChangeColor2:changeColor2 AndChangeFont2:changeFout2 AndString1:string1 AndChangeString2:changeString2 AndGetstring3:string3 AndChangeString4:changeString4 AndGetstring5:string5 AndISetupSpacing:NO AndIShowBottonLine:NO];
+}
+
 
 /**
- 同一个label中间几个字 变颜色、大小都能改变、还能添加下划线，整个label还能设置是否有行间距
+ 【4】同一属性字符串，可以设置两段变色，另外三段不变色【公共基类】
  
- @param color 中间变化的文字--颜色
- @param fout 中间变化的文字--大小
- @param string1 第一段内容
- @param string2 第一段内容
- @param string3 第二段内容
- @param isSetupSpacing 是否设置行间距
- @param iShowBottonLine 中间变化的文字--是否设置下划线
- @return 结果
+ @param changeColor1 第1段变色的颜色
+ @param changeFout1 第1段变色的字号
+ @param changeColor2 第2段变色的颜色
+ @param changeFout2 第2段变色的字号
+ @param string1 字符串第1段--默认
+ @param changeString2 字符串第2段--变色
+ @param string3 字符串第3段--默认
+ @param changeString4 字符串第4段--变色
+ @param string5 字符串第5段--默认
+ @param isSetupSpacing 是否设置行间距，默认6
+ @param iShowBottonLine 是否设置下划线
+ @return NSMutableAttributedString属性字符串
  */
-+(NSMutableAttributedString*)getLabelChangeColor:(UIColor*)color andFont:(UIFont*)fout andString1:(NSString*)string1 andChangeString:(NSString*)string2 andGetstring3:(NSString*)string3 andISetupSpacing:(BOOL )isSetupSpacing andIShowBottonLine:(BOOL )iShowBottonLine{
++(NSMutableAttributedString*)getLabelAttributedStrChange_Two_WithChangeColor1:(UIColor*_Nullable)changeColor1 AndChangeFont1:(UIFont*_Nullable)changeFout1 AndChangeColor2:(UIColor*_Nullable)changeColor2 AndChangeFont2:(UIFont*_Nullable)changeFout2 AndString1:(NSString*_Nullable)string1 AndChangeString2:(NSString*_Nullable)changeString2 AndGetstring3:(NSString*_Nullable)string3 AndChangeString4:(NSString*_Nullable)changeString4 AndGetstring5:(NSString*_Nullable)string5 AndISetupSpacing:(BOOL )isSetupSpacing AndIShowBottonLine:(BOOL )iShowBottonLine{
     
-    //     label.attributedText = [NSString getLabelChangeColor:[UIColor redColor] andFont:[UIFont systemFontOfSize:25] andString1:@"测试" andChangeString:@"中间变大" andGetstring3:@"最后一段" andISetupSpacing:NO andIShowBottonLine:NO];
-    
-    //    //点击指定汉子【dwb_addAttributeTapActionWithStrings】--配合这个类可以点击
-    //    [label dwb_addAttributeTapActionWithStrings:@[string2] tapClicked:^(NSString *string, NSRange range, NSInteger index) {
-    //
-    //        NSLog(@"点击了变大的内容");
-    //    }];
-    
-    //string2 是变色的部分 注意放在所有属性==>>最后面<<<===设置，否则无效
+    //此方法，放在所有属性设置完成后再调用设置，否则无效
     //判空
     if ([NSString isNULL:string1]==YES) {
         string1 = @"";
     }
-    if ([NSString isNULL:string2]==YES) {
-        string2 = @"";
+    if ([NSString isNULL:changeString2]==YES) {
+        changeString2 = @"";
     }
     if ([NSString isNULL:string3]==YES) {
         string3 = @"";
     }
-    if (color==nil) {
-        color = [UIColor blackColor];
+    if ([NSString isNULL:changeString4]==YES) {
+        changeString4 = @"";
     }
-    if (fout==nil) {
-        fout = [UIFont systemFontOfSize:14];
+    if ([NSString isNULL:string5]==YES) {
+        string5 = @"";
+    }
+    if (changeColor1==nil) {
+        changeColor1 = [UIColor blackColor];
+    }
+    if (changeFout1==nil) {
+        changeFout1 = [UIFont systemFontOfSize:14];
+    }
+    if (changeColor2==nil) {
+        changeColor2 = [UIColor blackColor];
+    }
+    if (changeFout2==nil) {
+        changeFout2 = [UIFont systemFontOfSize:14];
     }
     
-    NSString *inteStr = [NSString stringWithFormat:@"%@%@%@",string1,string2,string3];
+    NSString *inteStr = [NSString stringWithFormat:@"%@%@%@%@%@",string1,changeString2,string3,changeString4,string5];
     NSMutableAttributedString *inteMutStr = [[NSMutableAttributedString alloc] initWithString:inteStr];
     
     //判断是否有行间距
@@ -80,25 +124,157 @@
         [inteMutStr addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0,inteStr.length)];
     }
     
+    //设置第1段要改变颜色的字符属性
+    NSRange orangeRangeChange1 = NSMakeRange(string1.length, changeString2.length);
+    //设置第1段字体颜色
+    [inteMutStr addAttributes:@{NSFontAttributeName:changeFout1,NSForegroundColorAttributeName:changeColor1} range:orangeRangeChange1];
     
-    //设置中间变红的字体大小颜色
-    NSRange orangeRange = NSMakeRange([[inteMutStr string] rangeOfString:string2].location, [[inteMutStr string] rangeOfString:string2].length);
+    //设置第2段要改变颜色的字符属性
+    NSString * strChange2Sta = [NSString stringWithFormat:@"%@%@%@",string1,changeString2,string3];
+    NSRange orangeRangeChange2 = NSMakeRange(strChange2Sta.length, changeString4.length);
+    //设置第2段字体颜色
+    [inteMutStr addAttributes:@{NSFontAttributeName:changeFout2,NSForegroundColorAttributeName:changeColor2} range:orangeRangeChange2];
     
-    //    NSRange orangeRange = NSMakeRange(string1.length, string2.length);
+    
     
     //判断是否展示下划线
     if (iShowBottonLine == YES) {
-        //下划线类型
-        [inteMutStr addAttribute:NSUnderlineStyleAttributeName value:@(NSUnderlineStyleSingle) range:orangeRange];
-        //下划线颜色
-        [inteMutStr addAttribute:NSUnderlineColorAttributeName value:color range:orangeRange];
+        //下划线1类型
+        [inteMutStr addAttribute:NSUnderlineStyleAttributeName value:@(NSUnderlineStyleSingle) range:orangeRangeChange1];
+        //下划线2颜色
+        [inteMutStr addAttribute:NSUnderlineColorAttributeName value:changeColor1 range:orangeRangeChange1];
+        
+        
+        //下划线2类型
+        [inteMutStr addAttribute:NSUnderlineStyleAttributeName value:@(NSUnderlineStyleSingle) range:orangeRangeChange2];
+        //下划线2颜色
+        [inteMutStr addAttribute:NSUnderlineColorAttributeName value:changeColor2 range:orangeRangeChange2];
     }
     
-    //设置字体颜色
-    [inteMutStr addAttributes:@{NSFontAttributeName:fout,NSForegroundColorAttributeName:color} range:orangeRange];
     return inteMutStr;
-    
 }
+
+
+
+
+
+/**
+ 【使用优先级2】同一属性字符串,可以设置每一段的属性，属性和字符串(注意字符串不能为空)，放在数组里传入【无行间距跟下划线】
+
+ @param arrayAll 包含属性跟字符的数组
+ @return NSMutableAttributedString 属性字符串
+ */
++(NSMutableAttributedString*)getLabelAttributedStringWithALLArray:(NSArray <NSArray *>*)arrayAll{
+    //调用基类
+    return [NSString getLabelAttributedStringWithALLArray:arrayAll AndLineSpacing:-1 AndIShowBottonLine:NO];
+}
+
+
+/**
+ 【使用优先级2】同一属性字符串,可以设置每一段的属性，属性和字符串(注意字符串不能为空)，放在数组里传入【可设置行间距】
+ 
+ @param arrayAll 包含属性跟字符的数组
+ @param lineSpacing 行间距，-1代表不设置，一般设置也就设置为6
+ @return NSMutableAttributedString 属性字符串
+ */
++(NSMutableAttributedString*)getLabelAttributedStringWithALLArray:(NSArray <NSArray *>*)arrayAll AndLineSpacing:(CGFloat )lineSpacing{
+    //调用基类
+    return [NSString getLabelAttributedStringWithALLArray:arrayAll AndLineSpacing:lineSpacing AndIShowBottonLine:NO];
+}
+
+
+/**
+ 【使用优先级2】同一属性字符串,可以设置每一段的属性，属性和字符串(注意字符串不能为空)，放在数组里传入【基类】
+ 
+ @param arrayAll 包含属性跟字符的数组
+ @param lineSpacing 行间距，-1代表不设置，一般设置也就设置为6
+ @param iShowBottonLine 是否展示变色部分的下划线
+ @return NSMutableAttributedString 属性字符串
+ */
++(NSMutableAttributedString*)getLabelAttributedStringWithALLArray:(NSArray <NSArray *>*)arrayAll AndLineSpacing:(CGFloat )lineSpacing AndIShowBottonLine:(BOOL )iShowBottonLine{
+    //注意：此方法，放在label所有属性设置完成后再调用设置，否则无效
+    //用法案例：
+  /*
+    NSString * string1 = @"雪儿";
+    NSString * string2 = nil;
+    NSString * string3 = @"爱恨的潮汐";
+    NSString * string4 = @"说到：";
+    NSString * string5 = @"你在干么呢?";
+    //必须判空
+    if (string2==nil) {
+        string2 = @"";
+    }
+    
+    NSArray * array1 = @[string1,[UIColor redColor],[UIFont systemFontOfSize:12]];
+    NSArray * array2 = @[string2,[UIFont boldSystemFontOfSize:20]];
+    NSArray * array3 = @[string3];
+    NSArray * array4 = @[string4,[UIFont systemFontOfSize:12]];
+    NSArray * array5 = @[string5,[UIColor blueColor],[UIFont systemFontOfSize:19]];
+    
+    NSArray * arrayEnd = @[array1,array2,array3,array4,array5];
+    label.attributedText = [NSString getLabelAttributedStringWithALLArray:arrayEnd AndLineSpacing:6 AndIShowBottonLine:YES];
+    */
+     //优先使用方法：getLabelAttributedStrChange_One_WithChangeColor
+    
+    //创建一个富文本对象
+    NSMutableAttributedString *inteMutStr = [[NSMutableAttributedString alloc] init];
+    for (int i =0; i < arrayAll.count; i++) {
+        NSArray * getArrayOne = arrayAll[i];
+        //(1)取出属性
+        //（1）取出字符串
+        NSString * string = @"";//默认字符串为空
+        UIColor * color = nil;//默认不设置颜色
+        UIFont * fount = nil;//默认不设置字号
+        for (int j = 0; j < getArrayOne.count; j++) {
+            if ([getArrayOne[j] isKindOfClass:[NSString class]]) {
+                string = [NSString stringWithFormat:@"%@",getArrayOne[j]];//内容
+            }else if ([getArrayOne[j] isKindOfClass:[UIColor class]]){
+                color = getArrayOne[j];//颜色
+            }else if ([getArrayOne[j] isKindOfClass:[UIFont class]]){
+                fount = getArrayOne[j];//字号
+            }
+        }
+        //（2）获取当前这一段字符串所在位置
+        NSRange orangeRange = NSMakeRange(inteMutStr.string.length, string.length);
+        //属性字符串对象
+        NSAttributedString * attStr = [[NSAttributedString alloc]initWithString:string];
+        [inteMutStr appendAttributedString:attStr];//属性字符串追加
+        
+        //（3）设置要变色的字符属性---必须判空，默认颜色在外面设置
+        if (color != nil) {
+            [inteMutStr addAttributes:@{NSForegroundColorAttributeName:color} range:orangeRange];
+            //为这一段变色字符串设置下划线
+            if (iShowBottonLine==YES) {
+                //设置下划线--类型
+                [inteMutStr addAttribute:NSUnderlineStyleAttributeName value:@(NSUnderlineStyleSingle) range:orangeRange];
+                //设置下划线--颜色
+                [inteMutStr addAttribute:NSUnderlineColorAttributeName value:color range:orangeRange];
+            }
+        }
+        if (fount != nil) {
+            [inteMutStr addAttributes:@{NSFontAttributeName:fount} range:orangeRange];
+        }
+        
+    }
+    
+    //行间距
+    if (lineSpacing <= 0) {
+        //不设置行间距
+    }else{
+        //设置行间距--一般默认为6
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
+        [paragraphStyle setLineSpacing:lineSpacing];
+        [inteMutStr addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0,inteMutStr.string.length)];
+    }
+    
+    
+    
+    return inteMutStr;
+}
+
+
+#pragma mark =======AttributedString属性字符串，中间几个字颜色大小变化，还能设置行间距，下划线 E========
+
 
 
 #pragma mark ====(2）设置label行间距=========
@@ -177,74 +353,10 @@
     return attrStr;
 }
 
-
-/**
- 同一字符串，指定部分文字颜色大小变化f【HTML】--【暂时不用，珍藏起来，用这个方法：getLabelChangColoerWithText】
- 
- @param text 完整字符串
- @param arrayChange 变色的字符数组
- @param normal_ColerHex 默认颜色：Hex值
- @param normal_FontSize 默认字号
- @param normal_isBold 默认字是否加粗
- @param change_ColerHex 改变的字符颜色
- @param change_FontSize 改变的字符字号
- @param change_isBold 改变的字符是否加粗
- @return 返回属性字符串：NSAttributedString
- */
-+(NSAttributedString *)getLabelAttributedStringHTMLChangeWithText:(NSString *)text AndChangeTextArr:(NSArray *)arrayChange AndNormalText_ColeerHex:(NSString *)normal_ColerHex AndNormalText_FontSize:(CGFloat )normal_FontSize AndNormalText_isBold:(BOOL )normal_isBold AndChangeText_ColeerHex:(NSString *)change_ColerHex AndChangeText_FontSize:(CGFloat )change_FontSize AndChangeText_isBold:(BOOL )change_isBold{
-    
-    
-    //（0）数组去重（NSSet去重后顺序会被打乱，不过在这里无所谓）,否则暗号会显示出来【重要】
-    NSSet *set = [NSSet setWithArray:arrayChange.copy];
-    arrayChange = [set allObjects];
-    
-    //(1)【这一步处理非常重要，加入暗号：daiweibao】给需要改变的字符串加上特殊标识，防止替换的时候把颜色里的字符串替换了
-    NSString * tageStr = @"$-dai-%@-weibao-$";//特殊标识，里面包含%@字符串占位符
-    NSString * markStrALL = text.copy;
-    for (int i = 0; i < arrayChange.count; i++) {
-        NSString * markStr = [NSString stringWithFormat:tageStr,arrayChange[i]];
-        markStrALL = [markStrALL stringByReplacingOccurrencesOfString:arrayChange[i] withString:markStr];
-    }
-    
-    
-    
-    //HTML设置文字部分变色加粗等等
-    //span标签，不会自动换行，style样式
-    //设置字号：font-size:20px ，设置颜色：color:#eb4c97 设置加粗：font-weight:bold  设置不加粗：font-weight:normal
-    //案列：@"<p style='font-size:20px; color:#eb4c97;font-weight:bold'>大家好，我是默认汉子<span style='font-size:40px; color:#999999'>第三段</span> <span style='font-size:20px; color:#F00'>第二段</span> <span style='font-size:20px; color:#313131;font-weight:normal'>第三段</span> 默认文字后部分</p>"
-    
-    //    NSString * stringHtml = @"<p style='font-size:20px; color:#eb4c97;font-weight:bold'>大家好，我是默认汉子<span style='font-size:40px; color:#999999'>第三段</span> <span style='font-size:20px; color:#F00'>第二段</span> <span style='font-size:20px; color:#313131;font-weight:normal'>第三段</span> 默认文字后部分</p>";
-    
-    
-    
-    //(2.1)转化成H5 <span> 标签嵌套 <span>标签,不能用p标签，不然尾部会多出空白
-    NSString * markHTMLStrALL = markStrALL.copy;
-    for (int j = 0; j < arrayChange.count; j++) {
-        NSString * redText = [NSString stringWithFormat:tageStr,arrayChange[j]];
-        if ([markStrALL containsString:redText]) {
-            NSString * change_boldOrNormal = change_isBold==YES? @"bold":@"normal";//判断加粗
-            NSString * redTextHtml = [NSString stringWithFormat:@"<span style='font-size:%fpx;color:%@;font-weight:%@'>%@</span>",change_FontSize,change_ColerHex,change_boldOrNormal,arrayChange[j]];
-            //替换
-            markHTMLStrALL = [markHTMLStrALL stringByReplacingOccurrencesOfString:redText withString:redTextHtml];
-        }
-    }
-    
-    //(2.2)设置默认属性
-    NSString * normal_boldOrNormal = normal_isBold==YES? @"bold":@"normal";//判断加粗
-    NSString * stringHtml = [NSString stringWithFormat:@"<span style='font-size:%fpx; color:%@;font-weight:%@'>%@</span>",normal_FontSize,normal_ColerHex,normal_boldOrNormal,markHTMLStrALL];
-    
-    //NSHTMLTextDocumentType设置为HTML类型（必须）
-    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[stringHtml dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
-    return attrStr;
-}
-
-
-
-
 #pragma mark =======传值要变色的字符数组，返回属性字符串 S=========
 
 /**
- 字符串中指定字符变色，传入变色的字符数组【无行间距】
+ 字符串中指定字符变色【位置未知】，传入变色的字符数组【无行间距】
  
  @param text 完整字符串
  @param arrayChange 需要变色的字符数组
@@ -260,7 +372,7 @@
 
 
 /**
- 字符串中指定字符变色，传入变色的字符数组【有行间距】
+ 字符串中指定字符变色【位置未知】，传入变色的字符数组【有行间距】
  
  @param text 完整字符串
  @param arrayChange 需要变色的字符数组
@@ -377,5 +489,6 @@
 }
 
 #pragma mark =======传值要变色的字符数组，返回属性字符串 E=========
+
 
 @end

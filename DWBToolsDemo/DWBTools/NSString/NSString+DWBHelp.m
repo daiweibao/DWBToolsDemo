@@ -1137,5 +1137,17 @@
     return money;
 }
 
+/**
+ 判断是否为有效网址,YES代表是
+ 
+ @param infor 字符串
+ @return 结果
+ */
++ (BOOL)isHttpStringWithWeb:(NSString *)infor{
+    NSString *emailRegex = @"[a-zA-z]+://.*";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:infor];
+}
+
 
 @end

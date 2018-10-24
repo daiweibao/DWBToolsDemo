@@ -24,14 +24,26 @@
     
     UILabel * label = [[UILabel alloc]init];
     label.frame = CGRectMake(10, 100, 340, 100);
+//    label.backgroundColor = [UIColor blackColor];
+    label.font = [UIFont systemFontOfSize:20];
     [self.view addSubview:label];
     
+    NSString * string1 = @"雪儿";
+     NSString * string2 = nil;
+     NSString * string3 = @"爱恨的潮汐";
+     NSString * string4 = @"说到：";
+     NSString * string5 = @"你在干么呢?";
     
-    NSString * string1 = @"潮汐";
-    NSString * string2 = @"@";
-    NSString * string3 = @"潮汐";
     
-    label.attributedText = [NSString getLabelChangeColor:[UIColor blueColor] andFont:[UIFont systemFontOfSize:30] andString1:string1 andChangeString:string2 andGetstring3:string3 andISetupSpacing:NO andIShowBottonLine:NO];
+     NSArray * array1 = @[string1,[UIColor redColor],[UIFont systemFontOfSize:12]];
+     NSArray * array2 = @[string2,[UIFont boldSystemFontOfSize:20]];
+     NSArray * array3 = @[string3];
+     NSArray * array4 = @[string4,[UIFont systemFontOfSize:12]];
+     NSArray * array5 = @[string5,[UIColor blueColor],[UIFont systemFontOfSize:19]];
+    
+    NSArray * arrayEnd = @[array1,array2,array3,array4,array5];
+    label.attributedText = [NSString getLabelAttributedStringWithALLArray:arrayEnd AndLineSpacing:6 AndIShowBottonLine:YES];
+    
 //    label.text = [NSString stringWithFormat:@"%@%@%@",string1,string2,string3];
 //    点击指定汉子
     [label dwb_addAttributeTapActionWithStrings:@[string1,string3] tapClicked:^(NSString *string, NSRange range, NSInteger index) {

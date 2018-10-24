@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3009708B8FBB5CE10309819E /* libPods-DWBToolsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C09C75787C5C6594A6B0EA4 /* libPods-DWBToolsDemo.a */; };
+		360F0F98218067B6006A7835 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0F92218067B6006A7835 /* NSDictionary+NilSafe.m */; };
+		360F0F99218067B6006A7835 /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0F93218067B6006A7835 /* NSObject+Swizzling.m */; };
+		360F0F9A218067B6006A7835 /* NSMutableArray+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0F96218067B6006A7835 /* NSMutableArray+Swizzling.m */; };
+		360F0FB221807768006A7835 /* NSMutableDictionary+DWBDictSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0FB121807767006A7835 /* NSMutableDictionary+DWBDictSafe.m */; };
 		36213F0F214364BD00B00E2B /* AlretCXSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F04214364BD00B00E2B /* AlretCXSheetView.m */; };
 		36213F10214364BD00B00E2B /* AlertCXCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F05214364BD00B00E2B /* AlertCXCenterView.m */; };
 		36213F11214364BD00B00E2B /* JXActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F0A214364BD00B00E2B /* JXActionSheet.m */; };
@@ -182,6 +186,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		360F0F92218067B6006A7835 /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
+		360F0F93218067B6006A7835 /* NSObject+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzling.m"; sourceTree = "<group>"; };
+		360F0F94218067B6006A7835 /* NSMutableArray+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Swizzling.h"; sourceTree = "<group>"; };
+		360F0F95218067B6006A7835 /* NSObject+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
+		360F0F96218067B6006A7835 /* NSMutableArray+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Swizzling.m"; sourceTree = "<group>"; };
+		360F0F97218067B6006A7835 /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
+		360F0FB021807767006A7835 /* NSMutableDictionary+DWBDictSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+DWBDictSafe.h"; sourceTree = "<group>"; };
+		360F0FB121807767006A7835 /* NSMutableDictionary+DWBDictSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+DWBDictSafe.m"; sourceTree = "<group>"; };
 		36213F03214364BD00B00E2B /* JXActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXActionSheet.h; sourceTree = "<group>"; };
 		36213F04214364BD00B00E2B /* AlretCXSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlretCXSheetView.m; sourceTree = "<group>"; };
 		36213F05214364BD00B00E2B /* AlertCXCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertCXCenterView.m; sourceTree = "<group>"; };
@@ -483,6 +495,21 @@
 				6C09C75787C5C6594A6B0EA4 /* libPods-DWBToolsDemo.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		360F0F8921805082006A7835 /* DataSafe(数据安全放崩溃) */ = {
+			isa = PBXGroup;
+			children = (
+				360F0FB021807767006A7835 /* NSMutableDictionary+DWBDictSafe.h */,
+				360F0FB121807767006A7835 /* NSMutableDictionary+DWBDictSafe.m */,
+				360F0F97218067B6006A7835 /* NSDictionary+NilSafe.h */,
+				360F0F92218067B6006A7835 /* NSDictionary+NilSafe.m */,
+				360F0F94218067B6006A7835 /* NSMutableArray+Swizzling.h */,
+				360F0F96218067B6006A7835 /* NSMutableArray+Swizzling.m */,
+				360F0F95218067B6006A7835 /* NSObject+Swizzling.h */,
+				360F0F93218067B6006A7835 /* NSObject+Swizzling.m */,
+			);
+			path = "DataSafe(数据安全放崩溃)";
 			sourceTree = "<group>";
 		};
 		36213F02214364BD00B00E2B /* DWBAlertView */ = {
@@ -866,6 +893,7 @@
 			isa = PBXGroup;
 			children = (
 				368C3BE9213FA7A500C10B3E /* DWBHelpHeader.h */,
+				360F0F8921805082006A7835 /* DataSafe(数据安全放崩溃) */,
 				368E69DA2140C576000EC79C /* UITextField */,
 				362F7BC42148AF2300A8ECB1 /* ZXPUnicode(json中文打印) */,
 				369D895E217198F800003425 /* Device */,
@@ -1382,6 +1410,7 @@
 				362F7BB92148ACF000A8ECB1 /* STInputBar.m in Sources */,
 				368E69DD2140C58B000EC79C /* UITextField+WJ.m in Sources */,
 				36213F7C21439FB300B00E2B /* HTMLWebView.m in Sources */,
+				360F0F99218067B6006A7835 /* NSObject+Swizzling.m in Sources */,
 				36213F6B21439DB700B00E2B /* MJChiBaoZiHeader.m in Sources */,
 				36213FB72143A6A500B00E2B /* TBTabBar.m in Sources */,
 				36213FB82143A6A500B00E2B /* CXRootViewController.m in Sources */,
@@ -1414,6 +1443,7 @@
 				36213F6921439DB700B00E2B /* MJDIYAutoFooter.m in Sources */,
 				36B660A221743DF200E78824 /* HZPhotoBrowser.m in Sources */,
 				36213F5021439C1400B00E2B /* SVProgressHUD+KZ.m in Sources */,
+				360F0F98218067B6006A7835 /* NSDictionary+NilSafe.m in Sources */,
 				36213F1A21439A3100B00E2B /* ZBHTextView.m in Sources */,
 				36213F172143652C00B00E2B /* DWBAlertView.m in Sources */,
 				36213F8B2143A4BF00B00E2B /* CXWebViewController.m in Sources */,
@@ -1421,6 +1451,7 @@
 				36213F7B21439FB300B00E2B /* HtmlWKWebView.m in Sources */,
 				36213FD02143A99D00B00E2B /* HopmeViewController.m in Sources */,
 				36D37851213FEF7C00E768AF /* CopyLabel.m in Sources */,
+				360F0F9A218067B6006A7835 /* NSMutableArray+Swizzling.m in Sources */,
 				362F7BE12148EB4400A8ECB1 /* UILabel+Click.m in Sources */,
 				36213F922143A5B900B00E2B /* LoadingView.m in Sources */,
 				36213F4E21439C1400B00E2B /* SVIndefiniteAnimatedView.m in Sources */,
@@ -1430,6 +1461,7 @@
 				36213F6A21439DB700B00E2B /* MJDIYHeader.m in Sources */,
 				36D37858213FF05D00E768AF /* getUUID.m in Sources */,
 				368E69E42140C5BF000EC79C /* CXSystemStatus.m in Sources */,
+				360F0FB221807768006A7835 /* NSMutableDictionary+DWBDictSafe.m in Sources */,
 				36213F2A21439B3700B00E2B /* JDStatusBarNotification.m in Sources */,
 				362F7BB72148ACF000A8ECB1 /* STEmojiCollectionView.m in Sources */,
 				36EEDC9521420585000CBEEB /* UIImage+MyImage.m in Sources */,

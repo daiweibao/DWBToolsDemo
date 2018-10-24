@@ -377,5 +377,14 @@
  @return 返回格式化后的金额
  */
 +(NSString *)getMoneyAddDouHaoWithDouble:(double)doubleMoney;
+/**
+ 判断是否为有效网址,YES代表是
+ 
+ @param infor 字符串
+ @return 结果
+ */
++ (BOOL)isHttpStringWithWeb:(NSString *)infor;
+
+
 
 @end

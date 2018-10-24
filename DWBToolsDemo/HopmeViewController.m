@@ -43,6 +43,12 @@
 //创建功能入口控制器UI
 -(void)createToolsControllerUI{
 #pragma mark ================= 功能入口制器入口 =================
+#if DEBUG
+    //测试环境打开
+#else
+    //线上环境不打开
+    return;
+#endif
 //    //模拟器判断
 //    if ([DWBDeviceHelp isSimulator]==YES) {
 //        if ([[getUUID getUUID] isEqual:@"CB1480F5-53FE-4CFB-B743-0A50858D4210"]||//iPhone XS Max
