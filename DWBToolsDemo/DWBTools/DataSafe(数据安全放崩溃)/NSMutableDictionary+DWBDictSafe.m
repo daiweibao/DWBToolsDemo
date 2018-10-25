@@ -22,7 +22,7 @@
         [obj swizzeMethod:@selector(setObject:forKey:) withMethod:@selector(safe_setObject:forKey:)];
         
         [obj swizzeMethod:@selector(removeObjectForKey:) withMethod:@selector(safe_removeObjectForKey:)];
-        
+                
     });
     
 }
@@ -52,6 +52,7 @@
     
 }
 
+
 //可变字典添加属性
 - (void)safe_setObject:(id)value forKey:(NSString* )key{
     
@@ -60,8 +61,11 @@
         [self safe_setObject:value forKey:key];
         
     }else{
-        
-        NSLog(@"[NSMutableDictionary setObject: forKey:%@]值不能为空;",key);
+#pragma mark ==============字典元素判空赋值===================
+        //字典元素判空，如果为nil
+         id obj = [NSNull null];
+         [self safe_setObject:obj forKey:key];
+//        NSLog(@"[NSMutableDictionary setObject: forKey:%@]值不能为空;",key);
         
     }
     
@@ -76,7 +80,7 @@
         
     }else{
         
-        NSLog(@"[NSMutableDictionary setObject: forKey:%@]值不能为空;",key);
+//        NSLog(@"[NSMutableDictionary setObject: forKey:%@]值不能为空;",key);
         
     }
     

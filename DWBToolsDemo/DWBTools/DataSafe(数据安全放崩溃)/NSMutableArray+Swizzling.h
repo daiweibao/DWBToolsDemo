@@ -8,6 +8,12 @@
 //处理数组崩溃
 #import <Foundation/Foundation.h>
 
+@interface NSObject (Swizzling)
+
++ (void)swizzleSelector:(SEL)originalSelector withSwizzledSelector:(SEL)swizzledSelector;
+
+@end
+
 @interface NSMutableArray (Swizzling)
 
 @end

@@ -8,7 +8,28 @@
 
 #import "NSMutableArray+Swizzling.h"
 #import <objc/runtime.h>
-#import "NSObject+Swizzling.h"
+
+@implementation NSObject (Swizzling)
+
++ (void)swizzleSelector:(SEL)originalSelector withSwizzledSelector:(SEL)swizzledSelector
+{
+    Class class = [self class];
+    
+    Method originalMethod = class_getInstanceMethod(class, originalSelector);
+    
+    Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+    // 若已经存在，则添加会失败
+    BOOL didAddMethod = class_addMethod(class,originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+    // 若原来的方法并不存在，则添加即可
+    if (didAddMethod) {
+        class_replaceMethod(class,swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+    } else {
+        method_exchangeImplementations(originalMethod, swizzledMethod);
+    }
+}
+
+@end
+
 
 @implementation NSMutableArray (Swizzling)
 
@@ -33,7 +54,7 @@
             
         } if (objects[i] == nil) {
             hasNilObject = YES;
-            NSLog(@"%s object at index %lu is nil, it will be filtered", __FUNCTION__, i);
+//            NSLog(@"%s object at index %lu is nil, it will be filtered", __FUNCTION__, i);
             //#if DEBUG
             // // 如果可以对数组中为nil的元素信息打印出来，增加更容 易读懂的日志信息，这对于我们改bug就好定位多了
             // NSString *errorMsg = [NSString stringWithFormat:@"数组元素不能为nil，其index为: %lu", i];
@@ -49,6 +70,11 @@ if (hasNilObject) {
             if (objects[i] != nil) {
                 newObjects[index++] = objects[i];
                 
+            }else{
+#pragma mark ==============数组元素判空赋值===================
+                //数组元素判空，如果为nil
+                 id obj = [NSNull null];
+                newObjects[index++] = obj;
             }
         }
         return [self safeInitWithObjects:newObjects count:index];

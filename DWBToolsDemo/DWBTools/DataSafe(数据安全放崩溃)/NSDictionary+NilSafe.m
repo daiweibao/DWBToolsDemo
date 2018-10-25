@@ -58,7 +58,7 @@
         }
         if (!obj) {
             obj = [NSNull null];
-            NSLog(@"字典value为空 %s",__FUNCTION__);
+//            NSLog(@"字典value为空 %s",__FUNCTION__);
         }
         safeKeys[j] = key;
         safeObjects[j] = obj;
@@ -79,7 +79,7 @@
         }
         if (!obj) {
             obj = [NSNull null];
-            NSLog(@"字典value为空 %s",__FUNCTION__);
+//            NSLog(@"字典value为空 %s",__FUNCTION__);
         }
         safeKeys[j] = key;
         safeObjects[j] = obj;
@@ -103,24 +103,24 @@
 
 - (void)gl_setObject:(id)anObject forKey:(id<NSCopying>)aKey {
     if (!aKey) {
-        NSLog(@"字典key为空 %s",__FUNCTION__);
+//        NSLog(@"字典key为空 %s",__FUNCTION__);
         return;
     }
     if (!anObject) {
-        anObject = [NSNull null];
-        NSLog(@"字典value为空 %s",__FUNCTION__);
+        anObject = [NSNull null];//不可变字典直接j添加元素，里面有nil
+//        NSLog(@"字典value为空 %s",__FUNCTION__);
     }
     [self gl_setObject:anObject forKey:aKey];
 }
 
 - (void)gl_setObject:(id)obj forKeyedSubscript:(id<NSCopying>)key {
     if (!key) {
-        NSLog(@"字典key为空 %s",__FUNCTION__);
+//        NSLog(@"字典key为空 %s",__FUNCTION__);
         return;
     }
     if (!obj) {
         obj = [NSNull null];
-        NSLog(@"字典value为空 %s",__FUNCTION__);
+//        NSLog(@"字典value为空 %s",__FUNCTION__);
     }
     [self gl_setObject:obj forKeyedSubscript:key];
 }
