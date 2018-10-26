@@ -134,6 +134,8 @@
 		36991147215216F9004B3C0D /* NSString+DWBAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 36991146215216F9004B3C0D /* NSString+DWBAttribute.m */; };
 		3699115021523AD4004B3C0D /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3699114F21523AD4004B3C0D /* TestModel.m */; };
 		369D8961217198F800003425 /* DWBDeviceHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 369D8960217198F800003425 /* DWBDeviceHelp.m */; };
+		36A73BB32182C05700B79AB0 /* NSDictionary+DeleteNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A73BB22182C05700B79AB0 /* NSDictionary+DeleteNull.m */; };
+		36A73BB92182C5F400B79AB0 /* NSArray+DWBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A73BB82182C5F400B79AB0 /* NSArray+DWBSafe.m */; };
 		36B6609721743DA700E78824 /* DWBURLWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B6609621743DA700E78824 /* DWBURLWKWebView.m */; };
 		36B660A121743DF200E78824 /* HZWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B6609921743DF100E78824 /* HZWaitingView.m */; };
 		36B660A221743DF200E78824 /* HZPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B6609B21743DF100E78824 /* HZPhotoBrowser.m */; };
@@ -402,6 +404,10 @@
 		3699114F21523AD4004B3C0D /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
 		369D895F217198F800003425 /* DWBDeviceHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBDeviceHelp.h; sourceTree = "<group>"; };
 		369D8960217198F800003425 /* DWBDeviceHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBDeviceHelp.m; sourceTree = "<group>"; };
+		36A73BB12182C05700B79AB0 /* NSDictionary+DeleteNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DeleteNull.h"; sourceTree = "<group>"; };
+		36A73BB22182C05700B79AB0 /* NSDictionary+DeleteNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DeleteNull.m"; sourceTree = "<group>"; };
+		36A73BB72182C5F400B79AB0 /* NSArray+DWBSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DWBSafe.h"; sourceTree = "<group>"; };
+		36A73BB82182C5F400B79AB0 /* NSArray+DWBSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DWBSafe.m"; sourceTree = "<group>"; };
 		36B6609521743DA700E78824 /* DWBURLWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBURLWKWebView.h; sourceTree = "<group>"; };
 		36B6609621743DA700E78824 /* DWBURLWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBURLWKWebView.m; sourceTree = "<group>"; };
 		36B6609921743DF100E78824 /* HZWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZWaitingView.m; sourceTree = "<group>"; };
@@ -506,6 +512,8 @@
 				360F0FCE21815DE7006A7835 /* NSDictionary+NilSafe.m */,
 				360F0F94218067B6006A7835 /* NSMutableArray+Swizzling.h */,
 				360F0F96218067B6006A7835 /* NSMutableArray+Swizzling.m */,
+				36A73BB72182C5F400B79AB0 /* NSArray+DWBSafe.h */,
+				36A73BB82182C5F400B79AB0 /* NSArray+DWBSafe.m */,
 				3610DC052181757A00EAB9CA /* NSNull+safe.h */,
 				3610DC062181757A00EAB9CA /* NSNull+safe.m */,
 			);
@@ -968,6 +976,8 @@
 			children = (
 				368E69EB2140D307000EC79C /* DWBAFNetworking.h */,
 				368E69EC2140D307000EC79C /* DWBAFNetworking.m */,
+				36A73BB12182C05700B79AB0 /* NSDictionary+DeleteNull.h */,
+				36A73BB22182C05700B79AB0 /* NSDictionary+DeleteNull.m */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -1398,6 +1408,7 @@
 				36213F832143A0F100B00E2B /* JZAlbumViewController.m in Sources */,
 				36EEDCA721420794000CBEEB /* NSString+QRCode.m in Sources */,
 				36B6609721743DA700E78824 /* DWBURLWKWebView.m in Sources */,
+				36A73BB92182C5F400B79AB0 /* NSArray+DWBSafe.m in Sources */,
 				36D37855213FF02300E768AF /* GetChatTime.m in Sources */,
 				362F7BBB2148ACF000A8ECB1 /* STEmojiKeyboard.m in Sources */,
 				368C3C05213FB44900C10B3E /* NSString+CXMD5.m in Sources */,
@@ -1479,6 +1490,7 @@
 				36D3784A213FE01500E768AF /* NSString+GetImageHeight.m in Sources */,
 				36B660A421743DF200E78824 /* HZPhotoBrowserView.m in Sources */,
 				36213F2C21439B3700B00E2B /* JDStatusBarView.m in Sources */,
+				36A73BB32182C05700B79AB0 /* NSDictionary+DeleteNull.m in Sources */,
 				36EEDCA821420794000CBEEB /* UIImage+Extend.m in Sources */,
 				362F7BA321489ECF00A8ECB1 /* UIButton+BigAction.m in Sources */,
 				36213F4B21439C1400B00E2B /* SVRadialGradientLayer.m in Sources */,

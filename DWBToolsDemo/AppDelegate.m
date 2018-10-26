@@ -23,6 +23,8 @@
     //创建app窗口
     [self createWindow];
     
+//    AvoidCrash拦截崩溃三方库
+    
     return YES;
 }
 

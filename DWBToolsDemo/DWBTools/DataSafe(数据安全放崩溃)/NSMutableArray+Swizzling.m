@@ -32,7 +32,7 @@
 
 
 @implementation NSMutableArray (Swizzling)
-
+//__NSArrayM代表可变数组
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -42,6 +42,15 @@
         [objc_getClass("__NSArrayM") swizzleSelector:@selector(insertObject:atIndex:) withSwizzledSelector:@selector(safeInsertObject:atIndex:)];
         [objc_getClass("__NSPlaceholderArray") swizzleSelector:@selector(initWithObjects:count:) withSwizzledSelector:@selector(safeInitWithObjects:count:)];
         [objc_getClass("__NSArrayM") swizzleSelector:@selector(objectAtIndex:) withSwizzledSelector:@selector(safeObjectAtIndex:)];
+        
+        
+        //拦截可变数组越界崩溃（非可变数组在另一个类里处理），如
+//          NSMutableArray * Marray = [NSMutableArray arrayWithObject:@"1"];
+//          NSString * str = Marray[100];
+        Class clsM = NSClassFromString(@"__NSArrayM");
+        Method method1_M = class_getInstanceMethod(clsM, @selector(objectAtIndexedSubscript:));
+        Method method2_M = class_getInstanceMethod(clsM, @selector(yye_objectAtIndexedSubscript:));
+        method_exchangeImplementations(method1_M, method2_M);
        
 });
 }
@@ -144,6 +153,15 @@ if (hasNilObject) {
     [self safeRemoveObjectAtIndex:index];
     
 }
+
+
+//拦截可变数组越界崩溃
+- (id)yye_objectAtIndexedSubscript:(NSUInteger)index{
+    if(index>=self.count) return self.lastObject;
+    
+    return [self yye_objectAtIndexedSubscript:index];
+}
+
 
       
 

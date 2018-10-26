@@ -63,10 +63,14 @@
     NSArray * arrayCX = @[SDict,@"数组"];
 
      NSLog(@"空数组：%@",arrayCX);
+    
+    
+    NSMutableArray * marray = [NSMutableArray array];
+    [marray addObject:@"1"];
 
-    NSString * ssstt = parmeterDict[@"platform"];
+    NSString * ssstt = arrayCX[100];
     
-    
+     NSString * ssstt222 = marray[100];
 
 }
 

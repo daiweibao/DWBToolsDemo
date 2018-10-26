@@ -68,6 +68,9 @@ YYCategories这也是个牛逼的工具类：https://github.com/ibireme/YYCatego
 
 21、《YYText》富文本处理，下载地址：https://github.com/ibireme/YYText
 
+22、《BGFMDB》数据库，很好用。地址：https://github.com/huangzhibiao/BGFMDB
+
+23、《FBShimmering》类似今日头条加载中动画闪动，很好用。地址：https://github.com/hsjcom/SoldierShimmering
 
 
 
