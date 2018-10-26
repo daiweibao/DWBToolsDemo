@@ -78,8 +78,9 @@
             continue;
         }
         if (!obj) {
-            obj = [NSNull null];
-//            NSLog(@"字典value为空 %s",__FUNCTION__);
+            //            obj = [NSNull null];
+            obj = @"";//如果为空就返回@"";
+            //            NSLog(@"字典value为空 %s",__FUNCTION__);
         }
         safeKeys[j] = key;
         safeObjects[j] = obj;

@@ -81,9 +81,9 @@ if (hasNilObject) {
                 
             }else{
 #pragma mark ==============数组元素判空赋值===================
-                //数组元素判空，如果为nil
-                 id obj = [NSNull null];
-                newObjects[index++] = obj;
+                //数组元素判空，如果为nil,就返回@""
+//                 id obj = [NSNull null];
+                newObjects[index++] = @"";
             }
         }
         return [self safeInitWithObjects:newObjects count:index];

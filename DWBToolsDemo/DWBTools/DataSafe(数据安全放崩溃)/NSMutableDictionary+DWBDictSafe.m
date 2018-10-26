@@ -62,9 +62,9 @@
         
     }else{
 #pragma mark ==============字典元素判空赋值===================
-        //字典元素判空，如果为nil
-         id obj = [NSNull null];
-         [self safe_setObject:obj forKey:key];
+        //字典元素判空，如果为nil,就返回@""
+//         id obj = [NSNull null];
+         [self safe_setObject:@"" forKey:key];
 //        NSLog(@"[NSMutableDictionary setObject: forKey:%@]值不能为空;",key);
         
     }
