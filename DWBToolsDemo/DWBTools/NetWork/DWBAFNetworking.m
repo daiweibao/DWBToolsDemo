@@ -21,9 +21,18 @@ static AFHTTPSessionManager *manager;
     dispatch_once(&onceToken, ^{
         // 初始化请求管理类
         manager = [AFHTTPSessionManager manager];
+        
+        //如果出现415错误，那么申明请求的数据是json类型必须打开）：Request failed: unsupported media type (415)
+        //申明请求的数据是json类型
+        manager.requestSerializer = [AFJSONRequestSerializer serializer];
+        
+        //申明返回的结果是json类型(可选，没报错就不用打开)
+        //  manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        // [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        
         // 支持内容格式
-        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
-        //         manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"application/json"];
+        manager.responseSerializer.acceptableContentTypes  =  [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain",@"application/xml", nil];
+        
     });
     return manager;
 }

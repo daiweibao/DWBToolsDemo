@@ -18,6 +18,22 @@
 #import<Foundation/Foundation.h>//必须导入
 #import <UIKit/UIKit.h>//必须导入
 
+//iOS项目打包除去NSLog，Edit Scheme –>info—> Building Config ->release/debug 选择 release 时 （包括运行）所有的输出都不见了
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+//DEBUG 设置方式：选择Product->Scheme->Edit Scheme ，App发布的时候,Build Configuration 这些全部都要改成release模式。
+//iOS debug模式和release模式
+#ifdef DEBUG
+//开发环境
+#else
+//发布环境
+#endif
+
+
 
 #pragma mark ============ 系统头文件 E=====================
 
