@@ -16,7 +16,7 @@
 #import "HopmeViewController.h"
 
 
-@interface CXTabBarController ()
+@interface CXTabBarController ()<UITabBarControllerDelegate>
 /** 之前被选中的UITabBarItem */
 @property (nonatomic, strong) UITabBarItem *lastItem;
 
@@ -34,6 +34,8 @@
     
     // 创建tabbar中间的tabbarItem
     [self setUpMidelTabbarItem];
+    
+    self.delegate = self;//设置代理
     
 }
 
@@ -106,7 +108,7 @@
     [self setChildVC:homeVC title:@"首页" image:@"tabbar-资讯" selectedImage:@"tabbar-资讯S"];
     
     UIViewController *SecondVC = [[UIViewController alloc] init];
-    [self setChildVC:SecondVC title:@"测试" image:@"tabbar-缴费"  selectedImage:@"tabbar-缴费S"];
+    [self setChildVC:SecondVC title:@"测试1" image:@"tabbar-缴费"  selectedImage:@"tabbar-缴费S"];
     
     //语音
     UIViewController *voiceVC = [[UIViewController alloc] init];
@@ -115,11 +117,11 @@
 
     //开门
     UIViewController *messageVC = [[UIViewController alloc] init];
-    [self setChildVC:messageVC title:@"测试" image:@"tabbar-门禁"  selectedImage:@"tabbar-门禁S"];
+    [self setChildVC:messageVC title:@"测试2" image:@"tabbar-门禁"  selectedImage:@"tabbar-门禁S"];
     
     //我的
     UIViewController *myVC = [[UIViewController alloc] init];
-    [self setChildVC:myVC title:@"测试" image:@"tabbar-我的" selectedImage:@"tabbar-我的S"];
+    [self setChildVC:myVC title:@"我的" image:@"tabbar-我的" selectedImage:@"tabbar-我的S"];
 }
 
 //设置子控制器
@@ -168,12 +170,39 @@
     self.lastItem = item;
 }
 
-#pragma mark ====================== 创建语音交互 S=========================
+
+/**
+ *  iOS点击tabbar判断是否跳转到登陆界面
+    TabBarController代理,写在CXTabBarController里，首先要遵守协议：UITabBarControllerDelegate， self.delegate = self;//设置代理
+ */
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
+    if ([viewController.tabBarItem.title isEqualToString:@"首页"] || [viewController.tabBarItem.title isEqualToString:@"测试1"] || [viewController.tabBarItem.title isEqualToString:@"我的"]) {
+        NSString *sign = @""; //取出登陆状态(NSUserDefaults即可)
+        NSInteger selectedIndex  =  0 ;
+        if ([NSString isNULL:sign]) {  //未登录
+            if ([viewController.tabBarItem.title isEqualToString:@"今日收益"]) {
+                selectedIndex = 1;
+            } else if ([viewController.tabBarItem.title isEqualToString:@"订单"]) {
+                selectedIndex = 2;
+            } else if ([viewController.tabBarItem.title isEqualToString:@"我的"]) {
+                selectedIndex = 3;
+            }
+            //            //弹窗登陆
+            //            [AlertCXLoginView showAletCXInfoisBlackHome:nil LoginSuccess:^{
+            //                //登陆成功后判断选定哪一个
+            //                _rootVC.selectedIndex = selectedIndex;
+            //            }];
+            
+            return NO;
+        }else{
+            return YES;
+        }
+    }else{
+        return YES;
+    }
+}
 
 
-
-
-#pragma mark ====================== 创建语音交互 E=========================
 
 
 #pragma mark ====================== 处理屏幕旋转（在用，请不要删）=========================

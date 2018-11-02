@@ -106,6 +106,7 @@
 		362F7BE92149114B00A8ECB1 /* 微信@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BE82149114B00A8ECB1 /* 微信@2x.png */; };
 		362F7BEB2149158600A8ECB1 /* 小黄车.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BEA2149158600A8ECB1 /* 小黄车.png */; };
 		3634E5AB217D5E89002B43DD /* DWBAPPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3634E5AA217D5E89002B43DD /* DWBAPPManager.m */; };
+		36446172218BEBF400B9E01E /* DWBAppStoreGetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446170218BEBF400B9E01E /* DWBAppStoreGetData.m */; };
 		368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F6213F67C800C10B3E /* AppDelegate.m */; };
 		368C39FA213F67C800C10B3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F9213F67C800C10B3E /* ViewController.m */; };
 		368C39FD213F67C800C10B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368C39FB213F67C800C10B3E /* Main.storyboard */; };
@@ -346,6 +347,8 @@
 		362F7BEA2149158600A8ECB1 /* 小黄车.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小黄车.png"; sourceTree = "<group>"; };
 		3634E5A9217D5E89002B43DD /* DWBAPPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBAPPManager.h; sourceTree = "<group>"; };
 		3634E5AA217D5E89002B43DD /* DWBAPPManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBAPPManager.m; sourceTree = "<group>"; };
+		36446170218BEBF400B9E01E /* DWBAppStoreGetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBAppStoreGetData.m; sourceTree = "<group>"; };
+		36446171218BEBF400B9E01E /* DWBAppStoreGetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBAppStoreGetData.h; sourceTree = "<group>"; };
 		368C39F2213F67C800C10B3E /* DWBToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWBToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368C39F5213F67C800C10B3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		368C39F6213F67C800C10B3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -821,6 +824,8 @@
 			children = (
 				3634E5A9217D5E89002B43DD /* DWBAPPManager.h */,
 				3634E5AA217D5E89002B43DD /* DWBAPPManager.m */,
+				36446171218BEBF400B9E01E /* DWBAppStoreGetData.h */,
+				36446170218BEBF400B9E01E /* DWBAppStoreGetData.m */,
 			);
 			path = AppConfig;
 			sourceTree = "<group>";
@@ -1475,6 +1480,7 @@
 				368E69E42140C5BF000EC79C /* CXSystemStatus.m in Sources */,
 				36213F2A21439B3700B00E2B /* JDStatusBarNotification.m in Sources */,
 				362F7BB72148ACF000A8ECB1 /* STEmojiCollectionView.m in Sources */,
+				36446172218BEBF400B9E01E /* DWBAppStoreGetData.m in Sources */,
 				36EEDC9521420585000CBEEB /* UIImage+MyImage.m in Sources */,
 				368E69E92140C70D000EC79C /* KeyChainManager.m in Sources */,
 				368E69ED2140D307000EC79C /* DWBAFNetworking.m in Sources */,

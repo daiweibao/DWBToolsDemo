@@ -7,12 +7,21 @@
 //
 
 #import "DWBAPPManager.h"
-
+#import "DWBAppStoreGetData.h"//从App Store获取app信息
 @interface DWBAPPManager()
 
 @end
 
 @implementation DWBAPPManager
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.isAppStoreSHTime = NO;//必须初始化为NO，非审核期间
+    }
+    return self;
+}
 
 //单例初始化
 + (instancetype)sharedManager {
@@ -21,9 +30,11 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [[DWBAPPManager alloc] init];
+        
     });
     return manager;
 }
+
 
 //名字
 -(NSString *)testName{
@@ -36,4 +47,8 @@
     NSLog(@"得到我的名字");
 }
 
+
+
+
 @end
+

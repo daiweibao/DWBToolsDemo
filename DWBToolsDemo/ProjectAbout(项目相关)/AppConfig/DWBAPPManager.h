@@ -14,12 +14,24 @@ NS_ASSUME_NONNULL_BEGIN
 //单例初始化
 +(instancetype)sharedManager;
 
+
+/**
+ apps是否在审核期间:YES表示是审核期间，NO不是
+ */
+@property(nonatomic,assign)BOOL isAppStoreSHTime;
+
+
+
+
+
 //测试数据--属性
 @property(nonatomic,copy)NSString * testName;
 
 //方法
 -(void)getMyName;
 
+
 @end
 
 NS_ASSUME_NONNULL_END
+

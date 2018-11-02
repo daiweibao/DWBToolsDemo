@@ -20,9 +20,9 @@
 
 //iOS项目打包除去NSLog，Edit Scheme –>info—> Building Config ->release/debug 选择 release 时 （包括运行）所有的输出都不见了
 #ifdef DEBUG
-#define NSLog(...) NSLog(__VA_ARGS__)
+
 #else
-#define NSLog(...)
+
 #endif
 
 //DEBUG 设置方式：选择Product->Scheme->Edit Scheme ，App发布的时候,Build Configuration 这些全部都要改成release模式。
@@ -95,6 +95,8 @@
 #import "KeyChainManager.h"
 //设备相关
 #import "DWBDeviceHelp.h"
+//网络
+#import "DWBAFNetworking.h"
 
 #pragma mark ============ 工具类相互依赖的头文件 E=====================
 
@@ -102,6 +104,7 @@
 
 #pragma mark ============ 三方库封装头文件 S=====================
 #import "DWB_refresh.h"
+#import "DWBAPPManager.h"//项目配置
 
 #pragma mark ============ 三方库封装头文件 E=====================
 
