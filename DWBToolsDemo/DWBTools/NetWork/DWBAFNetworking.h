@@ -24,4 +24,11 @@
  */
 +(void)POST:(NSString *_Nullable)URLString parameters:(id _Nullable )parameters controller:(UIViewController*)controller type:(NSString *)type success:(void (^_Nullable)(id _Nullable responseObject))results failure:(void (^_Nullable)(NSError * _Nullable error))MyError;
 
+/**
+ 是否有网，返回NO代表没网，YES有网
+ 
+ @return 结果
+ */
++ (BOOL)isHaveNetwork;
+
 @end

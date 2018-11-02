@@ -107,6 +107,7 @@
 		362F7BEB2149158600A8ECB1 /* 小黄车.png in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BEA2149158600A8ECB1 /* 小黄车.png */; };
 		3634E5AB217D5E89002B43DD /* DWBAPPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3634E5AA217D5E89002B43DD /* DWBAPPManager.m */; };
 		36446172218BEBF400B9E01E /* DWBAppStoreGetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446170218BEBF400B9E01E /* DWBAppStoreGetData.m */; };
+		36446176218C2D9000B9E01E /* NSArray+DWBHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446175218C2D9000B9E01E /* NSArray+DWBHelp.m */; };
 		368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F6213F67C800C10B3E /* AppDelegate.m */; };
 		368C39FA213F67C800C10B3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F9213F67C800C10B3E /* ViewController.m */; };
 		368C39FD213F67C800C10B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368C39FB213F67C800C10B3E /* Main.storyboard */; };
@@ -349,6 +350,8 @@
 		3634E5AA217D5E89002B43DD /* DWBAPPManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBAPPManager.m; sourceTree = "<group>"; };
 		36446170218BEBF400B9E01E /* DWBAppStoreGetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBAppStoreGetData.m; sourceTree = "<group>"; };
 		36446171218BEBF400B9E01E /* DWBAppStoreGetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBAppStoreGetData.h; sourceTree = "<group>"; };
+		36446174218C2D9000B9E01E /* NSArray+DWBHelp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+DWBHelp.h"; sourceTree = "<group>"; };
+		36446175218C2D9000B9E01E /* NSArray+DWBHelp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DWBHelp.m"; sourceTree = "<group>"; };
 		368C39F2213F67C800C10B3E /* DWBToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWBToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368C39F5213F67C800C10B3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		368C39F6213F67C800C10B3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -830,6 +833,15 @@
 			path = AppConfig;
 			sourceTree = "<group>";
 		};
+		36446173218C2D6300B9E01E /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				36446174218C2D9000B9E01E /* NSArray+DWBHelp.h */,
+				36446175218C2D9000B9E01E /* NSArray+DWBHelp.m */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
 		368C39E9213F67C800C10B3E = {
 			isa = PBXGroup;
 			children = (
@@ -906,6 +918,7 @@
 			isa = PBXGroup;
 			children = (
 				368C3BE9213FA7A500C10B3E /* DWBHelpHeader.h */,
+				36446173218C2D6300B9E01E /* NSArray */,
 				360F0F8921805082006A7835 /* DataSafe(数据安全放崩溃) */,
 				368E69DA2140C576000EC79C /* UITextField */,
 				362F7BC42148AF2300A8ECB1 /* ZXPUnicode(json中文打印) */,
@@ -1461,6 +1474,7 @@
 				360F0FD021815DE7006A7835 /* NSDictionary+NilSafe.m in Sources */,
 				36B660A221743DF200E78824 /* HZPhotoBrowser.m in Sources */,
 				36213F5021439C1400B00E2B /* SVProgressHUD+KZ.m in Sources */,
+				36446176218C2D9000B9E01E /* NSArray+DWBHelp.m in Sources */,
 				36213F1A21439A3100B00E2B /* ZBHTextView.m in Sources */,
 				36213F172143652C00B00E2B /* DWBAlertView.m in Sources */,
 				36213F8B2143A4BF00B00E2B /* CXWebViewController.m in Sources */,

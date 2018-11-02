@@ -20,9 +20,10 @@
 
 //iOS项目打包除去NSLog，Edit Scheme –>info—> Building Config ->release/debug 选择 release 时 （包括运行）所有的输出都不见了
 #ifdef DEBUG
-
+//NSLog格式化打印，打印出在那个l控制器，哪一行
+#define NSLog(fmt, ...) NSLog((@"%s [第%d行] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #else
-
+#define NSLog(...)
 #endif
 
 //DEBUG 设置方式：选择Product->Scheme->Edit Scheme ，App发布的时候,Build Configuration 这些全部都要改成release模式。
@@ -312,6 +313,12 @@ UIAlertController *alertController = [UIAlertController alertControllerWithTitle
 UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]; \
 [alertController addAction:okAction]; \
 [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
+
+
+//通知宏定义：接收、发送、移除
+#define NOTIF_ADD(n, f, o)     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(f) name:n object:o]
+#define NOTIF_POST(n, o)    [[NSNotificationCenter defaultCenter] postNotificationName:n object:o]
+#define NOTIF_REMV()        [[NSNotificationCenter defaultCenter] removeObserver:self]
 
 
 #pragma mark ===============项目相关 S ==================

@@ -72,10 +72,14 @@
     NSString * ssstt = arrayCX[100];
     
      NSString * ssstt222 = marray[100];
+    
+    
 
 }
 
-
++ (BOOL)isNetwork {
+    return [AFNetworkReachabilityManager sharedManager].reachable;
+}
 
 // 上拉下拉刷新
 - (void)refresh {

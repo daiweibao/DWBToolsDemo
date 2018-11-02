@@ -93,4 +93,14 @@ static AFHTTPSessionManager *manager;
     
 }
 
+
+/**
+ 是否有网，返回NO代表没网，YES有网
+
+ @return 结果
+ */
++ (BOOL)isHaveNetwork {
+    return [AFNetworkReachabilityManager sharedManager].reachable;
+}
+
 @end
