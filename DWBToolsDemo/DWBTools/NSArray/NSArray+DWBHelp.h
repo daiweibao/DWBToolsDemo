@@ -19,6 +19,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(NSMutableArray *)arrayDataDeleteChongFuWithArray:(NSArray *)array;
 
+/**
+ 打乱数组顺序
+ 
+ @param arr 数组
+ @return 打乱顺序后的数组
+ */
++(NSMutableArray*)arrayGetRandomArrFrome:(NSArray*)arr;
+
 @end
 
 NS_ASSUME_NONNULL_END

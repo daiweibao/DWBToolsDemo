@@ -28,4 +28,23 @@
     return listAry;
 }
 
+/**
+ 打乱数组顺序
+ 
+ @param arr 数组
+ @return 打乱顺序后的数组
+ */
++(NSMutableArray*)arrayGetRandomArrFrome:(NSArray*)arr{
+    NSMutableArray *newArr = [NSMutableArray new];
+    while (newArr.count != arr.count) {
+        //生成随机数
+        int x =arc4random() % arr.count;
+        id obj = arr[x];
+        if (![newArr containsObject:obj]) {
+            [newArr addObject:obj];
+        }
+    }
+    return newArr;
+}
+
 @end
