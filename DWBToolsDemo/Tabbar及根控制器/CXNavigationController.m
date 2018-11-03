@@ -175,6 +175,43 @@
  */
 
 
+#pragma mark ====================== 处理屏幕旋转--UINavigationController+Tabbar控制器里也在用===================
+// 是否支持自动转屏
+- (BOOL)shouldAutorotate
+{
+    return [self.visibleViewController shouldAutorotate];
+}
+// 支持哪些屏幕方向 topViewController(push)
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return [self.topViewController supportedInterfaceOrientations];
+}
+
+// 默认的屏幕方向（当前ViewController必须是通过模态出来的UIViewController（模态带导航的无效）方式展现出来的，才会调用这个方法）visibleViewController(模态)
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return [self.visibleViewController preferredInterfaceOrientationForPresentation];
+}
+
+
+
+//#pragma 在需要支持旋转的控制器里加入如下三个方法====YES代表支持旋转
+////视图控制器实现的方法
+//-(BOOL)shouldAutorotate{       //iOS6.0之后,要想让状态条可以旋转,必须设置视图不能自动旋转
+//    return YES;
+//}
+//// 支持哪些屏幕方向
+//- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+//{
+//    return UIInterfaceOrientationMaskPortrait;
+//}
+//
+//// 默认的屏幕方向（当前ViewController必须是通过模态出来的UIViewController（模态带导航的无效）方式展现出来的，才会调用这个方法）
+//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+//{
+//    return UIInterfaceOrientationPortrait;
+//}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

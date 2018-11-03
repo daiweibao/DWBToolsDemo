@@ -203,9 +203,7 @@
 }
 
 
-
-
-#pragma mark ====================== 处理屏幕旋转（在用，请不要删）=========================
+#pragma mark ====================== 处理屏幕旋转--UITabBarController+导航控制器里也设置了（在用，请不要删）=========================
 -(BOOL)shouldAutorotate{
     return [self.selectedViewController shouldAutorotate];
 }
@@ -216,7 +214,6 @@
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
     return [self.selectedViewController preferredInterfaceOrientationForPresentation];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
