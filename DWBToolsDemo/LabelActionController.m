@@ -84,7 +84,9 @@
     
 }
 
-
+-(void)dealloc{
+    NSLog(@"富文本控制器走了dealloc");
+}
 
 
 

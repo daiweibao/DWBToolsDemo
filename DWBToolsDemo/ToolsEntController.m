@@ -186,7 +186,6 @@
     }else if (indexPath.row==1){
         LabelActionController * VC = [[LabelActionController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
-        
     }
 }
 
@@ -211,13 +210,12 @@
     [super didMoveToParentViewController:parent];
     //    NSLog(@"%s,%@",__FUNCTION__,parent);
     if(!parent){
-        //        NSLog(@"页面pop成功了");
-        
+        NSLog(@"测试页面pop成功了");
     }
 }
 
 -(void)dealloc{
-    
+    NSLog(@"测试控制器走了dealloc");
 }
 
 - (void)didReceiveMemoryWarning {
