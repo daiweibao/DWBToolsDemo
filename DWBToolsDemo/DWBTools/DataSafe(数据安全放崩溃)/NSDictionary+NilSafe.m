@@ -41,8 +41,8 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [objc_getClass("__NSPlaceholderDictionary") gl_swizzleMethod:@selector(initWithObjects:forKeys:count:) withMethod:@selector(gl_initWithObjects:forKeys:count:)];
-        [objc_getClass("__NSPlaceholderDictionary") gl_swizzleClassMethod:@selector(dictionaryWithObjects:forKeys:count:) withMethod:@selector(gl_dictionaryWithObjects:forKeys:count:)];
+        [self gl_swizzleMethod:@selector(initWithObjects:forKeys:count:) withMethod:@selector(gl_initWithObjects:forKeys:count:)];
+        [self gl_swizzleClassMethod:@selector(dictionaryWithObjects:forKeys:count:) withMethod:@selector(gl_dictionaryWithObjects:forKeys:count:)];
     });
 }
 
@@ -53,13 +53,20 @@
     for (NSUInteger i = 0; i < cnt; i++) {
         id key = keys[i];
         id obj = objects[i];
+//        if (!key || !obj) {
+//            continue;
+//        }
+        
+        
         if (!key) {
             continue;
         }
         if (!obj) {
-            obj = [NSNull null];
-//            NSLog(@"字典value为空 %s",__FUNCTION__);
+            //            obj = [NSNull null];
+            obj = @"";//如果为空就返回@"";
+            //            NSLog(@"字典value为空 %s",__FUNCTION__);
         }
+        
         safeKeys[j] = key;
         safeObjects[j] = obj;
         j++;
@@ -74,6 +81,15 @@
     for (NSUInteger i = 0; i < cnt; i++) {
         id key = keys[i];
         id obj = objects[i];
+//        if (!key || !obj) {
+//            continue;
+//        }
+//        if (!obj) {
+//            obj = [NSNull null];
+//        }
+        
+        
+        
         if (!key) {
             continue;
         }
@@ -82,6 +98,7 @@
             obj = @"";//如果为空就返回@"";
             //            NSLog(@"字典value为空 %s",__FUNCTION__);
         }
+        
         safeKeys[j] = key;
         safeObjects[j] = obj;
         j++;
@@ -103,62 +120,39 @@
 }
 
 - (void)gl_setObject:(id)anObject forKey:(id<NSCopying>)aKey {
+//    if (!aKey || !anObject) {
+//        return;
+//    }
+    
     if (!aKey) {
-//        NSLog(@"字典key为空 %s",__FUNCTION__);
-        return;
+         return;
     }
     if (!anObject) {
-        anObject = [NSNull null];//不可变字典直接j添加元素，里面有nil
-//        NSLog(@"字典value为空 %s",__FUNCTION__);
+        //            obj = [NSNull null];
+        anObject = @"";//如果为空就返回@"";
+        //            NSLog(@"字典value为空 %s",__FUNCTION__);
     }
+    
+    
     [self gl_setObject:anObject forKey:aKey];
 }
 
 - (void)gl_setObject:(id)obj forKeyedSubscript:(id<NSCopying>)key {
+//    if (!key || !obj) {
+//        return;
+//    }
+    
     if (!key) {
-//        NSLog(@"字典key为空 %s",__FUNCTION__);
         return;
     }
     if (!obj) {
-        obj = [NSNull null];
-//        NSLog(@"字典value为空 %s",__FUNCTION__);
+        //            obj = [NSNull null];
+        obj = @"";//如果为空就返回@"";
+        //            NSLog(@"字典value为空 %s",__FUNCTION__);
     }
+    
+    
     [self gl_setObject:obj forKeyedSubscript:key];
-}
-
-@end
-
-@implementation NSNull (NilSafe)
-
-
-+ (void)load {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [self gl_swizzleMethod:@selector(methodSignatureForSelector:) withMethod:@selector(gl_methodSignatureForSelector:)];
-        [self gl_swizzleMethod:@selector(forwardInvocation:) withMethod:@selector(gl_forwardInvocation:)];
-    });
-}
-
-- (NSMethodSignature *)gl_methodSignatureForSelector:(SEL)aSelector {
-    NSMethodSignature *sig = [self gl_methodSignatureForSelector:aSelector];
-    if (sig) {
-        return sig;
-    }
-    return [NSMethodSignature signatureWithObjCTypes:@encode(void)];
-}
-
-- (void)gl_forwardInvocation:(NSInvocation *)anInvocation {
-    NSUInteger returnLength = [[anInvocation methodSignature] methodReturnLength];
-    if (!returnLength) {
-        // nothing to do
-        return;
-    }
-
-    // set return value to all zero bits
-    char buffer[returnLength];
-    memset(buffer, 0, returnLength);
-
-    [anInvocation setReturnValue:buffer];
 }
 
 @end
