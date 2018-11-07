@@ -83,6 +83,10 @@
 		36213FD02143A99D00B00E2B /* HopmeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FCF2143A99D00B00E2B /* HopmeViewController.m */; };
 		36213FD32143ABB000B00E2B /* ToolsEntController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FD22143ABB000B00E2B /* ToolsEntController.m */; };
 		3621579A214A6A36005017C9 /* ChatInputBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36215799214A6A36005017C9 /* ChatInputBox.bundle */; };
+		3621B7552191B3320000BDFA /* HZWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3621B74D2191B3320000BDFA /* HZWaitingView.m */; };
+		3621B7562191B3320000BDFA /* HZPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3621B74F2191B3320000BDFA /* HZPhotoBrowser.m */; };
+		3621B7572191B3320000BDFA /* HZPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3621B7522191B3320000BDFA /* HZPhotoBrowser.bundle */; };
+		3621B7582191B3320000BDFA /* HZPhotoBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3621B7532191B3320000BDFA /* HZPhotoBrowserView.m */; };
 		362F7BA321489ECF00A8ECB1 /* UIButton+BigAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */; };
 		362F7BB72148ACF000A8ECB1 /* STEmojiCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BA52148ACF000A8ECB1 /* STEmojiCollectionView.m */; };
 		362F7BB82148ACF000A8ECB1 /* emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BA62148ACF000A8ECB1 /* emoji.json */; };
@@ -140,10 +144,6 @@
 		36A73BB32182C05700B79AB0 /* NSDictionary+DeleteNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A73BB22182C05700B79AB0 /* NSDictionary+DeleteNull.m */; };
 		36A73BB92182C5F400B79AB0 /* NSArray+DWBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A73BB82182C5F400B79AB0 /* NSArray+DWBSafe.m */; };
 		36B6609721743DA700E78824 /* DWBURLWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B6609621743DA700E78824 /* DWBURLWKWebView.m */; };
-		36B660A121743DF200E78824 /* HZWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B6609921743DF100E78824 /* HZWaitingView.m */; };
-		36B660A221743DF200E78824 /* HZPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B6609B21743DF100E78824 /* HZPhotoBrowser.m */; };
-		36B660A321743DF200E78824 /* HZPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36B6609E21743DF100E78824 /* HZPhotoBrowser.bundle */; };
-		36B660A421743DF200E78824 /* HZPhotoBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B6609F21743DF100E78824 /* HZPhotoBrowserView.m */; };
 		36D3784A213FE01500E768AF /* NSString+GetImageHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37849213FE01500E768AF /* NSString+GetImageHeight.m */; };
 		36D37850213FEF7C00E768AF /* DragEnableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3784E213FEF7C00E768AF /* DragEnableButton.m */; };
 		36D37851213FEF7C00E768AF /* CopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3784F213FEF7C00E768AF /* CopyLabel.m */; };
@@ -317,6 +317,14 @@
 		36213FD12143ABB000B00E2B /* ToolsEntController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolsEntController.h; sourceTree = "<group>"; };
 		36213FD22143ABB000B00E2B /* ToolsEntController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolsEntController.m; sourceTree = "<group>"; };
 		36215799214A6A36005017C9 /* ChatInputBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChatInputBox.bundle; sourceTree = "<group>"; };
+		3621B74D2191B3320000BDFA /* HZWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZWaitingView.m; sourceTree = "<group>"; };
+		3621B74E2191B3320000BDFA /* HZPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		3621B74F2191B3320000BDFA /* HZPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZPhotoBrowser.m; sourceTree = "<group>"; };
+		3621B7502191B3320000BDFA /* HZPhotoBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZPhotoBrowserView.h; sourceTree = "<group>"; };
+		3621B7512191B3320000BDFA /* HZWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZWaitingView.h; sourceTree = "<group>"; };
+		3621B7522191B3320000BDFA /* HZPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HZPhotoBrowser.bundle; sourceTree = "<group>"; };
+		3621B7532191B3320000BDFA /* HZPhotoBrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZPhotoBrowserView.m; sourceTree = "<group>"; };
+		3621B7542191B3320000BDFA /* HZPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZPhotoBrowser.h; sourceTree = "<group>"; };
 		362F7BA121489ECF00A8ECB1 /* UIButton+BigAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+BigAction.h"; sourceTree = "<group>"; };
 		362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BigAction.m"; sourceTree = "<group>"; };
 		362F7BA52148ACF000A8ECB1 /* STEmojiCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEmojiCollectionView.m; sourceTree = "<group>"; };
@@ -420,14 +428,6 @@
 		36A73BB82182C5F400B79AB0 /* NSArray+DWBSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DWBSafe.m"; sourceTree = "<group>"; };
 		36B6609521743DA700E78824 /* DWBURLWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBURLWKWebView.h; sourceTree = "<group>"; };
 		36B6609621743DA700E78824 /* DWBURLWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBURLWKWebView.m; sourceTree = "<group>"; };
-		36B6609921743DF100E78824 /* HZWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZWaitingView.m; sourceTree = "<group>"; };
-		36B6609A21743DF100E78824 /* HZPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZPhotoBrowserConfig.h; sourceTree = "<group>"; };
-		36B6609B21743DF100E78824 /* HZPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZPhotoBrowser.m; sourceTree = "<group>"; };
-		36B6609C21743DF100E78824 /* HZPhotoBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZPhotoBrowserView.h; sourceTree = "<group>"; };
-		36B6609D21743DF100E78824 /* HZWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZWaitingView.h; sourceTree = "<group>"; };
-		36B6609E21743DF100E78824 /* HZPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HZPhotoBrowser.bundle; sourceTree = "<group>"; };
-		36B6609F21743DF100E78824 /* HZPhotoBrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZPhotoBrowserView.m; sourceTree = "<group>"; };
-		36B660A021743DF100E78824 /* HZPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZPhotoBrowser.h; sourceTree = "<group>"; };
 		36D37848213FE01500E768AF /* NSString+GetImageHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GetImageHeight.h"; sourceTree = "<group>"; };
 		36D37849213FE01500E768AF /* NSString+GetImageHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GetImageHeight.m"; sourceTree = "<group>"; };
 		36D3784C213FEF7C00E768AF /* CopyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyLabel.h; sourceTree = "<group>"; };
@@ -615,6 +615,7 @@
 		36213F5221439DB700B00E2B /* DWBThreeLib(三方封装) */ = {
 			isa = PBXGroup;
 			children = (
+				3621B74C2191B3320000BDFA /* HZPhotoBrowser(下拖图片浏览器) */,
 				36FF0855217A1A3800791E59 /* ShareToopls(分享) */,
 				362F7BA42148ACF000A8ECB1 /* ChatInputBoxEmoji */,
 				36213F7D2143A0F100B00E2B /* ImageBrows(图片浏览器) */,
@@ -671,7 +672,6 @@
 				36B6609621743DA700E78824 /* DWBURLWKWebView.m */,
 				36213F7821439FB300B00E2B /* HTMLWebView.h */,
 				36213F7A21439FB300B00E2B /* HTMLWebView.m */,
-				36B6609821743DF100E78824 /* ptotoBrowser(网页浏览图片) */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
@@ -768,6 +768,21 @@
 				36213FB02143A6A500B00E2B /* tabbar-资讯@3x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		3621B74C2191B3320000BDFA /* HZPhotoBrowser(下拖图片浏览器) */ = {
+			isa = PBXGroup;
+			children = (
+				3621B74E2191B3320000BDFA /* HZPhotoBrowserConfig.h */,
+				3621B7502191B3320000BDFA /* HZPhotoBrowserView.h */,
+				3621B7532191B3320000BDFA /* HZPhotoBrowserView.m */,
+				3621B7542191B3320000BDFA /* HZPhotoBrowser.h */,
+				3621B74F2191B3320000BDFA /* HZPhotoBrowser.m */,
+				3621B7512191B3320000BDFA /* HZWaitingView.h */,
+				3621B74D2191B3320000BDFA /* HZWaitingView.m */,
+				3621B7522191B3320000BDFA /* HZPhotoBrowser.bundle */,
+			);
+			path = "HZPhotoBrowser(下拖图片浏览器)";
 			sourceTree = "<group>";
 		};
 		362F7BA42148ACF000A8ECB1 /* ChatInputBoxEmoji */ = {
@@ -1015,21 +1030,6 @@
 				369D8960217198F800003425 /* DWBDeviceHelp.m */,
 			);
 			path = Device;
-			sourceTree = "<group>";
-		};
-		36B6609821743DF100E78824 /* ptotoBrowser(网页浏览图片) */ = {
-			isa = PBXGroup;
-			children = (
-				36B6609A21743DF100E78824 /* HZPhotoBrowserConfig.h */,
-				36B660A021743DF100E78824 /* HZPhotoBrowser.h */,
-				36B6609B21743DF100E78824 /* HZPhotoBrowser.m */,
-				36B6609C21743DF100E78824 /* HZPhotoBrowserView.h */,
-				36B6609F21743DF100E78824 /* HZPhotoBrowserView.m */,
-				36B6609D21743DF100E78824 /* HZWaitingView.h */,
-				36B6609921743DF100E78824 /* HZWaitingView.m */,
-				36B6609E21743DF100E78824 /* HZPhotoBrowser.bundle */,
-			);
-			path = "ptotoBrowser(网页浏览图片)";
 			sourceTree = "<group>";
 		};
 		36D3784B213FEF3900E768AF /* UIView */ = {
@@ -1304,7 +1304,7 @@
 				36213FC92143A6A500B00E2B /* tabbar-我的S@3x.png in Resources */,
 				36213FBC2143A6A500B00E2B /* tabbar-语音@2x.png in Resources */,
 				362F7BC92148B09300A8ECB1 /* README.md in Resources */,
-				36B660A321743DF200E78824 /* HZPhotoBrowser.bundle in Resources */,
+				3621B7572191B3320000BDFA /* HZPhotoBrowser.bundle in Resources */,
 				362F7BBD2148ACF000A8ECB1 /* ChatFace_icon@2x.png in Resources */,
 				36213FC62143A6A500B00E2B /* tabbar-门禁S@2x.png in Resources */,
 				362F7BE92149114B00A8ECB1 /* 微信@2x.png in Resources */,
@@ -1456,6 +1456,7 @@
 				36446185218D819D00B9E01E /* UIViewController+CXHelp.m in Sources */,
 				36213FB82143A6A500B00E2B /* CXRootViewController.m in Sources */,
 				368C3C04213FB44800C10B3E /* DWBToast.m in Sources */,
+				3621B7582191B3320000BDFA /* HZPhotoBrowserView.m in Sources */,
 				362F7BBA2148ACF000A8ECB1 /* STEmoji.m in Sources */,
 				36213F6821439DB700B00E2B /* DWB_refreshHeader.m in Sources */,
 				368E69D92140C49B000EC79C /* UIFont+FontNameSize.m in Sources */,
@@ -1466,10 +1467,10 @@
 				36213F4D21439C1400B00E2B /* SVProgressHUD.m in Sources */,
 				36213F8A2143A4BF00B00E2B /* CXHTMLWebController.m in Sources */,
 				36213FD32143ABB000B00E2B /* ToolsEntController.m in Sources */,
-				36B660A121743DF200E78824 /* HZWaitingView.m in Sources */,
 				36EEDC9221420585000CBEEB /* UIImage+PlayGif.m in Sources */,
 				368E69D12140C27D000EC79C /* UIView+Help.m in Sources */,
 				368C3A05213F67C900C10B3E /* main.m in Sources */,
+				3621B7552191B3320000BDFA /* HZWaitingView.m in Sources */,
 				36213F13214364BD00B00E2B /* AlertViewTool.m in Sources */,
 				36FF0858217A1A3800791E59 /* DWBShareTools.m in Sources */,
 				36213FB52143A6A500B00E2B /* CXTabBarController.m in Sources */,
@@ -1483,7 +1484,6 @@
 				36991147215216F9004B3C0D /* NSString+DWBAttribute.m in Sources */,
 				36213F6921439DB700B00E2B /* MJDIYAutoFooter.m in Sources */,
 				360F0FD021815DE7006A7835 /* NSDictionary+NilSafe.m in Sources */,
-				36B660A221743DF200E78824 /* HZPhotoBrowser.m in Sources */,
 				36213F5021439C1400B00E2B /* SVProgressHUD+KZ.m in Sources */,
 				36446176218C2D9000B9E01E /* NSArray+DWBHelp.m in Sources */,
 				36213F1A21439A3100B00E2B /* ZBHTextView.m in Sources */,
@@ -1513,13 +1513,13 @@
 				368E69C62140B64D000EC79C /* UIColor+DWBHelp.m in Sources */,
 				368E69E52140C5BF000EC79C /* CXAudioTools.m in Sources */,
 				36213F6621439DB700B00E2B /* MJDIYLoadingHeader.m in Sources */,
+				3621B7562191B3320000BDFA /* HZPhotoBrowser.m in Sources */,
 				368E69C02140B538000EC79C /* UIButton+SSEdgeInsets.m in Sources */,
 				36213F12214364BD00B00E2B /* AlertCXShowInfo.m in Sources */,
 				362F7BE42148EE7E00A8ECB1 /* LabelActionController.m in Sources */,
 				36D3785C213FF0C400E768AF /* NSDictionary+CXHelp.m in Sources */,
 				36EEDC9321420585000CBEEB /* UIImage+Rotate.m in Sources */,
 				36D3784A213FE01500E768AF /* NSString+GetImageHeight.m in Sources */,
-				36B660A421743DF200E78824 /* HZPhotoBrowserView.m in Sources */,
 				36213F2C21439B3700B00E2B /* JDStatusBarView.m in Sources */,
 				36A73BB32182C05700B79AB0 /* NSDictionary+DeleteNull.m in Sources */,
 				36DE4FED218D96D200C3FE40 /* NSObject+DWBKVOCrash.m in Sources */,
