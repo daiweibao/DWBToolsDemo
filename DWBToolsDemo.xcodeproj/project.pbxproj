@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3009708B8FBB5CE10309819E /* libPods-DWBToolsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C09C75787C5C6594A6B0EA4 /* libPods-DWBToolsDemo.a */; };
+		3600708C21A2630E00A6BEE9 /* UILabel+RemoveNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 3600708B21A2630E00A6BEE9 /* UILabel+RemoveNull.m */; };
 		360F0F9A218067B6006A7835 /* NSMutableArray+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0F96218067B6006A7835 /* NSMutableArray+Swizzling.m */; };
 		360F0FC7218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0FC6218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m */; };
 		3610DC072181757A00EAB9CA /* NSNull+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3610DC062181757A00EAB9CA /* NSNull+safe.m */; };
@@ -192,6 +193,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3600708A21A2630E00A6BEE9 /* UILabel+RemoveNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+RemoveNull.h"; sourceTree = "<group>"; };
+		3600708B21A2630E00A6BEE9 /* UILabel+RemoveNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+RemoveNull.m"; sourceTree = "<group>"; };
 		360F0F94218067B6006A7835 /* NSMutableArray+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Swizzling.h"; sourceTree = "<group>"; };
 		360F0F96218067B6006A7835 /* NSMutableArray+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Swizzling.m"; sourceTree = "<group>"; };
 		360F0FC5218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+DWBDictSafe.h"; sourceTree = "<group>"; };
@@ -518,6 +521,8 @@
 		360F0F8921805082006A7835 /* DataSafe(数据安全放崩溃) */ = {
 			isa = PBXGroup;
 			children = (
+				3600708A21A2630E00A6BEE9 /* UILabel+RemoveNull.h */,
+				3600708B21A2630E00A6BEE9 /* UILabel+RemoveNull.m */,
 				36DE4FEB218D96D200C3FE40 /* NSObject+DWBKVOCrash.h */,
 				36DE4FEC218D96D200C3FE40 /* NSObject+DWBKVOCrash.m */,
 				3621B7702192D2040000BDFA /* NSDictionary+NilSafe.h */,
@@ -1514,6 +1519,7 @@
 				368E69E52140C5BF000EC79C /* CXAudioTools.m in Sources */,
 				36213F6621439DB700B00E2B /* MJDIYLoadingHeader.m in Sources */,
 				3621B7562191B3320000BDFA /* HZPhotoBrowser.m in Sources */,
+				3600708C21A2630E00A6BEE9 /* UILabel+RemoveNull.m in Sources */,
 				368E69C02140B538000EC79C /* UIButton+SSEdgeInsets.m in Sources */,
 				36213F12214364BD00B00E2B /* AlertCXShowInfo.m in Sources */,
 				362F7BE42148EE7E00A8ECB1 /* LabelActionController.m in Sources */,

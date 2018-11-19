@@ -172,8 +172,11 @@
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     if (indexPath.row==0) {
         cell.textLabel.text = @"功能1";
-    } if (indexPath.row==1) {
+    }else if (indexPath.row==1) {
         cell.textLabel.text = @"一行代码实现label点击指定文字";
+    }else if (indexPath.row==2) {
+        NSString * str = @"我的是null哈哈";
+        cell.textLabel.text = str;
     }
     
     return cell;
