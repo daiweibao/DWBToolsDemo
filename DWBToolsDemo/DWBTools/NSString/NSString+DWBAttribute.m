@@ -491,4 +491,27 @@
 #pragma mark =======传值要变色的字符数组，返回属性字符串 E=========
 
 
+
+
+/**
+ 字符首行缩进，传入内容+ 首行缩进的距离
+
+ @param text 内容
+ @param windth 首行缩进距离
+ @return 属性字符串
+ */
++(NSAttributedString *)getLabelAttributedStringWithText:(NSString *)text AndWindth:(CGFloat )windth{
+    //设置首行缩进距离
+    NSMutableParagraphStyle *paraStyle01 = [[NSMutableParagraphStyle alloc] init];
+    paraStyle01.alignment = NSTextAlignmentLeft;  //对齐
+    paraStyle01.headIndent = 0.0f;//行首缩进
+    CGFloat emptylen = windth;
+    paraStyle01.firstLineHeadIndent = emptylen;//首行缩进距离
+    //    paraStyle01.tailIndent = 0.0f;//行尾缩进
+    //    paraStyle01.lineSpacing = 2.0f;//行间距
+    NSAttributedString *attrText = [[NSAttributedString alloc] initWithString:text attributes:@{NSParagraphStyleAttributeName:paraStyle01}];
+    return attrText;
+}
+
+
 @end

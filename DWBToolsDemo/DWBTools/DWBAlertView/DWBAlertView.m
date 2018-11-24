@@ -32,6 +32,15 @@
             blockAlert(indexCenter);
         }
     }];
+    
+    
+//    //系统的
+//    [AlertViewTool AlertAlertWithTitle:title Message:message otherItemArrays:array viewController:[UIApplication sharedApplication].keyWindow.rootViewController handler:^(NSInteger index) {
+//        if (blockAlert) {
+//            blockAlert(index);
+//        }
+//
+//    }];
 }
 
 
@@ -53,11 +62,19 @@
  */
 + (void)AlertMyCXSheetAllViewWithController:(UIViewController*)controller Title:(NSString*)title otherItemArrays:(NSArray *)array ShowRedindex:(NSInteger )redIndex isShowCancel:(BOOL)isShow CancelTitle:(NSString*)cancetitle Type:(NSInteger)type handler:(void(^)(NSInteger index))blockAlert{
     
-    //自己封装的【底部】弹窗，以后在这里修改替换成其他弹窗就好，换成系统的也可以
-    [AlertViewTool AlertMyCXSheetViewWithController:controller Title:title otherItemArrays:array ShowRedindex:redIndex isShowCancel:isShow CancelTitle:cancetitle Type:type handler:^(NSInteger indexShee) {
+//    //自己封装的【底部】弹窗，以后在这里修改替换成其他弹窗就好，换成系统的也可以
+//    [AlertViewTool AlertMyCXSheetViewWithController:controller Title:title otherItemArrays:array ShowRedindex:redIndex isShowCancel:isShow CancelTitle:cancetitle Type:type handler:^(NSInteger indexShee) {
+//        if (blockAlert) {
+//            blockAlert(indexShee);
+//        }
+//    }];
+    
+    //类似微信底部弹窗
+    [AlertViewTool AlertWXSheetToolWithTitle:title otherItemArrays:array ShowRedindex:redIndex CancelTitle:cancetitle handler:^(NSInteger indexShee) {
         if (blockAlert) {
             blockAlert(indexShee);
         }
+        
     }];
     
 }

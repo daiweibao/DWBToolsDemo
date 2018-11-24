@@ -11,6 +11,10 @@
 
 #import "DWBAPPManager.h"
 
+#import "MyCenterMainController.h"
+
+#import "AllTableviewScrollerController.h"
+
 @interface ToolsEntController ()<UITableViewDelegate,UITableViewDataSource>
 //创建tableview
 @property (nonatomic,strong) UITableView * tableView;
@@ -177,6 +181,12 @@
     }else if (indexPath.row==2) {
         NSString * str = @"我的是null哈哈";
         cell.textLabel.text = str;
+    }else if (indexPath.row==3) {
+        NSString * str = @"多个tableview上下左右可拖动";
+        cell.textLabel.text = str;
+    }else if (indexPath.row==4) {
+       
+        cell.textLabel.text = @"多个tableview左右滚动";
     }
     
     return cell;
@@ -188,6 +198,12 @@
         
     }else if (indexPath.row==1){
         LabelActionController * VC = [[LabelActionController alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
+    }else if (indexPath.row==3){
+        MyCenterMainController * VC = [[MyCenterMainController alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
+    }else if (indexPath.row==4){
+        AllTableviewScrollerController * VC = [[AllTableviewScrollerController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
     }
 }

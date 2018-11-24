@@ -377,6 +377,15 @@
  @return 返回格式化后的金额
  */
 +(NSString *)getMoneyAddDouHaoWithDouble:(double)doubleMoney;
+
+/**
+ 格式化数字，每隔三位一个逗号显示，无小数点，如果后面没小数就不会显示小数
+ 
+ @param doubleMoney 传入的金额,double类型
+ @return 返回格式化后的金额
+ */
++(NSString *)getMoneyAddDouHaoNOPointWithDouble:(double)doubleMoney;
+
 /**
  判断是否为有效网址,YES代表是
  

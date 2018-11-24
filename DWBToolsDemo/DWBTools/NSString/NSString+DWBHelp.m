@@ -1137,6 +1137,32 @@
     return money;
 }
 
+
+/**
+ 格式化数字，每隔三位一个逗号显示，如果后面没小数就不会显示小数
+ 
+ @param doubleMoney 传入的金额,double类型
+ @return 返回格式化后的金额
+ */
++(NSString *)getMoneyAddDouHaoNOPointWithDouble:(double)doubleMoney{
+    
+    NSString * numberStr = [NSString stringWithFormat:@"%f",doubleMoney];
+    // 判断是否null 若是赋值为0 防止崩溃
+    if (([numberStr isEqual:[NSNull null]] || numberStr == nil)) {
+        numberStr = @"0";
+    }
+    
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc]init];
+    formatter.numberStyle = NSNumberFormatterDecimalStyle;
+    // 注意传入参数的数据长度，可用double
+    NSString *money = [formatter stringFromNumber:[NSNumber numberWithDouble:[numberStr doubleValue]]];
+    //注意上面如果及过时100.70，只会得到100.7
+    return money;
+}
+
+
+
+
 /**
  判断是否为有效网址,YES代表是
  

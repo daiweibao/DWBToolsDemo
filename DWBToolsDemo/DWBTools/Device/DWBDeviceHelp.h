@@ -41,6 +41,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (BOOL)isiPadDevice;
 
+
+/**
+ 获取APP启动图片
+ 
+ @return image
+ */
++ (UIImage *)getTheLaunchImage;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -316,10 +316,9 @@ UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlert
 [alertController addAction:okAction]; \
 [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
 
-
 //通知宏定义：接收、发送、移除
-#define NOTIF_ADD(n, f, o)     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(f) name:n object:o]
-#define NOTIF_POST(n, o)    [[NSNotificationCenter defaultCenter] postNotificationName:n object:o]
+#define NOTIF_ADD(sele, n, obj)  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sele) name:n object:obj]
+#define NOTIF_POST(n, obj)    [[NSNotificationCenter defaultCenter] postNotificationName:n object:obj]
 #define NOTIF_REMV()        [[NSNotificationCenter defaultCenter] removeObserver:self]
 
 

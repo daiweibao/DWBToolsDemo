@@ -39,4 +39,7 @@ pod 'UMCShare/Social/QQ'
 pod 'UMCShare/Social/Sina'
 
 
+#pod 'JXCategoryView'
+
+
 end

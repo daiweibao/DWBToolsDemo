@@ -161,6 +161,17 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(NSMutableAttributedString*)getLabelChangColoerArrayWithText:(NSString *)text AndChangeArray:(NSArray *)arrayChange andChangeFont:(UIFont*)changeFout AndChangeColor:(UIColor*)changeColor AndLineSpacing:(CGFloat )lineSpacing;
 
+
+
+/**
+ 字符首行缩进，传入内容+ 首行缩进的距离
+ 
+ @param text 内容
+ @param windth 首行缩进距离
+ @return 属性字符串
+ */
++(NSAttributedString *)getLabelAttributedStringWithText:(NSString *)text AndWindth:(CGFloat )windth;
+
 @end
 
 NS_ASSUME_NONNULL_END
