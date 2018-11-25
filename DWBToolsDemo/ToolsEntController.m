@@ -17,6 +17,8 @@
 
 #import "RedpeopleCenterController.h"
 
+#import "DWBJXDataViewMyController.h"
+
 @interface ToolsEntController ()<UITableViewDelegate,UITableViewDataSource>
 //创建tableview
 @property (nonatomic,strong) UITableView * tableView;
@@ -192,6 +194,9 @@
     }else if (indexPath.row==5) {
         
         cell.textLabel.text = @"红人个人中心";
+    }else if (indexPath.row==6) {
+        
+        cell.textLabel.text = @"自定义滚动头";
     }
     
     return cell;
@@ -212,6 +217,9 @@
         [self.navigationController pushViewController:VC animated:YES];
     }else if (indexPath.row==5){
         RedpeopleCenterController * VC = [[RedpeopleCenterController alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
+    }else if (indexPath.row==6){
+        DWBJXDataViewMyController * VC = [[DWBJXDataViewMyController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
     }
     

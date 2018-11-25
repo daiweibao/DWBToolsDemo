@@ -14,6 +14,9 @@
 #import "MyCenterSonView.h"
 #import "JXPagerListRefreshView.h"
 
+#import "DWBJXCategoryMyView.h"//自定义分组
+#import "DWBJXCategoryMyLineView.h"//自定义滑块
+
 
 @interface MyCenterMainController ()<JXPagerViewDelegate, JXCategoryViewDelegate>
 @property (nonatomic, strong) JXPagerView *pagingView;
@@ -110,6 +113,15 @@
     lineView.indicatorLineViewColor = [UIColor colorWithRed:105/255.0 green:144/255.0 blue:239/255.0 alpha:1];
 //    lineView.indicatorLineWidth = 30;
     self.categoryView.indicators = @[lineView];
+    
+    
+//    //线--自定义滑块
+//    DWBJXCategoryMyLineView *lineView = [[DWBJXCategoryMyLineView alloc] init];
+//    lineView.indicatorLineViewColor = [UIColor colorWithRed:105/255.0 green:144/255.0 blue:239/255.0 alpha:1];
+//    //    lineView.indicatorLineWidth = 30;
+//    [lineView createMyUI];
+//    self.categoryView.indicators = @[lineView];
+    
     
 #pragma mark ================ 下拉刷新类型 ==================
     //(1)从头部开始l下拉刷新

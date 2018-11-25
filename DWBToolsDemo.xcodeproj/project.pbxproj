@@ -159,6 +159,11 @@
 		363BFB5821A95D7F00666F8A /* RedPeopleHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB5721A95D7F00666F8A /* RedPeopleHeaderView.m */; };
 		363BFB5E21A9634E00666F8A /* OneViewTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB5A21A9634E00666F8A /* OneViewTableTableViewController.m */; };
 		363BFB5F21A9634E00666F8A /* ThirdViewCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB5B21A9634E00666F8A /* ThirdViewCollectionViewController.m */; };
+		363BFB6521AAB16400666F8A /* DWBJXCategoryMyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB6421AAB16400666F8A /* DWBJXCategoryMyCell.m */; };
+		363BFB6821AAB18D00666F8A /* DWBJXCategoryMyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB6721AAB18D00666F8A /* DWBJXCategoryMyView.m */; };
+		363BFB6B21AAB1B300666F8A /* DWBJXCategoryMyCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB6A21AAB1B300666F8A /* DWBJXCategoryMyCellModel.m */; };
+		363BFB6E21AAB37300666F8A /* DWBJXCategoryMyLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB6D21AAB37300666F8A /* DWBJXCategoryMyLineView.m */; };
+		363BFB7121AAB3F300666F8A /* DWBJXDataViewMyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB7021AAB3F300666F8A /* DWBJXDataViewMyController.m */; };
 		36446172218BEBF400B9E01E /* DWBAppStoreGetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446170218BEBF400B9E01E /* DWBAppStoreGetData.m */; };
 		36446176218C2D9000B9E01E /* NSArray+DWBHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446175218C2D9000B9E01E /* NSArray+DWBHelp.m */; };
 		36446185218D819D00B9E01E /* UIViewController+CXHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446183218D819C00B9E01E /* UIViewController+CXHelp.m */; };
@@ -509,6 +514,16 @@
 		363BFB5B21A9634E00666F8A /* ThirdViewCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewCollectionViewController.m; sourceTree = "<group>"; };
 		363BFB5C21A9634E00666F8A /* OneViewTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewTableTableViewController.h; sourceTree = "<group>"; };
 		363BFB5D21A9634E00666F8A /* ThirdViewCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewCollectionViewController.h; sourceTree = "<group>"; };
+		363BFB6321AAB16400666F8A /* DWBJXCategoryMyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBJXCategoryMyCell.h; sourceTree = "<group>"; };
+		363BFB6421AAB16400666F8A /* DWBJXCategoryMyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBJXCategoryMyCell.m; sourceTree = "<group>"; };
+		363BFB6621AAB18D00666F8A /* DWBJXCategoryMyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBJXCategoryMyView.h; sourceTree = "<group>"; };
+		363BFB6721AAB18D00666F8A /* DWBJXCategoryMyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBJXCategoryMyView.m; sourceTree = "<group>"; };
+		363BFB6921AAB1B300666F8A /* DWBJXCategoryMyCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBJXCategoryMyCellModel.h; sourceTree = "<group>"; };
+		363BFB6A21AAB1B300666F8A /* DWBJXCategoryMyCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBJXCategoryMyCellModel.m; sourceTree = "<group>"; };
+		363BFB6C21AAB37300666F8A /* DWBJXCategoryMyLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBJXCategoryMyLineView.h; sourceTree = "<group>"; };
+		363BFB6D21AAB37300666F8A /* DWBJXCategoryMyLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBJXCategoryMyLineView.m; sourceTree = "<group>"; };
+		363BFB6F21AAB3F300666F8A /* DWBJXDataViewMyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBJXDataViewMyController.h; sourceTree = "<group>"; };
+		363BFB7021AAB3F300666F8A /* DWBJXDataViewMyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBJXDataViewMyController.m; sourceTree = "<group>"; };
 		36446170218BEBF400B9E01E /* DWBAppStoreGetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBAppStoreGetData.m; sourceTree = "<group>"; };
 		36446171218BEBF400B9E01E /* DWBAppStoreGetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBAppStoreGetData.h; sourceTree = "<group>"; };
 		36446174218C2D9000B9E01E /* NSArray+DWBHelp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+DWBHelp.h"; sourceTree = "<group>"; };
@@ -1254,6 +1269,39 @@
 			path = "示例控制器";
 			sourceTree = "<group>";
 		};
+		363BFB6021AAB0B100666F8A /* JXCategoryView(自定义组头) */ = {
+			isa = PBXGroup;
+			children = (
+				363BFB6121AAB0B100666F8A /* DWBJXCategoryMyCell */,
+				363BFB6221AAB0B100666F8A /* Controller */,
+			);
+			path = "JXCategoryView(自定义组头)";
+			sourceTree = "<group>";
+		};
+		363BFB6121AAB0B100666F8A /* DWBJXCategoryMyCell */ = {
+			isa = PBXGroup;
+			children = (
+				363BFB6621AAB18D00666F8A /* DWBJXCategoryMyView.h */,
+				363BFB6721AAB18D00666F8A /* DWBJXCategoryMyView.m */,
+				363BFB6321AAB16400666F8A /* DWBJXCategoryMyCell.h */,
+				363BFB6421AAB16400666F8A /* DWBJXCategoryMyCell.m */,
+				363BFB6921AAB1B300666F8A /* DWBJXCategoryMyCellModel.h */,
+				363BFB6A21AAB1B300666F8A /* DWBJXCategoryMyCellModel.m */,
+				363BFB6C21AAB37300666F8A /* DWBJXCategoryMyLineView.h */,
+				363BFB6D21AAB37300666F8A /* DWBJXCategoryMyLineView.m */,
+			);
+			path = DWBJXCategoryMyCell;
+			sourceTree = "<group>";
+		};
+		363BFB6221AAB0B100666F8A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				363BFB6F21AAB3F300666F8A /* DWBJXDataViewMyController.h */,
+				363BFB7021AAB3F300666F8A /* DWBJXDataViewMyController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		36446173218C2D6300B9E01E /* NSArray */ = {
 			isa = PBXGroup;
 			children = (
@@ -1498,6 +1546,7 @@
 				363BFAB821A933DE00666F8A /* Image */,
 				36DE0FC221A8FB7A007FCD20 /* Controller */,
 				36DE0FC121A8FB7A007FCD20 /* View */,
+				363BFB6021AAB0B100666F8A /* JXCategoryView(自定义组头) */,
 			);
 			path = "仿照个人中心多个tableview左右滚动";
 			sourceTree = "<group>";
@@ -1854,6 +1903,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36213F0F214364BD00B00E2B /* AlretCXSheetView.m in Sources */,
+				363BFB6E21AAB37300666F8A /* DWBJXCategoryMyLineView.m in Sources */,
 				363BFB1621A942F200666F8A /* JXCategoryIndicatorBallView.m in Sources */,
 				3610DC072181757A00EAB9CA /* NSNull+safe.m in Sources */,
 				36213F10214364BD00B00E2B /* AlertCXCenterView.m in Sources */,
@@ -1905,6 +1955,7 @@
 				363BFB2B21A942F200666F8A /* JXCategoryListVCContainerView.m in Sources */,
 				36213F7C21439FB300B00E2B /* HTMLWebView.m in Sources */,
 				36213F6B21439DB700B00E2B /* MJChiBaoZiHeader.m in Sources */,
+				363BFB6821AAB18D00666F8A /* DWBJXCategoryMyView.m in Sources */,
 				36213FB72143A6A500B00E2B /* TBTabBar.m in Sources */,
 				36446185218D819D00B9E01E /* UIViewController+CXHelp.m in Sources */,
 				36213FB82143A6A500B00E2B /* CXRootViewController.m in Sources */,
@@ -1931,6 +1982,7 @@
 				363BFB1E21A942F200666F8A /* JXCategoryDotCellModel.m in Sources */,
 				368E69D12140C27D000EC79C /* UIView+Help.m in Sources */,
 				368C3A05213F67C900C10B3E /* main.m in Sources */,
+				363BFB7121AAB3F300666F8A /* DWBJXDataViewMyController.m in Sources */,
 				3621B7552191B3320000BDFA /* HZWaitingView.m in Sources */,
 				36213F13214364BD00B00E2B /* AlertViewTool.m in Sources */,
 				36FF0858217A1A3800791E59 /* DWBShareTools.m in Sources */,
@@ -2000,10 +2052,12 @@
 				36213F12214364BD00B00E2B /* AlertCXShowInfo.m in Sources */,
 				362F7BE42148EE7E00A8ECB1 /* LabelActionController.m in Sources */,
 				36DE0FC821A8FC69007FCD20 /* MyCenterHeaderView.m in Sources */,
+				363BFB6521AAB16400666F8A /* DWBJXCategoryMyCell.m in Sources */,
 				36D3785C213FF0C400E768AF /* NSDictionary+CXHelp.m in Sources */,
 				36EEDC9321420585000CBEEB /* UIImage+Rotate.m in Sources */,
 				36D3784A213FE01500E768AF /* NSString+GetImageHeight.m in Sources */,
 				36213F2C21439B3700B00E2B /* JDStatusBarView.m in Sources */,
+				363BFB6B21AAB1B300666F8A /* DWBJXCategoryMyCellModel.m in Sources */,
 				363BFB1C21A942F200666F8A /* JXCategoryDotCell.m in Sources */,
 				363BFB2721A942F200666F8A /* JXCategoryImageCellModel.m in Sources */,
 				36A73BB32182C05700B79AB0 /* NSDictionary+DeleteNull.m in Sources */,
