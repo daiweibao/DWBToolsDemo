@@ -33,9 +33,26 @@
         //创建tableview
         [self tableView];
         
+        [self refresh];
+        
+        
     }
     return self;
 }
+
+
+// 上拉下拉刷新
+- (void)refresh {
+    //自己封装的MJ刷新
+    [DWB_refreshHeader DWB_RefreshHeaderAddview:self.tableView RefreshType:nil refreshHeader:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+            [self.tableView endRefresh_DWB];
+        });
+    }];
+    
+}
+
 
 - (void)layoutSubviews {
     [super layoutSubviews];

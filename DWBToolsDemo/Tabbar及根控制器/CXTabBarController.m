@@ -179,13 +179,15 @@
     if ([viewController.tabBarItem.title isEqualToString:@"首页"] || [viewController.tabBarItem.title isEqualToString:@"测试1"] || [viewController.tabBarItem.title isEqualToString:@"我的"]) {
         NSString *sign = @""; //取出登陆状态(NSUserDefaults即可)
         NSInteger selectedIndex  =  0 ;
-        if ([NSString isNULL:sign]) {  //未登录
-            if ([viewController.tabBarItem.title isEqualToString:@"今日收益"]) {
+        if ([NSString isNULL:sign]==NO) {  //未登录
+            if ([viewController.tabBarItem.title isEqualToString:@"首页"]) {
+                selectedIndex = 0;
+            } else if ([viewController.tabBarItem.title isEqualToString:@"测试1"]) {
                 selectedIndex = 1;
-            } else if ([viewController.tabBarItem.title isEqualToString:@"订单"]) {
-                selectedIndex = 2;
-            } else if ([viewController.tabBarItem.title isEqualToString:@"我的"]) {
+            }else if ([viewController.tabBarItem.title isEqualToString:@"测试2"]) {
                 selectedIndex = 3;
+            } else if ([viewController.tabBarItem.title isEqualToString:@"我的"]) {
+                selectedIndex = 4;
             }
             //            //弹窗登陆
             //            [AlertCXLoginView showAletCXInfoisBlackHome:nil LoginSuccess:^{

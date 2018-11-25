@@ -12,6 +12,7 @@
 #import "JXCategoryView.h"
 #import "MyCenterHeaderView.h"
 #import "MyCenterSonView.h"
+#import "JXPagerListRefreshView.h"
 
 
 @interface MyCenterMainController ()<JXPagerViewDelegate, JXCategoryViewDelegate>
@@ -84,14 +85,40 @@
     self.categoryView.titleLabelZoomEnabled = YES;
     self.categoryView.titleLabelZoomEnabled = YES;
     
+    
+    
+//    //设置左边距离
+//    self.categoryView.contentEdgeInsetLeft = 30;
+//    //设置右边距离
+//    self.categoryView.contentEdgeInsetRight = 30;
+//
+//    //设置左边遮挡
+//    UILabel * categoryViewLeft = [[UILabel alloc]init];
+//    categoryViewLeft.backgroundColor = [UIColor redColor];
+//    categoryViewLeft.frame = CGRectMake(0, 0, self.categoryView.contentEdgeInsetLeft-15, self.categoryView.height);
+//    [self.categoryView addSubview:categoryViewLeft];
+//
+//    //设置右边边遮挡
+//    UILabel * categoryViewRight = [[UILabel alloc]init];
+//    categoryViewRight.backgroundColor = [UIColor redColor];
+//    categoryViewRight.frame = CGRectMake(self.categoryView.width-self.categoryView.contentEdgeInsetRight+15, 0, self.categoryView.contentEdgeInsetRight-15, self.categoryView.height);
+//    [self.categoryView addSubview:categoryViewRight];
+    
+    
     //线
     JXCategoryIndicatorLineView *lineView = [[JXCategoryIndicatorLineView alloc] init];
     lineView.indicatorLineViewColor = [UIColor colorWithRed:105/255.0 green:144/255.0 blue:239/255.0 alpha:1];
 //    lineView.indicatorLineWidth = 30;
     self.categoryView.indicators = @[lineView];
     
-    //分页
+#pragma mark ================ 下拉刷新类型 ==================
+    //(1)从头部开始l下拉刷新
     _pagingView = [[JXPagerView alloc] initWithDelegate:self];
+    
+//    (2)从头部下面下拉刷新
+//   _pagingView = [[JXPagerListRefreshView alloc] initWithDelegate:self];
+    
+
     [self.view addSubview:self.pagingView];
     
     self.categoryView.contentScrollView = self.pagingView.listContainerView.collectionView;
@@ -118,6 +145,8 @@
     self.pagingView.frame = CGRectMake(0, MC_NavHeight, SCREEN_WIDTH, SCREEN_HEIGHT-MC_NavHeight);
 }
 
+
+
 #pragma mark - JXPagingViewDelegate
 
 - (UIView *)tableHeaderViewInPagerView:(JXPagerView *)pagerView {
@@ -140,6 +169,7 @@
     return self.listViewArray;
 }
 
+#pragma mark ===========打开支持头部下拉变大 ================
 //打开头部下拉变大
 //- (void)mainTableViewDidScroll:(UIScrollView *)scrollView {
 //    [self.userHeaderView scrollViewDidScroll:scrollView.contentOffset.y];

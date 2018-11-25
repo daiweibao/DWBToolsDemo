@@ -150,6 +150,15 @@
 		363BFB3321A942F200666F8A /* JXPagerMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB0C21A942F200666F8A /* JXPagerMainTableView.m */; };
 		363BFB3421A942F200666F8A /* JXPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB0D21A942F200666F8A /* JXPagerView.m */; };
 		363BFB3521A942F200666F8A /* JXPagerListRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB1221A942F200666F8A /* JXPagerListRefreshView.m */; };
+		363BFB4621A958CF00666F8A /* MainTouchTableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB3E21A958CF00666F8A /* MainTouchTableTableView.m */; };
+		363BFB4821A958CF00666F8A /* MYSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB4021A958CF00666F8A /* MYSegmentView.m */; };
+		363BFB4921A958CF00666F8A /* ParentClassScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB4121A958CF00666F8A /* ParentClassScrollViewController.m */; };
+		363BFB5321A95B4900666F8A /* RedPeopleGoodsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB4B21A95B4800666F8A /* RedPeopleGoodsController.m */; };
+		363BFB5421A95B4900666F8A /* RedpeopleCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB4C21A95B4800666F8A /* RedpeopleCenterController.m */; };
+		363BFB5521A95B4900666F8A /* RedPeopleThemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB5121A95B4900666F8A /* RedPeopleThemController.m */; };
+		363BFB5821A95D7F00666F8A /* RedPeopleHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB5721A95D7F00666F8A /* RedPeopleHeaderView.m */; };
+		363BFB5E21A9634E00666F8A /* OneViewTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB5A21A9634E00666F8A /* OneViewTableTableViewController.m */; };
+		363BFB5F21A9634E00666F8A /* ThirdViewCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB5B21A9634E00666F8A /* ThirdViewCollectionViewController.m */; };
 		36446172218BEBF400B9E01E /* DWBAppStoreGetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446170218BEBF400B9E01E /* DWBAppStoreGetData.m */; };
 		36446176218C2D9000B9E01E /* NSArray+DWBHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446175218C2D9000B9E01E /* NSArray+DWBHelp.m */; };
 		36446185218D819D00B9E01E /* UIViewController+CXHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446183218D819C00B9E01E /* UIViewController+CXHelp.m */; };
@@ -482,6 +491,24 @@
 		363BFB1021A942F200666F8A /* JXPagerListContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXPagerListContainerView.h; sourceTree = "<group>"; };
 		363BFB1121A942F200666F8A /* JXPagerMainTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXPagerMainTableView.h; sourceTree = "<group>"; };
 		363BFB1221A942F200666F8A /* JXPagerListRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXPagerListRefreshView.m; sourceTree = "<group>"; };
+		363BFB3921A958CF00666F8A /* MainTouchTableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTouchTableTableView.h; sourceTree = "<group>"; };
+		363BFB3A21A958CF00666F8A /* MYSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYSegmentView.h; sourceTree = "<group>"; };
+		363BFB3C21A958CF00666F8A /* ParentClassScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParentClassScrollViewController.h; sourceTree = "<group>"; };
+		363BFB3E21A958CF00666F8A /* MainTouchTableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTouchTableTableView.m; sourceTree = "<group>"; };
+		363BFB4021A958CF00666F8A /* MYSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYSegmentView.m; sourceTree = "<group>"; };
+		363BFB4121A958CF00666F8A /* ParentClassScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentClassScrollViewController.m; sourceTree = "<group>"; };
+		363BFB4B21A95B4800666F8A /* RedPeopleGoodsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedPeopleGoodsController.m; sourceTree = "<group>"; };
+		363BFB4C21A95B4800666F8A /* RedpeopleCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedpeopleCenterController.m; sourceTree = "<group>"; };
+		363BFB4E21A95B4800666F8A /* RedPeopleThemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedPeopleThemController.h; sourceTree = "<group>"; };
+		363BFB4F21A95B4800666F8A /* RedPeopleGoodsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedPeopleGoodsController.h; sourceTree = "<group>"; };
+		363BFB5021A95B4800666F8A /* RedpeopleCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedpeopleCenterController.h; sourceTree = "<group>"; };
+		363BFB5121A95B4900666F8A /* RedPeopleThemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedPeopleThemController.m; sourceTree = "<group>"; };
+		363BFB5621A95D7F00666F8A /* RedPeopleHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedPeopleHeaderView.h; sourceTree = "<group>"; };
+		363BFB5721A95D7F00666F8A /* RedPeopleHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedPeopleHeaderView.m; sourceTree = "<group>"; };
+		363BFB5A21A9634E00666F8A /* OneViewTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewTableTableViewController.m; sourceTree = "<group>"; };
+		363BFB5B21A9634E00666F8A /* ThirdViewCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewCollectionViewController.m; sourceTree = "<group>"; };
+		363BFB5C21A9634E00666F8A /* OneViewTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewTableTableViewController.h; sourceTree = "<group>"; };
+		363BFB5D21A9634E00666F8A /* ThirdViewCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewCollectionViewController.h; sourceTree = "<group>"; };
 		36446170218BEBF400B9E01E /* DWBAppStoreGetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBAppStoreGetData.m; sourceTree = "<group>"; };
 		36446171218BEBF400B9E01E /* DWBAppStoreGetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBAppStoreGetData.h; sourceTree = "<group>"; };
 		36446174218C2D9000B9E01E /* NSArray+DWBHelp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+DWBHelp.h"; sourceTree = "<group>"; };
@@ -1006,11 +1033,11 @@
 		363BFABF21A942F200666F8A /* JXCategoryView(无头) */ = {
 			isa = PBXGroup;
 			children = (
+				363BFAE921A942F200666F8A /* JXCategoryView.h */,
 				363BFAC021A942F200666F8A /* Indicator */,
 				363BFAD421A942F200666F8A /* Dot */,
 				363BFADB21A942F200666F8A /* TitleImage */,
 				363BFAE221A942F200666F8A /* Title */,
-				363BFAE921A942F200666F8A /* JXCategoryView.h */,
 				363BFAEA21A942F200666F8A /* Image */,
 				363BFAF121A942F200666F8A /* Number */,
 				363BFAF821A942F200666F8A /* Common */,
@@ -1082,10 +1109,10 @@
 			isa = PBXGroup;
 			children = (
 				363BFAE321A942F200666F8A /* JXCategoryTitleCellModel.h */,
-				363BFAE421A942F200666F8A /* JXCategoryTitleCell.h */,
-				363BFAE521A942F200666F8A /* JXCategoryTitleView.h */,
 				363BFAE621A942F200666F8A /* JXCategoryTitleCellModel.m */,
+				363BFAE421A942F200666F8A /* JXCategoryTitleCell.h */,
 				363BFAE721A942F200666F8A /* JXCategoryTitleCell.m */,
+				363BFAE521A942F200666F8A /* JXCategoryTitleView.h */,
 				363BFAE821A942F200666F8A /* JXCategoryTitleView.m */,
 			);
 			path = Title;
@@ -1150,16 +1177,81 @@
 		363BFB0A21A942F200666F8A /* JXPagerView(有头) */ = {
 			isa = PBXGroup;
 			children = (
+				363BFB1021A942F200666F8A /* JXPagerListContainerView.h */,
 				363BFB0B21A942F200666F8A /* JXPagerListContainerView.m */,
+				363BFB1121A942F200666F8A /* JXPagerMainTableView.h */,
 				363BFB0C21A942F200666F8A /* JXPagerMainTableView.m */,
+				363BFB0F21A942F200666F8A /* JXPagerView.h */,
 				363BFB0D21A942F200666F8A /* JXPagerView.m */,
 				363BFB0E21A942F200666F8A /* JXPagerListRefreshView.h */,
-				363BFB0F21A942F200666F8A /* JXPagerView.h */,
-				363BFB1021A942F200666F8A /* JXPagerListContainerView.h */,
-				363BFB1121A942F200666F8A /* JXPagerMainTableView.h */,
 				363BFB1221A942F200666F8A /* JXPagerListRefreshView.m */,
 			);
 			path = "JXPagerView(有头)";
+			sourceTree = "<group>";
+		};
+		363BFB3621A958CF00666F8A /* Tableview头部带联动 */ = {
+			isa = PBXGroup;
+			children = (
+				363BFB3721A958CF00666F8A /* tableview带头部联动 */,
+				363BFB4221A958CF00666F8A /* image */,
+				363BFB4321A958CF00666F8A /* Controller */,
+				363BFB4421A958CF00666F8A /* View */,
+			);
+			path = "Tableview头部带联动";
+			sourceTree = "<group>";
+		};
+		363BFB3721A958CF00666F8A /* tableview带头部联动 */ = {
+			isa = PBXGroup;
+			children = (
+				363BFB5921A9634E00666F8A /* 示例控制器 */,
+				363BFB3921A958CF00666F8A /* MainTouchTableTableView.h */,
+				363BFB3E21A958CF00666F8A /* MainTouchTableTableView.m */,
+				363BFB3A21A958CF00666F8A /* MYSegmentView.h */,
+				363BFB4021A958CF00666F8A /* MYSegmentView.m */,
+				363BFB3C21A958CF00666F8A /* ParentClassScrollViewController.h */,
+				363BFB4121A958CF00666F8A /* ParentClassScrollViewController.m */,
+			);
+			path = "tableview带头部联动";
+			sourceTree = "<group>";
+		};
+		363BFB4221A958CF00666F8A /* image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		363BFB4321A958CF00666F8A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				363BFB5021A95B4800666F8A /* RedpeopleCenterController.h */,
+				363BFB4C21A95B4800666F8A /* RedpeopleCenterController.m */,
+				363BFB4E21A95B4800666F8A /* RedPeopleThemController.h */,
+				363BFB5121A95B4900666F8A /* RedPeopleThemController.m */,
+				363BFB4F21A95B4800666F8A /* RedPeopleGoodsController.h */,
+				363BFB4B21A95B4800666F8A /* RedPeopleGoodsController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		363BFB4421A958CF00666F8A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				363BFB5621A95D7F00666F8A /* RedPeopleHeaderView.h */,
+				363BFB5721A95D7F00666F8A /* RedPeopleHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		363BFB5921A9634E00666F8A /* 示例控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				363BFB5C21A9634E00666F8A /* OneViewTableTableViewController.h */,
+				363BFB5A21A9634E00666F8A /* OneViewTableTableViewController.m */,
+				363BFB5D21A9634E00666F8A /* ThirdViewCollectionViewController.h */,
+				363BFB5B21A9634E00666F8A /* ThirdViewCollectionViewController.m */,
+			);
+			path = "示例控制器";
 			sourceTree = "<group>";
 		};
 		36446173218C2D6300B9E01E /* NSArray */ = {
@@ -1201,6 +1293,7 @@
 				36213F5221439DB700B00E2B /* DWBThreeLib(三方封装) */,
 				36213F932143A6A500B00E2B /* Tabbar及根控制器 */,
 				36DE0E5D21A8F86E007FCD20 /* 仿照个人中心多个tableview左右滚动 */,
+				363BFB3621A958CF00666F8A /* Tableview头部带联动 */,
 				362F7BC82148B09300A8ECB1 /* README.md */,
 				368C3AD8213F6ADB00C10B3E /* DWBToolsPrefixHeader.pch */,
 				36DA4A762147B59000048763 /* MacroHeaderHeader.h */,
@@ -1776,6 +1869,7 @@
 				36213F6C21439DB700B00E2B /* MJChiBaoZiFooter.m in Sources */,
 				368E69D22140C27D000EC79C /* UIView+Extension.m in Sources */,
 				3634E5AB217D5E89002B43DD /* DWBAPPManager.m in Sources */,
+				363BFB5521A95B4900666F8A /* RedPeopleThemController.m in Sources */,
 				368C39FA213F67C800C10B3E /* ViewController.m in Sources */,
 				362F7BC72148AF2400A8ECB1 /* ZXPUnicode.m in Sources */,
 				36213F4721439C1400B00E2B /* LoadingCircleHUD.m in Sources */,
@@ -1800,10 +1894,13 @@
 				36213F2E21439B3700B00E2B /* JDStatusBarStyle.m in Sources */,
 				36213F6521439DB700B00E2B /* UIScrollView+EndRefresh.m in Sources */,
 				363BFAB421A923EC00666F8A /* AllTableviewSonController.m in Sources */,
+				363BFB5421A95B4900666F8A /* RedpeopleCenterController.m in Sources */,
 				36EEDCC1214209FE000CBEEB /* CXVersionUpdate.m in Sources */,
 				36213F2D21439B3700B00E2B /* SDDrowNoticeView.m in Sources */,
 				368E69C92140C1A5000EC79C /* UIView+ActionTap.m in Sources */,
 				362F7BB92148ACF000A8ECB1 /* STInputBar.m in Sources */,
+				363BFB4921A958CF00666F8A /* ParentClassScrollViewController.m in Sources */,
+				363BFB5821A95D7F00666F8A /* RedPeopleHeaderView.m in Sources */,
 				368E69DD2140C58B000EC79C /* UITextField+WJ.m in Sources */,
 				363BFB2B21A942F200666F8A /* JXCategoryListVCContainerView.m in Sources */,
 				36213F7C21439FB300B00E2B /* HTMLWebView.m in Sources */,
@@ -1842,16 +1939,20 @@
 				363BFB1821A942F200666F8A /* JXCategoryIndicatorBackgroundView.m in Sources */,
 				36EEDCAE21420794000CBEEB /* ScanViewController.m in Sources */,
 				36213F4C21439C1400B00E2B /* SVProgressAnimatedView.m in Sources */,
+				363BFB4821A958CF00666F8A /* MYSegmentView.m in Sources */,
 				36213F6721439DB700B00E2B /* DWB_refreshFooter.m in Sources */,
 				363BFB3421A942F200666F8A /* JXPagerView.m in Sources */,
 				363BFB2221A942F200666F8A /* JXCategoryTitleCellModel.m in Sources */,
 				36213F4821439C1400B00E2B /* MBProgressHUD+MJ.m in Sources */,
+				363BFB5321A95B4900666F8A /* RedPeopleGoodsController.m in Sources */,
+				363BFB4621A958CF00666F8A /* MainTouchTableTableView.m in Sources */,
 				368C3C06213FB44900C10B3E /* NSString+DWBHelp.m in Sources */,
 				368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */,
 				363BFB2021A942F200666F8A /* JXCategoryTitleImageCell.m in Sources */,
 				36D37850213FEF7C00E768AF /* DragEnableButton.m in Sources */,
 				363BFB3021A942F200666F8A /* JXCategoryBaseCell.m in Sources */,
 				363BFB3121A942F200666F8A /* JXCategoryBaseCellModel.m in Sources */,
+				363BFB5F21A9634E00666F8A /* ThirdViewCollectionViewController.m in Sources */,
 				36991147215216F9004B3C0D /* NSString+DWBAttribute.m in Sources */,
 				36213F6921439DB700B00E2B /* MJDIYAutoFooter.m in Sources */,
 				36213F5021439C1400B00E2B /* SVProgressHUD+KZ.m in Sources */,
@@ -1867,6 +1968,7 @@
 				363BFAAB21A91BD700666F8A /* AllTableviewScrollerController.m in Sources */,
 				36213FD02143A99D00B00E2B /* HopmeViewController.m in Sources */,
 				363BFB1421A942F200666F8A /* JXCategoryIndicatorTriangleView.m in Sources */,
+				363BFB5E21A9634E00666F8A /* OneViewTableTableViewController.m in Sources */,
 				36D37851213FEF7C00E768AF /* CopyLabel.m in Sources */,
 				360F0F9A218067B6006A7835 /* NSMutableArray+Swizzling.m in Sources */,
 				362F7BE12148EB4400A8ECB1 /* UILabel+Click.m in Sources */,

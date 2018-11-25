@@ -15,6 +15,8 @@
 
 #import "AllTableviewScrollerController.h"
 
+#import "RedpeopleCenterController.h"
+
 @interface ToolsEntController ()<UITableViewDelegate,UITableViewDataSource>
 //创建tableview
 @property (nonatomic,strong) UITableView * tableView;
@@ -187,6 +189,9 @@
     }else if (indexPath.row==4) {
        
         cell.textLabel.text = @"多个tableview左右滚动";
+    }else if (indexPath.row==5) {
+        
+        cell.textLabel.text = @"红人个人中心";
     }
     
     return cell;
@@ -205,7 +210,11 @@
     }else if (indexPath.row==4){
         AllTableviewScrollerController * VC = [[AllTableviewScrollerController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
+    }else if (indexPath.row==5){
+        RedpeopleCenterController * VC = [[RedpeopleCenterController alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
     }
+    
 }
 
 //将要出现
