@@ -145,6 +145,12 @@
     [self refresh];
     
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //默认选中哪一个
+        [self.categoryView selectItemAtIndex:1];
+    });
+    
+    
     //扣边返回处理，下面的代码要加上
     [self.pagingView.listContainerView.collectionView.panGestureRecognizer requireGestureRecognizerToFail:self.navigationController.interactivePopGestureRecognizer];
     [self.pagingView.mainTableView.panGestureRecognizer requireGestureRecognizerToFail:self.navigationController.interactivePopGestureRecognizer];

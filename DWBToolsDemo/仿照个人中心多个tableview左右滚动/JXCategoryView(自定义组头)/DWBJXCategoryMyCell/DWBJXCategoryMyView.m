@@ -36,10 +36,15 @@
 
 //自定义UI
 -(void)createMyUI{
-    //宽度
-     self.cellWidth = (SCREEN_WIDTH-10)/2;
     //两个之间距离
-     self.cellSpacing = 10;
+    self.cellSpacing = 100;
+    //宽度
+     self.cellWidth = (SCREEN_WIDTH -  self.cellSpacing * (self.titles.count-1))/self.titles.count;
+    //判空防止崩溃
+    if (self.cellWidth < 0) {
+        self.cellWidth = 30;
+    }
+    
     
     //左右距离
     self.contentEdgeInsetLeft = 0;

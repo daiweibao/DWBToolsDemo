@@ -19,6 +19,8 @@
 
 #import "DWBJXDataViewMyController.h"
 
+#import "DWBJXMainController.h"
+
 @interface ToolsEntController ()<UITableViewDelegate,UITableViewDataSource>
 //创建tableview
 @property (nonatomic,strong) UITableView * tableView;
@@ -197,6 +199,9 @@
     }else if (indexPath.row==6) {
         
         cell.textLabel.text = @"自定义滚动头";
+    }else if (indexPath.row==7) {
+        
+        cell.textLabel.text = @"自定义滚动头Base";
     }
     
     return cell;
@@ -220,6 +225,9 @@
         [self.navigationController pushViewController:VC animated:YES];
     }else if (indexPath.row==6){
         DWBJXDataViewMyController * VC = [[DWBJXDataViewMyController alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
+    }else if (indexPath.row==7){
+        DWBJXMainController * VC = [[DWBJXMainController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
     }
     

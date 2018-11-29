@@ -207,6 +207,8 @@
 		36DE0FC521A8FBBF007FCD20 /* MyCenterMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DE0FC421A8FBBF007FCD20 /* MyCenterMainController.m */; };
 		36DE0FC821A8FC69007FCD20 /* MyCenterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DE0FC721A8FC69007FCD20 /* MyCenterHeaderView.m */; };
 		36DE4FED218D96D200C3FE40 /* NSObject+DWBKVOCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DE4FEC218D96D200C3FE40 /* NSObject+DWBKVOCrash.m */; };
+		36E8614B21AE615B00180D78 /* JXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8614A21AE615B00180D78 /* JXBaseViewController.m */; };
+		36E8614E21AE62EE00180D78 /* DWBJXMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8614D21AE62EE00180D78 /* DWBJXMainController.m */; };
 		36EEDC9221420585000CBEEB /* UIImage+PlayGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDC8A21420585000CBEEB /* UIImage+PlayGif.m */; };
 		36EEDC9321420585000CBEEB /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDC8B21420585000CBEEB /* UIImage+Rotate.m */; };
 		36EEDC9421420585000CBEEB /* UIImageView+CXHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDC8C21420585000CBEEB /* UIImageView+CXHelp.m */; };
@@ -613,6 +615,10 @@
 		36DE0FC721A8FC69007FCD20 /* MyCenterHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCenterHeaderView.m; sourceTree = "<group>"; };
 		36DE4FEB218D96D200C3FE40 /* NSObject+DWBKVOCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DWBKVOCrash.h"; sourceTree = "<group>"; };
 		36DE4FEC218D96D200C3FE40 /* NSObject+DWBKVOCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DWBKVOCrash.m"; sourceTree = "<group>"; };
+		36E8614921AE615B00180D78 /* JXBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXBaseViewController.h; sourceTree = "<group>"; };
+		36E8614A21AE615B00180D78 /* JXBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXBaseViewController.m; sourceTree = "<group>"; };
+		36E8614C21AE62EE00180D78 /* DWBJXMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBJXMainController.h; sourceTree = "<group>"; };
+		36E8614D21AE62EE00180D78 /* DWBJXMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBJXMainController.m; sourceTree = "<group>"; };
 		36EEDC8A21420585000CBEEB /* UIImage+PlayGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PlayGif.m"; sourceTree = "<group>"; };
 		36EEDC8B21420585000CBEEB /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
 		36EEDC8C21420585000CBEEB /* UIImageView+CXHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CXHelp.m"; sourceTree = "<group>"; };
@@ -1571,6 +1577,10 @@
 				363BFAAA21A91BD700666F8A /* AllTableviewScrollerController.m */,
 				363BFAB221A923EC00666F8A /* AllTableviewSonController.h */,
 				363BFAB321A923EC00666F8A /* AllTableviewSonController.m */,
+				36E8614921AE615B00180D78 /* JXBaseViewController.h */,
+				36E8614A21AE615B00180D78 /* JXBaseViewController.m */,
+				36E8614C21AE62EE00180D78 /* DWBJXMainController.h */,
+				36E8614D21AE62EE00180D78 /* DWBJXMainController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1971,6 +1981,8 @@
 				363BFB2121A942F200666F8A /* JXCategoryTitleImageCellModel.m in Sources */,
 				368E69D82140C49B000EC79C /* UIFont+FontNameBoldSize.m in Sources */,
 				36EEDCAF21420794000CBEEB /* ScanResultsController.m in Sources */,
+				36E8614B21AE615B00180D78 /* JXBaseViewController.m in Sources */,
+				36E8614E21AE62EE00180D78 /* DWBJXMainController.m in Sources */,
 				36DE0FC521A8FBBF007FCD20 /* MyCenterMainController.m in Sources */,
 				36213F4D21439C1400B00E2B /* SVProgressHUD.m in Sources */,
 				36213F8A2143A4BF00B00E2B /* CXHTMLWebController.m in Sources */,

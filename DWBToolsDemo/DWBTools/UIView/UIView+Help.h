@@ -92,4 +92,15 @@
  */
 -(void)drawCornerRadius:(CGFloat)radius borderColor:(UIColor *)borderColor AndBorderWidth:(CGFloat)borderWidth;
 
+
+/**
+ 按钮设置指定j边角的圆角
+ 
+ @param rectCorner UIRectCorner要切除的圆角
+ @param borderColor 边框颜色
+ @param borderWidth 边框宽度
+ @param Radius 圆角大小
+ */
+- (void)setupRoundedCornersWithCutCorners:(UIRectCorner)rectCorner borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth AndRadius:(CGFloat )Radius;
+
 @end

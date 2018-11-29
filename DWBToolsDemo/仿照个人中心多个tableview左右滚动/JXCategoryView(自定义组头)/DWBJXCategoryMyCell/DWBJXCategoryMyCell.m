@@ -37,7 +37,8 @@
     
     
     self.viewSub  = [[UIView alloc]init];
-    self.viewSub.frame = CGRectMake(0, 0, SCREEN_WIDTH/2, 30);
+    
+    self.viewSub.frame = CGRectMake(0, 0, self.width, 30);
     self.viewSub.backgroundColor = [UIColor blackColor];
     [self.contentView addSubview:self.viewSub];
 }

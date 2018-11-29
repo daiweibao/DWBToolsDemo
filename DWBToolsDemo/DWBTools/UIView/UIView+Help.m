@@ -315,6 +315,38 @@
 }
 
 
+/**
+ 按钮设置指定j边角的圆角
+ 
+ @param rectCorner UIRectCorner要切除的圆角
+ @param borderColor 边框颜色
+ @param borderWidth 边框宽度
+ @param Radius 圆角大小
+ */
+- (void)setupRoundedCornersWithCutCorners:(UIRectCorner)rectCorner borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth AndRadius:(CGFloat )Radius{
+    [self layoutIfNeeded];//必须处理，不然用Masonry布局的无效
+    CAShapeLayer *mask=[CAShapeLayer layer];
+    UIBezierPath * path= [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:rectCorner cornerRadii:CGSizeMake(Radius,Radius)];
+    mask.path=path.CGPath;
+    mask.frame=self.bounds;
+    
+    
+    CAShapeLayer *borderLayer=[CAShapeLayer layer];
+    borderLayer.path=path.CGPath;
+    borderLayer.fillColor = [UIColor clearColor].CGColor;
+    borderLayer.strokeColor = borderColor.CGColor;
+    borderLayer.lineWidth = borderWidth;
+    borderLayer.frame = self.bounds;
+    self.layer.mask = mask;
+    [self.layer addSublayer:borderLayer];
+    
+    
+    //用法案例 UIRectCornerTopLeft | UIRectCornerBottomLeft可以同时设置多个
+    //    [viewRu setupRoundedCornersWithCutCorners:UIRectCornerTopLeft | UIRectCornerBottomLeft  borderColor:[UIColor redColor] borderWidth:1 AndRadius:10];
+    
+}
+
+
 
 
 @end
