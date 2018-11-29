@@ -7,27 +7,11 @@
 //
 
 #import "JXCategoryIndicatorCellModel.h"
-
+#import "JXCategoryTitleCellModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DWBJXCategoryMyCellModel : JXCategoryIndicatorCellModel
-@property (nonatomic, copy) NSString *title;
+@interface DWBJXCategoryMyCellModel : JXCategoryTitleCellModel
 
-@property (nonatomic, strong) UIColor *titleColor;
-
-@property (nonatomic, strong) UIColor *titleSelectedColor;
-
-@property (nonatomic, strong) UIFont *titleFont;
-
-@property (nonatomic, strong) UIFont *titleSelectedFont;
-
-@property (nonatomic, assign) BOOL titleLabelMaskEnabled;
-
-@property (nonatomic, strong) CALayer *backgroundEllipseLayer;
-
-@property (nonatomic, assign) BOOL titleLabelZoomEnabled;
-
-@property (nonatomic, assign) CGFloat titleLabelZoomScale;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,10 +7,10 @@
 //
 
 #import "JXCategoryIndicatorCell.h"
-
+#import "JXCategoryTitleCell.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DWBJXCategoryMyCell : JXCategoryIndicatorCell
+@interface DWBJXCategoryMyCell : JXCategoryTitleCell
 
 @end
 
