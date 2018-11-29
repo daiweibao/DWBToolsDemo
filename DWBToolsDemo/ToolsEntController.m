@@ -13,8 +13,6 @@
 
 #import "MyCenterMainController.h"
 
-#import "AllTableviewScrollerController.h"
-
 #import "RedpeopleCenterController.h"
 
 
@@ -191,13 +189,13 @@
         cell.textLabel.text = str;
     }else if (indexPath.row==4) {
        
-        cell.textLabel.text = @"多个tableview左右滚动";
+        cell.textLabel.text = @"";
     }else if (indexPath.row==5) {
         
         cell.textLabel.text = @"红人个人中心";
     }else if (indexPath.row==6) {
         
-        cell.textLabel.text = @"自定义滚动头";
+        cell.textLabel.text = @"";
     }else if (indexPath.row==7) {
         
         cell.textLabel.text = @"自定义滚动头Base";
@@ -217,14 +215,12 @@
         MyCenterMainController * VC = [[MyCenterMainController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
     }else if (indexPath.row==4){
-        AllTableviewScrollerController * VC = [[AllTableviewScrollerController alloc]init];
-        [self.navigationController pushViewController:VC animated:YES];
+      
     }else if (indexPath.row==5){
         RedpeopleCenterController * VC = [[RedpeopleCenterController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
     }else if (indexPath.row==6){
-//        DWBJXDataViewMyController * VC = [[DWBJXDataViewMyController alloc]init];
-//        [self.navigationController pushViewController:VC animated:YES];
+
     }else if (indexPath.row==7){
         DWBJXMainController * VC = [[DWBJXMainController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
