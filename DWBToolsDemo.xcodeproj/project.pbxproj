@@ -1520,10 +1520,10 @@
 			isa = PBXGroup;
 			children = (
 				36E861D621AFBF3300180D78 /* JXCategoryBaseView.h */,
-				36E861D721AFBF3300180D78 /* JXCategoryBaseCell.h */,
-				36E861D821AFBF3300180D78 /* JXCategoryBaseCellModel.h */,
 				36E861D921AFBF3300180D78 /* JXCategoryBaseView.m */,
+				36E861D721AFBF3300180D78 /* JXCategoryBaseCell.h */,
 				36E861DA21AFBF3300180D78 /* JXCategoryBaseCell.m */,
+				36E861D821AFBF3300180D78 /* JXCategoryBaseCellModel.h */,
 				36E861DB21AFBF3300180D78 /* JXCategoryBaseCellModel.m */,
 			);
 			path = Base;

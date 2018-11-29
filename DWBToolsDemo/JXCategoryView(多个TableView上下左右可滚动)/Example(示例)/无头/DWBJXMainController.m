@@ -22,10 +22,10 @@
 @property (nonatomic,assign)CGFloat categoryHeight;
 
 //自定义组头
-@property (nonatomic, strong) DWBJXCategoryMyView *myCategoryView;
+//@property (nonatomic, strong) DWBJXCategoryMyView *myCategoryView;
 
 //标准标题组头
-//@property (nonatomic, strong) JXCategoryTitleView *myCategoryView;
+@property (nonatomic, strong) JXCategoryTitleView *myCategoryView;
 
 
 @end
@@ -48,68 +48,67 @@
     self.categoryHeight = 50;
 
     //自定义组头UI
-    [self initCategoryMySelftUI];
+//    [self initCategoryMySelftUI];
     
     //默认标题组头UI
-//    [self initCategoryDefaultUI];
+    [self initCategoryDefaultUI];
 
     
 }
 
 
-//初始化自定义分组头
--(void)initCategoryMySelftUI{
-    
-        //自定义样式头
-        self.myCategoryView = [[DWBJXCategoryMyView alloc]init];
-        //自定义UI
-        [self.myCategoryView createMyUI];
-    
-        self.myCategoryView.frame = CGRectMake(0, MC_NavHeight, WindowsSize.width, self.categoryHeight);
-        self.myCategoryView.delegate = self;
-        self.myCategoryView.contentScrollView = self.scrollView;
-        [self.view addSubview:self.myCategoryView];
-    
-    
-    
-    
-        //设置左边距离
-        self.myCategoryView.contentEdgeInsetLeft = 30;
-        //设置右边距离
-        self.myCategoryView.contentEdgeInsetRight = 30;
-
-        //设置左边遮挡
-        UILabel * categoryViewLeft = [[UILabel alloc]init];
-        categoryViewLeft.backgroundColor = [UIColor orangeColor];
-        categoryViewLeft.frame = CGRectMake(0, 0, self.myCategoryView.contentEdgeInsetLeft-15, self.myCategoryView.height);
-        [self.myCategoryView addSubview:categoryViewLeft];
-
-        //设置右边边遮挡
-        UILabel * categoryViewRight = [[UILabel alloc]init];
-        categoryViewRight.backgroundColor = [UIColor orangeColor];
-        categoryViewRight.frame = CGRectMake(self.myCategoryView.width-self.myCategoryView.contentEdgeInsetRight+15, 0, self.myCategoryView.contentEdgeInsetRight-15, self.myCategoryView.height);
-        [self.myCategoryView addSubview:categoryViewRight];
-
-
-    //滑块
-        DWBJXCategoryMyLineView *lineView = [[DWBJXCategoryMyLineView alloc] init];//自定义样式
-        self.myCategoryView.indicators = @[lineView];
-        [lineView createMyUI];//自定义滑块样式
-    
-        NSArray * array = @[@"螃蟹", @"麻辣小龙虾",@"第三个",@"第四个",@"第无个"];
-        //添加子控制器
-        [self addSonControllerWithArrayTitles:array];
-    
-    
-    
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            //默认选中哪一个
-            [self.myCategoryView selectItemAtIndex:1];
-    
-        });
-    
-    
-}
+////初始化自定义分组头
+//-(void)initCategoryMySelftUI{
+//
+//        //自定义样式头
+//        self.myCategoryView = [[DWBJXCategoryMyView alloc]init];
+//        //自定义UI
+//        [self.myCategoryView createMyUI];
+//
+//        self.myCategoryView.frame = CGRectMake(0, MC_NavHeight, WindowsSize.width, self.categoryHeight);
+//        self.myCategoryView.delegate = self;
+//        self.myCategoryView.contentScrollView = self.scrollView;
+//        [self.view addSubview:self.myCategoryView];
+//
+//
+//
+//
+//        //设置左边距离
+//        self.myCategoryView.contentEdgeInsetLeft = 30;
+//        //设置右边距离
+//        self.myCategoryView.contentEdgeInsetRight = 30;
+//
+//        //设置左边遮挡
+//        UILabel * categoryViewLeft = [[UILabel alloc]init];
+//        categoryViewLeft.backgroundColor = [UIColor orangeColor];
+//        categoryViewLeft.frame = CGRectMake(0, 0, self.myCategoryView.contentEdgeInsetLeft-15, self.myCategoryView.height);
+//        [self.myCategoryView addSubview:categoryViewLeft];
+//
+//        //设置右边边遮挡
+//        UILabel * categoryViewRight = [[UILabel alloc]init];
+//        categoryViewRight.backgroundColor = [UIColor orangeColor];
+//        categoryViewRight.frame = CGRectMake(self.myCategoryView.width-self.myCategoryView.contentEdgeInsetRight+15, 0, self.myCategoryView.contentEdgeInsetRight-15, self.myCategoryView.height);
+//        [self.myCategoryView addSubview:categoryViewRight];
+//
+//
+//    //滑块
+//        DWBJXCategoryMyLineView *lineView = [[DWBJXCategoryMyLineView alloc] init];//自定义样式
+//        self.myCategoryView.indicators = @[lineView];
+//        [lineView createMyUI];//自定义滑块样式
+//
+//        NSArray * array = @[@"螃蟹", @"麻辣小龙虾",@"第三个",@"第四个",@"第无个"];
+//        //添加子控制器
+//        [self addSonControllerWithArrayTitles:array];
+//
+//
+////        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+////            //默认选中哪一个
+////            [self.myCategoryView selectItemAtIndex:1];
+////
+////        });
+//
+//
+//}
 
 
 
@@ -132,6 +131,15 @@
     //添加子控制器
     [self addSonControllerWithArrayTitles:array];
     
+    
+    
+   
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+         //刷新数据，不刷新控制器位置
+          NSArray * arrayNew = @[@"新数据", @"麻辣new",@"第三个",@"第四个",@"第无个"];
+          self.myCategoryView.titles = arrayNew;
+          [self.myCategoryView reloadData];
+    });
     
     
     //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
