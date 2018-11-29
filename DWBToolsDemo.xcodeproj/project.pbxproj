@@ -1333,8 +1333,8 @@
 		36E8617F21AFBF3300180D78 /* JXCategoryView(多个TableView上下左右可滚动) */ = {
 			isa = PBXGroup;
 			children = (
-				36E8618021AFBF3300180D78 /* Example(示例) */,
 				36E8619021AFBF3300180D78 /* JXCategoryView(库) */,
+				36E8618021AFBF3300180D78 /* Example(示例) */,
 			);
 			path = "JXCategoryView(多个TableView上下左右可滚动)";
 			sourceTree = "<group>";
@@ -1353,11 +1353,11 @@
 			isa = PBXGroup;
 			children = (
 				36E8618321AFBF3300180D78 /* MyCenterMainController.h */,
-				36E8618421AFBF3300180D78 /* MyCenterSonView.h */,
-				36E8618521AFBF3300180D78 /* MyCenterHeaderView.h */,
 				36E8618621AFBF3300180D78 /* MyCenterMainController.m */,
-				36E8618721AFBF3300180D78 /* MyCenterSonView.m */,
+				36E8618521AFBF3300180D78 /* MyCenterHeaderView.h */,
 				36E8618821AFBF3300180D78 /* MyCenterHeaderView.m */,
+				36E8618421AFBF3300180D78 /* MyCenterSonView.h */,
+				36E8618721AFBF3300180D78 /* MyCenterSonView.m */,
 			);
 			path = "有头";
 			sourceTree = "<group>";
@@ -1366,11 +1366,11 @@
 			isa = PBXGroup;
 			children = (
 				36E8618A21AFBF3300180D78 /* JXBaseViewController.h */,
-				36E8618B21AFBF3300180D78 /* AllTableviewSonController.m */,
-				36E8618C21AFBF3300180D78 /* DWBJXMainController.h */,
-				36E8618D21AFBF3300180D78 /* AllTableviewSonController.h */,
 				36E8618E21AFBF3300180D78 /* JXBaseViewController.m */,
+				36E8618C21AFBF3300180D78 /* DWBJXMainController.h */,
 				36E8618F21AFBF3300180D78 /* DWBJXMainController.m */,
+				36E8618D21AFBF3300180D78 /* AllTableviewSonController.h */,
+				36E8618B21AFBF3300180D78 /* AllTableviewSonController.m */,
 			);
 			path = "无头";
 			sourceTree = "<group>";
@@ -1555,14 +1555,14 @@
 		36E861E621AFBF3300180D78 /* DWBJXCategoryMyCell */ = {
 			isa = PBXGroup;
 			children = (
-				36E861E721AFBF3300180D78 /* DWBJXCategoryMyLineView.m */,
-				36E861E821AFBF3300180D78 /* DWBJXCategoryMyView.m */,
-				36E861E921AFBF3300180D78 /* DWBJXCategoryMyCellModel.m */,
-				36E861EA21AFBF3300180D78 /* DWBJXCategoryMyCell.m */,
 				36E861EB21AFBF3300180D78 /* DWBJXCategoryMyLineView.h */,
+				36E861E721AFBF3300180D78 /* DWBJXCategoryMyLineView.m */,
 				36E861EC21AFBF3300180D78 /* DWBJXCategoryMyView.h */,
+				36E861E821AFBF3300180D78 /* DWBJXCategoryMyView.m */,
 				36E861ED21AFBF3300180D78 /* DWBJXCategoryMyCell.h */,
+				36E861EA21AFBF3300180D78 /* DWBJXCategoryMyCell.m */,
 				36E861EE21AFBF3300180D78 /* DWBJXCategoryMyCellModel.h */,
+				36E861E921AFBF3300180D78 /* DWBJXCategoryMyCellModel.m */,
 			);
 			path = DWBJXCategoryMyCell;
 			sourceTree = "<group>";

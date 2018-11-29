@@ -30,14 +30,14 @@
 //自定义UI
 -(void)createMyUI{
     //两个之间距离
-    self.cellSpacing = 100;
-    //宽度
+    self.cellSpacing = 30;
+    //宽度:self.cellWidth总宽度小于屏幕宽度就不会被拖动
+#pragma mark ===========self.cellWidth总宽度小于屏幕宽度就不会被拖动,可以看成是固定头===========
      self.cellWidth = (SCREEN_WIDTH -  self.cellSpacing * (self.titles.count-1))/self.titles.count;
-    //判空防止崩溃
+    //判空防止崩溃，必须
     if (self.cellWidth < 0) {
-        self.cellWidth = 30;
+        self.cellWidth = 50;
     }
-    
     //左右距离
     self.contentEdgeInsetLeft = 0;
     self.contentEdgeInsetRight = 0;
