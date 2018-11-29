@@ -9,8 +9,6 @@
 #import "JXCategoryIndicatorView.h"
 #import "JXCategoryTitleView.h"
 
-#import "DWBJXCategoryMyCellModel.h"
-#import "DWBJXCategoryMyCell.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DWBJXCategoryMyView : JXCategoryTitleView

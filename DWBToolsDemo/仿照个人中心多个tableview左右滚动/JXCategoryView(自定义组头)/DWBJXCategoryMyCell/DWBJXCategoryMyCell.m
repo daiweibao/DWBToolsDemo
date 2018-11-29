@@ -10,6 +10,7 @@
 #import "DWBJXCategoryMyCellModel.h"
 @interface DWBJXCategoryMyCell ()
 
+@property (nonatomic, strong) CALayer *maskLayer;
 
 @property(nonatomic,strong)UIView * viewSub;
 
@@ -18,9 +19,24 @@
 
 @implementation DWBJXCategoryMyCell
 
+
+
 - (void)initializeViews
 {
 //    [super initializeViews];
+    
+    //    _titleLabel = [[UILabel alloc] init];
+    //    self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    //    [self.contentView addSubview:self.titleLabel];
+    //
+    //    _maskTitleLabel = [[UILabel alloc] init];
+    //    _maskTitleLabel.hidden = YES;
+    //    self.maskTitleLabel.textAlignment = NSTextAlignmentCenter;
+    //    [self.contentView addSubview:self.maskTitleLabel];
+    //
+    //    _maskLayer = [CALayer layer];
+    //    self.maskLayer.backgroundColor = [UIColor redColor].CGColor;
+    //    self.maskTitleLabel.layer.mask = self.maskLayer;
     
     
     self.viewSub  = [[UIView alloc]init];
@@ -34,6 +50,8 @@
     [super layoutSubviews];
     //设置坐标
     
+    //    self.titleLabel.center = self.contentView.center;
+    //    self.maskTitleLabel.center = self.contentView.center;
 }
 
 - (void)reloadData:(JXCategoryBaseCellModel *)cellModel {
@@ -84,6 +102,5 @@
     //    [self setNeedsLayout];
     //    [self layoutIfNeeded];
 }
-
 
 @end

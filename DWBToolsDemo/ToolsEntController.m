@@ -17,7 +17,6 @@
 
 #import "RedpeopleCenterController.h"
 
-#import "DWBJXDataViewMyController.h"
 
 #import "DWBJXMainController.h"
 
@@ -224,8 +223,8 @@
         RedpeopleCenterController * VC = [[RedpeopleCenterController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
     }else if (indexPath.row==6){
-        DWBJXDataViewMyController * VC = [[DWBJXDataViewMyController alloc]init];
-        [self.navigationController pushViewController:VC animated:YES];
+//        DWBJXDataViewMyController * VC = [[DWBJXDataViewMyController alloc]init];
+//        [self.navigationController pushViewController:VC animated:YES];
     }else if (indexPath.row==7){
         DWBJXMainController * VC = [[DWBJXMainController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];

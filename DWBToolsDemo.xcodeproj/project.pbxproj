@@ -163,7 +163,6 @@
 		363BFB6821AAB18D00666F8A /* DWBJXCategoryMyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB6721AAB18D00666F8A /* DWBJXCategoryMyView.m */; };
 		363BFB6B21AAB1B300666F8A /* DWBJXCategoryMyCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB6A21AAB1B300666F8A /* DWBJXCategoryMyCellModel.m */; };
 		363BFB6E21AAB37300666F8A /* DWBJXCategoryMyLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB6D21AAB37300666F8A /* DWBJXCategoryMyLineView.m */; };
-		363BFB7121AAB3F300666F8A /* DWBJXDataViewMyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFB7021AAB3F300666F8A /* DWBJXDataViewMyController.m */; };
 		36446172218BEBF400B9E01E /* DWBAppStoreGetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446170218BEBF400B9E01E /* DWBAppStoreGetData.m */; };
 		36446176218C2D9000B9E01E /* NSArray+DWBHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446175218C2D9000B9E01E /* NSArray+DWBHelp.m */; };
 		36446185218D819D00B9E01E /* UIViewController+CXHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446183218D819C00B9E01E /* UIViewController+CXHelp.m */; };
@@ -524,8 +523,6 @@
 		363BFB6A21AAB1B300666F8A /* DWBJXCategoryMyCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBJXCategoryMyCellModel.m; sourceTree = "<group>"; };
 		363BFB6C21AAB37300666F8A /* DWBJXCategoryMyLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBJXCategoryMyLineView.h; sourceTree = "<group>"; };
 		363BFB6D21AAB37300666F8A /* DWBJXCategoryMyLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBJXCategoryMyLineView.m; sourceTree = "<group>"; };
-		363BFB6F21AAB3F300666F8A /* DWBJXDataViewMyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBJXDataViewMyController.h; sourceTree = "<group>"; };
-		363BFB7021AAB3F300666F8A /* DWBJXDataViewMyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBJXDataViewMyController.m; sourceTree = "<group>"; };
 		36446170218BEBF400B9E01E /* DWBAppStoreGetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBAppStoreGetData.m; sourceTree = "<group>"; };
 		36446171218BEBF400B9E01E /* DWBAppStoreGetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBAppStoreGetData.h; sourceTree = "<group>"; };
 		36446174218C2D9000B9E01E /* NSArray+DWBHelp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+DWBHelp.h"; sourceTree = "<group>"; };
@@ -1279,7 +1276,6 @@
 			isa = PBXGroup;
 			children = (
 				363BFB6121AAB0B100666F8A /* DWBJXCategoryMyCell */,
-				363BFB6221AAB0B100666F8A /* Controller */,
 			);
 			path = "JXCategoryView(自定义组头)";
 			sourceTree = "<group>";
@@ -1297,15 +1293,6 @@
 				363BFB6D21AAB37300666F8A /* DWBJXCategoryMyLineView.m */,
 			);
 			path = DWBJXCategoryMyCell;
-			sourceTree = "<group>";
-		};
-		363BFB6221AAB0B100666F8A /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				363BFB6F21AAB3F300666F8A /* DWBJXDataViewMyController.h */,
-				363BFB7021AAB3F300666F8A /* DWBJXDataViewMyController.m */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		36446173218C2D6300B9E01E /* NSArray */ = {
@@ -1994,7 +1981,6 @@
 				363BFB1E21A942F200666F8A /* JXCategoryDotCellModel.m in Sources */,
 				368E69D12140C27D000EC79C /* UIView+Help.m in Sources */,
 				368C3A05213F67C900C10B3E /* main.m in Sources */,
-				363BFB7121AAB3F300666F8A /* DWBJXDataViewMyController.m in Sources */,
 				3621B7552191B3320000BDFA /* HZWaitingView.m in Sources */,
 				36213F13214364BD00B00E2B /* AlertViewTool.m in Sources */,
 				36FF0858217A1A3800791E59 /* DWBShareTools.m in Sources */,
