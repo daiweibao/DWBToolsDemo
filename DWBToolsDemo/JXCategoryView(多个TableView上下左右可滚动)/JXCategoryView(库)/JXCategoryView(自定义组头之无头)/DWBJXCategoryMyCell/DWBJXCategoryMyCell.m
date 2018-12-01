@@ -7,7 +7,7 @@
 //
 
 #import "DWBJXCategoryMyCell.h"
-#import "DWBJXCategoryMyCellModel.h"
+#import "JXCategoryTitleCellModel.h"
 @interface DWBJXCategoryMyCell ()
 //父视图，主要是要留出高度
 @property(nonatomic,strong)UIView * contentTitleView;
@@ -42,7 +42,7 @@
 //改变选中，非选中状态
 - (void)reloadData:(JXCategoryBaseCellModel *)cellModel {
     [super reloadData:cellModel];
-    DWBJXCategoryMyCellModel *myCellModel = (DWBJXCategoryMyCellModel *)cellModel;
+    JXCategoryTitleCellModel *myCellModel = (JXCategoryTitleCellModel *)cellModel;
     if (myCellModel.selected) {
         self.contentTitleView.backgroundColor = [UIColor redColor];
     }else {

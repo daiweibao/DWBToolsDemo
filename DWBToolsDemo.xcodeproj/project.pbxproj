@@ -166,7 +166,6 @@
 		36E861F121AFBF3300180D78 /* MyCenterSonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8618721AFBF3300180D78 /* MyCenterSonView.m */; };
 		36E861F221AFBF3300180D78 /* MyCenterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8618821AFBF3300180D78 /* MyCenterHeaderView.m */; };
 		36E861F321AFBF3300180D78 /* AllTableviewSonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8618B21AFBF3300180D78 /* AllTableviewSonController.m */; };
-		36E861F421AFBF3300180D78 /* JXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8618E21AFBF3300180D78 /* JXBaseViewController.m */; };
 		36E861F521AFBF3300180D78 /* DWBJXMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8618F21AFBF3300180D78 /* DWBJXMainController.m */; };
 		36E861F621AFBF3300180D78 /* JXCategoryIndicatorLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8619721AFBF3300180D78 /* JXCategoryIndicatorLineView.m */; };
 		36E861F721AFBF3300180D78 /* JXCategoryIndicatorTriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8619821AFBF3300180D78 /* JXCategoryIndicatorTriangleView.m */; };
@@ -205,8 +204,8 @@
 		36E8621821AFBF3300180D78 /* JXPagerListRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E861E421AFBF3300180D78 /* JXPagerListRefreshView.m */; };
 		36E8621921AFBF3300180D78 /* DWBJXCategoryMyLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E861E721AFBF3300180D78 /* DWBJXCategoryMyLineView.m */; };
 		36E8621A21AFBF3300180D78 /* DWBJXCategoryMyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E861E821AFBF3300180D78 /* DWBJXCategoryMyView.m */; };
-		36E8621B21AFBF3300180D78 /* DWBJXCategoryMyCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E861E921AFBF3300180D78 /* DWBJXCategoryMyCellModel.m */; };
 		36E8621C21AFBF3300180D78 /* DWBJXCategoryMyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E861EA21AFBF3300180D78 /* DWBJXCategoryMyCell.m */; };
+		36E8630721AFD86F00180D78 /* JXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8630521AFD86F00180D78 /* JXBaseViewController.m */; };
 		36EEDC9221420585000CBEEB /* UIImage+PlayGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDC8A21420585000CBEEB /* UIImage+PlayGif.m */; };
 		36EEDC9321420585000CBEEB /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDC8B21420585000CBEEB /* UIImage+Rotate.m */; };
 		36EEDC9421420585000CBEEB /* UIImageView+CXHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDC8C21420585000CBEEB /* UIImageView+CXHelp.m */; };
@@ -526,11 +525,9 @@
 		36E8618621AFBF3300180D78 /* MyCenterMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterMainController.m; sourceTree = "<group>"; };
 		36E8618721AFBF3300180D78 /* MyCenterSonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterSonView.m; sourceTree = "<group>"; };
 		36E8618821AFBF3300180D78 /* MyCenterHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterHeaderView.m; sourceTree = "<group>"; };
-		36E8618A21AFBF3300180D78 /* JXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXBaseViewController.h; sourceTree = "<group>"; };
 		36E8618B21AFBF3300180D78 /* AllTableviewSonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllTableviewSonController.m; sourceTree = "<group>"; };
 		36E8618C21AFBF3300180D78 /* DWBJXMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBJXMainController.h; sourceTree = "<group>"; };
 		36E8618D21AFBF3300180D78 /* AllTableviewSonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllTableviewSonController.h; sourceTree = "<group>"; };
-		36E8618E21AFBF3300180D78 /* JXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXBaseViewController.m; sourceTree = "<group>"; };
 		36E8618F21AFBF3300180D78 /* DWBJXMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBJXMainController.m; sourceTree = "<group>"; };
 		36E8619321AFBF3300180D78 /* JXCategoryIndicatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXCategoryIndicatorCell.h; sourceTree = "<group>"; };
 		36E8619421AFBF3300180D78 /* JXCategoryIndicatorCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXCategoryIndicatorCellModel.h; sourceTree = "<group>"; };
@@ -607,12 +604,12 @@
 		36E861E421AFBF3300180D78 /* JXPagerListRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXPagerListRefreshView.m; sourceTree = "<group>"; };
 		36E861E721AFBF3300180D78 /* DWBJXCategoryMyLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBJXCategoryMyLineView.m; sourceTree = "<group>"; };
 		36E861E821AFBF3300180D78 /* DWBJXCategoryMyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBJXCategoryMyView.m; sourceTree = "<group>"; };
-		36E861E921AFBF3300180D78 /* DWBJXCategoryMyCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBJXCategoryMyCellModel.m; sourceTree = "<group>"; };
 		36E861EA21AFBF3300180D78 /* DWBJXCategoryMyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBJXCategoryMyCell.m; sourceTree = "<group>"; };
 		36E861EB21AFBF3300180D78 /* DWBJXCategoryMyLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBJXCategoryMyLineView.h; sourceTree = "<group>"; };
 		36E861EC21AFBF3300180D78 /* DWBJXCategoryMyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBJXCategoryMyView.h; sourceTree = "<group>"; };
 		36E861ED21AFBF3300180D78 /* DWBJXCategoryMyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBJXCategoryMyCell.h; sourceTree = "<group>"; };
-		36E861EE21AFBF3300180D78 /* DWBJXCategoryMyCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBJXCategoryMyCellModel.h; sourceTree = "<group>"; };
+		36E8630521AFD86F00180D78 /* JXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXBaseViewController.m; sourceTree = "<group>"; };
+		36E8630621AFD86F00180D78 /* JXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXBaseViewController.h; sourceTree = "<group>"; };
 		36EEDC8A21420585000CBEEB /* UIImage+PlayGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PlayGif.m"; sourceTree = "<group>"; };
 		36EEDC8B21420585000CBEEB /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
 		36EEDC8C21420585000CBEEB /* UIImageView+CXHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CXHelp.m"; sourceTree = "<group>"; };
@@ -1365,8 +1362,6 @@
 		36E8618921AFBF3300180D78 /* 无头 */ = {
 			isa = PBXGroup;
 			children = (
-				36E8618A21AFBF3300180D78 /* JXBaseViewController.h */,
-				36E8618E21AFBF3300180D78 /* JXBaseViewController.m */,
 				36E8618C21AFBF3300180D78 /* DWBJXMainController.h */,
 				36E8618F21AFBF3300180D78 /* DWBJXMainController.m */,
 				36E8618D21AFBF3300180D78 /* AllTableviewSonController.h */,
@@ -1561,8 +1556,8 @@
 				36E861E821AFBF3300180D78 /* DWBJXCategoryMyView.m */,
 				36E861ED21AFBF3300180D78 /* DWBJXCategoryMyCell.h */,
 				36E861EA21AFBF3300180D78 /* DWBJXCategoryMyCell.m */,
-				36E861EE21AFBF3300180D78 /* DWBJXCategoryMyCellModel.h */,
-				36E861E921AFBF3300180D78 /* DWBJXCategoryMyCellModel.m */,
+				36E8630621AFD86F00180D78 /* JXBaseViewController.h */,
+				36E8630521AFD86F00180D78 /* JXBaseViewController.m */,
 			);
 			path = DWBJXCategoryMyCell;
 			sourceTree = "<group>";
@@ -1944,7 +1939,6 @@
 				368E69C92140C1A5000EC79C /* UIView+ActionTap.m in Sources */,
 				36E861F921AFBF3300180D78 /* JXCategoryIndicatorBallView.m in Sources */,
 				362F7BB92148ACF000A8ECB1 /* STInputBar.m in Sources */,
-				36E8621B21AFBF3300180D78 /* DWBJXCategoryMyCellModel.m in Sources */,
 				36E861FB21AFBF3300180D78 /* JXCategoryIndicatorBackgroundView.m in Sources */,
 				363BFB4921A958CF00666F8A /* ParentClassScrollViewController.m in Sources */,
 				363BFB5821A95D7F00666F8A /* RedPeopleHeaderView.m in Sources */,
@@ -1986,6 +1980,7 @@
 				36213F4821439C1400B00E2B /* MBProgressHUD+MJ.m in Sources */,
 				363BFB5321A95B4900666F8A /* RedPeopleGoodsController.m in Sources */,
 				36E8621421AFBF3300180D78 /* JXCategoryBaseCellModel.m in Sources */,
+				36E8630721AFD86F00180D78 /* JXBaseViewController.m in Sources */,
 				363BFB4621A958CF00666F8A /* MainTouchTableTableView.m in Sources */,
 				368C3C06213FB44900C10B3E /* NSString+DWBHelp.m in Sources */,
 				368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */,
@@ -2029,7 +2024,6 @@
 				368E69E42140C5BF000EC79C /* CXSystemStatus.m in Sources */,
 				36213F2A21439B3700B00E2B /* JDStatusBarNotification.m in Sources */,
 				362F7BB72148ACF000A8ECB1 /* STEmojiCollectionView.m in Sources */,
-				36E861F421AFBF3300180D78 /* JXBaseViewController.m in Sources */,
 				36446172218BEBF400B9E01E /* DWBAppStoreGetData.m in Sources */,
 				36EEDC9521420585000CBEEB /* UIImage+MyImage.m in Sources */,
 				368E69E92140C70D000EC79C /* KeyChainManager.m in Sources */,

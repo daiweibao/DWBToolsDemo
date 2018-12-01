@@ -86,7 +86,6 @@
     self.categoryView.titleColor = [UIColor blackColor];
     self.categoryView.titleColorGradientEnabled = YES;
     self.categoryView.titleLabelZoomEnabled = YES;
-    self.categoryView.titleLabelZoomEnabled = YES;
     
     
     

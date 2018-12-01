@@ -231,6 +231,10 @@
      imgView.frame = CGRectMake(0.0, 220.0, 100.0, 100.0);
      imgView.animatedImage = [UIImage playGifImageFLAnimated:@"加载中最新"];
      [self.view addSubview:imgView];
+     //动画播放完成1次，停止播放动画
+     imgView.loopCompletionBlock = ^(NSUInteger loopCountRemaining){
+     [weakimgViewAnima stopAnimating];
+     };
      
      */
     

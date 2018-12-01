@@ -152,7 +152,10 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-   
+    //详情
+    //    [UIViewController getTopWindowController]，只能这样push
+    UIViewController * VC = [[UIViewController alloc]init];
+    [[UIViewController getTopWindowController].navigationController pushViewController:VC animated:YES];
 }
 
 
