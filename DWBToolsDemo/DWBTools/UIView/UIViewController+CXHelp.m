@@ -42,6 +42,12 @@
 +(void)removeAnyController:(UIViewController *)controller{
     //    比如从A push 到 B 在从push到C ，然后从C pop直接回A，此时可以在B push到后把B销毁了
     //在当前控制器controller--push后再调用，不能再前面调用
+    
+    
+    if (![[UIViewController getTopWindowController].navigationController.viewControllers containsObject:controller]){
+        return;//控制器不在导航中,必须判断，否者会崩溃
+    }
+    
       //【题外话，这一条跟销毁控制器这个方法无关】注意控制器不走dealloc方法，在控制器里所有block都要用weak修饰，否则不走
     NSMutableArray *marr = [[NSMutableArray alloc]initWithArray:controller.navigationController.viewControllers];
     for (UIViewController *vc in marr) {

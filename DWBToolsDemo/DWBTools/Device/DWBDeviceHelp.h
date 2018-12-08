@@ -49,6 +49,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIImage *)getTheLaunchImage;
 
+/**
+ 通过bundleId打开第三方APP，YES能打开，NO不能打开
+ 
+ @param bundleId APP的bundleId
+ @return 结果
+ */
+-(BOOL)openThreeAPPWithCompleteWithBundelId:(NSString *)bundleId;
+
 @end
 
 NS_ASSUME_NONNULL_END

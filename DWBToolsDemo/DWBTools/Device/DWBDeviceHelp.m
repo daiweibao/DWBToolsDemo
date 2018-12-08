@@ -8,6 +8,7 @@
 
 #import "DWBDeviceHelp.h"
 #import <CoreMotion/CoreMotion.h>//陀螺仪
+#import <objc/runtime.h>
 @implementation DWBDeviceHelp
 //判断是否有摄像头(判断是否是模拟器)范湖YES是模拟器，NO是真机
 +(BOOL)isSimulator{
@@ -133,6 +134,41 @@
     return [UIImage imageNamed:launchImage];
     
 }
+
+
+#pragma mark ============通过bundleId打开APP S======
+
+/**
+ 通过bundleId打开第三方APP，YES能打开，NO不能打开
+ 
+ @param bundleId APP的bundleId
+ @return 结果
+ */
+-(BOOL)openThreeAPPWithCompleteWithBundelId:(NSString *)bundleId{
+    
+    //如果自己打开自己就拦截
+    if ([bundleId isEqual:GET_BundleId]) {
+        return NO;
+    }
+    
+    Class lsa = objc_getClass("LSApplicationWorkspace");
+    NSObject * workspace = [lsa performSelector:@selector(defaultWorkspace)];
+    BOOL isCanOpenAPP = [workspace performSelector:@selector(openApplicationWithBundleID:) withObject:bundleId];
+    //    if (isCanOpenAPP==YES) {
+    //        NSLog(@"能打开APP");
+    //    }else{
+    //        NSLog(@"不能打开APP");
+    //    }
+    
+    return isCanOpenAPP;
+}
+-(void)defaultWorkspace{
+    
+}
+-(void)openApplicationWithBundleID:(NSString *)str{
+    
+}
+#pragma mark ============通过bundleId打开APP E======
 
 
 @end
