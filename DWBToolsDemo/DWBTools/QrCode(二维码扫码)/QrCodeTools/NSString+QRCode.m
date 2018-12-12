@@ -119,7 +119,6 @@
 {
     CIImage* ciImage = [self generateCIImageWithSize:size color:color bgColor:bgColor];
     UIImage *image = [UIImage imageWithCIImage:ciImage];
-    if (!logo) return image;
     if (!image) return nil;
     
     CGFloat logoWidth = image.size.width/4;
