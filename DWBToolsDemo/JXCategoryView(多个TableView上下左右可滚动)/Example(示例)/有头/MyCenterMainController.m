@@ -107,11 +107,13 @@
     [self.view addSubview:self.pagingView];
       _myCategoryView.contentScrollView = self.pagingView.listContainerView.collectionView;
     
+    
+    
+    
     //扣边返回处理，下面的代码要加上
     self.navigationController.interactivePopGestureRecognizer.enabled = (_myCategoryView.selectedIndex == 0);
     [self.pagingView.listContainerView.collectionView.panGestureRecognizer requireGestureRecognizerToFail:self.navigationController.interactivePopGestureRecognizer];
     [self.pagingView.mainTableView.panGestureRecognizer requireGestureRecognizerToFail:self.navigationController.interactivePopGestureRecognizer];
-    self.navigationController.interactivePopGestureRecognizer.enabled = (_myCategoryView.selectedIndex == 0);
     
 }
 

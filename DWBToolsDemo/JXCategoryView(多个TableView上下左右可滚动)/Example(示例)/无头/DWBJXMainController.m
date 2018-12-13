@@ -107,6 +107,7 @@
 //
 //        });
 
+    
 
 }
 
@@ -196,6 +197,7 @@
     
         [self.myCategoryView reloadData];
     
+    
 }
 
 
@@ -205,7 +207,6 @@
 - (void)categoryView:(JXCategoryBaseView *)categoryView didSelectedItemAtIndex:(NSInteger)index {
     //侧滑手势处理
     self.navigationController.interactivePopGestureRecognizer.enabled = (index == 0);
-    
     //去请求数据
     [self.listVCArray[index] loadDataForFirst];
 }
