@@ -163,7 +163,6 @@
 		36DE4FED218D96D200C3FE40 /* NSObject+DWBKVOCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DE4FEC218D96D200C3FE40 /* NSObject+DWBKVOCrash.m */; };
 		36E861EF21AFBF3300180D78 /* lufei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36E8618121AFBF3300180D78 /* lufei.jpg */; };
 		36E861F021AFBF3300180D78 /* MyCenterMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8618621AFBF3300180D78 /* MyCenterMainController.m */; };
-		36E861F121AFBF3300180D78 /* MyCenterSonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8618721AFBF3300180D78 /* MyCenterSonView.m */; };
 		36E861F221AFBF3300180D78 /* MyCenterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8618821AFBF3300180D78 /* MyCenterHeaderView.m */; };
 		36E861F321AFBF3300180D78 /* AllTableviewSonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8618B21AFBF3300180D78 /* AllTableviewSonController.m */; };
 		36E861F521AFBF3300180D78 /* DWBJXMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8618F21AFBF3300180D78 /* DWBJXMainController.m */; };
@@ -226,6 +225,7 @@
 		36EEDCC0214209FE000CBEEB /* 版本检测弹窗关闭@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36EEDCB9214209FE000CBEEB /* 版本检测弹窗关闭@2x.png */; };
 		36EEDCC1214209FE000CBEEB /* CXVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCBA214209FE000CBEEB /* CXVersionUpdate.m */; };
 		36EEDCC2214209FE000CBEEB /* DownUpdateAppAleat.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCBB214209FE000CBEEB /* DownUpdateAppAleat.m */; };
+		36F89AF721C2031E00D4D33D /* MyCenterSonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F89AF621C2031E00D4D33D /* MyCenterSonVC.m */; };
 		36FF0858217A1A3800791E59 /* DWBShareTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FF0856217A1A3800791E59 /* DWBShareTools.m */; };
 /* End PBXBuildFile section */
 
@@ -520,10 +520,8 @@
 		36DE4FEC218D96D200C3FE40 /* NSObject+DWBKVOCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DWBKVOCrash.m"; sourceTree = "<group>"; };
 		36E8618121AFBF3300180D78 /* lufei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lufei.jpg; sourceTree = "<group>"; };
 		36E8618321AFBF3300180D78 /* MyCenterMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterMainController.h; sourceTree = "<group>"; };
-		36E8618421AFBF3300180D78 /* MyCenterSonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterSonView.h; sourceTree = "<group>"; };
 		36E8618521AFBF3300180D78 /* MyCenterHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterHeaderView.h; sourceTree = "<group>"; };
 		36E8618621AFBF3300180D78 /* MyCenterMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterMainController.m; sourceTree = "<group>"; };
-		36E8618721AFBF3300180D78 /* MyCenterSonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterSonView.m; sourceTree = "<group>"; };
 		36E8618821AFBF3300180D78 /* MyCenterHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterHeaderView.m; sourceTree = "<group>"; };
 		36E8618B21AFBF3300180D78 /* AllTableviewSonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllTableviewSonController.m; sourceTree = "<group>"; };
 		36E8618C21AFBF3300180D78 /* DWBJXMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBJXMainController.h; sourceTree = "<group>"; };
@@ -641,6 +639,8 @@
 		36EEDCBA214209FE000CBEEB /* CXVersionUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXVersionUpdate.m; sourceTree = "<group>"; };
 		36EEDCBB214209FE000CBEEB /* DownUpdateAppAleat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownUpdateAppAleat.m; sourceTree = "<group>"; };
 		36EEDCBC214209FE000CBEEB /* CXVersionUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXVersionUpdate.h; sourceTree = "<group>"; };
+		36F89AF521C2031E00D4D33D /* MyCenterSonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCenterSonVC.h; sourceTree = "<group>"; };
+		36F89AF621C2031E00D4D33D /* MyCenterSonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCenterSonVC.m; sourceTree = "<group>"; };
 		36FF0856217A1A3800791E59 /* DWBShareTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBShareTools.m; sourceTree = "<group>"; };
 		36FF0857217A1A3800791E59 /* DWBShareTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBShareTools.h; sourceTree = "<group>"; };
 		5B2AD26055BB273DD4351B06 /* Pods-DWBToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1353,8 +1353,8 @@
 				36E8618621AFBF3300180D78 /* MyCenterMainController.m */,
 				36E8618521AFBF3300180D78 /* MyCenterHeaderView.h */,
 				36E8618821AFBF3300180D78 /* MyCenterHeaderView.m */,
-				36E8618421AFBF3300180D78 /* MyCenterSonView.h */,
-				36E8618721AFBF3300180D78 /* MyCenterSonView.m */,
+				36F89AF521C2031E00D4D33D /* MyCenterSonVC.h */,
+				36F89AF621C2031E00D4D33D /* MyCenterSonVC.m */,
 			);
 			path = "有头";
 			sourceTree = "<group>";
@@ -1979,6 +1979,7 @@
 				36213F6721439DB700B00E2B /* DWB_refreshFooter.m in Sources */,
 				36213F4821439C1400B00E2B /* MBProgressHUD+MJ.m in Sources */,
 				363BFB5321A95B4900666F8A /* RedPeopleGoodsController.m in Sources */,
+				36F89AF721C2031E00D4D33D /* MyCenterSonVC.m in Sources */,
 				36E8621421AFBF3300180D78 /* JXCategoryBaseCellModel.m in Sources */,
 				36E8630721AFD86F00180D78 /* JXBaseViewController.m in Sources */,
 				363BFB4621A958CF00666F8A /* MainTouchTableTableView.m in Sources */,
@@ -1988,7 +1989,6 @@
 				36E8620B21AFBF3300180D78 /* JXCategoryNumberView.m in Sources */,
 				363BFB5F21A9634E00666F8A /* ThirdViewCollectionViewController.m in Sources */,
 				36991147215216F9004B3C0D /* NSString+DWBAttribute.m in Sources */,
-				36E861F121AFBF3300180D78 /* MyCenterSonView.m in Sources */,
 				36213F6921439DB700B00E2B /* MJDIYAutoFooter.m in Sources */,
 				36213F5021439C1400B00E2B /* SVProgressHUD+KZ.m in Sources */,
 				36446176218C2D9000B9E01E /* NSArray+DWBHelp.m in Sources */,

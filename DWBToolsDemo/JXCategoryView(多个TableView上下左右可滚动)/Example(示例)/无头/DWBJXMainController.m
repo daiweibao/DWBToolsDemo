@@ -163,7 +163,7 @@
 }
 
 
-//添加子控制器,传入标题数组
+#pragma mark ===========添加子控制器,传入标题数组==========
 -(void)addSonControllerWithArrayTitles:(NSArray *)arrayTitles{
     //（1）设置组标题
     self.myCategoryView.titles = arrayTitles;
@@ -193,7 +193,8 @@
     //    //重载之后默认回到0，你也可以指定一个index
     //    self.myCategoryView.defaultSelectedIndex = 0;
     //    self.myCategoryView.titles = titles;
-    //    [self.myCategoryView reloadData];
+    
+        [self.myCategoryView reloadData];
     
 }
 

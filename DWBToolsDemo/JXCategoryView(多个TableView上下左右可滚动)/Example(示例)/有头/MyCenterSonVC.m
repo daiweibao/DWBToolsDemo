@@ -1,46 +1,76 @@
 //
-//  MyCenterSonView.m
+//  MyCenterSonVC.m
 //  DWBToolsDemo
 //
-//  Created by 戴维保 on 2018/11/24.
+//  Created by 戴维保 on 2018/12/13.
 //  Copyright © 2018 潮汐科技有限公司. All rights reserved.
 //
 
-#import "MyCenterSonView.h"
-@interface MyCenterSonView()<UITableViewDataSource, UITableViewDelegate>
+#import "MyCenterSonVC.h"
+#import "JXPagerView.h"
+@interface MyCenterSonVC ()<JXPagerViewListViewDelegate,UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, copy) void(^scrollCallback)(UIScrollView *scrollView);
+//是否是第一次加载
+@property (nonatomic, assign) BOOL isDataLoaded;
+#pragma mark ========上面是框架带的===========
+
+
 //创建tableview
 @property (nonatomic,strong) UITableView * tableView;
 @property (nonatomic,assign)NSInteger currentPage;
 @property(nonatomic,strong)NSMutableArray * dataSouce;
 
-//是否是第一次加载
-@property (nonatomic, assign) BOOL isDataLoaded;
+
 
 @end
 
-@implementation MyCenterSonView
+@implementation MyCenterSonVC
+
+
+#pragma mark - JXPagingViewListViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    self.scrollCallback(scrollView);
+}
+
+
+- (UIScrollView *)listScrollView {
+    return self.tableView;
+}
+
+- (void)listViewDidScrollCallback:(void (^)(UIScrollView *))callback {
+    self.scrollCallback = callback;
+}
+
+- (UIView *)listView {
+    return self.view;
+}
+
+- (void)loadDataForFirst {
+    //第一次才加载，后续触发的不处理
+    if (!self.isDataLoaded) {
+        self.isDataLoaded = YES;
+        //数据请求--只能在这里加载
+        [self loadCXData];
+    }
+}
+
+#pragma mark ========上面是框架带的===========
+
+
 -(NSMutableArray *)dataSouce{
     if (!_dataSouce) {
         _dataSouce = [NSMutableArray array];
     }
     return _dataSouce;
 }
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        //创建tableview
-        [self tableView];
-        
-        [self refresh];
-        
-        
-    }
-    return self;
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    //创建tableview
+    [self tableView];
+    
+    [self refresh];
+
 }
-
-
 // 上拉下拉刷新
 - (void)refresh {
     //自己封装的MJ刷新
@@ -53,22 +83,6 @@
     
 }
 
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    
-    self.tableView.frame = self.bounds;
-}
-
-
-- (void)loadDataForFirst {
-    //第一次才加载，后续触发的不处理
-    if (!self.isDataLoaded) {
-        self.isDataLoaded = YES;
-        //数据请求--只能在这里加载
-        [self loadCXData];
-    }
-}
 
 
 //请求数据
@@ -102,8 +116,8 @@
         //        _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
         //去掉分割线
         //        _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
-        [self addSubview:_tableView];
-        _tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, self.height);//坐标
+        [self.view addSubview:_tableView];
+        _tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, self.view.height-50-MC_NavHeight);//坐标,减去导航跟组头高
         
     }
     
@@ -150,29 +164,10 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+       DWBAlertShow(@"点击了cell");
 }
 
 
 
 
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    self.scrollCallback(scrollView);
-}
-
-
-#pragma mark - JXPagingViewListViewDelegate
-
-- (UIScrollView *)listScrollView {
-    return self.tableView;
-}
-
-- (void)listViewDidScrollCallback:(void (^)(UIScrollView *))callback {
-    self.scrollCallback = callback;
-}
-
-- (UIView *)listView {
-    return self;
-}
 @end

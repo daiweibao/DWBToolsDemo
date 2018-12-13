@@ -10,151 +10,229 @@
 
 #import "JXPagerView.h"
 #import "JXCategoryView.h"
-#import "MyCenterHeaderView.h"
-#import "MyCenterSonView.h"
+//刷新类型
 #import "JXPagerListRefreshView.h"
-
 #import "DWBJXCategoryMyView.h"//自定义分组
 #import "DWBJXCategoryMyLineView.h"//自定义滑块
+//头部View
+#import "MyCenterHeaderView.h"
+//子控制器是控制器
+#import "MyCenterSonVC.h"
 
 
 @interface MyCenterMainController ()<JXPagerViewDelegate, JXCategoryViewDelegate>
 @property (nonatomic, strong) JXPagerView *pagingView;
 @property (nonatomic, strong) MyCenterHeaderView *userHeaderView;
-@property (nonatomic, strong) JXCategoryTitleView *categoryView;
-@property (nonatomic, strong) NSArray <MyCenterSonView *> *listViewArray;
-@property (nonatomic, strong) NSArray <NSString *> *titles;
+//自定义组头
+//@property (nonatomic, strong) DWBJXCategoryMyView *myCategoryView;
 
-//高度
+//标准标题组头
+@property (nonatomic, strong) JXCategoryTitleView *myCategoryView;
+
+//存放控制器的数组
+@property (nonatomic, strong) NSMutableArray  *listVCArray;
+
+//头高
 @property(nonatomic,assign)CGFloat JXTableHeaderViewHeight;
+//组头高
 @property(nonatomic,assign)CGFloat JXheightForHeaderInSection;
 
 @end
 
 @implementation MyCenterMainController
+-(NSMutableArray *)listVCArray{
+    if (!_listVCArray) {
+        _listVCArray = [NSMutableArray array];
+    }
+    return _listVCArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //导航标题
+    self.titleNavLabel.text = @"个人中心";
     
+    //初始化
+    [self createCategoryUI];
+    
+    //刷新控件
+    [self refresh];
+    
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self reloadDataMy];
+    });
+
+}
+
+
+//初始化框架
+-(void)createCategoryUI{
+    
+#pragma mark ==============头部================
     //默认高度
     self.JXTableHeaderViewHeight = 200;
     self.JXheightForHeaderInSection = 50;
     
+        //动态改变头高
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     
-//    //动态改变头高
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//
-//        self.JXTableHeaderViewHeight = 300;
-//
-//        _userHeaderView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, self.JXTableHeaderViewHeight);
-//
-//
-//
-//        [self.pagingView reloadData];
-//    });
+            self.JXTableHeaderViewHeight = 300;
     
+            _userHeaderView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, self.JXTableHeaderViewHeight);
     
-    //导航标题
-    self.titleNavLabel.text = @"个人中心";
-    
-   //标题
-    _titles = @[@"今日头条", @"腾讯视频", @"百度百科",@"今日头条", @"腾讯视频", @"百度百科"];
-    
-    
-    //控制器
-     MyCenterSonView *powerListView1 = [[MyCenterSonView alloc] init];
-     MyCenterSonView *powerListView2 = [[MyCenterSonView alloc] init];
-     MyCenterSonView *powerListView3 = [[MyCenterSonView alloc] init];
-    
-    MyCenterSonView *powerListView4 = [[MyCenterSonView alloc] init];
-    MyCenterSonView *powerListView5 = [[MyCenterSonView alloc] init];
-    MyCenterSonView *powerListView6 = [[MyCenterSonView alloc] init];
-    
-    _listViewArray = @[powerListView1, powerListView2, powerListView3,powerListView4, powerListView5, powerListView6];
-    
-    
+            [self.pagingView reloadData];
+        });
     //头部
     _userHeaderView = [[MyCenterHeaderView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, self.JXTableHeaderViewHeight)];
+  
+
+#pragma mark ==============组头+控制器================
+    //默认组头
+    [self initCategoryDefaultUI];
     
-    //分组头
-    _categoryView = [[JXCategoryTitleView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, self.JXheightForHeaderInSection)];
-    self.categoryView.titles = self.titles;
-    self.categoryView.backgroundColor = [UIColor whiteColor];
-    self.categoryView.delegate = self;
-    self.categoryView.titleSelectedColor = [UIColor colorWithRed:105/255.0 green:144/255.0 blue:239/255.0 alpha:1];
-    self.categoryView.titleColor = [UIColor blackColor];
-    self.categoryView.titleColorGradientEnabled = YES;
-    self.categoryView.titleLabelZoomEnabled = YES;
-    
-    
-    
-//    //设置左边距离
-//    self.categoryView.contentEdgeInsetLeft = 30;
-//    //设置右边距离
-//    self.categoryView.contentEdgeInsetRight = 30;
-//
-//    //设置左边遮挡
-//    UILabel * categoryViewLeft = [[UILabel alloc]init];
-//    categoryViewLeft.backgroundColor = [UIColor redColor];
-//    categoryViewLeft.frame = CGRectMake(0, 0, self.categoryView.contentEdgeInsetLeft-15, self.categoryView.height);
-//    [self.categoryView addSubview:categoryViewLeft];
-//
-//    //设置右边边遮挡
-//    UILabel * categoryViewRight = [[UILabel alloc]init];
-//    categoryViewRight.backgroundColor = [UIColor redColor];
-//    categoryViewRight.frame = CGRectMake(self.categoryView.width-self.categoryView.contentEdgeInsetRight+15, 0, self.categoryView.contentEdgeInsetRight-15, self.categoryView.height);
-//    [self.categoryView addSubview:categoryViewRight];
-    
-    
-    //线
-    JXCategoryIndicatorLineView *lineView = [[JXCategoryIndicatorLineView alloc] init];
-    lineView.indicatorLineViewColor = [UIColor colorWithRed:105/255.0 green:144/255.0 blue:239/255.0 alpha:1];
-//    lineView.indicatorLineWidth = 30;
-    self.categoryView.indicators = @[lineView];
-    
-    
-//    //线--自定义滑块
-//    DWBJXCategoryMyLineView *lineView = [[DWBJXCategoryMyLineView alloc] init];
-//    lineView.indicatorLineViewColor = [UIColor colorWithRed:105/255.0 green:144/255.0 blue:239/255.0 alpha:1];
-//    //    lineView.indicatorLineWidth = 30;
-//    [lineView createMyUI];
-//    self.categoryView.indicators = @[lineView];
+    //自定义组头
+//    [self initCategoryMySelftUI];
+   
     
     
 #pragma mark ================ 下拉刷新类型 ==================
     //(1)从头部开始l下拉刷新
     _pagingView = [[JXPagerView alloc] initWithDelegate:self];
-    
-//    (2)从头部下面下拉刷新
-//   _pagingView = [[JXPagerListRefreshView alloc] initWithDelegate:self];
-    
-
+    //    (2)从头部下面下拉刷新
+    //   _pagingView = [[JXPagerListRefreshView alloc] initWithDelegate:self];
     [self.view addSubview:self.pagingView];
-    
-    self.categoryView.contentScrollView = self.pagingView.listContainerView.collectionView;
-    
-    self.navigationController.interactivePopGestureRecognizer.enabled = (self.categoryView.selectedIndex == 0);
-    
-    
-    //触发首次加载第一个控制器数据
-    [self.listViewArray.firstObject loadDataForFirst];
-    
-    //刷新
-    [self refresh];
-    
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        //默认选中哪一个
-        [self.categoryView selectItemAtIndex:1];
-    });
-    
+      _myCategoryView.contentScrollView = self.pagingView.listContainerView.collectionView;
     
     //扣边返回处理，下面的代码要加上
+    self.navigationController.interactivePopGestureRecognizer.enabled = (_myCategoryView.selectedIndex == 0);
     [self.pagingView.listContainerView.collectionView.panGestureRecognizer requireGestureRecognizerToFail:self.navigationController.interactivePopGestureRecognizer];
     [self.pagingView.mainTableView.panGestureRecognizer requireGestureRecognizerToFail:self.navigationController.interactivePopGestureRecognizer];
-    self.navigationController.interactivePopGestureRecognizer.enabled = (self.categoryView.selectedIndex == 0);
+    self.navigationController.interactivePopGestureRecognizer.enabled = (_myCategoryView.selectedIndex == 0);
+    
 }
+
+
+
+//初始化默认标题分组头
+-(void)initCategoryDefaultUI{
+    //分组头
+    _myCategoryView = [[JXCategoryTitleView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, self.JXheightForHeaderInSection)];
+    _myCategoryView.backgroundColor = [UIColor whiteColor];
+    _myCategoryView.delegate = self;
+    _myCategoryView.titleSelectedColor = [UIColor colorWithRed:105/255.0 green:144/255.0 blue:239/255.0 alpha:1];
+    _myCategoryView.titleColor = [UIColor blackColor];
+    _myCategoryView.titleColorGradientEnabled = YES;
+    _myCategoryView.titleLabelZoomEnabled = YES;
+    
+    //线
+    JXCategoryIndicatorLineView *lineView = [[JXCategoryIndicatorLineView alloc] init];
+    lineView.indicatorLineViewColor = [UIColor colorWithRed:105/255.0 green:144/255.0 blue:239/255.0 alpha:1];
+    //    lineView.indicatorLineWidth = 30;
+    _myCategoryView.indicators = @[lineView];
+    
+    
+    //控制器
+    NSArray*titles = @[@"今日头条", @"腾讯视频", @"百度百科",@"今日头条", @"腾讯视频", @"百度百科"];
+    [self addSonControllerWithArrayTitles:titles];
+    //触发首次加载第一个控制器数据
+    [self.listVCArray.firstObject loadDataForFirst];
+    
+    //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    //        //默认选中哪一个
+    //        [_myCategoryView selectItemAtIndex:1];
+    //    });
+    
+}
+
+
+//
+////初始化自定义分组头
+//-(void)initCategoryMySelftUI{
+//    //自定义样式头
+//    self.myCategoryView = [[DWBJXCategoryMyView alloc]init];
+//    //自定义UI
+//    [self.myCategoryView createMyUI];
+//
+//    self.myCategoryView.frame = CGRectMake(0, MC_NavHeight, SCREEN_WIDTH, self.JXheightForHeaderInSection);
+//    self.myCategoryView.delegate = self;
+//    [self.view addSubview:self.myCategoryView];
+//
+//
+//    //设置左边距离
+//    self.myCategoryView.contentEdgeInsetLeft = 30;
+//    //设置右边距离
+//    self.myCategoryView.contentEdgeInsetRight = 30;
+//
+//    //设置左边遮挡
+//    UILabel * categoryViewLeft = [[UILabel alloc]init];
+//    categoryViewLeft.backgroundColor = [UIColor orangeColor];
+//    categoryViewLeft.frame = CGRectMake(0, 0, self.myCategoryView.contentEdgeInsetLeft-15, self.myCategoryView.height);
+//    [self.myCategoryView addSubview:categoryViewLeft];
+//
+//    //设置右边边遮挡
+//    UILabel * categoryViewRight = [[UILabel alloc]init];
+//    categoryViewRight.backgroundColor = [UIColor orangeColor];
+//    categoryViewRight.frame = CGRectMake(self.myCategoryView.width-self.myCategoryView.contentEdgeInsetRight+15, 0, self.myCategoryView.contentEdgeInsetRight-15, self.myCategoryView.height);
+//    [self.myCategoryView addSubview:categoryViewRight];
+//
+//
+//    //滑块
+//    DWBJXCategoryMyLineView *lineView = [[DWBJXCategoryMyLineView alloc] init];//自定义样式
+//    self.myCategoryView.indicators = @[lineView];
+//    [lineView createMyUI];//自定义滑块样式
+//
+//
+//    //控制器
+//    NSArray*titles = @[@"今日头条", @"腾讯视频", @"百度百科",@"今日头条", @"腾讯视频", @"百度百科"];
+//    [self addSonControllerWithArrayTitles:titles];
+//    //触发首次加载第一个控制器数据
+//    [self.listVCArray.firstObject loadDataForFirst];
+//
+////    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+////        //默认选中哪一个
+////        [_myCategoryView selectItemAtIndex:1];
+////    });
+//
+//
+//}
+
+
+
+#pragma mark ===========添加子控制器,传入标题数组==========
+-(void)addSonControllerWithArrayTitles:(NSArray *)arrayTitles{
+    //（1）设置组标题
+    self.myCategoryView.titles = arrayTitles;
+    
+    //(2)先把之前的listView移除掉
+    for (UIViewController *vc in self.listVCArray) {
+        [vc.view removeFromSuperview];
+    }
+    //(3)在移除所有标题数据
+    [self.listVCArray removeAllObjects];
+    
+    
+    for (int i =0; i < arrayTitles.count; i++) {
+        MyCenterSonVC *powerListView1 = [[MyCenterSonVC alloc] init];
+        [self.listVCArray addObject:powerListView1];
+    }
+    
+    
+    //重载之后默认回到0，你也可以指定一个index
+    self.myCategoryView.defaultSelectedIndex = 0;
+    //首次加载第一个控制器加载数据
+    [self.listVCArray.firstObject loadDataForFirst];
+
+    //【必须】刷新组头布局
+    [self.myCategoryView reloadData];
+    //【必须】刷新下面子控制器布局
+    [self.pagingView reloadData];
+    
+}
+
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
@@ -179,11 +257,11 @@
 }
 
 - (UIView *)viewForPinSectionHeaderInPagerView:(JXPagerView *)pagerView {
-    return self.categoryView;
+    return self.myCategoryView;
 }
 
 - (NSArray<UIView<JXPagerViewListViewDelegate> *> *)listViewsInPagerView:(JXPagerView *)pagerView {
-    return self.listViewArray;
+    return self.listVCArray;
 }
 
 #pragma mark ===========打开支持头部下拉变大 ================
@@ -197,10 +275,23 @@
 - (void)categoryView:(JXCategoryBaseView *)categoryView didSelectedItemAtIndex:(NSInteger)index {
     //侧滑手势处理
     self.navigationController.interactivePopGestureRecognizer.enabled = (index == 0);
-    [self.listViewArray[index] loadDataForFirst];
+    [self.listVCArray[index] loadDataForFirst];
 }
 
 
+
+
+
+#pragma mark =========刷新组头数据==================
+/**
+ 重载数据源：比如从服务器获取新的数据、否则用户对分类进行了排序等
+ */
+- (void)reloadDataMy{
+    NSArray *titles =  @[@"刷新后的数据", @"数据2",@"第三3"];
+    //添加子控制器
+    [self addSonControllerWithArrayTitles:titles];
+    
+}
 
 // 上拉下拉刷新
 - (void)refresh {
