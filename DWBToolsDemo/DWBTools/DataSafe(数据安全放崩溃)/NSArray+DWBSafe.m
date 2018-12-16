@@ -14,22 +14,26 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        //（1）不可变数组的处理
-        Class clsI = NSClassFromString(@"__NSArrayI");
-        
-        Method method1 = class_getInstanceMethod(clsI, @selector(objectAtIndexedSubscript:));
-        Method method2 = class_getInstanceMethod(clsI, @selector(yye_objectAtIndexedSubscript:));
-        method_exchangeImplementations(method1, method2);
-        
-        Method method3 = class_getInstanceMethod(clsI, @selector(objectAtIndex:));
-        Method method4 = class_getInstanceMethod(clsI, @selector(yye_objectAtIndex:));
-        method_exchangeImplementations(method3, method4);
-        
-        //公共的
-        Class clsSingleI = NSClassFromString(@"__NSSingleObjectArrayI");
-        Method method5 = class_getInstanceMethod(clsSingleI, @selector(objectAtIndex:));
-        Method method6 = class_getInstanceMethod(clsSingleI, @selector(yyeSingle_objectAtIndex:));
-        method_exchangeImplementations(method5, method6);
+        //ioS11以下不能用
+        if (ios11_0orLater) {
+            //（1）不可变数组的处理
+            Class clsI = NSClassFromString(@"__NSArrayI");
+            
+            Method method1 = class_getInstanceMethod(clsI, @selector(objectAtIndexedSubscript:));
+            Method method2 = class_getInstanceMethod(clsI, @selector(yye_objectAtIndexedSubscript:));
+            method_exchangeImplementations(method1, method2);
+            
+            Method method3 = class_getInstanceMethod(clsI, @selector(objectAtIndex:));
+            Method method4 = class_getInstanceMethod(clsI, @selector(yye_objectAtIndex:));
+            method_exchangeImplementations(method3, method4);
+            
+            //公共的
+            Class clsSingleI = NSClassFromString(@"__NSSingleObjectArrayI");
+            Method method5 = class_getInstanceMethod(clsSingleI, @selector(objectAtIndex:));
+            Method method6 = class_getInstanceMethod(clsSingleI, @selector(yyeSingle_objectAtIndex:));
+            method_exchangeImplementations(method5, method6);
+            
+        }
         
     
     });

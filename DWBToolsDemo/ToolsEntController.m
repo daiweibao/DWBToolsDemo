@@ -43,6 +43,7 @@
     
 
     
+    
     NSString * getStr = [KeyChainManager keyChainReadData:@"chaoxidwb"];
     
     NSLog(@"读取数据：%@",getStr);
@@ -51,34 +52,40 @@
     
 //    NSLog(@"得到配置数据：%@",textName);
     
-    
-    NSString * SDict  = nil;
-    
-    NSMutableDictionary * parmeterDict = [NSMutableDictionary dictionary];
-     [parmeterDict setObject:@"标题" forKey:@"title"];
-   [parmeterDict setObject:SDict forKey:@"platform"];
-
-    [parmeterDict removeObjectForKey:@"jjj"];
-
-    NSLog(@"%@",parmeterDict);
-
-    
-    NSDictionary * divtCX  = @{@"name":@"名字",@"munber":SDict};
-
-    NSLog(@"%@",divtCX);
-    
-    NSArray * arrayCX = @[SDict,@"数组"];
-
-     NSLog(@"空数组：%@",arrayCX);
-    
-    
-    
-    NSMutableArray * marray = [NSMutableArray array];
-    [marray addObject:@"1"];
-
-    NSString * ssstt = arrayCX[100];
-    
-     NSString * ssstt222 = marray[100];
+    if (ios11_0orLater) {
+        
+        
+        NSString * SDict  = nil;
+        
+        NSMutableDictionary * parmeterDict = [NSMutableDictionary dictionary];
+        [parmeterDict setObject:@"标题" forKey:@"title"];
+        [parmeterDict setObject:SDict forKey:@"platform"];
+        
+        [parmeterDict removeObjectForKey:@"jjj"];
+        
+        NSLog(@"%@",parmeterDict);
+        
+        
+        NSDictionary * divtCX  = @{@"name":@"名字",@"munber":SDict};
+        
+        NSLog(@"%@",divtCX);
+        
+        NSArray * arrayCX = @[SDict,@"数组"];
+        
+        NSLog(@"空数组：%@",arrayCX);
+        
+        
+        
+        NSMutableArray * marray = [NSMutableArray array];
+        [marray addObject:@"1"];
+        
+        NSString * ssstt = arrayCX[100];
+        
+        NSString * ssstt222 = marray[100];
+        
+        
+        
+    }
     
     
 

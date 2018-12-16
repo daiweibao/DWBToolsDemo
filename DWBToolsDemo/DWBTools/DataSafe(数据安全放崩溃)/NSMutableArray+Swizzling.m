@@ -36,21 +36,29 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self swizzleSelector:@selector(removeObject:)withSwizzledSelector:@selector(safeRemoveObject:)];
-        [objc_getClass("__NSArrayM") swizzleSelector:@selector(addObject:) withSwizzledSelector:@selector(safeAddObject:)];
-        [objc_getClass("__NSArrayM") swizzleSelector:@selector(removeObjectAtIndex:) withSwizzledSelector:@selector(safeRemoveObjectAtIndex:)];
-        [objc_getClass("__NSArrayM") swizzleSelector:@selector(insertObject:atIndex:) withSwizzledSelector:@selector(safeInsertObject:atIndex:)];
-        [objc_getClass("__NSPlaceholderArray") swizzleSelector:@selector(initWithObjects:count:) withSwizzledSelector:@selector(safeInitWithObjects:count:)];
-        [objc_getClass("__NSArrayM") swizzleSelector:@selector(objectAtIndex:) withSwizzledSelector:@selector(safeObjectAtIndex:)];
         
+        //ioS11以下不能用
+        if (ios11_0orLater) {
+            
+            [self swizzleSelector:@selector(removeObject:)withSwizzledSelector:@selector(safeRemoveObject:)];
+            [objc_getClass("__NSArrayM") swizzleSelector:@selector(addObject:) withSwizzledSelector:@selector(safeAddObject:)];
+            [objc_getClass("__NSArrayM") swizzleSelector:@selector(removeObjectAtIndex:) withSwizzledSelector:@selector(safeRemoveObjectAtIndex:)];
+            [objc_getClass("__NSArrayM") swizzleSelector:@selector(insertObject:atIndex:) withSwizzledSelector:@selector(safeInsertObject:atIndex:)];
+            [objc_getClass("__NSPlaceholderArray") swizzleSelector:@selector(initWithObjects:count:) withSwizzledSelector:@selector(safeInitWithObjects:count:)];
+            [objc_getClass("__NSArrayM") swizzleSelector:@selector(objectAtIndex:) withSwizzledSelector:@selector(safeObjectAtIndex:)];
+            
+            
+            //拦截可变数组越界崩溃（非可变数组在另一个类里处理），如
+            //          NSMutableArray * Marray = [NSMutableArray arrayWithObject:@"1"];
+            //          NSString * str = Marray[100];
+            Class clsM = NSClassFromString(@"__NSArrayM");
+            Method method1_M = class_getInstanceMethod(clsM, @selector(objectAtIndexedSubscript:));
+            Method method2_M = class_getInstanceMethod(clsM, @selector(yye_objectAtIndexedSubscript:));
+            method_exchangeImplementations(method1_M, method2_M);
+            
+            
+        }
         
-        //拦截可变数组越界崩溃（非可变数组在另一个类里处理），如
-//          NSMutableArray * Marray = [NSMutableArray arrayWithObject:@"1"];
-//          NSString * str = Marray[100];
-        Class clsM = NSClassFromString(@"__NSArrayM");
-        Method method1_M = class_getInstanceMethod(clsM, @selector(objectAtIndexedSubscript:));
-        Method method2_M = class_getInstanceMethod(clsM, @selector(yye_objectAtIndexedSubscript:));
-        method_exchangeImplementations(method1_M, method2_M);
        
 });
 }
