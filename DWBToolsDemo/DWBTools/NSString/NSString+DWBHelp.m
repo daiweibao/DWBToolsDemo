@@ -977,6 +977,17 @@
     }
     return randomString;
 }
+/**
+ 获取一个随机整数，范围在[from,to)，包括from，不包括to
+ 
+ @param from 最小值，包含自己
+ @param to 最大值，不含自己
+ @return 结果
+ */
++(int)getRandomNumber:(int)from to:(int)to{
+    //必须加括号，否则不准,顺序不要乱改
+    return from + arc4random() % (to - from);
+}
 
 
 

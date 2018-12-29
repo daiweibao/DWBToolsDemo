@@ -77,6 +77,7 @@
     //动态改变头高
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
        //调用
+        
         [self changeHeaderViewHeight];
     });
 }

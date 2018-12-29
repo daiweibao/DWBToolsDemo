@@ -88,6 +88,17 @@
     }
     
     
+    
+    if (iPhoneX) {
+        
+        DWBAlertShow(@"是iPhoneX");
+        
+    }else{
+        
+        DWBAlertShow(@"不是iPhoneX");
+    }
+    
+    
 
 }
 

@@ -333,6 +333,15 @@
  */
 +(NSString *)randomStringWithLength:(NSInteger)len;
 /**
+ 获取一个随机整数，范围在[from,to），包括from，不包括to
+ 
+ @param from 最小值，包含自己
+ @param to 最大值，不包含自己
+ @return 结果
+ */
++(int)getRandomNumber:(int)from to:(int)to;
+
+/**
  毫秒转化成天、时、分
  
  @param time 毫秒
