@@ -1101,14 +1101,14 @@
 
 
 /**
- 格式化金额，每隔三位一个逗号显示，保留两位小数，必须传入double类型，不能传入字符串类型
+ 格式化金额，每隔三位一个逗号显示，保留两位小数，必须传入string类型
  
- @param doubleMoney 传入的金额,double类型
+ @param stringMoney 传入的金额,String类型
  @return 返回格式化后的金额
  */
-+(NSString *)getMoneyAddDouHaoWithDouble:(double)doubleMoney{
++(NSString *)getMoneyAddDouHaoWithMoneyStr:(NSString *)stringMoney{
     
-    NSString * numberStr = [NSString stringWithFormat:@"%f",doubleMoney];
+    NSString * numberStr = [NSString stringWithFormat:@"%@",stringMoney];
     // 判断是否null 若是赋值为0 防止崩溃
     if (([numberStr isEqual:[NSNull null]] || numberStr == nil)) {
         numberStr = @"0.00";
@@ -1152,12 +1152,12 @@
 /**
  格式化数字，每隔三位一个逗号显示，如果后面没小数就不会显示小数
  
- @param doubleMoney 传入的金额,double类型
+ @param stringMoney 传入的金额
  @return 返回格式化后的金额
  */
-+(NSString *)getMoneyAddDouHaoNOPointWithDouble:(double)doubleMoney{
++(NSString *)getMoneyAddDouHaoNOPointWithMoneyStr:(NSString *)stringMoney{
     
-    NSString * numberStr = [NSString stringWithFormat:@"%f",doubleMoney];
+    NSString * numberStr = [NSString stringWithFormat:@"%@",stringMoney];
     // 判断是否null 若是赋值为0 防止崩溃
     if (([numberStr isEqual:[NSNull null]] || numberStr == nil)) {
         numberStr = @"0";
