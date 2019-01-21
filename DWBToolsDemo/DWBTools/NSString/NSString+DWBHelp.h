@@ -403,6 +403,17 @@
  */
 + (BOOL)isHttpStringWithWeb:(NSString *)infor;
 
+/**
+ 清除WKWeb缓存，否则H5界面跟新，这边不会更新
+ */
++(void)remoWKWebViewCookies;
 
+/**
+ 判断是否是今天第一次。
+ 
+ @param eventId 事件ID
+ @return 返回YES,代表是今天第一次，NO不是
+ */
++(BOOL)isToadyFirstWithEventId:(NSString *)eventId;
 
 @end

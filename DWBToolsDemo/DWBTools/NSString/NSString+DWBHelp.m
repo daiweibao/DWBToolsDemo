@@ -10,6 +10,8 @@
 //调用系统震动和声音
 #import <AudioToolbox/AudioToolbox.h>
 
+#import <WebKit/WebKit.h>
+
 @implementation NSString (DWBHelp)
 
 //密码验证（6-20位字母和数字组合） yes表示是格式正确的密码
@@ -1185,6 +1187,67 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:infor];
 }
+
+/**
+ 清除WKWeb缓存，否则H5界面跟新，这边不会更新
+ */
++(void)remoWKWebViewCookies{
+    
+    
+    if ([UIDevice currentDevice].systemVersion.floatValue>=9.0) {
+        //        - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation 中就成功了 。
+        //    然而我们等到了iOS9！！！没错！WKWebView的缓存清除API出来了！代码如下：这是删除所有缓存和cookie的
+        NSSet *websiteDataTypes = [WKWebsiteDataStore allWebsiteDataTypes];
+        //// Date from
+        NSDate *dateFrom = [NSDate dateWithTimeIntervalSince1970:0];
+        //// Execute
+        [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:websiteDataTypes modifiedSince:dateFrom completionHandler:^{
+        }];
+    }else{
+        //iOS8清除缓存
+        NSString * libraryPath =  NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).firstObject;
+        NSString * cookiesFolderPath = [libraryPath stringByAppendingString:@"/Cookies"];
+        [[NSFileManager defaultManager] removeItemAtPath:cookiesFolderPath error:nil];
+    }
+    
+    
+}
+
+
+/**
+ 判断是否是今天第一次。
+ 
+ @param eventId 事件ID
+ @return 返回YES,代表是今天第一次，NO不是
+ */
++(BOOL)isToadyFirstWithEventId:(NSString *)eventId{
+    
+    //得到今天的日期
+    NSString * ToadyDate = [NSString getNowDateFormat:@"yyyy-MM-dd"];
+    //今天要存储的内容：今天日期+事件Id
+    NSString * ToadyDateAndId = [NSString stringWithFormat:@"%@%@",ToadyDate,eventId];
+    
+    //数据存储
+    NSUserDefaults * ud = [NSUserDefaults standardUserDefaults];
+    //(1)根据事件Id+今日日期取出当前存储数据
+    NSString * getTodayStr = [ud objectForKey:@"APPDWBEventId"];
+    //(2)存储数据
+    [ud setObject:ToadyDateAndId forKey:@"APPDWBEventId"];
+    
+    [ud synchronize];
+    
+    if (![ToadyDateAndId isEqual:getTodayStr]) {
+        //如果不相等就是今天第一次是今天第一次
+        
+        return YES;
+        
+    }else{
+        //相等，说明不是今天第一次
+        
+        return NO;
+    }
+}
+
 
 
 @end
