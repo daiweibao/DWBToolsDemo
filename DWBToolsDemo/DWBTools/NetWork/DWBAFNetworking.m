@@ -8,6 +8,9 @@
 
 #import "DWBAFNetworking.h"
 
+static NSString const * YZNetworkState = @"NO";//网络状态，可变
+static NSTimeInterval YZnetworkChange = 0;//网络是否改变过
+
 //单例
 static AFHTTPSessionManager *manager;
 
@@ -102,5 +105,55 @@ static AFHTTPSessionManager *manager;
 + (BOOL)isHaveNetwork {
     return [AFNetworkReachabilityManager sharedManager].reachable;
 }
+
+
+#pragma mark - 网络监听
+/**
+ 监听网络状态,在AppDelegate里调用
+ */
++ (void)yz_currentNetStates {
+    
+    AFNetworkReachabilityManager *manger = [AFNetworkReachabilityManager sharedManager];
+    
+    [manger setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        /*
+         AFNetworkReachabilityStatusUnknown          = -1,
+         AFNetworkReachabilityStatusNotReachable     = 0,
+         AFNetworkReachabilityStatusReachableViaWWAN = 1,
+         AFNetworkReachabilityStatusReachableViaWiFi = 2,
+         */
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown:
+                YZNetworkState = @"NO";
+                YZnetworkChange = 1;
+                break;
+            case AFNetworkReachabilityStatusNotReachable:
+                NSLog(@"没有网络");
+                YZNetworkState = @"NO";
+                YZnetworkChange = 1;
+                break;
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+                NSLog(@"3G|4G");
+                YZNetworkState = @"4G";
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                NSLog(@"WiFi");
+                YZNetworkState = @"WIFI";
+                break;
+            default:
+                break;
+        }
+        if (![YZNetworkState isEqualToString:@"NO"]) {
+            //有网
+        }
+        
+        if (![YZNetworkState isEqualToString:@"NO"] && YZnetworkChange) {
+            YZnetworkChange = 0;
+            //发出网络状态改变的通知，从没网到有网
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"YZ_networkChange" object:nil];
+        }
+    }];
+}
+
 
 @end

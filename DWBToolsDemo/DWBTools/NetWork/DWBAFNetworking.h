@@ -31,4 +31,9 @@
  */
 + (BOOL)isHaveNetwork;
 
+/**
+ 监听网络状态,在AppDelegate里调用
+ */
++ (void)yz_currentNetStates;
+
 @end

@@ -123,6 +123,7 @@
 		36446172218BEBF400B9E01E /* DWBAppStoreGetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446170218BEBF400B9E01E /* DWBAppStoreGetData.m */; };
 		36446176218C2D9000B9E01E /* NSArray+DWBHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446175218C2D9000B9E01E /* NSArray+DWBHelp.m */; };
 		36446185218D819D00B9E01E /* UIViewController+CXHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446183218D819C00B9E01E /* UIViewController+CXHelp.m */; };
+		365017C9222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 365017C7222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m */; };
 		368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F6213F67C800C10B3E /* AppDelegate.m */; };
 		368C39FA213F67C800C10B3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F9213F67C800C10B3E /* ViewController.m */; };
 		368C39FD213F67C800C10B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368C39FB213F67C800C10B3E /* Main.storyboard */; };
@@ -439,6 +440,8 @@
 		36446175218C2D9000B9E01E /* NSArray+DWBHelp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DWBHelp.m"; sourceTree = "<group>"; };
 		36446183218D819C00B9E01E /* UIViewController+CXHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CXHelp.m"; sourceTree = "<group>"; };
 		36446184218D819C00B9E01E /* UIViewController+CXHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CXHelp.h"; sourceTree = "<group>"; };
+		365017C7222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+DWBThreeTouchHelp.m"; sourceTree = "<group>"; };
+		365017C8222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DWBThreeTouchHelp.h"; sourceTree = "<group>"; };
 		368C39F2213F67C800C10B3E /* DWBToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWBToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368C39F5213F67C800C10B3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		368C39F6213F67C800C10B3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1009,6 +1012,7 @@
 		3634E5A7217D5BB4002B43DD /* ProjectAbout(项目相关) */ = {
 			isa = PBXGroup;
 			children = (
+				365017C6222E55A300E4B622 /* 3DTouch */,
 				3634E5A8217D5E42002B43DD /* AppConfig */,
 			);
 			path = "ProjectAbout(项目相关)";
@@ -1097,6 +1101,15 @@
 				36446175218C2D9000B9E01E /* NSArray+DWBHelp.m */,
 			);
 			path = NSArray;
+			sourceTree = "<group>";
+		};
+		365017C6222E55A300E4B622 /* 3DTouch */ = {
+			isa = PBXGroup;
+			children = (
+				365017C8222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.h */,
+				365017C7222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m */,
+			);
+			path = 3DTouch;
 			sourceTree = "<group>";
 		};
 		368C39E9213F67C800C10B3E = {
@@ -1907,6 +1920,7 @@
 				362F7BC72148AF2400A8ECB1 /* ZXPUnicode.m in Sources */,
 				36E8621721AFBF3300180D78 /* JXPagerView.m in Sources */,
 				36E8620821AFBF3300180D78 /* JXCategoryImageView.m in Sources */,
+				365017C9222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m in Sources */,
 				36213F4721439C1400B00E2B /* LoadingCircleHUD.m in Sources */,
 				36E8620121AFBF3300180D78 /* JXCategoryDotCellModel.m in Sources */,
 				368E69CC2140C231000EC79C /* UIView+Animation.m in Sources */,

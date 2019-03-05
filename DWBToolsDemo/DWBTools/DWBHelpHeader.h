@@ -180,11 +180,14 @@ static inline NSString * myMane(){
 //iPhoneX和iPhoneXS
 #define XH_IPHONEX  ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 //iPhoneXR
-#define XH_IPHONEXR    ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
+#define XH_IPHONEXR ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
+//iPhoneXR-模拟器（特殊）
+#define XH_IPHONEXR_Simulator [[UIScreen mainScreen] bounds].size.width == 375.0f && [[UIScreen mainScreen] bounds].size.height == 812.0f
 // iPhoneXS Max
 #define XH_IPHONEXSMAX    ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
 //最终判断，依赖上面宏定义
-#define iPhoneX ((XH_IPHONEX || XH_IPHONEXR || XH_IPHONEXSMAX) ? YES : NO)
+#define iPhoneX ((XH_IPHONEX || XH_IPHONEXR || XH_IPHONEXSMAX || XH_IPHONEXR_Simulator) ? YES : NO)
+
 
 
 
