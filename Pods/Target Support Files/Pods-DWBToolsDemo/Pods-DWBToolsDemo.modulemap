@@ -1,0 +1,6 @@
+framework module Pods_DWBToolsDemo {
+  umbrella header "Pods-DWBToolsDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
