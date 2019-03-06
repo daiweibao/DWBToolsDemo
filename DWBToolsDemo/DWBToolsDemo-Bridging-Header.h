@@ -14,6 +14,12 @@
 #ifndef YueZhuan_Bridging_Header_h
 #define YueZhuan_Bridging_Header_h
 
+//自己封装三方库
+#import "UIView+Help.h"
+#import "NSString+DWBHelp.h"
+#import "getUUID.h"
+#import "UIView+Extension.h"
+
 //警告：注意这个桥接文件不要乱移动他的文件夹目录位置，否则会找不到
 
 ///MARK-----pod导入的三方库----------

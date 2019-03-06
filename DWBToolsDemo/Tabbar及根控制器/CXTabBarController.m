@@ -105,23 +105,23 @@
     //设置角标数量
     //    homeVC.tabBarItem.badgeValue = @"1111";
     
-    [self setChildVC:homeVC title:@"首页" image:@"tabbar-资讯" selectedImage:@"tabbar-资讯S"];
+    [self setChildVC:homeVC title:@"首页" image:@"tab_mall_normal" selectedImage:@"tab_mall"];
     
     UIViewController *SecondVC = [[UIViewController alloc] init];
-    [self setChildVC:SecondVC title:@"测试1" image:@"tabbar-缴费"  selectedImage:@"tabbar-缴费S"];
+    [self setChildVC:SecondVC title:@"分类" image:@"tab_fenlei_normal"  selectedImage:@"tab_fenlei"];
     
-    //语音
+    //中间突出
     UIViewController *voiceVC = [[UIViewController alloc] init];
     self.voiceVC = voiceVC;
     [self setChildVC:voiceVC title:@"" image:@""  selectedImage:@""];//什么都不设置
 
     //开门
     UIViewController *messageVC = [[UIViewController alloc] init];
-    [self setChildVC:messageVC title:@"测试2" image:@"tabbar-门禁"  selectedImage:@"tabbar-门禁S"];
+    [self setChildVC:messageVC title:@"发现" image:@"tab_faxian_normal"  selectedImage:@"tab_faxian"];
     
     //我的
     UIViewController *myVC = [[UIViewController alloc] init];
-    [self setChildVC:myVC title:@"我的" image:@"tabbar-我的" selectedImage:@"tabbar-我的S"];
+    [self setChildVC:myVC title:@"我的" image:@"tab_mine_normal" selectedImage:@"tab_mine"];
 }
 
 //设置子控制器
@@ -134,7 +134,7 @@
     
     //设置字体属性(选中)
     NSMutableDictionary *dictSelect = [NSMutableDictionary dictionary];
-    dictSelect[NSForegroundColorAttributeName] = [UIColor blackColor];
+    dictSelect[NSForegroundColorAttributeName] = COLOR_Main;
     dictSelect[NSFontAttributeName] = [UIFont systemFontOfSize:12];
     
     //禁用渲染

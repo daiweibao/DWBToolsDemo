@@ -11,6 +11,9 @@
 		360F0F9A218067B6006A7835 /* NSMutableArray+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0F96218067B6006A7835 /* NSMutableArray+Swizzling.m */; };
 		360F0FC7218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0FC6218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m */; };
 		3610DC072181757A00EAB9CA /* NSNull+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3610DC062181757A00EAB9CA /* NSNull+safe.m */; };
+		361F61EC222FCCDF0029CF29 /* DWBMacroHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F61EB222FCCDF0029CF29 /* DWBMacroHelp.swift */; };
+		361F61EE222FCE360029CF29 /* UIColor_RGBString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F61ED222FCE360029CF29 /* UIColor_RGBString.swift */; };
+		361F61F2222FCF680029CF29 /* MacroSwiftHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F61F1222FCF680029CF29 /* MacroSwiftHeader.swift */; };
 		36213F0F214364BD00B00E2B /* AlretCXSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F04214364BD00B00E2B /* AlretCXSheetView.m */; };
 		36213F10214364BD00B00E2B /* AlertCXCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F05214364BD00B00E2B /* AlertCXCenterView.m */; };
 		36213F11214364BD00B00E2B /* JXActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F0A214364BD00B00E2B /* JXActionSheet.m */; };
@@ -257,6 +260,9 @@
 		360F0FC6218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+DWBDictSafe.m"; sourceTree = "<group>"; };
 		3610DC052181757A00EAB9CA /* NSNull+safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+safe.h"; sourceTree = "<group>"; };
 		3610DC062181757A00EAB9CA /* NSNull+safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+safe.m"; sourceTree = "<group>"; };
+		361F61EB222FCCDF0029CF29 /* DWBMacroHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWBMacroHelp.swift; sourceTree = "<group>"; };
+		361F61ED222FCE360029CF29 /* UIColor_RGBString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor_RGBString.swift; sourceTree = "<group>"; };
+		361F61F1222FCF680029CF29 /* MacroSwiftHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroSwiftHeader.swift; sourceTree = "<group>"; };
 		36213F03214364BD00B00E2B /* JXActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXActionSheet.h; sourceTree = "<group>"; };
 		36213F04214364BD00B00E2B /* AlretCXSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlretCXSheetView.m; sourceTree = "<group>"; };
 		36213F05214364BD00B00E2B /* AlertCXCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertCXCenterView.m; sourceTree = "<group>"; };
@@ -709,6 +715,15 @@
 			path = "DataSafe(数据安全放崩溃)";
 			sourceTree = "<group>";
 		};
+		361F61EA222FC7810029CF29 /* DWBSwiftTools(swift工具) */ = {
+			isa = PBXGroup;
+			children = (
+				361F61EB222FCCDF0029CF29 /* DWBMacroHelp.swift */,
+				361F61ED222FCE360029CF29 /* UIColor_RGBString.swift */,
+			);
+			path = "DWBSwiftTools(swift工具)";
+			sourceTree = "<group>";
+		};
 		36213F02214364BD00B00E2B /* DWBAlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1151,6 +1166,7 @@
 			isa = PBXGroup;
 			children = (
 				3634E5A7217D5BB4002B43DD /* ProjectAbout(项目相关) */,
+				361F61EA222FC7810029CF29 /* DWBSwiftTools(swift工具) */,
 				368C3BE8213FA78100C10B3E /* DWBTools */,
 				36213F5221439DB700B00E2B /* DWBThreeLib(三方封装) */,
 				36213F932143A6A500B00E2B /* Tabbar及根控制器 */,
@@ -1161,6 +1177,7 @@
 				368C3AD8213F6ADB00C10B3E /* DWBToolsPrefixHeader.pch */,
 				365017CB222FA2CB00E4B622 /* DWBToolsDemo-Bridging-Header.h */,
 				36DA4A762147B59000048763 /* MacroHeaderHeader.h */,
+				361F61F1222FCF680029CF29 /* MacroSwiftHeader.swift */,
 				368C39F5213F67C800C10B3E /* AppDelegate.h */,
 				368C39F6213F67C800C10B3E /* AppDelegate.m */,
 				36213FCE2143A99D00B00E2B /* HopmeViewController.h */,
@@ -1988,6 +2005,7 @@
 				36EEDCC2214209FE000CBEEB /* DownUpdateAppAleat.m in Sources */,
 				3621B7722192D2040000BDFA /* NSDictionary+NilSafe.m in Sources */,
 				36213F2E21439B3700B00E2B /* JDStatusBarStyle.m in Sources */,
+				361F61F2222FCF680029CF29 /* MacroSwiftHeader.swift in Sources */,
 				36E8620921AFBF3300180D78 /* JXCategoryImageCell.m in Sources */,
 				36213F6521439DB700B00E2B /* UIScrollView+EndRefresh.m in Sources */,
 				363BFB5421A95B4900666F8A /* RedpeopleCenterController.m in Sources */,
@@ -2024,6 +2042,7 @@
 				36213F8A2143A4BF00B00E2B /* CXHTMLWebController.m in Sources */,
 				36213FD32143ABB000B00E2B /* ToolsEntController.m in Sources */,
 				36EEDC9221420585000CBEEB /* UIImage+PlayGif.m in Sources */,
+				361F61EC222FCCDF0029CF29 /* DWBMacroHelp.swift in Sources */,
 				36E8620021AFBF3300180D78 /* JXCategoryDotView.m in Sources */,
 				368E69D12140C27D000EC79C /* UIView+Help.m in Sources */,
 				368C3A05213F67C900C10B3E /* main.m in Sources */,
@@ -2042,6 +2061,7 @@
 				36F89AF721C2031E00D4D33D /* MyCenterSonVC.m in Sources */,
 				36E8621421AFBF3300180D78 /* JXCategoryBaseCellModel.m in Sources */,
 				36E8630721AFD86F00180D78 /* JXBaseViewController.m in Sources */,
+				361F61EE222FCE360029CF29 /* UIColor_RGBString.swift in Sources */,
 				363BFB4621A958CF00666F8A /* MainTouchTableTableView.m in Sources */,
 				368C3C06213FB44900C10B3E /* NSString+DWBHelp.m in Sources */,
 				368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */,

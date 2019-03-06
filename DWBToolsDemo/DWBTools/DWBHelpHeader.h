@@ -338,6 +338,8 @@ UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlert
 #define NOTIF_POST(n, obj)    [[NSNotificationCenter defaultCenter] postNotificationName:n object:obj]
 #define NOTIF_REMV()        [[NSNotificationCenter defaultCenter] removeObserver:self]
 
+//主题色
+#define COLOR_Main [UIColor colorWithHexString:@"#f94747"]
 
 #pragma mark ===============项目相关 S ==================
 //取出用户ID
