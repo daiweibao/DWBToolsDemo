@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3009708B8FBB5CE10309819E /* libPods-DWBToolsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C09C75787C5C6594A6B0EA4 /* libPods-DWBToolsDemo.a */; };
 		3600708C21A2630E00A6BEE9 /* UILabel+RemoveNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 3600708B21A2630E00A6BEE9 /* UILabel+RemoveNull.m */; };
 		360F0F9A218067B6006A7835 /* NSMutableArray+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0F96218067B6006A7835 /* NSMutableArray+Swizzling.m */; };
 		360F0FC7218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0FC6218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m */; };
@@ -124,6 +123,7 @@
 		36446176218C2D9000B9E01E /* NSArray+DWBHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446175218C2D9000B9E01E /* NSArray+DWBHelp.m */; };
 		36446185218D819D00B9E01E /* UIViewController+CXHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446183218D819C00B9E01E /* UIViewController+CXHelp.m */; };
 		365017C9222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 365017C7222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m */; };
+		365017CD222FA2CB00E4B622 /* DWBSwiftTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365017CC222FA2CB00E4B622 /* DWBSwiftTestController.swift */; };
 		368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F6213F67C800C10B3E /* AppDelegate.m */; };
 		368C39FA213F67C800C10B3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F9213F67C800C10B3E /* ViewController.m */; };
 		368C39FD213F67C800C10B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368C39FB213F67C800C10B3E /* Main.storyboard */; };
@@ -228,6 +228,7 @@
 		36EEDCC2214209FE000CBEEB /* DownUpdateAppAleat.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCBB214209FE000CBEEB /* DownUpdateAppAleat.m */; };
 		36F89AF721C2031E00D4D33D /* MyCenterSonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F89AF621C2031E00D4D33D /* MyCenterSonVC.m */; };
 		36FF0858217A1A3800791E59 /* DWBShareTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FF0856217A1A3800791E59 /* DWBShareTools.m */; };
+		7066025CEBB7665CA4EA6514 /* Pods_DWBToolsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3CFF87D5822A2BBB22EE90 /* Pods_DWBToolsDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -442,6 +443,8 @@
 		36446184218D819C00B9E01E /* UIViewController+CXHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CXHelp.h"; sourceTree = "<group>"; };
 		365017C7222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+DWBThreeTouchHelp.m"; sourceTree = "<group>"; };
 		365017C8222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DWBThreeTouchHelp.h"; sourceTree = "<group>"; };
+		365017CB222FA2CB00E4B622 /* DWBToolsDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DWBToolsDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		365017CC222FA2CB00E4B622 /* DWBSwiftTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWBSwiftTestController.swift; sourceTree = "<group>"; };
 		368C39F2213F67C800C10B3E /* DWBToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWBToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368C39F5213F67C800C10B3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		368C39F6213F67C800C10B3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -647,8 +650,8 @@
 		36FF0856217A1A3800791E59 /* DWBShareTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBShareTools.m; sourceTree = "<group>"; };
 		36FF0857217A1A3800791E59 /* DWBShareTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBShareTools.h; sourceTree = "<group>"; };
 		5B2AD26055BB273DD4351B06 /* Pods-DWBToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		6C09C75787C5C6594A6B0EA4 /* libPods-DWBToolsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DWBToolsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53F89B2E10274ABDD3C0872 /* Pods-DWBToolsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		AF3CFF87D5822A2BBB22EE90 /* Pods_DWBToolsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DWBToolsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -656,7 +659,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3009708B8FBB5CE10309819E /* libPods-DWBToolsDemo.a in Frameworks */,
+				7066025CEBB7665CA4EA6514 /* Pods_DWBToolsDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,7 +683,7 @@
 		29D6738566231BA99388E74C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6C09C75787C5C6594A6B0EA4 /* libPods-DWBToolsDemo.a */,
+				AF3CFF87D5822A2BBB22EE90 /* Pods_DWBToolsDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1112,6 +1115,16 @@
 			path = 3DTouch;
 			sourceTree = "<group>";
 		};
+		365017CA222FA08300E4B622 /* DWBDevVC（功能临时入口） */ = {
+			isa = PBXGroup;
+			children = (
+				36213FD12143ABB000B00E2B /* ToolsEntController.h */,
+				36213FD22143ABB000B00E2B /* ToolsEntController.m */,
+				365017CC222FA2CB00E4B622 /* DWBSwiftTestController.swift */,
+			);
+			path = "DWBDevVC（功能临时入口）";
+			sourceTree = "<group>";
+		};
 		368C39E9213F67C800C10B3E = {
 			isa = PBXGroup;
 			children = (
@@ -1143,15 +1156,15 @@
 				36213F932143A6A500B00E2B /* Tabbar及根控制器 */,
 				36E8617F21AFBF3300180D78 /* JXCategoryView(多个TableView上下左右可滚动) */,
 				363BFB3621A958CF00666F8A /* Tableview头部带联动 */,
+				365017CA222FA08300E4B622 /* DWBDevVC（功能临时入口） */,
 				362F7BC82148B09300A8ECB1 /* README.md */,
 				368C3AD8213F6ADB00C10B3E /* DWBToolsPrefixHeader.pch */,
+				365017CB222FA2CB00E4B622 /* DWBToolsDemo-Bridging-Header.h */,
 				36DA4A762147B59000048763 /* MacroHeaderHeader.h */,
 				368C39F5213F67C800C10B3E /* AppDelegate.h */,
 				368C39F6213F67C800C10B3E /* AppDelegate.m */,
 				36213FCE2143A99D00B00E2B /* HopmeViewController.h */,
 				36213FCF2143A99D00B00E2B /* HopmeViewController.m */,
-				36213FD12143ABB000B00E2B /* ToolsEntController.h */,
-				36213FD22143ABB000B00E2B /* ToolsEntController.m */,
 				362F7BE22148EE7E00A8ECB1 /* LabelActionController.h */,
 				362F7BE32148EE7E00A8ECB1 /* LabelActionController.m */,
 				3699114E21523AD4004B3C0D /* TestModel.h */,
@@ -1688,6 +1701,7 @@
 				368C39EF213F67C800C10B3E /* Frameworks */,
 				368C39F0213F67C800C10B3E /* Resources */,
 				90CB2C94CE659D6DB840D5CA /* [CP] Copy Pods Resources */,
+				5B1DE8DDFD73B99E1FDB998B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1745,6 +1759,7 @@
 				TargetAttributes = {
 					368C39F1213F67C800C10B3E = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 					368C3A09213F67C900C10B3E = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -1873,6 +1888,38 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5B1DE8DDFD73B99E1FDB998B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		90CB2C94CE659D6DB840D5CA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1880,13 +1927,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo-resources.sh",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/UMCCommonLog/UMCommonLog/UMCommonLog.bundle",
 				"${PODS_ROOT}/UMCShare/UMShare/SocialLibraries/Sina/SinaSDK/WeiboSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMCommonLog.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
 			);
@@ -1984,6 +2029,7 @@
 				368C3A05213F67C900C10B3E /* main.m in Sources */,
 				3621B7552191B3320000BDFA /* HZWaitingView.m in Sources */,
 				36213F13214364BD00B00E2B /* AlertViewTool.m in Sources */,
+				365017CD222FA2CB00E4B622 /* DWBSwiftTestController.swift in Sources */,
 				36FF0858217A1A3800791E59 /* DWBShareTools.m in Sources */,
 				36E8620721AFBF3300180D78 /* JXCategoryTitleView.m in Sources */,
 				36213FB52143A6A500B00E2B /* CXTabBarController.m in Sources */,
@@ -2235,6 +2281,7 @@
 			baseConfigurationReference = 5B2AD26055BB273DD4351B06 /* Pods-DWBToolsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WD7W3QK2S3;
@@ -2247,6 +2294,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chaoxi.DWBToolsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DWBToolsDemo/DWBToolsDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2256,6 +2306,7 @@
 			baseConfigurationReference = A53F89B2E10274ABDD3C0872 /* Pods-DWBToolsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WD7W3QK2S3;
@@ -2268,6 +2319,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chaoxi.DWBToolsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DWBToolsDemo/DWBToolsDemo-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2275,6 +2328,7 @@
 		368C3A22213F67C900C10B3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WD7W3QK2S3;
@@ -2294,6 +2348,7 @@
 		368C3A23213F67C900C10B3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WD7W3QK2S3;
@@ -2313,6 +2368,7 @@
 		368C3A25213F67C900C10B3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WD7W3QK2S3;
 				INFOPLIST_FILE = DWBToolsDemoUITests/Info.plist;
@@ -2331,6 +2387,7 @@
 		368C3A26213F67C900C10B3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WD7W3QK2S3;
 				INFOPLIST_FILE = DWBToolsDemoUITests/Info.plist;

@@ -7,7 +7,7 @@
 //
 
 #import "BlankPagesView.h"
-#import <MJRefresh.h>
+#import "MJRefresh.h"
 @interface BlankPagesView()
 
 @end

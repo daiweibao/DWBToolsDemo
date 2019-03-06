@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <FLAnimatedImageView+WebCache.h>
+#import "FLAnimatedImageView+WebCache.h"
 @interface HZPhotoBrowserView : UIView
 @property (nonatomic,strong) UIScrollView *scrollview;
 //@property (nonatomic,strong) UIImageView *imageview;

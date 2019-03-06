@@ -12,6 +12,11 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+
+//Swift文件总头文件，导入后即可调用Swift所有类（导入到PCH里）
+#import "DWBToolsDemo-Swift.h"
+
+
 //工具类头文件+宏定义
 
 #import "DWBHelpHeader.h"
