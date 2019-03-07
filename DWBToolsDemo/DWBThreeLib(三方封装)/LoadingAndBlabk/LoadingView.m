@@ -117,7 +117,7 @@
         backButton.frame = CGRectMake(0, MC_StatusBarHeight, 44, 44);
         backButton.contentMode = UIViewContentModeScaleAspectFill;
         backButton.clipsToBounds = YES;
-        [backButton setImage:[UIImage imageNamed:@"黑色返回"] forState:UIControlStateNormal];
+        [backButton setImage:[UIImage imageNamed:@"nav_back_black"] forState:UIControlStateNormal];
         [backButton addTarget:self action:@selector(pressButtonLeftNew) forControlEvents:UIControlEventTouchUpInside];
         [TopView addSubview:backButton];
     

@@ -25,8 +25,6 @@ let px = SCREEN_WIDTH/750.0   //高度和屏幕高度的比例，为了适配iph
 
 //屏幕宽度的封面9/16
 let ImageHeight = SCREEN_WIDTH*9/16   //图片比例宽度
-//有30.0安全边距的屏幕宽度的封面9/16
-let ImageHeightCover = (SCREEN_WIDTH-60.0*px) * (9.0/16)
 
 //获取系统版本号（是iOS9还是10）并判断系统版本号（函数）
 func ios7orLater() ->Bool { return (UIDevice.current.systemVersion as NSString).doubleValue >= 7.0 }

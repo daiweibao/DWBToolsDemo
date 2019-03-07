@@ -23,34 +23,41 @@
     //判空在创建，否则会创建两次这个按钮太黑了
     if (self.plusBtn==nil) {
         
+        //创建父视图
+        UIView * viewSub = [[UIView alloc]init];
+        viewSub.frame = CGRectMake(SCREEN_WIDTH/5 * 2, -30, SCREEN_WIDTH/5, 80);
+        [self addSubview:viewSub];
+        
+        
+        //创建半圆
+        UIView * viewRound = [[UIView alloc]init];
+        viewRound.frame = CGRectMake((viewSub.width-77)/2, 0, 77, 70);
+        viewRound.backgroundColor = [UIColor whiteColor];
+        viewRound.layer.cornerRadius = 40;
+        viewRound.layer.borderWidth = 0.5;
+        viewRound.layer.borderColor= COLOR_Line_Small.CGColor;
+        viewRound.clipsToBounds = YES;
+        [viewSub addSubview:viewRound];
+        
+        //遮挡半圆下半部分
+        UIView * viewRoundZD = [[UIView alloc]init];
+        viewRoundZD.frame = CGRectMake(0, 30, viewSub.width, viewSub.height-30);
+        viewRoundZD.backgroundColor = [UIColor whiteColor];
+        [viewSub addSubview:viewRoundZD];
+        
+        
+        //圆圈按钮
         UIButton *publishBtn = [[UIButton alloc] init];
         self.plusBtn = publishBtn;
-        //button各个状态点击事件
+        //点击事件
         [publishBtn addTarget:self action:@selector(recordTouchDown:) forControlEvents:UIControlEventTouchDown];
-        [publishBtn addTarget:self action:@selector(recordTouchUpOutside) forControlEvents:UIControlEventTouchUpOutside];
-        [publishBtn addTarget:self action:@selector(recordTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
-        [publishBtn addTarget:self action:@selector(recordTouchDragEnter) forControlEvents:UIControlEventTouchDragEnter];
-        [publishBtn addTarget:self action:@selector(recordTouchDragInside) forControlEvents:UIControlEventTouchDragInside];
-        [publishBtn addTarget:self action:@selector(recordTouchDragOutside) forControlEvents:UIControlEventTouchDragOutside];
-        [publishBtn addTarget:self action:@selector(recordTouchDragExit) forControlEvents:UIControlEventTouchDragExit];
-        
         publishBtn.adjustsImageWhenHighlighted = NO;
-        [publishBtn setImage:[UIImage imageNamed:@"tabbar-语音"] forState:UIControlStateNormal];
-        //    语音图标没阴影@2x
-        //     [publishBtn setImage:[UIImage imageNamed:@"语音图标没阴影"] forState:UIControlStateNormal];
-        [publishBtn setImage:[UIImage imageNamed:@"语音按下状态"] forState:UIControlStateHighlighted];//高亮状态
-        [publishBtn setTitle:@"语音" forState:UIControlStateNormal];
-        [publishBtn setTitleColor:MAIN_COLOR forState:UIControlStateNormal];
-        publishBtn.titleLabel.font = [UIFont systemFontOfSize:12];
-        
-        publishBtn.frame = CGRectMake(SCREEN_WIDTH/5 * 2, -10, SCREEN_WIDTH/5, 50);
-        //button按钮
-        [publishBtn setImagePositionWithType:SSImagePositionTypeTop spacing:0];
-        
-        [self addSubview:publishBtn];
+        [publishBtn setImage:[UIImage imageNamed:@"tab_activity"] forState:UIControlStateNormal];
+        publishBtn.frame = CGRectMake(viewRound.x+2,viewRound.y + 5, 73, 60);
+        [viewSub addSubview:publishBtn];
         
     }
-
+    
 }
 
 #pragma mark ==========适配ipad，让TabBar在ipad上不会出现图片文字左右排列的问题。（注意：只能放在CXTabbar里，否则会影响到导航栏）=====
@@ -71,30 +78,6 @@
     if (self.didClickPublishBtn) {
         self.didClickPublishBtn();
     }
-}
-//手指滑出
--(void)recordTouchUpOutside{
-        if (self.didClickPublishBtnRemo) {
-            self.didClickPublishBtnRemo();
-        }
-}
-//手指抬起来
--(void)recordTouchUpInside{
-        if (self.didClickPublishBtnRemo) {
-            self.didClickPublishBtnRemo();
-        }
-}
-
--(void)recordTouchDragEnter{
-    
-}
--(void)recordTouchDragInside{
-    
-}
--(void)recordTouchDragOutside{
-}
-
--(void)recordTouchDragExit{
 }
 
 //重写hitTest方法，去监听发布按钮的点击，目的是为了让凸出的部分点击也有反应

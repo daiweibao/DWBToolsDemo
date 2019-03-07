@@ -190,11 +190,6 @@ static inline NSString * myMane(){
 
 
 
-
-
-
-
-
 // 适配iPhone X 状态栏高度
 #define  MC_StatusBarHeight      (iPhoneX ? 44.f : 20.f)
 // 适配iPhone X Tabbar高度
@@ -340,6 +335,11 @@ UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlert
 
 //主题色
 #define COLOR_Main [UIColor colorWithHexString:@"#f94747"]
+//分割线颜色【细】
+#define COLOR_Line_Small [UIColor colorWithHexString:@"#e6e6e6"]
+//分割线颜色【粗】
+#define COLOR_Line_Big [UIColor colorWithHexString:@"#f6f6f6"]
+
 
 #pragma mark ===============项目相关 S ==================
 //取出用户ID
@@ -348,6 +348,8 @@ UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlert
 #define USER_name [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"alias"]]
 //取出用户头像连接
 #define USER_PhoneImage [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"headPortrait"]]
+//取出用户登录状态
+#define SESSIONID [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"sessionId"]]
 
 
 

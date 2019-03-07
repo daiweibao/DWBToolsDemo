@@ -24,6 +24,8 @@
 //定义属性
 #import "MacroHeaderHeader.h"
 
+#import "UINavigationController+FDFullscreenPopGesture.h"
+
 
 //友盟相关SDK有文件-2018年3月20日更新
 #import <UMCommon/UMCommon.h>//友盟基础库

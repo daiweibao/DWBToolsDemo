@@ -10,8 +10,6 @@
 
 @interface TBTabBar : UITabBar
 
-//@property(nonatomic,strong)UIButton *publishBtn;
-
 @property (nonatomic,copy) void(^didClickPublishBtn)(CGFloat min_Y);
 
 @end

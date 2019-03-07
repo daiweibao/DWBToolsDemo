@@ -31,7 +31,7 @@
         return NO;
     }else{
         //在这里拦截不开启侧滑返回的界面，如登陆界面
-        UIViewController * coller = (UIViewController *)NSClassFromString(@"CXLoginController");
+        UIViewController * coller = (UIViewController *)NSClassFromString(@"LoginViewController");
         if ([self.topViewController isKindOfClass:[coller class]]) {
             return NO;
         }else{
@@ -64,19 +64,27 @@
  * 可以在这个方法中拦截所有push进来的控制器,处理push后控制器底部有49高度位置点击效果无效  MDDateVC.hidesBottomBarWhenPushed = YES;
  */
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    
+
     if (self.childViewControllers.count > 0) { // 如果push进来的不是第一个控制器
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        
+
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
         //隐藏tabbar
         viewController.hidesBottomBarWhenPushed = YES;
+        //影藏tabbar
+        viewController.tabBarController.tabBar.hidden = YES;
     }
-    
+
     // 这句super的push要放在后面, 让viewController可以覆盖上面设置的leftBarButtonItem
     [super pushViewController:viewController animated:animated];
     
+    //处理了push之h后隐藏底部UITabBar的情况，并解决了iphonex上push时，UITabBar上移的问题
+    CGRect rect = self.tabBarController.tabBar.frame;
+    rect.origin.y = [UIScreen mainScreen].bounds.size.height - rect.size.height;
+    self.tabBarController.tabBar.frame = rect;
+
 }
+
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

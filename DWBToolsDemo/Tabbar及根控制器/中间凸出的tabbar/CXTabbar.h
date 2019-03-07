@@ -13,14 +13,10 @@
 //点击或者按下
 @property (nonatomic,copy) void(^didClickPublishBtn)(void);
 
-//抬起或者其他取消操作
-@property (nonatomic,copy) void(^didClickPublishBtnRemo)(void);
-
-
 /*
  //这种方式需要设置一个空的跟控制器
  
- //语音
+ //占用tabbar
  CXVoiceMainController *voiceVC = [[CXVoiceMainController alloc] init];
  [self setChildVC:voiceVC title:@"" image:@""  selectedImage:@""];//什么都不设置
  
