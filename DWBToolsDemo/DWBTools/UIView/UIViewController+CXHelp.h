@@ -24,4 +24,15 @@
  */
 +(void)removeAnyController:(UIViewController *)controller;
 
+/**
+ 导航栏push模拟模态动画
+ 
+ @param pushVC 跳转的控制器
+ */
++(void)navPushToPresentWithPushController:(UIViewController *)pushVC;
+/**
+ 导航栏pop模拟模态动画,前提条件是push模拟模态动画进来的
+ */
++(void)navPopToPresent;
+
 @end

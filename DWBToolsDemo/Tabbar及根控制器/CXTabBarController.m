@@ -160,13 +160,15 @@
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
     if ([viewController.tabBarItem.title isEqualToString:@"我的"]) {
         if ([NSString isNULL:SESSIONID]) {//去登录
-            UINavigationController * nav = [(UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController selectedViewController];
+             UINavigationController * nav = [(UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController selectedViewController];
             LoginViewController * VC = [[LoginViewController alloc]init];
             //登录成功
             [VC setLoginSuccessfulAfter:^{
                 tabBarController.selectedIndex = 4;
             }];
-            [nav pushViewController:VC animated:YES];
+            //模拟模态动画push
+            [UIViewController navPushToPresentWithPushController:VC];
+            
            
             return NO;
         }else{

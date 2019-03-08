@@ -22,6 +22,12 @@
     
 }
 
+//重写返回键
+- (void)pressButtonLeft:(UIButton*)button{
+    //模态动画返回
+    [UIViewController navPopToPresent];
+}
+
 -(void)crr{
     //登录成功
     if (self.loginSuccessfulAfter) {

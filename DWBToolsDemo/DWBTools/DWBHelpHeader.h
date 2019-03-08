@@ -188,8 +188,6 @@ static inline NSString * myMane(){
 //最终判断，依赖上面宏定义
 #define iPhoneX ((XH_IPHONEX || XH_IPHONEXR || XH_IPHONEXSMAX || XH_IPHONEXR_Simulator) ? YES : NO)
 
-
-
 // 适配iPhone X 状态栏高度
 #define  MC_StatusBarHeight      (iPhoneX ? 44.f : 20.f)
 // 适配iPhone X Tabbar高度
