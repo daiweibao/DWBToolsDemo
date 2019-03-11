@@ -201,9 +201,14 @@
     
     //网页加载完成
     [self setWebviewFinishLoad:^(CGFloat endheight) {
-        //网页加载完毕，得到高度不准，会出现很多空白所以不加。
-        
         dispatch_async(dispatch_get_main_queue(), ^{
+            
+            //走一遍KVO的
+            if (htmlHeight) {
+                htmlHeight(endheight);
+            }
+            
+            
             if (FinishLoadeEnd) {
                 FinishLoadeEnd(endheight);
             }
