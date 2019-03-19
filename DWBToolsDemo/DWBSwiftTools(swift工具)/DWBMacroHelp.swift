@@ -20,11 +20,20 @@ import SnapKit
 let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
 
-//比例
-let px = SCREEN_WIDTH/750.0   //高度和屏幕高度的比例，为了适配iphoneX
-
 //屏幕宽度的封面9/16
 let ImageHeight = SCREEN_WIDTH*9/16   //图片比例宽度
+
+
+//iPhone6的界面布局是：屏幕是4.7英寸的，设计稿的大小为750x1334px。1被图为：375 * 667
+//以iphone为设计稿：375 * 667 是UI设计稿的宽高，可自行根据UI修改【一般用在弹窗适配，比如签到弹窗必须在一个界面显示全，此方法不适合ipad】
+//#define dwb_pt(l) l * [UIScreen mainScreen].bounds.size.width / 375.0 //做适配的界面的宽、高、字号都用它。
+
+func dwb_pt(l:CGFloat) -> CGFloat {
+    
+    return 12
+}
+
+
 
 //获取系统版本号（是iOS9还是10）并判断系统版本号（函数）
 func ios7orLater() ->Bool { return (UIDevice.current.systemVersion as NSString).doubleValue >= 7.0 }
@@ -43,14 +52,16 @@ func ios11_0orLater() -> Bool {
     }
 }
 
-// iPhone X 宏定义
-func iPhoneX() -> Bool {
-    if UIScreen.main.bounds.width == 375 && UIScreen.main.bounds.height == 812{
+//iPhone X 宏定义
+func iPhoneX() ->Bool {
+    let screenHeight = UIScreen.main.nativeBounds.size.height;//nativeBounds与bounds不同
+    //iphoneX：2436  iphoneXR：1792  iphoneXS：2436 iphoneXS Max：2688
+    if screenHeight == 2436 || screenHeight == 1792 || screenHeight == 2688 || screenHeight == 1624 {
         return true
-    }else{
-        return false
     }
+    return false
 }
+
 // 适配iPhone X 状态栏高度
 func MC_StatusBarHeight() -> CGFloat {
     return iPhoneX() ? 44.0 : 20.0

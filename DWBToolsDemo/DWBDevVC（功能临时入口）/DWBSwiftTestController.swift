@@ -15,6 +15,9 @@ class DWBSwiftTestController: CXRootViewController {
 
          self.titleNavLabel.text = "我是swift控制器"
         // Do any additional setup after loading the view.
+        
+    
+        
     }
     
 

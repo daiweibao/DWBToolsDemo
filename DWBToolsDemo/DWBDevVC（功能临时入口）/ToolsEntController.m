@@ -41,9 +41,6 @@
     //刷新加载
     [self refresh];
     
-
-    
-    
     NSString * getStr = [KeyChainManager keyChainReadData:@"chaoxidwb"];
     
     NSLog(@"读取数据：%@",getStr);
