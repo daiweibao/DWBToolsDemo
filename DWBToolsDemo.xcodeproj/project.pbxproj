@@ -71,7 +71,6 @@
 		36213FCD2143A6A500B00E2B /* CXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FB42143A6A500B00E2B /* CXNavigationController.m */; };
 		36213FD02143A99D00B00E2B /* HopmeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FCF2143A99D00B00E2B /* HopmeViewController.m */; };
 		36213FD32143ABB000B00E2B /* ToolsEntController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FD22143ABB000B00E2B /* ToolsEntController.m */; };
-		3621579A214A6A36005017C9 /* ChatInputBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36215799214A6A36005017C9 /* ChatInputBox.bundle */; };
 		3621B7552191B3320000BDFA /* HZWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3621B74D2191B3320000BDFA /* HZWaitingView.m */; };
 		3621B7562191B3320000BDFA /* HZPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3621B74F2191B3320000BDFA /* HZPhotoBrowser.m */; };
 		3621B7572191B3320000BDFA /* HZPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3621B7522191B3320000BDFA /* HZPhotoBrowser.bundle */; };
@@ -114,6 +113,7 @@
 		36446185218D819D00B9E01E /* UIViewController+CXHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446183218D819C00B9E01E /* UIViewController+CXHelp.m */; };
 		365017C9222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 365017C7222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m */; };
 		365017CD222FA2CB00E4B622 /* DWBSwiftTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365017CC222FA2CB00E4B622 /* DWBSwiftTestController.swift */; };
+		3657187A22448CA5007C70AD /* ChatInputBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3657187922448CA5007C70AD /* ChatInputBox.bundle */; };
 		368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F6213F67C800C10B3E /* AppDelegate.m */; };
 		368C39FA213F67C800C10B3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F9213F67C800C10B3E /* ViewController.m */; };
 		368C39FD213F67C800C10B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368C39FB213F67C800C10B3E /* Main.storyboard */; };
@@ -360,7 +360,6 @@
 		36213FCF2143A99D00B00E2B /* HopmeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HopmeViewController.m; sourceTree = "<group>"; };
 		36213FD12143ABB000B00E2B /* ToolsEntController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolsEntController.h; sourceTree = "<group>"; };
 		36213FD22143ABB000B00E2B /* ToolsEntController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolsEntController.m; sourceTree = "<group>"; };
-		36215799214A6A36005017C9 /* ChatInputBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChatInputBox.bundle; sourceTree = "<group>"; };
 		3621B74D2191B3320000BDFA /* HZWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZWaitingView.m; sourceTree = "<group>"; };
 		3621B74E2191B3320000BDFA /* HZPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZPhotoBrowserConfig.h; sourceTree = "<group>"; };
 		3621B74F2191B3320000BDFA /* HZPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZPhotoBrowser.m; sourceTree = "<group>"; };
@@ -432,6 +431,7 @@
 		365017C8222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DWBThreeTouchHelp.h"; sourceTree = "<group>"; };
 		365017CB222FA2CB00E4B622 /* DWBToolsDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DWBToolsDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		365017CC222FA2CB00E4B622 /* DWBSwiftTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWBSwiftTestController.swift; sourceTree = "<group>"; };
+		3657187922448CA5007C70AD /* ChatInputBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChatInputBox.bundle; sourceTree = "<group>"; };
 		368C39F2213F67C800C10B3E /* DWBToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWBToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368C39F5213F67C800C10B3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		368C39F6213F67C800C10B3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1140,12 +1140,12 @@
 			isa = PBXGroup;
 			children = (
 				362F7BAA2148ACF000A8ECB1 /* Image */,
-				36215799214A6A36005017C9 /* ChatInputBox.bundle */,
 				362F7BA62148ACF000A8ECB1 /* emoji.json */,
 				362F7BB42148ACF000A8ECB1 /* STInputBar.h */,
 				362F7BA72148ACF000A8ECB1 /* STInputBar.m */,
 				362F7BB62148ACF000A8ECB1 /* STEmoji.h */,
 				362F7BA82148ACF000A8ECB1 /* STEmoji.m */,
+				3657187922448CA5007C70AD /* ChatInputBox.bundle */,
 				362F7BB52148ACF000A8ECB1 /* STEmojiKeyboard.h */,
 				362F7BA92148ACF000A8ECB1 /* STEmojiKeyboard.m */,
 				362F7BB32148ACF000A8ECB1 /* STEmojiCollectionView.h */,
@@ -1991,12 +1991,12 @@
 				36EEDCAD21420794000CBEEB /* scanSuccess.wav in Resources */,
 				36E861EF21AFBF3300180D78 /* lufei.jpg in Resources */,
 				362F7BC12148ACF000A8ECB1 /* keyboard_preview_bg@3x.png in Resources */,
-				3621579A214A6A36005017C9 /* ChatInputBox.bundle in Resources */,
 				362F7BBF2148ACF000A8ECB1 /* keyboard_btn_delete@2x.png in Resources */,
 				36EEDCA921420794000CBEEB /* scan_circle@2x.png in Resources */,
 				368C39FF213F67C900C10B3E /* Assets.xcassets in Resources */,
 				36EEDCBF214209FE000CBEEB /* 版本更新背景@2x.png in Resources */,
 				362F7BE721490F4B00A8ECB1 /* WVstore_1024pt.png in Resources */,
+				3657187A22448CA5007C70AD /* ChatInputBox.bundle in Resources */,
 				36213F7221439EC100B00E2B /* 上拉加载中@2x.png in Resources */,
 				362F7BC02148ACF000A8ECB1 /* keyboard_preview_bg@2x.png in Resources */,
 				36213F7321439EC100B00E2B /* 上拉加载中@3x.png in Resources */,
