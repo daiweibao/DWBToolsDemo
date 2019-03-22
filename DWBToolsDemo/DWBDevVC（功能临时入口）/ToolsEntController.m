@@ -214,7 +214,8 @@
         cell.textLabel.text = @"红人个人中心";
     }else if (indexPath.row==6) {
         
-        cell.textLabel.text = @"";
+        cell.textLabel.text = @"网络请求";
+        
     }else if (indexPath.row==7) {
         
         cell.textLabel.text = @"自定义滚动头Base";
@@ -242,7 +243,9 @@
         RedpeopleCenterController * VC = [[RedpeopleCenterController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
     }else if (indexPath.row==6){
-
+        //请求数据
+        [self loadData];
+        
     }else if (indexPath.row==7){
         DWBJXMainController * VC = [[DWBJXMainController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
@@ -250,12 +253,22 @@
     
 }
 
+//请求数据
+-(void)loadData{
+    //请求数据
+    NSDictionary * dict = @{@"platform":@{}};//这个要传才能请求到
+    [DWBAFNetworking POST:DWBPromotion parameters:dict controller:self type:nil success:^(id  _Nullable responseObject) {
+        NSLog(@"数据：%@",responseObject);
+        
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"请求数据失败");
+    }];
+}
+
+
 //将要出现
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-    
-    
 }
 //将要消失
 -(void)viewWillDisappear:(BOOL)animated{

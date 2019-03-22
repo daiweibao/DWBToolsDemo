@@ -12,6 +12,6 @@
 static NSString * const TestString = @"测试";
 
 
-
+//https://jshop.quanmin.top/shop/promotion/get
 
 #endif /* MacroHeaderHeader_h */

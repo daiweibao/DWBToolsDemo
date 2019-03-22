@@ -30,11 +30,12 @@ static AFHTTPSessionManager *manager;
         manager.requestSerializer = [AFJSONRequestSerializer serializer];
         
         //申明返回的结果是json类型(可选，没报错就不用打开)
-        //  manager.responseSerializer = [AFJSONResponseSerializer serializer];
-        // [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-        
+//          manager.responseSerializer = [AFJSONResponseSerializer serializer];
+//         [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+//
         // 支持内容格式
         manager.responseSerializer.acceptableContentTypes  =  [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain",@"application/xml", nil];
+        
         
     });
     return manager;
@@ -63,6 +64,9 @@ static AFHTTPSessionManager *manager;
     
     //调用自己的单例，防止内存泄露
     AFHTTPSessionManager * manager =  [DWBAFNetworking sharedManager];
+    
+    
+    
     [manager POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         //所有情况都回调请求结果
