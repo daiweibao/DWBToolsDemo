@@ -47,4 +47,49 @@
     return newArr;
 }
 
+
+
+/**
+ OC版冒泡排序,必须传入可变数组，数组包含数字元素
+
+ @param mArray 可变数组
+ @return 排好序的数组
+ */
++ (NSMutableArray *)maopaoSortWithMarray:(NSMutableArray *)mArray{
+    //外层循环
+    for (int i = 0; i < mArray.count; i ++) {
+        //内层循环
+        for (int j = 0; j < mArray.count - i; j++) {
+            //比较大小
+            //升序
+//            if ([mArray[j] intValue] > [mArray[j +1] intValue]) {
+//                //交换
+//                [mArray exchangeObjectAtIndex:j withObjectAtIndex:j+1];
+//            }
+            
+            //降序
+            if ([mArray[j] intValue] < [mArray[j +1] intValue]) {
+                //交换
+                [mArray exchangeObjectAtIndex:j withObjectAtIndex:j+1];
+            }
+        }
+    }
+    return mArray;
+    
+    /*
+     
+     用法：
+     
+     //传入数组
+     NSMutableArray * mArray = [NSMutableArray arrayWithArray:@[@6,@4,@9,@5,@8,@0,@30]];
+     
+     //得到数组：
+     NSArray * resultsArray =  [NSArray maopaoSortWithMarray:mArray];
+     NSLog(@"冒泡排序好的数组：%@",resultsArray);
+     
+     
+     */
+    
+}
+
 @end

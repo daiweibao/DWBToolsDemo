@@ -100,6 +100,8 @@
 #import "DWBAFNetworking.h"
 //
 #import "UIViewController+CXHelp.h"
+//数组
+#import "NSArray+DWBHelp.h"
 
 #pragma mark ============ 工具类相互依赖的头文件 E=====================
 

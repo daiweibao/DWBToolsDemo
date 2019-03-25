@@ -219,6 +219,13 @@
     }else if (indexPath.row==7) {
         
         cell.textLabel.text = @"自定义滚动头Base";
+    }else if (indexPath.row==8) {
+        
+        cell.textLabel.text = @"冒泡排序";
+    }else if (indexPath.row==9) {
+        cell.textLabel.font = [UIFont boldSystemFontOfSize:20];
+        cell.textLabel.textColor = COLOR_Main;
+        cell.textLabel.text = @"赋值字符串，比如微信登录";
     }
     
     return cell;
@@ -249,6 +256,21 @@
     }else if (indexPath.row==7){
         DWBJXMainController * VC = [[DWBJXMainController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
+    }else if (indexPath.row==8){
+       
+      
+        //传入数组
+        NSMutableArray * mArray = [NSMutableArray arrayWithArray:@[@6,@4,@9,@5,@8,@0,@30]];
+        
+        //得到数组：
+        NSArray * resultsArray =  [NSArray maopaoSortWithMarray:mArray];
+        NSLog(@"冒泡排序好的数组：%@",resultsArray);
+        
+    }else if (indexPath.row==9){
+        
+        [NSString copyCXString:@"wxcc077fbc97d571f0://wapoauth?m=Kzg2MTMyNTIwMDQ0Mzg%3D&t=108971"];
+        [MBProgressHUD showSuccess:@"复制成功"];
+        
     }
     
 }

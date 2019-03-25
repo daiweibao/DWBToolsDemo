@@ -27,6 +27,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(NSMutableArray*)arrayGetRandomArrFrome:(NSArray*)arr;
 
+
+/**
+ OC版冒泡排序,必须传入可变数组，数组包含数字元素
+ 
+ @param mArray 可变数组
+ @return 排好序的数组
+ */
++ (NSMutableArray *)maopaoSortWithMarray:(NSMutableArray *)mArray;
+
 @end
 
 NS_ASSUME_NONNULL_END
