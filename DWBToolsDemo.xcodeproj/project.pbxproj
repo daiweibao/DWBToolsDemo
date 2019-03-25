@@ -114,6 +114,7 @@
 		365017C9222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 365017C7222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m */; };
 		365017CD222FA2CB00E4B622 /* DWBSwiftTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365017CC222FA2CB00E4B622 /* DWBSwiftTestController.swift */; };
 		3657187A22448CA5007C70AD /* ChatInputBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3657187922448CA5007C70AD /* ChatInputBox.bundle */; };
+		367D99692248B0B8001AB399 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367D99682248B0B8001AB399 /* Images.xcassets */; };
 		368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F6213F67C800C10B3E /* AppDelegate.m */; };
 		368C39FA213F67C800C10B3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F9213F67C800C10B3E /* ViewController.m */; };
 		368C39FD213F67C800C10B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368C39FB213F67C800C10B3E /* Main.storyboard */; };
@@ -433,6 +434,7 @@
 		365017CC222FA2CB00E4B622 /* DWBSwiftTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWBSwiftTestController.swift; sourceTree = "<group>"; };
 		365636AE2244E52A00CF17BF /* DWB_URLHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWB_URLHeader.h; sourceTree = "<group>"; };
 		3657187922448CA5007C70AD /* ChatInputBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChatInputBox.bundle; sourceTree = "<group>"; };
+		367D99682248B0B8001AB399 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		368C39F2213F67C800C10B3E /* DWBToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWBToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368C39F5213F67C800C10B3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		368C39F6213F67C800C10B3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1363,6 +1365,7 @@
 				368C3A00213F67C900C10B3E /* LaunchScreen.storyboard */,
 				368C3A03213F67C900C10B3E /* Info.plist */,
 				368C3A04213F67C900C10B3E /* main.m */,
+				367D99682248B0B8001AB399 /* Images.xcassets */,
 			);
 			path = DWBToolsDemo;
 			sourceTree = "<group>";
@@ -1998,6 +2001,7 @@
 				368C39FF213F67C900C10B3E /* Assets.xcassets in Resources */,
 				36EEDCBF214209FE000CBEEB /* 版本更新背景@2x.png in Resources */,
 				362F7BE721490F4B00A8ECB1 /* WVstore_1024pt.png in Resources */,
+				367D99692248B0B8001AB399 /* Images.xcassets in Resources */,
 				3657187A22448CA5007C70AD /* ChatInputBox.bundle in Resources */,
 				36213F7221439EC100B00E2B /* 上拉加载中@2x.png in Resources */,
 				362F7BC02148ACF000A8ECB1 /* keyboard_preview_bg@2x.png in Resources */,
@@ -2457,6 +2461,7 @@
 			baseConfigurationReference = 5B2AD26055BB273DD4351B06 /* Pods-DWBToolsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
@@ -2482,6 +2487,7 @@
 			baseConfigurationReference = A53F89B2E10274ABDD3C0872 /* Pods-DWBToolsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;

@@ -39,8 +39,6 @@
 	<string>我们需要访问你的媒体资料库来获取照片或者视频，是否允许访问？</string>
 	<key>Privacy - Location Always Usage Description </key>
 	<string>我们需要通过您的地理位置信息获取您周边的相关数据</string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
