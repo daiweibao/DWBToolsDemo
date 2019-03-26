@@ -44,6 +44,31 @@
 
 
 
+#pragma mark =============设置某个界面只支持视频横屏 S======================
+//此方法会在设备横竖屏变化的时候调用
+- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+    
+    //   NSLog(@"方向  =============   %ld", _allowRotate);
+    if (_allowRotate == 1) {
+        return UIInterfaceOrientationMaskAll;
+    }else{
+        return (UIInterfaceOrientationMaskPortrait);
+    }
+}
+
+
+// 返回是否支持设备自动旋转
+- (BOOL)shouldAutorotate
+{
+    if (_allowRotate == 1) {
+        return YES;
+    }
+    return NO;
+}
+#pragma mark =============设置某个界面只支持视频横屏 E======================
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

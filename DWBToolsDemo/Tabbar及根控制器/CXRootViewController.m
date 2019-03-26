@@ -138,6 +138,12 @@
 //    [MobClick beginLogPageView:[NSString stringWithUTF8String:object_getClassName(self)]];
     //    防止关闭导航栏透明后  控制器坐标下移64
     self.extendedLayoutIncludesOpaqueBars = YES;
+
+#pragma mark =========设置某个界面只支持视频横屏 S=============
+    //设置成竖屏
+    AppDelegate * delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    delegate.allowRotate = 0;
+
 }
 
 //将要消失
@@ -153,6 +159,7 @@
     [[UIApplication sharedApplication].keyWindow.rootViewController.view endEditing:YES];
 
 }
+
 
 
 - (void)didReceiveMemoryWarning {

@@ -19,7 +19,6 @@
 		361F620F2230BCFE0029CF29 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361F620E2230BCFE0029CF29 /* HomeViewController.m */; };
 		361F62122230BD140029CF29 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361F62112230BD140029CF29 /* CategoryViewController.m */; };
 		361F62152230BD260029CF29 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361F62142230BD260029CF29 /* ActivityViewController.m */; };
-		361F62182230BD310029CF29 /* FoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361F62172230BD310029CF29 /* FoundViewController.m */; };
 		361F621B2230BD3F0029CF29 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361F621A2230BD3F0029CF29 /* MineViewController.m */; };
 		361F62222230C2AE0029CF29 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361F62212230C2AE0029CF29 /* LoginViewController.m */; };
 		361F62252230ECD80029CF29 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 361F62242230ECD80029CF29 /* UINavigationController+FDFullscreenPopGesture.m */; };
@@ -115,6 +114,13 @@
 		365017CD222FA2CB00E4B622 /* DWBSwiftTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365017CC222FA2CB00E4B622 /* DWBSwiftTestController.swift */; };
 		3657187A22448CA5007C70AD /* ChatInputBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3657187922448CA5007C70AD /* ChatInputBox.bundle */; };
 		367D99692248B0B8001AB399 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367D99682248B0B8001AB399 /* Images.xcassets */; };
+		367D996C2248B43C001AB399 /* VideoDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 367D996B2248B43C001AB399 /* VideoDetailsController.m */; };
+		367D996F2248B634001AB399 /* UIViewController+DWControllerHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 367D996E2248B634001AB399 /* UIViewController+DWControllerHelp.m */; };
+		367D99712248B91B001AB399 /* FoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367D99702248B91B001AB399 /* FoundViewController.swift */; };
+		367D99732248BB04001AB399 /* FoundViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367D99722248BB04001AB399 /* FoundViewCell.swift */; };
+		367D99752248BC3D001AB399 /* FoundViewListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367D99742248BC3D001AB399 /* FoundViewListModel.swift */; };
+		367D99772248C178001AB399 /* DWB_URLSwiftHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367D99762248C178001AB399 /* DWB_URLSwiftHeader.swift */; };
+		367D99792248EE3C001AB399 /* NetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367D99782248EE3C001AB399 /* NetWorkTools.swift */; };
 		368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F6213F67C800C10B3E /* AppDelegate.m */; };
 		368C39FA213F67C800C10B3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F9213F67C800C10B3E /* ViewController.m */; };
 		368C39FD213F67C800C10B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368C39FB213F67C800C10B3E /* Main.storyboard */; };
@@ -261,8 +267,6 @@
 		361F62112230BD140029CF29 /* CategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		361F62132230BD260029CF29 /* ActivityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
 		361F62142230BD260029CF29 /* ActivityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
-		361F62162230BD310029CF29 /* FoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundViewController.h; sourceTree = "<group>"; };
-		361F62172230BD310029CF29 /* FoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundViewController.m; sourceTree = "<group>"; };
 		361F62192230BD3F0029CF29 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		361F621A2230BD3F0029CF29 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		361F62202230C2AE0029CF29 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -435,6 +439,15 @@
 		365636AE2244E52A00CF17BF /* DWB_URLHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWB_URLHeader.h; sourceTree = "<group>"; };
 		3657187922448CA5007C70AD /* ChatInputBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChatInputBox.bundle; sourceTree = "<group>"; };
 		367D99682248B0B8001AB399 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		367D996A2248B43C001AB399 /* VideoDetailsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoDetailsController.h; sourceTree = "<group>"; };
+		367D996B2248B43C001AB399 /* VideoDetailsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoDetailsController.m; sourceTree = "<group>"; };
+		367D996D2248B634001AB399 /* UIViewController+DWControllerHelp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DWControllerHelp.h"; sourceTree = "<group>"; };
+		367D996E2248B634001AB399 /* UIViewController+DWControllerHelp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DWControllerHelp.m"; sourceTree = "<group>"; };
+		367D99702248B91B001AB399 /* FoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundViewController.swift; sourceTree = "<group>"; };
+		367D99722248BB04001AB399 /* FoundViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundViewCell.swift; sourceTree = "<group>"; };
+		367D99742248BC3D001AB399 /* FoundViewListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundViewListModel.swift; sourceTree = "<group>"; };
+		367D99762248C178001AB399 /* DWB_URLSwiftHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWB_URLSwiftHeader.swift; sourceTree = "<group>"; };
+		367D99782248EE3C001AB399 /* NetWorkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
 		368C39F2213F67C800C10B3E /* DWBToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWBToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368C39F5213F67C800C10B3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		368C39F6213F67C800C10B3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -702,6 +715,7 @@
 		361F61EA222FC7810029CF29 /* DWBSwiftTools(swift工具) */ = {
 			isa = PBXGroup;
 			children = (
+				367D99782248EE3C001AB399 /* NetWorkTools.swift */,
 				361F61EB222FCCDF0029CF29 /* DWBMacroHelp.swift */,
 				361F61ED222FCE360029CF29 /* UIColor_RGBString.swift */,
 			);
@@ -721,8 +735,7 @@
 		361F61FA2230BC9F0029CF29 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				361F62162230BD310029CF29 /* FoundViewController.h */,
-				361F62172230BD310029CF29 /* FoundViewController.m */,
+				367D99702248B91B001AB399 /* FoundViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -730,6 +743,7 @@
 		361F61FB2230BC9F0029CF29 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				367D99742248BC3D001AB399 /* FoundViewListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -737,6 +751,7 @@
 		361F61FC2230BC9F0029CF29 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				367D99722248BB04001AB399 /* FoundViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1299,6 +1314,8 @@
 			children = (
 				36213FD12143ABB000B00E2B /* ToolsEntController.h */,
 				36213FD22143ABB000B00E2B /* ToolsEntController.m */,
+				367D996A2248B43C001AB399 /* VideoDetailsController.h */,
+				367D996B2248B43C001AB399 /* VideoDetailsController.m */,
 				365017CC222FA2CB00E4B622 /* DWBSwiftTestController.swift */,
 			);
 			path = "DWBDevVC（功能临时入口）";
@@ -1347,6 +1364,7 @@
 				365017CB222FA2CB00E4B622 /* DWBToolsDemo-Bridging-Header.h */,
 				36DA4A762147B59000048763 /* MacroHeaderHeader.h */,
 				365636AE2244E52A00CF17BF /* DWB_URLHeader.h */,
+				367D99762248C178001AB399 /* DWB_URLSwiftHeader.swift */,
 				361F61F1222FCF680029CF29 /* MacroSwiftHeader.swift */,
 				368C39F5213F67C800C10B3E /* AppDelegate.h */,
 				368C39F6213F67C800C10B3E /* AppDelegate.m */,
@@ -1529,6 +1547,8 @@
 				36D37854213FF02300E768AF /* GetChatTime.m */,
 				368E69E72140C70D000EC79C /* KeyChainManager.h */,
 				368E69E82140C70D000EC79C /* KeyChainManager.m */,
+				367D996D2248B634001AB399 /* UIViewController+DWControllerHelp.h */,
+				367D996E2248B634001AB399 /* UIViewController+DWControllerHelp.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -2068,22 +2088,30 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2117,6 +2145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				367D996F2248B634001AB399 /* UIViewController+DWControllerHelp.m in Sources */,
 				36E8620D21AFBF3300180D78 /* JXCategoryNumberCellModel.m in Sources */,
 				36213F0F214364BD00B00E2B /* AlretCXSheetView.m in Sources */,
 				3610DC072181757A00EAB9CA /* NSNull+safe.m in Sources */,
@@ -2130,6 +2159,7 @@
 				36213F11214364BD00B00E2B /* JXActionSheet.m in Sources */,
 				36213F6C21439DB700B00E2B /* MJChiBaoZiFooter.m in Sources */,
 				368E69D22140C27D000EC79C /* UIView+Extension.m in Sources */,
+				367D99712248B91B001AB399 /* FoundViewController.swift in Sources */,
 				3634E5AB217D5E89002B43DD /* DWBAPPManager.m in Sources */,
 				363BFB5521A95B4900666F8A /* RedPeopleThemController.m in Sources */,
 				368C39FA213F67C800C10B3E /* ViewController.m in Sources */,
@@ -2148,12 +2178,14 @@
 				36E861FC21AFBF3300180D78 /* JXCategoryIndicatorCellModel.m in Sources */,
 				36B6609721743DA700E78824 /* DWBURLWKWebView.m in Sources */,
 				361F61F82230B9140029CF29 /* CXTabbar.m in Sources */,
+				367D99732248BB04001AB399 /* FoundViewCell.swift in Sources */,
 				36A73BB92182C5F400B79AB0 /* NSArray+DWBSafe.m in Sources */,
 				36E861FE21AFBF3300180D78 /* JXCategoryIndicatorView.m in Sources */,
 				36D37855213FF02300E768AF /* GetChatTime.m in Sources */,
 				362F7BBB2148ACF000A8ECB1 /* STEmojiKeyboard.m in Sources */,
 				368C3C05213FB44900C10B3E /* NSString+CXMD5.m in Sources */,
 				36E8620521AFBF3300180D78 /* JXCategoryTitleCellModel.m in Sources */,
+				367D99772248C178001AB399 /* DWB_URLSwiftHeader.swift in Sources */,
 				36E8620A21AFBF3300180D78 /* JXCategoryImageCellModel.m in Sources */,
 				36EEDCB3214208C3000CBEEB /* XHNetworkCache.m in Sources */,
 				36213F2B21439B3700B00E2B /* JDStatusBarNotification+KZ.m in Sources */,
@@ -2193,7 +2225,6 @@
 				36E861F821AFBF3300180D78 /* JXCategoryIndicatorImageView.m in Sources */,
 				368E69D82140C49B000EC79C /* UIFont+FontNameBoldSize.m in Sources */,
 				36EEDCAF21420794000CBEEB /* ScanResultsController.m in Sources */,
-				361F62182230BD310029CF29 /* FoundViewController.m in Sources */,
 				36213F4D21439C1400B00E2B /* SVProgressHUD.m in Sources */,
 				36213F8A2143A4BF00B00E2B /* CXHTMLWebController.m in Sources */,
 				36213FD32143ABB000B00E2B /* ToolsEntController.m in Sources */,
@@ -2201,6 +2232,7 @@
 				361F621B2230BD3F0029CF29 /* MineViewController.m in Sources */,
 				36EEDC9221420585000CBEEB /* UIImage+PlayGif.m in Sources */,
 				361F61EC222FCCDF0029CF29 /* DWBMacroHelp.swift in Sources */,
+				367D996C2248B43C001AB399 /* VideoDetailsController.m in Sources */,
 				36E8620021AFBF3300180D78 /* JXCategoryDotView.m in Sources */,
 				368E69D12140C27D000EC79C /* UIView+Help.m in Sources */,
 				368C3A05213F67C900C10B3E /* main.m in Sources */,
@@ -2259,6 +2291,7 @@
 				36E8620321AFBF3300180D78 /* JXCategoryTitleImageCell.m in Sources */,
 				36213F6A21439DB700B00E2B /* MJDIYHeader.m in Sources */,
 				36D37858213FF05D00E768AF /* getUUID.m in Sources */,
+				367D99792248EE3C001AB399 /* NetWorkTools.swift in Sources */,
 				36E8621021AFBF3300180D78 /* JXCategoryCollectionView.m in Sources */,
 				368E69E42140C5BF000EC79C /* CXSystemStatus.m in Sources */,
 				36213F2A21439B3700B00E2B /* JDStatusBarNotification.m in Sources */,
@@ -2290,6 +2323,7 @@
 				36EEDCA821420794000CBEEB /* UIImage+Extend.m in Sources */,
 				362F7BA321489ECF00A8ECB1 /* UIButton+BigAction.m in Sources */,
 				36E8621621AFBF3300180D78 /* JXPagerMainTableView.m in Sources */,
+				367D99752248BC3D001AB399 /* FoundViewListModel.swift in Sources */,
 				361F62152230BD260029CF29 /* ActivityViewController.m in Sources */,
 				36213F4B21439C1400B00E2B /* SVRadialGradientLayer.m in Sources */,
 			);

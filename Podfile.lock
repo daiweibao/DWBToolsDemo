@@ -14,8 +14,10 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - Alamofire (4.8.1)
   - FLAnimatedImage (1.0.12)
   - Masonry (1.1.0)
+  - MJExtension (3.0.15.1)
   - MJRefresh (3.1.15.6)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
@@ -24,6 +26,7 @@ PODS:
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
   - SnapKit (4.2.0)
+  - SwiftyJSON (4.2.0)
   - UMCCommon (1.5.2)
   - UMCCommonLog (1.0.0)
   - UMCSecurityPlugins (1.0.6)
@@ -50,46 +53,59 @@ PODS:
     - UMCCommon
     - UMCShare/Core
     - UMCShare/Social/ReducedWeChat
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking
+  - Alamofire
   - Masonry
+  - MJExtension
   - MJRefresh
   - SDWebImage
   - SDWebImage/GIF
   - SnapKit
+  - SwiftyJSON (~> 4.0)
   - UMCCommon
   - UMCCommonLog
   - UMCSecurityPlugins
   - UMCShare/Social/QQ
   - UMCShare/Social/Sina
   - UMCShare/Social/WeChat
+  - YYModel
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - Alamofire
     - FLAnimatedImage
     - Masonry
+    - MJExtension
     - MJRefresh
     - SDWebImage
     - SnapKit
+    - SwiftyJSON
     - UMCCommon
     - UMCCommonLog
     - UMCSecurityPlugins
     - UMCShare
+    - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   MJRefresh: 0efa19656679d70a0f47cbe76e56c2271fe53a97
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   UMCCommon: 4392868ac47ff1b101663106bb114ba616fabbad
   UMCCommonLog: 05a2d5de21858e3d870551562cff405c1366d244
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   UMCShare: aa233aecad67979930fe43f3a2f676023b669439
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 93612c53503184b6b65e96578e073ae7add0ca27
+PODFILE CHECKSUM: ca59d899cf24a7dbb4cb82578147ac23cd6a3c4b
 
 COCOAPODS: 1.5.3

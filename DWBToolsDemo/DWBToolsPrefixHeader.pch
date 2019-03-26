@@ -17,6 +17,8 @@
 #import "DWBToolsDemo-Swift.h"
 
 
+#import "AppDelegate.h"
+
 //工具类头文件+宏定义
 
 #import "DWBHelpHeader.h"
@@ -35,6 +37,8 @@
 //#import <UMPush/UMessage.h>//友盟推送
 #import <UserNotifications/UserNotifications.h>//iOS10推送必备
 #import <UMShare/UMShare.h>//友盟分享
+//model
+#import "YYModel.h"
 
 
 

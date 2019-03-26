@@ -1,37 +1,39 @@
 //
-//  FoundViewController.m
+//  VideoDetailsController.m
 //  DWBToolsDemo
 //
-//  Created by 戴维保 on 2019/3/7.
+//  Created by 戴维保 on 2019/3/25.
 //  Copyright © 2019 潮汐科技有限公司. All rights reserved.
 //
 
-#import "FoundViewController.h"
+#import "VideoDetailsController.h"
 
-@interface FoundViewController ()
+@interface VideoDetailsController ()
 
 @end
 
-@implementation FoundViewController
+@implementation VideoDetailsController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.backButton.hidden = YES;
-    self.titleNavLabel.text = @"发现";
     // Do any additional setup after loading the view.
 }
+
 //将要出现
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-}
-//将要小时
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
+#pragma mark =========设置某个界面只支持视频横屏 =============
+    //设置成支持横屏
+    AppDelegate * delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    delegate.allowRotate = 1;
+    
 }
 
--(void)dealloc{
-    
+//将要消失
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
 }
 
 /*

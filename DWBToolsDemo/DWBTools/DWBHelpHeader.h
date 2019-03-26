@@ -102,6 +102,8 @@
 #import "UIViewController+CXHelp.h"
 //数组
 #import "NSArray+DWBHelp.h"
+//控制器
+#import "UIViewController+DWControllerHelp.h"
 
 #pragma mark ============ 工具类相互依赖的头文件 E=====================
 

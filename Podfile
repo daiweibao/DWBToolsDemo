@@ -49,12 +49,21 @@ pod 'UMCShare/Social/QQ'
 pod 'UMCShare/Social/Sina'
 
 
+pod 'YYModel'
+# 明杰Model
+pod 'MJExtension'
+
+
 #pod 'JXCategoryView'
 
 #===================swift模块导入的三方库=================================
 
 #自动布局,iOS11之前，不能升级到4.0
 pod 'SnapKit'
+#JSON数据
+pod 'SwiftyJSON', '~> 4.0'
+#网络请求
+pod 'Alamofire'
 
 
 end

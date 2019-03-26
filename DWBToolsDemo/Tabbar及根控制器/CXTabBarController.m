@@ -17,7 +17,6 @@
 #import "HomeViewController.h"
 #import "CategoryViewController.h"
 #import "ActivityViewController.h"
-#import "FoundViewController.h"
 #import "MineViewController.h"
 //登录
 #import "LoginViewController.h"

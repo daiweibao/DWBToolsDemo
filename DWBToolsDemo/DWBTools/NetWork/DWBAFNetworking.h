@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
+#import <AFNetworking/AFNetworking.h>
 @interface DWBAFNetworking : NSObject
 //自己封装afn单例
 + (AFHTTPSessionManager *)sharedManager;

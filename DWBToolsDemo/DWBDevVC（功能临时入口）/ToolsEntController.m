@@ -18,6 +18,9 @@
 
 #import "DWBJXMainController.h"
 
+//视频详情，横屏
+#import "VideoDetailsController.h"
+
 @interface ToolsEntController ()<UITableViewDelegate,UITableViewDataSource>
 //创建tableview
 @property (nonatomic,strong) UITableView * tableView;
@@ -226,6 +229,9 @@
         cell.textLabel.font = [UIFont boldSystemFontOfSize:20];
         cell.textLabel.textColor = COLOR_Main;
         cell.textLabel.text = @"赋值字符串，比如微信登录";
+    }else if (indexPath.row==10) {
+        
+        cell.textLabel.text = @"视频详情横屏";
     }
     
     return cell;
@@ -271,8 +277,10 @@
         [NSString copyCXString:@"wxcc077fbc97d571f0://wapoauth?m=Kzg2MTMyNTIwMDQ0Mzg%3D&t=108971"];
         [MBProgressHUD showSuccess:@"复制成功"];
         
+    }else if (indexPath.row==10){
+        VideoDetailsController * VC = [[VideoDetailsController alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
     }
-    
 }
 
 //请求数据
