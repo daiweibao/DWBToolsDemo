@@ -12,6 +12,9 @@ import SwiftyJSON
 
 import Alamofire
 
+
+//import HandyJSON
+
 class FoundViewController: CXRootViewController, UITableViewDelegate, UITableViewDataSource{
 
     //tableview
@@ -128,12 +131,25 @@ class FoundViewController: CXRootViewController, UITableViewDelegate, UITableVie
 
                     //遍历数据
                     for dicInfo in goods_list {
+                        
+//
+//                        if let user = FoundViewListModel.objectWithKeyValues(dicInfo) as? FoundViewListModel{
+//                            print("\(user)")
+//                        }
+                        
+//                          let mappedObject = FoundViewListModel.deserialize(from: dicInfo)
+//
+//                        let jsonData = JSON(dicInfo)
+//                        let model = FoundViewListModel(Person: jsonData)
                         //转模型
-                         let dicInfoJSON = JSON(dicInfo)
+                        let dicInfoJSON:[String : Any] = dicInfo
                         let model = FoundViewListModel()
-                        model.mj_setKeyValues(dicInfoJSON)
-                        model.goods_name = "商品名字"
-                        //添加数据到数组
+                        
+//                        model.setValuesForKeys(dicInfoJSON as [String : AnyObject])
+                        
+//                        model.mj_setKeyValues(dicInfoJSON)
+//                        model.goods_name = dicInfo["goods_name"] as? String
+                       //添加数据到数组
                         self.dataSouce.append(model)
                     }
 

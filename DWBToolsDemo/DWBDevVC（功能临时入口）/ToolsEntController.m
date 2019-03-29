@@ -274,7 +274,7 @@
         
     }else if (indexPath.row==9){
         
-        [NSString copyCXString:@"wxcc077fbc97d571f0://wapoauth?m=Kzg2MTMyNTIwMDQ0Mzg%3D&t=108971"];
+        [NSString copyCXString:@"wxcc077fbc97d571f0://wapoauth?m=Kzg2MTc2MTEzMDIzMDg%3D&t=218997"];
         [MBProgressHUD showSuccess:@"复制成功"];
         
     }else if (indexPath.row==10){

@@ -11,3 +11,5 @@ import Foundation
 
 
 let APPName = "quanmingtoutiao"
+
+
