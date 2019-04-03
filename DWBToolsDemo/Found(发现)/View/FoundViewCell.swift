@@ -58,17 +58,30 @@ class FoundViewCell: UITableViewCell {
     
    private func createUI(){
     //商品封面
-    imageCover.frame = CGRect(x: 15, y: 15, width: 100, height: 100)
+//    imageCover.frame = CGRect(x: 15, y: 15, width: 100, height: 100)
     imageCover.contentMode = .scaleAspectFill
     self.contentView.addSubview(imageCover)
+    imageCover.snp.makeConstraints { (make) in
+        make.top.equalTo(15.0)
+        make.left.equalTo(15.0)
+        make.width.equalTo(100.0)
+        make.height.equalTo(100.0)
+    }
     
     //商品标题
-    nameLabel.frame = CGRect(x: imageCover.rightX+10, y: 15, width: SCREEN_WIDTH-imageCover.rightX-10-15, height: 100)
+//    nameLabel.frame = CGRect(x: imageCover.rightX+10, y: 15, width: SCREEN_WIDTH-imageCover.rightX-10-15, height: 100)
     nameLabel.font = UIFont.systemFont(ofSize: 14)
     nameLabel.textColor = COLOR_Main
     nameLabel.numberOfLines = 0
     nameLabel.text = "测试数据"
     self.contentView.addSubview(nameLabel)
+    nameLabel.snp.makeConstraints { (make) in
+        make.top.equalTo(15)
+        make.left.equalTo(imageCover.snp_right).offset(10)
+        make.right.equalTo(-15)
+    }
+    
+    
     
     }
     

@@ -26,6 +26,8 @@
 //图片解析
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SDWebImage/UIButton+WebCache.h>
+//布局
+//#import <Masonry/Masonry.h>
 
 
 //警告：注意这个桥接文件不要乱移动他的文件夹目录位置，否则会找不到

@@ -25,6 +25,7 @@ PODS:
   - SDWebImage/GIF (4.4.2):
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
+  - SnapKit (4.2.0)
   - UMCCommon (1.5.2)
   - UMCCommonLog (1.0.0)
   - UMCSecurityPlugins (1.0.6)
@@ -61,6 +62,7 @@ DEPENDENCIES:
   - ObjectMapper (~> 3.4)
   - SDWebImage
   - SDWebImage/GIF
+  - SnapKit
   - UMCCommon
   - UMCCommonLog
   - UMCSecurityPlugins
@@ -78,6 +80,7 @@ SPEC REPOS:
     - MJRefresh
     - ObjectMapper
     - SDWebImage
+    - SnapKit
     - UMCCommon
     - UMCCommonLog
     - UMCSecurityPlugins
@@ -92,12 +95,13 @@ SPEC CHECKSUMS:
   MJRefresh: 0efa19656679d70a0f47cbe76e56c2271fe53a97
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   UMCCommon: 4392868ac47ff1b101663106bb114ba616fabbad
   UMCCommonLog: 05a2d5de21858e3d870551562cff405c1366d244
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   UMCShare: aa233aecad67979930fe43f3a2f676023b669439
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 2098d6c97cf05811613268e520356c44551d95f2
+PODFILE CHECKSUM: cf2fd9e044d52fcc284ff6f177f6ee4d93052ec4
 
 COCOAPODS: 1.5.3
