@@ -10,7 +10,9 @@ import UIKit
 
 ///MARK-----Swift头文件----------
 ///自动布局
-import SnapKit
+//import SnapKit
+
+import ObjectMapper
 
 
 

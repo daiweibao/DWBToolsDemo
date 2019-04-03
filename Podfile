@@ -58,12 +58,17 @@ pod 'MJExtension'
 
 #===================swift模块导入的三方库=================================
 
-#自动布局,iOS11之前，不能升级到4.0
-pod 'SnapKit'
-#JSON数据
-pod 'SwiftyJSON', '~> 4.0'
-#网络请求
-pod 'Alamofire'
+#自动布局,iOS11之前，不能升级到4.0--暂时不用
+#pod 'SnapKit'
+
+#网络请求，暂时用AFN
+#pod 'Alamofire'
+
+#转JSON,暂时不用
+#pod 'SwiftyJSON'
+
+#把json对象映射为model对象。
+pod 'ObjectMapper', '~> 3.4'
 
 
 end

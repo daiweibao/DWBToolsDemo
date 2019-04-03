@@ -8,13 +8,6 @@
 
 import UIKit
 
-import SwiftyJSON
-
-import Alamofire
-
-
-//import HandyJSON
-
 class FoundViewController: CXRootViewController, UITableViewDelegate, UITableViewDataSource{
 
     //tableview
@@ -53,106 +46,34 @@ class FoundViewController: CXRootViewController, UITableViewDelegate, UITableVie
 //                              "page_no": currentPage,
 //            ] as [String : Any]
         
-//        NetWorkTools.shareInstance.request(requestType: .POST, url: DWBPromotion, parameters: platformDict, succeed: { (responseObject) in
-//
-//
-//        }) { (error) in
-//
-//
-//
-//        }
-        
-//
-//        Alamofire.request(DWBPromotion, parameters:platformDict)
-//            .responseString { response in
-//                print("Success: \(response.result.isSuccess)")
-//                print("Response String: \(response.result.value)")
-//
-//
-//        }
-//
-        
-
-//        Alamofire.request(DWBPromotion, method:.post, parameters: platformDict, encoding: JSONEncoding.default , headers: nil).validate().responseJSON  { response in
-//            print("response===",response)
-//
-////             let json:Dictionary = response as! Dictionary<String,AnyObject>
-//////             let json = JSON(response)
-////             let code:Int = json["status"] as! Int
-//
-//
-//            switch response.result{
-//            case .success(let value): break
-//            //拿到请求成功的数据做处理
-//            case .failure(let error): break
-//                //失败处理
-//            }
-//
-//        }
-//
-        
-
         DWBAFNetworking.post(DWBPromotion, parameters:platformDict, controller: self, type: nil, success: { (responseObject) in
-            //转换类型【必须】
-            let json = JSON(responseObject)
-            
-             let resultJson = json as? NSDictionary // json对象
-            
-             let move_regionsDict = resultJson?["move_regions"] as? NSDictionary // json字典
-            
-             let goods_list = move_regionsDict?["goods_list"] as? NSArray // json数组
-            
-
-            let responseObject = responseObject as AnyObject
-
-
+            let responseObject = responseObject as AnyObject//数据转换
             //判断请求成功
             if responseObject["status"] as! NSNumber == 1 {
-
-
+                //请求成功
+                //取出字典
+                let dataDict = responseObject["data"] as! [String : AnyObject]
+                //取出数组
+                let move_regions :[[String:AnyObject]] = dataDict["move_regions"] as! [[String : AnyObject]]
+                
+                let move_regionsFirst:[String:AnyObject] = move_regions[0] as [String:AnyObject]
+                
+                let goods_list :[[String:AnyObject]] = move_regionsFirst["goods_list"] as! [[String : AnyObject]]
+                
+                if self.currentPage == 1 {
+                    //刷新时移除所有数据
+                    self.dataSouce.removeAll()
+                }
+                //遍历数据
+                for dicInfo in goods_list {
+                    //转模型
+                    let meimei = FoundViewListModel(JSON: dicInfo)
+                    //添加数据到数组
+                    self.dataSouce.append(meimei ?? "" as AnyObject)
+                }
+                
                 //主线程
                   DispatchQueue.main.async {
-
-
-                    //请求成功
-                    let data = responseObject["data"] as! [String : AnyObject]
-                    let move_regions :[[String:AnyObject]] = data["move_regions"] as! [[String : AnyObject]]
-
-
-                    let move_regionsFirst:[String:AnyObject] = move_regions[0] as [String:AnyObject]
-
-                    let goods_list :[[String:AnyObject]] = move_regionsFirst["goods_list"] as! [[String : AnyObject]]
-
-                    if self.currentPage == 1 {
-                        //刷新时移除所有数据
-                        self.dataSouce.removeAll()
-                    }
-
-
-                    //遍历数据
-                    for dicInfo in goods_list {
-                        
-//
-//                        if let user = FoundViewListModel.objectWithKeyValues(dicInfo) as? FoundViewListModel{
-//                            print("\(user)")
-//                        }
-                        
-//                          let mappedObject = FoundViewListModel.deserialize(from: dicInfo)
-//
-//                        let jsonData = JSON(dicInfo)
-//                        let model = FoundViewListModel(Person: jsonData)
-                        //转模型
-                        let dicInfoJSON:[String : Any] = dicInfo
-                        let model = FoundViewListModel()
-                        
-//                        model.setValuesForKeys(dicInfoJSON as [String : AnyObject])
-                        
-//                        model.mj_setKeyValues(dicInfoJSON)
-//                        model.goods_name = dicInfo["goods_name"] as? String
-                       //添加数据到数组
-                        self.dataSouce.append(model)
-                    }
-
                     //刷新表格
                     self.tableView.reloadData()
 
