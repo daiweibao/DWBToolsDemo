@@ -158,7 +158,7 @@ func userjoinChatroom() ->String {
 
 
 //1.2版本主题色
-let MAIN_COLOR = UIColor.colorWithHexString(hex: "#eb4c97")
+let COLOR_Main = UIColor.colorWithHexString(hex: "#eb4c97")
 
 /**
  *  RGB 随机颜色

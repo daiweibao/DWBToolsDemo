@@ -11,9 +11,11 @@ import UIKit
 class FoundViewCell: UITableViewCell {
     
     //懒加载名字：lazy
+    //商品标题
     private lazy var nameLabel:UILabel = UILabel()
+    //商品封面
+    private lazy var imageCover:UIImageView = UIImageView()
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -40,10 +42,13 @@ class FoundViewCell: UITableViewCell {
     }
 
     //数据
-    var model : FoundViewListModel? {
+    var model : FoundViewListModel_goods_list? {
         
         didSet {
+            //商品封面
+            imageCover.sd_setImage(with: URL(string:model?.goods_thumb ?? "" ), placeholderImage: UIImage(named: ""))
             
+            //商品名字
             nameLabel.text = model?.goods_name
             
         }
@@ -52,9 +57,16 @@ class FoundViewCell: UITableViewCell {
     }
     
    private func createUI(){
-    nameLabel.frame = CGRect(x: 15, y: 0, width: 200, height: 44)
+    //商品封面
+    imageCover.frame = CGRect(x: 15, y: 15, width: 100, height: 100)
+    imageCover.contentMode = .scaleAspectFill
+    self.contentView.addSubview(imageCover)
+    
+    //商品标题
+    nameLabel.frame = CGRect(x: imageCover.rightX+10, y: 15, width: SCREEN_WIDTH-imageCover.rightX-10-15, height: 100)
     nameLabel.font = UIFont.systemFont(ofSize: 14)
-    nameLabel.textColor = UIColor.red
+    nameLabel.textColor = COLOR_Main
+    nameLabel.numberOfLines = 0
     nameLabel.text = "测试数据"
     self.contentView.addSubview(nameLabel)
     

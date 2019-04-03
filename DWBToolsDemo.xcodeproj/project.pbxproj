@@ -158,6 +158,7 @@
 		36D37858213FF05D00E768AF /* getUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37856213FF05D00E768AF /* getUUID.m */; };
 		36D3785C213FF0C400E768AF /* NSDictionary+CXHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3785B213FF0C400E768AF /* NSDictionary+CXHelp.m */; };
 		36DE4FED218D96D200C3FE40 /* NSObject+DWBKVOCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DE4FEC218D96D200C3FE40 /* NSObject+DWBKVOCrash.m */; };
+		36E3D59B225497C6008BE747 /* GoodsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E3D59A225497C6008BE747 /* GoodsDetailsController.swift */; };
 		36E861EF21AFBF3300180D78 /* lufei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36E8618121AFBF3300180D78 /* lufei.jpg */; };
 		36E861F021AFBF3300180D78 /* MyCenterMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8618621AFBF3300180D78 /* MyCenterMainController.m */; };
 		36E861F221AFBF3300180D78 /* MyCenterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E8618821AFBF3300180D78 /* MyCenterHeaderView.m */; };
@@ -525,6 +526,7 @@
 		36DA4A762147B59000048763 /* MacroHeaderHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroHeaderHeader.h; sourceTree = "<group>"; };
 		36DE4FEB218D96D200C3FE40 /* NSObject+DWBKVOCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DWBKVOCrash.h"; sourceTree = "<group>"; };
 		36DE4FEC218D96D200C3FE40 /* NSObject+DWBKVOCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DWBKVOCrash.m"; sourceTree = "<group>"; };
+		36E3D59A225497C6008BE747 /* GoodsDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsDetailsController.swift; sourceTree = "<group>"; };
 		36E8618121AFBF3300180D78 /* lufei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lufei.jpg; sourceTree = "<group>"; };
 		36E8618321AFBF3300180D78 /* MyCenterMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterMainController.h; sourceTree = "<group>"; };
 		36E8618521AFBF3300180D78 /* MyCenterHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterHeaderView.h; sourceTree = "<group>"; };
@@ -733,6 +735,7 @@
 			isa = PBXGroup;
 			children = (
 				367D99702248B91B001AB399 /* FoundViewController.swift */,
+				36E3D59A225497C6008BE747 /* GoodsDetailsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2293,6 +2296,7 @@
 				368E69E92140C70D000EC79C /* KeyChainManager.m in Sources */,
 				368E69ED2140D307000EC79C /* DWBAFNetworking.m in Sources */,
 				369D8961217198F800003425 /* DWBDeviceHelp.m in Sources */,
+				36E3D59B225497C6008BE747 /* GoodsDetailsController.swift in Sources */,
 				368E69C62140B64D000EC79C /* UIColor+DWBHelp.m in Sources */,
 				36E8621921AFBF3300180D78 /* DWBJXCategoryMyLineView.m in Sources */,
 				368E69E52140C5BF000EC79C /* CXAudioTools.m in Sources */,

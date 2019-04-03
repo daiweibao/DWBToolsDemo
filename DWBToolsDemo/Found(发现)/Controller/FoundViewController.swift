@@ -53,24 +53,24 @@ class FoundViewController: CXRootViewController, UITableViewDelegate, UITableVie
                 //请求成功
                 //取出字典
                 let dataDict = responseObject["data"] as! [String : AnyObject]
-                //取出数组
-                let move_regions :[[String:AnyObject]] = dataDict["move_regions"] as! [[String : AnyObject]]
-                
-                let move_regionsFirst:[String:AnyObject] = move_regions[0] as [String:AnyObject]
-                
-                let goods_list :[[String:AnyObject]] = move_regionsFirst["goods_list"] as! [[String : AnyObject]]
+//                //取出数组
+//                let move_regions :[[String:AnyObject]] = dataDict["move_regions"] as! [[String : AnyObject]]
+//
+//                let move_regionsFirst:[String:AnyObject] = move_regions[0] as [String:AnyObject]
+//
+//                let goods_list :[[String:AnyObject]] = move_regionsFirst["goods_list"] as! [[String : AnyObject]]
                 
                 if self.currentPage == 1 {
                     //刷新时移除所有数据
                     self.dataSouce.removeAll()
                 }
-                //遍历数据
-                for dicInfo in goods_list {
-                    //转模型
-                    let meimei = FoundViewListModel(JSON: dicInfo)
-                    //添加数据到数组
-                    self.dataSouce.append(meimei ?? "" as AnyObject)
-                }
+                
+                //转模型
+                let model = FoundViewListModel(JSON: dataDict)
+                //添加数据到数组
+                let goods_list = model?.move_regions?.first?.goods_list
+                //数组追加
+                self.dataSouce = self.dataSouce + goods_list!
                 
                 //主线程
                   DispatchQueue.main.async {
@@ -123,6 +123,12 @@ class FoundViewController: CXRootViewController, UITableViewDelegate, UITableVie
         return self.dataSouce.count
     }
     
+    //行高
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
+    }
+    
     
     //头部高度
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -142,7 +148,7 @@ class FoundViewController: CXRootViewController, UITableViewDelegate, UITableVie
         cell.selectionStyle = .none
         
         //数据传给cell
-        cell.model = dataSouce[indexPath.row] as? FoundViewListModel
+        cell.model = dataSouce[indexPath.row] as? FoundViewListModel_goods_list
         
         return cell
     }
@@ -151,6 +157,13 @@ class FoundViewController: CXRootViewController, UITableViewDelegate, UITableVie
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         
         print("点击cell")
+        let model = dataSouce[indexPath.row] as! FoundViewListModel_goods_list
+        let VC = GoodsDetailsController()
+        VC.goodsTitle  = model.goods_name ?? ""
+        VC.goodsId = model.goods_id ?? ""
+        self.navigationController?.pushViewController(VC, animated: true)
+        
+        
         
     }
 
