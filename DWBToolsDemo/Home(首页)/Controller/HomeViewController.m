@@ -83,6 +83,7 @@
         //这里一定要用点击手势，否则不响应
         //测试控制器
         ToolsEntController *testVC = [[ToolsEntController alloc] init];
+        testVC.controllerId = @"控制器的Id";
         [weakself.navigationController pushViewController:testVC animated:YES];
         //关闭高亮
         weakbuttonTools.highlighted = NO;

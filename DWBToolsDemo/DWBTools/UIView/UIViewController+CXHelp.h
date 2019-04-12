@@ -10,6 +10,9 @@
 
 @interface UIViewController (CXHelp)
 
+//在Category中定义属性：controllerId
+@property (nonatomic,copy) NSString * controllerId;
+
 /**
  获取Window当前显示的ViewController
 

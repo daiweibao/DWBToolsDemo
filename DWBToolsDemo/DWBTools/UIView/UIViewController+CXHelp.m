@@ -7,8 +7,28 @@
 //
 
 #import "UIViewController+CXHelp.h"
+//导入头文件
+#import <objc/runtime.h>
+
+//在setControllerId:方法中使用了一个objc_setAssociatedObject的方法，这个方法有四个参数，分别是：源对象，关联时的用来标记是哪一个属性的key（因为你可能要添加很多属性），关联的对象和一个关联策略。用来标记是哪一个属性的key常见有三种写法，但代码效果是一样的，如下：
+static void *controllerIdKey = &controllerIdKey; //Id的key
 
 @implementation UIViewController (CXHelp)
+#pragma mark ==================用runtime添加属性==========================
+- (NSObject *)controllerId {//get方法
+    return objc_getAssociatedObject(self, &controllerIdKey);
+}
+-(void)setControllerId:(NSString *)controllerId{//set方法
+    objc_setAssociatedObject(self, &controllerIdKey, controllerId, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+//typedef OBJC_ENUM(uintptr_t, objc_AssociationPolicy) {
+//    OBJC_ASSOCIATION_ASSIGN = 0,             //关联对象的属性是弱引用
+//    OBJC_ASSOCIATION_RETAIN_NONATOMIC = 1,   //关联对象的属性是强引用并且关联对象不使用原子性
+//    OBJC_ASSOCIATION_COPY_NONATOMIC = 3,     //关联对象的属性是copy并且关联对象不使用原子性
+//    OBJC_ASSOCIATION_RETAIN = 01401,         //关联对象的属性是copy并且关联对象使用原子性
+//    OBJC_ASSOCIATION_COPY = 01403            //关联对象的属性是copy并且关联对象使用原子性
+//};
+
 
 
 //获取Window当前显示的ViewController

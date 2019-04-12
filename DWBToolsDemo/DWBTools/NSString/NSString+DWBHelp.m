@@ -359,7 +359,11 @@
         
         size = [text boundingRectWithSize:CGSizeMake(Width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:myFont} context:nil].size;
     }
-    return size;
+    
+     //动态计算文本高度的时候需要注意什么？，需要注意算完高度需要用ceil来处理一下做向上取整。，ceil向上取整
+    CGSize resultSize = CGSizeMake(ceil(size.width), ceil(size.height));
+    //返回结果
+    return resultSize;
     
 }
 

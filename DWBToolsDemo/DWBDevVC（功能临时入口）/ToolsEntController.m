@@ -99,7 +99,9 @@
 //    }
     
     
+    NSLog(@"商品Id:%@",self.controllerId);
 
+    
 }
 /**
  是否有网，返回NO代表没网，YES有网
