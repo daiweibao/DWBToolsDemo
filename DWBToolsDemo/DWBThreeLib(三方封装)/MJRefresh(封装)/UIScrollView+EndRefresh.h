@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "UIScrollView+MJRefresh.h"
+//#import "UIScrollView+MJRefresh.h"
 
 @interface UIScrollView (EndRefresh)
 

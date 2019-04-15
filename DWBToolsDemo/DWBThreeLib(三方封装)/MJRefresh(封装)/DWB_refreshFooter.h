@@ -6,7 +6,7 @@
 //  Copyright © 2016年 北京嗅美科技有限公司. All rights reserved.
 //
 
-#import "MJRefreshAutoNormalFooter.h"
+//#import "MJRefreshAutoNormalFooter.h"
 
 @interface DWB_refreshFooter : MJRefreshAutoNormalFooter
 /**

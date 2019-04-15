@@ -6,7 +6,7 @@
 //  Copyright © 2016年 北京嗅美科技有限公司. All rights reserved.
 //
 
-#import "MJRefreshNormalHeader.h"
+//#import "MJRefreshNormalHeader.h"
 
 @interface DWB_refreshHeader : MJRefreshNormalHeader
 

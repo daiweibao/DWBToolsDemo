@@ -30,9 +30,29 @@ class FoundViewController: CXRootViewController, UITableViewDelegate, UITableVie
         
         //数据
         loadData()
+        //刷新
+        refresh()
     
         // Do any additional setup after loading the view.
     }
+    
+    //刷新
+    func refresh(){
+        //下拉刷新
+        DWB_refreshHeader.dwb_RefreshHeaderAddview(tableView, refreshType: "") {
+            self.currentPage = 0
+            self.loadData()
+        }
+        
+        //上拉加载
+        DWB_refreshFooter.dwb_RefreshFooterAddview(tableView) {
+            
+            self.currentPage += 1
+            self.loadData()
+        }
+        
+    }
+    
     
     //请求数据
     func loadData(){
@@ -74,6 +94,10 @@ class FoundViewController: CXRootViewController, UITableViewDelegate, UITableVie
                 
                 //主线程
                   DispatchQueue.main.async {
+                    
+                    //结束刷新
+                    self.tableView.endRefresh_DWB()
+                    
                     //刷新表格
                     self.tableView.reloadData()
 
