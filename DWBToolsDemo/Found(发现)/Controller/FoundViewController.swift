@@ -85,6 +85,15 @@ class FoundViewController: CXRootViewController, UITableViewDelegate, UITableVie
                     self.dataSouce.removeAll()
                 }
                 
+//               //for循环案例
+//                for  i in 0..<list.count {
+//                    //转模型
+//                    let model = YZWinningRecordListModel(JSON: list[i])
+//                    //                    //数组追加
+//                    self.dataSouce.append(model!)
+//                }
+//
+                
                 //转模型
                 let model = FoundViewListModel(JSON: dataDict)
                 //添加数据到数组
@@ -100,6 +109,9 @@ class FoundViewController: CXRootViewController, UITableViewDelegate, UITableVie
                     
                     //刷新表格
                     self.tableView.reloadData()
+                    
+                    //移除加载中
+                    LoadingView.removeLoading(self)
 
                 }
 
@@ -129,9 +141,13 @@ class FoundViewController: CXRootViewController, UITableViewDelegate, UITableVie
 //        tableView.backgroundColor = UIColor.groupTableViewBackground
         //添加
         view.addSubview(tableView)
-    
         //注册cell重用
         tableView.register(FoundViewCell.self , forCellReuseIdentifier: "FoundViewCell")
+        
+        LoadingView.loadingView(self, isCreateBack: false, viewMaxY: SCREEN_HEIGHT, viewHeight: SCREEN_HEIGHT-MC_NavHeight()) {
+           
+        }
+        
         
     }
     
