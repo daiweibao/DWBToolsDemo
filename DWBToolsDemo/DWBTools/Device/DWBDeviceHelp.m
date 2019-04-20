@@ -139,35 +139,24 @@
 #pragma mark ============通过bundleId打开APP S======
 
 /**
- 通过bundleId打开第三方APP，YES能打开，NO不能打开
+ 通过App协议打开第三方APP，YES能打开，NO不能打开
  
- @param bundleId APP的bundleId
+ @param urlSchemes APP的协议
  @return 结果
  */
--(BOOL)openThreeAPPWithCompleteWithBundelId:(NSString *)bundleId{
++(BOOL)openThreeAPPWithCompleteWithUrlSchemes:(NSString *)urlSchemes{
+    //打开app
+    BOOL isCanOpenApp = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@://",urlSchemes]]];
     
-    //如果自己打开自己就拦截
-    if ([bundleId isEqual:GET_BundleId]) {
-        return NO;
-    }
-    
-    Class lsa = objc_getClass("LSApplicationWorkspace");
-    NSObject * workspace = [lsa performSelector:@selector(defaultWorkspace)];
-    BOOL isCanOpenAPP = [workspace performSelector:@selector(openApplicationWithBundleID:) withObject:bundleId];
-    //    if (isCanOpenAPP==YES) {
+    //    if (isCanOpenApp==YES) {
     //        NSLog(@"能打开APP");
     //    }else{
     //        NSLog(@"不能打开APP");
     //    }
     
-    return isCanOpenAPP;
+    return isCanOpenApp;
 }
--(void)defaultWorkspace{
-    
-}
--(void)openApplicationWithBundleID:(NSString *)str{
-    
-}
+
 #pragma mark ============通过bundleId打开APP E======
 
 

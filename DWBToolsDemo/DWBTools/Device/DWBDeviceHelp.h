@@ -50,12 +50,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage *)getTheLaunchImage;
 
 /**
- 通过bundleId打开第三方APP，YES能打开，NO不能打开
+ 通过App协议打开第三方APP，YES能打开，NO不能打开
  
- @param bundleId APP的bundleId
+ @param urlSchemes APP的协议
  @return 结果
  */
--(BOOL)openThreeAPPWithCompleteWithBundelId:(NSString *)bundleId;
++(BOOL)openThreeAPPWithCompleteWithUrlSchemes:(NSString *)urlSchemes;
 
 @end
 

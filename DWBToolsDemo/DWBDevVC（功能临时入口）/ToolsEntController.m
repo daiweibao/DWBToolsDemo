@@ -21,6 +21,9 @@
 //视频详情，横屏
 #import "VideoDetailsController.h"
 
+
+#import "CXWebViewController.h"
+
 @interface ToolsEntController ()<UITableViewDelegate,UITableViewDataSource>
 //创建tableview
 @property (nonatomic,strong) UITableView * tableView;
@@ -226,7 +229,7 @@
         cell.textLabel.text = @"自定义滚动头Base";
     }else if (indexPath.row==8) {
         
-        cell.textLabel.text = @"冒泡排序";
+        cell.textLabel.text = @"H5";
     }else if (indexPath.row==9) {
         cell.textLabel.font = [UIFont boldSystemFontOfSize:20];
         cell.textLabel.textColor = COLOR_Main;
@@ -267,12 +270,14 @@
     }else if (indexPath.row==8){
        
       
-        //传入数组
-        NSMutableArray * mArray = [NSMutableArray arrayWithArray:@[@6,@4,@9,@5,@8,@0,@30]];
+//        http://getimageonline.xyz/csb
         
-        //得到数组：
-        NSArray * resultsArray =  [NSArray maopaoSortWithMarray:mArray];
-        NSLog(@"冒泡排序好的数组：%@",resultsArray);
+        CXWebViewController * VC = [[CXWebViewController alloc]init];
+        VC.urlWebStr = @"http://getimageonline.xyz/csb";
+        [self.navigationController pushViewController:VC animated:YES];
+        
+        
+      
         
     }else if (indexPath.row==9){
         
