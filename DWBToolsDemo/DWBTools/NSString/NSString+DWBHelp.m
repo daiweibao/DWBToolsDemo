@@ -1252,6 +1252,29 @@
     }
 }
 
+/**
+ 传入数据，返回带万单位的字符串
+ 
+ @param strNum 纯数据
+ */
++(NSString *)getNumToWanStringWithStr:(NSString *)strNum{
+    
+    //判空
+    if ([NSString isNULL:strNum]) {
+        return  @"0";
+    }
+    
+    double num = strNum.doubleValue;//转类型
+    if (num>=10000) {
+        //返回带万的单位，保留一位小数
+        return [NSString stringWithFormat:@"%.1f万",num / 10000];
+    }else{
+        //返回原始数据
+        return [NSString stringWithFormat:@"%@",strNum];
+    }
+    
+}
+
 
 
 @end

@@ -409,11 +409,18 @@
 +(void)remoWKWebViewCookies;
 
 /**
- 判断是否是今天第一次。
+ 判断是否是今天第一次。一天一次
  
  @param eventId 事件ID
  @return 返回YES,代表是今天第一次，NO不是
  */
 +(BOOL)isToadyFirstWithEventId:(NSString *)eventId;
+
+/**
+ 传入数据，返回带万单位的字符串
+ 
+ @param strNum 纯数据
+ */
++(NSString *)getNumToWanStringWithStr:(NSString *)strNum;
 
 @end
