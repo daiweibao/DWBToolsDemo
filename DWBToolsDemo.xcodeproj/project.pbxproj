@@ -112,7 +112,7 @@
 		36446185218D819D00B9E01E /* UIViewController+CXHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36446183218D819C00B9E01E /* UIViewController+CXHelp.m */; };
 		365017C9222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 365017C7222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m */; };
 		365017CD222FA2CB00E4B622 /* DWBSwiftTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365017CC222FA2CB00E4B622 /* DWBSwiftTestController.swift */; };
-		3657187A22448CA5007C70AD /* ChatInputBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3657187922448CA5007C70AD /* ChatInputBox.bundle */; };
+		3665311C22A170AD004AF58B /* ChatInputBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3665311B22A170AD004AF58B /* ChatInputBox.bundle */; };
 		367D99692248B0B8001AB399 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367D99682248B0B8001AB399 /* Images.xcassets */; };
 		367D996C2248B43C001AB399 /* VideoDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 367D996B2248B43C001AB399 /* VideoDetailsController.m */; };
 		367D996F2248B634001AB399 /* UIViewController+DWControllerHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 367D996E2248B634001AB399 /* UIViewController+DWControllerHelp.m */; };
@@ -437,7 +437,7 @@
 		365017CB222FA2CB00E4B622 /* DWBToolsDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DWBToolsDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		365017CC222FA2CB00E4B622 /* DWBSwiftTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWBSwiftTestController.swift; sourceTree = "<group>"; };
 		365636AE2244E52A00CF17BF /* DWB_URLHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWB_URLHeader.h; sourceTree = "<group>"; };
-		3657187922448CA5007C70AD /* ChatInputBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChatInputBox.bundle; sourceTree = "<group>"; };
+		3665311B22A170AD004AF58B /* ChatInputBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChatInputBox.bundle; sourceTree = "<group>"; };
 		367D99682248B0B8001AB399 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		367D996A2248B43C001AB399 /* VideoDetailsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoDetailsController.h; sourceTree = "<group>"; };
 		367D996B2248B43C001AB399 /* VideoDetailsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoDetailsController.m; sourceTree = "<group>"; };
@@ -1159,11 +1159,11 @@
 			children = (
 				362F7BAA2148ACF000A8ECB1 /* Image */,
 				362F7BA62148ACF000A8ECB1 /* emoji.json */,
+				3665311B22A170AD004AF58B /* ChatInputBox.bundle */,
 				362F7BB42148ACF000A8ECB1 /* STInputBar.h */,
 				362F7BA72148ACF000A8ECB1 /* STInputBar.m */,
 				362F7BB62148ACF000A8ECB1 /* STEmoji.h */,
 				362F7BA82148ACF000A8ECB1 /* STEmoji.m */,
-				3657187922448CA5007C70AD /* ChatInputBox.bundle */,
 				362F7BB52148ACF000A8ECB1 /* STEmojiKeyboard.h */,
 				362F7BA92148ACF000A8ECB1 /* STEmojiKeyboard.m */,
 				362F7BB32148ACF000A8ECB1 /* STEmojiCollectionView.h */,
@@ -2022,9 +2022,9 @@
 				36EEDCBF214209FE000CBEEB /* 版本更新背景@2x.png in Resources */,
 				362F7BE721490F4B00A8ECB1 /* WVstore_1024pt.png in Resources */,
 				367D99692248B0B8001AB399 /* Images.xcassets in Resources */,
-				3657187A22448CA5007C70AD /* ChatInputBox.bundle in Resources */,
 				36213F7221439EC100B00E2B /* 上拉加载中@2x.png in Resources */,
 				362F7BC02148ACF000A8ECB1 /* keyboard_preview_bg@2x.png in Resources */,
+				3665311C22A170AD004AF58B /* ChatInputBox.bundle in Resources */,
 				36213F7321439EC100B00E2B /* 上拉加载中@3x.png in Resources */,
 				36EEDCAC21420794000CBEEB /* 扫码线@2x.png in Resources */,
 				362F7BC32148ACF000A8ECB1 /* Chatkeyboard_icon@3x.png in Resources */,
