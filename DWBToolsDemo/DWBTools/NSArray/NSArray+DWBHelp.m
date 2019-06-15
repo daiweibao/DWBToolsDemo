@@ -18,11 +18,18 @@
  @return 得到去重后的可变数组
  */
 +(NSMutableArray *)arrayDataDeleteChongFuWithArray:(NSArray *)array{
-    NSMutableArray *listAry = [[NSMutableArray alloc]init];
+    NSMutableArray *listAry = [[NSMutableArray alloc]init];//去重后的数组
+//     NSMutableArray *listAryCF = [[NSMutableArray alloc]init];//检出重复的元素，放入数组
     for (NSString *str in array) {
         //        containsObject 判断数组是否包含某个元素
         if (![listAry containsObject:str]) {
             [listAry addObject:str];
+            
+        }else{
+            //附加
+            //重复元素加入新数组
+//            [listAryCF addObject:str];
+//            NSLog(@"重复的元素：%@",str);
         }
     }
     return listAry;

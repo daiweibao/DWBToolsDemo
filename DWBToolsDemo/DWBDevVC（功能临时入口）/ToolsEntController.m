@@ -29,6 +29,9 @@
 @property (nonatomic,strong) UITableView * tableView;
 @property (nonatomic,assign)NSInteger currentPage;
 
+@property (strong,nonatomic)  NSString *rStr;
+@property (copy, nonatomic)  NSString *cStr;
+
 @end
 
 @implementation ToolsEntController
@@ -103,9 +106,29 @@
     
     
     NSLog(@"商品Id:%@",self.controllerId);
-
     
+    
+    
+//    NSMutableString *mStr = [NSMutableString stringWithFormat:@"abc"];
+    
+    NSString * str = @"abc";
+    self.rStr = str;
+    self.cStr = str;
+    str = @"66666666";
+    NSLog(@"%@===%@",self.rStr,self.cStr);
+    
+    NSArray * array = @[@1,@2,@3,@4,@5,@8,@5,@1,@7];
+   NSMutableArray * marray =  [NSArray arrayDataDeleteChongFuWithArray:array];
+    
+    NSLog(@"去重后的数组：%@",marray);
+    
+   
 }
+
+
+
+
+
 /**
  是否有网，返回NO代表没网，YES有网
  
