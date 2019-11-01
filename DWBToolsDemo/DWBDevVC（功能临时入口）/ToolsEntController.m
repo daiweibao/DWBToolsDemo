@@ -24,6 +24,12 @@
 
 #import "CXWebViewController.h"
 
+#import "NSObject+Test.h"
+
+#import "MNPerson.h"
+
+#define MIN(A,B) (A) < (B) ? (A) : (B)
+
 @interface ToolsEntController ()<UITableViewDelegate,UITableViewDataSource>
 //创建tableview
 @property (nonatomic,strong) UITableView * tableView;
@@ -31,6 +37,9 @@
 
 @property (strong,nonatomic)  NSString *rStr;
 @property (copy, nonatomic)  NSString *cStr;
+
+@property (nonatomic, strong) NSString *now;
+
 
 @end
 
@@ -49,81 +58,90 @@
     
     //刷新加载
     [self refresh];
-    
-    NSString * getStr = [KeyChainManager keyChainReadData:@"chaoxidwb"];
-    
-    NSLog(@"读取数据：%@",getStr);
-    
-  /*  NSString * textName = */[[DWBAPPManager sharedManager] getMyName];
-    
-//    NSLog(@"得到配置数据：%@",textName);
-    
-    if (ios11_0orLater) {
-        
-        
-        NSString * SDict  = nil;
-        
-        NSMutableDictionary * parmeterDict = [NSMutableDictionary dictionary];
-        [parmeterDict setObject:@"标题" forKey:@"title"];
-        [parmeterDict setObject:SDict forKey:@"platform"];
-        
-        [parmeterDict removeObjectForKey:@"jjj"];
-        
-        NSLog(@"%@",parmeterDict);
-        
-        
-        NSDictionary * divtCX  = @{@"name":@"名字",@"munber":SDict};
-        
-        NSLog(@"%@",divtCX);
-        
-        NSArray * arrayCX = @[SDict,@"数组"];
-        
-        NSLog(@"空数组：%@",arrayCX);
-        
-        
-        
-        NSMutableArray * marray = [NSMutableArray array];
-        [marray addObject:@"1"];
-        
-        NSString * ssstt = arrayCX[100];
-        
-        NSString * ssstt222 = marray[100];
-        
-        
-        
-    }
+
+   
+//    [self testGCD];
     
     
+//    //在控制器里调用打印如下
+//
+//    [NSObject test1];//打印bbb
+//
+//     [ClassA test1];//打印bbb
+//
+//    [[[NSObject alloc]init]  test];//打印aaa
+//
+//    [[[ClassA alloc]init]  test];//打印aaa
     
-//    if (iPhoneX) {
-//        
-//        DWBAlertShow(@"是iPhoneX");
-//        
-//    }else{
-//        
-//        DWBAlertShow(@"不是iPhoneX");
-//    }
+//
+//    float a = 1.0;
+//
+//    float b = MIN(a++, 1.5);
+//
+//    NSLog(@"a===%f,b==%f",a,b);
+    
+//    (a++) < (1.5) ? (a++) : (1.5)
     
     
-    NSLog(@"商品Id:%@",self.controllerId);
+
     
     
+//    [self syncMain];
     
-//    NSMutableString *mStr = [NSMutableString stringWithFormat:@"abc"];
+//    _now = @"12";
+//
+//    [self addObserver:self forKeyPath:@"now" options:NSKeyValueObservingOptionNew context:nil];
+//
+//     _now = @"120";
+//
+//    NSLog(@"1");
+//    [self willChangeValueForKey:@"now"];//手动触发self.now的KVO，必写。
+//    NSLog(@"2");
+//    [self didChangeValueForKey:@"now"];//手动触发self.now的KVO，必写。
+//    NSLog(@"4");
     
-    NSString * str = @"abc";
-    self.rStr = str;
-    self.cStr = str;
-    str = @"66666666";
-    NSLog(@"%@===%@",self.rStr,self.cStr);
     
-    NSArray * array = @[@1,@2,@3,@4,@5,@8,@5,@1,@7];
-   NSMutableArray * marray =  [NSArray arrayDataDeleteChongFuWithArray:array];
+    NSLog(@"得到字符串：%@",[self getString]);//打印：h
+    id cls = [MNPerson class];
+    void * obj = &cls;
+    [(__bridge id)obj print];
     
-    NSLog(@"去重后的数组：%@",marray);
+   
     
    
 }
+
+-(NSString *)getString{
+    return (__bridge NSString*)CFStringCreateWithCString(NULL, "你好\ndd%h", kCFStringEncodingUTF8);
+}
+
+
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+//    NSLog(@"3");
+//}
+
+
+//执行顺序
+- (void)syncMain{
+    dispatch_queue_t queue = dispatch_queue_create("serial", nil);
+    dispatch_async(queue, ^(void){
+        NSLog(@"1");
+    });
+   
+    dispatch_sync(queue, ^(void){
+        NSLog(@"2");
+    });
+    dispatch_async(queue, ^(void){
+        NSLog(@"3");
+        dispatch_sync(queue, ^(void){
+            NSLog(@"4");
+        });
+
+    });
+   
+}
+
+
 
 
 

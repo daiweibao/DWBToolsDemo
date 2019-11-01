@@ -145,6 +145,8 @@
 		368E69E62140C5BF000EC79C /* TouchIDHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69E22140C5BF000EC79C /* TouchIDHelp.m */; };
 		368E69E92140C70D000EC79C /* KeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69E82140C70D000EC79C /* KeyChainManager.m */; };
 		368E69ED2140D307000EC79C /* DWBAFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69EC2140D307000EC79C /* DWBAFNetworking.m */; };
+		3690E87223165BB2007B8AEC /* NSObject+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 3690E87123165BB2007B8AEC /* NSObject+Test.m */; };
+		3690E87523167F5E007B8AEC /* MNPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3690E87423167F5E007B8AEC /* MNPerson.m */; };
 		36991147215216F9004B3C0D /* NSString+DWBAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 36991146215216F9004B3C0D /* NSString+DWBAttribute.m */; };
 		3699115021523AD4004B3C0D /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3699114F21523AD4004B3C0D /* TestModel.m */; };
 		369D8961217198F800003425 /* DWBDeviceHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 369D8960217198F800003425 /* DWBDeviceHelp.m */; };
@@ -499,6 +501,10 @@
 		368E69E82140C70D000EC79C /* KeyChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainManager.m; sourceTree = "<group>"; };
 		368E69EB2140D307000EC79C /* DWBAFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBAFNetworking.h; sourceTree = "<group>"; };
 		368E69EC2140D307000EC79C /* DWBAFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBAFNetworking.m; sourceTree = "<group>"; };
+		3690E87023165BB2007B8AEC /* NSObject+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Test.h"; sourceTree = "<group>"; };
+		3690E87123165BB2007B8AEC /* NSObject+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Test.m"; sourceTree = "<group>"; };
+		3690E87323167F5E007B8AEC /* MNPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNPerson.h; sourceTree = "<group>"; };
+		3690E87423167F5E007B8AEC /* MNPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNPerson.m; sourceTree = "<group>"; };
 		36991145215216F9004B3C0D /* NSString+DWBAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DWBAttribute.h"; sourceTree = "<group>"; };
 		36991146215216F9004B3C0D /* NSString+DWBAttribute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+DWBAttribute.m"; sourceTree = "<group>"; };
 		3699114E21523AD4004B3C0D /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
@@ -1316,6 +1322,10 @@
 				36213FD22143ABB000B00E2B /* ToolsEntController.m */,
 				367D996A2248B43C001AB399 /* VideoDetailsController.h */,
 				367D996B2248B43C001AB399 /* VideoDetailsController.m */,
+				3690E87023165BB2007B8AEC /* NSObject+Test.h */,
+				3690E87123165BB2007B8AEC /* NSObject+Test.m */,
+				3690E87323167F5E007B8AEC /* MNPerson.h */,
+				3690E87423167F5E007B8AEC /* MNPerson.m */,
 				365017CC222FA2CB00E4B622 /* DWBSwiftTestController.swift */,
 			);
 			path = "DWBDevVC（功能临时入口）";
@@ -2200,6 +2210,7 @@
 				36EEDCC1214209FE000CBEEB /* CXVersionUpdate.m in Sources */,
 				36213F2D21439B3700B00E2B /* SDDrowNoticeView.m in Sources */,
 				368E69C92140C1A5000EC79C /* UIView+ActionTap.m in Sources */,
+				3690E87523167F5E007B8AEC /* MNPerson.m in Sources */,
 				36E861F921AFBF3300180D78 /* JXCategoryIndicatorBallView.m in Sources */,
 				362F7BB92148ACF000A8ECB1 /* STInputBar.m in Sources */,
 				36E861FB21AFBF3300180D78 /* JXCategoryIndicatorBackgroundView.m in Sources */,
@@ -2282,6 +2293,7 @@
 				36E8620C21AFBF3300180D78 /* JXCategoryNumberCell.m in Sources */,
 				36213F922143A5B900B00E2B /* LoadingView.m in Sources */,
 				36213F4E21439C1400B00E2B /* SVIndefiniteAnimatedView.m in Sources */,
+				3690E87223165BB2007B8AEC /* NSObject+Test.m in Sources */,
 				36E861F521AFBF3300180D78 /* DWBJXMainController.m in Sources */,
 				362F7BCC2148BE7B00A8ECB1 /* UIScrollView+Help.m in Sources */,
 				36E861F021AFBF3300180D78 /* MyCenterMainController.m in Sources */,
