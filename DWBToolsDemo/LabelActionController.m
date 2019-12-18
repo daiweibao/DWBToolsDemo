@@ -34,6 +34,8 @@
      NSString * string4 = @"说到：";
      NSString * string5 = @"你在干么呢?";
     
+    NSString * dsdsa = @"测试";
+    
     
      NSArray * array1 = @[string1,[UIColor redColor],[UIFont systemFontOfSize:12]];
      NSArray * array2 = @[string2,[UIFont boldSystemFontOfSize:20]];

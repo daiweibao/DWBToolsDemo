@@ -106,6 +106,8 @@
     void * obj = &cls;
     [(__bridge id)obj print];
     
+    
+    UIView * d;
    
     
    
@@ -278,6 +280,9 @@
     }else if (indexPath.row==10) {
         
         cell.textLabel.text = @"视频详情横屏";
+    }else if (indexPath.row==11) {
+        
+        cell.textLabel.text = @"控制器模态";
     }
     
     return cell;
@@ -321,13 +326,17 @@
       
         
     }else if (indexPath.row==9){
-        
+        //只是
         [NSString copyCXString:@"wxcc077fbc97d571f0://wapoauth?m=Kzg2MTc2MTEzMDIzMDg%3D&t=636136"];
         [MBProgressHUD showSuccess:@"复制成功"];
         
     }else if (indexPath.row==10){
         VideoDetailsController * VC = [[VideoDetailsController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
+    }else if(indexPath.row==11){
+        //模态
+        VideoDetailsController * VC = [[VideoDetailsController alloc]init];
+        [self presentViewController:VC animated:YES completion:nil];
     }
 }
 

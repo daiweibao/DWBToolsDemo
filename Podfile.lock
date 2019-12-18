@@ -72,7 +72,7 @@ DEPENDENCIES:
   - YYModel
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - FLAnimatedImage
     - Masonry
@@ -104,4 +104,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 0f20129fd01bf3a7969bd590f058f5144c7df1f1
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4
