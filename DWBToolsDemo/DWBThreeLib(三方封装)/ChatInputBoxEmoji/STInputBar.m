@@ -13,7 +13,7 @@
 #define kSTLeftButtonWidth 50
 #define kSTLeftButtonHeight 30
 #define kSTRightButtonWidth 55
-#define kSTTextviewDefaultHeight 36
+#define kSTTextviewDefaultHeight 30//输入框默认高度
 #define kSTTextviewMaxHeight 80
 
 //读取图片
@@ -66,8 +66,43 @@
         //创建UI
         [self createChatUI];
         
+    }else if ([typeString isEqual:@"评论输入框"]){
+        //创建UI
+         [self createCommentsUI];
     }
 }
+
+
+#pragma mark =====================评论界面UI界面-开始========================
+- (void)createCommentsUI{
+    //加边框
+    self.layer.borderWidth = 1;
+    //输入框
+    self.textView = [[ZBHTextView alloc] initWithFrame:CGRectMake(15, (kSTIBDefaultHeight-kSTTextviewDefaultHeight)/2, SCREEN_WIDTH-63-15, kSTTextviewDefaultHeight)];
+    self.textView.backgroundColor = [UIColor colorWithHexString:@"#292D35"];
+    self.textView.textColor = [UIColor whiteColor];
+    self.textView.font = [UIFont systemFontOfSize:14];
+    self.textView.returnKeyType = UIReturnKeySend;
+    self.textView.delegate = self;
+    self.textView.scrollEnabled = NO;
+    self.textView.showsVerticalScrollIndicator = NO;
+    self.textView.placeholderColor = [UIColor colorWithHexString:@"#999999"];
+    self.textView.userInteractionEnabled = YES;
+    self.textView.layer.cornerRadius = 10;
+    self.textView.clipsToBounds = YES;
+    
+    //回复那个按钮
+    self.sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.sendButton.frame = CGRectMake(self.frame.size.width-63, 7, 63, 36);
+    [self.sendButton setTitle:@"发送" forState:UIControlStateNormal];
+    self.sendButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
+    [self.sendButton addTarget:self action:@selector(ActionsendRedEn:) forControlEvents:UIControlEventTouchUpInside];
+    self.sendButton.enabled = YES;
+    [self addSubview:_textView];
+    [self addSubview:self.sendButton];//发送
+    
+}
+
 
 
 #pragma mark =====================融云聊天UI界面-开始========================
@@ -258,6 +293,8 @@
     
     if ([self.typeString isEqual:@"融云聊天"]) {
         //融云聊天,自己弹出高度，所以不需要
+    }else if ([self.typeString isEqual:@"评论输入框"]){
+        //评论
     }else{
         
         [UIView animateWithDuration:[info[UIKeyboardAnimationDurationUserInfoKey] doubleValue]

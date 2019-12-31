@@ -67,7 +67,7 @@ static AFHTTPSessionManager *manager;
     
     
     
-    [manager POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager GET:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         //所有情况都回调请求结果
         if (results) {

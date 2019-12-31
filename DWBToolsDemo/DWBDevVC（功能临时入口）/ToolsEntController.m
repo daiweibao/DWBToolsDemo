@@ -28,6 +28,7 @@
 
 #import "MNPerson.h"
 
+
 #define MIN(A,B) (A) < (B) ? (A) : (B)
 
 @interface ToolsEntController ()<UITableViewDelegate,UITableViewDataSource>
@@ -39,6 +40,7 @@
 @property (copy, nonatomic)  NSString *cStr;
 
 @property (nonatomic, strong) NSString *now;
+
 
 
 @end
@@ -58,7 +60,8 @@
     
     //刷新加载
     [self refresh];
-
+    
+  
    
 //    [self testGCD];
     
@@ -252,7 +255,7 @@
     }else if (indexPath.row==1) {
         cell.textLabel.text = @"一行代码实现label点击指定文字";
     }else if (indexPath.row==2) {
-        NSString * str = @"我的是null哈哈";
+        NSString * str = @"评论列表";
         cell.textLabel.text = str;
     }else if (indexPath.row==3) {
         NSString * str = @"多个tableview上下左右可拖动";
@@ -295,6 +298,10 @@
     }else if (indexPath.row==1){
         LabelActionController * VC = [[LabelActionController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
+    }else if (indexPath.row==2){
+    
+      
+       
     }else if (indexPath.row==3){
         MyCenterMainController * VC = [[MyCenterMainController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
@@ -340,8 +347,9 @@
     }
 }
 
+
 //请求数据
--(void)loadData{
+- (void)loadData {
     //请求数据
     NSDictionary * dict = @{@"platform":@{}};//这个要传才能请求到
     [DWBAFNetworking POST:DWBPromotion parameters:dict controller:self type:nil success:^(id  _Nullable responseObject) {

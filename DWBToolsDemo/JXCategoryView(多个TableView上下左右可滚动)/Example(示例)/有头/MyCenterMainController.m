@@ -245,7 +245,6 @@
     //(3)在移除所有标题数据
     [self.listVCArray removeAllObjects];
     
-    
     for (int i =0; i < arrayTitles.count; i++) {
         MyCenterSonVC *powerListView1 = [[MyCenterSonVC alloc] init];
         [self.listVCArray addObject:powerListView1];
