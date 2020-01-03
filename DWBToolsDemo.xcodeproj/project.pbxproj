@@ -75,6 +75,7 @@
 		3621B7572191B3320000BDFA /* HZPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3621B7522191B3320000BDFA /* HZPhotoBrowser.bundle */; };
 		3621B7582191B3320000BDFA /* HZPhotoBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3621B7532191B3320000BDFA /* HZPhotoBrowserView.m */; };
 		3621B7722192D2040000BDFA /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3621B7712192D2040000BDFA /* NSDictionary+NilSafe.m */; };
+		3624DB9823BB0CC00018C818 /* DWBCreateToolsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3624DB9723BB0CC00018C818 /* DWBCreateToolsButton.m */; };
 		362F7BA321489ECF00A8ECB1 /* UIButton+BigAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */; };
 		362F7BB72148ACF000A8ECB1 /* STEmojiCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BA52148ACF000A8ECB1 /* STEmojiCollectionView.m */; };
 		362F7BB82148ACF000A8ECB1 /* emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BA62148ACF000A8ECB1 /* emoji.json */; };
@@ -120,6 +121,7 @@
 		367D99732248BB04001AB399 /* FoundViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367D99722248BB04001AB399 /* FoundViewCell.swift */; };
 		367D99752248BC3D001AB399 /* FoundViewListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367D99742248BC3D001AB399 /* FoundViewListModel.swift */; };
 		367D99772248C178001AB399 /* DWB_URLSwiftHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367D99762248C178001AB399 /* DWB_URLSwiftHeader.swift */; };
+		367F47E523BED782002DB65A /* UIImage+ChangeColorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 367F47E323BED782002DB65A /* UIImage+ChangeColorImage.m */; };
 		368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F6213F67C800C10B3E /* AppDelegate.m */; };
 		368C39FA213F67C800C10B3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368C39F9213F67C800C10B3E /* ViewController.m */; };
 		368C39FD213F67C800C10B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368C39FB213F67C800C10B3E /* Main.storyboard */; };
@@ -152,6 +154,7 @@
 		369D8961217198F800003425 /* DWBDeviceHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 369D8960217198F800003425 /* DWBDeviceHelp.m */; };
 		36A73BB32182C05700B79AB0 /* NSDictionary+DeleteNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A73BB22182C05700B79AB0 /* NSDictionary+DeleteNull.m */; };
 		36A73BB92182C5F400B79AB0 /* NSArray+DWBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A73BB82182C5F400B79AB0 /* NSArray+DWBSafe.m */; };
+		36B52A2523BDCE23002F34A5 /* DWBSystemAlertSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B52A2423BDCE23002F34A5 /* DWBSystemAlertSheet.m */; };
 		36B6609721743DA700E78824 /* DWBURLWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B6609621743DA700E78824 /* DWBURLWKWebView.m */; };
 		36D3784A213FE01500E768AF /* NSString+GetImageHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37849213FE01500E768AF /* NSString+GetImageHeight.m */; };
 		36D37850213FEF7C00E768AF /* DragEnableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3784E213FEF7C00E768AF /* DragEnableButton.m */; };
@@ -377,6 +380,8 @@
 		3621B7542191B3320000BDFA /* HZPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZPhotoBrowser.h; sourceTree = "<group>"; };
 		3621B7702192D2040000BDFA /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
 		3621B7712192D2040000BDFA /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
+		3624DB9623BB0CC00018C818 /* DWBCreateToolsButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBCreateToolsButton.h; sourceTree = "<group>"; };
+		3624DB9723BB0CC00018C818 /* DWBCreateToolsButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBCreateToolsButton.m; sourceTree = "<group>"; };
 		362F7BA121489ECF00A8ECB1 /* UIButton+BigAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+BigAction.h"; sourceTree = "<group>"; };
 		362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BigAction.m"; sourceTree = "<group>"; };
 		362F7BA52148ACF000A8ECB1 /* STEmojiCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEmojiCollectionView.m; sourceTree = "<group>"; };
@@ -449,6 +454,8 @@
 		367D99722248BB04001AB399 /* FoundViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundViewCell.swift; sourceTree = "<group>"; };
 		367D99742248BC3D001AB399 /* FoundViewListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundViewListModel.swift; sourceTree = "<group>"; };
 		367D99762248C178001AB399 /* DWB_URLSwiftHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWB_URLSwiftHeader.swift; sourceTree = "<group>"; };
+		367F47E323BED782002DB65A /* UIImage+ChangeColorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChangeColorImage.m"; sourceTree = "<group>"; };
+		367F47E423BED782002DB65A /* UIImage+ChangeColorImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChangeColorImage.h"; sourceTree = "<group>"; };
 		368C39F2213F67C800C10B3E /* DWBToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWBToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368C39F5213F67C800C10B3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		368C39F6213F67C800C10B3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -515,6 +522,8 @@
 		36A73BB22182C05700B79AB0 /* NSDictionary+DeleteNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DeleteNull.m"; sourceTree = "<group>"; };
 		36A73BB72182C5F400B79AB0 /* NSArray+DWBSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DWBSafe.h"; sourceTree = "<group>"; };
 		36A73BB82182C5F400B79AB0 /* NSArray+DWBSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DWBSafe.m"; sourceTree = "<group>"; };
+		36B52A2323BDCE23002F34A5 /* DWBSystemAlertSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBSystemAlertSheet.h; sourceTree = "<group>"; };
+		36B52A2423BDCE23002F34A5 /* DWBSystemAlertSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBSystemAlertSheet.m; sourceTree = "<group>"; };
 		36B6609521743DA700E78824 /* DWBURLWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBURLWKWebView.h; sourceTree = "<group>"; };
 		36B6609621743DA700E78824 /* DWBURLWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBURLWKWebView.m; sourceTree = "<group>"; };
 		36D37848213FE01500E768AF /* NSString+GetImageHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GetImageHeight.h"; sourceTree = "<group>"; };
@@ -953,6 +962,8 @@
 				36213F05214364BD00B00E2B /* AlertCXCenterView.m */,
 				36213F08214364BD00B00E2B /* AlertCXShowInfo.h */,
 				36213F0B214364BD00B00E2B /* AlertCXShowInfo.m */,
+				36B52A2323BDCE23002F34A5 /* DWBSystemAlertSheet.h */,
+				36B52A2423BDCE23002F34A5 /* DWBSystemAlertSheet.m */,
 			);
 			path = DWBAlertView;
 			sourceTree = "<group>";
@@ -1318,6 +1329,8 @@
 		365017CA222FA08300E4B622 /* DWBDevVC（功能临时入口） */ = {
 			isa = PBXGroup;
 			children = (
+				3624DB9623BB0CC00018C818 /* DWBCreateToolsButton.h */,
+				3624DB9723BB0CC00018C818 /* DWBCreateToolsButton.m */,
 				36213FD12143ABB000B00E2B /* ToolsEntController.h */,
 				36213FD22143ABB000B00E2B /* ToolsEntController.m */,
 				367D996A2248B43C001AB399 /* VideoDetailsController.h */,
@@ -1818,6 +1831,8 @@
 				36EEDC8B21420585000CBEEB /* UIImage+Rotate.m */,
 				36EEDC9121420585000CBEEB /* UIImageView+CXHelp.h */,
 				36EEDC8C21420585000CBEEB /* UIImageView+CXHelp.m */,
+				367F47E423BED782002DB65A /* UIImage+ChangeColorImage.h */,
+				367F47E323BED782002DB65A /* UIImage+ChangeColorImage.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -2148,6 +2163,7 @@
 				363BFB5521A95B4900666F8A /* RedPeopleThemController.m in Sources */,
 				368C39FA213F67C800C10B3E /* ViewController.m in Sources */,
 				362F7BC72148AF2400A8ECB1 /* ZXPUnicode.m in Sources */,
+				367F47E523BED782002DB65A /* UIImage+ChangeColorImage.m in Sources */,
 				36E8621721AFBF3300180D78 /* JXPagerView.m in Sources */,
 				36E8620821AFBF3300180D78 /* JXCategoryImageView.m in Sources */,
 				365017C9222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m in Sources */,
@@ -2176,6 +2192,7 @@
 				36E861F721AFBF3300180D78 /* JXCategoryIndicatorTriangleView.m in Sources */,
 				36EEDCC2214209FE000CBEEB /* DownUpdateAppAleat.m in Sources */,
 				3621B7722192D2040000BDFA /* NSDictionary+NilSafe.m in Sources */,
+				3624DB9823BB0CC00018C818 /* DWBCreateToolsButton.m in Sources */,
 				36213F2E21439B3700B00E2B /* JDStatusBarStyle.m in Sources */,
 				361F61F2222FCF680029CF29 /* MacroSwiftHeader.swift in Sources */,
 				36E8620921AFBF3300180D78 /* JXCategoryImageCell.m in Sources */,
@@ -2277,6 +2294,7 @@
 				36E8620321AFBF3300180D78 /* JXCategoryTitleImageCell.m in Sources */,
 				36213F6A21439DB700B00E2B /* MJDIYHeader.m in Sources */,
 				36D37858213FF05D00E768AF /* getUUID.m in Sources */,
+				36B52A2523BDCE23002F34A5 /* DWBSystemAlertSheet.m in Sources */,
 				36E8621021AFBF3300180D78 /* JXCategoryCollectionView.m in Sources */,
 				368E69E42140C5BF000EC79C /* CXSystemStatus.m in Sources */,
 				36213F2A21439B3700B00E2B /* JDStatusBarNotification.m in Sources */,

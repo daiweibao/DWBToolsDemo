@@ -28,7 +28,6 @@
 
 #import "MNPerson.h"
 
-
 #define MIN(A,B) (A) < (B) ? (A) : (B)
 
 @interface ToolsEntController ()<UITableViewDelegate,UITableViewDataSource>
@@ -282,7 +281,7 @@
         cell.textLabel.text = @"赋值字符串，比如微信登录";
     }else if (indexPath.row==10) {
         
-        cell.textLabel.text = @"视频详情横屏";
+        cell.textLabel.text = @"底部aleat";
     }else if (indexPath.row==11) {
         
         cell.textLabel.text = @"控制器模态";
@@ -309,7 +308,7 @@
         //push到swift
         DWBSwiftTestController * VC = [[DWBSwiftTestController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
-      
+        
     }else if (indexPath.row==5){
         RedpeopleCenterController * VC = [[RedpeopleCenterController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
@@ -338,8 +337,11 @@
         [MBProgressHUD showSuccess:@"复制成功"];
         
     }else if (indexPath.row==10){
-        VideoDetailsController * VC = [[VideoDetailsController alloc]init];
-        [self.navigationController pushViewController:VC animated:YES];
+    
+        [DWBSystemAlertSheet AlertMySystemAlertSheetWithTitle:@"" otherItemArrays:@[@"确定",@"删除"] ShowRedindex:-1 isShowCancel:YES CancelTitle:@"取消了" Type:-1 handler:^(NSInteger index) {
+            NSLog(@"点击角标：%ld",(long)index);
+            
+        }];
     }else if(indexPath.row==11){
         //模态
         VideoDetailsController * VC = [[VideoDetailsController alloc]init];

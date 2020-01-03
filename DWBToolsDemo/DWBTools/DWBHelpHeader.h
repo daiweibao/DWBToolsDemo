@@ -105,6 +105,7 @@
 //控制器
 #import "UIViewController+DWControllerHelp.h"
 
+
 #pragma mark ============ 工具类相互依赖的头文件 E=====================
 
 
@@ -254,7 +255,8 @@ _Pragma("clang diagnostic pop") \
  */
 #define GetImageHeight(My_W, W, H) [NSString getHieghtWithMyWidth:My_W AndUIWidth:W AndUIHeight:H]
 
-
+//十六进制颜色--带#号传入
+#define DWBColorHex(hex)   [UIColor colorWithHexString:hex]
 /**
  带#号的十六进制颜色转换,可以设置透明度，必须带#号
 
