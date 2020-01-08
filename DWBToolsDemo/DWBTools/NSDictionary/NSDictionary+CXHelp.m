@@ -164,6 +164,14 @@
     
 }
 
++(BOOL)isNullDict:(NSDictionary *)dict{
+    if ([dict isKindOfClass:[NSNull class]] || [dict isEqual:[NSNull null]]) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+
 
 
 

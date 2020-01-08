@@ -74,5 +74,7 @@ YYCategories这也是个牛逼的工具类：https://github.com/ibireme/YYCatego
 
 24、《JXCategoryView》(腾讯新闻、今日头条、QQ音乐、网易云音乐、京东、爱奇艺、腾讯视频、淘宝、天猫、简书、微博等所有主流APP分类切换滚动视图) 地址：https://github.com/pujiaxin33/JXCategoryView
 
+25、《GKNavigationBarViewController》（iOS自定义导航栏 - 导航栏联动效果，全屏滑动返回，左滑Push）https://github.com/QuintGao/GKNavigationBarViewController
+
 
 

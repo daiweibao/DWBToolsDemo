@@ -157,6 +157,7 @@ static AFHTTPSessionManager *manager;
             [[NSNotificationCenter defaultCenter] postNotificationName:@"YZ_networkChange" object:nil];
         }
     }];
+    [manger startMonitoring];//开始监听
 }
 
 

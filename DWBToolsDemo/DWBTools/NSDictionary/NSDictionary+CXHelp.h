@@ -62,4 +62,9 @@
  */
 + (void)NSLogDictModelPropertyWithDict:(NSDictionary *)dict;
 
+
+/// 判断字典是否为空
+/// @param dict YES为空，NO不为空
++(BOOL)isNullDict:(NSDictionary *)dict;
+
 @end
