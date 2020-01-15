@@ -2,8 +2,8 @@
 //  AlertViewTool.m
 //  AlertActiionDemo
 //
-//  Created by Max on 16/8/30.
-//  Copyright © 2016年 maxzhang. All rights reserved.
+//  Created by 戴维保 on 16/8/30.
+//  Copyright © 2016年 潮汐科技有限公司. All rights reserved.
 //
 
 #import "AlertViewTool.h"

@@ -3,7 +3,7 @@
 //  AiHenDeChaoXi
 //
 //  Created by 戴维保 on 2018/7/19.
-//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
+//  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
 //
 
 #import "UIViewController+CXHelp.h"
@@ -122,5 +122,18 @@ static void *controllerIdKey = &controllerIdKey; //Id的key
     [controller.navigationController popViewControllerAnimated:NO];
 }
 
++ (NSString *)findPushEntWithController:(UIViewController *)controller {
+    NSArray *marr = controller.navigationController.viewControllers;
+    UIViewController * findVC = nil;
+    NSString *vcStr;
+    if (marr.count>1) {//控制器必须大于等于2个，才是push进来的
+        findVC = marr[marr.count-2];//拿到倒数第二个控制器
+        vcStr = NSStringFromClass([findVC class]);
+    }else{
+        findVC = nil;//未找到控制器
+        vcStr = @"";
+    }
+    return vcStr;//返回上一级控制器名称
+}
 
 @end

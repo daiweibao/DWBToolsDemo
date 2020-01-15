@@ -3,7 +3,7 @@
 //  ZuiMeiXinNiang
 //
 //  Created by 爱淘包 on 16/6/13.
-//  Copyright © 2016年 zmxn. All rights reserved.
+//  Copyright © 2016年 潮汐科技有限公司. All rights reserved.
 //
 
 #import "RedPeopleThemController.h"

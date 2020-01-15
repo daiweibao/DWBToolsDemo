@@ -8,7 +8,7 @@
 //  YueZhuan
 //
 //  Created by 戴维保 on 2019/1/17.
-//  Copyright © 2019 品创时代互联网科技（北京）有限公司. All rights reserved.
+//  Copyright © 2019 潮汐科技有限公司. All rights reserved.
 //
 
 #ifndef YueZhuan_Bridging_Header_h

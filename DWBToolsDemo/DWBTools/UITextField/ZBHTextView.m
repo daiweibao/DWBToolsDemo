@@ -1,8 +1,8 @@
 //
 //  ZBHTextView.m
 //
-//  Created by xiaohuge on 16/1/22.
-//  Copyright © 2016年 xiaohuge. All rights reserved.
+//  Created by 戴维保 on 16/1/22.
+//  Copyright © 2016年 潮汐科技有限公司. All rights reserved.
 //
 
 #import "ZBHTextView.h"

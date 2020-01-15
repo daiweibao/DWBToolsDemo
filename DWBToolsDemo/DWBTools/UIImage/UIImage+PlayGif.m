@@ -3,7 +3,7 @@
 //  ZuiMeiXinNiang
 //
 //  Created by 戴维保 on 2017/3/17.
-//  Copyright © 2017年 zmxn. All rights reserved.
+//  Copyright © 2017年 潮汐科技有限公司. All rights reserved.
 //
 
 #import "UIImage+PlayGif.h"

@@ -2,8 +2,8 @@
 //  NSNull+safe.m
 //  NSNullDemo
 //
-//  Created by mac on 2017/4/16.
-//  Copyright © 2017年 Corki. All rights reserved.
+//  Created by 戴维保 on 2017/4/16.
+//  Copyright © 2017年 潮汐科技有限公司. All rights reserved.
 //
 
 #import "NSNull+safe.h"

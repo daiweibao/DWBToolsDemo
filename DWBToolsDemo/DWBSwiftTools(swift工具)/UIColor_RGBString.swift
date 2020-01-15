@@ -3,7 +3,7 @@
 //  TabAndNav
 //
 //  Created by 爱恨的潮汐 on 2016/12/06.
-//  Copyright © 2017年 北京嗅美科技有限公司. All rights reserved.
+//  Copyright © 2017年 潮汐科技有限公司. All rights reserved.
 //
 import Foundation
 import CoreFoundation

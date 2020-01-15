@@ -3,7 +3,7 @@
 //  AiHenDeChaoXi
 //
 //  Created by 戴维保 on 2018/7/19.
-//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
+//  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
 //-
 
 #import <UIKit/UIKit.h>
@@ -37,5 +37,10 @@
  导航栏pop模拟模态动画,前提条件是push模拟模态动画进来的
  */
 +(void)navPopToPresent;
+
+
+/// 判断当前控制器是从那个控制器push进来的,返回控制器名称字符串
+/// @param controller 当前控制器
++ (NSString *)findPushEntWithController:(UIViewController *)controller;
 
 @end

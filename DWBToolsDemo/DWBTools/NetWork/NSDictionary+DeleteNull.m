@@ -3,7 +3,7 @@
 //  DouZhuan
 //
 //  Created by 戴维保 on 2018/10/26.
-//  Copyright © 2018 品创时代互联网科技（北京）有限公司. All rights reserved.
+//  Copyright © 2018 潮汐科技有限公司. All rights reserved.
 //
 
 #import "NSDictionary+DeleteNull.h"
@@ -19,7 +19,7 @@
     {
         id obj = [myDic objectForKey:keyArr[i]];
         
-        obj = [self changeType:obj];
+        obj = [self responseObjectDeleteNull:obj];
         
         [resDic setObject:obj forKey:keyArr[i]];
     }
@@ -34,7 +34,7 @@
     {
         id obj = myArr[i];
         
-        obj = [self changeType:obj];
+        obj = [self responseObjectDeleteNull:obj];
         
         [resArr addObject:obj];
     }
@@ -55,7 +55,7 @@
 
 #pragma mark - 公有方法
 //类型识别:将所有的NSNull类型转化成@""
-+(id)changeType:(id)myObj
++(id)responseObjectDeleteNull:(id)myObj
 {
     if ([myObj isKindOfClass:[NSDictionary class]])
     {

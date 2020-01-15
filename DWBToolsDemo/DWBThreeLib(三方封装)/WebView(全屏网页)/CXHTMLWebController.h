@@ -3,7 +3,7 @@
 //  AiHenDeChaoXi
 //
 //  Created by 戴维保 on 2018/4/17.
-//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
+//  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
 //
 //项目公用无交互全屏网页。传入的是HTML代码
 #import <UIKit/UIKit.h>

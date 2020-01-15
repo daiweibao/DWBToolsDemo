@@ -2,8 +2,8 @@
 //  NSMutableArray+Swizzling.m
 //  PaopaoRunning
 //
-//  Created by zwj on 2018/4/2.
-//  Copyright © 2018年 HealthPao. All rights reserved.
+//  Created by 戴维保 on 2018/4/2.
+//  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
 //
 
 #import "NSMutableArray+Swizzling.h"

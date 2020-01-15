@@ -2,8 +2,8 @@
 //  JXActionSheet.h
 //  JXKit
 //
-//  Created by huangxiangwang on 16/1/18.
-//  Copyright © 2016年 JX.Wang. All rights reserved.
+//  Created by 戴维保 on 16/1/18.
+//  Copyright © 2016年 潮汐科技有限公司. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

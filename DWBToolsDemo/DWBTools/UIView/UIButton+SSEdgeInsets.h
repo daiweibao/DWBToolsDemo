@@ -2,8 +2,8 @@
 //  UIButton+SSEdgeInsets.h
 //  ElongIpadClient
 //
-//  Created by lujh on 16/9/9.
-//  Copyright (c) 2016年 strongunion. All rights reserved.
+//  Created by 戴维保 on 16/7/25.
+//  Copyright © 2016年 潮汐科技有限公司. All rights reserved.
 //-
 
 #import <UIKit/UIKit.h>

@@ -4,7 +4,7 @@
 //  AiHenDeChaoXi
 //
 //  Created by 戴维保 on 2018/7/19.
-//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
+//  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
 //
 //字典类别（Category）
 #import "NSDictionary+CXHelp.h"
@@ -165,10 +165,28 @@
 }
 
 +(BOOL)isNullDict:(NSDictionary *)dict{
-    if ([dict isKindOfClass:[NSNull class]] || [dict isEqual:[NSNull null]]) {
-        return YES;
+    BOOL isDict = YES;
+    if ([dict isKindOfClass:[NSDictionary class]]) {
+        isDict = YES;
+    }else if([dict isKindOfClass:[NSMutableDictionary class]]){
+        isDict = YES;
     }else{
-        return NO;
+        isDict = NO;
+    }
+    if (isDict==YES) {
+        if ([dict isKindOfClass:[NSNull class]]) {
+            return YES;
+        }else if ([dict isEqual:[NSNull null]]){
+            return YES;
+        }else if (dict.count == 0){
+            return YES;
+        }else if (dict == nil){
+            return YES;
+        }else{
+            return NO;
+        }
+    }else{
+       return YES;
     }
 }
 

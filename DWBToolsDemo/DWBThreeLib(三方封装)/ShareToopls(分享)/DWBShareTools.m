@@ -3,7 +3,7 @@
 //  DouZhuan
 //
 //  Created by 戴维保 on 2018/9/20.
-//  Copyright © 2018年 品创时代互联网科技（北京）有限公司. All rights reserved.
+//  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
 //
 
 #import "DWBShareTools.h"

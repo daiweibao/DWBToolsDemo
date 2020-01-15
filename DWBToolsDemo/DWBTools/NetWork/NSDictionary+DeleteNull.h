@@ -3,7 +3,7 @@
 //  DouZhuan
 //
 //  Created by 戴维保 on 2018/10/26.
-//  Copyright © 2018 品创时代互联网科技（北京）有限公司. All rights reserved.
+//  Copyright © 2018 潮汐科技有限公司. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSDictionary (DeleteNull)
 
 
-+(id)changeType:(id)myObj;
++(id)responseObjectDeleteNull:(id)myObj;
 
 /*
  

@@ -3,7 +3,7 @@
 //  ZuiMeiXinNiang
 //
 //  Created by 戴维保 on 2017/8/24.
-//  Copyright © 2017年 北京嗅美科技有限公司. All rights reserved.
+//  Copyright © 2017年 潮汐科技有限公司. All rights reserved.
 //
 
 //这里是类别的头文件和和所有+宏定义

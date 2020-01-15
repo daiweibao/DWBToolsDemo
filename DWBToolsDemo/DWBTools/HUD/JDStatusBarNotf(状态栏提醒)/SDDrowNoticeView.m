@@ -3,7 +3,7 @@
 //  XiaoYuanSheQu
 //
 //  Created by 戴维保 on 2017/9/28.
-//  Copyright © 2017年 北京嗅美科技有限公司. All rights reserved.
+//  Copyright © 2017年 潮汐科技有限公司. All rights reserved.
 //
 
 #import "SDDrowNoticeView.h"

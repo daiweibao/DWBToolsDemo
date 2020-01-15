@@ -3,7 +3,7 @@
 //  AiHenDeChaoXi
 //
 //  Created by 戴维保 on 2018/3/19.
-//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
+//  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
 //
 //根控制器，在里面设置导航栏，让每个控制器都有自己的导航栏,方便修改【如：全民K歌APP用的就是这种方式的导航栏】
 #import <UIKit/UIKit.h>
