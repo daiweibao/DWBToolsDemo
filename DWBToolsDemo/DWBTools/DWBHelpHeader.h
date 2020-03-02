@@ -20,8 +20,10 @@
 
 //iOS项目打包除去NSLog，Edit Scheme –>info—> Building Config ->release/debug 选择 release 时 （包括运行）所有的输出都不见了
 #ifdef DEBUG
-//NSLog格式化打印，打印出在那个l控制器，哪一行
-#define NSLog(fmt, ...) NSLog((@"%s [第%d行] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+//NSLog格式化打印，打印出在那个l控制器，哪一行:NSLog
+//#define NSLog(fmt, ...) NSLog((@"%s [第%d行] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+//printf方式打印，防止OS_ACTIVITY_MODE = Disable 屏蔽后真机不打印
+#define NSLog(format,...) printf("%s [第%d行]: %s\n",__PRETTY_FUNCTION__, __LINE__, [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String])
 #else
 #define NSLog(...)
 #endif
@@ -104,6 +106,8 @@
 #import "NSArray+DWBHelp.h"
 //控制器
 #import "UIViewController+DWControllerHelp.h"
+//安全数据处理
+#import "DWBDataSafeHelp.h"
 
 
 #pragma mark ============ 工具类相互依赖的头文件 E=====================

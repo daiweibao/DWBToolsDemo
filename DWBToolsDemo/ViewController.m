@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSDictionary *dataData = @{};//后台返回的数据
+    NSDictionary *dict = DWBSafeDic(dataData[@"info"]);
 }
 
 

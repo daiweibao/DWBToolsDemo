@@ -57,6 +57,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(BOOL)openThreeAPPWithCompleteWithUrlSchemes:(NSString *)urlSchemes;
 
+///iphone广告Id传给后台【IDFA】
++ (NSString *)getAdSafeIdIDFA;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

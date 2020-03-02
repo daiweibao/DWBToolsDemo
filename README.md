@@ -52,7 +52,28 @@ YYCategories这也是个牛逼的工具类：https://github.com/ibireme/YYCatego
 13、《SDWebImage》图片加载。下载地址：https://github.com/rs/SDWebImage
 
 
-14、《LZImageBrowser》仿微信图片浏览器，下载地址：https://github.com/liangzhen6/LZImageBrowser
+14、《LZImageBrowser》仿微信图片浏览器，下载地址：https://github.com/liangzhen6/LZImageBrowser  新的图片浏览器地址（2020年2月18日）《YBImageBrowser》：https://github.com/indulgeIn/YBImageBrowser
+
+#pragma mark ==========YBImageBrowser查看图片 S============
+//点击查看图片
+- (void)actionbigImageView:(UIImageView *)imageView {
+    NSInteger index = imageView.tag-1000;
+    //设置网络图片
+    NSMutableArray *mArray = @[].mutableCopy;
+    for (int i = 0; i < self.model.picArr.count; i++) {
+        YBIBImageData *dataImage = [[YBIBImageData alloc]init];
+        dataImage.imageURL = [NSURL URLWithString:self.model.picArr[i].picUrl];
+        dataImage.projectiveView = self.imageViewArray[i];//图片父视图，转场动画用
+        [mArray addObject:dataImage];
+    }
+    //浏览图片
+    YBImageBrowser *browser = [YBImageBrowser new];
+    browser.dataSourceArray = mArray;//YBIBImageData图片数组
+    browser.currentPage = index;//当前点击图片角标
+    [browser show];//展示
+}
+#pragma mark ==========查看图片 E============
+
 
 15、《MBProgressHUD》下载地址：https://github.com/jdg/MBProgressHUD
 
@@ -76,5 +97,7 @@ YYCategories这也是个牛逼的工具类：https://github.com/ibireme/YYCatego
 
 25、《GKNavigationBarViewController》（iOS自定义导航栏 - 导航栏联动效果，全屏滑动返回，左滑Push）https://github.com/QuintGao/GKNavigationBarViewController
 
+
+25、《PPBadgeView》（tabbar上显示消息数量角标，或者小红点）https://github.com/jkpang/PPBadgeView
 
 

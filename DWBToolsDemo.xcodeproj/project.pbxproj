@@ -11,6 +11,7 @@
 		360F0F9A218067B6006A7835 /* NSMutableArray+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0F96218067B6006A7835 /* NSMutableArray+Swizzling.m */; };
 		360F0FC7218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0FC6218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m */; };
 		3610DC072181757A00EAB9CA /* NSNull+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3610DC062181757A00EAB9CA /* NSNull+safe.m */; };
+		361BC894240D4FF7008E04C9 /* DWBDataSafeHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 361BC893240D4FF7008E04C9 /* DWBDataSafeHelp.m */; };
 		361F61EC222FCCDF0029CF29 /* DWBMacroHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F61EB222FCCDF0029CF29 /* DWBMacroHelp.swift */; };
 		361F61EE222FCE360029CF29 /* UIColor_RGBString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F61ED222FCE360029CF29 /* UIColor_RGBString.swift */; };
 		361F61F2222FCF680029CF29 /* MacroSwiftHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F61F1222FCF680029CF29 /* MacroSwiftHeader.swift */; };
@@ -260,6 +261,8 @@
 		360F0FC6218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+DWBDictSafe.m"; sourceTree = "<group>"; };
 		3610DC052181757A00EAB9CA /* NSNull+safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+safe.h"; sourceTree = "<group>"; };
 		3610DC062181757A00EAB9CA /* NSNull+safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+safe.m"; sourceTree = "<group>"; };
+		361BC892240D4FF7008E04C9 /* DWBDataSafeHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBDataSafeHelp.h; sourceTree = "<group>"; };
+		361BC893240D4FF7008E04C9 /* DWBDataSafeHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBDataSafeHelp.m; sourceTree = "<group>"; };
 		361F61EB222FCCDF0029CF29 /* DWBMacroHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWBMacroHelp.swift; sourceTree = "<group>"; };
 		361F61ED222FCE360029CF29 /* UIColor_RGBString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor_RGBString.swift; sourceTree = "<group>"; };
 		361F61F1222FCF680029CF29 /* MacroSwiftHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroSwiftHeader.swift; sourceTree = "<group>"; };
@@ -724,6 +727,8 @@
 				360F0F96218067B6006A7835 /* NSMutableArray+Swizzling.m */,
 				36A73BB72182C5F400B79AB0 /* NSArray+DWBSafe.h */,
 				36A73BB82182C5F400B79AB0 /* NSArray+DWBSafe.m */,
+				361BC892240D4FF7008E04C9 /* DWBDataSafeHelp.h */,
+				361BC893240D4FF7008E04C9 /* DWBDataSafeHelp.m */,
 				3610DC052181757A00EAB9CA /* NSNull+safe.h */,
 				3610DC062181757A00EAB9CA /* NSNull+safe.m */,
 			);
@@ -2299,6 +2304,7 @@
 				36A3BF2C23C5AFC400B93A7C /* NSTimer+addition.m in Sources */,
 				36E8620321AFBF3300180D78 /* JXCategoryTitleImageCell.m in Sources */,
 				36213F6A21439DB700B00E2B /* MJDIYHeader.m in Sources */,
+				361BC894240D4FF7008E04C9 /* DWBDataSafeHelp.m in Sources */,
 				36D37858213FF05D00E768AF /* getUUID.m in Sources */,
 				36B52A2523BDCE23002F34A5 /* DWBSystemAlertSheet.m in Sources */,
 				36E8621021AFBF3300180D78 /* JXCategoryCollectionView.m in Sources */,

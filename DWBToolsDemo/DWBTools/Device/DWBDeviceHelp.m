@@ -9,6 +9,7 @@
 #import "DWBDeviceHelp.h"
 #import <CoreMotion/CoreMotion.h>//陀螺仪
 #import <objc/runtime.h>
+#import <AdSupport/AdSupport.h>
 @implementation DWBDeviceHelp
 //判断是否有摄像头(判断是否是模拟器)范湖YES是模拟器，NO是真机
 +(BOOL)isSimulator{
@@ -159,5 +160,14 @@
 
 #pragma mark ============通过bundleId打开APP E======
 
+///iphone广告Id传给后台【IDFA】
++ (NSString *)getAdSafeIdIDFA{
+    //IDFA==获取手机广告ID要导入头文件，只要不重置系统都不会变（#import <AdSupport/AdSupport.h>）
+    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    if ([NSString isNULL:adId]) {//判空
+        return @"";
+    }
+    return adId;
+}
 
 @end
