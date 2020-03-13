@@ -132,6 +132,23 @@
     });
 }
 
+/// Debug模式，仅供提示给测试用，上线后切换到Release模式就不会显示
+/// @param text 展示内容
++ (void)showDebugCenterWithText:(NSString *)text {
+    dispatch_async(dispatch_get_main_queue(), ^{
+#ifdef DEBUG
+        //开发模式，开发过程才会走这里，请不要修改，供测试使用
+        if (text.length>0) {
+            
+            [DWBToast showCenterWithText:[NSString stringWithFormat:@"Debug：%@",text] duration:ToastDispalyDuration];
+        }
+#else
+        //Release模式，上线后走这里--不展示调试信息
+#endif
+    });
+}
+
+
 + (void)showCenterWithText:(NSString *)text duration:(CGFloat)duration{
     DWBToast *toast = [[DWBToast alloc] initWithText:text];
     [toast setDuration:duration];

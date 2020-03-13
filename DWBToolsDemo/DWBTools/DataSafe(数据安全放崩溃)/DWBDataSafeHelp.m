@@ -114,7 +114,7 @@
             return @"";
         }
     }
-    return stringOrNumber;
+    return [NSString stringWithFormat:@"%@",stringOrNumber];
 }
 
 @end

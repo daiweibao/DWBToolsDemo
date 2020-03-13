@@ -10,21 +10,21 @@
 //用户示例：
 //NSDictionary *dataData = @{};//后台返回的数据
 //NSDictionary *dict = DWBSafeDic(dataData[@"info"]);
-#define DWBSafeDic(dict)   [DWBDataSafeHelp safeDictionary:dict];
-#define DWBSafeArray(array)   [DWBDataSafeHelp safeArray:array];
+#define DWBSafeDic(dict)   [DWBDataSafeHelp safeDictionary:dict]
+#define DWBSafeArray(array)   [DWBDataSafeHelp safeArray:array]
 //安全字符串示例:
 //NSDictionary *dataData = @{};//后台返回的数据
 //NSString * str = DWBSafeStr(dataData[@"name"])
-#define DWBSafeStr(str)   [DWBDataSafeHelp safeString:str];
+#define DWBSafeStr(str)   [DWBDataSafeHelp safeString:str]
 
-#define DWBSafeMutableArray(mutableArray)   [DWBDataSafeHelp safeMutableArray:mutableArray];
+#define DWBSafeMutableArray(mutableArray)   [DWBDataSafeHelp safeMutableArray:mutableArray]
 
-#define DWBSafeMutableDic(mutableDict)   [DWBDataSafeHelp safeMutableDictionary:mutableDict];
+#define DWBSafeMutableDic(mutableDict)   [DWBDataSafeHelp safeMutableDictionary:mutableDict]
 
 
-#define DWBSafeStr1(str, defaultString)   [DWBDataSafeHelp safeStr:str defaultStr:defaultString];
+#define DWBSafeStr1(str, defaultString)   [DWBDataSafeHelp safeStr:str defaultStr:defaultString]
 
-#define DWBSafeObj(obj)   [DWBDataSafeHelp safeObj:obj];
+#define DWBSafeObj(obj)   [DWBDataSafeHelp safeObj:obj]
 
 
 @interface DWBDataSafeHelp : NSObject

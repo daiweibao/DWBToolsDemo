@@ -36,6 +36,11 @@
  *  @param text 内容
  */
 + (void)showCenterWithText:(NSString *)text;
+
+/// Debug模式，仅供提示给测试用，上线后切换到Release模式就不会显示
+/// @param text 展示内容
++ (void)showDebugCenterWithText:(NSString *)text;
+
 /**
  *  中间显示+自定义停留时间
  *
