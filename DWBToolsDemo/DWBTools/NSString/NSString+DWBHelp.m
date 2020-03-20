@@ -1234,9 +1234,9 @@
     //数据存储
     NSUserDefaults * ud = [NSUserDefaults standardUserDefaults];
     //(1)根据事件Id+今日日期取出当前存储数据
-    NSString * getTodayStr = [ud objectForKey:@"APPDWBEventId"];
+    NSString * getTodayStr = [ud objectForKey:eventId];
     //(2)存储数据
-    [ud setObject:ToadyDateAndId forKey:@"APPDWBEventId"];
+    [ud setObject:ToadyDateAndId forKey:eventId];
     
     [ud synchronize];
     

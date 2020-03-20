@@ -21,7 +21,7 @@
     
        self.titleNavLabel.text = @"点击指定文字";
     
-    
+     self.titleNavLabel.text = @"点击指定 文字";
     UILabel * label = [[UILabel alloc]init];
     label.frame = CGRectMake(10, 100, 340, 100);
 //    label.backgroundColor = [UIColor blackColor];

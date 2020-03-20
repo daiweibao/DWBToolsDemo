@@ -345,7 +345,36 @@
     //    [viewRu setupRoundedCornersWithCutCorners:UIRectCornerTopLeft | UIRectCornerBottomLeft  borderColor:[UIColor redColor] borderWidth:1 AndRadius:10];
     
 }
-
+/// 绘制镂空的矩形、圆形等
+/// @param view 父View
+/// @param rect 镂空的坐标
+/// @param radius 圆角
++ (void)drawShapeJXRectWith:(UIView *)view AndCGRect:(CGRect)rect AndCornerRadius:(CGFloat )radius {
+    //贝塞尔曲线 画一个带有圆角的矩形
+    UIBezierPath *bpath = [UIBezierPath bezierPathWithRoundedRect:view.frame cornerRadius:0];
+    //绘制矩形
+    [bpath appendPath:[[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:radius] bezierPathByReversingPath]];
+    //画圆或者添加其他图形
+//    [bpath appendPath:[UIBezierPath bezierPathWithArcCenter:view.center radius:100 startAngle:0 endAngle:2*M_PI clockwise:NO]];
+    
+    //创建一个CAShapeLayer 图层
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = bpath.CGPath;
+    //添加图层蒙板
+    view.layer.mask = shapeLayer;
+    
+    /*
+     //用法
+    //创建一个View
+       UIView *maskView = [[UIView alloc] init];
+       maskView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+       maskView.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.7];
+       //绘制镂空矩形
+       [UIView drawShapeJXRectWith:maskView AndCGRect:CGRectMake(SCREEN_WIDTH-70, 45, 55, 235) AndCornerRadius:17.5];
+       [self.view addSubview:maskView];
+     
+     */
+}
 
 
 

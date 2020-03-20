@@ -814,6 +814,27 @@
     }
     
 }
+//iOS 四周半透明中间圆形全透明View制作
++ (UIImage *)getImageWithCGRect:(CGRect)rect AndBackgroundColor:(UIColor *)color{
+    UIGraphicsBeginImageContextWithOptions([UIScreen mainScreen].bounds.size, NO, 1.0);
+    CGContextRef con = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(con, color.CGColor);//背景色
+    CGContextFillRect(con, [UIScreen mainScreen].bounds);
+    CGContextAddEllipseInRect(con, rect);
+    CGContextSetBlendMode(con, kCGBlendModeClear);
+    CGContextFillPath(con);
+    UIImage *ima = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return ima;
+    //用法
+    /*
+    UIImageView * viewGuideSup = [[UIImageView alloc]init];
+      viewGuideSup.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+      viewGuideSup.image = [self getImageWithCGRect:CGRectMake(SCREEN_WIDTH/2-35, kMainScreenHeight - 100-35, 70, 70) AndBackgroundColor: [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.7]];
+      viewGuideSup.userInteractionEnabled = YES;
+      [self.view addSubview:viewGuideSup];
+     */
+}
 
 
 

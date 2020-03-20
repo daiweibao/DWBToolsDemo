@@ -191,4 +191,10 @@
  */
 +(UIImage *)normalizedImage:(UIImage *)image;
 
+
+/// iOS 四周半透明中间圆形全透明View制作
+/// @param rect 圆形坐标
+/// @param color 四周半透明背景色
++ (UIImage *)getImageWithCGRect:(CGRect)rect AndBackgroundColor:(UIColor *)color;
+
 @end

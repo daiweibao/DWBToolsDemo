@@ -103,4 +103,10 @@
  */
 - (void)setupRoundedCornersWithCutCorners:(UIRectCorner)rectCorner borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth AndRadius:(CGFloat )Radius;
 
+/// 绘制镂空的矩形、圆形等【周围半透明，中间一个圆】
+/// @param view 父View
+/// @param rect 镂空的坐标
+/// @param radius 圆角
++ (void)drawShapeJXRectWith:(UIView *)view AndCGRect:(CGRect)rect AndCornerRadius:(CGFloat )radius;
+
 @end
