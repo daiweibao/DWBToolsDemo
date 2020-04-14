@@ -103,6 +103,12 @@
  */
 - (void)setupRoundedCornersWithCutCorners:(UIRectCorner)rectCorner borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth AndRadius:(CGFloat )Radius;
 
+
+/// 设置指定圆角【指定边角圆角】
+/// @param radius 圆角大小
+/// @param corner 圆角指定角
+- (void)setup_Radius:(CGFloat)radius corner:(UIRectCorner)corner;
+
 /// 绘制镂空的矩形、圆形等【周围半透明，中间一个圆】
 /// @param view 父View
 /// @param rect 镂空的坐标

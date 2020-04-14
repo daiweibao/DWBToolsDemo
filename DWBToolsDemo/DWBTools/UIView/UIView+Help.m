@@ -345,6 +345,26 @@
     //    [viewRu setupRoundedCornersWithCutCorners:UIRectCornerTopLeft | UIRectCornerBottomLeft  borderColor:[UIColor redColor] borderWidth:1 AndRadius:10];
     
 }
+
+/// 设置指定圆角【指定边角圆角】
+/// @param radius 圆角大小
+/// @param corner 圆角指定角
+- (void)setup_Radius:(CGFloat)radius corner:(UIRectCorner)corner {
+    if (@available(iOS 11.0, *)) {
+        self.layer.cornerRadius = radius;
+        self.layer.maskedCorners = (CACornerMask)corner;
+    } else {
+        UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corner cornerRadii:CGSizeMake(radius, radius)];
+        CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+        maskLayer.frame = self.bounds;
+        maskLayer.path = path.CGPath;
+        self.layer.mask = maskLayer;
+    }
+    
+    //用法示例
+//    [self.headerViewTop setup_Radius:10.0f corner:UIRectCornerBottomRight|UIRectCornerBottomLeft];
+}
+
 /// 绘制镂空的矩形、圆形等
 /// @param view 父View
 /// @param rect 镂空的坐标
