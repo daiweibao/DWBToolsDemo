@@ -156,6 +156,7 @@
 		36A3BF2C23C5AFC400B93A7C /* NSTimer+addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A3BF2A23C5AFC400B93A7C /* NSTimer+addition.m */; };
 		36A73BB32182C05700B79AB0 /* NSDictionary+DeleteNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A73BB22182C05700B79AB0 /* NSDictionary+DeleteNull.m */; };
 		36A73BB92182C5F400B79AB0 /* NSArray+DWBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A73BB82182C5F400B79AB0 /* NSArray+DWBSafe.m */; };
+		36AD30FF24455B7600FD2644 /* YYTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AD30FE24455B7600FD2644 /* YYTextViewController.m */; };
 		36B52A2523BDCE23002F34A5 /* DWBSystemAlertSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B52A2423BDCE23002F34A5 /* DWBSystemAlertSheet.m */; };
 		36B6609721743DA700E78824 /* DWBURLWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B6609621743DA700E78824 /* DWBURLWKWebView.m */; };
 		36D3784A213FE01500E768AF /* NSString+GetImageHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37849213FE01500E768AF /* NSString+GetImageHeight.m */; };
@@ -528,6 +529,8 @@
 		36A73BB22182C05700B79AB0 /* NSDictionary+DeleteNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DeleteNull.m"; sourceTree = "<group>"; };
 		36A73BB72182C5F400B79AB0 /* NSArray+DWBSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DWBSafe.h"; sourceTree = "<group>"; };
 		36A73BB82182C5F400B79AB0 /* NSArray+DWBSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DWBSafe.m"; sourceTree = "<group>"; };
+		36AD30FD24455B7600FD2644 /* YYTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYTextViewController.h; sourceTree = "<group>"; };
+		36AD30FE24455B7600FD2644 /* YYTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYTextViewController.m; sourceTree = "<group>"; };
 		36B52A2323BDCE23002F34A5 /* DWBSystemAlertSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBSystemAlertSheet.h; sourceTree = "<group>"; };
 		36B52A2423BDCE23002F34A5 /* DWBSystemAlertSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBSystemAlertSheet.m; sourceTree = "<group>"; };
 		36B6609521743DA700E78824 /* DWBURLWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBURLWKWebView.h; sourceTree = "<group>"; };
@@ -1343,6 +1346,8 @@
 				36213FD22143ABB000B00E2B /* ToolsEntController.m */,
 				367D996A2248B43C001AB399 /* VideoDetailsController.h */,
 				367D996B2248B43C001AB399 /* VideoDetailsController.m */,
+				36AD30FD24455B7600FD2644 /* YYTextViewController.h */,
+				36AD30FE24455B7600FD2644 /* YYTextViewController.m */,
 				3690E87023165BB2007B8AEC /* NSObject+Test.h */,
 				3690E87123165BB2007B8AEC /* NSObject+Test.m */,
 				3690E87323167F5E007B8AEC /* MNPerson.h */,
@@ -2229,6 +2234,7 @@
 				368C3C04213FB44800C10B3E /* DWBToast.m in Sources */,
 				3621B7582191B3320000BDFA /* HZPhotoBrowserView.m in Sources */,
 				362F7BBA2148ACF000A8ECB1 /* STEmoji.m in Sources */,
+				36AD30FF24455B7600FD2644 /* YYTextViewController.m in Sources */,
 				36E8621321AFBF3300180D78 /* JXCategoryBaseCell.m in Sources */,
 				36213F6821439DB700B00E2B /* DWB_refreshHeader.m in Sources */,
 				368E69D92140C49B000EC79C /* UIFont+FontNameSize.m in Sources */,
@@ -2514,8 +2520,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7V24EKFRP9;
+				DEVELOPMENT_TEAM = V9XVFV8YV7;
 				GCC_PREFIX_HEADER = "$(SCROOT)DWBToolsDemo/DWBToolsPrefixHeader.pch";
 				INFOPLIST_FILE = DWBToolsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2525,6 +2532,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chaoxi.DWBToolsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DWBToolsDemo/DWBToolsDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -2540,8 +2548,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7V24EKFRP9;
+				DEVELOPMENT_TEAM = V9XVFV8YV7;
 				GCC_PREFIX_HEADER = "$(SCROOT)DWBToolsDemo/DWBToolsPrefixHeader.pch";
 				INFOPLIST_FILE = DWBToolsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2551,6 +2560,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chaoxi.DWBToolsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DWBToolsDemo/DWBToolsDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -464,6 +464,28 @@
     //    NSLog(@"当前系统时间的毫秒数为：%.f",nowMs);
     return nowMs;
 }
+/// 任意两个日期的天数差
+/// @param beginDate 开始日期
+/// @param endDate 结束日志
++ (NSInteger)getTheCountOfTwoDaysWithBeginDate:(NSString *)beginDate endDate:(NSString *)endDate{
+    NSDateFormatter *inputFormatter = [[NSDateFormatter alloc] init];
+    [inputFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
+    [inputFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSDate *startD =[inputFormatter dateFromString:beginDate];
+    NSDate *endD = [inputFormatter dateFromString:endDate];
+    // 当前日历
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    // 需要对比的时间数据
+    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth| NSCalendarUnitDay;
+    // 对比时间差
+    NSDateComponents *dateCom = [calendar components:unit fromDate:startD toDate:endD options:0];
+    NSLog(@"日期差：%ld天",(long)dateCom.day);
+    return dateCom.day;
+    
+    //用法
+//    self getTheCountOfTwoDaysWithBeginDate:@"2020-04-05" endDate:@"2020-04-06"];
+    
+}
 
 
 //字符串或者NSNumber判空方法(可传入字符串类型和NSNumber类型)

@@ -29,34 +29,34 @@
 
 //创建功能入口控制器UI
 +(void)createToolsControllerUI{
-    NSLog(@"当前设备UUID:%@",[getUUID getUUID]);
-#pragma mark ================= 功能入口制器入口 =================
-#if DEBUG
-    //测试环境打开
-#else
-    //线上环境不打开
-    return;
-#endif
-        //模拟器判断
-        if ([DWBDeviceHelp isSimulator]==YES) {
-            if ([[getUUID getUUID] isEqual:@"CB1480F5-53FE-4CFB-B743-0A50858D4210"]||//iPhone XS Max
-                [[getUUID getUUID] isEqual:@"50B89EB9-F75F-4625-A3BA-DEF73D0BB7E1"]||//iPhone X
-                [[getUUID getUUID] isEqual:@"BB99A1CB-A16F-4C32-A714-07D1D01531E2"]||//iPhone SE
-                [[getUUID getUUID] isEqual:@"7E3C3AF0-9A76-43BC-B2EE-2EA532E6B0C1"]||//iPhone11 Pro Max
-                [[getUUID getUUID] isEqual:@"C7D27AB3-158F-4C50-B8C1-ADFB8214D908"]//iPhone 8
-                ) {
-                //创建
-            }else{
-                return;
-            }
-    
-        }else{
-            //真机判断显示条件
-            if(![GET_userPhoneName isEqual:@"爱恨的潮汐"]){
-                return;
-            }
-        }
-    
+//    NSLog(@"当前设备UUID:%@",[getUUID getUUID]);
+//#pragma mark ================= 功能入口制器入口 =================
+//#if DEBUG
+//    //测试环境打开
+//#else
+//    //线上环境不打开
+//    return;
+//#endif
+//        //模拟器判断
+//        if ([DWBDeviceHelp isSimulator]==YES) {
+//            if ([[getUUID getUUID] isEqual:@"CB1480F5-53FE-4CFB-B743-0A50858D4210"]||//iPhone XS Max
+//                [[getUUID getUUID] isEqual:@"50B89EB9-F75F-4625-A3BA-DEF73D0BB7E1"]||//iPhone X
+//                [[getUUID getUUID] isEqual:@"BB99A1CB-A16F-4C32-A714-07D1D01531E2"]||//iPhone SE
+//                [[getUUID getUUID] isEqual:@"7E3C3AF0-9A76-43BC-B2EE-2EA532E6B0C1"]||//iPhone11 Pro Max
+//                [[getUUID getUUID] isEqual:@"C7D27AB3-158F-4C50-B8C1-ADFB8214D908"]//iPhone 8
+//                ) {
+//                //创建
+//            }else{
+//                return;
+//            }
+//
+//        }else{
+//            //真机判断显示条件
+//            if(![GET_userPhoneName isEqual:@"爱恨的潮汐"]){
+//                return;
+//            }
+//        }
+//
     //测试控制器入口
     DragEnableButton * buttonTools = [DragEnableButton buttonWithType:UIButtonTypeCustom];
     buttonTools.frame = CGRectMake(SCREEN_WIDTH-55, SCREEN_HEIGHT-MC_TabbarHeight-210, 50, 50);

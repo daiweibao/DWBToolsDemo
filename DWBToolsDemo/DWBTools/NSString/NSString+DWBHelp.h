@@ -148,6 +148,10 @@
  */
 +(double)getNowTime_Ms;
 
+/// 任意两个日期的天数差
+/// @param beginDate 开始日期
+/// @param endDate 结束日志
++ (NSInteger)getTheCountOfTwoDaysWithBeginDate:(NSString *)beginDate endDate:(NSString *)endDate;
 /**
  *  已知开始时间和结束时间的毫秒，计算开始、进行中、结束状态
  *

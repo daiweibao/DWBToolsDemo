@@ -70,6 +70,6 @@ pod 'SnapKit'
 #把json对象映射为model对象。
 pod 'ObjectMapper', '~> 3.4'
 
-
+pod 'YYText'
 
 end

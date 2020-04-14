@@ -130,7 +130,7 @@
 
 //Appstore地址==1404123635(王府管家)  //只需要修改后面的App-Id即可
 #define AppstoreId  @"1404123635"
-#define AppstoreUrl  [NSString stringWithFormat:@"https://itunes.apple.com/cn/app/id%@",AppstoreId]
+#define AppstoreUrl  [NSString stringWithFormat:@"https://apps.apple.com/cn/app/id%@",AppstoreId]
 
 
 #pragma mark ========内联函数 inline替代宏定义 ===============

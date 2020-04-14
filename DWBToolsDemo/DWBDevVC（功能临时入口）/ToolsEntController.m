@@ -20,7 +20,7 @@
 
 //视频详情，横屏
 #import "VideoDetailsController.h"
-
+#import "YYTextViewController.h"
 
 #import "CXWebViewController.h"
 
@@ -254,7 +254,7 @@
     }else if (indexPath.row==1) {
         cell.textLabel.text = @"一行代码实现label点击指定文字";
     }else if (indexPath.row==2) {
-        NSString * str = @"评论列表";
+        NSString * str = @"YYTextViewController";
         cell.textLabel.text = str;
     }else if (indexPath.row==3) {
         NSString * str = @"多个tableview上下左右可拖动";
@@ -298,8 +298,8 @@
         LabelActionController * VC = [[LabelActionController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
     }else if (indexPath.row==2){
-    
-      
+        YYTextViewController * VC = [[YYTextViewController alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
        
     }else if (indexPath.row==3){
         MyCenterMainController * VC = [[MyCenterMainController alloc]init];
