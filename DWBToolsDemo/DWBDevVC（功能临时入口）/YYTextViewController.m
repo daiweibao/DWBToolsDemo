@@ -31,9 +31,9 @@
     NSDictionary *attributes = @{NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Regular" size:12], NSForegroundColorAttributeName: color};
     NSString *fff =@"  注册即表示同意《用户协议》和《隐私政策》";
     NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:fff attributes:attributes];
-    [text yy_setFont:[UIFont systemFontOfSize:16] range:[fff rangeOfString:@"《用户协议》"]];
+    [text yy_setFont:[UIFont boldSystemFontOfSize:16] range:[fff rangeOfString:@"《用户协议》"]];
     //设置高亮色和点击事件
-    [text yy_setTextHighlightRange:[fff rangeOfString:@"《用户协议》"] color:[UIColor orangeColor] backgroundColor:[UIColor clearColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+    [text yy_setTextHighlightRange:[fff rangeOfString:@"《用户协议》"] color:[UIColor greenColor] backgroundColor:[UIColor clearColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
         NSLog(@"点击了《用户协议》");
         DWBAlertShow(@"点击了《用户协议》")
     }];

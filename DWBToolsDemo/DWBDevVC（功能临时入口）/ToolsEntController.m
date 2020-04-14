@@ -254,7 +254,7 @@
     }else if (indexPath.row==1) {
         cell.textLabel.text = @"一行代码实现label点击指定文字";
     }else if (indexPath.row==2) {
-        NSString * str = @"YYTextViewController";
+        NSString * str = @"【YYLabel】YYTextViewController";
         cell.textLabel.text = str;
     }else if (indexPath.row==3) {
         NSString * str = @"多个tableview上下左右可拖动";
