@@ -27,7 +27,7 @@
 #import "NSObject+Test.h"
 
 #import "MNPerson.h"
-
+#import "LabelHostWordsController.h"
 #define MIN(A,B) (A) < (B) ? (A) : (B)
 
 @interface ToolsEntController ()<UITableViewDelegate,UITableViewDataSource>
@@ -285,6 +285,9 @@
     }else if (indexPath.row==11) {
         
         cell.textLabel.text = @"控制器模态";
+    }else if (indexPath.row==12) {
+        
+        cell.textLabel.text = @"流布局标签";
     }
     
     return cell;
@@ -346,6 +349,10 @@
         //模态
         VideoDetailsController * VC = [[VideoDetailsController alloc]init];
         [self presentViewController:VC animated:YES completion:nil];
+    }else if(indexPath.row==12){
+        
+        LabelHostWordsController * VC = [[LabelHostWordsController alloc]init];
+         [self.navigationController pushViewController:VC animated:YES];
     }
 }
 

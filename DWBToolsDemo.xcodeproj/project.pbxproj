@@ -157,6 +157,7 @@
 		36A73BB32182C05700B79AB0 /* NSDictionary+DeleteNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A73BB22182C05700B79AB0 /* NSDictionary+DeleteNull.m */; };
 		36A73BB92182C5F400B79AB0 /* NSArray+DWBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A73BB82182C5F400B79AB0 /* NSArray+DWBSafe.m */; };
 		36AD30FF24455B7600FD2644 /* YYTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AD30FE24455B7600FD2644 /* YYTextViewController.m */; };
+		36AD31022445670B00FD2644 /* LabelHostWordsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AD31012445670B00FD2644 /* LabelHostWordsController.m */; };
 		36B52A2523BDCE23002F34A5 /* DWBSystemAlertSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B52A2423BDCE23002F34A5 /* DWBSystemAlertSheet.m */; };
 		36B6609721743DA700E78824 /* DWBURLWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B6609621743DA700E78824 /* DWBURLWKWebView.m */; };
 		36D3784A213FE01500E768AF /* NSString+GetImageHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37849213FE01500E768AF /* NSString+GetImageHeight.m */; };
@@ -531,6 +532,8 @@
 		36A73BB82182C5F400B79AB0 /* NSArray+DWBSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DWBSafe.m"; sourceTree = "<group>"; };
 		36AD30FD24455B7600FD2644 /* YYTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYTextViewController.h; sourceTree = "<group>"; };
 		36AD30FE24455B7600FD2644 /* YYTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYTextViewController.m; sourceTree = "<group>"; };
+		36AD31002445670A00FD2644 /* LabelHostWordsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabelHostWordsController.h; sourceTree = "<group>"; };
+		36AD31012445670B00FD2644 /* LabelHostWordsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabelHostWordsController.m; sourceTree = "<group>"; };
 		36B52A2323BDCE23002F34A5 /* DWBSystemAlertSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBSystemAlertSheet.h; sourceTree = "<group>"; };
 		36B52A2423BDCE23002F34A5 /* DWBSystemAlertSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBSystemAlertSheet.m; sourceTree = "<group>"; };
 		36B6609521743DA700E78824 /* DWBURLWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBURLWKWebView.h; sourceTree = "<group>"; };
@@ -1346,8 +1349,6 @@
 				36213FD22143ABB000B00E2B /* ToolsEntController.m */,
 				367D996A2248B43C001AB399 /* VideoDetailsController.h */,
 				367D996B2248B43C001AB399 /* VideoDetailsController.m */,
-				36AD30FD24455B7600FD2644 /* YYTextViewController.h */,
-				36AD30FE24455B7600FD2644 /* YYTextViewController.m */,
 				3690E87023165BB2007B8AEC /* NSObject+Test.h */,
 				3690E87123165BB2007B8AEC /* NSObject+Test.m */,
 				3690E87323167F5E007B8AEC /* MNPerson.h */,
@@ -1408,6 +1409,10 @@
 				36213FCF2143A99D00B00E2B /* HopmeViewController.m */,
 				362F7BE22148EE7E00A8ECB1 /* LabelActionController.h */,
 				362F7BE32148EE7E00A8ECB1 /* LabelActionController.m */,
+				36AD30FD24455B7600FD2644 /* YYTextViewController.h */,
+				36AD30FE24455B7600FD2644 /* YYTextViewController.m */,
+				36AD31002445670A00FD2644 /* LabelHostWordsController.h */,
+				36AD31012445670B00FD2644 /* LabelHostWordsController.m */,
 				3699114E21523AD4004B3C0D /* TestModel.h */,
 				3699114F21523AD4004B3C0D /* TestModel.m */,
 				368C39F8213F67C800C10B3E /* ViewController.h */,
@@ -2343,6 +2348,7 @@
 				36DE4FED218D96D200C3FE40 /* NSObject+DWBKVOCrash.m in Sources */,
 				36E8621C21AFBF3300180D78 /* DWBJXCategoryMyCell.m in Sources */,
 				36EEDCA821420794000CBEEB /* UIImage+Extend.m in Sources */,
+				36AD31022445670B00FD2644 /* LabelHostWordsController.m in Sources */,
 				362F7BA321489ECF00A8ECB1 /* UIButton+BigAction.m in Sources */,
 				36E8621621AFBF3300180D78 /* JXPagerMainTableView.m in Sources */,
 				367D99752248BC3D001AB399 /* FoundViewListModel.swift in Sources */,
