@@ -29,11 +29,29 @@
     //设置整段字符串的颜色
     UIColor *color = self.isSelect ? [UIColor blackColor] : [UIColor lightGrayColor];
     NSDictionary *attributes = @{NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Regular" size:12], NSForegroundColorAttributeName: color};
-    NSString *fff =@"  注册即表示同意《用户协议》和《隐私政策》";
-    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:fff attributes:attributes];
-    [text yy_setFont:[UIFont boldSystemFontOfSize:16] range:[fff rangeOfString:@"《用户协议》"]];
+    NSString *fff1 =@"  注册即表示同意《用户协议》和《隐私政策》";
+    NSString *fff1Son =@"《用户协议》";
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:fff1 attributes:attributes];
+    [text yy_setFont:[UIFont boldSystemFontOfSize:16] range:[fff1 rangeOfString:fff1Son]];
+    //设置指定内容背景色
+//    [text yy_setBackgroundColor:[UIColor redColor] range:[fff1 rangeOfString:fff1Son]];
+    
+    //设置指定内容圆角和背景色
+    YYTextBorder *border = [YYTextBorder new];
+    border.cornerRadius = 10;//圆角
+    border.strokeWidth = 0.5;//边框宽度
+    border.strokeColor = [UIColor blackColor];//边框颜色
+    border.insets = UIEdgeInsetsMake(-5, -5, -5, -5);//边框放大
+    border.lineStyle = YYTextLineStyleSingle;//边框样式
+    border.fillColor = [UIColor orangeColor];//边框里面填充色
+    [text yy_setTextBackgroundBorder:border range:[fff1 rangeOfString:fff1Son]];
+  
+//    NSShadow *shadow = [NSShadow new];
+//    shadow.shadowBlurRadius = 5;
+//    [text yy_setShadow:shadow range:[fff1 rangeOfString:fff1Son]];
+    
     //设置高亮色和点击事件
-    [text yy_setTextHighlightRange:[fff rangeOfString:@"《用户协议》"] color:[UIColor greenColor] backgroundColor:[UIColor clearColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+    [text yy_setTextHighlightRange:[fff1 rangeOfString:@"《用户协议》"] color:[UIColor greenColor] backgroundColor:[UIColor clearColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
         NSLog(@"点击了《用户协议》");
         DWBAlertShow(@"点击了《用户协议》")
     }];
