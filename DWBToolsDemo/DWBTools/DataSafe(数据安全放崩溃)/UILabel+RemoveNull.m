@@ -19,6 +19,7 @@
 }
 
 - (void)removeNullSetText:(NSString *)string{
+     string = [NSString stringWithFormat:@"%@",string];///必须格式化类型，否则会崩溃
     //(1)字符串判空替换
     if ([NSString isNULL:string]) {
         string = @"";

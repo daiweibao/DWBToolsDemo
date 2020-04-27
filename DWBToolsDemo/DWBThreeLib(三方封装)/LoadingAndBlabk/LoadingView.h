@@ -3,7 +3,7 @@
 //  XiaoYuanSheQu
 //
 //  Created by 戴维保 on 16/9/12.
-//  Copyright © 2016年 潮汐科技有限公司. All rights reserved.
+//  Copyright © 2016年 北京嗅美科技有限公司. All rights reserved.
 //
 //封装的加载中和加载失败网络提示
 #import <UIKit/UIKit.h>
@@ -28,11 +28,18 @@
 
 
 /**
- 加载失败UI--外部调用
+ 加载失败UI--没网
  
  @param controller 当前控制器
  */
 +(void)loadingfailureUIWithController:(UIViewController*)controller;
+
+/**
+ 加载失败--后台接口报错
+ 
+ @param controller 当前控制器
+ */
++(void)loadingfailure_ServerErrorWithController:(UIViewController*)controller;
 
 
 /**
@@ -41,3 +48,4 @@
 +(void)removeLoadingController:(UIViewController*)controller;
 
 @end
+

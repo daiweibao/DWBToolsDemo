@@ -27,6 +27,11 @@ YYCategories这也是个牛逼的工具类：https://github.com/ibireme/YYCatego
 
 5、《TZImagePickerController》一个支持多选、选原图和视频的图片选择器，同时有预览、裁剪功能，支持pod，下载地址：https://github.com/banchichen/TZImagePickerController
 
+最新发现照片选择器：HXPhotoPicker  地址：https://github.com/SilenceLove/HXPhotoPicker  
+
+5.1、《BMDragCellCollectionView》lCollectionView拖动排序，类似照片选择发布拖动图片，支持pod，下载地址：https://github.com/idhong/BMDragCellCollectionView
+
+
 
 6、《NewPagedFlowView》卡片式3D轮播图，下载地址：https://github.com/PageGuo/NewPagedFlowView
 
@@ -94,6 +99,8 @@ YYCategories这也是个牛逼的工具类：https://github.com/ibireme/YYCatego
 23、《FBShimmering》类似今日头条加载中动画闪动，很好用。地址：https://github.com/hsjcom/SoldierShimmering
 
 24、《JXCategoryView》(腾讯新闻、今日头条、QQ音乐、网易云音乐、京东、爱奇艺、腾讯视频、淘宝、天猫、简书、微博等所有主流APP分类切换滚动视图) 地址：https://github.com/pujiaxin33/JXCategoryView
+
+24.2 《GKPageScrollView》类似JXCategoryView，多层嵌套使用，有头部：https://github.com/QuintGao/GKPageScrollView
 
 25、《GKNavigationBarViewController》（iOS自定义导航栏 - 导航栏联动效果，全屏滑动返回，左滑Push）https://github.com/QuintGao/GKNavigationBarViewController
 

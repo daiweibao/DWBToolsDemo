@@ -224,6 +224,96 @@
     }
 }
 
+/**
+ 加载失败--后台接口报错
+ 
+ @param controller 当前控制器
+ */
++(void)loadingfailure_ServerErrorWithController:(UIViewController*)controller{
+    //必须判断否则会崩溃
+    if ([controller isKindOfClass:[UIViewController class]]) {
+        //在控制器上找到加载中控件，找到了才创建
+        UIView * loadView = (UIView*)[controller.view viewWithTag:456672];
+        //控件存在才添加
+        if (loadView) {
+            
+            //找到加载失败的view
+            UIView * viewFailureFound = (UIView*)[controller.view viewWithTag:456673];
+            if (viewFailureFound) {
+                [viewFailureFound removeFromSuperview];//先移除加载失败的UI，然后在创建，防止重复创建
+            }
+            //加载失败父视图
+            UIView * viewFailureSub = [[UIView alloc]init];
+            viewFailureSub.tag = 456673;
+            viewFailureSub.backgroundColor = [UIColor whiteColor];
+            viewFailureSub.frame =CGRectMake(0, 0, SCREEN_WIDTH, loadView.height);
+            [loadView addSubview:viewFailureSub];
+            
+            //找到父视图icon的控件
+            UIButton * buttonLodingSub = (UIButton*)[controller.view viewWithTag:456674];
+            
+            if ([buttonLodingSub.titleLabel.text isEqual:@"0"]) {
+                //不用创建返回键
+                viewFailureSub.frame =CGRectMake(0, 0, SCREEN_WIDTH, loadView.height);
+                
+            }else{
+                
+                //要创建返回键不能挡住加载中上面创建的返回键--所以坐标重新计算
+                viewFailureSub.frame =CGRectMake(0, MC_NavHeight, SCREEN_WIDTH, loadView.height-MC_NavHeight);
+            }
+
+            //开始创建子控制器
+            //图标 201 144 === 144 105
+            UIImageView *imageView = [[UIImageView alloc] init];
+            imageView.image = [UIImage imageNamed:@"加载失败-接口错误"];
+            imageView.contentMode = UIViewContentModeCenter;
+            imageView.frame = CGRectMake((SCREEN_WIDTH-dwb_pt(153))/2, dwb_pt(132), dwb_pt(153), dwb_pt(150));
+            [viewFailureSub addSubview:imageView];
+            
+            
+            //标题1
+            UILabel *title = [[UILabel alloc] init];
+            title.text = @"加载失败";
+            title.font = [UIFont systemFontOfSize:14];
+            title.textColor = DWBColorHex(@"#FFFFFF");
+            title.textAlignment = NSTextAlignmentCenter;
+            title.frame = CGRectMake(0, imageView.bottomY+dwb_pt(12), SCREEN_WIDTH, dwb_pt(20));
+            [viewFailureSub addSubview:title];
+            //标题2
+            UILabel *title2 = [[UILabel alloc] init];
+            title2.text = @"攻城师小哥哥正在紧急修理中...";
+            title2.font = [UIFont systemFontOfSize:12];
+            title2.textColor = DWBColorHex(@"#808C97");
+            title2.textAlignment = NSTextAlignmentCenter;
+            title2.frame = CGRectMake(0, title.bottomY+dwb_pt(3), SCREEN_WIDTH, dwb_pt(17));
+            [viewFailureSub addSubview:title2];
+            
+            //挡板,防止点击到后面重新加载
+            UIView *viewDB = [[UIView alloc]init];
+            viewDB.frame = CGRectMake(0, 0, viewFailureSub.width, viewFailureSub.height);
+            [viewDB addTapActionTouch:^{
+
+            }];
+            [viewFailureSub addSubview:viewDB];
+            
+            //重试
+            UILabel *retryBtn = [[UILabel alloc]init];
+            retryBtn.frame = CGRectMake(imageView.x, title2.bottomY + 35, 124, 32);
+            retryBtn.centerX = imageView.centerX;
+            retryBtn.backgroundColor = DWBColorHex(@"#2A303F");
+            retryBtn.font = [UIFont systemFontOfSize:16];
+            retryBtn.text = @"立即反馈";
+            retryBtn.textColor =DWBColorHex(@"#FFFFFF");
+            retryBtn.textAlignment = NSTextAlignmentCenter;
+            retryBtn.layer.cornerRadius = 5;
+            retryBtn.clipsToBounds = YES;
+            [viewFailureSub addSubview:retryBtn];
+            [retryBtn addTapActionTouch:^{
+                //点击
+            }];
+        }
+    }
+}
 
 //返回
 -(void)pressButtonLeftNew{
@@ -253,6 +343,30 @@
     
 }
 
+
+
+#pragma mark ===========用法
+/*
+ //加载中【封装】
+        WeakSelf(self);
+        [LoadingView loadingView:self isCreateBack:NO viewMaxY:SCREEN_HEIGHT viewHeight:SCREEN_HEIGHT-MC_NavHeight LoadeFailure:^{
+            //加载失败点击回调，这里如果不处理，界面就会一直停留在加载中动画上
+            [weakself.tableView.mj_header beginRefreshing];
+        }];
+ 
+ 
+ #pragma mark ======== 先判断是否有网 ===============
+ if ([DWBAFNetworking isHaveNetwork]==NO) {
+     //没网空白提示
+     [LoadingView loadingfailureUIWithController:self];
+     return;
+ }
+ 
+ //移除加载中
+  [LoadingView removeLoadingController:weakself];
+ 
+ 
+ */
 
 
 
