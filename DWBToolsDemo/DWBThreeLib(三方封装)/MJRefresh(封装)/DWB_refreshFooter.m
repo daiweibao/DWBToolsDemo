@@ -41,7 +41,7 @@
 //    footer.stateLabel.font = [UIFont systemFontOfSize:12];
 //    // 设置颜色
 //    footer.stateLabel.textColor =  [UIColor colorWithHexString:@"#aaaaaa"];
-//    //已经加载完全部 亲，没有更多内容了！
+//    //已经加载完全部 亲，没有更多内容了！,去UIScrollView+EndRefresh里面设置
 //     [footer setTitle:@"亲，没有更多内容了！" forState:MJRefreshStateNoMoreData];
 //    
 //    // 隐藏刷新状态的文字

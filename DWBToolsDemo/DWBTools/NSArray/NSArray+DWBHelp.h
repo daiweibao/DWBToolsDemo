@@ -36,6 +36,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSMutableArray *)maopaoSortWithMarray:(NSMutableArray *)mArray;
 
+
+/// 获取无重复字典元素的数组（数组里根据字典某一个元素去重） filterKey为过滤关键字：去掉前面的重复数据，保留后面的数据，覆盖式去重
+/// @param originArray 要去重的数组
+/// @param filterKey 根据数据里存放的字典的某一个键去重，如userId
++(NSArray *)getNoDuplicatesArrayByOriginArray:(NSArray *)originArray
+                                    filterKey:(NSString *)filterKey;
+
 @end
 
 NS_ASSUME_NONNULL_END

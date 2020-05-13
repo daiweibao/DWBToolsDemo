@@ -672,13 +672,14 @@
 
 
 /**
- 压缩图片方法(先压缩质量再压缩尺寸,压缩到指定尺寸以下单位如：1 * 1024 Kb)-最佳方法,只能用对象方法，否则无效.
- 
- @param maxLength 压缩到指定质量以下，单位KB
- @return 压缩后的
- */
+压缩图片方法(先压缩质量再压缩尺寸,压缩到指定尺寸以下单位如：50kb Kb)-最佳方法,只能用对象方法，否则无效.
+
+@param maxLength 压缩到指定质量以下，单位KB 例如：50kb
+@return 压缩后的
+*/
 -(NSData *)compressWithLengthLimit:(NSUInteger)maxLength{
     // Compress by quality
+    maxLength = maxLength * 1024.0f;//传进来的是KB,要转化长度为length
     CGFloat compression = 1;
     NSData *data = UIImageJPEGRepresentation(self, compression);
     //NSLog(@"Before compressing quality, image size = %ld KB",data.length/1024);
@@ -730,7 +731,7 @@
  */
 -(NSString *)imageToBase64Str:(UIImage *) image  MaxLength:(NSInteger)maxLength{
    
-    NSData *data = [self compressWithLengthLimit:maxLength * 1024.0f];
+    NSData *data = [self compressWithLengthLimit:maxLength];
     
     NSLog(@"转Base64压缩后图片大小：%luk",(unsigned long)data.length/1024);
     NSString *encodedImageStr = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];

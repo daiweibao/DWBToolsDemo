@@ -151,9 +151,9 @@
 
 
 /**
-  压缩图片方法(先压缩质量再压缩尺寸,压缩到指定尺寸以下单位如：1 * 1024 Kb)-最佳方法,只能用对象方法，否则无效.
-
- @param maxLength 压缩到指定质量以下，单位KB
+ 压缩图片方法(先压缩质量再压缩尺寸,压缩到指定尺寸以下单位如：50kb Kb)-最佳方法,只能用对象方法，否则无效.
+ 
+ @param maxLength 压缩到指定质量以下，单位KB 例如：50kb
  @return 压缩后的
  */
 -(NSData *)compressWithLengthLimit:(NSUInteger)maxLength;

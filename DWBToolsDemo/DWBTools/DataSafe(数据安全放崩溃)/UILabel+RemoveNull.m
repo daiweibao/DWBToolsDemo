@@ -26,16 +26,24 @@
     }
 #pragma mark ----(2)字符串中包含某个字符串
     else if ([string rangeOfString:@"(null)"].location != NSNotFound){
-        string = [string stringByReplacingOccurrencesOfString:@"(null)" withString:@""];
+        if (string.length <= 6) {
+            string = [string stringByReplacingOccurrencesOfString:@"(null)" withString:@""];
+        }
     }
     else if ([string rangeOfString:@"<null>"].location != NSNotFound){
-        string = [string stringByReplacingOccurrencesOfString:@"<null>" withString:@""];
+        if (string.length <= 6) {
+            string = [string stringByReplacingOccurrencesOfString:@"<null>" withString:@""];
+        }
     }
     else if ([string rangeOfString:@"nil"].location != NSNotFound){
-        string = [string stringByReplacingOccurrencesOfString:@"nil" withString:@""];
+        if (string.length <= 3) {
+            string = [string stringByReplacingOccurrencesOfString:@"nil" withString:@""];
+        }
     }
     else if ([string rangeOfString:@"null"].location != NSNotFound){
-        string = [string stringByReplacingOccurrencesOfString:@"null" withString:@""];
+        if (string.length <= 4) {
+            string = [string stringByReplacingOccurrencesOfString:@"null" withString:@""];
+        }
     }
     
     [self removeNullSetText:string];

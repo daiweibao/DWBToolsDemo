@@ -59,9 +59,23 @@
 
 #pragma mark ===========打开AppStore外部===========
 - (void)openAppStoreOutWithUrl:(NSString *)appUrl{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appUrl] options:@{} completionHandler:^(BOOL success) {
-        //打开成功
-    }];
+    if (@available(iOS 10.0, *)) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appUrl] options:@{} completionHandler:^(BOOL success) {
+            //打开成功
+        }];
+    } else {
+        // Fallback on earlier versions
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appUrl]];
+    }
 }
+
+
+#pragma mark =======用法
+/**
+ [[DWBOpenAppStoreApp sharedManager] openAppStoreWithAppId:AppstoreId CompleteActionClose:^{
+ 
+ }];
+ 
+ */
 
 @end

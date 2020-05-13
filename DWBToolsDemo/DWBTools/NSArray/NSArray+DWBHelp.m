@@ -98,5 +98,21 @@
      */
     
 }
+/// 获取无重复字典元素的数组（数组里根据字典某一个元素去重） filterKey为过滤关键字：去掉前面的重复数据，保留后面的数据，覆盖式去重
++(NSArray *)getNoDuplicatesArrayByOriginArray:(NSArray *)originArray
+                                    filterKey:(NSString *)filterKey{
+    if ([NSString isNULL:filterKey]) {
+        return originArray;
+    }
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    for (NSInteger i = 0; i < originArray.count; i++) {
+        NSDictionary *dic = originArray[i];
+        if (dictionary) {
+           [dictionary setValue:dic forKey:dic[filterKey]];
+        }
+    }
+    NSLog(@"%@",[dictionary allValues]);
+    return [dictionary allValues];
+}
 
 @end

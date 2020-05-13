@@ -107,4 +107,11 @@ YYCategories这也是个牛逼的工具类：https://github.com/ibireme/YYCatego
 
 25、《PPBadgeView》（tabbar上显示消息数量角标，或者小红点）https://github.com/jkpang/PPBadgeView
 
+26、《BMDragCellCollectionView》（UICollectionViewCell拖拽重排）https://github.com/idhong/BMDragCellCollectionView
+
+
+27、《BRPickerView》（日期选择器、时间选择器（DatePickerView）、地址选择器（AddressPickerView）、自定义字符串选择器（StringPickerView））https://github.com/91renb/BRPickerView
+
+
+
 
