@@ -169,6 +169,7 @@
 		36D37855213FF02300E768AF /* GetChatTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37854213FF02300E768AF /* GetChatTime.m */; };
 		36D37858213FF05D00E768AF /* getUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37856213FF05D00E768AF /* getUUID.m */; };
 		36D3785C213FF0C400E768AF /* NSDictionary+CXHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3785B213FF0C400E768AF /* NSDictionary+CXHelp.m */; };
+		36DA039C247E71E100C7B2AA /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 36DA039B247E71E100C7B2AA /* Fastfile */; };
 		36DE4FED218D96D200C3FE40 /* NSObject+DWBKVOCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DE4FEC218D96D200C3FE40 /* NSObject+DWBKVOCrash.m */; };
 		36E3D59B225497C6008BE747 /* GoodsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E3D59A225497C6008BE747 /* GoodsDetailsController.swift */; };
 		36E861EF21AFBF3300180D78 /* lufei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36E8618121AFBF3300180D78 /* lufei.jpg */; };
@@ -559,6 +560,7 @@
 		36D37857213FF05D00E768AF /* getUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getUUID.h; sourceTree = "<group>"; };
 		36D3785A213FF0C300E768AF /* NSDictionary+CXHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CXHelp.h"; sourceTree = "<group>"; };
 		36D3785B213FF0C400E768AF /* NSDictionary+CXHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CXHelp.m"; sourceTree = "<group>"; };
+		36DA039B247E71E100C7B2AA /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Fastfile; path = fastlane/Fastfile; sourceTree = SOURCE_ROOT; };
 		36DA4A762147B59000048763 /* MacroHeaderHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroHeaderHeader.h; sourceTree = "<group>"; };
 		36DE4FEB218D96D200C3FE40 /* NSObject+DWBKVOCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DWBKVOCrash.h"; sourceTree = "<group>"; };
 		36DE4FEC218D96D200C3FE40 /* NSObject+DWBKVOCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DWBKVOCrash.m"; sourceTree = "<group>"; };
@@ -1429,6 +1431,7 @@
 				368C39F8213F67C800C10B3E /* ViewController.h */,
 				368C39F9213F67C800C10B3E /* ViewController.m */,
 				362F7BC82148B09300A8ECB1 /* README.md */,
+				36DA039B247E71E100C7B2AA /* Fastfile */,
 				362F7BE521490F3A00A8ECB1 /* Image */,
 				368C39FB213F67C800C10B3E /* Main.storyboard */,
 				368C39FE213F67C900C10B3E /* Assets.xcassets */,
@@ -2083,6 +2086,7 @@
 				362F7BE721490F4B00A8ECB1 /* WVstore_1024pt.png in Resources */,
 				367D99692248B0B8001AB399 /* Images.xcassets in Resources */,
 				36213F7221439EC100B00E2B /* 上拉加载中@2x.png in Resources */,
+				36DA039C247E71E100C7B2AA /* Fastfile in Resources */,
 				362F7BC02148ACF000A8ECB1 /* keyboard_preview_bg@2x.png in Resources */,
 				3665311C22A170AD004AF58B /* ChatInputBox.bundle in Resources */,
 				36213F7321439EC100B00E2B /* 上拉加载中@3x.png in Resources */,

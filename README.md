@@ -113,5 +113,8 @@ YYCategories这也是个牛逼的工具类：https://github.com/ibireme/YYCatego
 27、《BRPickerView》（日期选择器、时间选择器（DatePickerView）、地址选择器（AddressPickerView）、自定义字符串选择器（StringPickerView））https://github.com/91renb/BRPickerView
 
 
+28、《JKCategories》一个有用的Objective-C类别（Category）集合，扩展iOS框架，如Foundation、UIKit、CoreData、QuartzCore、CoreLocation、MapKit等。https://github.com/shaojiankui/JKCategories
+
+
 
 

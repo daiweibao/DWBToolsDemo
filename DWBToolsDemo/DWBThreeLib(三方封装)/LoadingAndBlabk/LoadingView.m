@@ -38,7 +38,7 @@
         LoadingView * loadView = [[LoadingView alloc]init];
         loadView.backgroundColor = [UIColor groupTableViewBackgroundColor];
         loadView.controller = controller;
-         loadView.tag = 456672;
+//         loadView.tag = 456672;
         //是否创建返回键
         loadView.isBack = isBack;
         //y的最大坐标
@@ -173,15 +173,33 @@
     //必须判断否则会崩溃
     if ([controller isKindOfClass:[UIViewController class]]) {
         //在控制器上找到加载中控件，找到了才创建
-        UIView * loadView = (UIView*)[controller.view viewWithTag:456672];
+//        UIView * loadView = (UIView*)[controller.view viewWithTag:456672];
+       
+        LoadingView * loadView = nil;
+        for (UIView * view in controller.view.subviews) {
+            if ([view isKindOfClass:LoadingView.class]) {
+                loadView = (LoadingView *)view;
+                break;
+            }
+        }
+
         //控件存在才添加
         if (loadView) {
             
+//            //找到加载失败的view
+//            UIView * viewFailureFound = (UIView*)[controller.view viewWithTag:456673];
+//            if (viewFailureFound) {
+//                [viewFailureFound removeFromSuperview];//移除
+//            }
+            
             //找到加载失败的view
-            UIView * viewFailureFound = (UIView*)[controller.view viewWithTag:456673];
-            if (viewFailureFound) {
-                [viewFailureFound removeFromSuperview];//移除
+            for (UIView * view in loadView.subviews) {
+                if (view.tag ==456673 ) {
+                    [view removeFromSuperview];
+                    break;
+                }
             }
+            
             //加载失败父视图
             UIView * viewFailureSub = [[UIView alloc]init];
             viewFailureSub.tag = 456673;
@@ -233,14 +251,27 @@
     //必须判断否则会崩溃
     if ([controller isKindOfClass:[UIViewController class]]) {
         //在控制器上找到加载中控件，找到了才创建
-        UIView * loadView = (UIView*)[controller.view viewWithTag:456672];
+//        UIView * loadView = (UIView*)[controller.view viewWithTag:456672];
+        LoadingView * loadView = nil;
+        for (UIView * view in controller.view.subviews) {
+            if ([view isKindOfClass:LoadingView.class]) {
+                loadView = (LoadingView *)view;
+                break;
+            }
+        }
         //控件存在才添加
         if (loadView) {
             
             //找到加载失败的view
-            UIView * viewFailureFound = (UIView*)[controller.view viewWithTag:456673];
-            if (viewFailureFound) {
-                [viewFailureFound removeFromSuperview];//先移除加载失败的UI，然后在创建，防止重复创建
+//            UIView * viewFailureFound = (UIView*)[controller.view viewWithTag:456673];
+//            if (viewFailureFound) {
+//                [viewFailureFound removeFromSuperview];//先移除加载失败的UI，然后在创建，防止重复创建
+//            }
+            for (UIView * view in loadView.subviews) {
+                if (view.tag ==456673 ) {
+                    [view removeFromSuperview];
+                    break;
+                }
             }
             //加载失败父视图
             UIView * viewFailureSub = [[UIView alloc]init];
@@ -328,19 +359,17 @@
 
 //移除加载中-新
 +(void)removeLoadingController:(UIViewController*)controller{
-    
-    //必须判断否则会崩溃
-    if ([controller isKindOfClass:[UIViewController class]]) {
-        
-        UIView * loadView = (UIView*)[controller.view viewWithTag:456672];
-        //移除
-        [loadView removeFromSuperview];
-        
-    }else{
-        
-        //        NSLog(@"不是控制器");
-    }
-    
+   //必须判断否则会崩溃
+   if ([controller isKindOfClass:[UIViewController class]]) {
+       for (UIView * view in controller.view.subviews) {
+           if ([view isKindOfClass:LoadingView.class]) {
+               [view removeFromSuperview];
+               break;
+           }
+       }
+   }else{
+       //NSLog(@"不是控制器");
+   }
 }
 
 
