@@ -19,12 +19,14 @@ platform :ios do
    desc "自动化打包"
 #打包上传到蒲公英
   lane :beta do
+  time = Time.new
+  time_str = time.strftime("%Y年%m月%d日 %H:%M")
    build_app(export_method: "ad-hoc",#打包证书选择
              scheme: "miniVideo",#选择打包项目的taregets
              export_xcargs: "-allowProvisioningUpdates"#自动更新证书，防止因为证书打包失败
              )
    pgyer(api_key: "05a7891363a5be71d6941b1eac92ba73",   user_key:"cc9c1f41522f55ff2ba606d82a296ada",
-       update_description: "修改bug后上传"
+       update_description: "修改bug后上传 "+"【" + time_str + "打包上传】"
        )
 # 可选的值有：app-store、ad-hoc、development、enterprise。   打包命令cd到工程下再命令：fastlane beta
   end
