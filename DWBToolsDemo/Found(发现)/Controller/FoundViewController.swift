@@ -111,7 +111,7 @@ class FoundViewController: CXRootViewController, UITableViewDelegate, UITableVie
                     self.tableView.reloadData()
                     
                     //移除加载中
-                    LoadingView.removeLoading(self)
+//                    DWBLoadingView.removeLoading(self)
 
                 }
 
@@ -144,9 +144,9 @@ class FoundViewController: CXRootViewController, UITableViewDelegate, UITableVie
         //注册cell重用
         tableView.register(FoundViewCell.self , forCellReuseIdentifier: "FoundViewCell")
         
-        LoadingView.loadingView(self, isCreateBack: false, viewMaxY: SCREEN_HEIGHT, viewHeight: SCREEN_HEIGHT-MC_NavHeight()) {
-           
-        }
+//        LoadingView.loadingView(self, isCreateBack: false, viewMaxY: SCREEN_HEIGHT, viewHeight: SCREEN_HEIGHT-MC_NavHeight()) {
+//           
+//        }
         
         
     }

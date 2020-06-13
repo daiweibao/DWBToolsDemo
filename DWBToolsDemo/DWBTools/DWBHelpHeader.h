@@ -294,7 +294,7 @@ _Pragma("clang diagnostic pop") \
 //获取版本号纯数字(字符串格式，3.4.0版本修改，2017年9月17日)
 #define GET_VERSION_Number  [GET_VERSION stringByReplacingOccurrencesOfString:@"." withString:@""]
 //app build版本
-#define GET_appBuild  [infoDictionary objectForKey:@"CFBundleVersion"]
+#define GET_AppBuild  [infoDictionary objectForKey:@"CFBundleVersion"]
 
 //获取appBundleID
 #define GET_BundleId [[NSBundle mainBundle] bundleIdentifier]

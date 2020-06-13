@@ -51,4 +51,9 @@
  */
 + (void)addToShoppingCartWithGoodsImage:(UIView *)goodsImage startPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint completion:(void (^)(BOOL))completion;
 
+
+/// 缩小放大动画，一闪一闪的
+/// @param view 动画添加到哪一个控件上
++ (void)animationZoom:(UIView *)view;
+
 @end

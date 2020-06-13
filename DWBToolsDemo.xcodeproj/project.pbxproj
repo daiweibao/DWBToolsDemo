@@ -11,6 +11,9 @@
 		360F0F9A218067B6006A7835 /* NSMutableArray+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0F96218067B6006A7835 /* NSMutableArray+Swizzling.m */; };
 		360F0FC7218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0FC6218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m */; };
 		3610DC072181757A00EAB9CA /* NSNull+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3610DC062181757A00EAB9CA /* NSNull+safe.m */; };
+		3614998824947D34009E5AC6 /* DWBLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3614998724947D34009E5AC6 /* DWBLoadingView.m */; };
+		3614999024947E21009E5AC6 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3614998E24947E21009E5AC6 /* FBShimmeringLayer.m */; };
+		3614999124947E21009E5AC6 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3614998F24947E21009E5AC6 /* FBShimmeringView.m */; };
 		361BC894240D4FF7008E04C9 /* DWBDataSafeHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 361BC893240D4FF7008E04C9 /* DWBDataSafeHelp.m */; };
 		361F61EC222FCCDF0029CF29 /* DWBMacroHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F61EB222FCCDF0029CF29 /* DWBMacroHelp.swift */; };
 		361F61EE222FCE360029CF29 /* UIColor_RGBString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F61ED222FCE360029CF29 /* UIColor_RGBString.swift */; };
@@ -115,7 +118,6 @@
 		365017CD222FA2CB00E4B622 /* DWBSwiftTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365017CC222FA2CB00E4B622 /* DWBSwiftTestController.swift */; };
 		3665311C22A170AD004AF58B /* ChatInputBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3665311B22A170AD004AF58B /* ChatInputBox.bundle */; };
 		366F684924567F7A008DC66D /* BlankPagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 366F684724567F79008DC66D /* BlankPagesView.m */; };
-		366F684F2456805D008DC66D /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 366F684E2456805D008DC66D /* LoadingView.m */; };
 		366F6852245681D8008DC66D /* DWBOpenAppStoreApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 366F6851245681D8008DC66D /* DWBOpenAppStoreApp.m */; };
 		366F685824568205008DC66D /* ActionAnmionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 366F685624568205008DC66D /* ActionAnmionView.m */; };
 		367D99692248B0B8001AB399 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367D99682248B0B8001AB399 /* Images.xcassets */; };
@@ -267,6 +269,14 @@
 		360F0FC6218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+DWBDictSafe.m"; sourceTree = "<group>"; };
 		3610DC052181757A00EAB9CA /* NSNull+safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+safe.h"; sourceTree = "<group>"; };
 		3610DC062181757A00EAB9CA /* NSNull+safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+safe.m"; sourceTree = "<group>"; };
+		3614998624947D34009E5AC6 /* DWBLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBLoadingView.h; sourceTree = "<group>"; };
+		3614998724947D34009E5AC6 /* DWBLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBLoadingView.m; sourceTree = "<group>"; };
+		3614998A24947E21009E5AC6 /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmering.h; sourceTree = "<group>"; };
+		3614998B24947E21009E5AC6 /* FBShimmeringLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringLayer.h; sourceTree = "<group>"; };
+		3614998C24947E21009E5AC6 /* FBShimmering-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBShimmering-Prefix.pch"; sourceTree = "<group>"; };
+		3614998D24947E21009E5AC6 /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
+		3614998E24947E21009E5AC6 /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
+		3614998F24947E21009E5AC6 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
 		361BC892240D4FF7008E04C9 /* DWBDataSafeHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBDataSafeHelp.h; sourceTree = "<group>"; };
 		361BC893240D4FF7008E04C9 /* DWBDataSafeHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBDataSafeHelp.m; sourceTree = "<group>"; };
 		361F61EB222FCCDF0029CF29 /* DWBMacroHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWBMacroHelp.swift; sourceTree = "<group>"; };
@@ -455,8 +465,6 @@
 		3665311B22A170AD004AF58B /* ChatInputBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChatInputBox.bundle; sourceTree = "<group>"; };
 		366F684724567F79008DC66D /* BlankPagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlankPagesView.m; sourceTree = "<group>"; };
 		366F684824567F79008DC66D /* BlankPagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlankPagesView.h; sourceTree = "<group>"; };
-		366F684D2456805D008DC66D /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
-		366F684E2456805D008DC66D /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		366F6850245681D8008DC66D /* DWBOpenAppStoreApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBOpenAppStoreApp.h; sourceTree = "<group>"; };
 		366F6851245681D8008DC66D /* DWBOpenAppStoreApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBOpenAppStoreApp.m; sourceTree = "<group>"; };
 		366F685624568205008DC66D /* ActionAnmionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionAnmionView.m; sourceTree = "<group>"; };
@@ -750,6 +758,19 @@
 				3610DC062181757A00EAB9CA /* NSNull+safe.m */,
 			);
 			path = "DataSafe(数据安全放崩溃)";
+			sourceTree = "<group>";
+		};
+		3614998924947E21009E5AC6 /* FBShimmering */ = {
+			isa = PBXGroup;
+			children = (
+				3614998A24947E21009E5AC6 /* FBShimmering.h */,
+				3614998B24947E21009E5AC6 /* FBShimmeringLayer.h */,
+				3614998C24947E21009E5AC6 /* FBShimmering-Prefix.pch */,
+				3614998D24947E21009E5AC6 /* FBShimmeringView.h */,
+				3614998E24947E21009E5AC6 /* FBShimmeringLayer.m */,
+				3614998F24947E21009E5AC6 /* FBShimmeringView.m */,
+			);
+			path = FBShimmering;
 			sourceTree = "<group>";
 		};
 		361F61EA222FC7810029CF29 /* DWBSwiftTools(swift工具) */ = {
@@ -1057,6 +1078,7 @@
 		36213F5221439DB700B00E2B /* DWBThreeLib(三方封装) */ = {
 			isa = PBXGroup;
 			children = (
+				3614998924947E21009E5AC6 /* FBShimmering */,
 				3621B74C2191B3320000BDFA /* HZPhotoBrowser(下拖图片浏览器) */,
 				36FF0855217A1A3800791E59 /* ShareToopls(分享) */,
 				362F7BA42148ACF000A8ECB1 /* ChatInputBoxEmoji */,
@@ -1153,8 +1175,8 @@
 			children = (
 				366F684824567F79008DC66D /* BlankPagesView.h */,
 				366F684724567F79008DC66D /* BlankPagesView.m */,
-				366F684D2456805D008DC66D /* LoadingView.h */,
-				366F684E2456805D008DC66D /* LoadingView.m */,
+				3614998624947D34009E5AC6 /* DWBLoadingView.h */,
+				3614998724947D34009E5AC6 /* DWBLoadingView.m */,
 			);
 			path = LoadingAndBlabk;
 			sourceTree = "<group>";
@@ -2207,6 +2229,7 @@
 				365017C9222E55A300E4B622 /* AppDelegate+DWBThreeTouchHelp.m in Sources */,
 				36213F4721439C1400B00E2B /* LoadingCircleHUD.m in Sources */,
 				36E8620121AFBF3300180D78 /* JXCategoryDotCellModel.m in Sources */,
+				3614999024947E21009E5AC6 /* FBShimmeringLayer.m in Sources */,
 				368E69CC2140C231000EC79C /* UIView+Animation.m in Sources */,
 				36213F4621439C1400B00E2B /* MBProgressHUD.m in Sources */,
 				36213F832143A0F100B00E2B /* JZAlbumViewController.m in Sources */,
@@ -2265,13 +2288,13 @@
 				368E69E62140C5BF000EC79C /* TouchIDHelp.m in Sources */,
 				36213FCD2143A6A500B00E2B /* CXNavigationController.m in Sources */,
 				36E861F821AFBF3300180D78 /* JXCategoryIndicatorImageView.m in Sources */,
-				366F684F2456805D008DC66D /* LoadingView.m in Sources */,
 				368E69D82140C49B000EC79C /* UIFont+FontNameBoldSize.m in Sources */,
 				36EEDCAF21420794000CBEEB /* ScanResultsController.m in Sources */,
 				36213F4D21439C1400B00E2B /* SVProgressHUD.m in Sources */,
 				36213F8A2143A4BF00B00E2B /* CXHTMLWebController.m in Sources */,
 				36213FD32143ABB000B00E2B /* ToolsEntController.m in Sources */,
 				361F620F2230BCFE0029CF29 /* HomeViewController.m in Sources */,
+				3614998824947D34009E5AC6 /* DWBLoadingView.m in Sources */,
 				361F621B2230BD3F0029CF29 /* MineViewController.m in Sources */,
 				36EEDC9221420585000CBEEB /* UIImage+PlayGif.m in Sources */,
 				361F61EC222FCCDF0029CF29 /* DWBMacroHelp.swift in Sources */,
@@ -2345,6 +2368,7 @@
 				362F7BB72148ACF000A8ECB1 /* STEmojiCollectionView.m in Sources */,
 				36446172218BEBF400B9E01E /* DWBAppStoreGetData.m in Sources */,
 				36EEDC9521420585000CBEEB /* UIImage+MyImage.m in Sources */,
+				3614999124947E21009E5AC6 /* FBShimmeringView.m in Sources */,
 				368E69E92140C70D000EC79C /* KeyChainManager.m in Sources */,
 				368E69ED2140D307000EC79C /* DWBAFNetworking.m in Sources */,
 				369D8961217198F800003425 /* DWBDeviceHelp.m in Sources */,

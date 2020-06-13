@@ -82,6 +82,23 @@
         DWBAlertShow(@"点击了文字");
     }];
     
+    
+    
+    NSString *strL = @"不可否认，当宅在家里已经成为周末、节假日的常态，我们就需要我擦雷";
+    UILabel * labelAll = [[UILabel alloc]init];
+    labelAll.frame = CGRectMake(10, labelHtml.bottomY+10, 340, 100);
+    labelAll.font = [UIFont systemFontOfSize:20];
+    labelAll.textColor = [UIColor yellowColor];
+    labelAll.text =strL;
+    labelAll.numberOfLines = 2;
+    [labelAll sizeToFit];
+    labelAll.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:labelAll];
+    
+    CGFloat heL = [NSString sizeMyStrWith:strL andMyFont:[UIFont systemFontOfSize:20] andMineWidth:340].height;
+    
+    NSLog(@"实际文本高度：%f label显示高度：%f",heL,labelAll.height);
+    
 
     
 }

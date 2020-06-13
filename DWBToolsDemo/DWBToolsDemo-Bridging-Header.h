@@ -31,7 +31,7 @@
 //刷新
 #import "DWB_refresh.h"
 //加载中
-#import "LoadingView.h"
+#import "DWBLoadingView.h"
 
 
 //警告：注意这个桥接文件不要乱移动他的文件夹目录位置，否则会找不到

@@ -237,6 +237,34 @@
     
 }
 
+/// 设置指定边角阴影
+/// @param myView 要设置的view
+/// @param radius 控件圆角大小
+/// @param radiusType 圆角方向
++(void)setupShadowView:(UIView*)myView Radius:(CGFloat)radius AndRadiusType:(DWBRadiusType)radiusType{
+    //    阴影的颜色
+    myView.layer.shadowColor = [UIColor colorWithRed:224/255.0 green:224/255.0 blue:224/255.0 alpha:0.32].CGColor;;
+    //    阴影的透明度
+    myView.layer.shadowOpacity = 1.0f;
+    //    阴影的圆角
+    myView.layer.shadowRadius = 10.0f;//设置阴影半径能扩大阴影面积
+    //    阴影的偏移量，设置成CGSizeMake(0,0);是4边都有阴影
+    
+    if (radiusType==RadiusType_Top) {
+        myView.layer.shadowOffset = CGSizeMake(0,-7);//
+        //设置指定角圆角
+        [myView setup_Radius:radius corner:UIRectCornerTopLeft|UIRectCornerTopRight];
+    }else if (radiusType==RadiusType_bottom){
+        myView.layer.shadowOffset = CGSizeMake(0,7);//5往下偏
+        //设置指定角圆角
+        [myView setup_Radius:radius corner:UIRectCornerBottomRight|UIRectCornerBottomLeft];
+    }else{
+        myView.layer.shadowOffset = CGSizeMake(0,0);//
+        //设置指定角圆角
+        [myView setup_Radius:radius corner:UIRectCornerTopLeft|UIRectCornerTopRight|UIRectCornerBottomRight|UIRectCornerBottomLeft];
+    }
+}
+
 
 /**
  用UIView创建一条虚线

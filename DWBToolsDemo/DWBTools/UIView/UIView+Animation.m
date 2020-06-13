@@ -149,5 +149,19 @@
 }
 
 
+/// 缩小放大动画，一闪一闪的
+/// @param view 动画添加到哪一个控件上
++ (void)animationZoom:(UIView *)view{
+    //缩小方法动画
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    animation.fromValue = [NSNumber numberWithFloat:0.9];//缩放起点
+    animation.toValue = [NSNumber numberWithFloat:1.1];//缩放终点
+    animation.duration = 0.3;//单次动画时长
+    animation.autoreverses = YES;
+    animation.repeatCount = MAXFLOAT;
+    animation.removedOnCompletion = NO;
+    animation.fillMode=kCAFillModeForwards;
+    [view.layer addAnimation:animation forKey:@"zoom"];
+}
 
 @end
