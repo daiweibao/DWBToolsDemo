@@ -11,7 +11,7 @@
 @interface BlankPagesView : UIView
 
 /**
- 空白提示页面【黑色】
+ 空白提示页面【项目通用】
  
  @param addViewSub 添加到那个控件上，是self.view 还是tableview
  @param scrollerView 滚动视图
@@ -23,14 +23,17 @@
  */
 +(void)createAndRemoveBlankUIWithaddSubview:(UIView*)addViewSub  AndScroller:(UIScrollView *)scrollerView AndArray:(NSArray *)array AndInfo:(NSString *)info AndInfoTwo:(NSString *)info2 AndImageName:(NSString *)imageName AndMinY:(CGFloat )BkMinY;
 
+///**
+// 移除空白页
+// 
+// @param addViewSub 父视图
+// */
+//+(void)removeBlankUIWithaddSubview:(UIView*)addViewSub;
 
-
-/**
- 移除空白页
- 
- @param addViewSub 父视图
+/*
+ 用法：
+  [BlankPagesView createAndRemoveBlankUIWithaddSubview:self.view AndScroller:nil AndArray:@[] AndInfo:@"暂无数据" AndInfoTwo:@"" AndImageName:@"空白页-暂无消息" AndMinY:-1];
  */
-+(void)removeBlankUIWithaddSubview:(UIView*)addViewSub;
 
 @end
 

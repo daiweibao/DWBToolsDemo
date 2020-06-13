@@ -1,31 +1,21 @@
 //
-//  BlankPagesView.m
-//  AiHenDeChaoXi
+//  BlankPagesTwoView.m
+//  miniVideo
 //
-//  Created by 戴维保 on 2018/4/17.
-//  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2020/2/12.
+//  Copyright © 2020 北京赢响国际科技有限公司. All rights reserved.
 //
 
-#import "BlankPagesView.h"
+#import "BlankPagesTwoView.h"
 #import <MJRefresh/MJRefresh.h>
-@interface BlankPagesView()
+@interface BlankPagesTwoView()
 
 @end
 
-@implementation BlankPagesView
+@implementation BlankPagesTwoView
 
-/**
- 空白提示页面
- 
- @param addViewSub 添加到那个控件上，是self.view 还是tableview
- @param scrollerView 滚动视图
- @param array 数组，数组为0才会显示空白页
- @param info 提示消息
- @param info2 提示消息2
- @param imageName 空白图片名字
- @param BkMinY 相对于父视图起始坐标，-1代表默认起始坐标
- */
-+(void)createAndRemoveBlankUIWithaddSubview:(UIView*)addViewSub  AndScroller:(UIScrollView *)scrollerView AndArray:(NSArray *)array AndInfo:(NSString *)info AndInfoTwo:(NSString *)info2 AndImageName:(NSString *)imageName AndMinY:(CGFloat )BkMinY{
+
++(void)createAndRemoveBlankUIWithaddSubview:(UIView*)addViewSub  AndScroller:(UIScrollView *)scrollerView AndArray:(NSArray *)array AndInfo1:(NSString *)info AndInfo2:(NSString *)info2 AndImageName:(NSString *)imageName AndButtonName:(NSString *)buttonName AndMinY:(CGFloat )BkMinY ActionButtonBlock:(void(^)(void))actionButtonBlock{
     //默认最小值
     if (BkMinY == -1) {
         BkMinY = dwb_pt(116);
@@ -88,32 +78,38 @@
             [viewBlackBk addSubview:labelInfo2];
             labelInfo2.frame = CGRectMake(16, labelInfo.bottomY+dwb_pt(5), SCREEN_WIDTH-40, 20);
         }
+        
+        if ([NSString isNULL:imageName]==NO) {//判空
+            //按钮
+            UILabel *retryBtn = [[UILabel alloc]init];
+            retryBtn.frame = CGRectMake((viewBlackBk.width-dwb_pt(300))/2, labelInfo.bottomY + dwb_pt(74), dwb_pt(300), dwb_pt(44));
+            retryBtn.font = [UIFont boldSystemFontOfSize:16];
+            retryBtn.text = buttonName;
+            retryBtn.textColor =DWBColorHex(@"#FFFFFF");
+            retryBtn.textAlignment = NSTextAlignmentCenter;
+            [viewBlackBk addSubview:retryBtn];
+            //设置圆角阴影
+            //圆角
+            retryBtn.layer.backgroundColor = [UIColor redColor].CGColor;
+            retryBtn.layer.cornerRadius = 22;
+            //阴影
+            retryBtn.layer.shadowColor = [UIColor colorWithRed:255/255.0 green:200/255.0 blue:215/255.0 alpha:1.0].CGColor;
+            retryBtn.layer.shadowOffset = CGSizeMake(0,5);
+            retryBtn.layer.shadowOpacity = 1;
+            retryBtn.layer.shadowRadius = 20;
+            //点击
+            [retryBtn addTapActionTouch:^{
+                if (actionButtonBlock) {
+                    actionButtonBlock();
+                }
+            }];
+        }
     }
 }
 
 
-
-
-/**
- 移除空白页
-
- @param addViewSub 父视图
- */
-+(void)removeBlankUIWithaddSubview:(UIView*)addViewSub{
-    //（1）找到view
-    UIView * blankPagesFind = (UIView*)[addViewSub viewWithTag:19921125];
-    //移除
-    [blankPagesFind removeFromSuperview];
-}
-
-
-#pragma mark ========用法
-/*
- //空白页处理逻辑【封装】
- [BlankPagesView createAndRemoveBlankUIWithaddSubview:weakself.tableView AndScroller:weakself.tableView AndArray:weakself.dataSouce AndInfo:@"暂无数据" AndInfoTwo:@"" AndImageName:nil AndMinY:-1];
- 
- */
 @end
+
 
 
 
