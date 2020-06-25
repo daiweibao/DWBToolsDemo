@@ -79,6 +79,8 @@
 		3621B7572191B3320000BDFA /* HZPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3621B7522191B3320000BDFA /* HZPhotoBrowser.bundle */; };
 		3621B7582191B3320000BDFA /* HZPhotoBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3621B7532191B3320000BDFA /* HZPhotoBrowserView.m */; };
 		3621B7722192D2040000BDFA /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3621B7712192D2040000BDFA /* NSDictionary+NilSafe.m */; };
+		362248AA249DFE710008624F /* GroupShadowTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 362248A9249DFE710008624F /* GroupShadowTableView.m */; };
+		362248AD249DFEF60008624F /* BaseShadowContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 362248AB249DFEF60008624F /* BaseShadowContentView.m */; };
 		3624D41C244F1FFD003E9953 /* DWBAlretCXSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3624D41B244F1FFD003E9953 /* DWBAlretCXSheetView.m */; };
 		3624DB9823BB0CC00018C818 /* DWBCreateToolsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3624DB9723BB0CC00018C818 /* DWBCreateToolsButton.m */; };
 		362F7BA321489ECF00A8ECB1 /* UIButton+BigAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */; };
@@ -401,6 +403,10 @@
 		3621B7542191B3320000BDFA /* HZPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZPhotoBrowser.h; sourceTree = "<group>"; };
 		3621B7702192D2040000BDFA /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
 		3621B7712192D2040000BDFA /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
+		362248A8249DFE710008624F /* GroupShadowTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupShadowTableView.h; sourceTree = "<group>"; };
+		362248A9249DFE710008624F /* GroupShadowTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupShadowTableView.m; sourceTree = "<group>"; };
+		362248AB249DFEF60008624F /* BaseShadowContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseShadowContentView.m; sourceTree = "<group>"; };
+		362248AC249DFEF60008624F /* BaseShadowContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseShadowContentView.h; sourceTree = "<group>"; };
 		3624D41A244F1FFD003E9953 /* DWBAlretCXSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBAlretCXSheetView.h; sourceTree = "<group>"; };
 		3624D41B244F1FFD003E9953 /* DWBAlretCXSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBAlretCXSheetView.m; sourceTree = "<group>"; };
 		3624DB9623BB0CC00018C818 /* DWBCreateToolsButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBCreateToolsButton.h; sourceTree = "<group>"; };
@@ -1225,6 +1231,17 @@
 			path = "HZPhotoBrowser(下拖图片浏览器)";
 			sourceTree = "<group>";
 		};
+		362248A7249DFE710008624F /* GroupShadowTableView */ = {
+			isa = PBXGroup;
+			children = (
+				362248AC249DFEF60008624F /* BaseShadowContentView.h */,
+				362248AB249DFEF60008624F /* BaseShadowContentView.m */,
+				362248A8249DFE710008624F /* GroupShadowTableView.h */,
+				362248A9249DFE710008624F /* GroupShadowTableView.m */,
+			);
+			path = GroupShadowTableView;
+			sourceTree = "<group>";
+		};
 		362F7BA42148ACF000A8ECB1 /* ChatInputBoxEmoji */ = {
 			isa = PBXGroup;
 			children = (
@@ -1429,6 +1446,7 @@
 				36213F5221439DB700B00E2B /* DWBThreeLib(三方封装) */,
 				36E8617F21AFBF3300180D78 /* JXCategoryView(多个TableView上下左右可滚动) */,
 				363BFB3621A958CF00666F8A /* Tableview头部带联动 */,
+				362248A7249DFE710008624F /* GroupShadowTableView */,
 				36213F932143A6A500B00E2B /* Tabbar及根控制器 */,
 				365017CA222FA08300E4B622 /* DWBDevVC（功能临时入口） */,
 				361F62092230BC9F0029CF29 /* Home(首页) */,
@@ -2261,6 +2279,7 @@
 				3621B7722192D2040000BDFA /* NSDictionary+NilSafe.m in Sources */,
 				3624DB9823BB0CC00018C818 /* DWBCreateToolsButton.m in Sources */,
 				36213F2E21439B3700B00E2B /* JDStatusBarStyle.m in Sources */,
+				362248AD249DFEF60008624F /* BaseShadowContentView.m in Sources */,
 				361F61F2222FCF680029CF29 /* MacroSwiftHeader.swift in Sources */,
 				36E8620921AFBF3300180D78 /* JXCategoryImageCell.m in Sources */,
 				36213F6521439DB700B00E2B /* UIScrollView+EndRefresh.m in Sources */,
@@ -2347,6 +2366,7 @@
 				36213F7B21439FB300B00E2B /* HtmlWKWebView.m in Sources */,
 				36213FD02143A99D00B00E2B /* HopmeViewController.m in Sources */,
 				363BFB5E21A9634E00666F8A /* OneViewTableTableViewController.m in Sources */,
+				362248AA249DFE710008624F /* GroupShadowTableView.m in Sources */,
 				361F61F72230B9140029CF29 /* TBTabBar.m in Sources */,
 				36D37851213FEF7C00E768AF /* CopyLabel.m in Sources */,
 				36E861FD21AFBF3300180D78 /* JXCategoryIndicatorCell.m in Sources */,

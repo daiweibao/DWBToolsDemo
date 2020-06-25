@@ -16,6 +16,8 @@
 #import "AllTableviewSonController.h"//子控制器
 
 @interface DWBJXMainController ()<JXCategoryViewDelegate>
+//组头
+@property (nonatomic, strong) NSArray *titleArray;
 //存放控制器的数组
 @property (nonatomic, strong) NSMutableArray  *listVCArray;
 //组头高度
@@ -43,6 +45,8 @@
 
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.titleArray = @[@"已激活好友(10)",@"未激活好友(20)"];
     
     //组头高度
     self.categoryHeight = 50;

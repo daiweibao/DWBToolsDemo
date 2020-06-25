@@ -116,5 +116,9 @@ YYCategories这也是个牛逼的工具类：https://github.com/ibireme/YYCatego
 28、《JKCategories》一个有用的Objective-C类别（Category）集合，扩展iOS框架，如Foundation、UIKit、CoreData、QuartzCore、CoreLocation、MapKit等。https://github.com/shaojiankui/JKCategories
 
 
+29、《GroupShadowTableView》让group tableview每个section拥有阴影和圆角。https://github.com/YyItRoad/GroupShadowTableView
 
+30、《lottie-ios》播放UI给的动画，UI吧动画转成json文件。https://github.com/airbnb/lottie-ios
+
+31、《ReactiveObjC》强大的iOS开发监听库。https://github.com/ReactiveCocoa/ReactiveObjC
 
