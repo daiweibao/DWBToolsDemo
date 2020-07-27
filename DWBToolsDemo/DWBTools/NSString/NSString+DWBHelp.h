@@ -427,4 +427,10 @@
  */
 +(NSString *)getNumToWanStringWithStr:(NSString *)strNum;
 
+/// 网络请求接口参数转化成，字符参数拼接在接口后面。
+/// @param urlString 接口
+/// @param dic 参数
++ (NSString *)dictToURLWithUrlString:(NSString *)urlString AndDict:(NSDictionary *)dic;
+
+
 @end

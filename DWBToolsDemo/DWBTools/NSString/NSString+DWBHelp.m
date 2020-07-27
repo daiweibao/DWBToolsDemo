@@ -1296,6 +1296,30 @@
     }
     
 }
+//将字典转换成字符串 key=value&key=value&key=value
++ (NSString *)dictToURLWithUrlString:(NSString *)urlString AndDict:(NSDictionary *)dic
+{
+    NSMutableString *mString = [NSMutableString string];
+    NSArray * keys = [dic allKeys];
+    for (int i = 0; i < keys.count; i++) {
+        NSString *string;
+        if (i==0) {
+            //第一个参数拼接时加？,需要判断接口里是否已经包含？号
+            if ([urlString containsString:@"?"]) {
+                string = [NSString stringWithFormat:@"&%@=%@", keys[i], dic[keys[i]]];
+            }else{
+                string = [NSString stringWithFormat:@"?%@=%@", keys[i], dic[keys[i]]];
+            }
+        }else{
+            //后面的加&
+            string = [NSString stringWithFormat:@"&%@=%@", keys[i], dic[keys[i]]];
+        }
+        //拼接字符串
+        [mString appendString:string];
+    }
+    NSString *endUrlString = [NSString stringWithFormat:@"%@%@",urlString,mString];
+    return endUrlString;
+}
 
 
 

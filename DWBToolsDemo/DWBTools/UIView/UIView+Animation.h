@@ -56,4 +56,11 @@
 /// @param view 动画添加到哪一个控件上
 + (void)animationZoom:(UIView *)view;
 
+/// 缩小放大动画，一闪一闪的
+/// @param view 动画添加到哪一个控件上
++ (void)animationZoom:(UIView *)view
+             zoom_min:(CGFloat)min
+             zoom_max:(CGFloat)max
+             duration:(NSTimeInterval)duration;
+
 @end
