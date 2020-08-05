@@ -39,6 +39,9 @@ YYCategories这也是个牛逼的工具类：https://github.com/ibireme/YYCatego
 7、《SDCycleScrollView》普通轮播图，下载地址：https://github.com/gsdios/SDCycleScrollView，控件轮播《LBCycleScrollView》：https://github.com/i-LB/LBCycleScrollView
 
 
+7.1《TYCyclePagerView》卡片式3D轮播图，带动画可缩小，下载地址：https://github.com/12207480/TYCyclePagerView
+
+
 8、《iRate》去App Store评分。下载地址：https://github.com/nicklockwood/iRate
 
 
