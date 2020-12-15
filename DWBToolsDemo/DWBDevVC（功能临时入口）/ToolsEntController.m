@@ -40,6 +40,8 @@
 
 @property (nonatomic, strong) NSString *now;
 
+@property (nonatomic, copy) NSMutableArray *array;
+
 
 
 @end
@@ -59,7 +61,11 @@
     
     //刷新加载
     [self refresh];
-    
+    self.array = @[].mutableCopy;
+//    NSMutableArray *array = [NSMutableArray arrayWithObjects:@"1",@"2", nil];
+//    self.array = array;
+//
+//    [self.array removeObjectAtIndex:0];
   
    
 //    [self testGCD];
