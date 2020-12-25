@@ -19,6 +19,7 @@ PODS:
   - MJExtension (3.0.15.1)
   - MJRefresh (3.1.15.6)
   - ObjectMapper (3.4.2)
+  - RSSwizzle (0.1.0)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
@@ -61,6 +62,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - ObjectMapper (~> 3.4)
+  - RSSwizzle
   - SDWebImage
   - SDWebImage/GIF
   - SnapKit
@@ -81,6 +83,7 @@ SPEC REPOS:
     - MJExtension
     - MJRefresh
     - ObjectMapper
+    - RSSwizzle
     - SDWebImage
     - SnapKit
     - UMCCommon
@@ -97,6 +100,7 @@ SPEC CHECKSUMS:
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   MJRefresh: 0efa19656679d70a0f47cbe76e56c2271fe53a97
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  RSSwizzle: d561958f595028bfcef98c7d55c318b3878a61c6
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   UMCCommon: 4392868ac47ff1b101663106bb114ba616fabbad
@@ -106,6 +110,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 4d5ec58a9e4d9f875139e75a9165d35264761384
+PODFILE CHECKSUM: eba6cfcda9bb524164b233ba259297d5272181b3
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3

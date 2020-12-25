@@ -72,4 +72,7 @@ pod 'ObjectMapper', '~> 3.4'
 
 pod 'YYText'
 
+#钉钉消息
+pod 'RSSwizzle'
+
 end

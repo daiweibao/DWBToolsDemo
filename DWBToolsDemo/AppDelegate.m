@@ -9,7 +9,8 @@
 #import "AppDelegate.h"
 //tabbar
 #import "CXTabBarController.h"
-
+#import "CXDinDinEventMessageHelp.h"
+#import "AppCerashOpenHelp.h"
 @interface AppDelegate ()
 
 @end
@@ -24,6 +25,12 @@
     [self createWindow];
     
 //    AvoidCrash拦截崩溃三方库
+    
+    //AppDelegate里钉钉操作消息统计-初始化,AppDelegate里必须实现相应的代理方法(applicationDidBecomeActive、applicationDidEnterBackground)，否则会崩溃
+    [[CXDinDinEventMessageHelp sharedInstance] startTimer];
+    
+    ///AppDelegate里初始化崩溃类
+    [AppCerashOpenHelp sharedManager];
     
     return YES;
 }

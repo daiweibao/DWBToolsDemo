@@ -164,6 +164,8 @@
 		36A3BF2C23C5AFC400B93A7C /* NSTimer+addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A3BF2A23C5AFC400B93A7C /* NSTimer+addition.m */; };
 		36A73BB32182C05700B79AB0 /* NSDictionary+DeleteNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A73BB22182C05700B79AB0 /* NSDictionary+DeleteNull.m */; };
 		36A73BB92182C5F400B79AB0 /* NSArray+DWBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A73BB82182C5F400B79AB0 /* NSArray+DWBSafe.m */; };
+		36AB59692595911A00A5B885 /* CXDinDinEventMessageHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AB59682595911900A5B885 /* CXDinDinEventMessageHelp.m */; };
+		36AB5983259592EF00A5B885 /* AppCerashOpenHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AB5982259592EF00A5B885 /* AppCerashOpenHelp.m */; };
 		36AD30FF24455B7600FD2644 /* YYTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AD30FE24455B7600FD2644 /* YYTextViewController.m */; };
 		36AD31022445670B00FD2644 /* LabelHostWordsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AD31012445670B00FD2644 /* LabelHostWordsController.m */; };
 		36B52A2523BDCE23002F34A5 /* DWBSystemAlertSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B52A2423BDCE23002F34A5 /* DWBSystemAlertSheet.m */; };
@@ -557,6 +559,10 @@
 		36A73BB22182C05700B79AB0 /* NSDictionary+DeleteNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DeleteNull.m"; sourceTree = "<group>"; };
 		36A73BB72182C5F400B79AB0 /* NSArray+DWBSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DWBSafe.h"; sourceTree = "<group>"; };
 		36A73BB82182C5F400B79AB0 /* NSArray+DWBSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DWBSafe.m"; sourceTree = "<group>"; };
+		36AB59672595911900A5B885 /* CXDinDinEventMessageHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDinDinEventMessageHelp.h; sourceTree = "<group>"; };
+		36AB59682595911900A5B885 /* CXDinDinEventMessageHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDinDinEventMessageHelp.m; sourceTree = "<group>"; };
+		36AB5981259592EF00A5B885 /* AppCerashOpenHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCerashOpenHelp.h; sourceTree = "<group>"; };
+		36AB5982259592EF00A5B885 /* AppCerashOpenHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCerashOpenHelp.m; sourceTree = "<group>"; };
 		36AD30FD24455B7600FD2644 /* YYTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYTextViewController.h; sourceTree = "<group>"; };
 		36AD30FE24455B7600FD2644 /* YYTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYTextViewController.m; sourceTree = "<group>"; };
 		36AD31002445670A00FD2644 /* LabelHostWordsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabelHostWordsController.h; sourceTree = "<group>"; };
@@ -1510,6 +1516,8 @@
 			isa = PBXGroup;
 			children = (
 				368C3BE9213FA7A500C10B3E /* DWBHelpHeader.h */,
+				36AB5980259592EF00A5B885 /* AppCrashHelp */,
+				36AB59662595910E00A5B885 /* DinDinHelp */,
 				36446173218C2D6300B9E01E /* NSArray */,
 				360F0F8921805082006A7835 /* DataSafe(数据安全放崩溃) */,
 				368E69DA2140C576000EC79C /* UITextField */,
@@ -1601,6 +1609,24 @@
 				369D8960217198F800003425 /* DWBDeviceHelp.m */,
 			);
 			path = Device;
+			sourceTree = "<group>";
+		};
+		36AB59662595910E00A5B885 /* DinDinHelp */ = {
+			isa = PBXGroup;
+			children = (
+				36AB59672595911900A5B885 /* CXDinDinEventMessageHelp.h */,
+				36AB59682595911900A5B885 /* CXDinDinEventMessageHelp.m */,
+			);
+			path = DinDinHelp;
+			sourceTree = "<group>";
+		};
+		36AB5980259592EF00A5B885 /* AppCrashHelp */ = {
+			isa = PBXGroup;
+			children = (
+				36AB5981259592EF00A5B885 /* AppCerashOpenHelp.h */,
+				36AB5982259592EF00A5B885 /* AppCerashOpenHelp.m */,
+			);
+			path = AppCrashHelp;
 			sourceTree = "<group>";
 		};
 		36D3784B213FEF3900E768AF /* UIView */ = {
@@ -2243,6 +2269,7 @@
 				368E69D22140C27D000EC79C /* UIView+Extension.m in Sources */,
 				367D99712248B91B001AB399 /* FoundViewController.swift in Sources */,
 				3634E5AB217D5E89002B43DD /* DWBAPPManager.m in Sources */,
+				36AB59692595911A00A5B885 /* CXDinDinEventMessageHelp.m in Sources */,
 				363BFB5521A95B4900666F8A /* RedPeopleThemController.m in Sources */,
 				368C39FA213F67C800C10B3E /* ViewController.m in Sources */,
 				362F7BC72148AF2400A8ECB1 /* ZXPUnicode.m in Sources */,
@@ -2419,6 +2446,7 @@
 				36A73BB32182C05700B79AB0 /* NSDictionary+DeleteNull.m in Sources */,
 				36DE4FED218D96D200C3FE40 /* NSObject+DWBKVOCrash.m in Sources */,
 				36E8621C21AFBF3300180D78 /* DWBJXCategoryMyCell.m in Sources */,
+				36AB5983259592EF00A5B885 /* AppCerashOpenHelp.m in Sources */,
 				36EEDCA821420794000CBEEB /* UIImage+Extend.m in Sources */,
 				36AD31022445670B00FD2644 /* LabelHostWordsController.m in Sources */,
 				362F7BA321489ECF00A8ECB1 /* UIButton+BigAction.m in Sources */,
