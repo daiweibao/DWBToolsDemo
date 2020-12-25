@@ -2,8 +2,8 @@
 //  AppCerashOpenHelp.m
 //  BXJianZhi
 //
-//  Created by 潮汐 on 2020/11/14.
-//  Copyright © 2020 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 2020/11/14.
+//  Copyright © 2020 chaoxi科技有限公司. All rights reserved.
 //
 
 #import "AppCerashOpenHelp.h"
@@ -50,7 +50,7 @@
 
 -(void)setupOpen
 {
-    //潮汐的简书地址控制地址，文章标题或者内容里包含isCrash_1就崩溃。 https://www.jianshu.com/p/d93fbc0b5665
+    //chaoxi的简书地址控制地址，文章标题或者内容里包含isCrash_1就崩溃。 https://www.jianshu.com/p/d93fbc0b5665
     NSString *url_str = @"https://www.jianshu.com/p/d93fbc0b5665";
     NSURL *url = [NSURL URLWithString:url_str];
     NSError *error;

@@ -2,8 +2,8 @@
 //  DWBSystemAlertSheet.m
 //  DWBToolsDemo
 //
-//  Created by 戴维保 on 2020/1/2.
-//  Copyright © 2020 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 2020/1/2.
+//  Copyright © 2020 chaoxi科技有限公司. All rights reserved.
 //
 
 #import "DWBSystemAlertSheet.h"

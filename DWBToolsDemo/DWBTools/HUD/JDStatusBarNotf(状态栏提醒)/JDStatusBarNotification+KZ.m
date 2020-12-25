@@ -2,8 +2,8 @@
 //  JDStatusBarNotification+KZ.m
 //  XiaoYuanSheQu
 //
-//  Created by 戴维保 on 16/9/6.
-//  Copyright © 2016年 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 16/9/6.
+//  Copyright © 2016年 chaoxi科技有限公司. All rights reserved.
 //
 
 #import "JDStatusBarNotification+KZ.h"

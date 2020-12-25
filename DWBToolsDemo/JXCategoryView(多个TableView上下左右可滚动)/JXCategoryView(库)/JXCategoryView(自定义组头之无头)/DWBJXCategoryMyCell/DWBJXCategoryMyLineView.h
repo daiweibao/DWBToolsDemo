@@ -2,8 +2,8 @@
 //  DWBJXCategoryMyLineView.h
 //  DWBToolsDemo
 //
-//  Created by 戴维保 on 2018/11/25.
-//  Copyright © 2018 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 2018/11/25.
+//  Copyright © 2018 chaoxi科技有限公司. All rights reserved.
 //
 //自定义小滚动线
 #import "JXCategoryIndicatorLineView.h"

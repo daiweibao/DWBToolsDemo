@@ -2,8 +2,8 @@
 //  UILabel+Click.h
 //  DWBToolsDemo
 //
-//  Created by 戴维保 on 2018/9/12.
-//  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 2018/9/12.
+//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
 //
 //label点击指定文字，并回调点击方法
 #import <UIKit/UIKit.h>

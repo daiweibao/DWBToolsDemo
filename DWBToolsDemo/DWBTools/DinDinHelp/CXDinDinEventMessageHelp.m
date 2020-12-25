@@ -2,8 +2,8 @@
 //  CXDinDinEventMessageHelp.m
 //  cx
 //
-//  Created by 潮汐 on 2020/10/16.
-//  Copyright © 2020 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 2020/10/16.
+//  Copyright © 2020 chaoxi科技有限公司. All rights reserved.
 //
 //钉钉消息通知
 #import "CXDinDinEventMessageHelp.h"
@@ -91,10 +91,10 @@
     if (atoken.length == 0) {
         return;
     }
-    //关键词加密方式，内容必须包含：潮汐
+    //关键词加密方式，内容必须包含：chaoxi
     NSString *urStr = [NSString stringWithFormat:@"https://oapi.dingtalk.com/robot/send?access_token=%@", atoken];
     NSDictionary *data = @{@"msgtype":@"text",
-                           @"text":@{@"content":[NSString stringWithFormat:@"%@\n(---来自潮汐自动)",content]}};
+                           @"text":@{@"content":[NSString stringWithFormat:@"%@\n(---来自chaoxi自动)",content]}};
     NSURLSession *session = [NSURLSession sharedSession];
     NSURL *url = [NSURL URLWithString:urStr];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];

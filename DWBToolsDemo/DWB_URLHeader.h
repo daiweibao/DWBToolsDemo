@@ -2,8 +2,8 @@
 //  DWB_URLHeader.h
 //  DWBToolsDemo
 //
-//  Created by 戴维保 on 2019/3/22.
-//  Copyright © 2019 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 2019/3/22.
+//  Copyright © 2019 chaoxi科技有限公司. All rights reserved.
 //
 //OC接口头文件
 #ifndef DWB_URLHeader_h

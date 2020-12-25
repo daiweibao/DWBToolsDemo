@@ -2,8 +2,8 @@
 //  CXShowInfoView.h
 //  AiHenDeChaoXi
 //
-//  Created by 戴维保 on 2018/4/20.
-//  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 2018/4/20.
+//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
 //
 
 //无按钮提示框，自动消失

@@ -2,8 +2,8 @@
 //  BlankPagesTwoView.m
 //  miniVideo
 //
-//  Created by 戴维保 on 2020/2/12.
-//  Copyright © 2020 北京赢响国际科技有限公司. All rights reserved.
+//  Created by chaoxi on 2020/2/12.
+//  Copyright © 2020 北京chaoxi科技有限公司. All rights reserved.
 //
 
 #import "BlankPagesTwoView.h"

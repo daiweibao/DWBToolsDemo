@@ -2,8 +2,8 @@
 //  VideoDetailsController.h
 //  DWBToolsDemo
 //
-//  Created by 戴维保 on 2019/3/25.
-//  Copyright © 2019 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 2019/3/25.
+//  Copyright © 2019 chaoxi科技有限公司. All rights reserved.
 //
 //视频详情控制器--横屏
 #import "CXRootViewController.h"

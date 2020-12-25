@@ -2,8 +2,8 @@
 //  UITextField+WJ.h
 //  SearchDemo
 //
-//  Created by 戴维保 on 15/9/22.
-//  Copyright © 2015年 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 15/9/22.
+//  Copyright © 2015年 chaoxi科技有限公司. All rights reserved.
 //
 //UITextField监听键盘删除键,textField内容为空也能监听到，系统的内容为空是监听不道的（2018年5月15日）
 #import <UIKit/UIKit.h>

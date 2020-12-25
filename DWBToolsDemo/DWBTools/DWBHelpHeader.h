@@ -2,8 +2,8 @@
 //  DWBHelpHeader.h
 //  ZuiMeiXinNiang
 //
-//  Created by 戴维保 on 2017/8/24.
-//  Copyright © 2017年 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 2017/8/24.
+//  Copyright © 2017年 chaoxi科技有限公司. All rights reserved.
 //
 
 //这里是类别的头文件和和所有+宏定义
@@ -166,7 +166,7 @@ static inline UIColor * RGBA_COLOR_inline(CGFloat R,CGFloat G,CGFloat B,CGFloat 
 }
 
 static inline NSString * myMane(){
-    return @"潮汐";
+    return @"chaoxi";
 }
 
 #pragma mark ============ 宏定义=====================
@@ -300,7 +300,7 @@ _Pragma("clang diagnostic pop") \
 #define GET_BundleId [[NSBundle mainBundle] bundleIdentifier]
 //获取APP名字
 #define GET_APPName [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
-//手机别名：用户定义的名称（如爱恨的潮汐）
+//手机别名：用户定义的名称（如爱恨的chaoxi）
 #define GET_userPhoneName [[UIDevice currentDevice] name]
 
 

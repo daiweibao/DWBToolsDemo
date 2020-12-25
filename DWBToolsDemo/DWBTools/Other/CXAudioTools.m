@@ -2,8 +2,8 @@
 //  CXAudioTools.m
 //  AiHenDeChaoXi
 //
-//  Created by 戴维保 on 2018/4/9.
-//  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 2018/4/9.
+//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
 //
   //必须导入这个框架，否则真机上无效：AudioToolBox.framework
 #import "CXAudioTools.h"

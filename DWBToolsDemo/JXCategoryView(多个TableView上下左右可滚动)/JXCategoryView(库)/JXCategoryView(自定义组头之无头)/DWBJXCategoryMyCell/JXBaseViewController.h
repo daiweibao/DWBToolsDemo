@@ -2,8 +2,8 @@
 //  JXBaseViewController.h
 //  DWBToolsDemo
 //
-//  Created by 戴维保 on 2018/11/28.
-//  Copyright © 2018 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 2018/11/28.
+//  Copyright © 2018 chaoxi科技有限公司. All rights reserved.
 //
 //无组头父类
 #import <UIKit/UIKit.h>

@@ -2,8 +2,8 @@
 //  SDDrowNoticeView.h
 //  XiaoYuanSheQu
 //
-//  Created by 戴维保 on 2017/9/28.
-//  Copyright © 2017年 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 2017/9/28.
+//  Copyright © 2017年 chaoxi科技有限公司. All rights reserved.
 //
 
 //

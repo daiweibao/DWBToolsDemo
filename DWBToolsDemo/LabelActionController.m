@@ -2,8 +2,8 @@
 //  LabelActionController.m
 //  DWBToolsDemo
 //
-//  Created by 戴维保 on 2018/9/12.
-//  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 2018/9/12.
+//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
 //
 
 #import "LabelActionController.h"
@@ -30,7 +30,7 @@
     
     NSString * string1 = @"雪儿";
      NSString * string2 = nil;
-     NSString * string3 = @"爱恨的潮汐";
+     NSString * string3 = @"爱恨的chaoxi";
      NSString * string4 = @"说到：";
      NSString * string5 = @"你在干么呢?";
     

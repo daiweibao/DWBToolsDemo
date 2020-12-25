@@ -2,7 +2,7 @@
 //  NSDictionary+NilSafe.m
 //  NSDictionary-NilSafe
 //
-//  Created by 戴维保 on 6/22/16.
+//  Created by chaoxi on 6/22/16.
 //  Copyright © 2016 Glow Inc. All rights reserved.
 //
 

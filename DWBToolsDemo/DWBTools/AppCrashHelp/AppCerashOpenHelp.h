@@ -2,8 +2,8 @@
 //  AppCerashOpenHelp.h
 //  BXJianZhi
 //
-//  Created by 潮汐 on 2020/11/14.
-//  Copyright © 2020 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 2020/11/14.
+//  Copyright © 2020 chaoxi科技有限公司. All rights reserved.
 //
 ///掌控开关
 #import <Foundation/Foundation.h>

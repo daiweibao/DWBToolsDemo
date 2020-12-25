@@ -2,8 +2,8 @@
 //  GetChatTime.m
 //  GongXiangJie
 //
-//  Created by 戴维保 on 2017/7/26.
-//  Copyright © 2017年 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 2017/7/26.
+//  Copyright © 2017年 chaoxi科技有限公司. All rights reserved.
 //
 
 #import "GetChatTime.h"

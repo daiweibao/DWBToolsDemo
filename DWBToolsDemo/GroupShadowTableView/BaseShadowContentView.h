@@ -3,7 +3,7 @@
 //  yingStep
 //
 //  Created by 你好 on 2020/6/11.
-//  Copyright © 2020 北京赢响国际科技有限公司. All rights reserved.
+//  Copyright © 2020 北京chaoxi科技有限公司. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

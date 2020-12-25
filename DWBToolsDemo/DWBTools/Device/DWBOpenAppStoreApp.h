@@ -2,8 +2,8 @@
 //  DWBOpenAppStoreApp.h
 //  miniVideo
 //
-//  Created by 戴维保 on 2020/4/27.
-//  Copyright © 2020 北京赢响国际科技有限公司. All rights reserved.
+//  Created by chaoxi on 2020/4/27.
+//  Copyright © 2020 北京chaoxi科技有限公司. All rights reserved.
 //
 //内部打开AppStore应用
 #import <Foundation/Foundation.h>

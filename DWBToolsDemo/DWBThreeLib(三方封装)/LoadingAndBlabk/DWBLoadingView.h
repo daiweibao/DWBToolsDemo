@@ -2,8 +2,8 @@
 //  DWBLoadingView.h
 //  XiaoYuanSheQu
 //
-//  Created by 戴维保 on 16/9/12.
-//  Copyright © 2016年 潮汐科技有限公司. All rights reserved.
+//  Created by chaoxi on 16/9/12.
+//  Copyright © 2016年 chaoxi科技有限公司. All rights reserved.
 //
 //封装的加载中和加载失败网络提示
 #import <UIKit/UIKit.h>
