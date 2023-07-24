@@ -2,8 +2,8 @@
 //  HtmlWKWebView.m
 //  XiaoYuanSheQu
 //
-//  Created by chaoxi on 2017/3/31.
-//  Copyright © 2017年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2017/3/31.
+//  Copyright © 2017年 zmxn. All rights reserved.
 //
 
 #import "HtmlWKWebView.h"
@@ -469,28 +469,6 @@
     return nil;
 }
 
-
-// 类似 UIWebView 的 -webView: shouldStartLoadWithRequest: navigationType:
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    //点击内容里面的网址，如果是跳转一个新页面
-    if (navigationAction.targetFrame == nil) {
-        //在当前页面打开URL
-        //        [webView loadRequest:navigationAction.request];
-        
-        //打开新的WebView控制器--在App内部
-        NSString * webUrlStr = navigationAction.request.URL.absoluteString;
-        
-        //        YZTitleWebViewController * vc = [[YZTitleWebViewController alloc] init];
-        //        vc.url = webUrlStr;//网址
-        //        [[UIViewController getTopWindowController].navigationController pushViewController:vc animated:YES];
-        
-        //在App外部浏览器打开
-        [NSString openOutUrl:webUrlStr];
-        
-    }
-
-    decisionHandler(WKNavigationActionPolicyAllow);
-}
 
 
 @end

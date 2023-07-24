@@ -2,8 +2,8 @@
 //  UIView+Help.m
 //  GongXiangJie
 //
-//  Created by chaoxi on 2017/6/27.
-//  Copyright © 2017年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2017/6/27.
+//  Copyright © 2017年 北京嗅美科技有限公司. All rights reserved.
 //
 
 #import "UIView+Help.h"
@@ -237,34 +237,6 @@
     
 }
 
-/// 设置指定边角阴影
-/// @param myView 要设置的view
-/// @param radius 控件圆角大小
-/// @param radiusType 圆角方向
-+(void)setupShadowView:(UIView*)myView Radius:(CGFloat)radius AndRadiusType:(DWBRadiusType)radiusType{
-    //    阴影的颜色
-    myView.layer.shadowColor = [UIColor colorWithRed:224/255.0 green:224/255.0 blue:224/255.0 alpha:0.32].CGColor;;
-    //    阴影的透明度
-    myView.layer.shadowOpacity = 1.0f;
-    //    阴影的圆角
-    myView.layer.shadowRadius = 10.0f;//设置阴影半径能扩大阴影面积
-    //    阴影的偏移量，设置成CGSizeMake(0,0);是4边都有阴影
-    
-    if (radiusType==RadiusType_Top) {
-        myView.layer.shadowOffset = CGSizeMake(0,-7);//
-        //设置指定角圆角
-        [myView setup_Radius:radius corner:UIRectCornerTopLeft|UIRectCornerTopRight];
-    }else if (radiusType==RadiusType_bottom){
-        myView.layer.shadowOffset = CGSizeMake(0,7);//5往下偏
-        //设置指定角圆角
-        [myView setup_Radius:radius corner:UIRectCornerBottomRight|UIRectCornerBottomLeft];
-    }else{
-        myView.layer.shadowOffset = CGSizeMake(0,0);//
-        //设置指定角圆角
-        [myView setup_Radius:radius corner:UIRectCornerTopLeft|UIRectCornerTopRight|UIRectCornerBottomRight|UIRectCornerBottomLeft];
-    }
-}
-
 
 /**
  用UIView创建一条虚线
@@ -374,55 +346,6 @@
     
 }
 
-/// 设置指定圆角【指定边角圆角】
-/// @param radius 圆角大小
-/// @param corner 圆角指定角
-- (void)setup_Radius:(CGFloat)radius corner:(UIRectCorner)corner {
-    if (@available(iOS 11.0, *)) {
-        self.layer.cornerRadius = radius;
-        self.layer.maskedCorners = (CACornerMask)corner;
-    } else {
-        UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corner cornerRadii:CGSizeMake(radius, radius)];
-        CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-        maskLayer.frame = self.bounds;
-        maskLayer.path = path.CGPath;
-        self.layer.mask = maskLayer;
-    }
-    
-    //用法示例
-//    [self.headerViewTop setup_Radius:10.0f corner:UIRectCornerBottomRight|UIRectCornerBottomLeft];
-}
-
-/// 绘制镂空的矩形、圆形等
-/// @param view 父View
-/// @param rect 镂空的坐标
-/// @param radius 圆角
-+ (void)drawShapeJXRectWith:(UIView *)view AndCGRect:(CGRect)rect AndCornerRadius:(CGFloat )radius {
-    //贝塞尔曲线 画一个带有圆角的矩形
-    UIBezierPath *bpath = [UIBezierPath bezierPathWithRoundedRect:view.frame cornerRadius:0];
-    //绘制矩形
-    [bpath appendPath:[[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:radius] bezierPathByReversingPath]];
-    //画圆或者添加其他图形
-//    [bpath appendPath:[UIBezierPath bezierPathWithArcCenter:view.center radius:100 startAngle:0 endAngle:2*M_PI clockwise:NO]];
-    
-    //创建一个CAShapeLayer 图层
-    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-    shapeLayer.path = bpath.CGPath;
-    //添加图层蒙板
-    view.layer.mask = shapeLayer;
-    
-    /*
-     //用法
-    //创建一个View
-       UIView *maskView = [[UIView alloc] init];
-       maskView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-       maskView.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.7];
-       //绘制镂空矩形
-       [UIView drawShapeJXRectWith:maskView AndCGRect:CGRectMake(SCREEN_WIDTH-70, 45, 55, 235) AndCornerRadius:17.5];
-       [self.view addSubview:maskView];
-     
-     */
-}
 
 
 

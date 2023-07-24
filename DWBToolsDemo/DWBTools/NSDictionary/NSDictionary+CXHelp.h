@@ -2,8 +2,8 @@
 //  NSDictionary+CXHelp.h
 //  AiHenDeChaoXi
 //
-//  Created by chaoxi on 2018/7/19.
-//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/7/19.
+//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -61,10 +61,5 @@
  @param dict 字典数据
  */
 + (void)NSLogDictModelPropertyWithDict:(NSDictionary *)dict;
-
-
-/// 判断字典是否为空
-/// @param dict YES为空，NO不为空
-+(BOOL)isNullDict:(NSDictionary *)dict;
 
 @end

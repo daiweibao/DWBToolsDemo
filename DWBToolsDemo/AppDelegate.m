@@ -2,15 +2,15 @@
 //  AppDelegate.m
 //  DWBToolsDemo
 //
-//  Created by chaoxi on 2018/9/5.
-//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/9/5.
+//  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
 //
 
 #import "AppDelegate.h"
 //tabbar
 #import "CXTabBarController.h"
-#import "CXDinDinEventMessageHelp.h"
-#import "AppCerashOpenHelp.h"
+#import "HopmeViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -26,12 +26,6 @@
     
 //    AvoidCrash拦截崩溃三方库
     
-    //AppDelegate里钉钉操作消息统计-初始化,AppDelegate里必须实现相应的代理方法(applicationDidBecomeActive、applicationDidEnterBackground)，否则会崩溃
-    [[CXDinDinEventMessageHelp sharedInstance] startTimer];
-    
-    ///AppDelegate里初始化崩溃类
-    [AppCerashOpenHelp sharedManager];
-    
     return YES;
 }
 
@@ -46,34 +40,12 @@
     [self.window makeKeyAndVisible ];
     
     //创建tabbar界面
-    self.window.rootViewController = [[CXTabBarController alloc]init];
-}
-
-
-
-#pragma mark =============设置某个界面只支持视频横屏 S======================
-//此方法会在设备横竖屏变化的时候调用
-- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
-{
+//    self.window.rootViewController = [[CXTabBarController alloc]init];
     
-    //   NSLog(@"方向  =============   %ld", _allowRotate);
-    if (_allowRotate == 1) {
-        return UIInterfaceOrientationMaskAll;
-    }else{
-        return (UIInterfaceOrientationMaskPortrait);
-    }
+    self.window.rootViewController = [[HopmeViewController alloc]init];
+       
 }
 
-
-// 返回是否支持设备自动旋转
-- (BOOL)shouldAutorotate
-{
-    if (_allowRotate == 1) {
-        return YES;
-    }
-    return NO;
-}
-#pragma mark =============设置某个界面只支持视频横屏 E======================
 
 
 

@@ -2,8 +2,8 @@
 //  NSString+QRCode.m
 //  demo
 //
-//  Created by chaoxi on 2017/4/10.
-//  Copyright © 2017年 chaoxi科技有限公司. All rights reserved.
+//  Created by gaofu on 2017/4/10.
+//  Copyright © 2017年 siruijk. All rights reserved.
 //
 //二维码相关图片类
 #import "NSString+QRCode.h"
@@ -119,6 +119,7 @@
 {
     CIImage* ciImage = [self generateCIImageWithSize:size color:color bgColor:bgColor];
     UIImage *image = [UIImage imageWithCIImage:ciImage];
+    if (!logo) return image;
     if (!image) return nil;
     
     CGFloat logoWidth = image.size.width/4;

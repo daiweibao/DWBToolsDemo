@@ -3,7 +3,7 @@
 //  ZuiMeiXinNiang
 //
 //  Created by 爱淘包 on 2016/11/2.
-//  Copyright © 2016年 chaoxi科技有限公司. All rights reserved.
+//  Copyright © 2016年 zmxn. All rights reserved.
 //
 
 #import "RedPeopleGoodsController.h"

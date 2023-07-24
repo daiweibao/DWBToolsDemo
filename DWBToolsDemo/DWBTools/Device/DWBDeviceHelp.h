@@ -2,8 +2,8 @@
 //  DWBDeviceHelp.h
 //  DouZhuan
 //
-//  Created by chaoxi on 2018/10/13.
-//  Copyright © 2018 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/10/13.
+//  Copyright © 2018 品创时代互联网科技（北京）有限公司. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -48,18 +48,6 @@ NS_ASSUME_NONNULL_BEGIN
  @return image
  */
 + (UIImage *)getTheLaunchImage;
-
-/**
- 通过App协议打开第三方APP，YES能打开，NO不能打开
- 
- @param urlSchemes APP的协议
- @return 结果
- */
-+(BOOL)openThreeAPPWithCompleteWithUrlSchemes:(NSString *)urlSchemes;
-
-///iphone广告Id传给后台【IDFA】
-+ (NSString *)getAdSafeIdIDFA;
-
 
 @end
 

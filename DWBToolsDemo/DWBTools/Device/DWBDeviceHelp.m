@@ -2,14 +2,12 @@
 //  DWBDeviceHelp.m
 //  DouZhuan
 //
-//  Created by chaoxi on 2018/10/13.
-//  Copyright © 2018 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/10/13.
+//  Copyright © 2018 品创时代互联网科技（北京）有限公司. All rights reserved.
 //
 
 #import "DWBDeviceHelp.h"
 #import <CoreMotion/CoreMotion.h>//陀螺仪
-#import <objc/runtime.h>
-#import <AdSupport/AdSupport.h>
 @implementation DWBDeviceHelp
 //判断是否有摄像头(判断是否是模拟器)范湖YES是模拟器，NO是真机
 +(BOOL)isSimulator{
@@ -136,38 +134,5 @@
     
 }
 
-
-#pragma mark ============通过bundleId打开APP S======
-
-/**
- 通过App协议打开第三方APP，YES能打开，NO不能打开
- 
- @param urlSchemes APP的协议
- @return 结果
- */
-+(BOOL)openThreeAPPWithCompleteWithUrlSchemes:(NSString *)urlSchemes{
-    //打开app
-    BOOL isCanOpenApp = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@://",urlSchemes]]];
-    
-    //    if (isCanOpenApp==YES) {
-    //        NSLog(@"能打开APP");
-    //    }else{
-    //        NSLog(@"不能打开APP");
-    //    }
-    
-    return isCanOpenApp;
-}
-
-#pragma mark ============通过bundleId打开APP E======
-
-///iphone广告Id传给后台【IDFA】
-+ (NSString *)getAdSafeIdIDFA{
-    //IDFA==获取手机广告ID要导入头文件，只要不重置系统都不会变（#import <AdSupport/AdSupport.h>）
-    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
-    if ([NSString isNULL:adId]) {//判空
-        return @"";
-    }
-    return adId;
-}
 
 @end

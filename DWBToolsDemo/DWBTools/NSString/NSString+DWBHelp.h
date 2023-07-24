@@ -2,8 +2,8 @@
 //  NSString+DWBHelp.h
 //  DWBToolsDemo
 //
-//  Created by chaoxi on 2018/9/5.
-//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/9/5.
+//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -148,10 +148,6 @@
  */
 +(double)getNowTime_Ms;
 
-/// 任意两个日期的天数差
-/// @param beginDate 开始日期
-/// @param endDate 结束日志
-+ (NSInteger)getTheCountOfTwoDaysWithBeginDate:(NSString *)beginDate endDate:(NSString *)endDate;
 /**
  *  已知开始时间和结束时间的毫秒，计算开始、进行中、结束状态
  *
@@ -337,15 +333,6 @@
  */
 +(NSString *)randomStringWithLength:(NSInteger)len;
 /**
- 获取一个随机整数，范围在[from,to），包括from，不包括to
- 
- @param from 最小值，包含自己
- @param to 最大值，不包含自己
- @return 结果
- */
-+(int)getRandomNumber:(int)from to:(int)to;
-
-/**
  毫秒转化成天、时、分
  
  @param time 毫秒
@@ -384,20 +371,20 @@
 +(void)copyCXString:(NSString *)string;
 
 /**
- 格式化金额，每隔三位一个逗号显示，保留两位小数，必须传入string类型
+ 格式化金额，每隔三位一个逗号显示，保留两位小数，必须传入double类型，不能传入字符串类型
  
- @param stringMoney 传入的金额,String类型
+ @param doubleMoney 传入的金额,double类型
  @return 返回格式化后的金额
  */
-+(NSString *)getMoneyAddDouHaoWithMoneyStr:(NSString *)stringMoney;
++(NSString *)getMoneyAddDouHaoWithDouble:(double)doubleMoney;
 
 /**
- 格式化数字，每隔三位一个逗号显示，如果后面没小数就不会显示小数
+ 格式化数字，每隔三位一个逗号显示，无小数点，如果后面没小数就不会显示小数
  
- @param stringMoney 传入的金额
+ @param doubleMoney 传入的金额,double类型
  @return 返回格式化后的金额
  */
-+(NSString *)getMoneyAddDouHaoNOPointWithMoneyStr:(NSString *)stringMoney;
++(NSString *)getMoneyAddDouHaoNOPointWithDouble:(double)doubleMoney;
 
 /**
  判断是否为有效网址,YES代表是
@@ -407,30 +394,6 @@
  */
 + (BOOL)isHttpStringWithWeb:(NSString *)infor;
 
-/**
- 清除WKWeb缓存，否则H5界面跟新，这边不会更新
- */
-+(void)remoWKWebViewCookies;
-
-/**
- 判断是否是今天第一次。一天一次
- 
- @param eventId 事件ID
- @return 返回YES,代表是今天第一次，NO不是
- */
-+(BOOL)isToadyFirstWithEventId:(NSString *)eventId;
-
-/**
- 传入数据，返回带万单位的字符串
- 
- @param strNum 纯数据
- */
-+(NSString *)getNumToWanStringWithStr:(NSString *)strNum;
-
-/// 网络请求接口参数转化成，字符参数拼接在接口后面。
-/// @param urlString 接口
-/// @param dic 参数
-+ (NSString *)dictToURLWithUrlString:(NSString *)urlString AndDict:(NSDictionary *)dic;
 
 
 @end

@@ -2,8 +2,8 @@
 //  AlertViewTool.h
 //  AlertActiionDemo
 //
-//  Created by chaoxi on 16/8/30.
-//  Copyright © 2016年 chaoxi科技有限公司. All rights reserved.
+//  Created by Max on 16/8/30.
+//  Copyright © 2016年 maxzhang. All rights reserved.
 //
 //弹窗提示类
 #import <Foundation/Foundation.h>

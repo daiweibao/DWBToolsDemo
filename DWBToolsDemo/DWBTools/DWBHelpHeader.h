@@ -2,8 +2,8 @@
 //  DWBHelpHeader.h
 //  ZuiMeiXinNiang
 //
-//  Created by chaoxi on 2017/8/24.
-//  Copyright © 2017年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2017/8/24.
+//  Copyright © 2017年 北京嗅美科技有限公司. All rights reserved.
 //
 
 //这里是类别的头文件和和所有+宏定义
@@ -20,10 +20,8 @@
 
 //iOS项目打包除去NSLog，Edit Scheme –>info—> Building Config ->release/debug 选择 release 时 （包括运行）所有的输出都不见了
 #ifdef DEBUG
-//NSLog格式化打印，打印出在那个l控制器，哪一行:NSLog
-//#define NSLog(fmt, ...) NSLog((@"%s [第%d行] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
-//printf方式打印，防止OS_ACTIVITY_MODE = Disable 屏蔽后真机不打印
-#define NSLog(format,...) printf("%s [第%d行]: %s\n",__PRETTY_FUNCTION__, __LINE__, [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String])
+//NSLog格式化打印，打印出在那个l控制器，哪一行
+#define NSLog(fmt, ...) NSLog((@"%s [第%d行] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #else
 #define NSLog(...)
 #endif
@@ -85,7 +83,7 @@
 #import "UIImage+PlayGif.h"
 #import "UIImage+Rotate.h"
 //布局
-#import "Masonry.h"
+#import <Masonry.h>
 //svp
 #import "SVProgressHUD+KZ.h"
 //MBP
@@ -102,13 +100,6 @@
 #import "DWBAFNetworking.h"
 //
 #import "UIViewController+CXHelp.h"
-//数组
-#import "NSArray+DWBHelp.h"
-//控制器
-#import "UIViewController+DWControllerHelp.h"
-//安全数据处理
-#import "DWBDataSafeHelp.h"
-
 
 #pragma mark ============ 工具类相互依赖的头文件 E=====================
 
@@ -130,7 +121,7 @@
 
 //Appstore地址==1404123635(王府管家)  //只需要修改后面的App-Id即可
 #define AppstoreId  @"1404123635"
-#define AppstoreUrl  [NSString stringWithFormat:@"https://apps.apple.com/cn/app/id%@",AppstoreId]
+#define AppstoreUrl  [NSString stringWithFormat:@"https://itunes.apple.com/cn/app/id%@",AppstoreId]
 
 
 #pragma mark ========内联函数 inline替代宏定义 ===============
@@ -166,7 +157,7 @@ static inline UIColor * RGBA_COLOR_inline(CGFloat R,CGFloat G,CGFloat B,CGFloat 
 }
 
 static inline NSString * myMane(){
-    return @"chaoxi";
+    return @"潮汐";
 }
 
 #pragma mark ============ 宏定义=====================
@@ -184,29 +175,8 @@ static inline NSString * myMane(){
 //以iphone为设计稿：375 * 667 是UI设计稿的宽高，可自行根据UI修改【一般用在弹窗适配，比如签到弹窗必须在一个界面显示全，此方法不适合ipad】
 #define dwb_pt(l) l * [UIScreen mainScreen].bounds.size.width / 375.0 //做适配的界面的宽、高、字号都用它。
 
-
-//【iphoneX宏定义】判断是否为 iPhoneXS Max，iPhoneXS，iPhoneXR，iPhoneX
-//iPhoneX和iPhoneXS
-#define XH_IPHONEX  ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
-//iPhoneXR
-#define XH_IPHONEXR ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
-//iPhoneXR-模拟器（特殊）
-#define XH_IPHONEXR_Simulator [[UIScreen mainScreen] bounds].size.width == 375.0f && [[UIScreen mainScreen] bounds].size.height == 812.0f
-// iPhoneXS Max
-#define XH_IPHONEXSMAX    ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
-//最终判断，依赖上面宏定义
-#define iPhoneX ((XH_IPHONEX || XH_IPHONEXR || XH_IPHONEXSMAX || XH_IPHONEXR_Simulator) ? YES : NO)
-
-//static inline BOOL isIPhoneXSeries() {
-//    if (@available(iOS 11.0, *)) {
-//        UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
-//        if (mainWindow.safeAreaInsets.bottom > 0.0) {
-//            return YES;
-//        }
-//    }
-//    return NO;
-//}
-
+//【iphoneX宏定义】判断是否为 iPhoneXS  Max，iPhoneXS，iPhoneXR，iPhoneX,我是根据 iPhoneXS Max，iPhoneXS，iPhoneXR，iPhoneX 的宽高比近似做的判断。
+#define iPhoneX (((int)((SCREEN_HEIGHT/SCREEN_WIDTH)*100) == 216)?YES:NO)
 
 // 适配iPhone X 状态栏高度
 #define  MC_StatusBarHeight      (iPhoneX ? 44.f : 20.f)
@@ -259,8 +229,7 @@ _Pragma("clang diagnostic pop") \
  */
 #define GetImageHeight(My_W, W, H) [NSString getHieghtWithMyWidth:My_W AndUIWidth:W AndUIHeight:H]
 
-//十六进制颜色--带#号传入
-#define DWBColorHex(hex)   [UIColor colorWithHexString:hex]
+
 /**
  带#号的十六进制颜色转换,可以设置透明度，必须带#号
 
@@ -294,13 +263,13 @@ _Pragma("clang diagnostic pop") \
 //获取版本号纯数字(字符串格式，3.4.0版本修改，2017年9月17日)
 #define GET_VERSION_Number  [GET_VERSION stringByReplacingOccurrencesOfString:@"." withString:@""]
 //app build版本
-#define GET_AppBuild  [infoDictionary objectForKey:@"CFBundleVersion"]
+#define GET_appBuild  [infoDictionary objectForKey:@"CFBundleVersion"]
 
 //获取appBundleID
 #define GET_BundleId [[NSBundle mainBundle] bundleIdentifier]
 //获取APP名字
 #define GET_APPName [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
-//手机别名：用户定义的名称（如爱恨的chaoxi）
+//手机别名：用户定义的名称（如爱恨的潮汐）
 #define GET_userPhoneName [[UIDevice currentDevice] name]
 
 
@@ -352,13 +321,6 @@ UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlert
 #define NOTIF_POST(n, obj)    [[NSNotificationCenter defaultCenter] postNotificationName:n object:obj]
 #define NOTIF_REMV()        [[NSNotificationCenter defaultCenter] removeObserver:self]
 
-//主题色
-#define COLOR_Main [UIColor colorWithHexString:@"#f94747"]
-//分割线颜色【细】
-#define COLOR_Line_Small [UIColor colorWithHexString:@"#e6e6e6"]
-//分割线颜色【粗】
-#define COLOR_Line_Big [UIColor colorWithHexString:@"#f6f6f6"]
-
 
 #pragma mark ===============项目相关 S ==================
 //取出用户ID
@@ -367,8 +329,6 @@ UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlert
 #define USER_name [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"alias"]]
 //取出用户头像连接
 #define USER_PhoneImage [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"headPortrait"]]
-//取出用户登录状态
-#define SESSIONID [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"sessionId"]]
 
 
 

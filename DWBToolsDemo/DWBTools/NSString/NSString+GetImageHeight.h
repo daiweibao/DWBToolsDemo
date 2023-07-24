@@ -2,8 +2,8 @@
 //  NSString+GetImageHeight.h
 //  AiHenDeChaoXi
 //
-//  Created by chaoxi on 2018/6/16.
-//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/6/16.
+//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
 //
 //给出自己想要的图片宽度，知道UI给的图片的宽、高用比例计算出图片的【高度】。
 #import <Foundation/Foundation.h>

@@ -2,8 +2,8 @@
 //  NSString+QRCode.h
 //  demo
 //
-//  Created by chaoxi on 2017/4/10.
-//  Copyright © 2017年 chaoxi科技有限公司. All rights reserved.
+//  Created by gaofu on 2017/4/10.
+//  Copyright © 2017年 siruijk. All rights reserved.
 //
 //二维码生成的类
 #import <UIKit/UIKit.h>

@@ -2,8 +2,8 @@
 //  CopyLabel.m
 //  ZuiMeiXinNiang
 //
-//  Created by chaoxi on 16/7/25.
-//  Copyright © 2016年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 16/7/25.
+//  Copyright © 2016年 zmxn. All rights reserved.
 //
 
 #import "CopyLabel.h"

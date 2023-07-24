@@ -2,8 +2,8 @@
 //  NSDictionary+DeleteNull.m
 //  DouZhuan
 //
-//  Created by chaoxi on 2018/10/26.
-//  Copyright © 2018 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/10/26.
+//  Copyright © 2018 品创时代互联网科技（北京）有限公司. All rights reserved.
 //
 
 #import "NSDictionary+DeleteNull.h"
@@ -19,7 +19,7 @@
     {
         id obj = [myDic objectForKey:keyArr[i]];
         
-        obj = [self responseObjectDeleteNull:obj];
+        obj = [self changeType:obj];
         
         [resDic setObject:obj forKey:keyArr[i]];
     }
@@ -34,7 +34,7 @@
     {
         id obj = myArr[i];
         
-        obj = [self responseObjectDeleteNull:obj];
+        obj = [self changeType:obj];
         
         [resArr addObject:obj];
     }
@@ -55,7 +55,7 @@
 
 #pragma mark - 公有方法
 //类型识别:将所有的NSNull类型转化成@""
-+(id)responseObjectDeleteNull:(id)myObj
++(id)changeType:(id)myObj
 {
     if ([myObj isKindOfClass:[NSDictionary class]])
     {

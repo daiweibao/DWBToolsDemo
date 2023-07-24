@@ -2,8 +2,8 @@
 //  UIView+Animation.m
 //  DWBToolsDemo
 //
-//  Created by chaoxi on 2018/9/6.
-//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/9/6.
+//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
 //
 
 #import "UIView+Animation.h"
@@ -148,30 +148,6 @@
     });
 }
 
-
-/// 缩小放大动画，一闪一闪的
-/// @param view 动画添加到哪一个控件上
-+ (void)animationZoom:(UIView *)view{
-    [UIView animationZoom:view zoom_min:0.9 zoom_max:1.1 duration:0.3];
-}
-
-/// 缩小放大动画，一闪一闪的
-/// @param view 动画添加到哪一个控件上
-+ (void)animationZoom:(UIView *)view
-             zoom_min:(CGFloat)min
-             zoom_max:(CGFloat)max
-             duration:(NSTimeInterval)duration{
-    //缩小方法动画
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    animation.fromValue = [NSNumber numberWithFloat:min];//缩放起点
-    animation.toValue = [NSNumber numberWithFloat:max];//缩放终点
-    animation.duration = duration;//单次动画时长
-    animation.autoreverses = YES;
-    animation.repeatCount = MAXFLOAT;
-    animation.removedOnCompletion = NO;
-    animation.fillMode=kCAFillModeForwards;
-    [view.layer addAnimation:animation forKey:@"zoom"];
-}
 
 
 @end

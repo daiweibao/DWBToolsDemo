@@ -2,8 +2,8 @@
 //  DWB_refreshFooter.m
 //  XiaoYuanSheQu
 //
-//  Created by chaoxi on 16/9/12.
-//  Copyright © 2016年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 16/9/12.
+//  Copyright © 2016年 北京嗅美科技有限公司. All rights reserved.
 //
 
 #import "DWB_refreshFooter.h"
@@ -41,7 +41,7 @@
 //    footer.stateLabel.font = [UIFont systemFontOfSize:12];
 //    // 设置颜色
 //    footer.stateLabel.textColor =  [UIColor colorWithHexString:@"#aaaaaa"];
-//    //已经加载完全部 亲，没有更多内容了！,去UIScrollView+EndRefresh里面设置
+//    //已经加载完全部 亲，没有更多内容了！
 //     [footer setTitle:@"亲，没有更多内容了！" forState:MJRefreshStateNoMoreData];
 //    
 //    // 隐藏刷新状态的文字

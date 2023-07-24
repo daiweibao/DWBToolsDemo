@@ -2,8 +2,8 @@
 //  UILabel+RemoveNull.m
 //  取出字符串中的null
 //
-//  Created by chaoxi on 2018/11/19.
-//  Copyright © 2018 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/11/19.
+//  Copyright © 2018 品创时代互联网科技（北京）有限公司. All rights reserved.
 //
 
 #import "UILabel+RemoveNull.h"
@@ -19,31 +19,22 @@
 }
 
 - (void)removeNullSetText:(NSString *)string{
-     string = [NSString stringWithFormat:@"%@",string];///必须格式化类型，否则会崩溃
     //(1)字符串判空替换
     if ([NSString isNULL:string]) {
         string = @"";
     }
 #pragma mark ----(2)字符串中包含某个字符串
     else if ([string rangeOfString:@"(null)"].location != NSNotFound){
-        if (string.length <= 6) {
-            string = [string stringByReplacingOccurrencesOfString:@"(null)" withString:@""];
-        }
+        string = [string stringByReplacingOccurrencesOfString:@"(null)" withString:@""];
     }
     else if ([string rangeOfString:@"<null>"].location != NSNotFound){
-        if (string.length <= 6) {
-            string = [string stringByReplacingOccurrencesOfString:@"<null>" withString:@""];
-        }
+        string = [string stringByReplacingOccurrencesOfString:@"<null>" withString:@""];
     }
     else if ([string rangeOfString:@"nil"].location != NSNotFound){
-        if (string.length <= 3) {
-            string = [string stringByReplacingOccurrencesOfString:@"nil" withString:@""];
-        }
+        string = [string stringByReplacingOccurrencesOfString:@"nil" withString:@""];
     }
     else if ([string rangeOfString:@"null"].location != NSNotFound){
-        if (string.length <= 4) {
-            string = [string stringByReplacingOccurrencesOfString:@"null" withString:@""];
-        }
+        string = [string stringByReplacingOccurrencesOfString:@"null" withString:@""];
     }
     
     [self removeNullSetText:string];

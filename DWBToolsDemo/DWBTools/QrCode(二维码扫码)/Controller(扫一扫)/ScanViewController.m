@@ -207,7 +207,7 @@
     [self.view addSubview:upView];
     
     UIButton *cancleBtn = [[UIButton alloc] initWithFrame:CGRectMake(5, 20, 44, 44)];
-    [cancleBtn setImage:[UIImage imageNamed:@"nav_back_black"] forState:UIControlStateNormal];
+    [cancleBtn setImage:[UIImage imageNamed:@"黑色返回"] forState:UIControlStateNormal];
     [cancleBtn addTarget:self action:@selector(cancleBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cancleBtn];
     

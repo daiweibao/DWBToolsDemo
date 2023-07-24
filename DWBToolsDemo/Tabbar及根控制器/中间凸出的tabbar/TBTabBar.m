@@ -38,7 +38,7 @@
     publishBtn.adjustsImageWhenHighlighted = NO;
     [publishBtn setImage:[UIImage imageNamed:@"tabbar-语音"] forState:UIControlStateNormal];
     [publishBtn setTitle:@"语音" forState:UIControlStateNormal];
-    [publishBtn setTitleColor:COLOR_Main forState:UIControlStateNormal];
+    [publishBtn setTitleColor:MAIN_COLOR forState:UIControlStateNormal];
     publishBtn.titleLabel.font = [UIFont systemFontOfSize:12];
     publishBtn.backgroundColor = [UIColor redColor];
 //    publishBtn.size = CGSizeMake(w, 70);

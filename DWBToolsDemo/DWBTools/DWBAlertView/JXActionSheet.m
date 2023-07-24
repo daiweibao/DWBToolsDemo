@@ -2,8 +2,8 @@
 //  JXActionSheet.m
 //  JXKit
 //
-//  Created by chaoxi on 16/1/18.
-//  Copyright © 2016年 chaoxi科技有限公司. All rights reserved.
+//  Created by huangxiangwang on 16/1/18.
+//  Copyright © 2016年 JX.Wang. All rights reserved.
 //
 
 #import "JXActionSheet.h"

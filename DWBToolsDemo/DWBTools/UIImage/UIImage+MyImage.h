@@ -2,8 +2,8 @@
 //  UIImage+MyImage.h
 //  ZuiMeiXinNiang
 //
-//  Created by chaoxi on 16/8/15.
-//  Copyright © 2016年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 16/8/15.
+//  Copyright © 2016年 zmxn. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -151,9 +151,9 @@
 
 
 /**
- 压缩图片方法(先压缩质量再压缩尺寸,压缩到指定尺寸以下单位如：50kb Kb)-最佳方法,只能用对象方法，否则无效.
- 
- @param maxLength 压缩到指定质量以下，单位KB 例如：50kb
+  压缩图片方法(先压缩质量再压缩尺寸,压缩到指定尺寸以下单位如：1 * 1024 Kb)-最佳方法,只能用对象方法，否则无效.
+
+ @param maxLength 压缩到指定质量以下，单位KB
  @return 压缩后的
  */
 -(NSData *)compressWithLengthLimit:(NSUInteger)maxLength;
@@ -190,11 +190,5 @@
  @return 返回处理好的照片
  */
 +(UIImage *)normalizedImage:(UIImage *)image;
-
-
-/// iOS 四周半透明中间圆形全透明View制作
-/// @param rect 圆形坐标
-/// @param color 四周半透明背景色
-+ (UIImage *)getImageWithCGRect:(CGRect)rect AndBackgroundColor:(UIColor *)color;
 
 @end

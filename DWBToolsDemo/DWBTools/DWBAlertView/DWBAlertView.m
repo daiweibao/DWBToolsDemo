@@ -2,13 +2,14 @@
 //  DWBAlertView.m
 //  DWBToolsDemo
 //
-//  Created by chaoxi on 2018/9/8.
-//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/9/8.
+//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
 //
 
 #import "DWBAlertView.h"
 #import "AlertCXCenterView.h"//中间弹窗
 #import "AlertViewTool.h"//底部弹窗
+
 
 @implementation DWBAlertView
 

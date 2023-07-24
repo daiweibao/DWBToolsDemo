@@ -2,8 +2,8 @@
 //  UIView+Animation.h
 //  DWBToolsDemo
 //
-//  Created by chaoxi on 2018/9/6.
-//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/9/6.
+//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
 //
 //动画工具类
 #import <UIKit/UIKit.h>
@@ -50,17 +50,5 @@
  @param completion 动画执行完成后的回调
  */
 + (void)addToShoppingCartWithGoodsImage:(UIView *)goodsImage startPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint completion:(void (^)(BOOL))completion;
-
-
-/// 缩小放大动画，一闪一闪的
-/// @param view 动画添加到哪一个控件上
-+ (void)animationZoom:(UIView *)view;
-
-/// 缩小放大动画，一闪一闪的
-/// @param view 动画添加到哪一个控件上
-+ (void)animationZoom:(UIView *)view
-             zoom_min:(CGFloat)min
-             zoom_max:(CGFloat)max
-             duration:(NSTimeInterval)duration;
 
 @end

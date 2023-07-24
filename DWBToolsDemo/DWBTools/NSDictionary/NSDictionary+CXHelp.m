@@ -3,8 +3,8 @@
 //  NSDictionary+CXHelp.m
 //  AiHenDeChaoXi
 //
-//  Created by chaoxi on 2018/7/19.
-//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/7/19.
+//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
 //
 //字典类别（Category）
 #import "NSDictionary+CXHelp.h"
@@ -162,32 +162,6 @@
     // 把拼接好的字符串打印出来，复制到Model里就好了。
     NSLog(@"Model属性：\n%@",strM);
     
-}
-
-+(BOOL)isNullDict:(NSDictionary *)dict{
-    BOOL isDict = YES;
-    if ([dict isKindOfClass:[NSDictionary class]]) {
-        isDict = YES;
-    }else if([dict isKindOfClass:[NSMutableDictionary class]]){
-        isDict = YES;
-    }else{
-        isDict = NO;
-    }
-    if (isDict==YES) {
-        if ([dict isKindOfClass:[NSNull class]]) {
-            return YES;
-        }else if ([dict isEqual:[NSNull null]]){
-            return YES;
-        }else if (dict.count == 0){
-            return YES;
-        }else if (dict == nil){
-            return YES;
-        }else{
-            return NO;
-        }
-    }else{
-       return YES;
-    }
 }
 
 

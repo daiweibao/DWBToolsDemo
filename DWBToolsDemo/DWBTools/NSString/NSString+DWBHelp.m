@@ -2,15 +2,13 @@
 //  NSString+DWBHelp.m
 //  DWBToolsDemo
 //
-//  Created by chaoxi on 2018/9/5.
-//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/9/5.
+//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
 //
 
 #import "NSString+DWBHelp.h"
 //调用系统震动和声音
 #import <AudioToolbox/AudioToolbox.h>
-
-#import <WebKit/WebKit.h>
 
 @implementation NSString (DWBHelp)
 
@@ -359,11 +357,7 @@
         
         size = [text boundingRectWithSize:CGSizeMake(Width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:myFont} context:nil].size;
     }
-    
-     //动态计算文本高度的时候需要注意什么？，需要注意算完高度需要用ceil来处理一下做向上取整。，ceil向上取整
-    CGSize resultSize = CGSizeMake(ceil(size.width), ceil(size.height));
-    //返回结果
-    return resultSize;
+    return size;
     
 }
 
@@ -463,28 +457,6 @@
     double nowMs = timeStampXT;
     //    NSLog(@"当前系统时间的毫秒数为：%.f",nowMs);
     return nowMs;
-}
-/// 任意两个日期的天数差
-/// @param beginDate 开始日期
-/// @param endDate 结束日志
-+ (NSInteger)getTheCountOfTwoDaysWithBeginDate:(NSString *)beginDate endDate:(NSString *)endDate{
-    NSDateFormatter *inputFormatter = [[NSDateFormatter alloc] init];
-    [inputFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
-    [inputFormatter setDateFormat:@"yyyy-MM-dd"];
-    NSDate *startD =[inputFormatter dateFromString:beginDate];
-    NSDate *endD = [inputFormatter dateFromString:endDate];
-    // 当前日历
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    // 需要对比的时间数据
-    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth| NSCalendarUnitDay;
-    // 对比时间差
-    NSDateComponents *dateCom = [calendar components:unit fromDate:startD toDate:endD options:0];
-    NSLog(@"日期差：%ld天",(long)dateCom.day);
-    return dateCom.day;
-    
-    //用法
-//    self getTheCountOfTwoDaysWithBeginDate:@"2020-04-05" endDate:@"2020-04-06"];
-    
 }
 
 
@@ -1005,17 +977,6 @@
     }
     return randomString;
 }
-/**
- 获取一个随机整数，范围在[from,to)，包括from，不包括to
- 
- @param from 最小值，包含自己
- @param to 最大值，不含自己
- @return 结果
- */
-+(int)getRandomNumber:(int)from to:(int)to{
-    //必须加括号，否则不准,顺序不要乱改
-    return from + arc4random() % (to - from);
-}
 
 
 
@@ -1129,14 +1090,14 @@
 
 
 /**
- 格式化金额，每隔三位一个逗号显示，保留两位小数，必须传入string类型
+ 格式化金额，每隔三位一个逗号显示，保留两位小数，必须传入double类型，不能传入字符串类型
  
- @param stringMoney 传入的金额,String类型
+ @param doubleMoney 传入的金额,double类型
  @return 返回格式化后的金额
  */
-+(NSString *)getMoneyAddDouHaoWithMoneyStr:(NSString *)stringMoney{
++(NSString *)getMoneyAddDouHaoWithDouble:(double)doubleMoney{
     
-    NSString * numberStr = [NSString stringWithFormat:@"%@",stringMoney];
+    NSString * numberStr = [NSString stringWithFormat:@"%f",doubleMoney];
     // 判断是否null 若是赋值为0 防止崩溃
     if (([numberStr isEqual:[NSNull null]] || numberStr == nil)) {
         numberStr = @"0.00";
@@ -1180,12 +1141,12 @@
 /**
  格式化数字，每隔三位一个逗号显示，如果后面没小数就不会显示小数
  
- @param stringMoney 传入的金额
+ @param doubleMoney 传入的金额,double类型
  @return 返回格式化后的金额
  */
-+(NSString *)getMoneyAddDouHaoNOPointWithMoneyStr:(NSString *)stringMoney{
++(NSString *)getMoneyAddDouHaoNOPointWithDouble:(double)doubleMoney{
     
-    NSString * numberStr = [NSString stringWithFormat:@"%@",stringMoney];
+    NSString * numberStr = [NSString stringWithFormat:@"%f",doubleMoney];
     // 判断是否null 若是赋值为0 防止崩溃
     if (([numberStr isEqual:[NSNull null]] || numberStr == nil)) {
         numberStr = @"0";
@@ -1213,114 +1174,6 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:infor];
 }
-
-/**
- 清除WKWeb缓存，否则H5界面跟新，这边不会更新
- */
-+(void)remoWKWebViewCookies{
-    
-    
-    if ([UIDevice currentDevice].systemVersion.floatValue>=9.0) {
-        //        - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation 中就成功了 。
-        //    然而我们等到了iOS9！！！没错！WKWebView的缓存清除API出来了！代码如下：这是删除所有缓存和cookie的
-        NSSet *websiteDataTypes = [WKWebsiteDataStore allWebsiteDataTypes];
-        //// Date from
-        NSDate *dateFrom = [NSDate dateWithTimeIntervalSince1970:0];
-        //// Execute
-        [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:websiteDataTypes modifiedSince:dateFrom completionHandler:^{
-        }];
-    }else{
-        //iOS8清除缓存
-        NSString * libraryPath =  NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).firstObject;
-        NSString * cookiesFolderPath = [libraryPath stringByAppendingString:@"/Cookies"];
-        [[NSFileManager defaultManager] removeItemAtPath:cookiesFolderPath error:nil];
-    }
-    
-    
-}
-
-
-/**
- 判断是否是今天第一次。
- 
- @param eventId 事件ID
- @return 返回YES,代表是今天第一次，NO不是
- */
-+(BOOL)isToadyFirstWithEventId:(NSString *)eventId{
-    
-    //得到今天的日期
-    NSString * ToadyDate = [NSString getNowDateFormat:@"yyyy-MM-dd"];
-    //今天要存储的内容：今天日期+事件Id
-    NSString * ToadyDateAndId = [NSString stringWithFormat:@"%@%@",ToadyDate,eventId];
-    
-    //数据存储
-    NSUserDefaults * ud = [NSUserDefaults standardUserDefaults];
-    //(1)根据事件Id+今日日期取出当前存储数据
-    NSString * getTodayStr = [ud objectForKey:eventId];
-    //(2)存储数据
-    [ud setObject:ToadyDateAndId forKey:eventId];
-    
-    [ud synchronize];
-    
-    if (![ToadyDateAndId isEqual:getTodayStr]) {
-        //如果不相等就是今天第一次是今天第一次
-        
-        return YES;
-        
-    }else{
-        //相等，说明不是今天第一次
-        
-        return NO;
-    }
-}
-
-/**
- 传入数据，返回带万单位的字符串
- 
- @param strNum 纯数据
- */
-+(NSString *)getNumToWanStringWithStr:(NSString *)strNum{
-    
-    //判空
-    if ([NSString isNULL:strNum]) {
-        return  @"0";
-    }
-    
-    double num = strNum.doubleValue;//转类型
-    if (num>=10000) {
-        //返回带万的单位，保留一位小数
-        return [NSString stringWithFormat:@"%.1f万",num / 10000];
-    }else{
-        //返回原始数据
-        return [NSString stringWithFormat:@"%@",strNum];
-    }
-    
-}
-//将字典转换成字符串 key=value&key=value&key=value
-+ (NSString *)dictToURLWithUrlString:(NSString *)urlString AndDict:(NSDictionary *)dic
-{
-    NSMutableString *mString = [NSMutableString string];
-    NSArray * keys = [dic allKeys];
-    for (int i = 0; i < keys.count; i++) {
-        NSString *string;
-        if (i==0) {
-            //第一个参数拼接时加？,需要判断接口里是否已经包含？号
-            if ([urlString containsString:@"?"]) {
-                string = [NSString stringWithFormat:@"&%@=%@", keys[i], dic[keys[i]]];
-            }else{
-                string = [NSString stringWithFormat:@"?%@=%@", keys[i], dic[keys[i]]];
-            }
-        }else{
-            //后面的加&
-            string = [NSString stringWithFormat:@"&%@=%@", keys[i], dic[keys[i]]];
-        }
-        //拼接字符串
-        [mString appendString:string];
-    }
-    NSString *endUrlString = [NSString stringWithFormat:@"%@%@",urlString,mString];
-    return endUrlString;
-}
-
 
 
 @end

@@ -2,8 +2,8 @@
 //  UIImage+PlayGif.h
 //  ZuiMeiXinNiang
 //
-//  Created by chaoxi on 2017/3/17.
-//  Copyright © 2017年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2017/3/17.
+//  Copyright © 2017年 zmxn. All rights reserved.
 //
 // 播放本地gif图片（复制SDWebImage的方法，更新SDWebImage也不影响）
 #import <UIKit/UIKit.h>

@@ -2,8 +2,8 @@
 //  KeyChainManager.h
 //  AiHenDeChaoXi
 //
-//  Created by chaoxi on 2018/5/28.
-//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/5/28.
+//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
 //
 
 //Keychain钥匙串存储数据，App卸载后数据也能读取到，也可以用于2个或者多个app之间传值。间书地址：https://www.jianshu.com/p/781f394baf61

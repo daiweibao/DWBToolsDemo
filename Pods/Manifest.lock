@@ -16,100 +16,84 @@ PODS:
     - AFNetworking/NSURLSession
   - FLAnimatedImage (1.0.12)
   - Masonry (1.1.0)
-  - MJExtension (3.0.15.1)
-  - MJRefresh (3.1.15.6)
-  - ObjectMapper (3.4.2)
-  - RSSwizzle (0.1.0)
-  - SDWebImage (4.4.2):
-    - SDWebImage/Core (= 4.4.2)
-  - SDWebImage/Core (4.4.2)
-  - SDWebImage/GIF (4.4.2):
+  - MJRefresh (3.5.0)
+  - SDWebImage (4.4.8):
+    - SDWebImage/Core (= 4.4.8)
+  - SDWebImage/Core (4.4.8)
+  - SDWebImage/GIF (4.4.8):
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
-  - SnapKit (4.2.0)
-  - UMCCommon (1.5.2)
-  - UMCCommonLog (1.0.0)
+  - UMAPM (1.8.1)
+  - UMCCommon (7.3.7):
+    - UMAPM
+    - UMDevice
+  - UMCCommonLog (2.0.2)
   - UMCSecurityPlugins (1.0.6)
-  - UMCShare/Core (6.9.4):
+  - UMCShare/Core (6.10.2):
     - UMCCommon
-  - UMCShare/Social/QQ (6.9.4):
+  - UMCShare/Social/QQ (6.10.2):
     - UMCCommon
     - UMCShare/Core
     - UMCShare/Social/ReducedQQ
-  - UMCShare/Social/ReducedQQ (6.9.4):
+  - UMCShare/Social/ReducedQQ (6.10.2):
     - UMCCommon
     - UMCShare/Core
-  - UMCShare/Social/ReducedSina (6.9.4):
+  - UMCShare/Social/ReducedSina (6.10.2):
     - UMCCommon
     - UMCShare/Core
-  - UMCShare/Social/ReducedWeChat (6.9.4):
+  - UMCShare/Social/ReducedWeChat (6.10.2):
     - UMCCommon
     - UMCShare/Core
-  - UMCShare/Social/Sina (6.9.4):
+  - UMCShare/Social/Sina (6.10.2):
     - UMCCommon
     - UMCShare/Core
     - UMCShare/Social/ReducedSina
-  - UMCShare/Social/WeChat (6.9.4):
+  - UMCShare/Social/WeChat (6.10.2):
     - UMCCommon
     - UMCShare/Core
     - UMCShare/Social/ReducedWeChat
-  - YYModel (1.0.4)
-  - YYText (1.0.7)
+  - UMDevice (2.2.1)
 
 DEPENDENCIES:
   - AFNetworking
   - Masonry
-  - MJExtension
   - MJRefresh
-  - ObjectMapper (~> 3.4)
-  - RSSwizzle
   - SDWebImage
   - SDWebImage/GIF
-  - SnapKit
   - UMCCommon
   - UMCCommonLog
   - UMCSecurityPlugins
   - UMCShare/Social/QQ
   - UMCShare/Social/Sina
   - UMCShare/Social/WeChat
-  - YYModel
-  - YYText
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - FLAnimatedImage
     - Masonry
-    - MJExtension
     - MJRefresh
-    - ObjectMapper
-    - RSSwizzle
     - SDWebImage
-    - SnapKit
+    - UMAPM
     - UMCCommon
     - UMCCommonLog
     - UMCSecurityPlugins
     - UMCShare
-    - YYModel
-    - YYText
+    - UMDevice
 
 SPEC CHECKSUMS:
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AFNetworking: cb604b1c2bded0871f5f61f5d53653739e841d6b
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
-  MJRefresh: 0efa19656679d70a0f47cbe76e56c2271fe53a97
-  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
-  RSSwizzle: d561958f595028bfcef98c7d55c318b3878a61c6
-  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  UMCCommon: 4392868ac47ff1b101663106bb114ba616fabbad
-  UMCCommonLog: 05a2d5de21858e3d870551562cff405c1366d244
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
+  UMAPM: 569616d3b4d91c670e6591b2698879286f9fa304
+  UMCCommon: aac337052f23b0e08c0f3cf021d3bb209f2c49bd
+  UMCCommonLog: bea707e50c85cef4b0eb47cc5c7226bb843245ca
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
-  UMCShare: aa233aecad67979930fe43f3a2f676023b669439
-  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
-  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+  UMCShare: e14e1399673fa361cddbde3a05b3743e10f673f7
+  UMDevice: 053478c4b4d7292f31f0a275c227d3c4007a5571
 
-PODFILE CHECKSUM: eba6cfcda9bb524164b233ba259297d5272181b3
+PODFILE CHECKSUM: bfd323a650f976438d87360a46ae142c7e3bd6ea
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.11.2

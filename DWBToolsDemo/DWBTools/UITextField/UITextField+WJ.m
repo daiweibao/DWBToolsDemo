@@ -2,8 +2,8 @@
 //  UITextField+WJ.m
 //  SearchDemo
 //
-//  Created by chaoxi on 15/9/22.
-//  Copyright © 2015年 chaoxi科技有限公司. All rights reserved.
+//  Created by ljjun on 15/9/22.
+//  Copyright © 2015年 ljjun. All rights reserved.
 //
 
 #import "UITextField+WJ.h"

@@ -2,8 +2,8 @@
 //  UIImage+Rotate.h
 //  UIImage+Categories
 //
-//  Created by chaoxi on 16/9/4.
-//  Copyright © 2016年 chaoxi科技有限公司. All rights reserved.
+//  Created by lisong on 16/9/4.
+//  Copyright © 2016年 lisong. All rights reserved.
 //
 //图片裁剪翻转处理等
 #import <UIKit/UIKit.h>

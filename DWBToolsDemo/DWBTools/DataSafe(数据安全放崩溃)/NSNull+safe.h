@@ -2,8 +2,8 @@
 //  NSNull+safe.h
 //  NSNullDemo
 //
-//  Created by chaoxi on 2017/4/16.
-//  Copyright © 2017年 chaoxi科技有限公司. All rights reserved.
+//  Created by mac on 2017/4/16.
+//  Copyright © 2017年 Corki. All rights reserved.
 //
 //处理服务器返回的各种null，防止崩溃  利用消息转发解决服务器返回NSNull问题
 #import <Foundation/Foundation.h>

@@ -2,8 +2,8 @@
 //  UIImage+PlayGif.m
 //  ZuiMeiXinNiang
 //
-//  Created by chaoxi on 2017/3/17.
-//  Copyright © 2017年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2017/3/17.
+//  Copyright © 2017年 zmxn. All rights reserved.
 //
 
 #import "UIImage+PlayGif.h"
@@ -231,10 +231,6 @@
      imgView.frame = CGRectMake(0.0, 220.0, 100.0, 100.0);
      imgView.animatedImage = [UIImage playGifImageFLAnimated:@"加载中最新"];
      [self.view addSubview:imgView];
-     //动画播放完成1次，停止播放动画
-     imgView.loopCompletionBlock = ^(NSUInteger loopCountRemaining){
-     [weakimgViewAnima stopAnimating];
-     };
      
      */
     

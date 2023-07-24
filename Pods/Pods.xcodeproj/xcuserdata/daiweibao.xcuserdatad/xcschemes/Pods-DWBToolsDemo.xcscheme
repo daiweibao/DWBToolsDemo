@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "1240"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AE97FC434D93C6F347737A624C65196F"
-               BuildableName = "Pods_DWBToolsDemo.framework"
+               BuildableName = "libPods-DWBToolsDemo.a"
                BlueprintName = "Pods-DWBToolsDemo"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

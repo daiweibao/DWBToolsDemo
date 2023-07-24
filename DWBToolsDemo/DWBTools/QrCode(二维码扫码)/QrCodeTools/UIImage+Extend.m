@@ -2,8 +2,8 @@
 //  UIImage+Extend.m
 //  demo
 //
-//  Created by chaoxi on 2017/3/10.
-//  Copyright © 2017年 chaoxi科技有限公司. All rights reserved.
+//  Created by gaofu on 2017/3/10.
+//  Copyright © 2017年 siruijk. All rights reserved.
 //
 
 #import "UIImage+Extend.h"

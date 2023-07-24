@@ -2,8 +2,8 @@
 //  LabelActionController.m
 //  DWBToolsDemo
 //
-//  Created by chaoxi on 2018/9/12.
-//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/9/12.
+//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
 //
 
 #import "LabelActionController.h"
@@ -21,7 +21,7 @@
     
        self.titleNavLabel.text = @"点击指定文字";
     
-     self.titleNavLabel.text = @"点击指定 文字";
+    
     UILabel * label = [[UILabel alloc]init];
     label.frame = CGRectMake(10, 100, 340, 100);
 //    label.backgroundColor = [UIColor blackColor];
@@ -30,11 +30,9 @@
     
     NSString * string1 = @"雪儿";
      NSString * string2 = nil;
-     NSString * string3 = @"爱恨的chaoxi";
+     NSString * string3 = @"爱恨的潮汐";
      NSString * string4 = @"说到：";
      NSString * string5 = @"你在干么呢?";
-    
-    NSString * dsdsa = @"测试";
     
     
      NSArray * array1 = @[string1,[UIColor redColor],[UIFont systemFontOfSize:12]];
@@ -81,23 +79,6 @@
     [labelHtml dwb_addAttributeTapActionWithStrings:@[@"是"] tapClicked:^(NSString *string, NSRange range, NSInteger index) {
         DWBAlertShow(@"点击了文字");
     }];
-    
-    
-    
-    NSString *strL = @"不可否认，当宅在家里已经成为周末、节假日的常态，我们就需要我擦雷";
-    UILabel * labelAll = [[UILabel alloc]init];
-    labelAll.frame = CGRectMake(10, labelHtml.bottomY+10, 340, 100);
-    labelAll.font = [UIFont systemFontOfSize:20];
-    labelAll.textColor = [UIColor yellowColor];
-    labelAll.text =strL;
-    labelAll.numberOfLines = 2;
-    [labelAll sizeToFit];
-    labelAll.backgroundColor = [UIColor blueColor];
-    [self.view addSubview:labelAll];
-    
-    CGFloat heL = [NSString sizeMyStrWith:strL andMyFont:[UIFont systemFontOfSize:20] andMineWidth:340].height;
-    
-    NSLog(@"实际文本高度：%f label显示高度：%f",heL,labelAll.height);
     
 
     

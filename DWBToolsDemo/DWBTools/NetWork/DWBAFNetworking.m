@@ -2,14 +2,11 @@
 //  DWBAFNetworking.m
 //  DWBToolsDemo
 //
-//  Created by chaoxi on 2018/9/6.
-//  Copyright © 2018年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2018/9/6.
+//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
 //
 
 #import "DWBAFNetworking.h"
-
-static NSString const * YZNetworkState = @"NO";//网络状态，可变
-static NSTimeInterval YZnetworkChange = 0;//网络是否改变过
 
 //单例
 static AFHTTPSessionManager *manager;
@@ -30,12 +27,11 @@ static AFHTTPSessionManager *manager;
         manager.requestSerializer = [AFJSONRequestSerializer serializer];
         
         //申明返回的结果是json类型(可选，没报错就不用打开)
-//          manager.responseSerializer = [AFJSONResponseSerializer serializer];
-//         [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-//
+        //  manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        // [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        
         // 支持内容格式
         manager.responseSerializer.acceptableContentTypes  =  [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain",@"application/xml", nil];
-        
         
     });
     return manager;
@@ -64,10 +60,7 @@ static AFHTTPSessionManager *manager;
     
     //调用自己的单例，防止内存泄露
     AFHTTPSessionManager * manager =  [DWBAFNetworking sharedManager];
-    
-    
-    
-    [manager GET:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         //所有情况都回调请求结果
         if (results) {
@@ -109,56 +102,5 @@ static AFHTTPSessionManager *manager;
 + (BOOL)isHaveNetwork {
     return [AFNetworkReachabilityManager sharedManager].reachable;
 }
-
-
-#pragma mark - 网络监听
-/**
- 监听网络状态,在AppDelegate里调用
- */
-+ (void)yz_currentNetStates {
-    
-    AFNetworkReachabilityManager *manger = [AFNetworkReachabilityManager sharedManager];
-    
-    [manger setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        /*
-         AFNetworkReachabilityStatusUnknown          = -1,
-         AFNetworkReachabilityStatusNotReachable     = 0,
-         AFNetworkReachabilityStatusReachableViaWWAN = 1,
-         AFNetworkReachabilityStatusReachableViaWiFi = 2,
-         */
-        switch (status) {
-            case AFNetworkReachabilityStatusUnknown:
-                YZNetworkState = @"NO";
-                YZnetworkChange = 1;
-                break;
-            case AFNetworkReachabilityStatusNotReachable:
-                NSLog(@"没有网络");
-                YZNetworkState = @"NO";
-                YZnetworkChange = 1;
-                break;
-            case AFNetworkReachabilityStatusReachableViaWWAN:
-                NSLog(@"3G|4G");
-                YZNetworkState = @"4G";
-                break;
-            case AFNetworkReachabilityStatusReachableViaWiFi:
-                NSLog(@"WiFi");
-                YZNetworkState = @"WIFI";
-                break;
-            default:
-                break;
-        }
-        if (![YZNetworkState isEqualToString:@"NO"]) {
-            //有网
-        }
-        
-        if (![YZNetworkState isEqualToString:@"NO"] && YZnetworkChange) {
-            YZnetworkChange = 0;
-            //发出网络状态改变的通知，从没网到有网
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"YZ_networkChange" object:nil];
-        }
-    }];
-    [manger startMonitoring];//开始监听
-}
-
 
 @end

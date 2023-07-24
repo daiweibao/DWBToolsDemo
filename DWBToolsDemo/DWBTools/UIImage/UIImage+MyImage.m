@@ -2,8 +2,8 @@
 //  UIImage+MyImage.m
 //  ZuiMeiXinNiang
 //
-//  Created by chaoxi on 16/8/15.
-//  Copyright © 2016年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 16/8/15.
+//  Copyright © 2016年 zmxn. All rights reserved.
 //
 
 #import "UIImage+MyImage.h"
@@ -672,14 +672,13 @@
 
 
 /**
-压缩图片方法(先压缩质量再压缩尺寸,压缩到指定尺寸以下单位如：50kb Kb)-最佳方法,只能用对象方法，否则无效.
-
-@param maxLength 压缩到指定质量以下，单位KB 例如：50kb
-@return 压缩后的
-*/
+ 压缩图片方法(先压缩质量再压缩尺寸,压缩到指定尺寸以下单位如：1 * 1024 Kb)-最佳方法,只能用对象方法，否则无效.
+ 
+ @param maxLength 压缩到指定质量以下，单位KB
+ @return 压缩后的
+ */
 -(NSData *)compressWithLengthLimit:(NSUInteger)maxLength{
     // Compress by quality
-    maxLength = maxLength * 1024.0f;//传进来的是KB,要转化长度为length
     CGFloat compression = 1;
     NSData *data = UIImageJPEGRepresentation(self, compression);
     //NSLog(@"Before compressing quality, image size = %ld KB",data.length/1024);
@@ -731,7 +730,7 @@
  */
 -(NSString *)imageToBase64Str:(UIImage *) image  MaxLength:(NSInteger)maxLength{
    
-    NSData *data = [self compressWithLengthLimit:maxLength];
+    NSData *data = [self compressWithLengthLimit:maxLength * 1024.0f];
     
     NSLog(@"转Base64压缩后图片大小：%luk",(unsigned long)data.length/1024);
     NSString *encodedImageStr = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
@@ -814,27 +813,6 @@
         return normalizedImage;
     }
     
-}
-//iOS 四周半透明中间圆形全透明View制作
-+ (UIImage *)getImageWithCGRect:(CGRect)rect AndBackgroundColor:(UIColor *)color{
-    UIGraphicsBeginImageContextWithOptions([UIScreen mainScreen].bounds.size, NO, 1.0);
-    CGContextRef con = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(con, color.CGColor);//背景色
-    CGContextFillRect(con, [UIScreen mainScreen].bounds);
-    CGContextAddEllipseInRect(con, rect);
-    CGContextSetBlendMode(con, kCGBlendModeClear);
-    CGContextFillPath(con);
-    UIImage *ima = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return ima;
-    //用法
-    /*
-    UIImageView * viewGuideSup = [[UIImageView alloc]init];
-      viewGuideSup.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-      viewGuideSup.image = [self getImageWithCGRect:CGRectMake(SCREEN_WIDTH/2-35, kMainScreenHeight - 100-35, 70, 70) AndBackgroundColor: [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.7]];
-      viewGuideSup.userInteractionEnabled = YES;
-      [self.view addSubview:viewGuideSup];
-     */
 }
 
 

@@ -2,17 +2,12 @@
 //  UIView+Help.h
 //  GongXiangJie
 //
-//  Created by chaoxi on 2017/6/27.
-//  Copyright © 2017年 chaoxi科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2017/6/27.
+//  Copyright © 2017年 北京嗅美科技有限公司. All rights reserved.
 //-
 
 #import <UIKit/UIKit.h>
-//圆角设置方向
-typedef NS_ENUM(NSInteger, DWBRadiusType) {
-    RadiusType_All = 1,//四周都设置圆角
-    RadiusType_Top = 2,//顶部设置圆角
-    RadiusType_bottom = 3,//底部设置圆角
-};
+
 @interface UIView (Help)
 
 /**
@@ -72,16 +67,6 @@ typedef NS_ENUM(NSInteger, DWBRadiusType) {
 +(void)setupShadowView:(UIView*)myView;
 
 /**
- 按钮设置指定圆角边角的圆角
- 
- @param rectCorner UIRectCorner要切除的圆角
- @param borderColor 边框颜色
- @param borderWidth 边框宽度
- @param Radius 圆角大小
- */
--(void)setupRoundedCornersWithCutCorners:(UIRectCorner)rectCorner borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth AndRadius:(CGFloat )Radius;
-
-/**
  用UIView创建一条虚线
  
  @param lineLength 虚线的宽度
@@ -117,19 +102,5 @@ typedef NS_ENUM(NSInteger, DWBRadiusType) {
  @param Radius 圆角大小
  */
 - (void)setupRoundedCornersWithCutCorners:(UIRectCorner)rectCorner borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth AndRadius:(CGFloat )Radius;
-
-
-/// 设置指定圆角【指定边角圆角】
-/// @param radius 圆角大小
-/// @param corner 圆角指定角
-- (void)setup_Radius:(CGFloat)radius corner:(UIRectCorner)corner;
-
-
-
-/// 绘制镂空的矩形、圆形等【周围半透明，中间一个圆】
-/// @param view 父View
-/// @param rect 镂空的坐标
-/// @param radius 圆角
-+ (void)drawShapeJXRectWith:(UIView *)view AndCGRect:(CGRect)rect AndCornerRadius:(CGFloat )radius;
 
 @end
