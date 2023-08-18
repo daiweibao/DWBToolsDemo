@@ -1,6 +1,6 @@
 # DWBToolsDemo
 
-工具类
+工具类，后面包含gith的token使用方法
 
 各种Category欢迎大家star。
 
@@ -77,3 +77,15 @@ YYCategories这也是个牛逼的工具类：https://github.com/ibireme/YYCatego
 
 
 
+=================分割线==================
+补充：github推代码报错-需要token，处理：
+
+1、报错内容：remote: Support for password authentication was removed on August 13, 2021.
+翻译：远程:在2021年8月13日删除了对密码验证的支持。
+
+2、（1）去github上创建token：点击头像-->Settings-->Developer settings—>然后选择Personal access tokens—>Generate new token
+（2）填一个note（描述信息），设置一个token过期时间，如果是推送代码勾选repo ，最后 点击“Generate token”，就会生成一个token，记录一下我们这个token，一会再次push代码的时候要用到。
+生成的git令牌token，例如：ghp_XXXXXXXXXXXXXXXJ
+
+(3)在Sourcetree工具中使用：
+git仓库地址拼接成：https://ghp_XXXXXXXXXXXXXXXJ@github.com/github用户名/github仓库名.git  然后重新克隆仓库（新建—从URL克隆）或者打开仓库—设置—修改远程仓库地址
