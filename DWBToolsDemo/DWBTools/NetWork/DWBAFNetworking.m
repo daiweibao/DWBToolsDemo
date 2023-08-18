@@ -60,8 +60,7 @@ static AFHTTPSessionManager *manager;
     
     //调用自己的单例，防止内存泄露
     AFHTTPSessionManager * manager =  [DWBAFNetworking sharedManager];
-    [manager POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+    [manager POST:URLString parameters:parameters headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //所有情况都回调请求结果
         if (results) {
             results(responseObject);

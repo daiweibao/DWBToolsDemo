@@ -64,7 +64,7 @@
     
     //调用自己的单例，防止内存泄露，必须先在中国地区获取app信息(不然加载慢，因为大部分app都在中国地区上架)，如果获取不到再去美国地区获取
     AFHTTPSessionManager * manager =  [DWBAFNetworking sharedManager];
-    [manager POST:pathChina parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager POST:pathChina parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //        NSLog(@"中国地区数据：%@",responseObject);
         //判断在中国地区能否获取到APP数据
         NSArray * arrayAppInfo = responseObject[@"results"];
@@ -94,7 +94,7 @@
     AFHTTPSessionManager * manager =  [DWBAFNetworking sharedManager];
     //在中国地区获取不到app信息，然后再去美国地区获取
      NSString * pathUSA = [NSString stringWithFormat:@"https://itunes.apple.com/lookup?bundleId=%@",GET_BundleId];
-    [manager POST:pathUSA parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager POST:pathUSA parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         dispatch_async(dispatch_get_main_queue(), ^{
 //              NSLog(@"美国地区数据：%@",responseObject);
             //在美国地区获取到了app信息，创建弹窗

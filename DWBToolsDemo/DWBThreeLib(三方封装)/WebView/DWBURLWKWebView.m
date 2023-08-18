@@ -9,7 +9,7 @@
 #import "DWBURLWKWebView.h"
 
 #import "JZAlbumViewController.h"//图片浏览器
-#import "HZPhotoBrowser.h"
+//#import "HZPhotoBrowser.h"
 @interface DWBURLWKWebView()<WKNavigationDelegate,UIGestureRecognizerDelegate>
 //URL
 @property(nonatomic,copy)NSString * urlString;
@@ -214,13 +214,13 @@ static char imgUrlArrayKey;
             }
         }
         
-        HZPhotoBrowser *browser = [[HZPhotoBrowser alloc] init];
-        browser.isFullWidthForLandScape = YES;
-        browser.isNeedLandscape = YES;
-        browser.currentImageIndex = index;
-        browser.imageArray = imgUrlArr;
-        
-        [browser show];
+//        HZPhotoBrowser *browser = [[HZPhotoBrowser alloc] init];
+//        browser.isFullWidthForLandScape = YES;
+//        browser.isNeedLandscape = YES;
+//        browser.currentImageIndex = index;
+//        browser.imageArray = imgUrlArr;
+//        
+//        [browser show];
         return NO;
     }
     return YES;

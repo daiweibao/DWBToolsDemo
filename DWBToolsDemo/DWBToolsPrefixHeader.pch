@@ -20,12 +20,4 @@
 #import "MacroHeaderHeader.h"
 
 
-//友盟相关SDK有文件-2018年3月20日更新
-#import <UMCommon/UMCommon.h>//友盟基础库
-//#import <UMAnalytics/MobClick.h>//友盟统计
-//#import <UMPush/UMessage.h>//友盟推送
-#import <UserNotifications/UserNotifications.h>//iOS10推送必备
-#import <UMShare/UMShare.h>//友盟分享
-
-
 #endif /* DWBToolsPrefixHeader_pch */

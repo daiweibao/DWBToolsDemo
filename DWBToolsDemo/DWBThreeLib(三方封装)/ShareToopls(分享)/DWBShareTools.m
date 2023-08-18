@@ -43,7 +43,7 @@
     if (!hdImage) {
         hdImage = [UIImage imageNamed:default_CoverImage];
     }
-    
+    /*
     UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
     UMShareMiniProgramObject *shareObject = [UMShareMiniProgramObject shareObjectWithTitle:title descr:descr thumImage:shareImage];
     //兼容微信低版本网页地址连接
@@ -112,6 +112,7 @@
         });
 
     }];
+     */
 }
 
 #pragma mark ===================微信小程序分享 E====================c
@@ -150,7 +151,7 @@
     if (!shareImage) {
         shareImage = [UIImage imageNamed:appLogoName];
     }
-    
+    /*
     //创建分享消息对象
     UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
     
@@ -218,6 +219,7 @@
             }
         });
     }];
+     */
 }
 #pragma mark ===================微信好友分享 E====================
 
@@ -254,7 +256,7 @@
     if (!shareImage) {
        shareImage = [UIImage imageNamed:appLogoName];
     }
-    
+    /*
     //创建分享消息对象
     UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
     
@@ -322,6 +324,7 @@
             }
         });
     }];
+     */
     
 }
 #pragma mark ===================微信朋友圈分享 E====================
@@ -357,7 +360,7 @@
     if (!shareImage) {
         shareImage = [UIImage imageNamed:appLogoName];
     }
-    
+    /*
     //创建分享消息对象
     UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
     
@@ -433,7 +436,7 @@
             }
         });
     }];
-    
+    */
 }
 
 
@@ -475,7 +478,7 @@
     if (!shareImage) {
         shareImage = [UIImage imageNamed:appLogoName];
     }
-    
+    /*
     //创建分享消息对象
     UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
     
@@ -550,7 +553,7 @@
             }
         });
     }];
-    
+    */
 }
 
 
@@ -591,7 +594,7 @@
     if (!shareImage) {
         shareImage = [UIImage imageNamed:appLogoName];
     }
-    
+    /*
     //创建分享消息对象
     UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
     
@@ -672,7 +675,7 @@
             }
         });
     }];
-    
+    */
 }
 
 

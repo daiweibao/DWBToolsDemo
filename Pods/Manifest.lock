@@ -1,99 +1,52 @@
 PODS:
-  - AFNetworking (3.2.1):
-    - AFNetworking/NSURLSession (= 3.2.1)
-    - AFNetworking/Reachability (= 3.2.1)
-    - AFNetworking/Security (= 3.2.1)
-    - AFNetworking/Serialization (= 3.2.1)
-    - AFNetworking/UIKit (= 3.2.1)
-  - AFNetworking/NSURLSession (3.2.1):
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.1)
-  - AFNetworking/Security (3.2.1)
-  - AFNetworking/Serialization (3.2.1)
-  - AFNetworking/UIKit (3.2.1):
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - FLAnimatedImage (1.0.12)
+  - FLAnimatedImage (1.0.17)
   - Masonry (1.1.0)
-  - MJRefresh (3.5.0)
-  - SDWebImage (4.4.8):
-    - SDWebImage/Core (= 4.4.8)
-  - SDWebImage/Core (4.4.8)
-  - SDWebImage/GIF (4.4.8):
-    - FLAnimatedImage (~> 1.0)
-    - SDWebImage/Core
-  - UMAPM (1.8.1)
-  - UMCCommon (7.3.7):
-    - UMAPM
-    - UMDevice
-  - UMCCommonLog (2.0.2)
-  - UMCSecurityPlugins (1.0.6)
-  - UMCShare/Core (6.10.2):
-    - UMCCommon
-  - UMCShare/Social/QQ (6.10.2):
-    - UMCCommon
-    - UMCShare/Core
-    - UMCShare/Social/ReducedQQ
-  - UMCShare/Social/ReducedQQ (6.10.2):
-    - UMCCommon
-    - UMCShare/Core
-  - UMCShare/Social/ReducedSina (6.10.2):
-    - UMCCommon
-    - UMCShare/Core
-  - UMCShare/Social/ReducedWeChat (6.10.2):
-    - UMCCommon
-    - UMCShare/Core
-  - UMCShare/Social/Sina (6.10.2):
-    - UMCCommon
-    - UMCShare/Core
-    - UMCShare/Social/ReducedSina
-  - UMCShare/Social/WeChat (6.10.2):
-    - UMCCommon
-    - UMCShare/Core
-    - UMCShare/Social/ReducedWeChat
-  - UMDevice (2.2.1)
+  - MJExtension (3.4.1)
+  - MJRefresh (3.7.5)
+  - SDWebImage (5.17.0):
+    - SDWebImage/Core (= 5.17.0)
+  - SDWebImage/Core (5.17.0)
 
 DEPENDENCIES:
-  - AFNetworking
-  - Masonry
-  - MJRefresh
-  - SDWebImage
-  - SDWebImage/GIF
-  - UMCCommon
-  - UMCCommonLog
-  - UMCSecurityPlugins
-  - UMCShare/Social/QQ
-  - UMCShare/Social/Sina
-  - UMCShare/Social/WeChat
+  - AFNetworking (~> 4.0)
+  - FLAnimatedImage (~> 1.0)
+  - Masonry (~> 1.1)
+  - MJExtension (~> 3.4)
+  - MJRefresh (~> 3.7)
+  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - FLAnimatedImage
     - Masonry
+    - MJExtension
     - MJRefresh
     - SDWebImage
-    - UMAPM
-    - UMCCommon
-    - UMCCommonLog
-    - UMCSecurityPlugins
-    - UMCShare
-    - UMDevice
 
 SPEC CHECKSUMS:
-  AFNetworking: cb604b1c2bded0871f5f61f5d53653739e841d6b
-  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  FLAnimatedImage: bbf914596368867157cc71b38a8ec834b3eeb32b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
-  SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
-  UMAPM: 569616d3b4d91c670e6591b2698879286f9fa304
-  UMCCommon: aac337052f23b0e08c0f3cf021d3bb209f2c49bd
-  UMCCommonLog: bea707e50c85cef4b0eb47cc5c7226bb843245ca
-  UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
-  UMCShare: e14e1399673fa361cddbde3a05b3743e10f673f7
-  UMDevice: 053478c4b4d7292f31f0a275c227d3c4007a5571
+  MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
 
-PODFILE CHECKSUM: bfd323a650f976438d87360a46ae142c7e3bd6ea
+PODFILE CHECKSUM: 0ec6036675a9260b17ca123bff4f79378ca4827f
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.12.1

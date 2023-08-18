@@ -39,12 +39,12 @@
         
         SDWebImageManager *manager = [SDWebImageManager sharedManager];
         WeakSelf(self);
-        [manager cachedImageExistsForURL:[NSURL URLWithString:photoUrl] completion:^(BOOL isInCache) {
-            if (!isInCache) {//没有缓存
-                hud = [MBProgressHUD showHUDAddedTo:weakself animated:YES];
-                hud.mode = MBProgressHUDModeDeterminate;
-            }
-        }];
+//        [manager cachedImageExistsForURL:[NSURL URLWithString:photoUrl] completion:^(BOOL isInCache) {
+//            if (!isInCache) {//没有缓存
+//                hud = [MBProgressHUD showHUDAddedTo:weakself animated:YES];
+//                hud.mode = MBProgressHUDModeDeterminate;
+//            }
+//        }];
         
         [self.imageView sd_setImageWithURL:[NSURL URLWithString:photoUrl] placeholderImage:[UIImage imageNamed:@"启动图标最终版"] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
               hud.progress = ((float)receivedSize)/expectedSize;
