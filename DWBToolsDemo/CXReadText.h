@@ -28,11 +28,11 @@
 
  填一个note（描述信息），设置一个token过期时间，如果是推送代码勾选repo ，最后 点击“Generate token”，就会生成一个token，记录一下我们这个token，一会再次push代码的时候要用到
 
- 生成的git令牌token，例如：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
+ 生成的git令牌token，例如：ghp_XXXXXXX
 
 
  3、在Sourcetree工具中使用：
- git仓库地址拼接成：https://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@github.com/daiweibao/DWBToolsDemo.git  然后重新克隆仓库（新建—从URL克隆）或者打开仓库—设置—修改远程仓库地址
+ git仓库地址拼接成：https://ghp_XXXXXXX@github.com/daiweibao/DWBToolsDemo.git  然后重新克隆仓库（新建—从URL克隆）或者打开仓库—设置—修改远程仓库地址
  
  
  
