@@ -130,6 +130,7 @@
  @param ishaveTabbar 底部是否有工具条，有工具条传入YES，没有传入NO
  */
 +(void)tablevieiOS11:(UITableView*)tableView isHaveTabbar:(BOOL)ishaveTabbar{
+    //修改日期：2023.8.18
 #pragma mark =====继承：XMRootViewController用【系统导航栏的】的 iOS11 tableview偏移适配（放到tableview初始化里面）S==============
     if (@available(iOS 11.0, *)) {
         //1、tableView的section之间间距变大问题,解决办法：初始化的时候增加以下代码
@@ -138,14 +139,22 @@
         tableView.estimatedRowHeight =0;
         tableView.estimatedSectionHeaderHeight =0;
         tableView.estimatedSectionFooterHeight =0;
+        
+        //在iOS15后。UITableView多了一个属性sectionHeaderTopPadding，该值默认为22。我们只需要把这个值设置为0，就能解决顶部空白的问题。
+        if (@available(iOS 15.0, *)) {
+            tableView.sectionHeaderTopPadding = 0.0;
+        } else {
+            // Fallback on earlier versions
+        }
+        
         //2、MJ刷新异常，上拉加载出现跳动刷新问题,解决办法：初始化的时候增加以下代码（tableView和collectionView类似）
         tableView.contentInsetAdjustmentBehavior =UIScrollViewContentInsetAdjustmentNever;
         if (ishaveTabbar==YES) {
             //底部有工具条
-            tableView.contentInset =UIEdgeInsetsMake(0,0, 0, 0);//底部有tabbar或者工具条的不改变偏移
+//            tableView.contentInset =UIEdgeInsetsMake(0,0, 0, 0);//底部有tabbar或者工具条的不改变偏移
         }else{
-            //底部无工具条
-            tableView.contentInset =UIEdgeInsetsMake(0,0, MC_TabbarSafeBottomMargin, 0);//距离底部的距离，防止拉到最后被盖住
+            //底部无工具条,暂时不设置，不然会导致有黑线
+//            tableView.contentInset =UIEdgeInsetsMake(0,0, MC_TabbarSafeBottomMargin, 0);//距离底部的距离，防止拉到最后被盖住
         }
         tableView.scrollIndicatorInsets =tableView.contentInset;
     }

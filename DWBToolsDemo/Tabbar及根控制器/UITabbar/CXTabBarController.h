@@ -2,8 +2,8 @@
 //  CXTabBarController.h
 //  AiHenDeChaoXi
 //
-//  Created by 戴维保 on 2018/3/19.
-//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
+//  Created by 戴维保 on 2023/8/19.
+//  Copyright © 2023年 北京嗅美科技有限公司. All rights reserved.
 //
 //自定义tabbar
 #import <UIKit/UIKit.h>

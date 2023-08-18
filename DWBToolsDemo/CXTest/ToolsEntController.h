@@ -6,8 +6,8 @@
 //  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
 //
 //功能入口控制器
-#import "CXRootViewController.h"
+#import "CXBaseViewController.h"
 
-@interface ToolsEntController : CXRootViewController
+@interface ToolsEntController : CXBaseViewController
 
 @end

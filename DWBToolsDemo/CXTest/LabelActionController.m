@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-       self.titleNavLabel.text = @"点击指定文字";
+    self.titleNavLabel.text = @"点击指定文字";
     
     
     UILabel * label = [[UILabel alloc]init];

@@ -121,7 +121,7 @@
 - (UITableView *)tableView {
     if (!_tableView) {
         //        CGRectMake(0, MC_NavHeight, SCREEN_WIDTH, SCREEN_HEIGHT-MC_NavHeight)
-        _tableView=[[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, MC_NavHeight, SCREEN_WIDTH, SCREEN_HEIGHT-MC_NavHeight) style:UITableViewStylePlain];
         //iOS11、iPhoneX适配
         [UIView tablevieiOS11:_tableView isHaveTabbar:NO];
         _tableView.delegate=self;
@@ -130,15 +130,15 @@
         //tableview拖动时收起键盘
         //        _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
         //去掉分割线
-        //        _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
         [self.view addSubview:_tableView];
+        _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
         NSLog(@"%f",MC_NavHeight);
-        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.view);
-            make.top.mas_equalTo(self.view).offset(MC_NavHeight);
-            make.right.mas_equalTo(self.view);
-            make.bottom.mas_equalTo(self.view).offset(0);
-        }];
+//        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.mas_equalTo(self.view);
+//            make.top.mas_equalTo(self.view).offset(MC_NavHeight);
+//            make.right.mas_equalTo(self.view);
+//            make.bottom.mas_equalTo(self.view).offset(0);
+//        }];
         
     }
     

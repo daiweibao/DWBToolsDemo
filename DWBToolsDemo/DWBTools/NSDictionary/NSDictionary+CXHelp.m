@@ -164,7 +164,48 @@
     
 }
 
+/// 判断字典是否为空
+/// @param dict YES为空，NO不为空
++(BOOL)isNullDict:(NSDictionary *)dict{
+    BOOL isDict = YES;
+    if ([dict isKindOfClass:[NSDictionary class]]) {
+        isDict = YES;
+    }else if([dict isKindOfClass:[NSMutableDictionary class]]){
+        isDict = YES;
+    }else{
+        isDict = NO;
+    }
+    if (isDict==YES) {
+        if ([dict isKindOfClass:[NSNull class]]) {
+            return YES;
+        }else if ([dict isEqual:[NSNull null]]){
+            return YES;
+        }else if (dict.count == 0){
+            return YES;
+        }else if (dict == nil){
+            return YES;
+        }else{
+            return NO;
+        }
+    }else{
+       return YES;
+    }
+}
 
+
+/// 读取本地json文件（如：menuQry.json）
+/// @param jsonName json文件名，不包含.json后缀
+/// @return 字典数据
++ (NSDictionary *)getJsonDictionaryFileWithJsonName:(NSString *)jsonName{
+    //menuQry.json 读取的这类文件 导入文件时要勾选对应的：target 不然读取不到
+    //文件路径
+    NSString *path =[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@.json",jsonName] ofType:nil];
+    //转
+    NSString *jsonString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    //json转字典
+    NSDictionary *dictJson = [NSDictionary jsonToDictionaryWithJsonString:jsonString];
+    return dictJson;
+}
 
 
 

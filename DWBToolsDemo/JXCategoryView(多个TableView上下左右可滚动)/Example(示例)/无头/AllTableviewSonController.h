@@ -7,11 +7,11 @@
 //
 
 //子控制器
-#import "CXRootViewController.h"
+#import "CXBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AllTableviewSonController : CXRootViewController
+@interface AllTableviewSonController : CXBaseViewController
 - (void)loadDataForFirst;
 @end
 

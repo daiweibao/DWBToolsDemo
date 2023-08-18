@@ -6,7 +6,7 @@
 //  Copyright © 2018 潮汐科技有限公司. All rights reserved.
 //
 //自定义无头部
-#import "CXRootViewController.h"
+#import "CXBaseViewController.h"
 #import "JXBaseViewController.h"
 NS_ASSUME_NONNULL_BEGIN
 

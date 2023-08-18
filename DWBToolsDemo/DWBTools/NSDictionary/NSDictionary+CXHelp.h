@@ -62,4 +62,15 @@
  */
 + (void)NSLogDictModelPropertyWithDict:(NSDictionary *)dict;
 
+
+/// 判断字典是否为空
+/// @param dict YES为空，NO不为空
++(BOOL)isNullDict:(NSDictionary *)dict;
+
+
+/// 读取本地json文件（如：menuQry.json）
+/// @param jsonName json文件名，不包含.json后缀
+/// @return 字典数据
++ (NSDictionary *)getJsonDictionaryFileWithJsonName:(NSString *)jsonName;
+
 @end

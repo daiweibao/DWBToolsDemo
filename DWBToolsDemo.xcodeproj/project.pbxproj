@@ -56,7 +56,7 @@
 		36213F912143A5B900B00E2B /* BlankPagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F8D2143A5B900B00E2B /* BlankPagesView.m */; };
 		36213F922143A5B900B00E2B /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F8E2143A5B900B00E2B /* LoadingView.m */; };
 		36213FB52143A6A500B00E2B /* CXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F942143A6A500B00E2B /* CXTabBarController.m */; };
-		36213FB82143A6A500B00E2B /* CXRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F9A2143A6A500B00E2B /* CXRootViewController.m */; };
+		36213FB82143A6A500B00E2B /* CXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F9A2143A6A500B00E2B /* CXBaseViewController.m */; };
 		36213FB92143A6A500B00E2B /* tabbar-语音@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36213F9C2143A6A500B00E2B /* tabbar-语音@3x.png */; };
 		36213FBA2143A6A500B00E2B /* tabbar-缴费@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36213F9D2143A6A500B00E2B /* tabbar-缴费@3x.png */; };
 		36213FBB2143A6A500B00E2B /* tabbar-缴费@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36213F9E2143A6A500B00E2B /* tabbar-缴费@2x.png */; };
@@ -77,7 +77,6 @@
 		36213FCA2143A6A500B00E2B /* tabbar-我的S@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36213FAE2143A6A500B00E2B /* tabbar-我的S@2x.png */; };
 		36213FCB2143A6A500B00E2B /* tabbar-资讯S@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36213FAF2143A6A500B00E2B /* tabbar-资讯S@3x.png */; };
 		36213FCC2143A6A500B00E2B /* tabbar-资讯@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36213FB02143A6A500B00E2B /* tabbar-资讯@3x.png */; };
-		36213FCD2143A6A500B00E2B /* CXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FB42143A6A500B00E2B /* CXNavigationController.m */; };
 		36213FD02143A99D00B00E2B /* HopmeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FCF2143A99D00B00E2B /* HopmeViewController.m */; };
 		36213FD32143ABB000B00E2B /* ToolsEntController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FD22143ABB000B00E2B /* ToolsEntController.m */; };
 		362F7BA321489ECF00A8ECB1 /* UIButton+BigAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */; };
@@ -223,6 +222,14 @@
 		36FF0858217A1A3800791E59 /* DWBShareTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FF0856217A1A3800791E59 /* DWBShareTools.m */; };
 		EAC6D2142A8F1D3E00932BDA /* TienUITabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */; };
 		EAC6D4E32A8F5CB900932BDA /* tabbarTest.gif in Resources */ = {isa = PBXBuildFile; fileRef = EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */; };
+		EAC6D4E82A8F67F000932BDA /* nav_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAC6D4E62A8F67F000932BDA /* nav_back@2x.png */; };
+		EAC6D4E92A8F67F000932BDA /* nav_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAC6D4E72A8F67F000932BDA /* nav_back@3x.png */; };
+		EAC6D4F22A8F683700932BDA /* UINavigationController+SXFullScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D4EE2A8F683700932BDA /* UINavigationController+SXFullScreen.m */; };
+		EAC6D4F32A8F683700932BDA /* NSObject+SXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D4EF2A8F683700932BDA /* NSObject+SXRuntime.m */; };
+		EAC6D4F42A8F683700932BDA /* CXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D4F12A8F683700932BDA /* CXNavigationController.m */; };
+		EAC6D4FB2A8F734100932BDA /* UIButton+ActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D4FA2A8F734100932BDA /* UIButton+ActionButton.m */; };
+		EAC6D4FE2A8F738100932BDA /* UITextField+CSIILimit.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D4FC2A8F738100932BDA /* UITextField+CSIILimit.m */; };
+		EAC6D5032A8F754A00932BDA /* CXTestHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D5012A8F754A00932BDA /* CXTestHelp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -334,7 +341,7 @@
 		36213F8F2143A5B900B00E2B /* BlankPagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlankPagesView.h; sourceTree = "<group>"; };
 		36213F902143A5B900B00E2B /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
 		36213F942143A6A500B00E2B /* CXTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXTabBarController.m; sourceTree = "<group>"; };
-		36213F9A2143A6A500B00E2B /* CXRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXRootViewController.m; sourceTree = "<group>"; };
+		36213F9A2143A6A500B00E2B /* CXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXBaseViewController.m; sourceTree = "<group>"; };
 		36213F9C2143A6A500B00E2B /* tabbar-语音@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-语音@3x.png"; sourceTree = "<group>"; };
 		36213F9D2143A6A500B00E2B /* tabbar-缴费@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-缴费@3x.png"; sourceTree = "<group>"; };
 		36213F9E2143A6A500B00E2B /* tabbar-缴费@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-缴费@2x.png"; sourceTree = "<group>"; };
@@ -355,10 +362,8 @@
 		36213FAE2143A6A500B00E2B /* tabbar-我的S@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-我的S@2x.png"; sourceTree = "<group>"; };
 		36213FAF2143A6A500B00E2B /* tabbar-资讯S@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-资讯S@3x.png"; sourceTree = "<group>"; };
 		36213FB02143A6A500B00E2B /* tabbar-资讯@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-资讯@3x.png"; sourceTree = "<group>"; };
-		36213FB12143A6A500B00E2B /* CXNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNavigationController.h; sourceTree = "<group>"; };
-		36213FB22143A6A500B00E2B /* CXRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXRootViewController.h; sourceTree = "<group>"; };
+		36213FB22143A6A500B00E2B /* CXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXBaseViewController.h; sourceTree = "<group>"; };
 		36213FB32143A6A500B00E2B /* CXTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXTabBarController.h; sourceTree = "<group>"; };
-		36213FB42143A6A500B00E2B /* CXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNavigationController.m; sourceTree = "<group>"; };
 		36213FCE2143A99D00B00E2B /* HopmeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HopmeViewController.h; sourceTree = "<group>"; };
 		36213FCF2143A99D00B00E2B /* HopmeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HopmeViewController.m; sourceTree = "<group>"; };
 		36213FD12143ABB000B00E2B /* ToolsEntController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolsEntController.h; sourceTree = "<group>"; };
@@ -633,6 +638,21 @@
 		EAC6D2122A8F1D3D00932BDA /* TienUITabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TienUITabBar.h; sourceTree = "<group>"; };
 		EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TienUITabBar.m; sourceTree = "<group>"; };
 		EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tabbarTest.gif; sourceTree = "<group>"; };
+		EAC6D4E62A8F67F000932BDA /* nav_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back@2x.png"; sourceTree = "<group>"; };
+		EAC6D4E72A8F67F000932BDA /* nav_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back@3x.png"; sourceTree = "<group>"; };
+		EAC6D4EC2A8F683700932BDA /* UINavigationController+SXFullScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SXFullScreen.h"; sourceTree = "<group>"; };
+		EAC6D4ED2A8F683700932BDA /* NSObject+SXRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SXRuntime.h"; sourceTree = "<group>"; };
+		EAC6D4EE2A8F683700932BDA /* UINavigationController+SXFullScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SXFullScreen.m"; sourceTree = "<group>"; };
+		EAC6D4EF2A8F683700932BDA /* NSObject+SXRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SXRuntime.m"; sourceTree = "<group>"; };
+		EAC6D4F02A8F683700932BDA /* CXNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNavigationController.h; sourceTree = "<group>"; };
+		EAC6D4F12A8F683700932BDA /* CXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNavigationController.m; sourceTree = "<group>"; };
+		EAC6D4F92A8F734100932BDA /* UIButton+ActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ActionButton.h"; sourceTree = "<group>"; };
+		EAC6D4FA2A8F734100932BDA /* UIButton+ActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ActionButton.m"; sourceTree = "<group>"; };
+		EAC6D4FC2A8F738100932BDA /* UITextField+CSIILimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CSIILimit.m"; sourceTree = "<group>"; };
+		EAC6D4FD2A8F738100932BDA /* UITextField+CSIILimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+CSIILimit.h"; sourceTree = "<group>"; };
+		EAC6D4FF2A8F746F00932BDA /* CXReadText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXReadText.h; sourceTree = "<group>"; };
+		EAC6D5012A8F754A00932BDA /* CXTestHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXTestHelp.m; sourceTree = "<group>"; };
+		EAC6D5022A8F754A00932BDA /* CXTestHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXTestHelp.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -873,15 +893,10 @@
 		36213F932143A6A500B00E2B /* Tabbar及根控制器 */ = {
 			isa = PBXGroup;
 			children = (
-				36213F9B2143A6A500B00E2B /* Images */,
-				36213FB32143A6A500B00E2B /* CXTabBarController.h */,
-				36213F942143A6A500B00E2B /* CXTabBarController.m */,
-				EAC6D2122A8F1D3D00932BDA /* TienUITabBar.h */,
-				EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */,
-				36213FB12143A6A500B00E2B /* CXNavigationController.h */,
-				36213FB42143A6A500B00E2B /* CXNavigationController.m */,
-				36213FB22143A6A500B00E2B /* CXRootViewController.h */,
-				36213F9A2143A6A500B00E2B /* CXRootViewController.m */,
+				EAC6D4EA2A8F683700932BDA /* CXNav */,
+				EAC6D4E52A8F65BD00932BDA /* UITabbar */,
+				36213FB22143A6A500B00E2B /* CXBaseViewController.h */,
+				36213F9A2143A6A500B00E2B /* CXBaseViewController.m */,
 			);
 			path = "Tabbar及根控制器";
 			sourceTree = "<group>";
@@ -959,6 +974,8 @@
 		362F7BE521490F3A00A8ECB1 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				EAC6D4E62A8F67F000932BDA /* nav_back@2x.png */,
+				EAC6D4E72A8F67F000932BDA /* nav_back@3x.png */,
 				362F7BEA2149158600A8ECB1 /* 小黄车.png */,
 				362F7BE82149114B00A8ECB1 /* 微信@2x.png */,
 				362F7BE621490F4B00A8ECB1 /* WVstore_1024pt.png */,
@@ -969,6 +986,7 @@
 		3634E5A7217D5BB4002B43DD /* ProjectAbout(项目相关) */ = {
 			isa = PBXGroup;
 			children = (
+				36DA4A762147B59000048763 /* MacroHeaderHeader.h */,
 				3634E5A8217D5E42002B43DD /* AppConfig */,
 			);
 			path = "ProjectAbout(项目相关)";
@@ -1091,20 +1109,15 @@
 				36E8617F21AFBF3300180D78 /* JXCategoryView(多个TableView上下左右可滚动) */,
 				363BFB3621A958CF00666F8A /* Tableview头部带联动 */,
 				362F7BC82148B09300A8ECB1 /* README.md */,
+				EAC6D4FF2A8F746F00932BDA /* CXReadText.h */,
 				368C3AD8213F6ADB00C10B3E /* DWBToolsPrefixHeader.pch */,
-				36DA4A762147B59000048763 /* MacroHeaderHeader.h */,
 				368C39F5213F67C800C10B3E /* AppDelegate.h */,
 				368C39F6213F67C800C10B3E /* AppDelegate.m */,
 				36213FCE2143A99D00B00E2B /* HopmeViewController.h */,
 				36213FCF2143A99D00B00E2B /* HopmeViewController.m */,
-				36213FD12143ABB000B00E2B /* ToolsEntController.h */,
-				36213FD22143ABB000B00E2B /* ToolsEntController.m */,
-				362F7BE22148EE7E00A8ECB1 /* LabelActionController.h */,
-				362F7BE32148EE7E00A8ECB1 /* LabelActionController.m */,
-				3699114E21523AD4004B3C0D /* TestModel.h */,
-				3699114F21523AD4004B3C0D /* TestModel.m */,
 				368C39F8213F67C800C10B3E /* ViewController.h */,
 				368C39F9213F67C800C10B3E /* ViewController.m */,
+				EAC6D5002A8F750C00932BDA /* CXTest */,
 				362F7BE521490F3A00A8ECB1 /* Image */,
 				368C39FB213F67C800C10B3E /* Main.storyboard */,
 				368C39FE213F67C900C10B3E /* Assets.xcassets */,
@@ -1145,6 +1158,7 @@
 				368E69D32140C479000EC79C /* UIFont */,
 				368C3BFC213FB44800C10B3E /* HUD */,
 				36213F02214364BD00B00E2B /* DWBAlertView */,
+				EAC6D4F52A8F724900932BDA /* UIButton */,
 				36D3784B213FEF3900E768AF /* UIView */,
 				368E69EA2140D260000EC79C /* NetWork */,
 				36EEDCB0214208C3000CBEEB /* NetworkCache（数据缓存） */,
@@ -1200,6 +1214,8 @@
 		368E69DA2140C576000EC79C /* UITextField */ = {
 			isa = PBXGroup;
 			children = (
+				EAC6D4FD2A8F738100932BDA /* UITextField+CSIILimit.h */,
+				EAC6D4FC2A8F738100932BDA /* UITextField+CSIILimit.m */,
 				36213F1921439A3100B00E2B /* ZBHTextView.h */,
 				36213F1821439A3100B00E2B /* ZBHTextView.m */,
 				368E69DB2140C58B000EC79C /* UITextField+WJ.h */,
@@ -1237,18 +1253,12 @@
 				368E69C82140C1A5000EC79C /* UIView+ActionTap.m */,
 				36D3784C213FEF7C00E768AF /* CopyLabel.h */,
 				36D3784F213FEF7C00E768AF /* CopyLabel.m */,
-				36D3784D213FEF7C00E768AF /* DragEnableButton.h */,
-				36D3784E213FEF7C00E768AF /* DragEnableButton.m */,
-				368E69BE2140B538000EC79C /* UIButton+SSEdgeInsets.h */,
-				368E69BF2140B538000EC79C /* UIButton+SSEdgeInsets.m */,
 				368E69CA2140C231000EC79C /* UIView+Animation.h */,
 				368E69CB2140C231000EC79C /* UIView+Animation.m */,
 				368E69CE2140C27C000EC79C /* UIView+Extension.h */,
 				368E69D02140C27D000EC79C /* UIView+Extension.m */,
 				368E69CD2140C27C000EC79C /* UIView+Help.h */,
 				368E69CF2140C27D000EC79C /* UIView+Help.m */,
-				362F7BA121489ECF00A8ECB1 /* UIButton+BigAction.h */,
-				362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */,
 				362F7BCA2148BE7B00A8ECB1 /* UIScrollView+Help.h */,
 				362F7BCB2148BE7B00A8ECB1 /* UIScrollView+Help.m */,
 				362F7BDF2148EB4400A8ECB1 /* UILabel+Click.h */,
@@ -1625,6 +1635,69 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EAC6D4E52A8F65BD00932BDA /* UITabbar */ = {
+			isa = PBXGroup;
+			children = (
+				36213F9B2143A6A500B00E2B /* Images */,
+				36213FB32143A6A500B00E2B /* CXTabBarController.h */,
+				36213F942143A6A500B00E2B /* CXTabBarController.m */,
+				EAC6D2122A8F1D3D00932BDA /* TienUITabBar.h */,
+				EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */,
+			);
+			path = UITabbar;
+			sourceTree = "<group>";
+		};
+		EAC6D4EA2A8F683700932BDA /* CXNav */ = {
+			isa = PBXGroup;
+			children = (
+				EAC6D4EB2A8F683700932BDA /* FullscreenPopGesture */,
+				EAC6D4F02A8F683700932BDA /* CXNavigationController.h */,
+				EAC6D4F12A8F683700932BDA /* CXNavigationController.m */,
+			);
+			path = CXNav;
+			sourceTree = "<group>";
+		};
+		EAC6D4EB2A8F683700932BDA /* FullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				EAC6D4EC2A8F683700932BDA /* UINavigationController+SXFullScreen.h */,
+				EAC6D4EE2A8F683700932BDA /* UINavigationController+SXFullScreen.m */,
+				EAC6D4ED2A8F683700932BDA /* NSObject+SXRuntime.h */,
+				EAC6D4EF2A8F683700932BDA /* NSObject+SXRuntime.m */,
+			);
+			path = FullscreenPopGesture;
+			sourceTree = "<group>";
+		};
+		EAC6D4F52A8F724900932BDA /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				EAC6D4F92A8F734100932BDA /* UIButton+ActionButton.h */,
+				EAC6D4FA2A8F734100932BDA /* UIButton+ActionButton.m */,
+				36D3784D213FEF7C00E768AF /* DragEnableButton.h */,
+				36D3784E213FEF7C00E768AF /* DragEnableButton.m */,
+				368E69BE2140B538000EC79C /* UIButton+SSEdgeInsets.h */,
+				368E69BF2140B538000EC79C /* UIButton+SSEdgeInsets.m */,
+				362F7BA121489ECF00A8ECB1 /* UIButton+BigAction.h */,
+				362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		EAC6D5002A8F750C00932BDA /* CXTest */ = {
+			isa = PBXGroup;
+			children = (
+				36213FD12143ABB000B00E2B /* ToolsEntController.h */,
+				36213FD22143ABB000B00E2B /* ToolsEntController.m */,
+				EAC6D5022A8F754A00932BDA /* CXTestHelp.h */,
+				EAC6D5012A8F754A00932BDA /* CXTestHelp.m */,
+				362F7BE22148EE7E00A8ECB1 /* LabelActionController.h */,
+				362F7BE32148EE7E00A8ECB1 /* LabelActionController.m */,
+				3699114E21523AD4004B3C0D /* TestModel.h */,
+				3699114F21523AD4004B3C0D /* TestModel.m */,
+			);
+			path = CXTest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1740,6 +1813,7 @@
 				362F7BBD2148ACF000A8ECB1 /* ChatFace_icon@2x.png in Resources */,
 				36213FC62143A6A500B00E2B /* tabbar-门禁S@2x.png in Resources */,
 				362F7BE92149114B00A8ECB1 /* 微信@2x.png in Resources */,
+				EAC6D4E92A8F67F000932BDA /* nav_back@3x.png in Resources */,
 				36EEDCAD21420794000CBEEB /* scanSuccess.wav in Resources */,
 				36213FC52143A6A500B00E2B /* 黑色返回@2x.png in Resources */,
 				36E861EF21AFBF3300180D78 /* lufei.jpg in Resources */,
@@ -1762,6 +1836,7 @@
 				36213FBB2143A6A500B00E2B /* tabbar-缴费@2x.png in Resources */,
 				362F7BC02148ACF000A8ECB1 /* keyboard_preview_bg@2x.png in Resources */,
 				36213FBA2143A6A500B00E2B /* tabbar-缴费@3x.png in Resources */,
+				EAC6D4E82A8F67F000932BDA /* nav_back@2x.png in Resources */,
 				36213F7321439EC100B00E2B /* 上拉加载中@3x.png in Resources */,
 				36EEDCAC21420794000CBEEB /* 扫码线@2x.png in Resources */,
 				36213FCC2143A6A500B00E2B /* tabbar-资讯@3x.png in Resources */,
@@ -1906,14 +1981,14 @@
 				36E861F221AFBF3300180D78 /* MyCenterHeaderView.m in Sources */,
 				36E8621A21AFBF3300180D78 /* DWBJXCategoryMyView.m in Sources */,
 				36446185218D819D00B9E01E /* UIViewController+CXHelp.m in Sources */,
-				36213FB82143A6A500B00E2B /* CXRootViewController.m in Sources */,
+				36213FB82143A6A500B00E2B /* CXBaseViewController.m in Sources */,
 				368C3C04213FB44800C10B3E /* DWBToast.m in Sources */,
 				362F7BBA2148ACF000A8ECB1 /* STEmoji.m in Sources */,
 				36E8621321AFBF3300180D78 /* JXCategoryBaseCell.m in Sources */,
 				36213F6821439DB700B00E2B /* DWB_refreshHeader.m in Sources */,
+				EAC6D4FB2A8F734100932BDA /* UIButton+ActionButton.m in Sources */,
 				368E69D92140C49B000EC79C /* UIFont+FontNameSize.m in Sources */,
 				368E69E62140C5BF000EC79C /* TouchIDHelp.m in Sources */,
-				36213FCD2143A6A500B00E2B /* CXNavigationController.m in Sources */,
 				36E861F821AFBF3300180D78 /* JXCategoryIndicatorImageView.m in Sources */,
 				368E69D82140C49B000EC79C /* UIFont+FontNameBoldSize.m in Sources */,
 				36EEDCAF21420794000CBEEB /* ScanResultsController.m in Sources */,
@@ -1949,7 +2024,9 @@
 				36213F1A21439A3100B00E2B /* ZBHTextView.m in Sources */,
 				36213F172143652C00B00E2B /* DWBAlertView.m in Sources */,
 				36213F8B2143A4BF00B00E2B /* CXWebViewController.m in Sources */,
+				EAC6D4F42A8F683700932BDA /* CXNavigationController.m in Sources */,
 				36E8620421AFBF3300180D78 /* JXCategoryTitleImageCellModel.m in Sources */,
+				EAC6D4F22A8F683700932BDA /* UINavigationController+SXFullScreen.m in Sources */,
 				36E861F321AFBF3300180D78 /* AllTableviewSonController.m in Sources */,
 				36E8621821AFBF3300180D78 /* JXPagerListRefreshView.m in Sources */,
 				36213F1E21439AD000B00E2B /* JHViewLoading.m in Sources */,
@@ -1971,10 +2048,12 @@
 				36E861F021AFBF3300180D78 /* MyCenterMainController.m in Sources */,
 				36213F842143A0F100B00E2B /* PhotoView.m in Sources */,
 				36E8620321AFBF3300180D78 /* JXCategoryTitleImageCell.m in Sources */,
+				EAC6D4FE2A8F738100932BDA /* UITextField+CSIILimit.m in Sources */,
 				36213F6A21439DB700B00E2B /* MJDIYHeader.m in Sources */,
 				36D37858213FF05D00E768AF /* getUUID.m in Sources */,
 				36E8621021AFBF3300180D78 /* JXCategoryCollectionView.m in Sources */,
 				368E69E42140C5BF000EC79C /* CXSystemStatus.m in Sources */,
+				EAC6D4F32A8F683700932BDA /* NSObject+SXRuntime.m in Sources */,
 				36213F2A21439B3700B00E2B /* JDStatusBarNotification.m in Sources */,
 				362F7BB72148ACF000A8ECB1 /* STEmojiCollectionView.m in Sources */,
 				36E861F421AFBF3300180D78 /* JXBaseViewController.m in Sources */,
@@ -2005,6 +2084,7 @@
 				362F7BA321489ECF00A8ECB1 /* UIButton+BigAction.m in Sources */,
 				36E8621621AFBF3300180D78 /* JXPagerMainTableView.m in Sources */,
 				36213F4B21439C1400B00E2B /* SVRadialGradientLayer.m in Sources */,
+				EAC6D5032A8F754A00932BDA /* CXTestHelp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

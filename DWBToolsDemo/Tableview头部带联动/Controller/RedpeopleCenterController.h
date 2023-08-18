@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CXRootViewController.h"
-@interface RedpeopleCenterController : CXRootViewController
+#import "CXBaseViewController.h"
+@interface RedpeopleCenterController : CXBaseViewController
 //红人Id
 @property(nonatomic,strong)NSNumber * redPersonId;
 @end

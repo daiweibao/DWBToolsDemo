@@ -13,6 +13,20 @@
 
 #ifndef DWBHelpHeader_h
 #define DWBHelpHeader_h
+/*
+#ifdef只关心宏是否被定义，不关心宏逻辑的真假
+ 解释：#ifdef CXDEBUG表示 CXDEBUG 否被定义，如果定义了就走这里。上线手动注掉
+*/
+
+#ifdef DEBUG
+//在系统的debug环境下定义自定义环境
+#warning ---上线修改---
+#define CXDEBUG //上线手动注掉这个定义，表示走生产环境，防止打包的时候忘记选Release环境
+
+#else
+//生产环境不定义
+#endif
+
 
 #pragma mark ============ 系统头文件 S=====================
 #import<Foundation/Foundation.h>//必须导入
@@ -251,6 +265,8 @@ _Pragma("clang diagnostic pop") \
 
 //宏定义颜色
 #define MAIN_COLOR [UIColor colorWithHexString:@"#44617B"]//主题色(蓝紫色)--王府管家
+//导航背景色
+#define kMainColor_NavBG [UIColor colorWithHexString:@"#FFFFFF"]
 
 #define MAIN_COLOR_AlertBJ [UIColor colorWithRed:129/255.0 green:129/255.0 blue:129/255.0 alpha:0.7]//蒙版半透明黑色背景
 

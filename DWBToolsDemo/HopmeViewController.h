@@ -6,8 +6,8 @@
 //  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
 //
 
-#import "CXRootViewController.h"
+#import "CXBaseViewController.h"
 
-@interface HopmeViewController : CXRootViewController
+@interface HopmeViewController : CXBaseViewController
 
 @end

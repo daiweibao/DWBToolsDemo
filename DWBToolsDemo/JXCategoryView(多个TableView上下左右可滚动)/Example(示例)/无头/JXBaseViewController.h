@@ -8,12 +8,12 @@
 //无组头父类
 #import <UIKit/UIKit.h>
 #import "JXCategoryView.h"
-#import "CXRootViewController.h"
+#import "CXBaseViewController.h"
 NS_ASSUME_NONNULL_BEGIN
 
 #define WindowsSize [UIScreen mainScreen].bounds.size
 
-@interface JXBaseViewController : CXRootViewController
+@interface JXBaseViewController : CXBaseViewController
 
 
 @property (nonatomic, assign) BOOL isNeedIndicatorPositionChangeItem;
