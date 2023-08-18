@@ -347,13 +347,7 @@
  */
 +(NSString *)formatNumPointFloat:(NSString *)strNum;
 
-/**
- url网址转化成字典--在用
- 
- @param urlStr 网址url
- @return 字典
- */
-+(NSDictionary *)dictionaryWithUrlString:(NSString *)urlStr;
+
 
 /**
  判断字符串是否是纯数字，c语言方法
@@ -393,6 +387,11 @@
  @return 结果
  */
 + (BOOL)isHttpStringWithWeb:(NSString *)infor;
+
+
+/// 隐藏手机号中间4位
+/// @param phoneNum 返回隐藏后的数据
++ (NSString *)hiddenPhoneNum:(NSString *)phoneNum;
 
 
 

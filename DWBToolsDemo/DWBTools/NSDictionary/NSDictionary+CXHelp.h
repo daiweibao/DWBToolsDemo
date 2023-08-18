@@ -73,4 +73,12 @@
 /// @return 字典数据
 + (NSDictionary *)getJsonDictionaryFileWithJsonName:(NSString *)jsonName;
 
+/**
+ url网址转化成字典--在用
+ 
+ @param urlStr 网址url
+ @return 字典
+ */
++(NSDictionary *)dictionaryWithUrlString:(NSString *)urlStr;
+
 @end

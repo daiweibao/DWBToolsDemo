@@ -207,6 +207,43 @@
     return dictJson;
 }
 
+/**
+ url网址转化成字典--在用
+ 
+ @param urlStr 网址url
+ @return 字典
+ */
++(NSDictionary *)dictionaryWithUrlString:(NSString *)urlStr
+{
+    if ([NSString isNULL:urlStr]) {
+        return nil;
+    }
+    if (urlStr && urlStr.length && [urlStr rangeOfString:@"?"].length == 1) {
+        NSArray *array = [urlStr componentsSeparatedByString:@"?"];
+        if (array && array.count == 2) {
+            NSString *paramsStr = array[1];
+            if (paramsStr.length) {
+                NSMutableDictionary *paramsDict = [NSMutableDictionary dictionary];
+                NSArray *paramArray = [paramsStr componentsSeparatedByString:@"&"];
+                for (NSString *param in paramArray) {
+                    if (param && param.length) {
+                        NSArray *parArr = [param componentsSeparatedByString:@"="];
+                        if (parArr.count == 2) {
+                            [paramsDict setObject:parArr[1] forKey:parArr[0]];
+                        }
+                    }
+                }
+                return paramsDict;
+            }else{
+                return nil;
+            }
+        }else{
+            return nil;
+        }
+    }else{
+        return nil;
+    }
+}
 
 
 
