@@ -162,6 +162,8 @@
     //其他默认要设置UITableView的组头组脚高度为0.01，否则默认都是20
     [tableView setSectionHeaderHeight:0.01f];
     [tableView setSectionFooterHeight:0.01f];
+    
+    //注意：如果tabbar组头组角有黑线，请设置viewForHeaderInSection 与 viewForFooterInSection 就能消除
 
 #pragma mark ======== iOS11 tableview偏移适配 E==============
 }

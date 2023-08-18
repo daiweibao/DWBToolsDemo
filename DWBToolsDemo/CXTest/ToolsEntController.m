@@ -131,7 +131,7 @@
         //        _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
         //去掉分割线
         [self.view addSubview:_tableView];
-        _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+//        _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
         NSLog(@"%f",MC_NavHeight);
 //        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
 //            make.left.mas_equalTo(self.view);
@@ -167,6 +167,18 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.01;
 }
+
+//设置下分组头，不然顶部会有黑线
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *headerGroupView = [[UIView alloc]init];
+    return headerGroupView;
+}
+//设置下分组脚，不然底部会有黑线
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *footGroupView = [[UIView alloc]init];
+    return footGroupView;
+}
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
