@@ -17,6 +17,12 @@
  */
 + (UIViewController*)getTopWindowController;
 
+/// 获取当前显示的控制器
++(UIViewController *)getCurrentVC;
+
+/// 获取当前显示的控制器
++(UIViewController *)getCurrentVCTWO;
+
 /**
  移除销毁导航中的指定控制器，在当前控制器controller--push后再调用
  

@@ -62,10 +62,10 @@
 
     NSLog(@"%@",parmeterDict);
 
-    
-    NSDictionary * divtCX  = @{@"name":@"名字",@"munber":SDict};
-
-    NSLog(@"%@",divtCX);
+//    
+//    NSDictionary * divtCX  = @{@"name":@"名字",@"munber":SDict};
+//
+//    NSLog(@"%@",divtCX);
     
     NSArray * arrayCX = @[SDict,@"数组"];
 

@@ -56,8 +56,6 @@
 		36213F912143A5B900B00E2B /* BlankPagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F8D2143A5B900B00E2B /* BlankPagesView.m */; };
 		36213F922143A5B900B00E2B /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F8E2143A5B900B00E2B /* LoadingView.m */; };
 		36213FB52143A6A500B00E2B /* CXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F942143A6A500B00E2B /* CXTabBarController.m */; };
-		36213FB62143A6A500B00E2B /* CXTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F962143A6A500B00E2B /* CXTabbar.m */; };
-		36213FB72143A6A500B00E2B /* TBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F972143A6A500B00E2B /* TBTabBar.m */; };
 		36213FB82143A6A500B00E2B /* CXRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F9A2143A6A500B00E2B /* CXRootViewController.m */; };
 		36213FB92143A6A500B00E2B /* tabbar-语音@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36213F9C2143A6A500B00E2B /* tabbar-语音@3x.png */; };
 		36213FBA2143A6A500B00E2B /* tabbar-缴费@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36213F9D2143A6A500B00E2B /* tabbar-缴费@3x.png */; };
@@ -82,7 +80,6 @@
 		36213FCD2143A6A500B00E2B /* CXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FB42143A6A500B00E2B /* CXNavigationController.m */; };
 		36213FD02143A99D00B00E2B /* HopmeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FCF2143A99D00B00E2B /* HopmeViewController.m */; };
 		36213FD32143ABB000B00E2B /* ToolsEntController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213FD22143ABB000B00E2B /* ToolsEntController.m */; };
-		3621B7722192D2040000BDFA /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3621B7712192D2040000BDFA /* NSDictionary+NilSafe.m */; };
 		362F7BA321489ECF00A8ECB1 /* UIButton+BigAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */; };
 		362F7BB72148ACF000A8ECB1 /* STEmojiCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 362F7BA52148ACF000A8ECB1 /* STEmojiCollectionView.m */; };
 		362F7BB82148ACF000A8ECB1 /* emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 362F7BA62148ACF000A8ECB1 /* emoji.json */; };
@@ -224,6 +221,8 @@
 		36EEDCC1214209FE000CBEEB /* CXVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCBA214209FE000CBEEB /* CXVersionUpdate.m */; };
 		36EEDCC2214209FE000CBEEB /* DownUpdateAppAleat.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCBB214209FE000CBEEB /* DownUpdateAppAleat.m */; };
 		36FF0858217A1A3800791E59 /* DWBShareTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FF0856217A1A3800791E59 /* DWBShareTools.m */; };
+		EAC6D2142A8F1D3E00932BDA /* TienUITabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */; };
+		EAC6D4E32A8F5CB900932BDA /* tabbarTest.gif in Resources */ = {isa = PBXBuildFile; fileRef = EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -335,10 +334,6 @@
 		36213F8F2143A5B900B00E2B /* BlankPagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlankPagesView.h; sourceTree = "<group>"; };
 		36213F902143A5B900B00E2B /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
 		36213F942143A6A500B00E2B /* CXTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXTabBarController.m; sourceTree = "<group>"; };
-		36213F962143A6A500B00E2B /* CXTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXTabbar.m; sourceTree = "<group>"; };
-		36213F972143A6A500B00E2B /* TBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBTabBar.m; sourceTree = "<group>"; };
-		36213F982143A6A500B00E2B /* CXTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXTabbar.h; sourceTree = "<group>"; };
-		36213F992143A6A500B00E2B /* TBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTabBar.h; sourceTree = "<group>"; };
 		36213F9A2143A6A500B00E2B /* CXRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXRootViewController.m; sourceTree = "<group>"; };
 		36213F9C2143A6A500B00E2B /* tabbar-语音@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-语音@3x.png"; sourceTree = "<group>"; };
 		36213F9D2143A6A500B00E2B /* tabbar-缴费@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-缴费@3x.png"; sourceTree = "<group>"; };
@@ -368,8 +363,6 @@
 		36213FCF2143A99D00B00E2B /* HopmeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HopmeViewController.m; sourceTree = "<group>"; };
 		36213FD12143ABB000B00E2B /* ToolsEntController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolsEntController.h; sourceTree = "<group>"; };
 		36213FD22143ABB000B00E2B /* ToolsEntController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolsEntController.m; sourceTree = "<group>"; };
-		3621B7702192D2040000BDFA /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
-		3621B7712192D2040000BDFA /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
 		362F7BA121489ECF00A8ECB1 /* UIButton+BigAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+BigAction.h"; sourceTree = "<group>"; };
 		362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BigAction.m"; sourceTree = "<group>"; };
 		362F7BA52148ACF000A8ECB1 /* STEmojiCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEmojiCollectionView.m; sourceTree = "<group>"; };
@@ -637,6 +630,9 @@
 		5B2AD26055BB273DD4351B06 /* Pods-DWBToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		6C09C75787C5C6594A6B0EA4 /* libPods-DWBToolsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DWBToolsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53F89B2E10274ABDD3C0872 /* Pods-DWBToolsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		EAC6D2122A8F1D3D00932BDA /* TienUITabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TienUITabBar.h; sourceTree = "<group>"; };
+		EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TienUITabBar.m; sourceTree = "<group>"; };
+		EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tabbarTest.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -680,8 +676,6 @@
 				3600708B21A2630E00A6BEE9 /* UILabel+RemoveNull.m */,
 				36DE4FEB218D96D200C3FE40 /* NSObject+DWBKVOCrash.h */,
 				36DE4FEC218D96D200C3FE40 /* NSObject+DWBKVOCrash.m */,
-				3621B7702192D2040000BDFA /* NSDictionary+NilSafe.h */,
-				3621B7712192D2040000BDFA /* NSDictionary+NilSafe.m */,
 				360F0FC5218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.h */,
 				360F0FC6218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m */,
 				360F0F94218067B6006A7835 /* NSMutableArray+Swizzling.h */,
@@ -880,31 +874,22 @@
 			isa = PBXGroup;
 			children = (
 				36213F9B2143A6A500B00E2B /* Images */,
-				36213F952143A6A500B00E2B /* 中间凸出的tabbar */,
-				36213FB12143A6A500B00E2B /* CXNavigationController.h */,
-				36213FB42143A6A500B00E2B /* CXNavigationController.m */,
 				36213FB32143A6A500B00E2B /* CXTabBarController.h */,
 				36213F942143A6A500B00E2B /* CXTabBarController.m */,
+				EAC6D2122A8F1D3D00932BDA /* TienUITabBar.h */,
+				EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */,
+				36213FB12143A6A500B00E2B /* CXNavigationController.h */,
+				36213FB42143A6A500B00E2B /* CXNavigationController.m */,
 				36213FB22143A6A500B00E2B /* CXRootViewController.h */,
 				36213F9A2143A6A500B00E2B /* CXRootViewController.m */,
 			);
 			path = "Tabbar及根控制器";
 			sourceTree = "<group>";
 		};
-		36213F952143A6A500B00E2B /* 中间凸出的tabbar */ = {
-			isa = PBXGroup;
-			children = (
-				36213F982143A6A500B00E2B /* CXTabbar.h */,
-				36213F962143A6A500B00E2B /* CXTabbar.m */,
-				36213F992143A6A500B00E2B /* TBTabBar.h */,
-				36213F972143A6A500B00E2B /* TBTabBar.m */,
-			);
-			path = "中间凸出的tabbar";
-			sourceTree = "<group>";
-		};
 		36213F9B2143A6A500B00E2B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */,
 				36213F9C2143A6A500B00E2B /* tabbar-语音@3x.png */,
 				36213F9D2143A6A500B00E2B /* tabbar-缴费@3x.png */,
 				36213F9E2143A6A500B00E2B /* tabbar-缴费@2x.png */,
@@ -1789,6 +1774,7 @@
 				36213F7521439EC100B00E2B /* 加载中icon@2x.png in Resources */,
 				36EEDCAA21420794000CBEEB /* 扫码线@3x.png in Resources */,
 				36213F7421439EC100B00E2B /* 加载中icon@3x.png in Resources */,
+				EAC6D4E32A8F5CB900932BDA /* tabbarTest.gif in Resources */,
 				36EEDCC0214209FE000CBEEB /* 版本检测弹窗关闭@2x.png in Resources */,
 				36EEDCBE214209FE000CBEEB /* 版本更新背景@3x.png in Resources */,
 				362F7BC22148ACF000A8ECB1 /* keyboard_btn_delete@3x.png in Resources */,
@@ -1898,7 +1884,6 @@
 				36213F2B21439B3700B00E2B /* JDStatusBarNotification+KZ.m in Sources */,
 				36E861F721AFBF3300180D78 /* JXCategoryIndicatorTriangleView.m in Sources */,
 				36EEDCC2214209FE000CBEEB /* DownUpdateAppAleat.m in Sources */,
-				3621B7722192D2040000BDFA /* NSDictionary+NilSafe.m in Sources */,
 				36213F2E21439B3700B00E2B /* JDStatusBarStyle.m in Sources */,
 				36E8620921AFBF3300180D78 /* JXCategoryImageCell.m in Sources */,
 				36213F6521439DB700B00E2B /* UIScrollView+EndRefresh.m in Sources */,
@@ -1917,8 +1902,8 @@
 				368E69DD2140C58B000EC79C /* UITextField+WJ.m in Sources */,
 				36213F7C21439FB300B00E2B /* HTMLWebView.m in Sources */,
 				36213F6B21439DB700B00E2B /* MJChiBaoZiHeader.m in Sources */,
+				EAC6D2142A8F1D3E00932BDA /* TienUITabBar.m in Sources */,
 				36E861F221AFBF3300180D78 /* MyCenterHeaderView.m in Sources */,
-				36213FB72143A6A500B00E2B /* TBTabBar.m in Sources */,
 				36E8621A21AFBF3300180D78 /* DWBJXCategoryMyView.m in Sources */,
 				36446185218D819D00B9E01E /* UIViewController+CXHelp.m in Sources */,
 				36213FB82143A6A500B00E2B /* CXRootViewController.m in Sources */,
@@ -1982,7 +1967,6 @@
 				36213F922143A5B900B00E2B /* LoadingView.m in Sources */,
 				36213F4E21439C1400B00E2B /* SVIndefiniteAnimatedView.m in Sources */,
 				36E861F521AFBF3300180D78 /* DWBJXMainController.m in Sources */,
-				36213FB62143A6A500B00E2B /* CXTabbar.m in Sources */,
 				362F7BCC2148BE7B00A8ECB1 /* UIScrollView+Help.m in Sources */,
 				36E861F021AFBF3300180D78 /* MyCenterMainController.m in Sources */,
 				36213F842143A0F100B00E2B /* PhotoView.m in Sources */,

@@ -8,202 +8,165 @@
 
 #import "CXTabBarController.h"
 #import "CXNavigationController.h"
-//tabbar
-#import "TBTabBar.h"
-//自己定义的tabbar
-#import "CXTabbar.h"
-//首页
+//tabbar的item
+#import "TienUITabBar.h"
+
+//控制器
 #import "HopmeViewController.h"
 
 
-@interface CXTabBarController ()<UITabBarControllerDelegate>
-/** 之前被选中的UITabBarItem */
-@property (nonatomic, strong) UITabBarItem *lastItem;
-
-//语音控制器
-@property(nonatomic,strong)UIViewController *voiceVC;
+@interface CXTabBarController ()<TienUITabBarDelegate>
+///自定义tabBar的item
+@property (nonatomic ,strong) TienUITabBar *myTabBar;
+@property (nonatomic, strong) NSMutableArray *imagesArray;//存放图片
+@property(nonatomic, strong) NSMutableArray *tabbarArray;//存放控制器
+@property(nonatomic, strong) UIView *bottomView;//自定义tabbar的View
 
 @end
 
 @implementation CXTabBarController
 
+//初始化tabbar
++ (CXTabBarController *)shareTabBarController{
+    static CXTabBarController *sharedSVC;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedSVC = [[CXTabBarController alloc] init];
+    });
+    return sharedSVC;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 初始化所有控制器
-    [self setUpChildVC];
-    
-    // 创建tabbar中间的tabbarItem
-    [self setUpMidelTabbarItem];
-    
-    self.delegate = self;//设置代理
+    // Do any additional setup after loading the view.
+    self.delegate = self;
+    self.view.backgroundColor = [UIColor whiteColor];
     
 }
 
-#pragma mark -创建tabbar中间的tabbarItem
-
-- (void)setUpMidelTabbarItem {
-    
-    
-//    TBTabBar *tabBar = [[TBTabBar alloc] init];//凸出的tabbar
-    
-//    UITabBar *tabBar = [[UITabBar alloc] init];//不凸出的tabbar
-    
-     CXTabbar *tabBar = [[CXTabbar alloc] init]; //自己定义的tabbar
-    
-    // KVC：如果要修系统的某些属性，但被设为readOnly，就是用KVC，即setValue：forKey：。
-    [self setValue:tabBar forKey:@"tabBar"];
-    
-    //去掉黑线,然后替换tabbar上面那一条线,下面两个方法必须同时设置，否则无效imageWithColor是根据颜色生成图片的封装
-    [tabBar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor] size:CGSizeMake(self.view.frame.size.width, .5)]];
-    //添加tabbar黑线
-    [tabBar setShadowImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"#D8D8D8"] size:CGSizeMake(self.view.frame.size.width, .5)]];
-    
-
-//    //tabbar添加阴影
-//    tabBar.layer.shadowColor = [UIColor blackColor].CGColor;
-//    tabBar.layer.shadowOffset = CGSizeMake(0, -2);
-//    tabBar.layer.shadowOpacity = 0.1;
-//    tabBar.layer.shadowRadius =1;
-
-//
-    //（3）设置其他属性
-    tabBar.barTintColor = [UIColor whiteColor];//设置tabbar背景颜色
-    tabBar.translucent = NO;
-    
-    
-    // 二次点击触发刷新将默认被选中的tabBarItem保存为属性
-    self.lastItem = tabBar.selectedItem;
-    
-    
-    
-    //中间发布按钮点击回调(屏蔽掉就就换成不突出的)
-    __weak typeof(self) weakSelf = self;
-    [tabBar setDidClickPublishBtn:^{
-        //凸出按钮点击事件
-        //点击按钮选中语音tabbar
-         weakSelf.selectedIndex = 2;
-      
-        
-    }];
-    
-    //button抬起
-    [tabBar setDidClickPublishBtnRemo:^{
-        //按钮抬起来
-       
-        
-    }];
-
-
-}
-
-
-#pragma mark -初始化所有控制器
-
-- (void)setUpChildVC {
-    
-    HopmeViewController *homeVC = [[HopmeViewController alloc] init];
-    //设置角标数量
-    //    homeVC.tabBarItem.badgeValue = @"1111";
-    
-    [self setChildVC:homeVC title:@"首页" image:@"tabbar-资讯" selectedImage:@"tabbar-资讯S"];
-    
-    UIViewController *SecondVC = [[UIViewController alloc] init];
-    [self setChildVC:SecondVC title:@"测试1" image:@"tabbar-缴费"  selectedImage:@"tabbar-缴费S"];
-    
-    //语音
-    UIViewController *voiceVC = [[UIViewController alloc] init];
-    self.voiceVC = voiceVC;
-    [self setChildVC:voiceVC title:@"" image:@""  selectedImage:@""];//什么都不设置
-
-    //开门
-    UIViewController *messageVC = [[UIViewController alloc] init];
-    [self setChildVC:messageVC title:@"测试2" image:@"tabbar-门禁"  selectedImage:@"tabbar-门禁S"];
-    
-    //我的
-    UIViewController *myVC = [[UIViewController alloc] init];
-    [self setChildVC:myVC title:@"我的" image:@"tabbar-我的" selectedImage:@"tabbar-我的S"];
-}
-
-//设置子控制器
-- (void) setChildVC:(UIViewController *)childVC title:(NSString *) title image:(NSString *) image selectedImage:(NSString *) selectedImage {
-    childVC.tabBarItem.title = title;
-    //设置字体属性
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    dict[NSForegroundColorAttributeName] = [UIColor colorWithHexString:@"#999999"];
-    dict[NSFontAttributeName] = [UIFont systemFontOfSize:12];
-    
-    //设置字体属性(选中)
-    NSMutableDictionary *dictSelect = [NSMutableDictionary dictionary];
-    dictSelect[NSForegroundColorAttributeName] = [UIColor blackColor];
-    dictSelect[NSFontAttributeName] = [UIFont systemFontOfSize:12];
-    
-    //禁用渲染
-    [childVC.tabBarItem setTitleTextAttributes:dict forState:UIControlStateNormal];
-    [childVC.tabBarItem setTitleTextAttributes:dictSelect forState:UIControlStateSelected];
-    
-    //设置图片
-    childVC.tabBarItem.image = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    childVC.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    
-    //字控制器图片调整文字图片位置
-    childVC.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -4);
-    childVC.tabBarItem.imageInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-    
-    // 二次点击触发刷新将默认被选中的tabBarItem保存为属性
-    self.lastItem = self.tabBar.selectedItem;
-    
-    //导航
-    CXNavigationController *nav = [[CXNavigationController alloc] initWithRootViewController:childVC];
-    //    nav.navigationBar.barTintColor = [UIColor whiteColor];//导航栏颜色
-    [self addChildViewController:nav];
-}
-
-//二次点击tabbar触发刷新代理方法
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-{
-    // 判断本次点击的UITabBarItem是否和上次的一样
-    if (item == self.lastItem) { // 一样就发出通知
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"LLTabBarDidClickNotification" object:nil userInfo:nil];
-    }
-    // 将这次点击的UITabBarItem赋值给属性
-    self.lastItem = item;
-}
-
-
-/**
- *  iOS点击tabbar判断是否跳转到登陆界面
-    TabBarController代理,写在CXTabBarController里，首先要遵守协议：UITabBarControllerDelegate， self.delegate = self;//设置代理
- */
-- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
-    if ([viewController.tabBarItem.title isEqualToString:@"首页"] || [viewController.tabBarItem.title isEqualToString:@"测试1"] || [viewController.tabBarItem.title isEqualToString:@"我的"]) {
-        NSString *sign = @""; //取出登陆状态(NSUserDefaults即可)
-        NSInteger selectedIndex  =  0 ;
-        if ([NSString isNULL:sign]==NO) {  //未登录
-            if ([viewController.tabBarItem.title isEqualToString:@"首页"]) {
-                selectedIndex = 0;
-            } else if ([viewController.tabBarItem.title isEqualToString:@"测试1"]) {
-                selectedIndex = 1;
-            }else if ([viewController.tabBarItem.title isEqualToString:@"测试2"]) {
-                selectedIndex = 3;
-            } else if ([viewController.tabBarItem.title isEqualToString:@"我的"]) {
-                selectedIndex = 4;
-            }
-            //            //弹窗登陆
-            //            [AlertCXLoginView showAletCXInfoisBlackHome:nil LoginSuccess:^{
-            //                //登陆成功后判断选定哪一个
-            //                _rootVC.selectedIndex = selectedIndex;
-            //            }];
-            
-            return NO;
-        }else{
-            return YES;
+//自定义的tabbar
+- (UIView *)bottomView{
+    if (!_bottomView) {
+        //普通手机高49，iPhoneX高83
+        _bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen] bounds].size.height-49, [[UIScreen mainScreen] bounds].size.width, 49)];
+        _bottomView.backgroundColor = UIColorFromRGB(0xF9F9F9);
+        if (iPhoneX) {
+            //设置iphoneX的底部
+            _bottomView.y = _bottomView.y - MC_TabbarSafeBottomMargin;
+            _bottomView.height = 83;
         }
-    }else{
-        return YES;
     }
+    return _bottomView;
 }
 
+//创建tabbar
+- (void)createTabbar{
+    //添加自定义tabbar
+    [self.view addSubview:self.bottomView];
+    //隐藏系统的tababr的item
+    self.tabBar.hidden = YES;
+    
+    //移除控制器，防止重复添加
+    for (UIViewController *vc in self.childViewControllers) {
+        [vc removeFromParentViewController];
+    }
+    //移除自定义的tabbar的子视图
+    for (UIView *view in self.bottomView.subviews) {
+        [view removeFromSuperview];
+    }
+    
+    //初始化存放控制器的数组
+    self.tabbarArray = [NSMutableArray array];
+    //首页
+    HopmeViewController *homeVC = [HopmeViewController new];
+    CXNavigationController *nav1 = [[CXNavigationController alloc]initWithRootViewController:homeVC];
+    
+    //
+    UIViewController *twoVC = [UIViewController new];
+    CXNavigationController *nav2 = [[CXNavigationController alloc]initWithRootViewController:twoVC];
+
+    //我的
+    UIViewController *myVC = [UIViewController new];
+    CXNavigationController *nav3 = [[CXNavigationController alloc]initWithRootViewController:myVC];
+    
+    [self.tabbarArray addObject:nav1];
+    [self.tabbarArray addObject:nav2];
+    [self.tabbarArray addObject:nav3];
+    
+    //tabbar高度+底部安全边距：0或者34
+    CGFloat height = self.tabBar.frame.size.height + MC_TabbarSafeBottomMargin;
+    //创建tabbar的item
+    self.myTabBar = [[TienUITabBar alloc] init];
+    self.myTabBar.delegate = self;
+    self.myTabBar.backgroundColor = [UIColor whiteColor];//背景色
+    self.myTabBar.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, height);
+    [self.bottomView addSubview:self.myTabBar];
+    
+    //tabbar默认图片
+    NSArray *images = @[@"tabbar-资讯",@"tabbar-缴费",@"tabbar-我的"];
+    //tabbar选中图片
+    NSArray *selectImages = @[@"tabbarTest",@"tabbarTest",@"tabbarTest"];
+    //tabbar标题
+    NSArray *titles = @[@"首页", @"开发",@"我的"];
+    for (int i = 0 ; i < self.tabbarArray.count; i++) {
+        CXNavigationController *nav = self.tabbarArray[i];
+        [self addChildViewController:nav];//添加控制器到系统tabbar里
+        //设置每一个item
+        [self.myTabBar addTabBarBtnWithImage:images[i] selectedImage:selectImages[i] atIndex:i withTitle:titles[i] withTabbarArray:self.tabbarArray];
+    }
+    
+    //tabbar底部黑线
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 1)];
+    lineView.backgroundColor = UIColorFromRGB(0xEBEBEB);
+    [self.bottomView addSubview:lineView];
+
+}
+
+//点击或者选中tabbar的代理回调，去切换控制器
+- (void)tabBar:(TienUITabBar *)tabBar didSelectedBtnTo:(int)desIndex{
+    self.selectedIndex = desIndex;//手动设置当前根视图控制器，不然控制器不会切换
+    
+    //记录当前根视图控制器，后面控制器跳转用
+     UIViewController *viewController = self.viewControllers[desIndex];
+     RootNavController = viewController.navigationController;//rootNavigationController走set方法
+     NSLog(@"--切换tabBar--当前选中：%d",desIndex);
+}
+
+///选中一个指定tabbar：如登录成功后后选中首页等
+- (void)selectMyTabbarWithIndex:(NSInteger )index{
+    [self.myTabBar selectMyTabbarItemWithIndex:index];
+}
+
+//手动调用隐藏tabbar
+- (void)hideTheTabbar{
+    self.bottomView.hidden = YES;
+}
+
+//手动调用显示tabbar
+- (void)showTheTabbar{
+    self.bottomView.hidden = NO;
+}
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+
+}
+
+//mPaaS自带的-无效
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    self.title = viewController.title;
+    self.navigationItem.leftBarButtonItem = viewController.navigationItem.leftBarButtonItem;
+    self.navigationItem.leftBarButtonItems = viewController.navigationItem.leftBarButtonItems;
+    self.navigationItem.rightBarButtonItem = viewController.navigationItem.rightBarButtonItem;
+    self.navigationItem.rightBarButtonItems = viewController.navigationItem.rightBarButtonItems;
+    
+    NSLog(@"系统代理当前选择   %lu",(unsigned long)tabBarController.selectedIndex);
+    if (tabBarController.selectedIndex == 1) {
+        
+    }
+    
+}
 
 #pragma mark ====================== 处理屏幕旋转--UITabBarController+导航控制器里也设置了（在用，请不要删）=========================
 -(BOOL)shouldAutorotate{

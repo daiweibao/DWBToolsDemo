@@ -10,10 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#define RootNavController [DWBAPPManager sharedManager].rootNavigationController
+
 @interface DWBAPPManager : NSObject
 //单例初始化
 +(instancetype)sharedManager;
 
+///记录根控制器的导航栏
+@property (nonatomic, strong) UINavigationController *rootNavigationController;
 
 /**
  apps是否在审核期间:YES表示是审核期间，NO不是

@@ -35,6 +35,16 @@
     return manager;
 }
 
+-(UINavigationController *)rootNavigationController{
+    if(_rootNavigationController==nil){
+        //如果为空，就获取当前显示的控制器，以防万一
+        return [UIViewController getCurrentVC].navigationController;
+    }else{
+        return _rootNavigationController;
+    }
+}
+
+
 
 //名字
 -(NSString *)testName{

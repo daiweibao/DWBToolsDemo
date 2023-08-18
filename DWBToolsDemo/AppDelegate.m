@@ -23,8 +23,7 @@
     
     //创建app窗口
     [self createWindow];
-    
-//    AvoidCrash拦截崩溃三方库
+
     
     return YES;
 }
@@ -35,15 +34,13 @@
     self.window = [[UIWindow alloc]initWithFrame:UIScreen.mainScreen.bounds];
     //设置窗口颜色
     self.window.backgroundColor = [UIColor whiteColor];
-
-    //添加窗口
     [self.window makeKeyAndVisible ];
     
     //创建tabbar界面
-//    self.window.rootViewController = [[CXTabBarController alloc]init];
-    
-    self.window.rootViewController = [[HopmeViewController alloc]init];
-       
+    self.window.rootViewController = [CXTabBarController shareTabBarController];
+    //创建tabbar
+    [[CXTabBarController shareTabBarController] createTabbar];
+
 }
 
 
