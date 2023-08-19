@@ -2241,7 +2241,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chaoxi.DWBToolsDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chaoxi.DWBToolsDemoMain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2261,7 +2261,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chaoxi.DWBToolsDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chaoxi.DWBToolsDemoMain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2272,7 +2272,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WD7W3QK2S3;
+				DEVELOPMENT_TEAM = M9974B4867;
 				INFOPLIST_FILE = DWBToolsDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2291,7 +2291,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WD7W3QK2S3;
+				DEVELOPMENT_TEAM = M9974B4867;
 				INFOPLIST_FILE = DWBToolsDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2309,7 +2309,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WD7W3QK2S3;
+				DEVELOPMENT_TEAM = M9974B4867;
 				INFOPLIST_FILE = DWBToolsDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2327,7 +2327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WD7W3QK2S3;
+				DEVELOPMENT_TEAM = M9974B4867;
 				INFOPLIST_FILE = DWBToolsDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
