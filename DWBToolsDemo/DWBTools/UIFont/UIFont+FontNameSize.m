@@ -2,8 +2,8 @@
 //  UIFont+FontNameSize.m
 //  AiHenDeChaoXi
 //
-//  Created by 戴维保 on 2018/6/4.
-//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
+//  Created by 爱恨的潮汐 on 2018/6/4.
+//  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
 //
 
 //利用runtime交换方法，全局修改系统字体或者三方字体

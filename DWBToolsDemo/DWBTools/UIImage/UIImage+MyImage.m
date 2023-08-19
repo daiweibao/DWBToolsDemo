@@ -2,7 +2,7 @@
 //  UIImage+MyImage.m
 //  ZuiMeiXinNiang
 //
-//  Created by 戴维保 on 16/8/15.
+//  Created by 爱恨的潮汐 on 16/8/15.
 //  Copyright © 2016年 zmxn. All rights reserved.
 //
 

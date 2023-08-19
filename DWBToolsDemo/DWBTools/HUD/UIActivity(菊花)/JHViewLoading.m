@@ -2,8 +2,8 @@
 //  JHViewLoading.m
 //  XiaoYuanSheQu
 //
-//  Created by 戴维保 on 2016/11/16.
-//  Copyright © 2016年 北京嗅美科技有限公司. All rights reserved.
+//  Created by 爱恨的潮汐 on 2016/11/16.
+//  Copyright © 2016年 潮汐科技有限公司. All rights reserved.
 //
 
 #import "JHViewLoading.h"

@@ -2,8 +2,8 @@
 //  HopmeViewController.m
 //  DWBToolsDemo
 //
-//  Created by 戴维保 on 2018/9/8.
-//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
+//  Created by 爱恨的潮汐 on 2018/9/8.
+//  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
 //
 
 #import "HopmeViewController.h"
@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationCXView.hidden = YES;
+    self.backNavButton.hidden = YES;//隐藏返回键
     self.titleNavLabel.text = @"我的工具类Demo";
     
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];

@@ -2,8 +2,8 @@
 //  UIView+Help.h
 //  GongXiangJie
 //
-//  Created by 戴维保 on 2017/6/27.
-//  Copyright © 2017年 北京嗅美科技有限公司. All rights reserved.
+//  Created by 爱恨的潮汐 on 2017/6/27.
+//  Copyright © 2017年 潮汐科技有限公司. All rights reserved.
 //-
 
 #import <UIKit/UIKit.h>
@@ -19,13 +19,6 @@
 - (UIViewController *)parentController;
 /** 这个方法通过响应者链条获取view所在的控制器 */
 + (UIViewController *)currentViewController;
-
-/**
- 获取Window当前显示的ViewController
- 
- @return 结果
- */
-+ (UIViewController*)getTopWindowController;
 
 /**
  判断一块view是否在屏幕中

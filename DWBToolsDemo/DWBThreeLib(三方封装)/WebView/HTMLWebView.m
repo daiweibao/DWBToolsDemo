@@ -3,8 +3,8 @@
 //  HTMLWebView.m
 //  XiaoYuanSheQu
 //
-//  Created by 戴维保 on 16/9/9.
-//  Copyright © 2016年 北京嗅美科技有限公司. All rights reserved.
+//  Created by 爱恨的潮汐 on 16/9/9.
+//  Copyright © 2016年 潮汐科技有限公司. All rights reserved.
 //
 
 #import "HTMLWebView.h"

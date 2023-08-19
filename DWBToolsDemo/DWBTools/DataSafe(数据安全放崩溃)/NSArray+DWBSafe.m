@@ -2,7 +2,7 @@
 //  NSArray+DWBSafe.m
 //  DWBToolsDemo
 //
-//  Created by 戴维保 on 2018/10/26.
+//  Created by 爱恨的潮汐 on 2018/10/26.
 //  Copyright © 2018 潮汐科技有限公司. All rights reserved.
 //
 

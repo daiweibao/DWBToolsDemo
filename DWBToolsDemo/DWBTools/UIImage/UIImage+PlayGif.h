@@ -2,7 +2,7 @@
 //  UIImage+PlayGif.h
 //  ZuiMeiXinNiang
 //
-//  Created by 戴维保 on 2017/3/17.
+//  Created by 爱恨的潮汐 on 2017/3/17.
 //  Copyright © 2017年 zmxn. All rights reserved.
 //
 // 播放本地gif图片（复制SDWebImage的方法，更新SDWebImage也不影响）

@@ -2,7 +2,7 @@
 //  JXBaseViewController.h
 //  DWBToolsDemo
 //
-//  Created by 戴维保 on 2018/11/28.
+//  Created by 爱恨的潮汐 on 2018/11/28.
 //  Copyright © 2018 潮汐科技有限公司. All rights reserved.
 //
 //无组头父类

@@ -2,7 +2,7 @@
 //  getUUID.m
 //  ZuiMeiXinNiang
 //
-//  Created by 戴维保 on 2017/3/27.
+//  Created by 爱恨的潮汐 on 2017/3/27.
 //  Copyright © 2017年 zmxn. All rights reserved.
 //
 

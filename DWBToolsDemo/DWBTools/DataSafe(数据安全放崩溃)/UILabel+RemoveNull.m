@@ -2,7 +2,7 @@
 //  UILabel+RemoveNull.m
 //  取出字符串中的null
 //
-//  Created by 戴维保 on 2018/11/19.
+//  Created by 爱恨的潮汐 on 2018/11/19.
 //  Copyright © 2018 品创时代互联网科技（北京）有限公司. All rights reserved.
 //
 

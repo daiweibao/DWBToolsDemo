@@ -2,8 +2,8 @@
 //  CXTabBarController.m
 //  AiHenDeChaoXi
 //
-//  Created by 戴维保 on 2018/3/19.
-//  Copyright © 2018年 北京嗅美科技有限公司. All rights reserved.
+//  Created by 爱恨的潮汐 on 2023/8/19.
+//  Copyright © 2023年 潮汐科技有限公司. All rights reserved.
 //
 
 #import "CXTabBarController.h"
@@ -103,11 +103,12 @@
     [self.bottomView addSubview:self.myTabBar];
     
     //tabbar默认图片
-    NSArray *images = @[@"tabbar-资讯",@"tabbar-缴费",@"tabbar-我的"];
+    NSArray *images = @[@"tab_headlines_normal",@"tab_mall_normal",@"tab_personal_normal"];
     //tabbar选中图片
     NSArray *selectImages = @[@"tabbarTest",@"tabbarTest",@"tabbarTest"];
+//    NSArray *selectImages = @[@"tab_headlines_select",@"tab_mall_select",@"tab_personal_select"];
     //tabbar标题
-    NSArray *titles = @[@"首页", @"开发",@"我的"];
+    NSArray *titles = @[@"首页", @"商城",@"我的"];
     for (int i = 0 ; i < self.tabbarArray.count; i++) {
         CXNavigationController *nav = self.tabbarArray[i];
         [self addChildViewController:nav];//添加控制器到系统tabbar里

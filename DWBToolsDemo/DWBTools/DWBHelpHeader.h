@@ -2,8 +2,8 @@
 //  DWBHelpHeader.h
 //  ZuiMeiXinNiang
 //
-//  Created by 戴维保 on 2017/8/24.
-//  Copyright © 2017年 北京嗅美科技有限公司. All rights reserved.
+//  Created by 爱恨的潮汐 on 2017/8/24.
+//  Copyright © 2017年 潮汐科技有限公司. All rights reserved.
 //
 
 //这里是类别的头文件和和所有+宏定义
@@ -154,6 +154,8 @@ _Pragma("clang diagnostic pop") \
 #define GetImageHeight(My_W, W, H) [NSString getHieghtWithMyWidth:My_W AndUIWidth:W AndUIHeight:H]
 
 
+///-----------------颜色S----------------
+
 /**
  带#号的十六进制颜色转换,可以设置透明度，必须带#号
 
@@ -182,6 +184,9 @@ _Pragma("clang diagnostic pop") \
 
 //十六进制颜色--带#号传入(依赖类：UIColor+DWBHelp)
 #define UIColorHex(_hex_)   [UIColor colorWithHexString:((__bridge NSString *)CFSTR(_hex_))]
+
+///-----------------颜色E----------------
+
 
 
 //获取app logo图片可以显示图片名字
@@ -251,22 +256,6 @@ UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlert
 #define NOTIF_REMV()        [[NSNotificationCenter defaultCenter] removeObserver:self]
 
 
-#pragma mark ===============项目相关 S ==================
-//取出用户ID
-#define USERID [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"member_uid"]]
-//取出用户昵称
-#define USER_name [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"alias"]]
-//取出用户头像连接
-#define USER_PhoneImage [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"headPortrait"]]
-
-
-
-//默认头像图片名字
-#define default_HeaderImage @"person_head_default"
-//默认图片（横向封面图）
-#define default_CoverImage @"mall_banner_ default"
-
-#pragma mark ===============项目相关 E ==================
 
 
 #endif /* DWBHelpHeader_h */

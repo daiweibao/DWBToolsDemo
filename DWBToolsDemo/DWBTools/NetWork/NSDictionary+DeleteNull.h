@@ -2,7 +2,7 @@
 //  NSDictionary+DeleteNull.h
 //  DouZhuan
 //
-//  Created by 戴维保 on 2018/10/26.
+//  Created by 爱恨的潮汐 on 2018/10/26.
 //  Copyright © 2018 品创时代互联网科技（北京）有限公司. All rights reserved.
 //
 

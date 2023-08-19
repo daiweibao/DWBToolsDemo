@@ -18,6 +18,7 @@
 //自定义宏定义
 #import "DWBHelpHeader.h"
 #import "CXChangeHeader.h"//需要改变的头文件，一定要检查头文件导入了没
+#import "MacroHeaderHeader.h"//项目相关
 
 #pragma mark ============ 工具类相互依赖的头文件 S=====================
 //纯文字提示框--HUD

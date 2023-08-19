@@ -2,7 +2,7 @@
 //  DWBShareTools.m
 //  DouZhuan
 //
-//  Created by 戴维保 on 2018/9/20.
+//  Created by 爱恨的潮汐 on 2018/9/20.
 //  Copyright © 2018年 品创时代互联网科技（北京）有限公司. All rights reserved.
 //
 

@@ -2,8 +2,8 @@
 //  CXBaseViewController.h
 //  AiHenDeChaoXi
 //
-//  Created by 戴维保 on 2023/8/18.
-//  Copyright © 2023年 北京嗅美科技有限公司. All rights reserved.
+//  Created by 爱恨的潮汐 on 2023/8/18.
+//  Copyright © 2023年 潮汐科技有限公司. All rights reserved.
 //
 //根控制器，在里面设置导航栏，让每个控制器都有自己的导航栏,方便修改【如：全民K歌APP用的就是这种方式的导航栏】
 #import <UIKit/UIKit.h>
