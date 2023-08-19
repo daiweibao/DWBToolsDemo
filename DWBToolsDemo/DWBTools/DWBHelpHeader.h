@@ -13,45 +13,6 @@
 
 #ifndef DWBHelpHeader_h
 #define DWBHelpHeader_h
-/*
-#ifdef只关心宏是否被定义，不关心宏逻辑的真假
- 解释：#ifdef CXDEBUG表示 CXDEBUG 否被定义，如果定义了就走这里。上线手动注掉
-*/
-
-#ifdef DEBUG
-//在系统的debug环境下定义自定义环境
-#warning ---上线修改---
-#define CXDEBUG //上线手动注掉这个定义，表示走生产环境，防止打包的时候忘记选Release环境
-
-#else
-//生产环境不定义
-#endif
-
-
-#pragma mark ============ 系统头文件 S=====================
-#import<Foundation/Foundation.h>//必须导入
-#import <UIKit/UIKit.h>//必须导入
-
-//iOS项目打包除去NSLog，Edit Scheme –>info—> Building Config ->release/debug 选择 release 时 （包括运行）所有的输出都不见了
-#ifdef DEBUG
-//NSLog格式化打印，打印出在那个l控制器，哪一行
-#define NSLog(fmt, ...) NSLog((@"%s [第%d行] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
-#else
-#define NSLog(...)
-#endif
-
-//DEBUG 设置方式：选择Product->Scheme->Edit Scheme ，App发布的时候,Build Configuration 这些全部都要改成release模式。
-//iOS debug模式和release模式
-#ifdef DEBUG
-//开发环境
-#else
-//发布环境
-#endif
-
-
-
-#pragma mark ============ 系统头文件 E=====================
-
 
 //// 如果定义了macro_name宏就编译代码段1
 //#ifdef macro_name
@@ -60,70 +21,19 @@
 //代码段2
 //#endif
 
+//iOS项目打包除去NSLog，Edit Scheme –>info—> Building Config ->release/debug 选择 release 时 （包括运行）所有的输出都不见了
+#ifdef CXDEBUG
+//NSLog格式化打印，打印出在那个l控制器，哪一行
+//#define NSLog(fmt, ...) NSLog((@"%s [第%d行] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define NSLog(FORMAT, ...) printf("\n\n-------->[file:%s] [func:%s] [line:%d] %s\n", [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] cStringUsingEncoding:NSUTF8StringEncoding],__func__, __LINE__,[[NSString stringWithFormat:(FORMAT), ##__VA_ARGS__] cStringUsingEncoding:NSUTF8StringEncoding])
 
-#pragma mark ============ 工具类相互依赖的头文件 S=====================
-//纯文字提示框--HUD
-#import "DWBToast.h"
-//HUD
-#import "MBProgressHUD+MJ.h"
-//字符串category
-#import "NSString+DWBHelp.h"
-//计算图片高度
-#import "NSString+GetImageHeight.h"
-//可以复制的label
-#import "CopyLabel.h"
-//悬浮拖拽的button
-#import "DragEnableButton.h"
-//得到UUID，卸载也不会变
-#import "getUUID.h"
-//字典类别（Category）
-#import "NSDictionary+CXHelp.h"
-//button图文展示
-#import "UIButton+SSEdgeInsets.h"
-//十六进制颜色
-#import "UIColor+DWBHelp.h"
-//点击手势
-#import "UIView+ActionTap.h"
-//UIView
-#import "UIView+Help.h"
-//动画
-#import "UIView+Animation.h"
-//UIView布局
-#import "UIView+Extension.h"
-//自己封装的弹窗
-#import "DWBAlertView.h"
-//图片
-#import "UIImage+MyImage.h"
-#import "UIImage+PlayGif.h"
-#import "UIImage+Rotate.h"
-//布局
-#import <Masonry.h>
-//svp
-#import "SVProgressHUD+KZ.h"
-//MBP
-#import "MBProgressHUD+MJ.h"
-//label点击指定汉子
-#import "UILabel+Click.h"
-//富文本
-#import "NSString+DWBAttribute.h"
-//钥匙串存储数据
-#import "KeyChainManager.h"
-//设备相关
-#import "DWBDeviceHelp.h"
-//网络
-#import "DWBAFNetworking.h"
-//
-#import "UIViewController+CXHelp.h"
-
-#pragma mark ============ 工具类相互依赖的头文件 E=====================
+#else
+#define NSLog(...)
+#endif
 
 
 
-#pragma mark ============ 三方库封装头文件 S=====================
-#import "DWB_refresh.h"
-#import "DWBAPPManager.h"//项目配置
 
-#pragma mark ============ 三方库封装头文件 E=====================
 
 
 //=================判断如果是模拟器===========

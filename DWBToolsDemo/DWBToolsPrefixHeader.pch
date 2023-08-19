@@ -14,10 +14,7 @@
 
 //工具类头文件+宏定义
 
-#import "DWBHelpHeader.h"
-
-//定义属性
-#import "MacroHeaderHeader.h"
+#import "CXAllHeader.h"
 
 
 #endif /* DWBToolsPrefixHeader_pch */

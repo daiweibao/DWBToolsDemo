@@ -635,6 +635,8 @@
 		5B2AD26055BB273DD4351B06 /* Pods-DWBToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		6C09C75787C5C6594A6B0EA4 /* libPods-DWBToolsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DWBToolsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53F89B2E10274ABDD3C0872 /* Pods-DWBToolsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		EA76C5522A904F14008A59EE /* CXAllHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXAllHeader.h; sourceTree = "<group>"; };
+		EA76C5532A905040008A59EE /* CXChangeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXChangeHeader.h; sourceTree = "<group>"; };
 		EAC6D2122A8F1D3D00932BDA /* TienUITabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TienUITabBar.h; sourceTree = "<group>"; };
 		EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TienUITabBar.m; sourceTree = "<group>"; };
 		EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tabbarTest.gif; sourceTree = "<group>"; };
@@ -1149,6 +1151,8 @@
 		368C3BE8213FA78100C10B3E /* DWBTools */ = {
 			isa = PBXGroup;
 			children = (
+				EA76C5522A904F14008A59EE /* CXAllHeader.h */,
+				EA76C5532A905040008A59EE /* CXChangeHeader.h */,
 				368C3BE9213FA7A500C10B3E /* DWBHelpHeader.h */,
 				36446173218C2D6300B9E01E /* NSArray */,
 				360F0F8921805082006A7835 /* DataSafe(数据安全放崩溃) */,
@@ -2256,7 +2260,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M9974B4867;
+				DEVELOPMENT_TEAM = NL4KR8WJTZ;
 				GCC_PREFIX_HEADER = "$(SCROOT)DWBToolsDemo/DWBToolsPrefixHeader.pch";
 				INFOPLIST_FILE = DWBToolsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

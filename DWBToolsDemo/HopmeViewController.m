@@ -48,36 +48,36 @@
     
 }
 
-//
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//
-//    NSLog(@"点击屏幕");
-//}
 
 
+//将要出现
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-    //打开tabbar
-    self.tabBarController.tabBar.hidden = NO;
-    
-    _buttonTools.hidden = NO;//功能入口控制器
-    
+    //记得去导航控制器里设置影藏导航栏，HSBaseNavigationController  里面设置影藏
+    //展示tabbar
+    self.tabBarController.tabBar.hidden = YES;//隐藏系统的
+    [[CXTabBarController shareTabBarController] showTheTabbar];//展示自定义的
 }
 
+//将要消失
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    
-    _buttonTools.hidden = YES;//功能入口控制器
-    //跟控制器将要消失也要打开tabbar
-    self.tabBarController.tabBar.hidden = NO;
-    
 }
 
+//dealloc
 -(void)dealloc{
-    
+    NSLog(@"走了dealloc");
 }
 
+//侧换返回和点击返回按钮都会走这里，控制不走dealloc也会走这里。
+-(void)didMoveToParentViewController:(UIViewController*)parent{
+    [super didMoveToParentViewController:parent];
+    NSLog(@"%s,%@",__FUNCTION__,parent);
+    if(!parent){
+        NSLog(@"页面pop成功了");
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+    }
+}
 
 
 
