@@ -100,7 +100,7 @@ static inline NSString * myMane(){
 #define dwb_pt(l) l * [UIScreen mainScreen].bounds.size.width / 375.0 //做适配的界面的宽、高、字号都用它。
 
 //【iphoneX宏定义】判断是否为 iPhoneXS  Max，iPhoneXS，iPhoneXR，iPhoneX,我是根据 iPhoneXS Max，iPhoneXS，iPhoneXR，iPhoneX 的宽高比近似做的判断。
-#define iPhoneX (((int)((SCREEN_HEIGHT/SCREEN_WIDTH)*100) == 216)?YES:NO)
+#define iPhoneX [DWBDeviceHelp isPhoneX]
 
 // 适配iPhone X 状态栏高度
 #define  MC_StatusBarHeight      (iPhoneX ? 44.f : 20.f)

@@ -9,6 +9,44 @@
 #import "DWBDeviceHelp.h"
 #import <CoreMotion/CoreMotion.h>//陀螺仪
 @implementation DWBDeviceHelp
+
+//可以使用一下语句判断是否是刘海手机：
++ (BOOL)isPhoneX {
+    BOOL isiPhoneX = NO;
+    if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {//判断是否是手机
+        return isiPhoneX;
+    }
+    if (@available(iOS 11.0, *)) {
+        UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;
+        if (mainWindow.safeAreaInsets.bottom > 0.0) {
+            isiPhoneX = YES;
+        }
+    }
+    return isiPhoneX;
+}
+
+//适配iPhone X 状态栏高度 20或者44
++ (CGFloat)getStatusBarHeightBySafeArea {
+    if (@available(iOS 11.0, *)) {
+        // 非刘海屏，若存在状态条隐藏显示的切换，会有window.safeAreaInsets.top返回为0的异常情况
+        if ([self.class screenIsBangs]) {
+            //刘海屏
+            UIWindow *window = [UIApplication.sharedApplication.windows firstObject];
+            return window.safeAreaInsets.top;
+        }
+    }
+    return 20;
+}
+///是否是刘海屏幕
++ (BOOL)screenIsBangs {
+    if (@available(iOS 11.0, *)) {
+        UIWindow *window = [UIApplication.sharedApplication.windows firstObject];
+        return (window.safeAreaInsets.bottom > 0);
+    }
+    return NO;
+}
+
+
 //判断是否有摄像头(判断是否是模拟器)范湖YES是模拟器，NO是真机
 +(BOOL)isSimulator{
     //    if([UIImagePickerController isSourceTypeAvailable:YES]){

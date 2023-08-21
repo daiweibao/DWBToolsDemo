@@ -11,6 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DWBDeviceHelp : NSObject
+
+
+/// 是否是iPhone，YES是
++ (BOOL)isPhoneX;
+
 /**
  判断是否有摄像头(判断是否是模拟器)范湖YES是模拟器，NO是真机
  
