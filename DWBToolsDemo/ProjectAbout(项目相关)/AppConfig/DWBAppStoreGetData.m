@@ -63,7 +63,7 @@
 //      NSString * pathChina = [NSString stringWithFormat:@"https://itunes.apple.com/cn/lookup?bundleId=%@",@"com.top.quanmin.app"];
     
     //调用自己的单例，防止内存泄露，必须先在中国地区获取app信息(不然加载慢，因为大部分app都在中国地区上架)，如果获取不到再去美国地区获取
-    AFHTTPSessionManager * manager =  [DWBAFNetworking sharedManager];
+    AFHTTPSessionManager * manager =  [CXHttpTool sharedManager];
     [manager POST:pathChina parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //        NSLog(@"中国地区数据：%@",responseObject);
         //判断在中国地区能否获取到APP数据
@@ -91,7 +91,7 @@
 //在美国地区获取app信息
 -(void)theUSAGetAppInfoLoad{
     //调用自己的单例，防止内存泄露，在美国地区获取app信息
-    AFHTTPSessionManager * manager =  [DWBAFNetworking sharedManager];
+    AFHTTPSessionManager * manager =  [CXHttpTool sharedManager];
     //在中国地区获取不到app信息，然后再去美国地区获取
      NSString * pathUSA = [NSString stringWithFormat:@"https://itunes.apple.com/lookup?bundleId=%@",GET_BundleId];
     [manager POST:pathUSA parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

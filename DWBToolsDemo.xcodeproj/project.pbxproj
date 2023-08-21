@@ -132,7 +132,6 @@
 		368E69E52140C5BF000EC79C /* CXAudioTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69E02140C5BF000EC79C /* CXAudioTools.m */; };
 		368E69E62140C5BF000EC79C /* TouchIDHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69E22140C5BF000EC79C /* TouchIDHelp.m */; };
 		368E69E92140C70D000EC79C /* KeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69E82140C70D000EC79C /* KeyChainManager.m */; };
-		368E69ED2140D307000EC79C /* DWBAFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 368E69EC2140D307000EC79C /* DWBAFNetworking.m */; };
 		36991147215216F9004B3C0D /* NSString+DWBAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 36991146215216F9004B3C0D /* NSString+DWBAttribute.m */; };
 		3699115021523AD4004B3C0D /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3699114F21523AD4004B3C0D /* TestModel.m */; };
 		369D8961217198F800003425 /* DWBDeviceHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 369D8960217198F800003425 /* DWBDeviceHelp.m */; };
@@ -213,6 +212,7 @@
 		36EEDCC1214209FE000CBEEB /* CXVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCBA214209FE000CBEEB /* CXVersionUpdate.m */; };
 		36EEDCC2214209FE000CBEEB /* DownUpdateAppAleat.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCBB214209FE000CBEEB /* DownUpdateAppAleat.m */; };
 		36FF0858217A1A3800791E59 /* DWBShareTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FF0856217A1A3800791E59 /* DWBShareTools.m */; };
+		EAB3BFFD2A92E66C00BA226C /* CXHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */; };
 		EAC6D2142A8F1D3E00932BDA /* TienUITabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */; };
 		EAC6D4E32A8F5CB900932BDA /* tabbarTest.gif in Resources */ = {isa = PBXBuildFile; fileRef = EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */; };
 		EAC6D4E82A8F67F000932BDA /* nav_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAC6D4E62A8F67F000932BDA /* nav_back@2x.png */; };
@@ -463,8 +463,6 @@
 		368E69E32140C5BF000EC79C /* CXSystemStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSystemStatus.h; sourceTree = "<group>"; };
 		368E69E72140C70D000EC79C /* KeyChainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainManager.h; sourceTree = "<group>"; };
 		368E69E82140C70D000EC79C /* KeyChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainManager.m; sourceTree = "<group>"; };
-		368E69EB2140D307000EC79C /* DWBAFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBAFNetworking.h; sourceTree = "<group>"; };
-		368E69EC2140D307000EC79C /* DWBAFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBAFNetworking.m; sourceTree = "<group>"; };
 		36991145215216F9004B3C0D /* NSString+DWBAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DWBAttribute.h"; sourceTree = "<group>"; };
 		36991146215216F9004B3C0D /* NSString+DWBAttribute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+DWBAttribute.m"; sourceTree = "<group>"; };
 		3699114E21523AD4004B3C0D /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
@@ -624,6 +622,8 @@
 		A53F89B2E10274ABDD3C0872 /* Pods-DWBToolsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		EA76C5522A904F14008A59EE /* CXAllHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXAllHeader.h; sourceTree = "<group>"; };
 		EA76C5532A905040008A59EE /* CXChangeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXChangeHeader.h; sourceTree = "<group>"; };
+		EAB3BFFB2A92E66C00BA226C /* CXHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXHttpTool.h; sourceTree = "<group>"; };
+		EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXHttpTool.m; sourceTree = "<group>"; };
 		EAC6D2122A8F1D3D00932BDA /* TienUITabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TienUITabBar.h; sourceTree = "<group>"; };
 		EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TienUITabBar.m; sourceTree = "<group>"; };
 		EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tabbarTest.gif; sourceTree = "<group>"; };
@@ -1138,7 +1138,6 @@
 				36446173218C2D6300B9E01E /* NSArray */,
 				360F0F8921805082006A7835 /* DataSafe(数据安全放崩溃) */,
 				368E69DA2140C576000EC79C /* UITextField */,
-				362F7BC42148AF2300A8ECB1 /* ZXPUnicode(json中文打印) */,
 				369D895E217198F800003425 /* Device */,
 				368E69D32140C479000EC79C /* UIFont */,
 				368C3BFC213FB44800C10B3E /* HUD */,
@@ -1212,8 +1211,9 @@
 		368E69EA2140D260000EC79C /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
-				368E69EB2140D307000EC79C /* DWBAFNetworking.h */,
-				368E69EC2140D307000EC79C /* DWBAFNetworking.m */,
+				362F7BC42148AF2300A8ECB1 /* ZXPUnicode(json中文打印) */,
+				EAB3BFFB2A92E66C00BA226C /* CXHttpTool.h */,
+				EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */,
 				36A73BB12182C05700B79AB0 /* NSDictionary+DeleteNull.h */,
 				36A73BB22182C05700B79AB0 /* NSDictionary+DeleteNull.m */,
 			);
@@ -1940,6 +1940,7 @@
 				36E8620921AFBF3300180D78 /* JXCategoryImageCell.m in Sources */,
 				36213F6521439DB700B00E2B /* UIScrollView+EndRefresh.m in Sources */,
 				363BFB5421A95B4900666F8A /* RedpeopleCenterController.m in Sources */,
+				EAB3BFFD2A92E66C00BA226C /* CXHttpTool.m in Sources */,
 				36E8620221AFBF3300180D78 /* JXCategoryTitleImageView.m in Sources */,
 				36E861FF21AFBF3300180D78 /* JXCategoryDotCell.m in Sources */,
 				36EEDCC1214209FE000CBEEB /* CXVersionUpdate.m in Sources */,
@@ -2038,7 +2039,6 @@
 				36446172218BEBF400B9E01E /* DWBAppStoreGetData.m in Sources */,
 				36EEDC9521420585000CBEEB /* UIImage+MyImage.m in Sources */,
 				368E69E92140C70D000EC79C /* KeyChainManager.m in Sources */,
-				368E69ED2140D307000EC79C /* DWBAFNetworking.m in Sources */,
 				369D8961217198F800003425 /* DWBDeviceHelp.m in Sources */,
 				368E69C62140B64D000EC79C /* UIColor+DWBHelp.m in Sources */,
 				36E8621921AFBF3300180D78 /* DWBJXCategoryMyLineView.m in Sources */,

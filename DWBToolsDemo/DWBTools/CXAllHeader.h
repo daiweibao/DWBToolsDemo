@@ -70,9 +70,11 @@
 //设备相关
 #import "DWBDeviceHelp.h"
 //网络
-#import "DWBAFNetworking.h"
+#import "CXHttpTool.h"
 //
 #import "UIViewController+CXHelp.h"
+//中间弹窗
+#import "AlertCXCenterView.h"
 
 #pragma mark ============ 工具类相互依赖的头文件 E=====================
 
@@ -81,6 +83,7 @@
 #pragma mark ============ 三方库封装头文件 S=====================
 #import "DWB_refresh.h"
 #import "DWBAPPManager.h"//项目配置
+#import "AFNetworking.h"
 
 #pragma mark ============ 三方库封装头文件 E=====================
 

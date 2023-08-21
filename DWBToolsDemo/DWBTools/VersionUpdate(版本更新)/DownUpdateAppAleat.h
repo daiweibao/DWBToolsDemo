@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <Masonry.h>
-#import "DWBAFNetworking.h"
 @interface DownUpdateAppAleat : UIView
 /**
  检查更新

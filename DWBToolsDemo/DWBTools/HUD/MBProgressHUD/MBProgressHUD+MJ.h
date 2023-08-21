@@ -31,14 +31,14 @@
 //展示纯文字消息
 + (MBProgressHUD *)showMessage:(NSString *)message;
 
-//展示加载中，不会自动影藏
+///展示加载中，不会自动影藏
 + (void)showHUDLodingStart:(NSString *)message toView:(UIView *)view;
-//加载完成传入的view和showHUDLodingStart的view一样
+///加载完成传入的view和showHUDLodingStart的view一样
 + (void)showHUDLodingEnd:(NSString *)message toView:(UIView *)view;
 //圆形进度条
 + (void)showHUDMBProgress:(float)progress title:(NSString*)title toView:(UIView *)view;
 
-//影藏指定view上的
+///影藏指定view上的
 + (void)hideHUDForView:(UIView *)view;
 
 ////加载中（用法）

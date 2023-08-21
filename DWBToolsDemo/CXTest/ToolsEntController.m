@@ -84,10 +84,6 @@
 
 }
 
-+ (BOOL)isNetwork {
-    return [AFNetworkReachabilityManager sharedManager].reachable;
-}
-
 // 上拉下拉刷新
 - (void)refresh {
     //自己封装的MJ刷新

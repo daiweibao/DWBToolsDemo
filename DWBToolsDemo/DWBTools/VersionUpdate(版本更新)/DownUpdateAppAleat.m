@@ -7,7 +7,7 @@
 //
 
 #import "DownUpdateAppAleat.h"
-
+#import "AFNetworking.h"
 @interface DownUpdateAppAleat()
 @property (nonatomic, weak) UIView *contentView;
 
