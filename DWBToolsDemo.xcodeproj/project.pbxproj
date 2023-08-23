@@ -215,6 +215,7 @@
 		EAB3BFFD2A92E66C00BA226C /* CXHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */; };
 		EABDB6F82A95FF4D0098E161 /* ShadowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB6F62A95FF4D0098E161 /* ShadowButton.m */; };
 		EABDB6FB2A95FF590098E161 /* UIImage+ChangeColorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB6FA2A95FF590098E161 /* UIImage+ChangeColorImage.m */; };
+		EABDB7042A9631DD0098E161 /* UIControl+recurClick.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB7022A9631DC0098E161 /* UIControl+recurClick.m */; };
 		EAC6D2142A8F1D3E00932BDA /* TienUITabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */; };
 		EAC6D4E32A8F5CB900932BDA /* tabbarTest.gif in Resources */ = {isa = PBXBuildFile; fileRef = EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */; };
 		EAC6D4E82A8F67F000932BDA /* nav_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAC6D4E62A8F67F000932BDA /* nav_back@2x.png */; };
@@ -630,6 +631,8 @@
 		EABDB6F72A95FF4D0098E161 /* ShadowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowButton.h; sourceTree = "<group>"; };
 		EABDB6F92A95FF590098E161 /* UIImage+ChangeColorImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChangeColorImage.h"; sourceTree = "<group>"; };
 		EABDB6FA2A95FF590098E161 /* UIImage+ChangeColorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChangeColorImage.m"; sourceTree = "<group>"; };
+		EABDB7022A9631DC0098E161 /* UIControl+recurClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+recurClick.m"; sourceTree = "<group>"; };
+		EABDB7032A9631DD0098E161 /* UIControl+recurClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+recurClick.h"; sourceTree = "<group>"; };
 		EAC6D2122A8F1D3D00932BDA /* TienUITabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TienUITabBar.h; sourceTree = "<group>"; };
 		EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TienUITabBar.m; sourceTree = "<group>"; };
 		EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tabbarTest.gif; sourceTree = "<group>"; };
@@ -1672,6 +1675,8 @@
 				368E69BF2140B538000EC79C /* UIButton+SSEdgeInsets.m */,
 				EABDB6F72A95FF4D0098E161 /* ShadowButton.h */,
 				EABDB6F62A95FF4D0098E161 /* ShadowButton.m */,
+				EABDB7032A9631DD0098E161 /* UIControl+recurClick.h */,
+				EABDB7022A9631DC0098E161 /* UIControl+recurClick.m */,
 				362F7BA121489ECF00A8ECB1 /* UIButton+BigAction.h */,
 				362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */,
 			);
@@ -2046,6 +2051,7 @@
 				368E69E42140C5BF000EC79C /* CXSystemStatus.m in Sources */,
 				EAC6D4F32A8F683700932BDA /* NSObject+SXRuntime.m in Sources */,
 				36213F2A21439B3700B00E2B /* JDStatusBarNotification.m in Sources */,
+				EABDB7042A9631DD0098E161 /* UIControl+recurClick.m in Sources */,
 				362F7BB72148ACF000A8ECB1 /* STEmojiCollectionView.m in Sources */,
 				36E861F421AFBF3300180D78 /* JXBaseViewController.m in Sources */,
 				36446172218BEBF400B9E01E /* DWBAppStoreGetData.m in Sources */,
