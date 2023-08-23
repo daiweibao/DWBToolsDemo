@@ -213,6 +213,8 @@
 		36EEDCC2214209FE000CBEEB /* DownUpdateAppAleat.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCBB214209FE000CBEEB /* DownUpdateAppAleat.m */; };
 		36FF0858217A1A3800791E59 /* DWBShareTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FF0856217A1A3800791E59 /* DWBShareTools.m */; };
 		EAB3BFFD2A92E66C00BA226C /* CXHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */; };
+		EABDB6F82A95FF4D0098E161 /* ShadowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB6F62A95FF4D0098E161 /* ShadowButton.m */; };
+		EABDB6FB2A95FF590098E161 /* UIImage+ChangeColorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB6FA2A95FF590098E161 /* UIImage+ChangeColorImage.m */; };
 		EAC6D2142A8F1D3E00932BDA /* TienUITabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */; };
 		EAC6D4E32A8F5CB900932BDA /* tabbarTest.gif in Resources */ = {isa = PBXBuildFile; fileRef = EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */; };
 		EAC6D4E82A8F67F000932BDA /* nav_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAC6D4E62A8F67F000932BDA /* nav_back@2x.png */; };
@@ -624,6 +626,10 @@
 		EA76C5532A905040008A59EE /* CXChangeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXChangeHeader.h; sourceTree = "<group>"; };
 		EAB3BFFB2A92E66C00BA226C /* CXHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXHttpTool.h; sourceTree = "<group>"; };
 		EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXHttpTool.m; sourceTree = "<group>"; };
+		EABDB6F62A95FF4D0098E161 /* ShadowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowButton.m; sourceTree = "<group>"; };
+		EABDB6F72A95FF4D0098E161 /* ShadowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowButton.h; sourceTree = "<group>"; };
+		EABDB6F92A95FF590098E161 /* UIImage+ChangeColorImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChangeColorImage.h"; sourceTree = "<group>"; };
+		EABDB6FA2A95FF590098E161 /* UIImage+ChangeColorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChangeColorImage.m"; sourceTree = "<group>"; };
 		EAC6D2122A8F1D3D00932BDA /* TienUITabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TienUITabBar.h; sourceTree = "<group>"; };
 		EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TienUITabBar.m; sourceTree = "<group>"; };
 		EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tabbarTest.gif; sourceTree = "<group>"; };
@@ -1524,6 +1530,8 @@
 			children = (
 				36EEDC8D21420585000CBEEB /* UIImage+MyImage.h */,
 				36EEDC8E21420585000CBEEB /* UIImage+MyImage.m */,
+				EABDB6F92A95FF590098E161 /* UIImage+ChangeColorImage.h */,
+				EABDB6FA2A95FF590098E161 /* UIImage+ChangeColorImage.m */,
 				36EEDC8F21420585000CBEEB /* UIImage+PlayGif.h */,
 				36EEDC8A21420585000CBEEB /* UIImage+PlayGif.m */,
 				36EEDC9021420585000CBEEB /* UIImage+Rotate.h */,
@@ -1662,6 +1670,8 @@
 				36D3784E213FEF7C00E768AF /* DragEnableButton.m */,
 				368E69BE2140B538000EC79C /* UIButton+SSEdgeInsets.h */,
 				368E69BF2140B538000EC79C /* UIButton+SSEdgeInsets.m */,
+				EABDB6F72A95FF4D0098E161 /* ShadowButton.h */,
+				EABDB6F62A95FF4D0098E161 /* ShadowButton.m */,
 				362F7BA121489ECF00A8ECB1 /* UIButton+BigAction.h */,
 				362F7BA221489ECF00A8ECB1 /* UIButton+BigAction.m */,
 			);
@@ -1937,6 +1947,7 @@
 				36E861F721AFBF3300180D78 /* JXCategoryIndicatorTriangleView.m in Sources */,
 				36EEDCC2214209FE000CBEEB /* DownUpdateAppAleat.m in Sources */,
 				36213F2E21439B3700B00E2B /* JDStatusBarStyle.m in Sources */,
+				EABDB6FB2A95FF590098E161 /* UIImage+ChangeColorImage.m in Sources */,
 				36E8620921AFBF3300180D78 /* JXCategoryImageCell.m in Sources */,
 				36213F6521439DB700B00E2B /* UIScrollView+EndRefresh.m in Sources */,
 				363BFB5421A95B4900666F8A /* RedpeopleCenterController.m in Sources */,
@@ -1969,6 +1980,7 @@
 				368E69E62140C5BF000EC79C /* TouchIDHelp.m in Sources */,
 				36E861F821AFBF3300180D78 /* JXCategoryIndicatorImageView.m in Sources */,
 				368E69D82140C49B000EC79C /* UIFont+FontNameBoldSize.m in Sources */,
+				EABDB6F82A95FF4D0098E161 /* ShadowButton.m in Sources */,
 				3632E0CB2A90950A00DDEE20 /* RCBDataSafeHelp.m in Sources */,
 				36EEDCAF21420794000CBEEB /* ScanResultsController.m in Sources */,
 				36213F4D21439C1400B00E2B /* SVProgressHUD.m in Sources */,
