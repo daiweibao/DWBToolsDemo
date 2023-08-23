@@ -9,18 +9,18 @@
 #import <Foundation/Foundation.h>
 //用户示例：
 //NSDictionary *dataData = @{};//后台返回的数据
-//NSDictionary *dict = RCBSafeDic(dataData[@"info"]);
-#define RCBSafeDic(dict)   [RCBDataSafeHelp safeDictionary:dict]
-#define RCBSafeArray(array)   [RCBDataSafeHelp safeArray:array]
+//NSDictionary *dict = CXSafeDic(dataData[@"info"]);
+#define CXSafeDic(dict)   [RCBDataSafeHelp safeDictionary:dict]
+#define CXSafeArray(array)   [RCBDataSafeHelp safeArray:array]
 //安全字符串示例:
 //NSDictionary *dataData = @{};//后台返回的数据
-//NSString * str = RCBSafeStr(dataData[@"name"])
-#define RCBSafeStr(str)   [RCBDataSafeHelp safeString:str]
+//NSString * str = CXSafeStr(dataData[@"name"])
+#define CXSafeStr(str)   [RCBDataSafeHelp safeString:str]
 
 //
-#define RCBSafeMutableArray(mutableArray)   [RCBDataSafeHelp safeMutableArray:mutableArray]
-#define RCBSafeMutableDic(mutableDict)   [RCBDataSafeHelp safeMutableDictionary:mutableDict]
-#define RCBSafeObj(obj)   [RCBDataSafeHelp safeObj:obj]
+#define CXSafeMutableArray(mutableArray)   [RCBDataSafeHelp safeMutableArray:mutableArray]
+#define CXSafeMutableDic(mutableDict)   [RCBDataSafeHelp safeMutableDictionary:mutableDict]
+#define CXSafeObj(obj)   [RCBDataSafeHelp safeObj:obj]
 
 
 @interface RCBDataSafeHelp : NSObject
