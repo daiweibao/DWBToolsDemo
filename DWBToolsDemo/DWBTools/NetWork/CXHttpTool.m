@@ -63,19 +63,20 @@
                 [MBProgressHUD hideHUDForView:[UIViewController getCurrentVC].view];//隐藏HUD
             }
             //成功
-            NSString * RejCode = [NSString stringWithFormat:@"%@",responseObject[@"_RejCode"]];//错误码
-            NSString * msg = [NSString stringWithFormat:@"%@",responseObject[@"_RejMsg"]];//提示语
+            NSDictionary * responseDict = CXSafeDic(responseObject);//response可能是字符串数组之类的，防止崩溃
+            NSString * RejCode = [NSString stringWithFormat:@"%@",responseDict[@"_RejCode"]];//错误码
+            NSString * msg = [NSString stringWithFormat:@"%@",responseDict[@"_RejMsg"]];//提示语
             
             if ([RejCode isEqualToString:@"000000"]){
                 //成功
                 if (successBlock) {
-                    successBlock(YES,responseObject);
+                    successBlock(YES,responseDict);
                 }
             }else{
                 //接口调用成功--但是业务不完全成功弹窗报错，拦截器DTRpcCommonInterceptor里拦截了一些错误提示，这里只处理一部分
                 //回调
                 if (successBlock) {
-                    successBlock(NO,responseObject);
+                    successBlock(NO,responseDict);
                 }
                 //
                 if (showMsg) {
@@ -103,17 +104,21 @@
             if (show) {
                 [MBProgressHUD hideHUDForView:[UIViewController getCurrentVC].view];//隐藏HUD
             }
-            //response为空，失败
-            if (failureBlock) {
-                failureBlock(error);
+            //网络请求失败
+            //网络请求取消：NSURLErrorCancelled
+            if ((error.code == NSURLErrorCancelled)) {
+                //网络请求取消的情况不做任何处理
+            }else{
+                if (failureBlock) {
+                    failureBlock(error);
+                }
+                if (showMsg) {
+                    //
+                    [AlertCXCenterView AlertCXCenterAlertWithController:[UIViewController getCurrentVC] Title:@"提示" Message:error.localizedDescription otherItemArrays:@[@"知道啦"] Type:-1 handler:^(NSInteger indexCenter) {
+                        
+                    }];
+                }
             }
-            if (showMsg) {
-                //
-                [AlertCXCenterView AlertCXCenterAlertWithController:[UIViewController getCurrentVC] Title:@"提示" Message:error.localizedDescription otherItemArrays:@[@"知道啦"] Type:-1 handler:^(NSInteger indexCenter) {
-                    
-                }];
-            }
-            
         });
     }];
 }

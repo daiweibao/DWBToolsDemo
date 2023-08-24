@@ -76,6 +76,8 @@
 //中间弹窗
 #import "AlertCXCenterView.h"
 
+#import "RCBDataSafeHelp.h"
+
 #pragma mark ============ 工具类相互依赖的头文件 E=====================
 
 
