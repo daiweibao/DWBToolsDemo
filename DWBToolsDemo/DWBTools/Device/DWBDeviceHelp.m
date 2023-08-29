@@ -10,6 +10,25 @@
 #import <CoreMotion/CoreMotion.h>//陀螺仪
 @implementation DWBDeviceHelp
 
++ (DWBDeviceHelp *)sharedManager{
+    static DWBDeviceHelp * manager;//类
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        manager = [[DWBDeviceHelp alloc] init];
+    });
+    return manager;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
+
 //可以使用一下语句判断是否是刘海手机：
 + (BOOL)isPhoneX {
     BOOL isiPhoneX = NO;
@@ -171,6 +190,75 @@
     return [UIImage imageNamed:launchImage];
     
 }
+
+
+
+#pragma mark---------截屏录屏监听 S-----------
+
+/// 添加录屏和截屏监听
+/// - Parameter observer: 添加到那个观察者上：self，view或者控制器
+- (void)addScreenNotif:(id)observer{
+    //截屏通知
+    [[NSNotificationCenter defaultCenter] addObserver:observer selector:@selector(userDidTakeScreenshot:) name:UIApplicationUserDidTakeScreenshotNotification object:nil];
+    if (@available(iOS 11.0, *)) {
+        //iOS11后中新增了录屏功能
+        [[NSNotificationCenter defaultCenter] addObserver:observer selector:@selector(userDidTakeScreenCaptured:) name:UIScreenCapturedDidChangeNotification object:nil];
+    } else {
+        // Fallback on earlier versions
+    }
+}
+//截屏
+-(void)userDidTakeScreenshot:(NSNotification *)notification{
+    NSLog(@"检测到截屏");
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"当前页面涉及隐私内容，不允许截屏" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:okAction];
+    [RootNavController presentViewController:alertController animated:YES completion:nil];
+}
+//录屏
+- (void)userDidTakeScreenCaptured:(NSNotification *)notification{
+    // 开始录屏时有弹框提示，结束录屏时就不弹框了。
+//    if (![UIScreen mainScreen].isCaptured) {
+//        return;
+//    }
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"检测到您正在录屏，为了您的账户安全，录屏文件请勿发送给他人" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:okAction];
+    [RootNavController presentViewController:alertController animated:YES completion:nil];
+}
+
+/// 移除录屏和截屏监听
+/// - Parameter observer: 添加到那个观察者上：self，view或者控制器
+- (void)removeScreenNotif:(id)observer{
+    //移除截屏通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationUserDidTakeScreenshotNotification object:nil];
+    //移除录屏通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIScreenCapturedDidChangeNotification object:nil];
+}
+
+/*
+//移除截屏通知
+[[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationUserDidTakeScreenshotNotification object:nil];
+ //移除录屏通知
+[[NSNotificationCenter defaultCenter] removeObserver:self name:UIScreenCapturedDidChangeNotification object:nil];
+
+
+//补充：全局监听截屏录屏通知
+
+if (@available(iOS 11.0, *)) {
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIScreenCapturedDidChangeNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        [Utils showToastWithMsg:@"发现正在录屏，请注意个人信息安全" Duration:2.0];
+    }];
+}
+//截屏
+[[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationUserDidTakeScreenshotNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+    [Utils showToastWithMsg:@"发现截屏操作，请注意个人信息安全" Duration:2.0];
+}];
+*/
+#pragma mark---------截屏录屏监听 E-----------
+
+
+
 
 
 @end

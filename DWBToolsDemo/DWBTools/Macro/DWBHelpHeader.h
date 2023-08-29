@@ -25,7 +25,9 @@
 #ifdef CXDEBUG
 //NSLog格式化打印，打印出在那个l控制器，哪一行
 //#define NSLog(fmt, ...) NSLog((@"%s [第%d行] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
-#define NSLog(FORMAT, ...) printf("\n\n-------->[file:%s] [func:%s] [line:%d] %s\n", [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] cStringUsingEncoding:NSUTF8StringEncoding],__func__, __LINE__,[[NSString stringWithFormat:(FORMAT), ##__VA_ARGS__] cStringUsingEncoding:NSUTF8StringEncoding])
+#define NSLog(FORMAT, ...) printf("\n\n-------->[类名:%s] [方法:%s] [第%d行] %s\n", [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] cStringUsingEncoding:NSUTF8StringEncoding],__func__, __LINE__,[[NSString stringWithFormat:(FORMAT), ##__VA_ARGS__] cStringUsingEncoding:NSUTF8StringEncoding])
+
+#define DebugLog(FORMAT, ...) printf("\n\n-------->[类名:%s] [方法:%s] [第%d行] %s\n", [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] cStringUsingEncoding:NSUTF8StringEncoding],__func__, __LINE__,[[NSString stringWithFormat:(FORMAT), ##__VA_ARGS__] cStringUsingEncoding:NSUTF8StringEncoding])
 
 #else
 #define NSLog(...)

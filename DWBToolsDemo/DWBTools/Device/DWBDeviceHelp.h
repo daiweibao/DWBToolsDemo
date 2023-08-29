@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DWBDeviceHelp : NSObject
 
++ (DWBDeviceHelp *)sharedManager;
+
 
 /// 是否是iPhone，YES是
 + (BOOL)isPhoneX;
@@ -53,6 +55,13 @@ NS_ASSUME_NONNULL_BEGIN
  @return image
  */
 + (UIImage *)getTheLaunchImage;
+
+/// 添加录屏和截屏监听
+/// - Parameter observer: 添加到那个观察者上：self，view或者控制器
+- (void)addScreenNotif:(id)observer;
+/// 移除录屏和截屏监听
+/// - Parameter observer: 添加到那个观察者上：self，view或者控制器
+- (void)removeScreenNotif:(id)observer;
 
 @end
 
