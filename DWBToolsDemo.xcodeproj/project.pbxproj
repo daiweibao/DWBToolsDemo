@@ -226,6 +226,7 @@
 		EAC6D4FB2A8F734100932BDA /* UIButton+ActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D4FA2A8F734100932BDA /* UIButton+ActionButton.m */; };
 		EAC6D4FE2A8F738100932BDA /* UITextField+CSIILimit.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D4FC2A8F738100932BDA /* UITextField+CSIILimit.m */; };
 		EAC6D5032A8F754A00932BDA /* CXTestHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D5012A8F754A00932BDA /* CXTestHelp.m */; };
+		EAE2F3652A9F5A4000349C1C /* CXAlertCenterAgreementView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE2F3642A9F5A4000349C1C /* CXAlertCenterAgreementView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -651,6 +652,8 @@
 		EAC6D4FF2A8F746F00932BDA /* CXReadText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXReadText.h; sourceTree = "<group>"; };
 		EAC6D5012A8F754A00932BDA /* CXTestHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXTestHelp.m; sourceTree = "<group>"; };
 		EAC6D5022A8F754A00932BDA /* CXTestHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXTestHelp.h; sourceTree = "<group>"; };
+		EAE2F3632A9F5A4000349C1C /* CXAlertCenterAgreementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAlertCenterAgreementView.h; sourceTree = "<group>"; };
+		EAE2F3642A9F5A4000349C1C /* CXAlertCenterAgreementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAlertCenterAgreementView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -721,6 +724,8 @@
 				36213F04214364BD00B00E2B /* AlretCXSheetView.m */,
 				36213F0E214364BD00B00E2B /* AlertCXCenterView.h */,
 				36213F05214364BD00B00E2B /* AlertCXCenterView.m */,
+				EAE2F3632A9F5A4000349C1C /* CXAlertCenterAgreementView.h */,
+				EAE2F3642A9F5A4000349C1C /* CXAlertCenterAgreementView.m */,
 				36213F08214364BD00B00E2B /* AlertCXShowInfo.h */,
 				36213F0B214364BD00B00E2B /* AlertCXShowInfo.m */,
 			);
@@ -2082,6 +2087,7 @@
 				36D3784A213FE01500E768AF /* NSString+GetImageHeight.m in Sources */,
 				36213F2C21439B3700B00E2B /* JDStatusBarView.m in Sources */,
 				36A73BB32182C05700B79AB0 /* NSDictionary+DeleteNull.m in Sources */,
+				EAE2F3652A9F5A4000349C1C /* CXAlertCenterAgreementView.m in Sources */,
 				36DE4FED218D96D200C3FE40 /* NSObject+DWBKVOCrash.m in Sources */,
 				36E8621C21AFBF3300180D78 /* DWBJXCategoryMyCell.m in Sources */,
 				36EEDCA821420794000CBEEB /* UIImage+Extend.m in Sources */,
