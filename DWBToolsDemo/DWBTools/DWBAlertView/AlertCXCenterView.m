@@ -33,37 +33,28 @@
  @param title 标题
  @param message 内容
  @param array 按钮
- @param type 类型，0代表成功（默认成功） 1代表失败 100代表允许重复弹窗 ,200代表允许移除老的弹窗，展示新的弹窗（推送用）
+ @param type 类型，-1代表默认，0代表成功；40代表内容文字左对齐
  @param block 回调
  */
 + (void)AlertCXCenterAlertWithController:(UIViewController*)controller Title:(NSString*)title Message:(NSString *)message otherItemArrays:(NSArray *)array Type:(NSInteger)type handler:(ActionBlockAtIndex)block{
     
-   //判断弹窗是否在哪屏幕中，如果不在屏幕中就不要弹窗了--用系统弹窗时不用判断，否则必死
-    if ([UIView isViewAddWindowUp:controller.view]==NO) {
-        //控制器不在屏幕中，不要弹窗了
-        NSLog(@"收到自定义控制器不在屏幕中的弹窗屏幕");
-        return;
-    }
+//   //判断弹窗是否在哪屏幕中，如果不在屏幕中就不要弹窗了--用系统弹窗时不用判断，否则必死
+//    if ([UIView isViewAddWindowUp:controller.view]==NO) {
+//        //控制器不在屏幕中，不要弹窗了
+//        NSLog(@"收到自定义控制器不在屏幕中的弹窗屏幕");
+//        return;
+//    }
     
     if (array.count>2) {
         NSLog(@"按钮个数必最多只能是2个");
         return;
     }
-    
+    if (title.length<=0 && message.length<=0 ) {
+        //都为空
+        return;
+    }
     //不在keyWindow上
     UIView * viewWX = (UIView*)[[UIApplication sharedApplication].keyWindow viewWithTag:131450623];
-    
-    if (type==100) {
-        //推送可以重复弹窗,设置成nil
-        viewWX =nil;
-    }
-    
-    if (type==200 && viewWX != nil) {
-        //移除上次创建的弹框，显示最新弹框
-        //移除弹框
-        [viewWX removeFromSuperview];
-        viewWX =nil;
-    }
     
     //控件不存在才创建，防止重复创建
     if (viewWX==nil) {
@@ -71,36 +62,31 @@
         alertView.tag = 131450623;
         //添加 ==不在keyWindow上
         [[UIApplication sharedApplication].keyWindow addSubview:alertView];
-        
-        //    block
+        //block
         alertView.actionBlockAtIndex = block;
-        
         //弹框宽度
-        alertView.widthAlter = 296;
-        
+        alertView.widthAlter = 280;
         alertView.type = type;
         
         //判空拦截
-        if ([title isEqual:@""]||[NSString isNULL:title]) {
-            title = nil;
+        if (title.length<=0) {
+            title = @"";
         }
-        if ([message isEqual:@""]||[NSString isNULL:message]) {
-            message = nil;
+        if (message.length<=0) {
+            message = @"";
         }
-        
-        if ([NSString isNULL:title]&&[NSString isNULL:message]) {
+        if (title.length<=0 && message.length<=0) {
             //没有提示消息
-            title = @"null😂";
+            title = @"";
         }
         //赋值
         alertView.titleText = title;
         alertView.subTitleText = message;
         alertView.array = array;
         alertView.controller = controller;
-        //    创建UI
+        //创建UI
         [alertView setUpContentViewAray:array];
     }
-    
 }
 
 
@@ -111,7 +97,7 @@
     if (self) {
         self.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
         //设置蒙版层背景色
-        self.backgroundColor=[UIColor colorWithRed:129/255.0 green:129/255.0 blue:129/255.0 alpha:0.7];
+        self.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.65];
         //开启用户交互
         self.userInteractionEnabled = YES;
         //添加点击手势（拦截点击事件）
@@ -145,6 +131,7 @@
         self.contentView = contentView;
         contentView.backgroundColor = [UIColor whiteColor];
         //拦截点击事件
+        contentView.layer.cornerRadius = 10;
         contentView.clipsToBounds = YES;
         contentView.userInteractionEnabled = YES;
         //添加点击手势拦截
@@ -168,111 +155,115 @@
     }
     
     //添加大标题
-    CGSize sizetitle = [NSString sizeMyStrWith:self.titleText andMyFont:[UIFont boldSystemFontOfSize:17] andMineWidth:self.widthAlter-30];
+    CGSize sizetitle = [NSString sizeMyStrWith:self.titleText andMyFont:[UIFont boldSystemFontOfSize:20] andMineWidth:self.widthAlter-40];
     
     UILabel *titleLabel = [UILabel new];
     titleLabel.text = self.titleText;
-    titleLabel.font  = [UIFont boldSystemFontOfSize:17];
-    titleLabel.textColor = [UIColor colorWithHexString:@"#333333"];
-    titleLabel.numberOfLines = 0;
+    titleLabel.font  = [UIFont boldSystemFontOfSize:20];
+    titleLabel.textColor = [UIColor blackColor];
+    titleLabel.numberOfLines = 1;
     titleLabel.textAlignment = NSTextAlignmentCenter;
     [_contentView addSubview:titleLabel];
     
     //副标题
-     CGSize sizeSubtitle = [NSString sizeMyStrWith:self.subTitleText andMyFont:[UIFont systemFontOfSize:12] andMineWidth:self.widthAlter-30];
+     CGSize sizeSubtitle = [NSString sizeMyHaveSpaceLabelWithMaxWidth:self.widthAlter-40 WithContentStr:self.subTitleText andFont:[UIFont systemFontOfSize:16] andLinespace:5];//有行间距
     UILabel *messageLabel = [UILabel new];
-    messageLabel.text = self.subTitleText;
-    messageLabel.font  = [UIFont systemFontOfSize:12];
-    messageLabel.textColor = [UIColor colorWithHexString:@"#999999"];
+    messageLabel.attributedText = [NSString getLabelLineSpace:self.subTitleText LineSpacing:5];
+    messageLabel.font  = [UIFont systemFontOfSize:16];
+    messageLabel.textColor = UIColorFromRGB(0x5A5A5A);
     messageLabel.numberOfLines = 0;
-    messageLabel.textAlignment = NSTextAlignmentCenter;
+    if (self.type==40) {
+        //内容左对齐
+        messageLabel.textAlignment = NSTextAlignmentLeft;
+    }else{
+        messageLabel.textAlignment = NSTextAlignmentCenter;
+    }
     [_contentView addSubview:messageLabel];
-    
-    
-    //创建分割线
-    UIImageView * imageViewLine = [[UIImageView alloc]init];
-    imageViewLine.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    [_contentView addSubview:imageViewLine];
-    
-    
+
     
 #pragma mark ========== 判断类型 =================
-    
-     if ([NSString isNULL:self.titleText]==NO && [NSString isNULL:self.subTitleText]==YES) {
+    CGFloat contentY;
+     if (self.titleText.length>0 && self.subTitleText.length<=0) {
         //只有大标题，没有副标题
          
-        titleLabel.frame = CGRectMake(15, 32, self.widthAlter-30, sizetitle.height);
+        titleLabel.frame = CGRectMake(20, 20, self.widthAlter-40, sizetitle.height);
          
         messageLabel.hidden = YES;
-        //分割线坐标
-        imageViewLine.frame = CGRectMake(0, titleLabel.bottomY+32, self.widthAlter, 1);
+         
+        contentY = titleLabel.bottomY;
         
-        
-    }else if ([NSString isNULL:self.titleText]==YES && [NSString isNULL:self.subTitleText]==NO){
+    }else if (self.titleText<=0 && self.subTitleText>=0){
         //只有副标题，没有大标题
         titleLabel.hidden = YES;
         //不要加距离
-        messageLabel.frame = CGRectMake(15, 32, self.widthAlter-30, sizeSubtitle.height);
-        //分割线坐标
-        imageViewLine.frame = CGRectMake(0, messageLabel.bottomY+32, self.widthAlter, 1);
+        messageLabel.frame = CGRectMake(20, 20, self.widthAlter-40, sizeSubtitle.height);
+        
+        contentY = messageLabel.bottomY;
     
     }else{
         
         //大标题和副标题同时存在
         
-        titleLabel.frame = CGRectMake(15, 32, self.widthAlter-30, sizetitle.height);
+        titleLabel.frame = CGRectMake(20, 20, self.widthAlter-40, sizetitle.height);
         
-        messageLabel.frame = CGRectMake(15, CGRectGetMaxY(titleLabel.frame)+10, self.widthAlter-30, sizeSubtitle.height);
-        //分割线坐标
-        imageViewLine.frame = CGRectMake(0, messageLabel.bottomY+32, self.widthAlter, 1);
+        messageLabel.frame = CGRectMake(15, CGRectGetMaxY(titleLabel.frame)+20, self.widthAlter-30, sizeSubtitle.height);
+        
+        contentY = messageLabel.bottomY;
     }
     
+    
+    //按钮内容分割线
+    UIView *viewLineH = [[UIView alloc]init];
+    viewLineH.frame = CGRectMake(0, contentY+20, self.widthAlter, 1);
+    viewLineH.backgroundColor =UIColorFromRGB(0xD5D5D5);
+    [_contentView addSubview:viewLineH];
     
     
     //只有一个按钮
     if (array.count==1) {
         //按钮
         UIButton *buttonOne = [UIButton buttonWithType:UIButtonTypeCustom];
-        buttonOne.frame = CGRectMake(0, imageViewLine.bottomY, self.widthAlter, 50);
+        buttonOne.frame = CGRectMake((self.widthAlter-self.widthAlter/2)/2, viewLineH.bottomY, self.widthAlter/2,50);
         [buttonOne setTitle:[array firstObject] forState:UIControlStateNormal];
-        [buttonOne setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        buttonOne.titleLabel.font = [UIFont systemFontOfSize:14];
-        [buttonOne setTitleColor:[UIColor colorWithHexString:@"#999999"] forState:UIControlStateNormal];
+        [buttonOne setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        buttonOne.titleLabel.font = [UIFont systemFontOfSize:16];
+        buttonOne.titleLabel.adjustsFontSizeToFitWidth = YES;
         [buttonOne addTarget:self action:@selector(btnActionOne) forControlEvents:UIControlEventTouchUpInside];
         [_contentView addSubview:buttonOne];
-        
         //设置View坐标
         _contentView.width = self.widthAlter;
-        _contentView.height = CGRectGetMaxY(buttonOne.frame);
+        _contentView.height = CGRectGetMaxY(buttonOne.frame)+15;
         _contentView.center = self.center;
         
         
     }else{
         //2个按钮
+       
+        CGFloat buttonWidth = (self.widthAlter-1) / 2;
         //按钮1
-        CGFloat buttonWidth = self.widthAlter/2;
         UIButton *buttonOne = [UIButton buttonWithType:UIButtonTypeCustom];
-        buttonOne.frame = CGRectMake(0, imageViewLine.bottomY, buttonWidth-0.5, 50);
+        buttonOne.frame = CGRectMake(0, viewLineH.bottomY, buttonWidth, 50);
         [buttonOne setTitle:[array firstObject] forState:UIControlStateNormal];
-        [buttonOne setTitleColor:[UIColor colorWithHexString:@"#999999"] forState:UIControlStateNormal];
-        buttonOne.titleLabel.font = [UIFont systemFontOfSize:14];
+        [buttonOne setTitleColor:UIColorFromRGB(0x5A5A5A) forState:UIControlStateNormal];
+        buttonOne.titleLabel.font = [UIFont systemFontOfSize:16];
+        buttonOne.titleLabel.adjustsFontSizeToFitWidth = YES;
         [buttonOne addTarget:self action:@selector(btnActionOne) forControlEvents:UIControlEventTouchUpInside];
         [_contentView addSubview:buttonOne];
         
         
-        //创建一条分割线
-        UIImageView * imageLineShu = [[UIImageView alloc]init];
-        imageLineShu.frame = CGRectMake(self.widthAlter/2-0.5, imageViewLine.bottomY, 1, 50);
-        imageLineShu.backgroundColor = [UIColor groupTableViewBackgroundColor];
-        [_contentView addSubview:imageLineShu];
-        
+        //两个按钮中间竖着的分割线
+        UIView *viewLineTwo = [[UIView alloc]init];
+        viewLineTwo.frame = CGRectMake(buttonOne.rightX, buttonOne.y, 1, 50);
+        viewLineTwo.backgroundColor =UIColorFromRGB(0xD5D5D5);
+        [_contentView addSubview:viewLineTwo];
         
         //按钮2
         UIButton *buttonTwo = [UIButton buttonWithType:UIButtonTypeCustom];
-        buttonTwo.frame = CGRectMake(buttonOne.rightX+1, imageViewLine.bottomY, buttonWidth, 50);
+        buttonTwo.frame = CGRectMake(viewLineTwo.rightX,buttonOne.y, buttonWidth, 50);
         [buttonTwo setTitle:[array lastObject] forState:UIControlStateNormal];
-        buttonTwo.titleLabel.font = [UIFont systemFontOfSize:14];
-        [buttonTwo setTitleColor:[UIColor colorWithHexString:@"#999999"] forState:UIControlStateNormal];
+        buttonTwo.titleLabel.font = [UIFont systemFontOfSize:16];
+        [buttonTwo setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        buttonTwo.titleLabel.adjustsFontSizeToFitWidth = YES;
         [buttonTwo addTarget:self action:@selector(btnActionTwo) forControlEvents:UIControlEventTouchUpInside];
         [_contentView addSubview:buttonTwo];
         
@@ -343,6 +334,53 @@
     animation.duration = 0.01;
     
     [_contentView.layer addAnimation:animation forKey:@"dismissAlert"];
+}
+
+
+
+#pragma mark============系统中间弹窗封装=====================
+//系统中间弹窗
++ (void)AlertSystemCXCenterAlertWithTitle:(NSString*)title Message:(NSString *)message otherItemArrays:(NSArray <NSString *>*)array Type:(NSInteger)type handler:(void(^)(NSInteger indexCenter))actionBlock{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    if(type==40){
+        //设置内容左对齐
+        //UILabel *label1 = [alertVC.view valueForKeyPath:@"_titleLabel"];
+        UILabel *labelMessage = [alertController.view valueForKeyPath:@"_messageLabel"];
+        labelMessage.textAlignment = NSTextAlignmentLeft;
+    }
+    
+    if(array.count ==1){
+        //只有一个按钮
+        //确定
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:array.firstObject style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            actionBlock(0);
+        }];
+        [alertController addAction:okAction];
+
+    }else if (array.count ==2){
+        //2个按钮
+        //
+        UIAlertAction *actionOne = [UIAlertAction actionWithTitle:array.firstObject style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            actionBlock(0);
+        }];
+        //
+        UIAlertAction *actionTwo = [UIAlertAction actionWithTitle:array.lastObject style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            actionBlock(1);
+        }];
+        
+        //kvc修改取消按钮颜色，找到那个按钮是取消
+        if([actionOne.title isEqual:@"取消"]){
+            [actionOne setValue:[UIColor grayColor] forKey:@"titleTextColor"];
+        }
+        if([actionTwo.title isEqual:@"取消"]){
+            [actionTwo setValue:[UIColor grayColor] forKey:@"titleTextColor"];
+        }
+        
+        [alertController addAction:actionOne];
+        [alertController addAction:actionTwo];
+    }
+//    [UIApplication sharedApplication].keyWindow.rootViewController
+    [[UIViewController getCurrentVC] presentViewController:alertController animated:YES completion:nil];
 }
 
 
