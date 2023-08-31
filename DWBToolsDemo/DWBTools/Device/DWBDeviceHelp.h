@@ -63,6 +63,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameter observer: 添加到那个观察者上：self，view或者控制器
 - (void)removeScreenNotif:(id)observer;
 
+
+///获取设备型号
++ (NSString *)getCurrentDeviceModel;
+
 @end
 
 NS_ASSUME_NONNULL_END

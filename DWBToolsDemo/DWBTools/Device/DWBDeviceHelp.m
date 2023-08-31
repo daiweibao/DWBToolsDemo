@@ -8,6 +8,9 @@
 
 #import "DWBDeviceHelp.h"
 #import <CoreMotion/CoreMotion.h>//陀螺仪
+
+#import <sys/utsname.h>//获取设备型号要导入头文件
+
 @implementation DWBDeviceHelp
 
 + (DWBDeviceHelp *)sharedManager{
@@ -33,11 +36,12 @@
 + (BOOL)isPhoneX {
     BOOL isiPhoneX = NO;
     if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {//判断是否是手机
+        //如果不是手机
         return isiPhoneX;
     }
     if (@available(iOS 11.0, *)) {
         UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;
-        if (mainWindow.safeAreaInsets.bottom > 0.0) {
+        if (mainWindow.safeAreaInsets.bottom > 0.0) {////底部安全边距
             isiPhoneX = YES;
         }
     }
@@ -257,6 +261,65 @@ if (@available(iOS 11.0, *)) {
 */
 #pragma mark---------截屏录屏监听 E-----------
 
+
+///获取设备型号
++ (NSString *)getCurrentDeviceModel{
+    struct utsname systemInfo;
+    uname(&systemInfo); // 获取系统设备信息
+    NSString *platform = [NSString stringWithCString:systemInfo.machine encoding:NSASCIIStringEncoding];
+    NSDictionary *dict = @{
+                           // iPhone
+                           @"iPhone5,1" : @"iPhone 5",
+                           @"iPhone5,2" : @"iPhone 5",
+                           @"iPhone5,3" : @"iPhone 5c",
+                           @"iPhone5,4" : @"iPhone 5c",
+                           @"iPhone6,1" : @"iPhone 5s",
+                           @"iPhone6,2" : @"iPhone 5s",
+                           @"iPhone7,1" : @"iPhone 6 Plus",
+                           @"iPhone7,2" : @"iPhone 6",
+                           @"iPhone8,1" : @"iPhone 6s",
+                           @"iPhone8,2" : @"iPhone 6s Plus",
+                           @"iPhone8,4" : @"iPhone SE",
+                           @"iPhone9,1" : @"iPhone 7",
+                           @"iPhone9,2" : @"iPhone 7 Plus",
+                           @"iPhone9,3" : @"iPhone 7",
+                           @"iPhone9,4" : @"iPhone 7 Plus",
+                           @"iPhone10,1" : @"iPhone 8",
+                           @"iPhone10,2" : @"iPhone 8 Plus",
+                           @"iPhone10,4" : @"iPhone 8",
+                           @"iPhone10,5" : @"iPhone 8 Plus",
+                           @"iPhone10,3" : @"iPhone X",
+                           @"iPhone10,6" : @"iPhone X",
+                           @"iPhone11,2" : @"iPhone XS",
+                           @"iPhone11,4" : @"iPhone XS Max",
+                           @"iPhone11,6" : @"iPhone XS Max",
+                           @"iPhone11,8" : @"iPhone XR",
+                           @"iPhone12,1" : @"iPhone 11",
+                           @"iPhone12,3" : @"iPhone 11 Pro",
+                           @"iPhone12,5" : @"iPhone 11 Pro Max",
+                           @"iPhone12,8" : @"iPhone SE Gen2",
+                           @"iPhone13,1" : @"iPhone 12 mini",
+                           @"iPhone13,2" : @"iPhone 12",
+                           @"iPhone13,3" : @"iPhone 12 Pro",
+                           @"iPhone13,4" : @"iPhone 12 Pro Max",
+                           @"iPhone14,4" : @"iPhone 13 mini",
+                           @"iPhone14,5" : @"iPhone 13",
+                           @"iPhone14,2" : @"iPhone 13 Pro",
+                           @"iPhone14,3" : @"iPhone 13 Pro Max",
+                           @"iPhone14,7" : @"iPhone 14",
+                           @"iPhone14,8" : @"iPhone 14 Plus",
+                           @"iPhone15,2" : @"iPhone 14 Pro",
+                           @"iPhone15,3" : @"iPhone 14 Pro Max",
+                           @"i386" : @"iPhone Simulator",
+                           @"x86_64" : @"iPhone Simulator"
+                           };
+    NSString *name = dict[platform];
+    //如果能获取到设备名称就返回设别名称，获取不到就返回系统信息
+    return name ? name : platform;
+    
+//   iPhone设备型号官网地址：https://www.theiphonewiki.com/wiki/Models
+}
+ 
 
 
 
