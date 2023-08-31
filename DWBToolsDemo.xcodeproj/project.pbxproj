@@ -12,8 +12,7 @@
 		360F0F9A218067B6006A7835 /* NSMutableArray+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0F96218067B6006A7835 /* NSMutableArray+Swizzling.m */; };
 		360F0FC7218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F0FC6218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m */; };
 		3610DC072181757A00EAB9CA /* NSNull+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3610DC062181757A00EAB9CA /* NSNull+safe.m */; };
-		36213F0F214364BD00B00E2B /* AlretCXSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F04214364BD00B00E2B /* AlretCXSheetView.m */; };
-		36213F10214364BD00B00E2B /* AlertCXCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F05214364BD00B00E2B /* AlertCXCenterView.m */; };
+		36213F10214364BD00B00E2B /* CXAlertCXCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F05214364BD00B00E2B /* CXAlertCXCenterView.m */; };
 		36213F11214364BD00B00E2B /* JXActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F0A214364BD00B00E2B /* JXActionSheet.m */; };
 		36213F12214364BD00B00E2B /* AlertCXShowInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F0B214364BD00B00E2B /* AlertCXShowInfo.m */; };
 		36213F13214364BD00B00E2B /* AlertViewTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 36213F0C214364BD00B00E2B /* AlertViewTool.m */; };
@@ -212,6 +211,8 @@
 		36EEDCC1214209FE000CBEEB /* CXVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCBA214209FE000CBEEB /* CXVersionUpdate.m */; };
 		36EEDCC2214209FE000CBEEB /* DownUpdateAppAleat.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EEDCBB214209FE000CBEEB /* DownUpdateAppAleat.m */; };
 		36FF0858217A1A3800791E59 /* DWBShareTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FF0856217A1A3800791E59 /* DWBShareTools.m */; };
+		EA1F9FF52AA0757F0042FCCE /* CXSystemAlertSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1F9FF32AA0757F0042FCCE /* CXSystemAlertSheetView.m */; };
+		EA1F9FF62AA0757F0042FCCE /* CXAlretCXSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1F9FF42AA0757F0042FCCE /* CXAlretCXSheetView.m */; };
 		EAB3BFFD2A92E66C00BA226C /* CXHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */; };
 		EABDB6F82A95FF4D0098E161 /* ShadowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB6F62A95FF4D0098E161 /* ShadowButton.m */; };
 		EABDB6FB2A95FF590098E161 /* UIImage+ChangeColorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB6FA2A95FF590098E161 /* UIImage+ChangeColorImage.m */; };
@@ -256,15 +257,13 @@
 		3610DC052181757A00EAB9CA /* NSNull+safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+safe.h"; sourceTree = "<group>"; };
 		3610DC062181757A00EAB9CA /* NSNull+safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+safe.m"; sourceTree = "<group>"; };
 		36213F03214364BD00B00E2B /* JXActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXActionSheet.h; sourceTree = "<group>"; };
-		36213F04214364BD00B00E2B /* AlretCXSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlretCXSheetView.m; sourceTree = "<group>"; };
-		36213F05214364BD00B00E2B /* AlertCXCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertCXCenterView.m; sourceTree = "<group>"; };
+		36213F05214364BD00B00E2B /* CXAlertCXCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAlertCXCenterView.m; sourceTree = "<group>"; };
 		36213F07214364BD00B00E2B /* AlertViewTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewTool.h; sourceTree = "<group>"; };
 		36213F08214364BD00B00E2B /* AlertCXShowInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertCXShowInfo.h; sourceTree = "<group>"; };
-		36213F09214364BD00B00E2B /* AlretCXSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlretCXSheetView.h; sourceTree = "<group>"; };
 		36213F0A214364BD00B00E2B /* JXActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXActionSheet.m; sourceTree = "<group>"; };
 		36213F0B214364BD00B00E2B /* AlertCXShowInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertCXShowInfo.m; sourceTree = "<group>"; };
 		36213F0C214364BD00B00E2B /* AlertViewTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewTool.m; sourceTree = "<group>"; };
-		36213F0E214364BD00B00E2B /* AlertCXCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertCXCenterView.h; sourceTree = "<group>"; };
+		36213F0E214364BD00B00E2B /* CXAlertCXCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAlertCXCenterView.h; sourceTree = "<group>"; };
 		36213F152143652C00B00E2B /* DWBAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWBAlertView.h; sourceTree = "<group>"; };
 		36213F162143652C00B00E2B /* DWBAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWBAlertView.m; sourceTree = "<group>"; };
 		36213F1821439A3100B00E2B /* ZBHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBHTextView.m; sourceTree = "<group>"; };
@@ -624,6 +623,10 @@
 		5B2AD26055BB273DD4351B06 /* Pods-DWBToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		6C09C75787C5C6594A6B0EA4 /* libPods-DWBToolsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DWBToolsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53F89B2E10274ABDD3C0872 /* Pods-DWBToolsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBToolsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWBToolsDemo/Pods-DWBToolsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		EA1F9FF12AA0757F0042FCCE /* CXAlretCXSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAlretCXSheetView.h; sourceTree = "<group>"; };
+		EA1F9FF22AA0757F0042FCCE /* CXSystemAlertSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSystemAlertSheetView.h; sourceTree = "<group>"; };
+		EA1F9FF32AA0757F0042FCCE /* CXSystemAlertSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSystemAlertSheetView.m; sourceTree = "<group>"; };
+		EA1F9FF42AA0757F0042FCCE /* CXAlretCXSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAlretCXSheetView.m; sourceTree = "<group>"; };
 		EA76C5522A904F14008A59EE /* CXAllHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXAllHeader.h; sourceTree = "<group>"; };
 		EA76C5532A905040008A59EE /* CXChangeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXChangeHeader.h; sourceTree = "<group>"; };
 		EAB3BFFB2A92E66C00BA226C /* CXHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXHttpTool.h; sourceTree = "<group>"; };
@@ -720,10 +723,12 @@
 				36213F0C214364BD00B00E2B /* AlertViewTool.m */,
 				36213F03214364BD00B00E2B /* JXActionSheet.h */,
 				36213F0A214364BD00B00E2B /* JXActionSheet.m */,
-				36213F09214364BD00B00E2B /* AlretCXSheetView.h */,
-				36213F04214364BD00B00E2B /* AlretCXSheetView.m */,
-				36213F0E214364BD00B00E2B /* AlertCXCenterView.h */,
-				36213F05214364BD00B00E2B /* AlertCXCenterView.m */,
+				36213F0E214364BD00B00E2B /* CXAlertCXCenterView.h */,
+				36213F05214364BD00B00E2B /* CXAlertCXCenterView.m */,
+				EA1F9FF12AA0757F0042FCCE /* CXAlretCXSheetView.h */,
+				EA1F9FF42AA0757F0042FCCE /* CXAlretCXSheetView.m */,
+				EA1F9FF22AA0757F0042FCCE /* CXSystemAlertSheetView.h */,
+				EA1F9FF32AA0757F0042FCCE /* CXSystemAlertSheetView.m */,
 				EAE2F3632A9F5A4000349C1C /* CXAlertCenterAgreementView.h */,
 				EAE2F3642A9F5A4000349C1C /* CXAlertCenterAgreementView.m */,
 				36213F08214364BD00B00E2B /* AlertCXShowInfo.h */,
@@ -1927,9 +1932,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				36E8620D21AFBF3300180D78 /* JXCategoryNumberCellModel.m in Sources */,
-				36213F0F214364BD00B00E2B /* AlretCXSheetView.m in Sources */,
 				3610DC072181757A00EAB9CA /* NSNull+safe.m in Sources */,
-				36213F10214364BD00B00E2B /* AlertCXCenterView.m in Sources */,
+				36213F10214364BD00B00E2B /* CXAlertCXCenterView.m in Sources */,
 				36E8620F21AFBF3300180D78 /* JXCategoryFactory.m in Sources */,
 				360F0FC7218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m in Sources */,
 				36EEDC9421420585000CBEEB /* UIImageView+CXHelp.m in Sources */,
@@ -1942,6 +1946,7 @@
 				363BFB5521A95B4900666F8A /* RedPeopleThemController.m in Sources */,
 				368C39FA213F67C800C10B3E /* ViewController.m in Sources */,
 				362F7BC72148AF2400A8ECB1 /* ZXPUnicode.m in Sources */,
+				EA1F9FF62AA0757F0042FCCE /* CXAlretCXSheetView.m in Sources */,
 				36E8621721AFBF3300180D78 /* JXPagerView.m in Sources */,
 				36E8620821AFBF3300180D78 /* JXCategoryImageView.m in Sources */,
 				36213F4721439C1400B00E2B /* LoadingCircleHUD.m in Sources */,
@@ -2074,6 +2079,7 @@
 				368E69C62140B64D000EC79C /* UIColor+DWBHelp.m in Sources */,
 				36E8621921AFBF3300180D78 /* DWBJXCategoryMyLineView.m in Sources */,
 				368E69E52140C5BF000EC79C /* CXAudioTools.m in Sources */,
+				EA1F9FF52AA0757F0042FCCE /* CXSystemAlertSheetView.m in Sources */,
 				36213F6621439DB700B00E2B /* MJDIYLoadingHeader.m in Sources */,
 				36E8621221AFBF3300180D78 /* JXCategoryBaseView.m in Sources */,
 				36E861FA21AFBF3300180D78 /* JXCategoryIndicatorComponentView.m in Sources */,

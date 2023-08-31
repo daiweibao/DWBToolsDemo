@@ -1,14 +1,14 @@
 //
-//  AlertCXImageView.m
+//  CXAlertCXCenterView.m
 //  AiHenDeChaoXi
 //
 //  Created by 爱恨的潮汐 on 2018/4/12.
 //  Copyright © 2018年 潮汐科技有限公司. All rights reserved.
 //
 
-#import "AlertCXCenterView.h"
+#import "CXAlertCXCenterView.h"
 
-@interface AlertCXCenterView()
+@interface CXAlertCXCenterView()
 @property (nonatomic, weak) UIView *contentView;
 //弹框宽度
 @property (nonatomic, assign) CGFloat widthAlter;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation AlertCXCenterView
+@implementation CXAlertCXCenterView
 
 /**
  自己封装的aleat
@@ -58,7 +58,7 @@
     
     //控件不存在才创建，防止重复创建
     if (viewWX==nil) {
-        AlertCXCenterView * alertView = [[AlertCXCenterView alloc]init];
+        CXAlertCXCenterView * alertView = [[CXAlertCXCenterView alloc]init];
         alertView.tag = 131450623;
         //添加 ==不在keyWindow上
         [[UIApplication sharedApplication].keyWindow addSubview:alertView];

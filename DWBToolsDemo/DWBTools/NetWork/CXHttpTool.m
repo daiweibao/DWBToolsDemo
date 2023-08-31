@@ -83,12 +83,12 @@
                     //展示错误提示，需要过滤掉会话超时的情况，会话超时，在拦截器DTRpcCommonInterceptor里处理
                     if([CXHttpTool isLoginTimeOutWithRejCode:RejCode AndUrl:url]==NO){
                         //非会话超时提示
-                        [AlertCXCenterView AlertCXCenterAlertWithController:[UIViewController getCurrentVC] Title:@"提示" Message:msg otherItemArrays:@[@"知道啦"] Type:-1 handler:^(NSInteger indexCenter) {
+                        [CXAlertCXCenterView AlertCXCenterAlertWithController:[UIViewController getCurrentVC] Title:@"提示" Message:msg otherItemArrays:@[@"知道啦"] Type:-1 handler:^(NSInteger indexCenter) {
                             
                         }];
                     }else{
                         //会话超时处理，弹窗内部自动处理重复弹出
-                        [AlertCXCenterView AlertCXCenterAlertWithController:[UIViewController getCurrentVC] Title:@"提示" Message:msg otherItemArrays:@[@"去登录"] Type:-1 handler:^(NSInteger indexCenter) {
+                        [CXAlertCXCenterView AlertCXCenterAlertWithController:[UIViewController getCurrentVC] Title:@"提示" Message:msg otherItemArrays:@[@"去登录"] Type:-1 handler:^(NSInteger indexCenter) {
                             if(indexCenter==0){
                                 //去登录
                             }
@@ -114,7 +114,7 @@
                 }
                 if (showMsg) {
                     //
-                    [AlertCXCenterView AlertCXCenterAlertWithController:[UIViewController getCurrentVC] Title:@"提示" Message:error.localizedDescription otherItemArrays:@[@"知道啦"] Type:-1 handler:^(NSInteger indexCenter) {
+                    [CXAlertCXCenterView AlertCXCenterAlertWithController:[UIViewController getCurrentVC] Title:@"提示" Message:error.localizedDescription otherItemArrays:@[@"知道啦"] Type:-1 handler:^(NSInteger indexCenter) {
                         
                     }];
                 }

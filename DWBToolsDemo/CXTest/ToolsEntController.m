@@ -223,7 +223,7 @@
         MyCenterMainController * VC = [[MyCenterMainController alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
     }else if (indexPath.row==4){
-        [AlertCXCenterView AlertCXCenterAlertWithController:self Title:@"提示" Message:@"消息内容第三个电饭锅电饭锅手动阀刚发打撒干撒代发" otherItemArrays:@[@"取消",@"确定"] Type:-1 handler:^(NSInteger indexCenter) {
+        [CXAlertCXCenterView AlertCXCenterAlertWithController:self Title:@"提示" Message:@"消息内容第三个电饭锅电饭锅手动阀刚发打撒干撒代发" otherItemArrays:@[@"取消",@"确定"] Type:-1 handler:^(NSInteger indexCenter) {
             
         }];
     }else if (indexPath.row==5){

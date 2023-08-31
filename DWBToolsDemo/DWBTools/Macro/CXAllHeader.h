@@ -74,7 +74,7 @@
 //
 #import "UIViewController+CXHelp.h"
 //中间弹窗
-#import "AlertCXCenterView.h"
+#import "CXAlertCXCenterView.h"
 
 #import "RCBDataSafeHelp.h"
 

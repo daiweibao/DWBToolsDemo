@@ -1,5 +1,5 @@
 //
-//  AlertCXImageView.h
+//  CXAlertCXCenterView.h
 //  AiHenDeChaoXi
 //
 //  Created by 爱恨的潮汐 on 2023/8/30.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void (^ActionBlockAtIndex)(NSInteger indexCenter);
-@interface AlertCXCenterView : UIView
+@interface CXAlertCXCenterView : UIView
 //回调经按钮tage
 @property (nonatomic, copy) ActionBlockAtIndex actionBlockAtIndex;
 

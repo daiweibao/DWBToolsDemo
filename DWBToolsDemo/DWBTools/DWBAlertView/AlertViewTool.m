@@ -8,7 +8,7 @@
 
 #import "AlertViewTool.h"
 
-#import "AlretCXSheetView.h"//自己封装的底部弹窗
+#import "CXAlretCXSheetView.h"//自己封装的底部弹窗
 
 @implementation AlertViewTool
 
@@ -170,74 +170,5 @@
     return self;
 }
 
-
-#pragma mark =========== 下面是自己封装的底部弹窗 S===================
-/**
- 自己封装的aleatSheet底部弹框
- 
- @param controller 弹窗所在控制器
- @param title 标题
- @param array 数组，不包含取消按钮
- @param redIndex 让那一按钮变红,-1代表都不变红
- @param isShow 是否展示取消按钮
- @param cancetitle 取消按钮的标题
- @param type 类型，-1代表默认 0代表成功（默认成功） 1代表失败  100代表允许重复弹窗 ,200代表允许移除老的弹窗，展示新的弹窗（推送用）300控制器不在屏幕中也能弹窗
- @param block 回调点击了那个按钮从上到下，包含取消按钮依次是0，1.....
- */
-+ (void)AlertMyCXSheetViewWithController:(UIViewController*)controller Title:(NSString*)title otherItemArrays:(NSArray *)array ShowRedindex:(NSInteger )redIndex isShowCancel:(BOOL)isShow CancelTitle:(NSString*)cancetitle Type:(NSInteger)type handler:(ActionBlockAtIndex)block{
-    
-    //判断弹窗是否在哪屏幕中，如果不在屏幕中就不要弹窗了--用系统弹窗时不用判断，否则必死
-    if (type==300) {
-        //控制器不在屏幕中也能弹窗
-    }else{
-        if ([UIView isViewAddWindowUp:controller.view]==NO) {
-            //控制器不在屏幕中，不要弹窗了
-            NSLog(@"收到自定义控制器不在屏幕中的底部弹窗");
-            return;
-        }
-        
-    }
-    
-    //不在keyWindow上
-    UIView * viewWX = (UIView*)[[UIApplication sharedApplication].keyWindow viewWithTag:19920227];
-    
-    if (type==100) {
-        //推送可以重复弹窗,设置成nil
-        viewWX =nil;
-    }
-    
-    if (type==200 && viewWX != nil) {
-        //移除上次创建的弹框，显示最新弹框
-        //移除弹框
-        [viewWX removeFromSuperview];
-        viewWX =nil;
-    }
-    
-    //控件不存在才创建，防止重复创建
-    if (viewWX==nil) {
-        AlretCXSheetView * alertView = [[AlretCXSheetView alloc]init];
-        alertView.tag = 19920227;
-        //添加 ==不在keyWindow上
-        [[UIApplication sharedApplication].keyWindow addSubview:alertView];
-        
-        //    block
-        alertView.actionBlockAtIndex = block;
-        
-        //弹框宽度
-        alertView.controller = controller;
-        alertView.titleText = title;
-        alertView.array = array;
-        alertView.redIndex =redIndex;
-        alertView.isShow = isShow;
-        alertView.cancetitle = cancetitle;
-        alertView.type = type;
-        
-        //创建UI
-        [alertView setUpContentViewAray:array];
-    }
-    
-}
-
-#pragma mark =========== 下面是自己封装的底部弹窗 E===================
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "DWBAlertView.h"
-#import "AlertCXCenterView.h"//中间弹窗
+#import "CXAlertCXCenterView.h"//中间弹窗
 #import "AlertViewTool.h"//底部弹窗
 
 
@@ -27,7 +27,7 @@
 + (void)AlertCXAlertCenterAllWithController:(UIViewController*)controller Title:(NSString*)title Message:(NSString *)message otherItemArrays:(NSArray *)array Type:(NSInteger)type handler:(void(^)(NSInteger index))blockAlert{
     
     //自己封装的【中间】弹窗，以后在这里修改替换成其他弹窗就好，换成系统的也可以
-    [AlertCXCenterView AlertCXCenterAlertWithController:controller Title:title Message:message otherItemArrays:array Type:type handler:^(NSInteger indexCenter) {
+    [CXAlertCXCenterView AlertCXCenterAlertWithController:controller Title:title Message:message otherItemArrays:array Type:type handler:^(NSInteger indexCenter) {
         if (blockAlert) {
             blockAlert(indexCenter);
         }
