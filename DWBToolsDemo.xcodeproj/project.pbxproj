@@ -213,6 +213,7 @@
 		36FF0858217A1A3800791E59 /* DWBShareTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FF0856217A1A3800791E59 /* DWBShareTools.m */; };
 		EA1F9FF52AA0757F0042FCCE /* CXSystemAlertSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1F9FF32AA0757F0042FCCE /* CXSystemAlertSheetView.m */; };
 		EA1F9FF62AA0757F0042FCCE /* CXAlretCXSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1F9FF42AA0757F0042FCCE /* CXAlretCXSheetView.m */; };
+		EA7817B12AA1C5B000542C54 /* CXDeviceIPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */; };
 		EAB3BFFD2A92E66C00BA226C /* CXHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */; };
 		EABDB6F82A95FF4D0098E161 /* ShadowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB6F62A95FF4D0098E161 /* ShadowButton.m */; };
 		EABDB6FB2A95FF590098E161 /* UIImage+ChangeColorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB6FA2A95FF590098E161 /* UIImage+ChangeColorImage.m */; };
@@ -629,6 +630,8 @@
 		EA1F9FF42AA0757F0042FCCE /* CXAlretCXSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAlretCXSheetView.m; sourceTree = "<group>"; };
 		EA76C5522A904F14008A59EE /* CXAllHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXAllHeader.h; sourceTree = "<group>"; };
 		EA76C5532A905040008A59EE /* CXChangeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXChangeHeader.h; sourceTree = "<group>"; };
+		EA7817AF2AA1C5B000542C54 /* CXDeviceIPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDeviceIPAddress.h; sourceTree = "<group>"; };
+		EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDeviceIPAddress.m; sourceTree = "<group>"; };
 		EAB3BFFB2A92E66C00BA226C /* CXHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXHttpTool.h; sourceTree = "<group>"; };
 		EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXHttpTool.m; sourceTree = "<group>"; };
 		EABDB6F62A95FF4D0098E161 /* ShadowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowButton.m; sourceTree = "<group>"; };
@@ -1243,6 +1246,8 @@
 			children = (
 				369D895F217198F800003425 /* DWBDeviceHelp.h */,
 				369D8960217198F800003425 /* DWBDeviceHelp.m */,
+				EA7817AF2AA1C5B000542C54 /* CXDeviceIPAddress.h */,
+				EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */,
 			);
 			path = Device;
 			sourceTree = "<group>";
@@ -1986,6 +1991,7 @@
 				36E861FB21AFBF3300180D78 /* JXCategoryIndicatorBackgroundView.m in Sources */,
 				363BFB4921A958CF00666F8A /* ParentClassScrollViewController.m in Sources */,
 				363BFB5821A95D7F00666F8A /* RedPeopleHeaderView.m in Sources */,
+				EA7817B12AA1C5B000542C54 /* CXDeviceIPAddress.m in Sources */,
 				368E69DD2140C58B000EC79C /* UITextField+WJ.m in Sources */,
 				36213F7C21439FB300B00E2B /* HTMLWebView.m in Sources */,
 				36213F6B21439DB700B00E2B /* MJChiBaoZiHeader.m in Sources */,
