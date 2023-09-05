@@ -36,6 +36,9 @@
     [button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     [self.view addSubview:button];
     
+    //网络状态监听，从没网切换到有网
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChangeNoNetTohaveNet) name:@"YZ_networkChange" object:nil];
+    
     //创建功能入口控制器UI
 #ifdef CXDEBUG
     //开发模式
@@ -47,6 +50,13 @@
 #endif
     
 }
+
+//网络状态改变：从没网切换到有网
+- (void)networkChangeNoNetTohaveNet{
+    NSLog(@"网络状态发生变化：从没网到有网状态");
+    [DWBToast showCenterWithText:@"网络状态发生变化"];
+}
+
 
 
 

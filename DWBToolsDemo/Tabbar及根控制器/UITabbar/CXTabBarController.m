@@ -14,6 +14,8 @@
 //控制器
 #import "HopmeViewController.h"
 
+#import "CXAFNetworkingChange.h"
+
 
 @interface CXTabBarController ()<TienUITabBarDelegate>
 ///自定义tabBar的item
@@ -41,6 +43,9 @@
     // Do any additional setup after loading the view.
     self.delegate = self;
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    //监听网络状态
+    [CXAFNetworkingChange yz_currentNetStates];
     
 }
 

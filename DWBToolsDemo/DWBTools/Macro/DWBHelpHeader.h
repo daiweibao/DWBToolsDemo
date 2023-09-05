@@ -31,6 +31,7 @@
 
 #else
 #define NSLog(...)
+#define DebugLog(...)
 #endif
 
 

@@ -213,6 +213,9 @@
 		36FF0858217A1A3800791E59 /* DWBShareTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FF0856217A1A3800791E59 /* DWBShareTools.m */; };
 		EA1F9FF52AA0757F0042FCCE /* CXSystemAlertSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1F9FF32AA0757F0042FCCE /* CXSystemAlertSheetView.m */; };
 		EA1F9FF62AA0757F0042FCCE /* CXAlretCXSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1F9FF42AA0757F0042FCCE /* CXAlretCXSheetView.m */; };
+		EA32114B2AA6BA73002DF89E /* CXAFNetworkingChange.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32114A2AA6BA73002DF89E /* CXAFNetworkingChange.m */; };
+		EA3211512AA6BDDD002DF89E /* CXAuthorityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32114F2AA6BDDD002DF89E /* CXAuthorityManager.m */; };
+		EA3211522AA6BDDD002DF89E /* RCBBluetoothQXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3211502AA6BDDD002DF89E /* RCBBluetoothQXManager.m */; };
 		EA7817B12AA1C5B000542C54 /* CXDeviceIPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */; };
 		EAB3BFFD2A92E66C00BA226C /* CXHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */; };
 		EABDB6F82A95FF4D0098E161 /* ShadowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB6F62A95FF4D0098E161 /* ShadowButton.m */; };
@@ -628,6 +631,12 @@
 		EA1F9FF22AA0757F0042FCCE /* CXSystemAlertSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSystemAlertSheetView.h; sourceTree = "<group>"; };
 		EA1F9FF32AA0757F0042FCCE /* CXSystemAlertSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSystemAlertSheetView.m; sourceTree = "<group>"; };
 		EA1F9FF42AA0757F0042FCCE /* CXAlretCXSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAlretCXSheetView.m; sourceTree = "<group>"; };
+		EA3211492AA6BA73002DF89E /* CXAFNetworkingChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAFNetworkingChange.h; sourceTree = "<group>"; };
+		EA32114A2AA6BA73002DF89E /* CXAFNetworkingChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAFNetworkingChange.m; sourceTree = "<group>"; };
+		EA32114D2AA6BDDD002DF89E /* CXAuthorityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAuthorityManager.h; sourceTree = "<group>"; };
+		EA32114E2AA6BDDD002DF89E /* RCBBluetoothQXManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBBluetoothQXManager.h; sourceTree = "<group>"; };
+		EA32114F2AA6BDDD002DF89E /* CXAuthorityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAuthorityManager.m; sourceTree = "<group>"; };
+		EA3211502AA6BDDD002DF89E /* RCBBluetoothQXManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCBBluetoothQXManager.m; sourceTree = "<group>"; };
 		EA76C5522A904F14008A59EE /* CXAllHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXAllHeader.h; sourceTree = "<group>"; };
 		EA76C5532A905040008A59EE /* CXChangeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXChangeHeader.h; sourceTree = "<group>"; };
 		EA7817AF2AA1C5B000542C54 /* CXDeviceIPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDeviceIPAddress.h; sourceTree = "<group>"; };
@@ -1159,6 +1168,7 @@
 				36446173218C2D6300B9E01E /* NSArray */,
 				360F0F8921805082006A7835 /* DataSafe(数据安全放崩溃) */,
 				368E69DA2140C576000EC79C /* UITextField */,
+				EA32114C2AA6BDDD002DF89E /* SystemPermissions */,
 				369D895E217198F800003425 /* Device */,
 				368E69D32140C479000EC79C /* UIFont */,
 				368C3BFC213FB44800C10B3E /* HUD */,
@@ -1235,6 +1245,8 @@
 				362F7BC42148AF2300A8ECB1 /* ZXPUnicode(json中文打印) */,
 				EAB3BFFB2A92E66C00BA226C /* CXHttpTool.h */,
 				EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */,
+				EA3211492AA6BA73002DF89E /* CXAFNetworkingChange.h */,
+				EA32114A2AA6BA73002DF89E /* CXAFNetworkingChange.m */,
 				36A73BB12182C05700B79AB0 /* NSDictionary+DeleteNull.h */,
 				36A73BB22182C05700B79AB0 /* NSDictionary+DeleteNull.m */,
 			);
@@ -1645,6 +1657,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EA32114C2AA6BDDD002DF89E /* SystemPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				EA32114D2AA6BDDD002DF89E /* CXAuthorityManager.h */,
+				EA32114F2AA6BDDD002DF89E /* CXAuthorityManager.m */,
+				EA32114E2AA6BDDD002DF89E /* RCBBluetoothQXManager.h */,
+				EA3211502AA6BDDD002DF89E /* RCBBluetoothQXManager.m */,
+			);
+			path = SystemPermissions;
+			sourceTree = "<group>";
+		};
 		EA4195472A977B0E00B113B3 /* Macro */ = {
 			isa = PBXGroup;
 			children = (
@@ -1961,6 +1984,7 @@
 				36213F832143A0F100B00E2B /* JZAlbumViewController.m in Sources */,
 				36E8620E21AFBF3300180D78 /* JXCategoryListVCContainerView.m in Sources */,
 				36EEDCA721420794000CBEEB /* NSString+QRCode.m in Sources */,
+				EA32114B2AA6BA73002DF89E /* CXAFNetworkingChange.m in Sources */,
 				36E861FC21AFBF3300180D78 /* JXCategoryIndicatorCellModel.m in Sources */,
 				36B6609721743DA700E78824 /* DWBURLWKWebView.m in Sources */,
 				36A73BB92182C5F400B79AB0 /* NSArray+DWBSafe.m in Sources */,
@@ -2006,6 +2030,7 @@
 				36213F6821439DB700B00E2B /* DWB_refreshHeader.m in Sources */,
 				EAC6D4FB2A8F734100932BDA /* UIButton+ActionButton.m in Sources */,
 				368E69D92140C49B000EC79C /* UIFont+FontNameSize.m in Sources */,
+				EA3211522AA6BDDD002DF89E /* RCBBluetoothQXManager.m in Sources */,
 				368E69E62140C5BF000EC79C /* TouchIDHelp.m in Sources */,
 				36E861F821AFBF3300180D78 /* JXCategoryIndicatorImageView.m in Sources */,
 				368E69D82140C49B000EC79C /* UIFont+FontNameBoldSize.m in Sources */,
@@ -2030,6 +2055,7 @@
 				36213F4821439C1400B00E2B /* MBProgressHUD+MJ.m in Sources */,
 				363BFB5321A95B4900666F8A /* RedPeopleGoodsController.m in Sources */,
 				36E8621421AFBF3300180D78 /* JXCategoryBaseCellModel.m in Sources */,
+				EA3211512AA6BDDD002DF89E /* CXAuthorityManager.m in Sources */,
 				363BFB4621A958CF00666F8A /* MainTouchTableTableView.m in Sources */,
 				368C3C06213FB44900C10B3E /* NSString+DWBHelp.m in Sources */,
 				368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */,

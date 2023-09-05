@@ -37,6 +37,8 @@ pod 'MJRefresh','~>3.7'
 
 #3.4.1
 pod 'MJExtension','~>3.4'
+#3.2
+pod 'Reachability'
 
 
 #pod 'JXCategoryView'

@@ -18,6 +18,7 @@ PODS:
   - Masonry (1.1.0)
   - MJExtension (3.4.1)
   - MJRefresh (3.7.5)
+  - Reachability (3.2)
   - SDWebImage (5.17.0):
     - SDWebImage/Core (= 5.17.0)
   - SDWebImage/Core (5.17.0)
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - Masonry (~> 1.1)
   - MJExtension (~> 3.4)
   - MJRefresh (~> 3.7)
+  - Reachability
   - SDWebImage (~> 5.0)
 
 SPEC REPOS:
@@ -37,6 +39,7 @@ SPEC REPOS:
     - Masonry
     - MJExtension
     - MJRefresh
+    - Reachability
     - SDWebImage
 
 SPEC CHECKSUMS:
@@ -45,8 +48,9 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
 
-PODFILE CHECKSUM: 0ec6036675a9260b17ca123bff4f79378ca4827f
+PODFILE CHECKSUM: 0f53456ea3ff65c9dce0b95a765dec8bfa5f82af
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.12.1
