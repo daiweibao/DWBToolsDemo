@@ -144,7 +144,7 @@ _Pragma("clang diagnostic pop") \
 
 
 //生成手机唯一标识UUID--UDID，卸载后也不会变
-#define UUIDPhone  [getUUID getUUID]
+#define UUIDPhone  [CXUUIDHelp getUUID]
 
 /**
  给出自己想要的图片宽度，知道UI给的图片的宽、高用比例计算出图片的【高度】。

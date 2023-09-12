@@ -1,18 +1,18 @@
 //
-//  getUUID.m
+//  CXUUIDHelp.m
 //  ZuiMeiXinNiang
 //
 //  Created by 爱恨的潮汐 on 2017/3/27.
 //  Copyright © 2017年 zmxn. All rights reserved.
 //
 
-#import "getUUID.h"
+#import "CXUUIDHelp.h"
 
 #define  KEY_USERNAME_PASSWORD @"com.company.app.usernamepassword"
 #define  KEY_USERNAME @"com.company.app.username"
 #define  KEY_PASSWORD @"com.company.app.password"
 
-@implementation getUUID
+@implementation CXUUIDHelp
 
 
 + (NSMutableDictionary *)getKeychainQuery:(NSString *)service {
@@ -65,7 +65,7 @@
 
 +(NSString *)getUUID
 {
-    NSString * strUUID = (NSString *)[getUUID load:@"com.company.app.usernamepassword"];
+    NSString * strUUID = (NSString *)[CXUUIDHelp load:@"com.company.app.usernamepassword"];
     
     //首次执行该方法时，uuid为空
     if ([strUUID isEqualToString:@""] || !strUUID)
@@ -76,7 +76,7 @@
         strUUID = (NSString *)CFBridgingRelease(CFUUIDCreateString (kCFAllocatorDefault,uuidRef));
         
         //将该uuid保存到keychain
-        [getUUID save:KEY_USERNAME_PASSWORD data:strUUID];
+        [CXUUIDHelp save:KEY_USERNAME_PASSWORD data:strUUID];
         
     }
 //    NSLog(@"卸载后也不回变得UUID：%@",strUUID);

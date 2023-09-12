@@ -141,7 +141,7 @@
 		36D37850213FEF7C00E768AF /* DragEnableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3784E213FEF7C00E768AF /* DragEnableButton.m */; };
 		36D37851213FEF7C00E768AF /* CopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3784F213FEF7C00E768AF /* CopyLabel.m */; };
 		36D37855213FF02300E768AF /* GetChatTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37854213FF02300E768AF /* GetChatTime.m */; };
-		36D37858213FF05D00E768AF /* getUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37856213FF05D00E768AF /* getUUID.m */; };
+		36D37858213FF05D00E768AF /* CXUUIDHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D37856213FF05D00E768AF /* CXUUIDHelp.m */; };
 		36D3785C213FF0C400E768AF /* NSDictionary+CXHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D3785B213FF0C400E768AF /* NSDictionary+CXHelp.m */; };
 		36DE4FED218D96D200C3FE40 /* NSObject+DWBKVOCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DE4FEC218D96D200C3FE40 /* NSObject+DWBKVOCrash.m */; };
 		36E861EF21AFBF3300180D78 /* lufei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36E8618121AFBF3300180D78 /* lufei.jpg */; };
@@ -490,8 +490,8 @@
 		36D3784F213FEF7C00E768AF /* CopyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyLabel.m; sourceTree = "<group>"; };
 		36D37853213FF02300E768AF /* GetChatTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetChatTime.h; sourceTree = "<group>"; };
 		36D37854213FF02300E768AF /* GetChatTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetChatTime.m; sourceTree = "<group>"; };
-		36D37856213FF05D00E768AF /* getUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getUUID.m; sourceTree = "<group>"; };
-		36D37857213FF05D00E768AF /* getUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getUUID.h; sourceTree = "<group>"; };
+		36D37856213FF05D00E768AF /* CXUUIDHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXUUIDHelp.m; sourceTree = "<group>"; };
+		36D37857213FF05D00E768AF /* CXUUIDHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXUUIDHelp.h; sourceTree = "<group>"; };
 		36D3785A213FF0C300E768AF /* NSDictionary+CXHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CXHelp.h"; sourceTree = "<group>"; };
 		36D3785B213FF0C400E768AF /* NSDictionary+CXHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CXHelp.m"; sourceTree = "<group>"; };
 		36DA4A762147B59000048763 /* MacroHeaderHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroHeaderHeader.h; sourceTree = "<group>"; };
@@ -1298,8 +1298,8 @@
 				368E69E22140C5BF000EC79C /* TouchIDHelp.m */,
 				368E69C42140B64D000EC79C /* UIColor+DWBHelp.h */,
 				368E69C52140B64D000EC79C /* UIColor+DWBHelp.m */,
-				36D37857213FF05D00E768AF /* getUUID.h */,
-				36D37856213FF05D00E768AF /* getUUID.m */,
+				36D37857213FF05D00E768AF /* CXUUIDHelp.h */,
+				36D37856213FF05D00E768AF /* CXUUIDHelp.m */,
 				36D37853213FF02300E768AF /* GetChatTime.h */,
 				36D37854213FF02300E768AF /* GetChatTime.m */,
 				368E69E72140C70D000EC79C /* KeyChainManager.h */,
@@ -2096,7 +2096,7 @@
 				36E8620321AFBF3300180D78 /* JXCategoryTitleImageCell.m in Sources */,
 				EAC6D4FE2A8F738100932BDA /* UITextField+CSIILimit.m in Sources */,
 				36213F6A21439DB700B00E2B /* MJDIYHeader.m in Sources */,
-				36D37858213FF05D00E768AF /* getUUID.m in Sources */,
+				36D37858213FF05D00E768AF /* CXUUIDHelp.m in Sources */,
 				36E8621021AFBF3300180D78 /* JXCategoryCollectionView.m in Sources */,
 				368E69E42140C5BF000EC79C /* CXSystemStatus.m in Sources */,
 				EAC6D4F32A8F683700932BDA /* NSObject+SXRuntime.m in Sources */,

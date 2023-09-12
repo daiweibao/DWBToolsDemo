@@ -34,7 +34,7 @@
 //悬浮拖拽的button
 #import "DragEnableButton.h"
 //得到UUID，卸载也不会变
-#import "getUUID.h"
+#import "CXUUIDHelp.h"
 //字典类别（Category）
 #import "NSDictionary+CXHelp.h"
 //button图文展示
