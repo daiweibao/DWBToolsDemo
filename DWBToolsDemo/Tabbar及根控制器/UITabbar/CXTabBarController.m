@@ -19,7 +19,7 @@
 
 @interface CXTabBarController ()<TienUITabBarDelegate>
 ///自定义tabBar的item
-@property (nonatomic ,strong) CXTabBarItemView *myTabBar;
+@property (nonatomic ,strong) CXTabBarItemView *myTabBarView;
 @property (nonatomic, strong) NSMutableArray *imagesArray;//存放图片
 @property(nonatomic, strong) NSMutableArray *tabbarArray;//存放控制器
 @property(nonatomic, strong) UIView *bottomView;//添加tabbar设置背景用的
@@ -111,12 +111,12 @@
    
     
     //最后添加自定义的tabbar的item，添加到self.view的最上层。
-    //【⚠️⚠️⚠️注意：hitTest方法只能在添加到self.view的.m里实现才生效，如果hitTest方法所在view没有addSubview添加到self.view上，那么hitTest将无效。】所以self.myTabBar添加到self.view上
-    self.myTabBar = [[CXTabBarItemView alloc] init];
-    self.myTabBar.delegate = self;
-    self.myTabBar.backgroundColor = [UIColor clearColor];//背景色
-    self.myTabBar.frame = CGRectMake(0, SCREEN_HEIGHT-MC_TabbarHeight, SCREEN_WIDTH, MC_TabbarHeight);
-    [self.view addSubview:self.myTabBar];
+    //【⚠️⚠️⚠️注意：hitTest方法只能在添加到self.view的.m里实现才生效，如果hitTest方法所在view没有addSubview添加到self.view上，那么hitTest将无效。】所以self.myTabBarView添加到self.view上
+    self.myTabBarView = [[CXTabBarItemView alloc] init];
+    self.myTabBarView.delegate = self;
+    self.myTabBarView.backgroundColor = [UIColor clearColor];//背景色
+    self.myTabBarView.frame = CGRectMake(0, SCREEN_HEIGHT-MC_TabbarHeight, SCREEN_WIDTH, MC_TabbarHeight);
+    [self.view addSubview:self.myTabBarView];
     
     
     //tabbar默认图片
@@ -130,7 +130,7 @@
         CXNavigationController *nav = self.tabbarArray[i];
         [self addChildViewController:nav];//添加控制器到系统tabbar里
         //设置每一个item
-        [self.myTabBar addTabBarBtnWithImage:images[i] selectedImage:selectImages[i] atIndex:i withTitle:titles[i] withTabbarArray:self.tabbarArray];
+        [self.myTabBarView addTabBarBtnWithImage:images[i] selectedImage:selectImages[i] atIndex:i withTitle:titles[i] withTabbarArray:self.tabbarArray];
     }
     
     //tabbar底部黑线
@@ -151,8 +151,8 @@
 }
 
 ///选中一个指定tabbar：如登录成功后后选中首页等
-- (void)selectMyTabbarWithIndex:(NSInteger )index{
-    [self.myTabBar selectMyTabbarItemWithIndex:index];
+- (void)selectmyTabBarViewWithIndex:(NSInteger )index{
+    [self.myTabBarView selectMyTabbarItemWithIndex:index];
 }
 
 //手动调用隐藏tabbar
