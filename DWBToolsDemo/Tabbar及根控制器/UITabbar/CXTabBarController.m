@@ -9,7 +9,7 @@
 #import "CXTabBarController.h"
 #import "CXNavigationController.h"
 //tabbar的item
-#import "TienUITabBar.h"
+#import "CXTabBarItemView.h"
 
 //控制器
 #import "HopmeViewController.h"
@@ -19,10 +19,10 @@
 
 @interface CXTabBarController ()<TienUITabBarDelegate>
 ///自定义tabBar的item
-@property (nonatomic ,strong) TienUITabBar *myTabBar;
+@property (nonatomic ,strong) CXTabBarItemView *myTabBar;
 @property (nonatomic, strong) NSMutableArray *imagesArray;//存放图片
 @property(nonatomic, strong) NSMutableArray *tabbarArray;//存放控制器
-@property(nonatomic, strong) UIView *bottomView;//自定义tabbar的View
+@property(nonatomic, strong) UIView *bottomView;//添加tabbar设置背景用的
 
 @end
 
@@ -49,24 +49,21 @@
     
 }
 
-//自定义的tabbar
+///添加tabbar背景色用的
 - (UIView *)bottomView{
     if (!_bottomView) {
         //普通手机高49，iPhoneX高83
-        _bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen] bounds].size.height-49, [[UIScreen mainScreen] bounds].size.width, 49)];
-        _bottomView.backgroundColor = UIColorFromRGB(0xF9F9F9);
-        if (iPhoneX) {
-            //设置iphoneX的底部
-            _bottomView.y = _bottomView.y - MC_TabbarSafeBottomMargin;
-            _bottomView.height = 83;
-        }
+        _bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT-MC_TabbarHeight, SCREEN_WIDTH, MC_TabbarHeight)];
+        _bottomView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+       
     }
     return _bottomView;
 }
 
+
 //创建tabbar
 - (void)createTabbar{
-    //添加自定义tabbar
+    //添加tabbar设置背景用的
     [self.view addSubview:self.bottomView];
     //隐藏系统的tababr的item
     self.tabBar.hidden = YES;
@@ -98,14 +95,29 @@
     [self.tabbarArray addObject:nav2];
     [self.tabbarArray addObject:nav3];
     
-    //tabbar高度+底部安全边距：0或者34
-    CGFloat height = self.tabBar.frame.size.height + MC_TabbarSafeBottomMargin;
-    //创建tabbar的item
-    self.myTabBar = [[TienUITabBar alloc] init];
+    //tabbar背景图
+    CGFloat imagebgH = GetImageHeight(SCREEN_WIDTH, 1500, 206);
+    
+    //底部白色背景
+    UIView *viewSafeBottom = [[UIView alloc]init];
+    viewSafeBottom.frame = CGRectMake(0, imagebgH-2, SCREEN_WIDTH, MC_TabbarHeight);
+    viewSafeBottom.backgroundColor = [UIColor whiteColor];
+    [self.bottomView addSubview:viewSafeBottom];
+    //背景图片
+    UIImageView *imageTabbarView = [[UIImageView alloc]init];
+    imageTabbarView.frame = CGRectMake(0, 0, SCREEN_WIDTH, imagebgH);
+    imageTabbarView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    [self.bottomView addSubview:imageTabbarView];
+   
+    
+    //最后添加自定义的tabbar的item，添加到self.view的最上层。
+    //【⚠️⚠️⚠️注意：hitTest方法只能在添加到self.view的.m里实现才生效，如果hitTest方法所在view没有addSubview添加到self.view上，那么hitTest将无效。】所以self.myTabBar添加到self.view上
+    self.myTabBar = [[CXTabBarItemView alloc] init];
     self.myTabBar.delegate = self;
-    self.myTabBar.backgroundColor = [UIColor whiteColor];//背景色
-    self.myTabBar.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, height);
-    [self.bottomView addSubview:self.myTabBar];
+    self.myTabBar.backgroundColor = [UIColor clearColor];//背景色
+    self.myTabBar.frame = CGRectMake(0, SCREEN_HEIGHT-MC_TabbarHeight, SCREEN_WIDTH, MC_TabbarHeight);
+    [self.view addSubview:self.myTabBar];
+    
     
     //tabbar默认图片
     NSArray *images = @[@"tab_headlines_normal",@"tab_mall_normal",@"tab_personal_normal"];
@@ -129,7 +141,7 @@
 }
 
 //点击或者选中tabbar的代理回调，去切换控制器
-- (void)tabBar:(TienUITabBar *)tabBar didSelectedBtnTo:(int)desIndex{
+- (void)tabBar:(CXTabBarItemView *)tabBar didSelectedBtnTo:(int)desIndex{
     self.selectedIndex = desIndex;//手动设置当前根视图控制器，不然控制器不会切换
     
     //记录当前根视图控制器，后面控制器跳转用

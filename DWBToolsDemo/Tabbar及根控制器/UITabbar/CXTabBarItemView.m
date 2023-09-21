@@ -1,22 +1,24 @@
 //
-//  TienUITabBar.m
+//  CXTabBarItemView.m
 //  ProductInfoFlow
 //
 //  Created by Shen Yu on 16/4/8.
 //  Copyright © 2016年 Shen Yu. All rights reserved.
 //
 
-#import "TienUITabBar.h"
+#import "CXTabBarItemView.h"
 //动画
 #import "FLAnimatedImage.h"
 #import "FLAnimatedImageView.h"
 
-@interface TienUITabBar()
+@interface CXTabBarItemView()
 @property (nonatomic,strong) NSMutableArray *pImgArr;//图片名数组
 @property (nonatomic,strong) NSMutableArray *pSelectedImgArr;//选中图片名
 
 @property (nonatomic, strong) NSMutableArray * buttonArray;//存放每一个按钮的父视图
 @property (nonatomic,weak) UIView *selectedView;//记录当前选中的item的view
+
+@property (nonatomic, strong) UIButton *buttonTu;//突出的tabbar按钮
 
 //
 //@property(nonatomic, assign) int selectTag;//记录当前选中的tabbar角标
@@ -25,13 +27,13 @@
 //退出登录的
 @property(nonatomic, strong) UIImageView *loginOutImg;
 @end
-@implementation TienUITabBar
+@implementation CXTabBarItemView
 
-+ (TienUITabBar *)sharedManager{
-    static TienUITabBar * manager;//类
++ (CXTabBarItemView *)sharedManager{
+    static CXTabBarItemView * manager;//类
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[TienUITabBar alloc] init];
+        manager = [[CXTabBarItemView alloc] init];
     });
     return manager;
 }
@@ -48,6 +50,28 @@
     return self;
 }
 
+//重写hitTest方法，去监听发布按钮的点击，目的是为了让凸出的buttonTu按钮部分点击也有反应
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    //【⚠️⚠️⚠️注意：hitTest方法只能在添加到self.view的.m里实现才生效，如果hitTest方法所在view没有addSubview添加到self.view上，那么hitTest将无效。】
+    
+    //这一个判断是关键，不判断的话push到其他页面，点击发布按钮的位置也是会有反应的，这样就不好了
+    //self.isHidden == NO 说明当前页面是有tabbar的，那么肯定是在导航控制器的根控制器页面
+    //在导航控制器根控制器页面，那么我们就需要判断手指点击的位置是否在发布按钮身上
+    //是的话让发布按钮自己处理点击事件，不是的话让系统去处理点击事件就可以了
+    if (self.isHidden == NO) {
+        //将当前tabbar的触摸点转换坐标系，转换到发布按钮的身上，生成一个新的点
+        CGPoint newP = [self convertPoint:point toView:self.buttonTu];
+        //判断如果这个新的点是在发布按钮身上，那么处理点击事件最合适的view就是发布按钮
+        if ( [self.buttonTu pointInside:newP withEvent:event]) {
+            return self.buttonTu;
+        }else{//如果点不在发布按钮身上，直接让系统处理就可以了
+            return [super hitTest:point withEvent:event];
+        }
+    }else {//tabbar隐藏了，那么说明已经push到其他的页面了，这个时候还是让系统去判断最合适的view处理就好了
+        return [super hitTest:point withEvent:event];
+    }
+}
+
 /// tabbar按钮创建，每一个item
 /// - Parameters:
 ///   - image: 非选中图片数组
@@ -60,13 +84,11 @@
     [self.pImgArr addObject:image];//非选中图片数组
     [self.pSelectedImgArr addObject:selectedImage];//选中图片数组
 
-    //tabbar的高度
-    CGFloat Hight = 49 + MC_TabbarSafeBottomMargin;
     //计算每一个按钮的宽度
     CGFloat singleWidth = [[UIScreen mainScreen] bounds].size.width/tabbarArray.count;
     //每一个按钮的父视图
     UIButton *bgImgView = [UIButton buttonWithType:UIButtonTypeCustom];
-    bgImgView.frame =CGRectMake(singleWidth * index, 0, singleWidth, Hight);
+    bgImgView.frame =CGRectMake(singleWidth * index, 0, singleWidth, MC_TabbarHeight);
     bgImgView.tag = index;
     bgImgView.highlighted = NO;//关闭button的高亮
     bgImgView.userInteractionEnabled = YES;
@@ -75,10 +97,22 @@
     
     [self.buttonArray addObject:bgImgView];//按钮添加到数组
     
-    //给item添加图标--动画
-    FLAnimatedImageView *imgView = [[FLAnimatedImageView alloc]initWithFrame:CGRectMake((singleWidth - 25)/2.0, 4, 25, 25)];
-    [imgView setImage:[UIImage imageNamed:image]];//设置非选中的图片
-    [bgImgView addSubview:imgView];
+    if(index==1){
+        //中间突出按钮
+        self.buttonTu = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.buttonTu.frame = CGRectMake((bgImgView.width-50)/2, -25, 50, 50);
+        [self.buttonTu setBackgroundImage:[UIImage imageNamed:@"tab_activity"] forState:UIControlStateNormal];
+        self.buttonTu.adjustsImageWhenHighlighted = NO;//关闭高亮
+        [self.buttonTu addTarget:self action:@selector(actionButtonTu) forControlEvents:UIControlEventTouchDown];
+        [bgImgView addSubview:self.buttonTu];
+        
+    }else{
+        //给item添加图标--动画
+        FLAnimatedImageView *imgView = [[FLAnimatedImageView alloc]initWithFrame:CGRectMake((singleWidth - 25)/2.0, 5, 25, 25)];
+        [imgView setImage:[UIImage imageNamed:image]];//设置非选中的图片
+        [bgImgView addSubview:imgView];
+        
+    }
     
     //按钮标题
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 30, singleWidth, 17)];
@@ -92,6 +126,11 @@
     if (index == 0) {
         [self actionBgImgView:self.buttonArray.firstObject];
     }
+}
+
+//点击突出按钮
+- (void)actionButtonTu{
+    [self actionBgImgView:self.buttonArray[1]];
 }
 
 //底部tabBar点击选中

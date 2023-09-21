@@ -1,24 +1,23 @@
 //
-//  TienUITabBar.h
+//  CXTabBarItemView.h
 //  ProductInfoFlow
 //
 //  Created by Shen Yu on 16/4/8.
 //  Copyright © 2016年 Shen Yu. All rights reserved.
 //
-//自定义TabBar视图，底部屏幕那么宽的
-
+//自定义TabBar视图，底部屏幕那么宽的。中间凸出的tabbar
 #import <UIKit/UIKit.h>
-@class TienUITabBar;
+@class CXTabBarItemView;
 @protocol TienUITabBarDelegate <NSObject>
 ///点击或者选中tabbar的代理回调，去切换控制器
-- (void)tabBar:(TienUITabBar *)tabBar didSelectedBtnTo:(int)desIndex;
+- (void)tabBar:(CXTabBarItemView *)tabBar didSelectedBtnTo:(int)desIndex;
 
 @end
-@interface TienUITabBar : UIView
+@interface CXTabBarItemView : UIView
 @property (nonatomic, weak) id<TienUITabBarDelegate> delegate;
 
 //单利
-+ (TienUITabBar *)sharedManager;
++ (CXTabBarItemView *)sharedManager;
 
 /// tabbar按钮创建，每一个item
 /// - Parameters:

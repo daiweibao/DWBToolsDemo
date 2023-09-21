@@ -218,10 +218,11 @@
 		EA3211522AA6BDDD002DF89E /* RCBBluetoothQXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3211502AA6BDDD002DF89E /* RCBBluetoothQXManager.m */; };
 		EA7817B12AA1C5B000542C54 /* CXDeviceIPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */; };
 		EAB3BFFD2A92E66C00BA226C /* CXHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */; };
+		EAB65BAA2ABC3D25000C1343 /* tab_activity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB65BA92ABC3D25000C1343 /* tab_activity@2x.png */; };
 		EABDB6F82A95FF4D0098E161 /* ShadowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB6F62A95FF4D0098E161 /* ShadowButton.m */; };
 		EABDB6FB2A95FF590098E161 /* UIImage+ChangeColorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB6FA2A95FF590098E161 /* UIImage+ChangeColorImage.m */; };
 		EABDB7042A9631DD0098E161 /* UIControl+recurClick.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB7022A9631DC0098E161 /* UIControl+recurClick.m */; };
-		EAC6D2142A8F1D3E00932BDA /* TienUITabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */; };
+		EAC6D2142A8F1D3E00932BDA /* CXTabBarItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D2132A8F1D3E00932BDA /* CXTabBarItemView.m */; };
 		EAC6D4E32A8F5CB900932BDA /* tabbarTest.gif in Resources */ = {isa = PBXBuildFile; fileRef = EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */; };
 		EAC6D4E82A8F67F000932BDA /* nav_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAC6D4E62A8F67F000932BDA /* nav_back@2x.png */; };
 		EAC6D4E92A8F67F000932BDA /* nav_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAC6D4E72A8F67F000932BDA /* nav_back@3x.png */; };
@@ -643,14 +644,15 @@
 		EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDeviceIPAddress.m; sourceTree = "<group>"; };
 		EAB3BFFB2A92E66C00BA226C /* CXHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXHttpTool.h; sourceTree = "<group>"; };
 		EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXHttpTool.m; sourceTree = "<group>"; };
+		EAB65BA92ABC3D25000C1343 /* tab_activity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_activity@2x.png"; sourceTree = "<group>"; };
 		EABDB6F62A95FF4D0098E161 /* ShadowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowButton.m; sourceTree = "<group>"; };
 		EABDB6F72A95FF4D0098E161 /* ShadowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowButton.h; sourceTree = "<group>"; };
 		EABDB6F92A95FF590098E161 /* UIImage+ChangeColorImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChangeColorImage.h"; sourceTree = "<group>"; };
 		EABDB6FA2A95FF590098E161 /* UIImage+ChangeColorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChangeColorImage.m"; sourceTree = "<group>"; };
 		EABDB7022A9631DC0098E161 /* UIControl+recurClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+recurClick.m"; sourceTree = "<group>"; };
 		EABDB7032A9631DD0098E161 /* UIControl+recurClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+recurClick.h"; sourceTree = "<group>"; };
-		EAC6D2122A8F1D3D00932BDA /* TienUITabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TienUITabBar.h; sourceTree = "<group>"; };
-		EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TienUITabBar.m; sourceTree = "<group>"; };
+		EAC6D2122A8F1D3D00932BDA /* CXTabBarItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXTabBarItemView.h; sourceTree = "<group>"; };
+		EAC6D2132A8F1D3E00932BDA /* CXTabBarItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXTabBarItemView.m; sourceTree = "<group>"; };
 		EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tabbarTest.gif; sourceTree = "<group>"; };
 		EAC6D4E62A8F67F000932BDA /* nav_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back@2x.png"; sourceTree = "<group>"; };
 		EAC6D4E72A8F67F000932BDA /* nav_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back@3x.png"; sourceTree = "<group>"; };
@@ -926,6 +928,7 @@
 		36213F9B2143A6A500B00E2B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EAB65BA92ABC3D25000C1343 /* tab_activity@2x.png */,
 				EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */,
 				3632E0B12A9091B500DDEE20 /* tab_headlines_normal@2x.png */,
 				3632E0B82A9091B700DDEE20 /* tab_headlines_normal@3x.png */,
@@ -1683,8 +1686,8 @@
 				36213F9B2143A6A500B00E2B /* Images */,
 				36213FB32143A6A500B00E2B /* CXTabBarController.h */,
 				36213F942143A6A500B00E2B /* CXTabBarController.m */,
-				EAC6D2122A8F1D3D00932BDA /* TienUITabBar.h */,
-				EAC6D2132A8F1D3E00932BDA /* TienUITabBar.m */,
+				EAC6D2122A8F1D3D00932BDA /* CXTabBarItemView.h */,
+				EAC6D2132A8F1D3E00932BDA /* CXTabBarItemView.m */,
 			);
 			path = UITabbar;
 			sourceTree = "<group>";
@@ -1855,6 +1858,7 @@
 				3632E0C02A9091B800DDEE20 /* tab_personal_normal@3x.png in Resources */,
 				362F7BB82148ACF000A8ECB1 /* emoji.json in Resources */,
 				368C3A02213F67C900C10B3E /* LaunchScreen.storyboard in Resources */,
+				EAB65BAA2ABC3D25000C1343 /* tab_activity@2x.png in Resources */,
 				362F7BC92148B09300A8ECB1 /* README.md in Resources */,
 				362F7BBD2148ACF000A8ECB1 /* ChatFace_icon@2x.png in Resources */,
 				362F7BE92149114B00A8ECB1 /* 微信@2x.png in Resources */,
@@ -2019,7 +2023,7 @@
 				368E69DD2140C58B000EC79C /* UITextField+WJ.m in Sources */,
 				36213F7C21439FB300B00E2B /* HTMLWebView.m in Sources */,
 				36213F6B21439DB700B00E2B /* MJChiBaoZiHeader.m in Sources */,
-				EAC6D2142A8F1D3E00932BDA /* TienUITabBar.m in Sources */,
+				EAC6D2142A8F1D3E00932BDA /* CXTabBarItemView.m in Sources */,
 				36E861F221AFBF3300180D78 /* MyCenterHeaderView.m in Sources */,
 				36E8621A21AFBF3300180D78 /* DWBJXCategoryMyView.m in Sources */,
 				36446185218D819D00B9E01E /* UIViewController+CXHelp.m in Sources */,
