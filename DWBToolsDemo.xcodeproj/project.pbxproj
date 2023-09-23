@@ -219,6 +219,7 @@
 		EA7817B12AA1C5B000542C54 /* CXDeviceIPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */; };
 		EAB3BFFD2A92E66C00BA226C /* CXHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */; };
 		EAB65BAA2ABC3D25000C1343 /* tab_activity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB65BA92ABC3D25000C1343 /* tab_activity@2x.png */; };
+		EAB65BB82ABC69E5000C1343 /* UIView+GradientColors.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB65BB62ABC69E5000C1343 /* UIView+GradientColors.m */; };
 		EABDB6F82A95FF4D0098E161 /* ShadowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB6F62A95FF4D0098E161 /* ShadowButton.m */; };
 		EABDB6FB2A95FF590098E161 /* UIImage+ChangeColorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB6FA2A95FF590098E161 /* UIImage+ChangeColorImage.m */; };
 		EABDB7042A9631DD0098E161 /* UIControl+recurClick.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDB7022A9631DC0098E161 /* UIControl+recurClick.m */; };
@@ -645,6 +646,8 @@
 		EAB3BFFB2A92E66C00BA226C /* CXHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXHttpTool.h; sourceTree = "<group>"; };
 		EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXHttpTool.m; sourceTree = "<group>"; };
 		EAB65BA92ABC3D25000C1343 /* tab_activity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_activity@2x.png"; sourceTree = "<group>"; };
+		EAB65BB62ABC69E5000C1343 /* UIView+GradientColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GradientColors.m"; sourceTree = "<group>"; };
+		EAB65BB72ABC69E5000C1343 /* UIView+GradientColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GradientColors.h"; sourceTree = "<group>"; };
 		EABDB6F62A95FF4D0098E161 /* ShadowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowButton.m; sourceTree = "<group>"; };
 		EABDB6F72A95FF4D0098E161 /* ShadowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowButton.h; sourceTree = "<group>"; };
 		EABDB6F92A95FF590098E161 /* UIImage+ChangeColorImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChangeColorImage.h"; sourceTree = "<group>"; };
@@ -1564,6 +1567,8 @@
 				36EEDC8E21420585000CBEEB /* UIImage+MyImage.m */,
 				EABDB6F92A95FF590098E161 /* UIImage+ChangeColorImage.h */,
 				EABDB6FA2A95FF590098E161 /* UIImage+ChangeColorImage.m */,
+				EAB65BB72ABC69E5000C1343 /* UIView+GradientColors.h */,
+				EAB65BB62ABC69E5000C1343 /* UIView+GradientColors.m */,
 				36EEDC8F21420585000CBEEB /* UIImage+PlayGif.h */,
 				36EEDC8A21420585000CBEEB /* UIImage+PlayGif.m */,
 				36EEDC9021420585000CBEEB /* UIImage+Rotate.h */,
@@ -1981,6 +1986,7 @@
 				EA1F9FF62AA0757F0042FCCE /* CXAlretCXSheetView.m in Sources */,
 				36E8621721AFBF3300180D78 /* JXPagerView.m in Sources */,
 				36E8620821AFBF3300180D78 /* JXCategoryImageView.m in Sources */,
+				EAB65BB82ABC69E5000C1343 /* UIView+GradientColors.m in Sources */,
 				36213F4721439C1400B00E2B /* LoadingCircleHUD.m in Sources */,
 				36E8620121AFBF3300180D78 /* JXCategoryDotCellModel.m in Sources */,
 				368E69CC2140C231000EC79C /* UIView+Animation.m in Sources */,
