@@ -16,16 +16,6 @@
 @interface CXTabBarItemView : UIView
 @property (nonatomic, weak) id<TienUITabBarDelegate> delegate;
 
-/// tabbar按钮创建，每一个item
-/// - Parameters:
-///   - image: 非选中图片数组
-///   - selectedImage: 选中图片数组
-///   - index: 当前角标
-///   - navTitle: tabbar的名字
-///   - tabbarArray: tabbar控制器数字
-- (void)addTabBarBtnWithImage:(NSString *)image selectedImage:(NSString *)selectedImage atIndex:(int)index withTitle:(NSString *)navTitle  withTabbarArray:(NSArray*)tabbarArray;
-
-
 
 /// 选中一个指定tabbar：如登录成功后后选中首页等
 /// - Parameter index: 选中的角标，从0开始

@@ -20,7 +20,6 @@
 @interface CXTabBarController ()<TienUITabBarDelegate>
 ///自定义tabBar的item
 @property (nonatomic ,strong) CXTabBarItemView *myTabBarView;
-@property(nonatomic, strong) NSMutableArray *tabbarArray;//存放控制器
 
 @end
 
@@ -59,8 +58,6 @@
         [vc removeFromParentViewController];
     }
 
-    //初始化存放控制器的数组
-    self.tabbarArray = [NSMutableArray array];
     //首页
     HopmeViewController *homeVC = [HopmeViewController new];
     CXNavigationController *nav1 = [[CXNavigationController alloc]initWithRootViewController:homeVC];
@@ -73,9 +70,10 @@
     UIViewController *myVC = [UIViewController new];
     CXNavigationController *nav3 = [[CXNavigationController alloc]initWithRootViewController:myVC];
     
-    [self.tabbarArray addObject:nav1];
-    [self.tabbarArray addObject:nav2];
-    [self.tabbarArray addObject:nav3];
+    //添加控制器到系统tabbar里
+    [self addChildViewController:nav1];
+    [self addChildViewController:nav2];
+    [self addChildViewController:nav3];
     
     //最后添加自定义的tabbar的item，添加到self.view的最上层。
     //【⚠️⚠️⚠️注意：hitTest方法只能在添加到self.view的.m里实现才生效，如果hitTest方法所在view没有addSubview添加到self.view上，那么hitTest将无效。】所以self.myTabBarView添加到self.view上
@@ -85,20 +83,6 @@
     self.myTabBarView.frame = CGRectMake(0, SCREEN_HEIGHT-MC_TabbarHeight, SCREEN_WIDTH, MC_TabbarHeight);
     [self.view addSubview:self.myTabBarView];
     
-    
-    //tabbar默认图片
-    NSArray *images = @[@"tab_headlines_normal",@"tab_mall_normal",@"tab_personal_normal"];
-    //tabbar选中图片
-    NSArray *selectImages = @[@"tabbarTest",@"tabbarTest",@"tabbarTest"];
-//    NSArray *selectImages = @[@"tab_headlines_select",@"tab_mall_select",@"tab_personal_select"];
-    //tabbar标题
-    NSArray *titles = @[@"首页", @"商城",@"我的"];
-    for (int i = 0 ; i < self.tabbarArray.count; i++) {
-        CXNavigationController *nav = self.tabbarArray[i];
-        [self addChildViewController:nav];//添加控制器到系统tabbar里
-        //设置每一个item
-        [self.myTabBarView addTabBarBtnWithImage:images[i] selectedImage:selectImages[i] atIndex:i withTitle:titles[i] withTabbarArray:self.tabbarArray];
-    }
 }
 
 //点击或者选中tabbar的代理回调，去切换控制器

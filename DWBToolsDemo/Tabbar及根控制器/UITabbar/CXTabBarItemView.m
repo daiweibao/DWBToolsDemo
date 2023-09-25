@@ -16,17 +16,12 @@
 @property (nonatomic,strong) NSMutableArray *pSelectedImgArr;//选中图片名
 
 @property (nonatomic, strong) NSMutableArray * buttonArray;//存放每一个按钮的父视图
-@property (nonatomic,weak) UIView *selectedView;//记录当前选中的item的view
+@property (nonatomic,weak) UIButton *selectedView;//记录当前选中的item的view
 
 @property (nonatomic, strong) UIButton *buttonTu;//突出的tabbar按钮
 
-//
-//@property(nonatomic, assign) int selectTag;//记录当前选中的tabbar角标
-//@property(nonatomic, assign) int originalTag;
-
-//退出登录的
-@property(nonatomic, strong) UIImageView *loginOutImg;
 @end
+
 @implementation CXTabBarItemView
 
 
@@ -82,67 +77,73 @@
     imageTabbarView.image = [UIImage imageNamed:@"tabbar_bg"];
     [self addSubview:imageTabbarView];
     
+    //创建tababr按钮UI
+    [self createTabbarUI];
+    
     //tabbar底部黑线
 //    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 1)];
 //    lineView.backgroundColor = UIColorFromRGB(0xEBEBEB);
 //    [self addSubview:lineView];
 }
 
-/// tabbar按钮创建，每一个item
-/// - Parameters:
-///   - image: 非选中图片数组
-///   - selectedImage: 选中图片数组
-///   - index: 当前角标
-///   - navTitle: tabbar的名字
-///   - tabbarArray: tabbar控制器数字
-- (void)addTabBarBtnWithImage:(NSString *)image selectedImage:(NSString *)selectedImage atIndex:(int)index withTitle:(NSString *)navTitle  withTabbarArray:(NSArray*)tabbarArray{
+//创建tababr按钮UI
+- (void)createTabbarUI{
+    //tabbar默认图片
+    NSArray *images = @[@"tab_headlines_normal",@"tab_mall_normal",@"tab_personal_normal"];
+    //tabbar选中图片
+    NSArray *selectImages = @[@"tabbarTest",@"tabbarTest",@"tabbarTest"];
+    //tabbar标题
+    NSArray *titles = @[@"首页", @"商城",@"我的"];
     
-    [self.pImgArr addObject:image];//非选中图片数组
-    [self.pSelectedImgArr addObject:selectedImage];//选中图片数组
+    for (int i = 0 ; i < titles.count; i++) {
+        //设置每一个item
+        [self.pImgArr addObject:images[i]];//非选中图片数组
+        [self.pSelectedImgArr addObject:selectImages[i]];//选中图片数组
 
-    //计算每一个按钮的宽度
-    CGFloat singleWidth = [[UIScreen mainScreen] bounds].size.width/tabbarArray.count;
-    //每一个按钮的父视图
-    UIButton *bgImgView = [UIButton buttonWithType:UIButtonTypeCustom];
-    bgImgView.frame =CGRectMake(singleWidth * index, 0, singleWidth, MC_TabbarHeight);
-    bgImgView.tag = index;
-    bgImgView.highlighted = NO;//关闭button的高亮
-    bgImgView.userInteractionEnabled = YES;
-    [bgImgView addTarget:self action:@selector(actionBgImgView:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:bgImgView];
-    
-    [self.buttonArray addObject:bgImgView];//按钮添加到数组
-    
-    if(index==1){
-        //中间突出按钮
-        self.buttonTu = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.buttonTu.frame = CGRectMake((bgImgView.width-50)/2, -25, 50, 50);
-        [self.buttonTu setBackgroundImage:[UIImage imageNamed:@"tab_activity"] forState:UIControlStateNormal];
-        self.buttonTu.adjustsImageWhenHighlighted = NO;//关闭高亮
-        [self.buttonTu addTarget:self action:@selector(actionButtonTu) forControlEvents:UIControlEventTouchDown];
-        [bgImgView addSubview:self.buttonTu];
+        //计算每一个按钮的宽度
+        CGFloat singleWidth = [[UIScreen mainScreen] bounds].size.width/titles.count;
+        //每一个按钮的父视图
+        UIButton *bgImgView = [UIButton buttonWithType:UIButtonTypeCustom];
+        bgImgView.frame =CGRectMake(singleWidth * i, 0, singleWidth, MC_TabbarHeight);
+        bgImgView.tag = i;
+        bgImgView.userInteractionEnabled = YES;//关闭button的高亮
+        [bgImgView addTarget:self action:@selector(actionBgImgView:) forControlEvents:UIControlEventTouchUpInside];
+        bgImgView.backgroundColor = [UIColor clearColor];
+        [self addSubview:bgImgView];
+        [self.buttonArray addObject:bgImgView];//按钮添加到数组
         
-    }else{
-        //给item添加图标--动画
-        FLAnimatedImageView *imgView = [[FLAnimatedImageView alloc]initWithFrame:CGRectMake((singleWidth - 25)/2.0, 5, 25, 25)];
-        [imgView setImage:[UIImage imageNamed:image]];//设置非选中的图片
-        [bgImgView addSubview:imgView];
+        if(i==1){
+            //中间突出按钮
+            self.buttonTu = [UIButton buttonWithType:UIButtonTypeCustom];
+            self.buttonTu.frame = CGRectMake((bgImgView.width-50)/2, -25, 50, 50);
+            [self.buttonTu setBackgroundImage:[UIImage imageNamed:@"tab_activity"] forState:UIControlStateNormal];
+            self.buttonTu.adjustsImageWhenHighlighted = NO;//关闭高亮
+            [self.buttonTu addTarget:self action:@selector(actionButtonTu) forControlEvents:UIControlEventTouchDown];
+            [bgImgView addSubview:self.buttonTu];
+            
+        }else{
+            //给item添加图标--动画
+            FLAnimatedImageView *imgView = [[FLAnimatedImageView alloc]initWithFrame:CGRectMake((singleWidth - 25)/2.0, 5, 25, 25)];
+            [imgView setImage:[UIImage imageNamed:images[i]]];//设置非选中的图片
+            [bgImgView addSubview:imgView];
+            
+        }
+        //按钮标题
+        UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 34, singleWidth, 15)];
+        titleLabel.font = [UIFont systemFontOfSize:14];
+        titleLabel.textAlignment = NSTextAlignmentCenter;
+        titleLabel.textColor = UIColorFromRGB(0x333333);
+        titleLabel.text = titles[i];//设置tababr标题
+        [bgImgView addSubview:titleLabel];
         
-    }
-    
-    //按钮标题
-    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 30, singleWidth, 17)];
-    titleLabel.font = [UIFont systemFontOfSize:11];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.textColor = UIColorFromRGB(0xB3B3B3);
-    titleLabel.text = navTitle;//设置tababr标题
-    [bgImgView addSubview:titleLabel];
-    
-    //App启动默认选中第一个按钮
-    if (index == 0) {
-        [self actionBgImgView:self.buttonArray.firstObject];
+        
+        //App启动默认选中第一个按钮
+        if (i == 0) {
+            [self actionBgImgView:self.buttonArray.firstObject];
+        }
     }
 }
+
 
 //点击突出按钮
 - (void)actionButtonTu{
@@ -195,6 +196,9 @@
                     [weakimgView stopAnimating];
                 }];
                 imgView.animatedImage = animatedImage1;
+                
+                //设置非动画图
+//                [imgView setImage:[UIImage imageNamed:_pSelectedImgArr[bgImgView.tag]]];
                 
             }else{
                 //未选中图片
