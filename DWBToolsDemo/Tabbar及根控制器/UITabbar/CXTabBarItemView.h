@@ -16,9 +16,6 @@
 @interface CXTabBarItemView : UIView
 @property (nonatomic, weak) id<TienUITabBarDelegate> delegate;
 
-//单利
-+ (CXTabBarItemView *)sharedManager;
-
 /// tabbar按钮创建，每一个item
 /// - Parameters:
 ///   - image: 非选中图片数组

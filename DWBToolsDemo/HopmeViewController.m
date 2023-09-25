@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     // Do any additional setup after loading the view.
     self.backNavButton.hidden = YES;//隐藏返回键
     self.titleNavLabel.text = @"我的工具类Demo";

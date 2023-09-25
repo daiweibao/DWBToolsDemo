@@ -29,14 +29,6 @@
 @end
 @implementation CXTabBarItemView
 
-+ (CXTabBarItemView *)sharedManager{
-    static CXTabBarItemView * manager;//类
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        manager = [[CXTabBarItemView alloc] init];
-    });
-    return manager;
-}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -44,6 +36,8 @@
         self.pImgArr = [NSMutableArray array];
         self.pSelectedImgArr = [NSMutableArray array];
         self.buttonArray = [NSMutableArray array];
+        //创建UI、背景图片等
+        [self createUI];
         //在这里注册通知
 //        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectTabbar:) name:@"selectTabbar" object:nil];
     }
@@ -70,6 +64,28 @@
     }else {//tabbar隐藏了，那么说明已经push到其他的页面了，这个时候还是让系统去判断最合适的view处理就好了
         return [super hitTest:point withEvent:event];
     }
+}
+
+//创建tababr的UI，比如背景色，黑线等
+- (void)createUI{
+    //tabbar背景图
+    CGFloat imagebgH = GetImageHeight(SCREEN_WIDTH, 1500, 206);
+    
+    //底部白色背景
+    UIView *viewSafeBottom = [[UIView alloc]init];
+    viewSafeBottom.frame = CGRectMake(0, imagebgH-2, SCREEN_WIDTH, MC_TabbarHeight);
+    viewSafeBottom.backgroundColor = [UIColor whiteColor];
+    [self addSubview:viewSafeBottom];
+    //背景图片，添加到myTabBarView上显示不出来，只能添加到self.bottomView上
+    UIImageView *imageTabbarView = [[UIImageView alloc]init];
+    imageTabbarView.frame = CGRectMake(0, 0, SCREEN_WIDTH, imagebgH);
+    imageTabbarView.image = [UIImage imageNamed:@"tabbar_bg"];
+    [self addSubview:imageTabbarView];
+    
+    //tabbar底部黑线
+//    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 1)];
+//    lineView.backgroundColor = UIColorFromRGB(0xEBEBEB);
+//    [self addSubview:lineView];
 }
 
 /// tabbar按钮创建，每一个item

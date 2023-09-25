@@ -20,9 +20,7 @@
 @interface CXTabBarController ()<TienUITabBarDelegate>
 ///自定义tabBar的item
 @property (nonatomic ,strong) CXTabBarItemView *myTabBarView;
-@property (nonatomic, strong) NSMutableArray *imagesArray;//存放图片
 @property(nonatomic, strong) NSMutableArray *tabbarArray;//存放控制器
-@property(nonatomic, strong) UIView *bottomView;//添加tabbar设置背景用的
 
 @end
 
@@ -49,34 +47,18 @@
     
 }
 
-///添加tabbar背景色用的
-- (UIView *)bottomView{
-    if (!_bottomView) {
-        //普通手机高49，iPhoneX高83
-        _bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT-MC_TabbarHeight, SCREEN_WIDTH, MC_TabbarHeight)];
-        _bottomView.backgroundColor = [UIColor groupTableViewBackgroundColor];
-       
-    }
-    return _bottomView;
-}
-
 
 //创建tabbar
 - (void)createTabbar{
-    //添加tabbar设置背景用的
-    [self.view addSubview:self.bottomView];
     //隐藏系统的tababr的item
     self.tabBar.hidden = YES;
+    [self.myTabBarView removeFromSuperview];//移除重新创建
     
     //移除控制器，防止重复添加
     for (UIViewController *vc in self.childViewControllers) {
         [vc removeFromParentViewController];
     }
-    //移除自定义的tabbar的子视图
-    for (UIView *view in self.bottomView.subviews) {
-        [view removeFromSuperview];
-    }
-    
+
     //初始化存放控制器的数组
     self.tabbarArray = [NSMutableArray array];
     //首页
@@ -94,21 +76,6 @@
     [self.tabbarArray addObject:nav1];
     [self.tabbarArray addObject:nav2];
     [self.tabbarArray addObject:nav3];
-    
-    //tabbar背景图
-    CGFloat imagebgH = GetImageHeight(SCREEN_WIDTH, 1500, 206);
-    
-    //底部白色背景
-    UIView *viewSafeBottom = [[UIView alloc]init];
-    viewSafeBottom.frame = CGRectMake(0, imagebgH-2, SCREEN_WIDTH, MC_TabbarHeight);
-    viewSafeBottom.backgroundColor = [UIColor whiteColor];
-    [self.bottomView addSubview:viewSafeBottom];
-    //背景图片
-    UIImageView *imageTabbarView = [[UIImageView alloc]init];
-    imageTabbarView.frame = CGRectMake(0, 0, SCREEN_WIDTH, imagebgH);
-    imageTabbarView.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    [self.bottomView addSubview:imageTabbarView];
-   
     
     //最后添加自定义的tabbar的item，添加到self.view的最上层。
     //【⚠️⚠️⚠️注意：hitTest方法只能在添加到self.view的.m里实现才生效，如果hitTest方法所在view没有addSubview添加到self.view上，那么hitTest将无效。】所以self.myTabBarView添加到self.view上
@@ -132,12 +99,6 @@
         //设置每一个item
         [self.myTabBarView addTabBarBtnWithImage:images[i] selectedImage:selectImages[i] atIndex:i withTitle:titles[i] withTabbarArray:self.tabbarArray];
     }
-    
-    //tabbar底部黑线
-    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 1)];
-    lineView.backgroundColor = UIColorFromRGB(0xEBEBEB);
-    [self.bottomView addSubview:lineView];
-
 }
 
 //点击或者选中tabbar的代理回调，去切换控制器
@@ -157,12 +118,12 @@
 
 //手动调用隐藏tabbar
 - (void)hideTheTabbar{
-    self.bottomView.hidden = YES;
+    self.myTabBarView.hidden = YES;
 }
 
 //手动调用显示tabbar
 - (void)showTheTabbar{
-    self.bottomView.hidden = NO;
+    self.myTabBarView.hidden = NO;
 }
 
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item

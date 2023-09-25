@@ -217,6 +217,7 @@
 		EA3211512AA6BDDD002DF89E /* CXAuthorityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32114F2AA6BDDD002DF89E /* CXAuthorityManager.m */; };
 		EA3211522AA6BDDD002DF89E /* RCBBluetoothQXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3211502AA6BDDD002DF89E /* RCBBluetoothQXManager.m */; };
 		EA7817B12AA1C5B000542C54 /* CXDeviceIPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */; };
+		EA7BCBB62AC12186004114F5 /* tabbar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7BCBB52AC12186004114F5 /* tabbar_bg@2x.png */; };
 		EAB3BFFD2A92E66C00BA226C /* CXHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */; };
 		EAB65BAA2ABC3D25000C1343 /* tab_activity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB65BA92ABC3D25000C1343 /* tab_activity@2x.png */; };
 		EAB65BB82ABC69E5000C1343 /* UIView+GradientColors.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB65BB62ABC69E5000C1343 /* UIView+GradientColors.m */; };
@@ -643,6 +644,7 @@
 		EA76C5532A905040008A59EE /* CXChangeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXChangeHeader.h; sourceTree = "<group>"; };
 		EA7817AF2AA1C5B000542C54 /* CXDeviceIPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDeviceIPAddress.h; sourceTree = "<group>"; };
 		EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDeviceIPAddress.m; sourceTree = "<group>"; };
+		EA7BCBB52AC12186004114F5 /* tabbar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_bg@2x.png"; sourceTree = "<group>"; };
 		EAB3BFFB2A92E66C00BA226C /* CXHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXHttpTool.h; sourceTree = "<group>"; };
 		EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXHttpTool.m; sourceTree = "<group>"; };
 		EAB65BA92ABC3D25000C1343 /* tab_activity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_activity@2x.png"; sourceTree = "<group>"; };
@@ -931,6 +933,7 @@
 		36213F9B2143A6A500B00E2B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EA7BCBB52AC12186004114F5 /* tabbar_bg@2x.png */,
 				EAB65BA92ABC3D25000C1343 /* tab_activity@2x.png */,
 				EAC6D4E22A8F5CB900932BDA /* tabbarTest.gif */,
 				3632E0B12A9091B500DDEE20 /* tab_headlines_normal@2x.png */,
@@ -1890,6 +1893,7 @@
 				36213F4F21439C1400B00E2B /* SVProgressHUD.bundle in Resources */,
 				36213F7521439EC100B00E2B /* 加载中icon@2x.png in Resources */,
 				36EEDCAA21420794000CBEEB /* 扫码线@3x.png in Resources */,
+				EA7BCBB62AC12186004114F5 /* tabbar_bg@2x.png in Resources */,
 				36213F7421439EC100B00E2B /* 加载中icon@3x.png in Resources */,
 				EAC6D4E32A8F5CB900932BDA /* tabbarTest.gif in Resources */,
 				36EEDCC0214209FE000CBEEB /* 版本检测弹窗关闭@2x.png in Resources */,
