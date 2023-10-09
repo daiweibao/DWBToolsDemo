@@ -82,6 +82,8 @@
     self.myTabBarView.backgroundColor = [UIColor clearColor];//背景色
     self.myTabBarView.frame = CGRectMake(0, SCREEN_HEIGHT-MC_TabbarHeight, SCREEN_WIDTH, MC_TabbarHeight);
     [self.view addSubview:self.myTabBarView];
+    //创建tababr
+    [self.myTabBarView createTabbarItemMainUI];
     
 }
 

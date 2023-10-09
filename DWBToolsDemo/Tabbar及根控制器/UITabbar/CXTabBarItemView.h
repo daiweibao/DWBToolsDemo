@@ -16,7 +16,8 @@
 @interface CXTabBarItemView : UIView
 @property (nonatomic, weak) id<TienUITabBarDelegate> delegate;
 
-
+///创建UI-必须在外面调用，不然会有bug
+- (void)createTabbarItemMainUI;
 /// 选中一个指定tabbar：如登录成功后后选中首页等
 /// - Parameter index: 选中的角标，从0开始
 - (void)selectMyTabbarItemWithIndex:(NSInteger )index;

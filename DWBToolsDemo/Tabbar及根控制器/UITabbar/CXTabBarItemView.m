@@ -31,8 +31,6 @@
         self.pImgArr = [NSMutableArray array];
         self.pSelectedImgArr = [NSMutableArray array];
         self.buttonArray = [NSMutableArray array];
-        //创建UI、背景图片等
-        [self createUI];
         //在这里注册通知
 //        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectTabbar:) name:@"selectTabbar" object:nil];
     }
@@ -62,7 +60,8 @@
 }
 
 //创建tababr的UI，比如背景色，黑线等
-- (void)createUI{
+///创建UI-必须在外面调用，不然会有bug
+- (void)createTabbarItemMainUI{
     //tabbar背景图
     CGFloat imagebgH = GetImageHeight(SCREEN_WIDTH, 1500, 206);
     
