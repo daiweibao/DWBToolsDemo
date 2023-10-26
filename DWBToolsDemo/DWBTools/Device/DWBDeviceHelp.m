@@ -203,10 +203,10 @@
 /// - Parameter observer: 添加到那个观察者上：self，view或者控制器
 - (void)addScreenNotif:(id)observer{
     //截屏通知
-    [[NSNotificationCenter defaultCenter] addObserver:observer selector:@selector(userDidTakeScreenshot:) name:UIApplicationUserDidTakeScreenshotNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDidTakeScreenshot:) name:UIApplicationUserDidTakeScreenshotNotification object:nil];
     if (@available(iOS 11.0, *)) {
         //iOS11后中新增了录屏功能
-        [[NSNotificationCenter defaultCenter] addObserver:observer selector:@selector(userDidTakeScreenCaptured:) name:UIScreenCapturedDidChangeNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDidTakeScreenCaptured:) name:UIScreenCapturedDidChangeNotification object:nil];
     } else {
         // Fallback on earlier versions
     }
