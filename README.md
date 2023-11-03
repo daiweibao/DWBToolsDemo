@@ -1,5 +1,7 @@
 # DWBToolsDemo
 
+注意：CXReadText类里有使用文档注释，更多请参考CXReadText.h
+
 工具类，后面包含gith的token使用方法
 
 各种Category欢迎大家star。
