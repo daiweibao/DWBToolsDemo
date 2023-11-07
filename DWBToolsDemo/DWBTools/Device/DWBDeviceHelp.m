@@ -198,7 +198,7 @@
 
 
 #pragma mark---------截屏录屏监听 S-----------
-
+/*
 /// 添加录屏和截屏监听
 /// - Parameter observer: 添加到那个观察者上：self，view或者控制器
 - (void)addScreenNotif:(id)observer{
@@ -239,7 +239,7 @@
     //移除录屏通知
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIScreenCapturedDidChangeNotification object:nil];
 }
-
+*/
 /*
 //移除截屏通知
 [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationUserDidTakeScreenshotNotification object:nil];

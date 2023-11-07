@@ -216,6 +216,7 @@
 		EA32114B2AA6BA73002DF89E /* CXAFNetworkingChange.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32114A2AA6BA73002DF89E /* CXAFNetworkingChange.m */; };
 		EA3211512AA6BDDD002DF89E /* CXAuthorityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32114F2AA6BDDD002DF89E /* CXAuthorityManager.m */; };
 		EA3211522AA6BDDD002DF89E /* RCBBluetoothQXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3211502AA6BDDD002DF89E /* RCBBluetoothQXManager.m */; };
+		EA6283662AFA38AA0061B7EF /* CXScreenNotifHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6283652AFA38AA0061B7EF /* CXScreenNotifHelp.m */; };
 		EA7817B12AA1C5B000542C54 /* CXDeviceIPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */; };
 		EA7BCBB62AC12186004114F5 /* tabbar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7BCBB52AC12186004114F5 /* tabbar_bg@2x.png */; };
 		EA8D999A2AEA03CD00818FAA /* CXHUDLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D99982AEA03CD00818FAA /* CXHUDLoading.m */; };
@@ -641,6 +642,8 @@
 		EA32114E2AA6BDDD002DF89E /* RCBBluetoothQXManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBBluetoothQXManager.h; sourceTree = "<group>"; };
 		EA32114F2AA6BDDD002DF89E /* CXAuthorityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAuthorityManager.m; sourceTree = "<group>"; };
 		EA3211502AA6BDDD002DF89E /* RCBBluetoothQXManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCBBluetoothQXManager.m; sourceTree = "<group>"; };
+		EA6283642AFA38AA0061B7EF /* CXScreenNotifHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXScreenNotifHelp.h; sourceTree = "<group>"; };
+		EA6283652AFA38AA0061B7EF /* CXScreenNotifHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXScreenNotifHelp.m; sourceTree = "<group>"; };
 		EA76C5522A904F14008A59EE /* CXAllHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXAllHeader.h; sourceTree = "<group>"; };
 		EA76C5532A905040008A59EE /* CXChangeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXChangeHeader.h; sourceTree = "<group>"; };
 		EA7817AF2AA1C5B000542C54 /* CXDeviceIPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDeviceIPAddress.h; sourceTree = "<group>"; };
@@ -1272,6 +1275,8 @@
 			children = (
 				369D895F217198F800003425 /* DWBDeviceHelp.h */,
 				369D8960217198F800003425 /* DWBDeviceHelp.m */,
+				EA6283642AFA38AA0061B7EF /* CXScreenNotifHelp.h */,
+				EA6283652AFA38AA0061B7EF /* CXScreenNotifHelp.m */,
 				EA7817AF2AA1C5B000542C54 /* CXDeviceIPAddress.h */,
 				EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */,
 			);
@@ -2034,6 +2039,7 @@
 				36E8621B21AFBF3300180D78 /* DWBJXCategoryMyCellModel.m in Sources */,
 				36E861FB21AFBF3300180D78 /* JXCategoryIndicatorBackgroundView.m in Sources */,
 				363BFB4921A958CF00666F8A /* ParentClassScrollViewController.m in Sources */,
+				EA6283662AFA38AA0061B7EF /* CXScreenNotifHelp.m in Sources */,
 				363BFB5821A95D7F00666F8A /* RedPeopleHeaderView.m in Sources */,
 				EA7817B12AA1C5B000542C54 /* CXDeviceIPAddress.m in Sources */,
 				368E69DD2140C58B000EC79C /* UITextField+WJ.m in Sources */,
