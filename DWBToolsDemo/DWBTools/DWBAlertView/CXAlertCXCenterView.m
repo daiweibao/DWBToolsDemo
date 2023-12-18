@@ -381,6 +381,8 @@
     }
 //    [UIApplication sharedApplication].keyWindow.rootViewController
     [[UIViewController getCurrentVC] presentViewController:alertController animated:YES completion:nil];
+    
+    
 }
 
 
