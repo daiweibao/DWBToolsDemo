@@ -56,16 +56,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIImage *)getTheLaunchImage;
 
-/// 添加录屏和截屏监听
-/// - Parameter observer: 添加到那个观察者上：self，view或者控制器
-- (void)addScreenNotif:(id)observer;
-/// 移除录屏和截屏监听
-/// - Parameter observer: 添加到那个观察者上：self，view或者控制器
-- (void)removeScreenNotif:(id)observer;
-
-
-///获取设备型号
-+ (NSString *)getCurrentDeviceModel;
+///// 添加录屏和截屏监听
+///// - Parameter observer: 添加到那个观察者上：self，view或者控制器
+//- (void)addScreenNotif:(id)observer;
+///// 移除录屏和截屏监听
+///// - Parameter observer: 添加到那个观察者上：self，view或者控制器
+//- (void)removeScreenNotif:(id)observer;
+//
+//
+/////获取设备型号
+//+ (NSString *)getCurrentDeviceModel;
 
 @end
 

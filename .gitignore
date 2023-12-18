@@ -1,0 +1,4 @@
+## Obj-C/Swift specific
+*.ipa
+*.dSYM.zip
+*.dSYM

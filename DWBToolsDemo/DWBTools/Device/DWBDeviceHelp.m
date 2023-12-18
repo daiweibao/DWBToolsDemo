@@ -198,15 +198,15 @@
 
 
 #pragma mark---------截屏录屏监听 S-----------
-
+/*
 /// 添加录屏和截屏监听
 /// - Parameter observer: 添加到那个观察者上：self，view或者控制器
 - (void)addScreenNotif:(id)observer{
     //截屏通知
-    [[NSNotificationCenter defaultCenter] addObserver:observer selector:@selector(userDidTakeScreenshot:) name:UIApplicationUserDidTakeScreenshotNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDidTakeScreenshot:) name:UIApplicationUserDidTakeScreenshotNotification object:nil];
     if (@available(iOS 11.0, *)) {
         //iOS11后中新增了录屏功能
-        [[NSNotificationCenter defaultCenter] addObserver:observer selector:@selector(userDidTakeScreenCaptured:) name:UIScreenCapturedDidChangeNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDidTakeScreenCaptured:) name:UIScreenCapturedDidChangeNotification object:nil];
     } else {
         // Fallback on earlier versions
     }
@@ -239,7 +239,7 @@
     //移除录屏通知
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIScreenCapturedDidChangeNotification object:nil];
 }
-
+*/
 /*
 //移除截屏通知
 [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationUserDidTakeScreenshotNotification object:nil];
@@ -310,6 +310,10 @@ if (@available(iOS 11.0, *)) {
                            @"iPhone14,8" : @"iPhone 14 Plus",
                            @"iPhone15,2" : @"iPhone 14 Pro",
                            @"iPhone15,3" : @"iPhone 14 Pro Max",
+                           @"iPhone15,4" : @"iPhone 15",
+                           @"iPhone15,5" : @"iPhone 15 Plus",
+                           @"iPhone16,1" : @"iPhone 15 Pro",
+                           @"iPhone16,2" : @"iPhone 15 Pro Max",
                            @"i386" : @"iPhone Simulator",
                            @"x86_64" : @"iPhone Simulator"
                            };

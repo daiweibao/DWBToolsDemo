@@ -19,6 +19,79 @@
  （1）混合合并-保持工作副本但重置索引：此模式会撤回本次提交，并将撤回的代码保留在本地。撤回来的代码处于未提交状态。
  （2）强行合并-丢弃所有工作副本改动：此模式会丢弃所有撤回的代码，不会保留撤回的代码。
  （3）软合并-保持本地所有改动：此模式会保留撤回的所有代码。撤回代码处于未提交状态。
+ 
+ 6、Sourcetree添加git提交忽略文件：在.gitignore文件里添加如下代码（打开指定代码仓库：设置--高级---仓库指定忽略列表）：
+ 
+ ## Obj-C/Swift specific
+ *.ipa
+ *.dSYM.zip
+ *.dSYM
+ 
+ git .gitignore忽略文件.DS_Store
+ 
+ 进入你iOS项目目录，直接修改并保存.gitignore
+ 修改内容如下：
+
+ 
+ 忽略文件大全—-------S-------
+ 
+ # Xcode
+ .DS_Store
+
+ ## Build generated
+ build/
+ DerivedData/
+
+ ## Various settings
+ *.pbxuser
+ !default.pbxuser
+ *.mode1v3
+ !default.mode1v3
+ *.mode2v3
+ !default.mode2v3
+ *.perspectivev3
+ !default.perspectivev3
+ xcuserdata/
+
+ ## Other
+ *.moved-aside
+ *.xccheckout
+ *.xcworkspace
+ !default.xcworkspace
+
+ ## Obj-C/Swift specific
+ *.hmap
+ *.ipa
+ *.dSYM.zip
+ *.dSYM
+
+ # CocoaPods
+ Pods
+ !Podfile
+ !Podfile.lock
+
+ # Carthage
+ Carthage/Build
+
+ # fastlane
+ fastlane/report.xml
+ fastlane/Preview.html
+ fastlane/screenshots
+ fastlane/test_output
+
+ # Code Injection
+ iOSInjectionProject/
+
+ 忽略文件大全—-------E-------
+
+ 
+ 注意：以上完成，最后一步很关键了，否则.gitignore不能生效的。如果是项目做到一半才开始加入.gitignore,则需要在commit所有已经修改文件后，执行以下命令保证.gitignore开始生效。
+ 
+ 清除缓存命令依次执行如下3个：
+ git rm -r --cached .
+ git add .
+ git commit -m 'update .gitignore'
+
 
  
  

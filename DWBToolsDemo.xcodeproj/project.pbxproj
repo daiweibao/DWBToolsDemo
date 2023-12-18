@@ -216,8 +216,10 @@
 		EA32114B2AA6BA73002DF89E /* CXAFNetworkingChange.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32114A2AA6BA73002DF89E /* CXAFNetworkingChange.m */; };
 		EA3211512AA6BDDD002DF89E /* CXAuthorityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32114F2AA6BDDD002DF89E /* CXAuthorityManager.m */; };
 		EA3211522AA6BDDD002DF89E /* RCBBluetoothQXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3211502AA6BDDD002DF89E /* RCBBluetoothQXManager.m */; };
+		EA6283662AFA38AA0061B7EF /* CXScreenNotifHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6283652AFA38AA0061B7EF /* CXScreenNotifHelp.m */; };
 		EA7817B12AA1C5B000542C54 /* CXDeviceIPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */; };
 		EA7BCBB62AC12186004114F5 /* tabbar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7BCBB52AC12186004114F5 /* tabbar_bg@2x.png */; };
+		EA8D999A2AEA03CD00818FAA /* CXHUDLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D99982AEA03CD00818FAA /* CXHUDLoading.m */; };
 		EAB3BFFD2A92E66C00BA226C /* CXHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */; };
 		EAB65BAA2ABC3D25000C1343 /* tab_activity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB65BA92ABC3D25000C1343 /* tab_activity@2x.png */; };
 		EAB65BB82ABC69E5000C1343 /* UIView+GradientColors.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB65BB62ABC69E5000C1343 /* UIView+GradientColors.m */; };
@@ -640,11 +642,15 @@
 		EA32114E2AA6BDDD002DF89E /* RCBBluetoothQXManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBBluetoothQXManager.h; sourceTree = "<group>"; };
 		EA32114F2AA6BDDD002DF89E /* CXAuthorityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAuthorityManager.m; sourceTree = "<group>"; };
 		EA3211502AA6BDDD002DF89E /* RCBBluetoothQXManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCBBluetoothQXManager.m; sourceTree = "<group>"; };
+		EA6283642AFA38AA0061B7EF /* CXScreenNotifHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXScreenNotifHelp.h; sourceTree = "<group>"; };
+		EA6283652AFA38AA0061B7EF /* CXScreenNotifHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXScreenNotifHelp.m; sourceTree = "<group>"; };
 		EA76C5522A904F14008A59EE /* CXAllHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXAllHeader.h; sourceTree = "<group>"; };
 		EA76C5532A905040008A59EE /* CXChangeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXChangeHeader.h; sourceTree = "<group>"; };
 		EA7817AF2AA1C5B000542C54 /* CXDeviceIPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDeviceIPAddress.h; sourceTree = "<group>"; };
 		EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDeviceIPAddress.m; sourceTree = "<group>"; };
 		EA7BCBB52AC12186004114F5 /* tabbar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_bg@2x.png"; sourceTree = "<group>"; };
+		EA8D99982AEA03CD00818FAA /* CXHUDLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHUDLoading.m; sourceTree = "<group>"; };
+		EA8D99992AEA03CD00818FAA /* CXHUDLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHUDLoading.h; sourceTree = "<group>"; };
 		EAB3BFFB2A92E66C00BA226C /* CXHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXHttpTool.h; sourceTree = "<group>"; };
 		EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXHttpTool.m; sourceTree = "<group>"; };
 		EAB65BA92ABC3D25000C1343 /* tab_activity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_activity@2x.png"; sourceTree = "<group>"; };
@@ -1205,6 +1211,8 @@
 				36213F1B21439AD000B00E2B /* UIActivity(菊花) */,
 				368C3BFD213FB44800C10B3E /* DWBToast.h */,
 				368C3BFE213FB44800C10B3E /* DWBToast.m */,
+				EA8D99992AEA03CD00818FAA /* CXHUDLoading.h */,
+				EA8D99982AEA03CD00818FAA /* CXHUDLoading.m */,
 			);
 			path = HUD;
 			sourceTree = "<group>";
@@ -1267,6 +1275,8 @@
 			children = (
 				369D895F217198F800003425 /* DWBDeviceHelp.h */,
 				369D8960217198F800003425 /* DWBDeviceHelp.m */,
+				EA6283642AFA38AA0061B7EF /* CXScreenNotifHelp.h */,
+				EA6283652AFA38AA0061B7EF /* CXScreenNotifHelp.m */,
 				EA7817AF2AA1C5B000542C54 /* CXDeviceIPAddress.h */,
 				EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */,
 			);
@@ -1991,6 +2001,7 @@
 				36E8621721AFBF3300180D78 /* JXPagerView.m in Sources */,
 				36E8620821AFBF3300180D78 /* JXCategoryImageView.m in Sources */,
 				EAB65BB82ABC69E5000C1343 /* UIView+GradientColors.m in Sources */,
+				EA8D999A2AEA03CD00818FAA /* CXHUDLoading.m in Sources */,
 				36213F4721439C1400B00E2B /* LoadingCircleHUD.m in Sources */,
 				36E8620121AFBF3300180D78 /* JXCategoryDotCellModel.m in Sources */,
 				368E69CC2140C231000EC79C /* UIView+Animation.m in Sources */,
@@ -2028,6 +2039,7 @@
 				36E8621B21AFBF3300180D78 /* DWBJXCategoryMyCellModel.m in Sources */,
 				36E861FB21AFBF3300180D78 /* JXCategoryIndicatorBackgroundView.m in Sources */,
 				363BFB4921A958CF00666F8A /* ParentClassScrollViewController.m in Sources */,
+				EA6283662AFA38AA0061B7EF /* CXScreenNotifHelp.m in Sources */,
 				363BFB5821A95D7F00666F8A /* RedPeopleHeaderView.m in Sources */,
 				EA7817B12AA1C5B000542C54 /* CXDeviceIPAddress.m in Sources */,
 				368E69DD2140C58B000EC79C /* UITextField+WJ.m in Sources */,
@@ -2317,8 +2329,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6WSX655H2L;
+				DEVELOPMENT_TEAM = NL4KR8WJTZ;
 				GCC_PREFIX_HEADER = "$(SCROOT)DWBToolsDemo/DWBToolsPrefixHeader.pch";
 				INFOPLIST_FILE = DWBToolsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2351,6 +2364,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chaoxi.DWBToolsDemoMain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2361,8 +2375,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6WSX655H2L;
+				DEVELOPMENT_TEAM = NL4KR8WJTZ;
 				GCC_PREFIX_HEADER = "$(SCROOT)DWBToolsDemo/DWBToolsPrefixHeader.pch";
 				INFOPLIST_FILE = DWBToolsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2395,6 +2410,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chaoxi.DWBToolsDemoMain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
