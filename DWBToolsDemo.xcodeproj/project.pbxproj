@@ -219,6 +219,8 @@
 		EA6283662AFA38AA0061B7EF /* CXScreenNotifHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6283652AFA38AA0061B7EF /* CXScreenNotifHelp.m */; };
 		EA7817B12AA1C5B000542C54 /* CXDeviceIPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */; };
 		EA7BCBB62AC12186004114F5 /* tabbar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7BCBB52AC12186004114F5 /* tabbar_bg@2x.png */; };
+		EA8575812B3AEF3E00701269 /* CXLocationQXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA85757D2B3AEF3E00701269 /* CXLocationQXManager.m */; };
+		EA8575822B3AEF3E00701269 /* CXSystemLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA85757E2B3AEF3E00701269 /* CXSystemLocationManager.m */; };
 		EA8D999A2AEA03CD00818FAA /* CXHUDLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D99982AEA03CD00818FAA /* CXHUDLoading.m */; };
 		EAB3BFFD2A92E66C00BA226C /* CXHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB3BFFC2A92E66C00BA226C /* CXHttpTool.m */; };
 		EAB65BAA2ABC3D25000C1343 /* tab_activity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB65BA92ABC3D25000C1343 /* tab_activity@2x.png */; };
@@ -649,6 +651,10 @@
 		EA7817AF2AA1C5B000542C54 /* CXDeviceIPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDeviceIPAddress.h; sourceTree = "<group>"; };
 		EA7817B02AA1C5B000542C54 /* CXDeviceIPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDeviceIPAddress.m; sourceTree = "<group>"; };
 		EA7BCBB52AC12186004114F5 /* tabbar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_bg@2x.png"; sourceTree = "<group>"; };
+		EA85757D2B3AEF3E00701269 /* CXLocationQXManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXLocationQXManager.m; sourceTree = "<group>"; };
+		EA85757E2B3AEF3E00701269 /* CXSystemLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSystemLocationManager.m; sourceTree = "<group>"; };
+		EA85757F2B3AEF3E00701269 /* CXSystemLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSystemLocationManager.h; sourceTree = "<group>"; };
+		EA8575802B3AEF3E00701269 /* CXLocationQXManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXLocationQXManager.h; sourceTree = "<group>"; };
 		EA8D99982AEA03CD00818FAA /* CXHUDLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHUDLoading.m; sourceTree = "<group>"; };
 		EA8D99992AEA03CD00818FAA /* CXHUDLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHUDLoading.h; sourceTree = "<group>"; };
 		EAB3BFFB2A92E66C00BA226C /* CXHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXHttpTool.h; sourceTree = "<group>"; };
@@ -1685,6 +1691,10 @@
 				EA32114F2AA6BDDD002DF89E /* CXAuthorityManager.m */,
 				EA32114E2AA6BDDD002DF89E /* RCBBluetoothQXManager.h */,
 				EA3211502AA6BDDD002DF89E /* RCBBluetoothQXManager.m */,
+				EA8575802B3AEF3E00701269 /* CXLocationQXManager.h */,
+				EA85757D2B3AEF3E00701269 /* CXLocationQXManager.m */,
+				EA85757F2B3AEF3E00701269 /* CXSystemLocationManager.h */,
+				EA85757E2B3AEF3E00701269 /* CXSystemLocationManager.m */,
 			);
 			path = SystemPermissions;
 			sourceTree = "<group>";
@@ -1988,6 +1998,7 @@
 				36E8620F21AFBF3300180D78 /* JXCategoryFactory.m in Sources */,
 				360F0FC7218158C0006A7835 /* NSMutableDictionary+DWBDictSafe.m in Sources */,
 				36EEDC9421420585000CBEEB /* UIImageView+CXHelp.m in Sources */,
+				EA8575812B3AEF3E00701269 /* CXLocationQXManager.m in Sources */,
 				3699115021523AD4004B3C0D /* TestModel.m in Sources */,
 				36213F912143A5B900B00E2B /* BlankPagesView.m in Sources */,
 				36213F11214364BD00B00E2B /* JXActionSheet.m in Sources */,
@@ -2086,6 +2097,7 @@
 				368C3C06213FB44900C10B3E /* NSString+DWBHelp.m in Sources */,
 				368C39F7213F67C800C10B3E /* AppDelegate.m in Sources */,
 				36D37850213FEF7C00E768AF /* DragEnableButton.m in Sources */,
+				EA8575822B3AEF3E00701269 /* CXSystemLocationManager.m in Sources */,
 				36E8620B21AFBF3300180D78 /* JXCategoryNumberView.m in Sources */,
 				363BFB5F21A9634E00666F8A /* ThirdViewCollectionViewController.m in Sources */,
 				36991147215216F9004B3C0D /* NSString+DWBAttribute.m in Sources */,
