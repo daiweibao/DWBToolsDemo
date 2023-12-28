@@ -55,7 +55,15 @@
         [self setGetLocationStateBlock:^(CLAuthorizationStatus status) {
             //用户授权状态判断
             [CXAuthorityManager getLocationPermissionsCompletion:^(BOOL granted) {
-                completionLocation(granted);
+                if (granted==YES) {
+                    //有权限
+                    completionLocation(granted);
+                }else{
+                    //无权限
+                    //弹窗
+                    [CXAuthorityManager showAlertWithJumpSettingType:JumpSettingTypeLocation];
+                    completionLocation(granted);
+                }
             }];
         }];
         
