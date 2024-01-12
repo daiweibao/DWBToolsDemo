@@ -13,6 +13,7 @@ typedef enum {
     JumpSettingTypeAlbum,         ///< 相册
     JumpSettingTypeContact,       ///< 联系人
     JumpSettingTypeMicrophone,    ///< 麦克风
+    JumpSettingTypeNotif,         ///< 推送权限
     JumpSettingTypeBluetooth      ///< 蓝牙
 } JumpSettingType;
 

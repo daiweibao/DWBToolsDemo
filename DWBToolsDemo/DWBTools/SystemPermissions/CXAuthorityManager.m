@@ -283,9 +283,7 @@
 /// 请求推送授权：
 /// @param completion YES有权限
 + (void)requestNotification:(void(^)( BOOL granted))completion{
-    
-    if (@available(iOS 10, *))
-    {
+    if (@available(iOS 10, *)){
         UNUserNotificationCenter * center = [UNUserNotificationCenter currentNotificationCenter];
         //center.delegate = self;
         [center requestAuthorizationWithOptions:UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound completionHandler:^(BOOL granted, NSError * _Nullable error) {
@@ -293,24 +291,23 @@
                 if (granted) {
                     // 允许推送
                     completion(YES);
+                    
                 }else{
                     //不允许
                     //没权限
+                    [CXAuthorityManager showAlertWithJumpSettingType:JumpSettingTypeNotif];
                     completion(NO);
+                    
                 }
             });
             
         }];
-    }
-    else if(@available(iOS 8 , *))
-    {
+    }else if(@available(iOS 8 , *)){
         UIApplication * application = [UIApplication sharedApplication];
-        
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil]];
         [application registerForRemoteNotifications];
-    }
-    else
-    {
+        
+    }else{
         UIApplication * application = [UIApplication sharedApplication];
         [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
         [application registerForRemoteNotifications];
@@ -319,24 +316,20 @@
 /// 获取推送权限状态：iOS10以上
 /// @param completion YES代表有
 + (void)getPushPermissions:(void(^)( BOOL granted))completion{
-    if (@available(iOS 10 , *))
-    {
+    if (@available(iOS 10 , *)){
         [[UNUserNotificationCenter currentNotificationCenter] getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                if (settings.authorizationStatus == UNAuthorizationStatusDenied){
-                    //没权限
+                if (settings.authorizationStatus == UNAuthorizationStatusDenied || settings.authorizationStatus == UNAuthorizationStatusNotDetermined) {
+                    // 用户未授权开启通知
                     completion(NO);
-                }else{
-                    //有权限
+                }else if (settings.authorizationStatus == UNAuthorizationStatusAuthorized) {
+                    //用户已授权开启通知
                     completion(YES);
                 }
             });
         }];
-    }
-    else if (@available(iOS 8 , *))
-    {
+    }else if (@available(iOS 8 , *)){
         UIUserNotificationSettings * setting = [[UIApplication sharedApplication] currentUserNotificationSettings];
-        
         if (setting.types == UIUserNotificationTypeNone) {
             // 没权限
             completion(NO);
@@ -344,9 +337,7 @@
             //有权限
             completion(NO);
         }
-    }
-    else
-    {
+    }else{
         UIRemoteNotificationType type = [[UIApplication sharedApplication] enabledRemoteNotificationTypes];
         if (type == UIUserNotificationTypeNone){
             //没权限
@@ -357,7 +348,6 @@
         }
     }
 }
-
 
 
 /// 获取定位权限状态，不会弹窗
@@ -409,6 +399,9 @@
             break;
         case JumpSettingTypeMicrophone:
             msg = @"开启麦克风才能使用语音转账及语音助手等功能";
+            break;
+        case JumpSettingTypeNotif:
+            msg = @"需要我获取推送权限，才能收到消息";
             break;
         case JumpSettingTypeBluetooth:
             msg = @"蓝牙权限";
