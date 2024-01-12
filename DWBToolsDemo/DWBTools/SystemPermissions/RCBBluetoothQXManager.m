@@ -77,7 +77,7 @@
 
 /// 蓝牙状态查询请求
 /// @param completionBluetoot YES标识蓝牙已开启
-- (void)getBluetoothWithState:(void(^)( BOOL grantedBluetoot))completionBluetoot{
+- (void)requestBluetoothWithState:(void(^)( BOOL grantedBluetoot))completionBluetoot{
     if (self.cbManager==nil) {
        //尚未初始化,App启动后首次走
         [self initMyCbManager];
@@ -100,6 +100,11 @@
     self.cbManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:options];
     
 //    self.cbManager = [[CBCentralManager alloc]initWithDelegate:self queue:dispatch_get_main_queue()];
+    
+    //存入App是否请求过蓝牙权限：1，请求过，否则未请求过
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:@"1" forKey:@"isRequestBluetooth"];
+    [userDefaults synchronize];
 }
 
 #pragma mark --------CBCentralManagerDelegate
@@ -186,6 +191,70 @@
         return YES;
     }
 }
+
+
+#pragma mark==========查询蓝牙授权状态不弹窗 S==============
+
+/// 蓝牙状态查询，不弹窗，历史第一次请求会弹出蓝牙授权框
+/// @param completionBluetoot YES标识蓝牙已开启
+- (void)getBluetoothWithState:(void(^)( BOOL grantedBluetoot))completionBluetoot{
+    //取出历史是否请求过蓝牙权限，第一次请求会弹出授权框，如果没询问过，就直接返回没权限
+   NSString *isHistoryBluetooth = [[NSUserDefaults standardUserDefaults] objectForKey:@"isRequestBluetooth"];
+    if ([isHistoryBluetooth isEqual:@"1"]) {
+        //已经请求过蓝牙权限了，再次请求就不会弹出授权框了
+        if (self.cbManager==nil) {
+           //尚未初始化,App启动后首次走
+            [self initMyCbManager];
+            //获取首次状态。初始化完后立即通过central.state无法获取到蓝牙状态，需要等待代理方法走了才能获取到
+            __weak typeof(self) wself=self;
+            [self setGetBluetoothStateBlock:^(CBCentralManager *centralBlue) {
+                completionBluetoot([wself chooseBluetoothWithStateNOAleat]);
+            }];
+        }else{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionBluetoot([self chooseBluetoothWithStateNOAleat]);
+            });
+        }
+    }else{
+        //从来没请求过蓝牙权限，肯定未开启
+        completionBluetoot(NO);
+    }
+}
+
+//判断权限，不弹窗
+-(BOOL)chooseBluetoothWithStateNOAleat{
+    if (@available(iOS 10.0, *)) {
+        //APP启动就初始化cbManager，不然这里在获取时才初始化，拿不到蓝牙状态
+        //先检查App是否授权使用蓝牙（授权不受到蓝牙总开关状态影响）
+        if (self.cbManager.state==CBManagerStateUnauthorized){
+            NSLog(@"APP尚未被授权使用蓝牙--");
+            //没有权限
+            return NO;
+        }else{
+            //再检查蓝牙总开关开了没
+            if (self.cbManager.state==CBManagerStatePoweredOn) {
+                NSLog(@"蓝牙已开启，可正常用--");
+                return YES;
+            }else{
+                //蓝牙无法使用
+                if (self.cbManager.state==CBManagerStatePoweredOff) {
+                    NSLog(@"蓝牙已关闭, 请打开蓝牙--");
+                    //蓝牙开关关闭了
+                }else{
+                    //蓝牙无法使用
+                }
+                //无法使用
+                return NO;
+            }
+        }
+    } else {
+        // Fallback on earlier versions
+        //iOS10 以下暂时无法判断蓝牙是否开启，就返回开启吧
+        return YES;
+    }
+}
+#pragma mark==========查询蓝牙授权状态不弹窗 E==============
+
 
 
 

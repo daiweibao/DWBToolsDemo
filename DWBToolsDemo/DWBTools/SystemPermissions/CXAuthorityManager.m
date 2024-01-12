@@ -262,6 +262,15 @@
 /// 获取当前手机的蓝牙权限【手机为中心设备】
 /// @param completion YES表示有权限
 + (void)requestBluetootPemissionWithResult:(void(^)( BOOL granted))completion{
+    [[RCBBluetoothQXManager sharedManager] requestBluetoothWithState:^(BOOL grantedBluetoot) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion(grantedBluetoot);
+        });
+    }];
+}
+/// 【蓝牙】获取当前手机的蓝牙权限，不弹出提示
+/// @param completion YES表示有权限
++ (void)getBluetootPemissionWithResult:(void(^)( BOOL granted))completion{
     [[RCBBluetoothQXManager sharedManager] getBluetoothWithState:^(BOOL grantedBluetoot) {
         dispatch_async(dispatch_get_main_queue(), ^{
             completion(grantedBluetoot);
@@ -280,17 +289,16 @@
         UNUserNotificationCenter * center = [UNUserNotificationCenter currentNotificationCenter];
         //center.delegate = self;
         [center requestAuthorizationWithOptions:UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound completionHandler:^(BOOL granted, NSError * _Nullable error) {
-            
-            if (granted) {
-                // 允许推送
-                completion(YES);
-                
-            }else{
-                //不允许
-                //没权限
-                completion(NO);
-                
-            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (granted) {
+                    // 允许推送
+                    completion(YES);
+                }else{
+                    //不允许
+                    //没权限
+                    completion(NO);
+                }
+            });
             
         }];
     }
@@ -314,15 +322,15 @@
     if (@available(iOS 10 , *))
     {
         [[UNUserNotificationCenter currentNotificationCenter] getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-            
-            if (settings.authorizationStatus == UNAuthorizationStatusDenied){
-                //没权限
-                completion(NO);
-            }else{
-                //有权限
-                completion(YES);
-            }
-            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (settings.authorizationStatus == UNAuthorizationStatusDenied){
+                    //没权限
+                    completion(NO);
+                }else{
+                    //有权限
+                    completion(YES);
+                }
+            });
         }];
     }
     else if (@available(iOS 8 , *))

@@ -15,7 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 ///单例初始化
 + (instancetype)sharedManager;
 
-/// 蓝牙状态查询请求
+/// 蓝牙状态请求，弹窗让用户授权
+/// @param completionBluetoot YES标识蓝牙已开启
+- (void)requestBluetoothWithState:(void(^)( BOOL grantedBluetoot))completionBluetoot;
+
+/// 蓝牙状态查询，不弹窗
 /// @param completionBluetoot YES标识蓝牙已开启
 - (void)getBluetoothWithState:(void(^)( BOOL grantedBluetoot))completionBluetoot;
 

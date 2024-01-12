@@ -50,6 +50,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 【蓝牙】获取当前手机的蓝牙权限【手机为中心设备】Privacy - Bluetooth Peripheral Usage Description
 /// @param completion YES表示有权限
 + (void)requestBluetootPemissionWithResult:(void(^)( BOOL granted))completion;
+/// 【蓝牙】获取当前手机的蓝牙权限，不弹出提示
+/// @param completion YES表示有权限
++ (void)getBluetootPemissionWithResult:(void(^)( BOOL granted))completion;
 
 
 /// 【推送】请求推送授权：
