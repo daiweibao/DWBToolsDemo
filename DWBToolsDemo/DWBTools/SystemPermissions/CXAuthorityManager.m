@@ -93,6 +93,33 @@
 }
 
 
+/// 查询是否有相机权限，无弹窗
+/// - Parameter completion: YES代表有权限，NO代表无权限
++ (void)getCameraPermissions:(void(^)( BOOL granted))completion {
+    AVAuthorizationStatus AVstatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    switch (AVstatus) {
+        case AVAuthorizationStatusNotDetermined:{
+            NSLog(@"尚未授权");
+            completion(NO);
+        }
+            break;
+        case AVAuthorizationStatusRestricted:{
+            NSLog(@"受限制，无权限");
+            completion(NO);
+        }
+            break;
+        case AVAuthorizationStatusDenied:{
+            NSLog(@"用户拒绝授权");
+            completion(NO);
+        }
+            break;
+        case AVAuthorizationStatusAuthorized:{
+            NSLog(@"用户已授权");
+            completion(YES);
+        }
+            break;
+    }
+}
 
 /// 请求当前设备的相机权限：Privacy - Camera Usage Description
 /// - Parameter completion: YES代表有权限，NO代表无权限
@@ -192,6 +219,42 @@
           
             
         default:
+            break;
+    }
+}
+
+/// 查询是否有相册权限，无弹窗
+/// - Parameter completion: YES代表有权限，NO代表无权限
++ (void)getPhotoPermissions:(void(^)( BOOL granted))completion{
+    PHAuthorizationStatus photoAuthorStatus = [PHPhotoLibrary authorizationStatus];
+    switch (photoAuthorStatus) {
+        case PHAuthorizationStatusNotDetermined:{
+            NSLog(@"尚未授权");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(NO);
+            });
+        }
+            break;
+        case PHAuthorizationStatusRestricted:{
+            NSLog(@"受限制，无权限");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(NO);
+            });
+        }
+            break;
+        case PHAuthorizationStatusDenied:{
+            NSLog(@"用户拒绝授权");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(NO);
+            });
+        }
+            break;
+        case PHAuthorizationStatusAuthorized:{
+            NSLog(@"用户已授权");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(YES);
+            });
+        }
             break;
     }
 }

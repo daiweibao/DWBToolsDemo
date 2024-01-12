@@ -33,9 +33,18 @@ NS_ASSUME_NONNULL_BEGIN
 /// 【相机】请求当前设备的相机权限：Privacy - Camera Usage Description
 /// - Parameter completion: YES代表有权限，NO代表无权限
 + (void)requestCameraPemissionWithResult:(void(^)( BOOL granted))completion;
+/// 【相机】查询是否有相机权限，无弹窗
+/// - Parameter completion: YES代表有权限，NO代表无权限
++ (void)getCameraPermissions:(void(^)( BOOL granted))completion;
+
+
 /// 【相册】请求当前设备的相册权限：请求当前设备的相册权限：Privacy - Photo Library Additions Usage Description
 /// @param completion  YES代表有权限，NO代表无权限
 + (void)requestAlbumPemissionWithResult:(void(^)( BOOL granted))completion;
+/// 【相册】查询是否有相册权限，无弹窗
+/// - Parameter completion: YES代表有权限，NO代表无权限
++ (void)getPhotoPermissions:(void(^)( BOOL granted))completion;
+
 
 
 /// 【蓝牙】获取当前手机的蓝牙权限【手机为中心设备】Privacy - Bluetooth Peripheral Usage Description
